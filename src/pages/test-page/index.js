@@ -226,7 +226,7 @@ const TestPage = () => {
 
   const handleNext = () => {
     setQuestionNumber(questionNumber + 1);
-    if (questionNumber < totalQuestions - 1) {
+    if (questionNumber < totalQuestions) {
       resetStopwatch();
       setUserAnswers([...userAnswers, value]);
 
