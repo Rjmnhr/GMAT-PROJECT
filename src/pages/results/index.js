@@ -26,7 +26,7 @@ const ResultPage = () => {
       <div>
         <Result
           status="success"
-          title={`Your GMAT Score: ${scorePercentage}%`}
+          title={`Your GMAT Score: ${scorePercentage}`}
           subTitle={`Category: ${category}`}
         />
         <Progress type="circle" percent={parseFloat(score)} />

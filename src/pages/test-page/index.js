@@ -18,7 +18,12 @@ const TestPage = () => {
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
   const [tempValues, setTempValues] = useState([0, 0, 0]); // Initialize with three zeros
-  const [tempSum, setTempSum] = useState(3);
+  const [tempSum, setTempSum] = useState(0);
+  const [currentQuestionLevel, setCurrentQuestionLevel] = useState(3); // Initialize with level 2
+  const [filteredQuestionsByLevel, setFilteredQuestionsByLevel] =
+    useState(null);
+  const [questionNumber, setQuestionNumber] = useState(1);
+  const [attendedQuestionIds, setAttendedQuestionIds] = useState([]);
 
   // Filter and shuffle questions
   const quantWordProblems = questions.filter(
@@ -54,8 +59,8 @@ const TestPage = () => {
   // }
 
   const shuffledQuestions = [
-    ...quantWordProblems.slice(0, 16), // Select 16 Word Problems questions
-    ...quantDataSufficiency.slice(0, 15), // Select 15 Data Sufficiency questions
+    ...quantWordProblems, // Select 16 Word Problems questions
+    ...quantDataSufficiency, // Select 15 Data Sufficiency questions
   ];
 
   useEffect(() => {
@@ -134,43 +139,114 @@ const TestPage = () => {
     console.log("radio checked", e.target.value);
     setValue(e.target.value);
     setIsNextButtonDisabled(false);
+
+    // Logic to determine the next question level based on tempSum
   };
 
   const exam_no = localStorage.getItem("exam_no");
 
-  const calculateScore = () => {
-    let correctAnswers = 0;
-    for (let i = 0; i < totalQuestions; i++) {
-      if (userAnswers[i] === shuffledQuestions[i].correct_answer) {
-        correctAnswers++;
+  const calculateScore = (level) => {
+    const isCorrect =
+      value === filteredQuestionsByLevel[currentQuestion].correct_answer;
+
+    let scoreIncrement = 0;
+
+    if (isCorrect) {
+      // Calculate score increment for correct answers
+      switch (level) {
+        case 1:
+          scoreIncrement = 20;
+          break;
+        case 2:
+          scoreIncrement = 30;
+          break;
+        case 3:
+          scoreIncrement = 45;
+          break;
+        case 4:
+          scoreIncrement = 60;
+          break;
+        case 5:
+          scoreIncrement = 120;
+          break;
+        default:
+          // Handle other levels if necessary
+          break;
+      }
+    } else {
+      // Calculate score decrement for wrong answers
+      switch (level) {
+        case 1:
+          scoreIncrement = -10;
+          break;
+        case 2:
+          scoreIncrement = -9;
+          break;
+        case 3:
+          scoreIncrement = -5.62;
+          break;
+        case 4:
+          scoreIncrement = -3;
+          break;
+        case 5:
+          scoreIncrement = -6;
+
+          break;
+        default:
+          // Handle other levels if necessary
+          break;
       }
     }
 
-    const calculatedScore = (correctAnswers / totalQuestions) * 100;
-    setScore(calculatedScore);
-    sessionStorage.setItem("GMAT_Score", calculatedScore.toFixed(2));
-    if (exam_no === "1") {
-      localStorage.setItem("practice_score_1", calculatedScore.toFixed(2));
-    } else if (exam_no === "2") {
-      localStorage.setItem("practice_score_2", calculatedScore.toFixed(2));
-    } else {
-      localStorage.setItem("practice_score_1", calculatedScore.toFixed(2));
-    }
+    console.log(
+      "🚀 ~ file: index.js:193 ~ calculateScore ~ scoreIncrement:",
+      scoreIncrement
+    );
 
-    console.log(score);
+    setScore((prevScore) => prevScore + scoreIncrement); // Update score by adding the increment
   };
+  // Use useEffect to update session storage when score changes
   useEffect(() => {
-    const updatedPercentage = ((currentQuestion + 1) / totalQuestions) * 100;
+    sessionStorage.setItem("GMAT_Score", score.toFixed(2));
+    console.log("🚀 ~ file: index.js:211 ~ useEffect ~ score:", score);
+    // Set practice score based on exam_no (you can add this logic as needed)
+    if (exam_no === "1") {
+      localStorage.setItem("practice_score_1", score.toFixed(2));
+    } else if (exam_no === "2") {
+      localStorage.setItem("practice_score_2", score.toFixed(2));
+    } else {
+      localStorage.setItem("practice_score_1", score.toFixed(2));
+    }
+  }, [score, exam_no]); // Trigger the effect whenever the score changes
+
+  useEffect(() => {
+    const updatedPercentage = (questionNumber / totalQuestions) * 100;
     setPercentage(updatedPercentage.toFixed(2));
-  }, [currentQuestion, totalQuestions]);
+  }, [questionNumber, totalQuestions]);
 
   const handleNext = () => {
-    if (currentQuestion < totalQuestions - 1) {
+    setQuestionNumber(questionNumber + 1);
+    if (questionNumber < totalQuestions - 1) {
       resetStopwatch();
       setUserAnswers([...userAnswers, value]);
 
+      // Add the ID of the answered question to the attendedQuestionIds array
+      const answeredQuestionId = filteredQuestionsByLevel[currentQuestion].id;
+      setAttendedQuestionIds([...attendedQuestionIds, answeredQuestionId]);
+
+      // Check if currentQuestion is within the valid range
+      if (currentQuestion + 2 < filteredQuestionsByLevel.length) {
+        setCurrentQuestion((prevQuestion) => prevQuestion + 1);
+      } else {
+        // Handle the case where there are no more questions for the current level
+        setCurrentQuestion(0);
+      }
+      setIsNextButtonDisabled(true); // Disable "Next" button again
+      startStopwatch();
+      setValue(null); // Reset the selected value
+
       const isCorrect =
-        value === shuffledQuestions[currentQuestion].correct_answer;
+        value === filteredQuestionsByLevel[currentQuestion].correct_answer;
 
       const newTempValues = [...tempValues, isCorrect ? 1 : 0].slice(1, 4);
 
@@ -178,12 +254,40 @@ const TestPage = () => {
       setTempValues(newTempValues);
       const newTempSum = newTempValues.reduce((acc, val) => acc + val, 0);
       setTempSum(newTempSum);
+
       console.log(tempSum);
 
-      setCurrentQuestion((prevQuestion) => prevQuestion + 1);
-      setIsNextButtonDisabled(true); // Disable "Next" button again
-      startStopwatch();
-      setValue(null); // Reset the selected value
+      let nextQuestionLevel = currentQuestionLevel;
+
+      calculateScore(nextQuestionLevel); // Calculate the score
+
+      if (questionNumber > 2) {
+        if (newTempSum === 0 && currentQuestionLevel > 1) {
+          nextQuestionLevel = currentQuestionLevel - 1; // Decrease level by 1, but not below 1
+
+          setCurrentQuestion(0);
+        } else if (newTempSum === 3 && currentQuestionLevel < 5) {
+          nextQuestionLevel = currentQuestionLevel + 1; // Increase level by 1, but not above 5
+
+          setCurrentQuestion(0);
+        }
+      }
+
+      setCurrentQuestionLevel(nextQuestionLevel);
+
+      // Filter questions based on the currentQuestionLevel and attendedQuestionIds
+      const filteredArray = shuffledQuestions.filter(
+        (question) =>
+          question.level === nextQuestionLevel &&
+          !attendedQuestionIds.includes(question.id)
+      );
+
+      if (filteredArray.length === 0) {
+        // No more questions left for the current level
+        setCurrentQuestion(0);
+      }
+
+      setFilteredQuestionsByLevel(filteredArray);
     } else {
       setUserAnswers([...userAnswers, value]);
       calculateScore(); // Calculate the score
@@ -195,9 +299,27 @@ const TestPage = () => {
       } else {
         localStorage.setItem("practice_status_3", "Completed");
       }
-      // Handle end of the test, e.g., show results
+      // Handle the end of the test, e.g., show results
     }
   };
+
+  useEffect(() => {
+    // Filter questions based on the currentQuestionLevel
+    const filteredArray = shuffledQuestions.filter(
+      (question) => question.level === currentQuestionLevel
+    );
+    console.log(
+      "🚀 ~ file: index.js:235 ~ useEffect ~ shuffledQuestions:",
+      shuffledQuestions
+    );
+
+    setFilteredQuestionsByLevel(filteredArray);
+    console.log(
+      "🚀 ~ file: index.js:222 ~ useEffect ~ filteredArray:",
+      filteredArray
+    );
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
@@ -220,7 +342,7 @@ const TestPage = () => {
         </div>
         <div className="container d-flex justify-content-around align-items-center p-2 border-bottom ">
           <label>
-            Question {currentQuestion + 1} out of {totalQuestions}
+            Question {questionNumber} out of {totalQuestions}
           </label>
           <div>
             <Progress percent={percentage} size={[700, 15]} />
@@ -230,63 +352,82 @@ const TestPage = () => {
             className="btn btn-primary"
             disabled={isNextButtonDisabled}
           >
-            {currentQuestion + 1 === totalQuestions ? "Finish" : " Next"}
+            {questionNumber === totalQuestions ? "Finish" : " Next"}
           </button>
           {/* <button
-            
-            className="btn "
-            style={{ background: "red", color: "white" }}
-          >
-            End test
-          </button> */}
+              
+              className="btn "
+              style={{ background: "red", color: "white" }}
+            >
+              End test
+            </button> */}
         </div>
-        <div className="qstn-box">
-          <div className="container-fluid px-5 mt-5 text-start">
-            <p className="mb-3">
-              {shuffledQuestions[currentQuestion].main_question_stem}
-            </p>
-            <p>
-              {shuffledQuestions[currentQuestion].subquestion1
-                ? `1) ${shuffledQuestions[currentQuestion].subquestion1}`
-                : ""}
-            </p>
-            <p>
-              {shuffledQuestions[currentQuestion].subquestion2
-                ? `2) ${shuffledQuestions[currentQuestion].subquestion2}`
-                : ""}
-            </p>
-            <p>
-              {shuffledQuestions[currentQuestion].subquestion3
-                ? `3) ${shuffledQuestions[currentQuestion].subquestion3}`
-                : ""}
-            </p>
-            <div className="mt-2">
-              <Radio.Group onChange={onChange} value={value}>
-                <Space direction="vertical">
-                  <Radio value={"A"}>
-                    {shuffledQuestions[currentQuestion].answer_1}
-                  </Radio>
 
-                  <Radio value={"B"}>
-                    {shuffledQuestions[currentQuestion].answer_2}
-                  </Radio>
+        {filteredQuestionsByLevel ? (
+          <div className="qstn-box">
+            <div className="container-fluid px-5 mt-5 text-start">
+              <p className="mb-3">
+                {filteredQuestionsByLevel[currentQuestion].main_question_stem}
+              </p>
+              <p>
+                {filteredQuestionsByLevel[currentQuestion].subquestion1
+                  ? `1) ${filteredQuestionsByLevel[currentQuestion].subquestion1}`
+                  : ""}
+              </p>
+              <p>
+                {filteredQuestionsByLevel[currentQuestion].subquestion2
+                  ? `2) ${filteredQuestionsByLevel[currentQuestion].subquestion2}`
+                  : ""}
+              </p>
+              <p>
+                {filteredQuestionsByLevel[currentQuestion].subquestion3
+                  ? `3) ${filteredQuestionsByLevel[currentQuestion].subquestion3}`
+                  : ""}
+              </p>
+              <div className="mt-2">
+                <Radio.Group onChange={onChange} value={value}>
+                  <Space direction="vertical">
+                    <Radio value={"A"}>
+                      {filteredQuestionsByLevel[currentQuestion].answer_1}
+                    </Radio>
 
-                  <Radio value={"C"}>
-                    {shuffledQuestions[currentQuestion].answer_3}
-                  </Radio>
+                    <Radio value={"B"}>
+                      {filteredQuestionsByLevel[currentQuestion].answer_2}
+                    </Radio>
 
-                  <Radio value={"D"}>
-                    {shuffledQuestions[currentQuestion].answer_4}
-                  </Radio>
+                    <Radio value={"C"}>
+                      {filteredQuestionsByLevel[currentQuestion].answer_3}
+                    </Radio>
 
-                  <Radio value={"E"}>
-                    {shuffledQuestions[currentQuestion].answer_5}
-                  </Radio>
-                </Space>
-              </Radio.Group>
+                    <Radio value={"D"}>
+                      {filteredQuestionsByLevel[currentQuestion].answer_4}
+                    </Radio>
+
+                    <Radio value={"E"}>
+                      {filteredQuestionsByLevel[currentQuestion].answer_5}
+                    </Radio>
+                  </Space>
+                </Radio.Group>
+              </div>
+
+              <p className="mt-3">
+                Level:{filteredQuestionsByLevel[currentQuestion].level}
+              </p>
+
+              <p className="mt-3">
+                Correct Answer:
+                {filteredQuestionsByLevel[currentQuestion].correct_answer}
+              </p>
+
+              <p className="mt-3">
+                Score:
+                {score.toFixed(2)}
+              </p>
             </div>
           </div>
-        </div>
+        ) : (
+          ""
+        )}
       </div>
     </>
   );

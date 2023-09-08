@@ -89,7 +89,7 @@ const DashBoardComponent = () => {
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>61 minutes</p>
                 <p style={{ width: "200px" }}>
-                  {practice_score_1 ? practice_score_1 + " %" : "--"}
+                  {practice_score_1 ? practice_score_1 : "--"}
                 </p>
                 <p style={{ width: "200px" }}>
                   {" "}
@@ -111,7 +111,7 @@ const DashBoardComponent = () => {
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>61 minutes</p>
                 <p style={{ width: "200px" }}>
-                  {practice_score_2 ? practice_score_2 + " %" : "--"}
+                  {practice_score_2 ? practice_score_2 : "--"}
                 </p>
                 <p style={{ width: "200px" }}>
                   {" "}
@@ -133,7 +133,7 @@ const DashBoardComponent = () => {
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>61 minutes</p>
                 <p style={{ width: "200px" }}>
-                  {practice_score_3 ? practice_score_3 + " %" : "--"}
+                  {practice_score_3 ? practice_score_3 : "--"}
                 </p>
                 <p style={{ width: "200px" }}>
                   {" "}
