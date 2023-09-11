@@ -27,6 +27,11 @@ const InstructionPage = () => {
     }
   };
 
+  const handleClick = () => {
+    navigate("/section");
+    sessionStorage.setItem("current_section", "quant");
+  };
+
   return (
     <>
       <Radio.Group
@@ -157,10 +162,7 @@ const InstructionPage = () => {
             Continue
           </button>
         ) : (
-          <button
-            className="btn btn-primary "
-            onClick={() => navigate("/test")}
-          >
+          <button className="btn btn-primary " onClick={handleClick}>
             Get Started
           </button>
         )}

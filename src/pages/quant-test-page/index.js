@@ -4,7 +4,7 @@ import { ClockCircleTwoTone } from "@ant-design/icons";
 import { questions } from "../../components/items";
 import { useNavigate } from "react-router-dom";
 
-const TestPage = () => {
+const QuantTestPage = () => {
   const [value, setValue] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [totalQuestions] = useState(31);
@@ -62,6 +62,10 @@ const TestPage = () => {
     ...quantWordProblems, // Select 16 Word Problems questions
     ...quantDataSufficiency, // Select 15 Data Sufficiency questions
   ];
+  console.log(
+    "🚀 ~ file: index.js:65 ~ QuantTestPage ~ shuffledQuestions:",
+    shuffledQuestions
+  );
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -198,17 +202,11 @@ const TestPage = () => {
       }
     }
 
-    console.log(
-      "🚀 ~ file: index.js:193 ~ calculateScore ~ scoreIncrement:",
-      scoreIncrement
-    );
-
     setScore((prevScore) => prevScore + scoreIncrement); // Update score by adding the increment
   };
   // Use useEffect to update session storage when score changes
   useEffect(() => {
     sessionStorage.setItem("GMAT_Score", score.toFixed(2));
-    console.log("🚀 ~ file: index.js:211 ~ useEffect ~ score:", score);
     // Set practice score based on exam_no (you can add this logic as needed)
     if (exam_no === "1") {
       localStorage.setItem("practice_score_1", score.toFixed(2));
@@ -291,7 +289,9 @@ const TestPage = () => {
     } else {
       setUserAnswers([...userAnswers, value]);
       calculateScore(); // Calculate the score
-      navigate("/results");
+      sessionStorage.setItem("current_section", "verbal");
+      sessionStorage.setItem("time_remaining", remainingTime);
+      navigate("/test-break");
       if (exam_no === "1") {
         localStorage.setItem("practice_status_1", "Completed");
       } else if (exam_no === "2") {
@@ -308,16 +308,9 @@ const TestPage = () => {
     const filteredArray = shuffledQuestions.filter(
       (question) => question.level === currentQuestionLevel
     );
-    console.log(
-      "🚀 ~ file: index.js:235 ~ useEffect ~ shuffledQuestions:",
-      shuffledQuestions
-    );
 
     setFilteredQuestionsByLevel(filteredArray);
-    console.log(
-      "🚀 ~ file: index.js:222 ~ useEffect ~ filteredArray:",
-      filteredArray
-    );
+
     // eslint-disable-next-line
   }, []);
 
@@ -433,4 +426,4 @@ const TestPage = () => {
   );
 };
 
-export default TestPage;
+export default QuantTestPage;
