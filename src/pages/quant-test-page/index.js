@@ -19,12 +19,28 @@ const QuantTestPage = () => {
   const navigate = useNavigate();
   const [tempValues, setTempValues] = useState([0, 0, 0]); // Initialize with three zeros
   const [tempSum, setTempSum] = useState(0);
-  const [currentQuestionLevel, setCurrentQuestionLevel] = useState(3); // Initialize with level 2
+  const [currentQuestionLevel, setCurrentQuestionLevel] = useState(4); // Initialize with level 2
   const [filteredQuestionsByLevel, setFilteredQuestionsByLevel] =
     useState(null);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [attendedQuestionIds, setAttendedQuestionIds] = useState([]);
+  const [threshHold, setThreshHold] = useState(1);
 
+  useEffect(() => {
+    let newThreshold = 0;
+
+    if (questionNumber < 3) {
+      newThreshold = 1;
+    } else if (questionNumber >= 4 && questionNumber < 12) {
+      newThreshold = 0;
+    } else if (questionNumber > 12 && questionNumber < 15) {
+      newThreshold = 1;
+    } else {
+      newThreshold = 0;
+    }
+
+    setThreshHold(newThreshold);
+  }, [questionNumber]);
   // Filter and shuffle questions
   const quantWordProblems = questions.filter(
     (question) =>
@@ -62,10 +78,6 @@ const QuantTestPage = () => {
     ...quantWordProblems, // Select 16 Word Problems questions
     ...quantDataSufficiency, // Select 15 Data Sufficiency questions
   ];
-  console.log(
-    "🚀 ~ file: index.js:65 ~ QuantTestPage ~ shuffledQuestions:",
-    shuffledQuestions
-  );
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -155,54 +167,139 @@ const QuantTestPage = () => {
 
     let scoreIncrement = 0;
 
-    if (isCorrect) {
-      // Calculate score increment for correct answers
-      switch (level) {
-        case 1:
-          scoreIncrement = 20;
-          break;
-        case 2:
-          scoreIncrement = 30;
-          break;
-        case 3:
-          scoreIncrement = 45;
-          break;
-        case 4:
-          scoreIncrement = 60;
-          break;
-        case 5:
-          scoreIncrement = 120;
-          break;
-        default:
-          // Handle other levels if necessary
-          break;
+    if (questionNumber <= 12) {
+      if (isCorrect) {
+        // Calculate score increment for correct answers
+        switch (level) {
+          case 1:
+            scoreIncrement = 20;
+            break;
+          case 2:
+            scoreIncrement = 24;
+            break;
+          case 3:
+            scoreIncrement = 25;
+            break;
+          case 4:
+            scoreIncrement = 30;
+            break;
+          case 5:
+            scoreIncrement = 35;
+            break;
+          case 6:
+            scoreIncrement = 45;
+            break;
+          case 7:
+            scoreIncrement = 60;
+            break;
+          case 8:
+            scoreIncrement = 120;
+            break;
+          default:
+            // Handle other levels if necessary
+            break;
+        }
+      } else {
+        // Calculate score decrement for wrong answers
+        switch (level) {
+          case 1:
+            scoreIncrement = -10;
+            break;
+          case 2:
+            scoreIncrement = -10.8;
+            break;
+          case 3:
+            scoreIncrement = -10;
+            break;
+          case 4:
+            scoreIncrement = -9;
+            break;
+          case 5:
+            scoreIncrement = -8.8;
+
+            break;
+          case 6:
+            scoreIncrement = -5.625;
+            break;
+          case 7:
+            scoreIncrement = -3;
+            break;
+          case 8:
+            scoreIncrement = -6;
+            break;
+          default:
+            // Handle other levels if necessary
+            break;
+        }
       }
     } else {
-      // Calculate score decrement for wrong answers
-      switch (level) {
-        case 1:
-          scoreIncrement = -10;
-          break;
-        case 2:
-          scoreIncrement = -9;
-          break;
-        case 3:
-          scoreIncrement = -5.62;
-          break;
-        case 4:
-          scoreIncrement = -3;
-          break;
-        case 5:
-          scoreIncrement = -6;
+      if (isCorrect) {
+        // Calculate score increment for correct answers
+        switch (level) {
+          case 1:
+            scoreIncrement = 2.0;
+            break;
+          case 2:
+            scoreIncrement = 2.4;
+            break;
+          case 3:
+            scoreIncrement = 2.5;
+            break;
+          case 4:
+            scoreIncrement = 3.0;
+            break;
+          case 5:
+            scoreIncrement = 3.5;
+            break;
+          case 6:
+            scoreIncrement = 4.5;
+            break;
+          case 7:
+            scoreIncrement = 6;
+            break;
+          case 8:
+            scoreIncrement = 12;
+            break;
+          default:
+            // Handle other levels if necessary
+            break;
+        }
+      } else {
+        // Calculate score decrement for wrong answers
+        switch (level) {
+          case 1:
+            scoreIncrement = -2;
+            break;
+          case 2:
+                                                                                                                                                                                                                                                                                                       scoreIncrement = -2.2;
+            break;
+          case 3:
+            scoreIncrement = -2;
+            break;
+          case 4:
+            scoreIncrement = -1.8;
+            break;
+          case 5:
+            scoreIncrement = -1.75;
 
-          break;
-        default:
-          // Handle other levels if necessary
-          break;
+            break;
+          case 6:
+            scoreIncrement = -1.125;
+            break;
+          case 7:
+            scoreIncrement = -0.6;
+            break;
+          case 8:
+            scoreIncrement = -1.2;
+            break;
+          default:
+            // Handle other levels if necessary
+            break;
+        }
       }
     }
 
-    setScore((prevScore) => prevScore + scoreIncrement); // Update score by adding the increment
+    setScore((prevScore) => Math.round(prevScore + scoreIncrement)); // Update score by adding the increment
   };
   // Use useEffect to update session storage when score changes
   useEffect(() => {
@@ -234,6 +331,7 @@ const QuantTestPage = () => {
 
       // Check if currentQuestion is within the valid range
       if (currentQuestion + 2 < filteredQuestionsByLevel.length) {
+        console.log("inside");
         setCurrentQuestion((prevQuestion) => prevQuestion + 1);
       } else {
         // Handle the case where there are no more questions for the current level
@@ -258,9 +356,25 @@ const QuantTestPage = () => {
       let nextQuestionLevel = currentQuestionLevel;
 
       calculateScore(nextQuestionLevel); // Calculate the score
+      var levelLimit = 2;
 
-      if (questionNumber > 2) {
-        if (newTempSum === 0 && currentQuestionLevel > 1) {
+      if (questionNumber > 12) {
+        levelLimit = 1;
+      }
+      console.log(
+        "🚀 ~ file: index.js:366 ~ handleNext ~ (currentQuestion > threshHold):",
+        currentQuestion > threshHold
+      );
+      console.log(
+        "🚀 ~ file: index.js:366 ~ handleNext ~ threshHold:",
+        threshHold
+      );
+      console.log(
+        "🚀 ~ file: index.js:366 ~ handleNext ~ currentQuestion:",
+        currentQuestion
+      );
+      if (currentQuestion > threshHold) {
+        if (newTempSum === 0 && currentQuestionLevel > levelLimit) {
           nextQuestionLevel = currentQuestionLevel - 1; // Decrease level by 1, but not below 1
 
           setCurrentQuestion(0);
@@ -270,8 +384,18 @@ const QuantTestPage = () => {
           setCurrentQuestion(0);
         }
       }
+      console.log(
+        "🚀 ~ file: index.js:383 ~ handleNext ~ nextQuestionLevel:",
+        nextQuestionLevel
+      );
 
       setCurrentQuestionLevel(nextQuestionLevel);
+
+      if (questionNumber === 12) {
+        nextQuestionLevel = 4;
+        setCurrentQuestionLevel(4);
+        setCurrentQuestion(0);
+      }
 
       // Filter questions based on the currentQuestionLevel and attendedQuestionIds
       const filteredArray = shuffledQuestions.filter(
@@ -283,12 +407,29 @@ const QuantTestPage = () => {
       if (filteredArray.length === 0) {
         // No more questions left for the current level
         setCurrentQuestion(0);
+        if (nextQuestionLevel < 5) {
+          nextQuestionLevel = nextQuestionLevel + 1;
+        } else {
+          if (nextQuestionLevel !== 1) {
+            nextQuestionLevel = nextQuestionLevel - 1;
+          }
+        }
+
+        // Filter questions based on the currentQuestionLevel and attendedQuestionIds
+        const filteredArray = shuffledQuestions.filter(
+          (question) =>
+            question.level === nextQuestionLevel &&
+            !attendedQuestionIds.includes(question.id)
+        );
+
+        setFilteredQuestionsByLevel(filteredArray);
+        return;
       }
 
       setFilteredQuestionsByLevel(filteredArray);
     } else {
       setUserAnswers([...userAnswers, value]);
-      calculateScore(); // Calculate the score
+      calculateScore(currentQuestionLevel); // Calculate the score
       sessionStorage.setItem("current_section", "verbal");
       sessionStorage.setItem("time_remaining", remainingTime);
       navigate("/test-break");
@@ -360,8 +501,20 @@ const QuantTestPage = () => {
           <div className="qstn-box">
             <div className="container-fluid px-5 mt-5 text-start">
               <p className="mb-3">
-                {filteredQuestionsByLevel[currentQuestion].main_question_stem}
+                {filteredQuestionsByLevel[currentQuestion].main_question_stem
+                  ? filteredQuestionsByLevel[currentQuestion].main_question_stem
+                  : ""}
               </p>
+              {filteredQuestionsByLevel[currentQuestion].img_url ? (
+                <img
+                  className="mb-3"
+                  src={filteredQuestionsByLevel[currentQuestion].img_url}
+                  alt="not available"
+                />
+              ) : (
+                ""
+              )}
+
               <p>
                 {filteredQuestionsByLevel[currentQuestion].subquestion1
                   ? `1) ${filteredQuestionsByLevel[currentQuestion].subquestion1}`
@@ -381,35 +534,50 @@ const QuantTestPage = () => {
                 <Radio.Group onChange={onChange} value={value}>
                   <Space direction="vertical">
                     <Radio value={"A"}>
-                      {filteredQuestionsByLevel[currentQuestion].answer_1}
+                      {filteredQuestionsByLevel[currentQuestion].answer_1
+                        ? filteredQuestionsByLevel[currentQuestion].answer_1
+                        : ""}
                     </Radio>
 
                     <Radio value={"B"}>
-                      {filteredQuestionsByLevel[currentQuestion].answer_2}
+                      {filteredQuestionsByLevel[currentQuestion].answer_2
+                        ? filteredQuestionsByLevel[currentQuestion].answer_2
+                        : ""}
                     </Radio>
 
                     <Radio value={"C"}>
-                      {filteredQuestionsByLevel[currentQuestion].answer_3}
+                      {filteredQuestionsByLevel[currentQuestion].answer_3
+                        ? filteredQuestionsByLevel[currentQuestion].answer_3
+                        : ""}
                     </Radio>
 
                     <Radio value={"D"}>
-                      {filteredQuestionsByLevel[currentQuestion].answer_4}
+                      {filteredQuestionsByLevel[currentQuestion].answer_4
+                        ? filteredQuestionsByLevel[currentQuestion].answer_4
+                        : ""}
                     </Radio>
 
                     <Radio value={"E"}>
-                      {filteredQuestionsByLevel[currentQuestion].answer_5}
+                      {filteredQuestionsByLevel[currentQuestion].answer_5
+                        ? filteredQuestionsByLevel[currentQuestion].answer_5
+                        : ""}
                     </Radio>
                   </Space>
                 </Radio.Group>
               </div>
 
               <p className="mt-3">
-                Level:{filteredQuestionsByLevel[currentQuestion].level}
+                Level:
+                {filteredQuestionsByLevel[currentQuestion].level
+                  ? filteredQuestionsByLevel[currentQuestion].level
+                  : ""}
               </p>
 
               <p className="mt-3">
                 Correct Answer:
-                {filteredQuestionsByLevel[currentQuestion].correct_answer}
+                {filteredQuestionsByLevel[currentQuestion].correct_answer
+                  ? filteredQuestionsByLevel[currentQuestion].correct_answer
+                  : ""}
               </p>
 
               <p className="mt-3">
