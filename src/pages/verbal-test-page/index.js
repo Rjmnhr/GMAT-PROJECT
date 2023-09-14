@@ -6,28 +6,43 @@ import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 const VerbalTestPage = () => {
-  const timeRemaining = sessionStorage.getItem("time_remaining");
-
   const [value, setValue] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [totalQuestions] = useState(31);
+  const [totalQuestions] = useState(36);
   const [percentage, setPercentage] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(10); // elapsed time in seconds
   const [isRunning, setIsRunning] = useState(false);
 
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
-  const [remainingTime, setRemainingTime] = useState(timeRemaining); // 61 minutes in seconds
+  const [remainingTime, setRemainingTime] = useState(65 * 60);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
   const [tempValues, setTempValues] = useState([0, 0, 0]); // Initialize with three zeros
   const [tempSum, setTempSum] = useState(0);
-  const [currentQuestionLevel, setCurrentQuestionLevel] = useState(3); // Initialize with level 2
+  const [currentQuestionLevel, setCurrentQuestionLevel] = useState(4); // Initialize with level 2
   const [filteredQuestionsByLevel, setFilteredQuestionsByLevel] =
     useState(null);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [attendedQuestionIds, setAttendedQuestionIds] = useState([]);
   const [isSplitScreen, setIsSplitScreen] = useState(true);
+  const [threshHold, setThreshHold] = useState(1);
+
+  useEffect(() => {
+    let newThreshold = 0;
+
+    if (questionNumber < 3) {
+      newThreshold = 1;
+    } else if (questionNumber >= 4 && questionNumber < 12) {
+      newThreshold = 0;
+    } else if (questionNumber > 12 && questionNumber < 15) {
+      newThreshold = 1;
+    } else {
+      newThreshold = 0;
+    }
+
+    setThreshHold(newThreshold);
+  }, [questionNumber]);
   // Filter and shuffle questions
   const verbalQuestions = questions.filter(
     (question) => question.Category === "Verbal"
@@ -135,76 +150,244 @@ const VerbalTestPage = () => {
     // Logic to determine the next question level based on tempSum
   };
 
-  const exam_no = localStorage.getItem("exam_no");
-
   const calculateScore = (level) => {
     const isCorrect =
       value === filteredQuestionsByLevel[currentQuestion].correct_answer;
 
     let scoreIncrement = 0;
 
-    if (isCorrect) {
-      // Calculate score increment for correct answers
-      switch (level) {
-        case 1:
-          scoreIncrement = 20;
-          break;
-        case 2:
-          scoreIncrement = 30;
-          break;
-        case 3:
-          scoreIncrement = 45;
-          break;
-        case 4:
-          scoreIncrement = 60;
-          break;
-        case 5:
-          scoreIncrement = 120;
-          break;
-        default:
-          // Handle other levels if necessary
-          break;
+    if (questionNumber <= 12) {
+      if (isCorrect) {
+        // Calculate score increment for correct answers
+        switch (level) {
+          case 1:
+            scoreIncrement = 20;
+            break;
+          case 2:
+            scoreIncrement = 24;
+            break;
+          case 3:
+            scoreIncrement = 25;
+            break;
+          case 4:
+            scoreIncrement = 30;
+            break;
+          case 5:
+            scoreIncrement = 35;
+            break;
+          case 6:
+            scoreIncrement = 45;
+            break;
+          case 7:
+            scoreIncrement = 60;
+            break;
+          case 8:
+            scoreIncrement = 120;
+            break;
+          default:
+            // Handle other levels if necessary
+            break;
+        }
+      } else {
+        // Calculate score decrement for wrong answers
+        switch (level) {
+          case 1:
+            scoreIncrement = -10;
+            break;
+          case 2:
+            scoreIncrement = -10.8;
+            break;
+          case 3:
+            scoreIncrement = -10;
+            break;
+          case 4:
+            scoreIncrement = -9;
+            break;
+          case 5:
+            scoreIncrement = -8.8;
+
+            break;
+          case 6:
+            scoreIncrement = -5.625;
+            break;
+          case 7:
+            scoreIncrement = -3;
+            break;
+          case 8:
+            scoreIncrement = -6;
+            break;
+          default:
+            // Handle other levels if necessary
+            break;
+        }
       }
     } else {
-      // Calculate score decrement for wrong answers
-      switch (level) {
-        case 1:
-          scoreIncrement = -10;
-          break;
-        case 2:
-          scoreIncrement = -9;
-          break;
-        case 3:
-          scoreIncrement = -5.62;
-          break;
-        case 4:
-          scoreIncrement = -3;
-          break;
-        case 5:
-          scoreIncrement = -6;
+      if (isCorrect) {
+        // Calculate score increment for correct answers
+        switch (level) {
+          case 1:
+            scoreIncrement = 2.0;
+            break;
+          case 2:
+            scoreIncrement = 2.4;
+            break;
+          case 3:
+            scoreIncrement = 2.5;
+            break;
+          case 4:
+            scoreIncrement = 3.0;
+            break;
+          case 5:
+            scoreIncrement = 3.5;
+            break;
+          case 6:
+            scoreIncrement = 4.5;
+            break;
+          case 7:
+            scoreIncrement = 6;
+            break;
+          case 8:
+            scoreIncrement = 12;
+            break;
+          default:
+            // Handle other levels if necessary
+            break;
+        }
+      } else {
+        // Calculate score decrement for wrong answers
+        switch (level) {
+          case 1:
+            scoreIncrement = -2;
+            break;
+          case 2:
+            scoreIncrement = -2.2;
+            break;
+          case 3:
+            scoreIncrement = -2;
+            break;
+          case 4:
+            scoreIncrement = -1.8;
+            break;
+          case 5:
+            scoreIncrement = -1.75;
 
-          break;
-        default:
-          // Handle other levels if necessary
-          break;
+            break;
+          case 6:
+            scoreIncrement = -1.125;
+            break;
+          case 7:
+            scoreIncrement = -0.6;
+            break;
+          case 8:
+            scoreIncrement = -1.2;
+            break;
+          default:
+            // Handle other levels if necessary
+            break;
+        }
       }
     }
 
-    setScore((prevScore) => prevScore + scoreIncrement); // Update score by adding the increment
+    setScore((prevScore) => Math.round(prevScore + scoreIncrement)); // Update score by adding the increment
   };
-  // Use useEffect to update session storage when score changes
-  useEffect(() => {
-    sessionStorage.setItem("GMAT_Score", score.toFixed(2));
 
-    // Set practice score based on exam_no (you can add this logic as needed)
-    if (exam_no === "1") {
-      localStorage.setItem("practice_score_1", score.toFixed(2));
-    } else if (exam_no === "2") {
-      localStorage.setItem("practice_score_2", score.toFixed(2));
-    } else {
-      localStorage.setItem("practice_score_1", score.toFixed(2));
+  const RangeValues = [10, 50, 75, 100, 125, 190, 280, 375, 475];
+
+  function findClosestValues(inputValue) {
+    let closestLow = -Infinity;
+    let closestHigh = Infinity;
+
+    for (const value of RangeValues) {
+      if (value < inputValue && value > closestLow) {
+        closestLow = value;
+      } else if (value > inputValue && value < closestHigh) {
+        closestHigh = value;
+      }
     }
-  }, [score, exam_no]); // Trigger the effect whenever the score changes
+
+    return { closestLow, closestHigh };
+  }
+
+  const GMATScoreConversion = (totalScore) => {
+    let convertedScore = 0;
+
+    switch (totalScore) {
+      case 10:
+        convertedScore = 7;
+        break;
+      case 50:
+        convertedScore = 20;
+
+        break;
+      case 75:
+        convertedScore = 30;
+        break;
+      case 100:
+        convertedScore = 35;
+        break;
+      case 125:
+        convertedScore = 40;
+
+        break;
+      case 190:
+        convertedScore = 45;
+        break;
+      case 280:
+        convertedScore = 48;
+        break;
+      case 375:
+        convertedScore = 50;
+        break;
+      case 475:
+        convertedScore = 51;
+        break;
+      default:
+        const { closestLow, closestHigh } = findClosestValues(totalScore);
+        const x = calculateMatchingValue(closestLow);
+        const i = calculateMatchingValue(closestHigh);
+        const y = i - x;
+
+        const z = (closestHigh - totalScore) / (closestHigh - closestLow);
+
+        convertedScore = x + y * z;
+
+        break;
+    }
+
+    console.log(convertedScore);
+
+    if (convertedScore > 51) {
+      convertedScore = 51;
+    }
+
+    sessionStorage.setItem("verbal_score", Math.round(convertedScore));
+  };
+
+  function calculateMatchingValue(range) {
+    switch (range) {
+      case 10:
+        return 7;
+      case 50:
+        return 20;
+      case 75:
+        return 30;
+      case 100:
+        return 35;
+      case 125:
+        return 40;
+      case 190:
+        return 45;
+      case 280:
+        return 48;
+      case 375:
+        return 50;
+      case 475:
+        return 51;
+      default:
+        // Handle other cases as needed
+        return 0;
+    }
+  }
 
   useEffect(() => {
     const updatedPercentage = (questionNumber / totalQuestions) * 100;
@@ -223,6 +406,7 @@ const VerbalTestPage = () => {
 
       // Check if currentQuestion is within the valid range
       if (currentQuestion + 2 < filteredQuestionsByLevel.length) {
+        console.log("inside");
         setCurrentQuestion((prevQuestion) => prevQuestion + 1);
       } else {
         // Handle the case where there are no more questions for the current level
@@ -247,9 +431,14 @@ const VerbalTestPage = () => {
       let nextQuestionLevel = currentQuestionLevel;
 
       calculateScore(nextQuestionLevel); // Calculate the score
+      var levelLimit = 2;
 
-      if (questionNumber > 2) {
-        if (newTempSum === 0 && currentQuestionLevel > 1) {
+      if (questionNumber > 12) {
+        levelLimit = 1;
+      }
+
+      if (currentQuestion > threshHold) {
+        if (newTempSum === 0 && currentQuestionLevel > levelLimit) {
           nextQuestionLevel = currentQuestionLevel - 1; // Decrease level by 1, but not below 1
 
           setCurrentQuestion(0);
@@ -262,6 +451,12 @@ const VerbalTestPage = () => {
 
       setCurrentQuestionLevel(nextQuestionLevel);
 
+      if (questionNumber === 12) {
+        nextQuestionLevel = 4;
+        setCurrentQuestionLevel(4);
+        setCurrentQuestion(0);
+      }
+
       // Filter questions based on the currentQuestionLevel and attendedQuestionIds
       const filteredArray = shuffledQuestions.filter(
         (question) =>
@@ -272,20 +467,34 @@ const VerbalTestPage = () => {
       if (filteredArray.length === 0) {
         // No more questions left for the current level
         setCurrentQuestion(0);
+        if (nextQuestionLevel < 5) {
+          nextQuestionLevel = nextQuestionLevel + 1;
+        } else {
+          if (nextQuestionLevel !== 1) {
+            nextQuestionLevel = nextQuestionLevel - 1;
+          }
+        }
+
+        // Filter questions based on the currentQuestionLevel and attendedQuestionIds
+        const filteredArray = shuffledQuestions.filter(
+          (question) =>
+            question.level === nextQuestionLevel &&
+            !attendedQuestionIds.includes(question.id)
+        );
+
+        setFilteredQuestionsByLevel(filteredArray);
+        return;
       }
 
       setFilteredQuestionsByLevel(filteredArray);
     } else {
       setUserAnswers([...userAnswers, value]);
-      calculateScore(); // Calculate the score
-      navigate("/results");
-      if (exam_no === "1") {
-        localStorage.setItem("practice_status_1", "Completed");
-      } else if (exam_no === "2") {
-        localStorage.setItem("practice_status_2", "Completed");
-      } else {
-        localStorage.setItem("practice_status_3", "Completed");
-      }
+      calculateScore(currentQuestionLevel); // Calculate the score
+      GMATScoreConversion(score);
+      sessionStorage.setItem("current_section", "ir");
+      sessionStorage.setItem("time_remaining", remainingTime);
+      navigate("/test-break");
+
       // Handle the end of the test, e.g., show results
     }
   };

@@ -91,7 +91,7 @@ const SectionDivider = () => {
             </button>
           </div>
         </>
-      ) : (
+      ) : currentSection === "verbal" ? (
         <>
           <div className="container p-3 ">
             <h3 className="mb-3">Verbal Section Instructions</h3>
@@ -140,6 +140,59 @@ const SectionDivider = () => {
             <button
               onClick={() => {
                 navigate("/verbal-test");
+              }}
+              className="btn btn-primary"
+            >
+              Start Exam{" "}
+            </button>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="container p-3 ">
+            <h3 className="mb-3">Integrated Reasoning Instructions</h3>
+            <h4>12 Questions</h4>
+
+            <h4>Time - 30 minutes</h4>
+            <p className="mb-3 text-start fs-4 ">
+              Several question types are used in Integrated Reasoning. Some
+              require use of both quantitative and verbal skills. Some involve
+              use of graphics, tables, or text material. The questions also use
+              various response formats.
+            </p>
+            <p className="mb-3 text-start fs-4">
+              There are four question formats in this section:
+            </p>
+            <p className="mb-3 text-start fs-4">
+              Multi-Source Reasoning. Click on the tabs and examine all the
+              relevant information from text, charts, and tables to answer the
+              questions.
+            </p>
+
+            <p className="mb-3 text-start fs-4">
+              Table Analysis. A table is to be analyzed to find whether answer
+              statements are accurate.
+            </p>
+
+            <p className="text-start fs-4">
+              Graphics Interpretation. Interpret a graph or graphical image and
+              select the option from a drop-down list to accurately complete
+              response statements.
+            </p>
+
+            <p className="mb-3 text-start fs-4">
+              Two-Part Analysis. Two-component task is presented for a solution,
+              with answer options provided in a two-column table format.
+            </p>
+
+            <p className="mb-3 text-start fs-4">
+              For each question, review the text, graphic, or text material
+              provided and respond to the task that is presented.
+            </p>
+
+            <button
+              onClick={() => {
+                navigate("/ir-test");
               }}
               className="btn btn-primary"
             >

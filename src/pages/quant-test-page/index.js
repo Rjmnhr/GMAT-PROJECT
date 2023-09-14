@@ -271,7 +271,7 @@ const QuantTestPage = () => {
             scoreIncrement = -2;
             break;
           case 2:
-                                                                                                                                                                                                                                                                                                       scoreIncrement = -2.2;
+            scoreIncrement = -2.2;
             break;
           case 3:
             scoreIncrement = -2;
@@ -301,6 +301,104 @@ const QuantTestPage = () => {
 
     setScore((prevScore) => Math.round(prevScore + scoreIncrement)); // Update score by adding the increment
   };
+
+  const RangeValues = [10, 50, 75, 100, 125, 190, 280, 375, 475];
+
+  function findClosestValues(inputValue) {
+    let closestLow = -Infinity;
+    let closestHigh = Infinity;
+
+    for (const value of RangeValues) {
+      if (value < inputValue && value > closestLow) {
+        closestLow = value;
+      } else if (value > inputValue && value < closestHigh) {
+        closestHigh = value;
+      }
+    }
+
+    return { closestLow, closestHigh };
+  }
+
+  const GMATScoreConversion = (totalScore) => {
+    let convertedScore = 0;
+
+    switch (totalScore) {
+      case 10:
+        convertedScore = 7;
+        break;
+      case 50:
+        convertedScore = 20;
+
+        break;
+      case 75:
+        convertedScore = 30;
+        break;
+      case 100:
+        convertedScore = 35;
+        break;
+      case 125:
+        convertedScore = 40;
+
+        break;
+      case 190:
+        convertedScore = 45;
+        break;
+      case 280:
+        convertedScore = 48;
+        break;
+      case 375:
+        convertedScore = 50;
+        break;
+      case 475:
+        convertedScore = 51;
+        break;
+      default:
+        const { closestLow, closestHigh } = findClosestValues(totalScore);
+        const x = calculateMatchingValue(closestLow);
+        const i = calculateMatchingValue(closestHigh);
+        const y = i - x;
+
+        const z = (closestHigh - totalScore) / (closestHigh - closestLow);
+
+        convertedScore = x + y * z;
+
+        break;
+    }
+
+    console.log(convertedScore);
+
+    if (convertedScore > 51) {
+      convertedScore = 51;
+    }
+
+    sessionStorage.setItem("quant_score", Math.round(convertedScore));
+  };
+
+  function calculateMatchingValue(range) {
+    switch (range) {
+      case 10:
+        return 7;
+      case 50:
+        return 20;
+      case 75:
+        return 30;
+      case 100:
+        return 35;
+      case 125:
+        return 40;
+      case 190:
+        return 45;
+      case 280:
+        return 48;
+      case 375:
+        return 50;
+      case 475:
+        return 51;
+      default:
+        // Handle other cases as needed
+        return 0;
+    }
+  }
   // Use useEffect to update session storage when score changes
   useEffect(() => {
     sessionStorage.setItem("GMAT_Score", score.toFixed(2));
@@ -361,18 +459,7 @@ const QuantTestPage = () => {
       if (questionNumber > 12) {
         levelLimit = 1;
       }
-      console.log(
-        "🚀 ~ file: index.js:366 ~ handleNext ~ (currentQuestion > threshHold):",
-        currentQuestion > threshHold
-      );
-      console.log(
-        "🚀 ~ file: index.js:366 ~ handleNext ~ threshHold:",
-        threshHold
-      );
-      console.log(
-        "🚀 ~ file: index.js:366 ~ handleNext ~ currentQuestion:",
-        currentQuestion
-      );
+
       if (currentQuestion > threshHold) {
         if (newTempSum === 0 && currentQuestionLevel > levelLimit) {
           nextQuestionLevel = currentQuestionLevel - 1; // Decrease level by 1, but not below 1
@@ -384,10 +471,6 @@ const QuantTestPage = () => {
           setCurrentQuestion(0);
         }
       }
-      console.log(
-        "🚀 ~ file: index.js:383 ~ handleNext ~ nextQuestionLevel:",
-        nextQuestionLevel
-      );
 
       setCurrentQuestionLevel(nextQuestionLevel);
 
@@ -430,6 +513,7 @@ const QuantTestPage = () => {
     } else {
       setUserAnswers([...userAnswers, value]);
       calculateScore(currentQuestionLevel); // Calculate the score
+      GMATScoreConversion(score);
       sessionStorage.setItem("current_section", "verbal");
       sessionStorage.setItem("time_remaining", remainingTime);
       navigate("/test-break");

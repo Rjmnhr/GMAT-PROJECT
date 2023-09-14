@@ -7,6 +7,7 @@ import QuantTestPage from "./pages/quant-test-page";
 import VerbalTestPage from "./pages/verbal-test-page";
 import SectionDivider from "./components/section-divider";
 import OptionalBreak from "./components/optional-break";
+import IRTestPage from "./pages/IR_section";
 const AppRouter = () => {
   return (
     <>
@@ -78,6 +79,16 @@ const AppRouter = () => {
               <>
                 <div>
                   <OptionalBreak />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/ir-test"
+            element={
+              <>
+                <div>
+                  <IRTestPage />
                 </div>
               </>
             }
