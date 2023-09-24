@@ -27,7 +27,7 @@ const VerbalTestPage = () => {
   const [attendedQuestionIds, setAttendedQuestionIds] = useState([]);
   const [isSplitScreen, setIsSplitScreen] = useState(true);
   const [threshHold, setThreshHold] = useState(1);
-
+  const [responseHistory, setResponseHistory] = useState([]);
   useEffect(() => {
     let newThreshold = 0;
 
@@ -47,6 +47,11 @@ const VerbalTestPage = () => {
   const verbalQuestions = questions.filter(
     (question) => question.Category === "Verbal"
   );
+
+  function underlineMatchingText(question, answer) {
+    const regex = new RegExp(answer, "g");
+    return question.replace(regex, `<u>${answer}</u>`);
+  }
 
   // function shuffleArray(array) {
   //   let currentIndex = array.length,
@@ -204,7 +209,7 @@ const VerbalTestPage = () => {
             scoreIncrement = -9;
             break;
           case 5:
-            scoreIncrement = -8.8;
+            scoreIncrement = -8.75;
 
             break;
           case 6:
@@ -215,7 +220,9 @@ const VerbalTestPage = () => {
             break;
           case 8:
             scoreIncrement = -6;
+
             break;
+
           default:
             // Handle other levels if necessary
             break;
@@ -244,7 +251,7 @@ const VerbalTestPage = () => {
             scoreIncrement = 4.5;
             break;
           case 7:
-            scoreIncrement = 6;
+            scoreIncrement = 6.0;
             break;
           case 8:
             scoreIncrement = 12;
@@ -260,7 +267,7 @@ const VerbalTestPage = () => {
             scoreIncrement = -2;
             break;
           case 2:
-            scoreIncrement = -2.2;
+            scoreIncrement = -2.16;
             break;
           case 3:
             scoreIncrement = -2;
@@ -280,7 +287,9 @@ const VerbalTestPage = () => {
             break;
           case 8:
             scoreIncrement = -1.2;
+
             break;
+
           default:
             // Handle other levels if necessary
             break;
@@ -288,7 +297,7 @@ const VerbalTestPage = () => {
       }
     }
 
-    setScore((prevScore) => Math.round(prevScore + scoreIncrement)); // Update score by adding the increment
+    setScore((prevScore) => prevScore + scoreIncrement); // Update score by adding the increment
   };
 
   const RangeValues = [10, 50, 75, 100, 125, 190, 280, 375, 475];
@@ -394,6 +403,38 @@ const VerbalTestPage = () => {
     setPercentage(updatedPercentage.toFixed(2));
   }, [questionNumber, totalQuestions]);
 
+  const mappingTheLevels = (level) => {
+    switch (level) {
+      case 1:
+        return 1;
+
+      case 2:
+        return 1;
+
+      case 3:
+        return 2;
+
+      case 4:
+        return 2;
+
+      case 5:
+        return 3;
+
+      case 6:
+        return 3;
+
+      case 7:
+        return 4;
+
+      case 8:
+        return 5;
+
+      default:
+        // Handle other cases as needed
+        return 1;
+    }
+  };
+
   const handleNext = () => {
     setQuestionNumber(questionNumber + 1);
     if (questionNumber < totalQuestions) {
@@ -442,7 +483,7 @@ const VerbalTestPage = () => {
           nextQuestionLevel = currentQuestionLevel - 1; // Decrease level by 1, but not below 1
 
           setCurrentQuestion(0);
-        } else if (newTempSum === 3 && currentQuestionLevel < 5) {
+        } else if (newTempSum === 3 && currentQuestionLevel < 8) {
           nextQuestionLevel = currentQuestionLevel + 1; // Increase level by 1, but not above 5
 
           setCurrentQuestion(0);
@@ -457,28 +498,42 @@ const VerbalTestPage = () => {
         setCurrentQuestion(0);
       }
 
+      let mappedLevel = mappingTheLevels(nextQuestionLevel);
+
       // Filter questions based on the currentQuestionLevel and attendedQuestionIds
       const filteredArray = shuffledQuestions.filter(
         (question) =>
-          question.level === nextQuestionLevel &&
+          question.level === mappedLevel &&
           !attendedQuestionIds.includes(question.id)
       );
+
+      const response = {
+        questionNumber,
+
+        status: isCorrect ? "right" : "wrong",
+        score: score,
+        level: nextQuestionLevel,
+        mappedLevel: mappedLevel,
+      };
+
+      // Add the response object to the history array
+      setResponseHistory([...responseHistory, response]);
 
       if (filteredArray.length === 0) {
         // No more questions left for the current level
         setCurrentQuestion(0);
-        if (nextQuestionLevel < 5) {
+        if (nextQuestionLevel < 8) {
           nextQuestionLevel = nextQuestionLevel + 1;
         } else {
           if (nextQuestionLevel !== 1) {
             nextQuestionLevel = nextQuestionLevel - 1;
           }
         }
-
+        mappedLevel = mappingTheLevels(nextQuestionLevel);
         // Filter questions based on the currentQuestionLevel and attendedQuestionIds
         const filteredArray = shuffledQuestions.filter(
           (question) =>
-            question.level === nextQuestionLevel &&
+            question.level === mappedLevel &&
             !attendedQuestionIds.includes(question.id)
         );
 
@@ -490,7 +545,6 @@ const VerbalTestPage = () => {
     } else {
       setUserAnswers([...userAnswers, value]);
       calculateScore(currentQuestionLevel); // Calculate the score
-      GMATScoreConversion(score);
       sessionStorage.setItem("current_section", "ir");
       sessionStorage.setItem("time_remaining", remainingTime);
       navigate("/test-break");
@@ -500,9 +554,20 @@ const VerbalTestPage = () => {
   };
 
   useEffect(() => {
+    GMATScoreConversion(score);
+
+    sessionStorage.setItem("GMAT_Score", score);
+    if (questionNumber > totalQuestions) {
+      navigate("/test-break");
+    }
+    //eslint-disable-next-line
+  }, [score]);
+
+  useEffect(() => {
+    const mappedLevel = mappingTheLevels(currentQuestionLevel);
     // Filter questions based on the currentQuestionLevel
     const filteredArray = shuffledQuestions.filter(
-      (question) => question.level === currentQuestionLevel
+      (question) => question.level === mappedLevel
     );
 
     setFilteredQuestionsByLevel(filteredArray);
@@ -529,6 +594,17 @@ const VerbalTestPage = () => {
 
     // eslint-disable-next-line
   }, [currentQuestion, score, isSplitScreen]);
+
+  let questionStemWithUnderline = "";
+
+  if (filteredQuestionsByLevel) {
+    const currentQuestionData = filteredQuestionsByLevel[currentQuestion];
+
+    questionStemWithUnderline = underlineMatchingText(
+      currentQuestionData.main_question_stem,
+      currentQuestionData.answer_1
+    );
+  }
 
   return (
     <>
@@ -591,9 +667,12 @@ const VerbalTestPage = () => {
                   height: `${isSplitScreen ? "70vh" : ""} `,
                 }}
               >
-                <p className="mb-3">
-                  {filteredQuestionsByLevel[currentQuestion].main_question_stem}
-                </p>
+                <p
+                  className="mb-3"
+                  dangerouslySetInnerHTML={{
+                    __html: questionStemWithUnderline,
+                  }}
+                ></p>
               </div>
 
               <div
@@ -642,8 +721,10 @@ const VerbalTestPage = () => {
                 </div>
 
                 <p className="mt-3">
-                  Level:{filteredQuestionsByLevel[currentQuestion].level}
+                  Level of question:
+                  {filteredQuestionsByLevel[currentQuestion].level}
                 </p>
+                <p className="mt-3">Level :{currentQuestionLevel}</p>
 
                 <p className="mt-3">
                   Correct Answer:

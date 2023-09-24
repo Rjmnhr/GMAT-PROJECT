@@ -2,15 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Progress, Result } from "antd";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { LoadingOutlined } from "@ant-design/icons";
 
 const ResultPage = () => {
   const [score, setScore] = useState(0);
   const scorePercentage = ((score / 800) * 100).toFixed(2);
   const navigate = useNavigate();
-
+  const [isLoading, setIsLoading] = useState(true);
   const quant_score = sessionStorage.getItem("quant_score");
   const verbal_score = sessionStorage.getItem("verbal_score");
   const exam_no = localStorage.getItem("exam_no");
+  const ir_score = sessionStorage.getItem("ir_score");
   useEffect(() => {
     const formData = new FormData();
     formData.append("quant_score", quant_score);
@@ -27,13 +29,10 @@ const ResultPage = () => {
       )
       .then(async (response) => {
         const resultData = await response.data;
-        console.log(
-          "🚀 ~ file: index.js:26 ~ .then ~ resultData:",
-          resultData[0][verbal_score]
-        );
 
         const score = resultData[0][verbal_score];
         setScore(score);
+        setIsLoading(false);
 
         localStorage.setItem("GMAT_Score", score);
 
@@ -69,17 +68,38 @@ const ResultPage = () => {
 
   return (
     <>
-      <div>
-        <Result
-          status="success"
-          title={`Your GMAT Score: ${score}`}
-          subTitle={`Category: ${category}`}
-        />
-        <Progress type="circle" percent={parseFloat(scorePercentage)} />
-      </div>
-      <button className="btn border mt-5" onClick={() => navigate("/")}>
-        Go to Dashboard
-      </button>
+      {isLoading ? (
+        <>
+          <div
+            style={{
+              height: "100vh",
+              width: "100%",
+              display: "grid",
+              placeItems: "center",
+              justifyItems: "center",
+            }}
+          >
+            <LoadingOutlined />
+            <h4>Your results are Loading ...</h4>
+          </div>
+        </>
+      ) : (
+        <>
+          <div>
+            <Result
+              status="success"
+              title={`Your GMAT Score: ${score}`}
+              subTitle={`Category: ${category}`}
+            />
+            <Progress type="circle" percent={parseFloat(scorePercentage)} />
+          </div>
+
+          <p>Your Integrated Reasoning score : {ir_score}</p>
+          <button className="btn border mt-5" onClick={() => navigate("/")}>
+            Go to Dashboard
+          </button>
+        </>
+      )}
     </>
   );
 };

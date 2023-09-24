@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Progress, Radio, Space } from "antd";
 import { ClockCircleTwoTone } from "@ant-design/icons";
-import { questions } from "../../components/items";
+
 import { useNavigate } from "react-router-dom";
+// import { useApplicationContext } from "../../app-context";
+// import axios from "axios";
+import { questions } from "../../components/items";
 
 const QuantTestPage = () => {
   const [value, setValue] = useState(null);
@@ -25,6 +28,21 @@ const QuantTestPage = () => {
   const [questionNumber, setQuestionNumber] = useState(1);
   const [attendedQuestionIds, setAttendedQuestionIds] = useState([]);
   const [threshHold, setThreshHold] = useState(1);
+  const [responseHistory, setResponseHistory] = useState([]);
+  // const { questions, setQuestions } = useApplicationContext();
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8003/api/gmat/data")
+  //     .then(async (response) => {
+  //       const resultData = await response.data;
+
+  //       await setQuestions(resultData);
+  //       console.log("🚀 ~ file: index.js:40 ~ .then ~ resultData:", resultData);
+  //     })
+  //     .catch((err) => console.log("error", err));
+  //   //eslint-disable-next-line
+  // }, []);
 
   useEffect(() => {
     let newThreshold = 0;
@@ -91,18 +109,6 @@ const QuantTestPage = () => {
     };
   }, [remainingTime]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:8002/api/gmat/data")
-  //     .then(async (response) => {
-  //       const resultData = await response.data;
-
-  //       console.log(JSON.stringify(resultData));
-  //       // setDataLinkedIn(resultData);
-  //     })
-  //     .catch((err) => console.log("error", err));
-  // }, []);
-
   const formatTimer = (timeInSeconds) => {
     const minutes = Math.floor(timeInSeconds / 60)
       .toString()
@@ -159,9 +165,7 @@ const QuantTestPage = () => {
     // Logic to determine the next question level based on tempSum
   };
 
-  const exam_no = localStorage.getItem("exam_no");
-
-  const calculateScore = (level) => {
+  const calculateScore = async (level) => {
     const isCorrect =
       value === filteredQuestionsByLevel[currentQuestion].correct_answer;
 
@@ -215,7 +219,7 @@ const QuantTestPage = () => {
             scoreIncrement = -9;
             break;
           case 5:
-            scoreIncrement = -8.8;
+            scoreIncrement = -8.75;
 
             break;
           case 6:
@@ -226,7 +230,9 @@ const QuantTestPage = () => {
             break;
           case 8:
             scoreIncrement = -6;
+
             break;
+
           default:
             // Handle other levels if necessary
             break;
@@ -255,7 +261,7 @@ const QuantTestPage = () => {
             scoreIncrement = 4.5;
             break;
           case 7:
-            scoreIncrement = 6;
+            scoreIncrement = 6.0;
             break;
           case 8:
             scoreIncrement = 12;
@@ -271,7 +277,7 @@ const QuantTestPage = () => {
             scoreIncrement = -2;
             break;
           case 2:
-            scoreIncrement = -2.2;
+            scoreIncrement = -2.16;
             break;
           case 3:
             scoreIncrement = -2;
@@ -291,7 +297,9 @@ const QuantTestPage = () => {
             break;
           case 8:
             scoreIncrement = -1.2;
+
             break;
+
           default:
             // Handle other levels if necessary
             break;
@@ -299,7 +307,7 @@ const QuantTestPage = () => {
       }
     }
 
-    setScore((prevScore) => Math.round(prevScore + scoreIncrement)); // Update score by adding the increment
+    setScore((prevScore) => prevScore + scoreIncrement);
   };
 
   const RangeValues = [10, 50, 75, 100, 125, 190, 280, 375, 475];
@@ -399,23 +407,44 @@ const QuantTestPage = () => {
         return 0;
     }
   }
-  // Use useEffect to update session storage when score changes
-  useEffect(() => {
-    sessionStorage.setItem("GMAT_Score", score.toFixed(2));
-    // Set practice score based on exam_no (you can add this logic as needed)
-    if (exam_no === "1") {
-      localStorage.setItem("practice_score_1", score.toFixed(2));
-    } else if (exam_no === "2") {
-      localStorage.setItem("practice_score_2", score.toFixed(2));
-    } else {
-      localStorage.setItem("practice_score_1", score.toFixed(2));
-    }
-  }, [score, exam_no]); // Trigger the effect whenever the score changes
+  // Trigger the effect whenever the score changes
 
   useEffect(() => {
     const updatedPercentage = (questionNumber / totalQuestions) * 100;
     setPercentage(updatedPercentage.toFixed(2));
   }, [questionNumber, totalQuestions]);
+
+  const mappingTheLevels = (level) => {
+    switch (level) {
+      case 1:
+        return 1;
+
+      case 2:
+        return 1;
+
+      case 3:
+        return 2;
+
+      case 4:
+        return 2;
+
+      case 5:
+        return 3;
+
+      case 6:
+        return 3;
+
+      case 7:
+        return 4;
+
+      case 8:
+        return 5;
+
+      default:
+        // Handle other cases as needed
+        return 1;
+    }
+  };
 
   const handleNext = () => {
     setQuestionNumber(questionNumber + 1);
@@ -465,7 +494,7 @@ const QuantTestPage = () => {
           nextQuestionLevel = currentQuestionLevel - 1; // Decrease level by 1, but not below 1
 
           setCurrentQuestion(0);
-        } else if (newTempSum === 3 && currentQuestionLevel < 5) {
+        } else if (newTempSum === 3 && currentQuestionLevel < 8) {
           nextQuestionLevel = currentQuestionLevel + 1; // Increase level by 1, but not above 5
 
           setCurrentQuestion(0);
@@ -480,17 +509,32 @@ const QuantTestPage = () => {
         setCurrentQuestion(0);
       }
 
+      let mappedLevel = mappingTheLevels(nextQuestionLevel);
+
       // Filter questions based on the currentQuestionLevel and attendedQuestionIds
       const filteredArray = shuffledQuestions.filter(
         (question) =>
-          question.level === nextQuestionLevel &&
+          question.level === mappedLevel &&
           !attendedQuestionIds.includes(question.id)
       );
+
+      const response = {
+        questionNumber,
+
+        status: isCorrect ? "right" : "wrong",
+        score: score,
+        level: nextQuestionLevel,
+        mappedLevel: mappedLevel,
+      };
+
+      // Add the response object to the history array
+      setResponseHistory([...responseHistory, response]);
 
       if (filteredArray.length === 0) {
         // No more questions left for the current level
         setCurrentQuestion(0);
-        if (nextQuestionLevel < 5) {
+
+        if (nextQuestionLevel < 8) {
           nextQuestionLevel = nextQuestionLevel + 1;
         } else {
           if (nextQuestionLevel !== 1) {
@@ -498,14 +542,17 @@ const QuantTestPage = () => {
           }
         }
 
+        mappedLevel = mappingTheLevels(nextQuestionLevel);
+
         // Filter questions based on the currentQuestionLevel and attendedQuestionIds
         const filteredArray = shuffledQuestions.filter(
           (question) =>
-            question.level === nextQuestionLevel &&
+            question.level === mappedLevel &&
             !attendedQuestionIds.includes(question.id)
         );
 
         setFilteredQuestionsByLevel(filteredArray);
+
         return;
       }
 
@@ -513,31 +560,36 @@ const QuantTestPage = () => {
     } else {
       setUserAnswers([...userAnswers, value]);
       calculateScore(currentQuestionLevel); // Calculate the score
-      GMATScoreConversion(score);
+
       sessionStorage.setItem("current_section", "verbal");
       sessionStorage.setItem("time_remaining", remainingTime);
-      navigate("/test-break");
-      if (exam_no === "1") {
-        localStorage.setItem("practice_status_1", "Completed");
-      } else if (exam_no === "2") {
-        localStorage.setItem("practice_status_2", "Completed");
-      } else {
-        localStorage.setItem("practice_status_3", "Completed");
-      }
-      // Handle the end of the test, e.g., show results
+
+      console.log(responseHistory);
     }
   };
 
   useEffect(() => {
+    const mappedLevel = mappingTheLevels(currentQuestionLevel);
+
     // Filter questions based on the currentQuestionLevel
     const filteredArray = shuffledQuestions.filter(
-      (question) => question.level === currentQuestionLevel
+      (question) => question.level === mappedLevel
     );
 
     setFilteredQuestionsByLevel(filteredArray);
 
     // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    GMATScoreConversion(score);
+
+    sessionStorage.setItem("GMAT_Score", score);
+    if (questionNumber > totalQuestions) {
+      navigate("/test-break");
+    }
+    //eslint-disable-next-line
+  }, [score]);
 
   return (
     <>
@@ -582,94 +634,99 @@ const QuantTestPage = () => {
         </div>
 
         {filteredQuestionsByLevel ? (
-          <div className="qstn-box">
-            <div className="container-fluid px-5 mt-5 text-start">
-              <p className="mb-3">
-                {filteredQuestionsByLevel[currentQuestion].main_question_stem
-                  ? filteredQuestionsByLevel[currentQuestion].main_question_stem
-                  : ""}
-              </p>
-              {filteredQuestionsByLevel[currentQuestion].img_url ? (
-                <img
-                  className="mb-3"
-                  src={filteredQuestionsByLevel[currentQuestion].img_url}
-                  alt="not available"
-                />
-              ) : (
-                ""
-              )}
+          filteredQuestionsByLevel.length > 0 ? (
+            <div className="qstn-box">
+              <div className="container-fluid px-5 mt-5 text-start">
+                <p className="mb-3">
+                  {filteredQuestionsByLevel[currentQuestion].main_question_stem
+                    ? filteredQuestionsByLevel[currentQuestion]
+                        .main_question_stem
+                    : ""}
+                </p>
+                {filteredQuestionsByLevel[currentQuestion].img_url ? (
+                  <img
+                    className="mb-3"
+                    src={filteredQuestionsByLevel[currentQuestion].img_url}
+                    alt="not available"
+                  />
+                ) : (
+                  ""
+                )}
 
-              <p>
-                {filteredQuestionsByLevel[currentQuestion].subquestion1
-                  ? `1) ${filteredQuestionsByLevel[currentQuestion].subquestion1}`
-                  : ""}
-              </p>
-              <p>
-                {filteredQuestionsByLevel[currentQuestion].subquestion2
-                  ? `2) ${filteredQuestionsByLevel[currentQuestion].subquestion2}`
-                  : ""}
-              </p>
-              <p>
-                {filteredQuestionsByLevel[currentQuestion].subquestion3
-                  ? `3) ${filteredQuestionsByLevel[currentQuestion].subquestion3}`
-                  : ""}
-              </p>
-              <div className="mt-2">
-                <Radio.Group onChange={onChange} value={value}>
-                  <Space direction="vertical">
-                    <Radio value={"A"}>
-                      {filteredQuestionsByLevel[currentQuestion].answer_1
-                        ? filteredQuestionsByLevel[currentQuestion].answer_1
-                        : ""}
-                    </Radio>
+                <p>
+                  {filteredQuestionsByLevel[currentQuestion].subquestion1
+                    ? `1) ${filteredQuestionsByLevel[currentQuestion].subquestion1}`
+                    : ""}
+                </p>
+                <p>
+                  {filteredQuestionsByLevel[currentQuestion].subquestion2
+                    ? `2) ${filteredQuestionsByLevel[currentQuestion].subquestion2}`
+                    : ""}
+                </p>
+                <p>
+                  {filteredQuestionsByLevel[currentQuestion].subquestion3
+                    ? `3) ${filteredQuestionsByLevel[currentQuestion].subquestion3}`
+                    : ""}
+                </p>
+                <div className="mt-2">
+                  <Radio.Group onChange={onChange} value={value}>
+                    <Space direction="vertical">
+                      <Radio value={"A"}>
+                        {filteredQuestionsByLevel[currentQuestion].answer_1
+                          ? filteredQuestionsByLevel[currentQuestion].answer_1
+                          : ""}
+                      </Radio>
 
-                    <Radio value={"B"}>
-                      {filteredQuestionsByLevel[currentQuestion].answer_2
-                        ? filteredQuestionsByLevel[currentQuestion].answer_2
-                        : ""}
-                    </Radio>
+                      <Radio value={"B"}>
+                        {filteredQuestionsByLevel[currentQuestion].answer_2
+                          ? filteredQuestionsByLevel[currentQuestion].answer_2
+                          : ""}
+                      </Radio>
 
-                    <Radio value={"C"}>
-                      {filteredQuestionsByLevel[currentQuestion].answer_3
-                        ? filteredQuestionsByLevel[currentQuestion].answer_3
-                        : ""}
-                    </Radio>
+                      <Radio value={"C"}>
+                        {filteredQuestionsByLevel[currentQuestion].answer_3
+                          ? filteredQuestionsByLevel[currentQuestion].answer_3
+                          : ""}
+                      </Radio>
 
-                    <Radio value={"D"}>
-                      {filteredQuestionsByLevel[currentQuestion].answer_4
-                        ? filteredQuestionsByLevel[currentQuestion].answer_4
-                        : ""}
-                    </Radio>
+                      <Radio value={"D"}>
+                        {filteredQuestionsByLevel[currentQuestion].answer_4
+                          ? filteredQuestionsByLevel[currentQuestion].answer_4
+                          : ""}
+                      </Radio>
 
-                    <Radio value={"E"}>
-                      {filteredQuestionsByLevel[currentQuestion].answer_5
-                        ? filteredQuestionsByLevel[currentQuestion].answer_5
-                        : ""}
-                    </Radio>
-                  </Space>
-                </Radio.Group>
+                      <Radio value={"E"}>
+                        {filteredQuestionsByLevel[currentQuestion].answer_5
+                          ? filteredQuestionsByLevel[currentQuestion].answer_5
+                          : ""}
+                      </Radio>
+                    </Space>
+                  </Radio.Group>
+                </div>
+
+                <p className="mt-3">
+                  Level of question:
+                  {filteredQuestionsByLevel[currentQuestion].level
+                    ? filteredQuestionsByLevel[currentQuestion].level
+                    : ""}
+                </p>
+                <p className="mt-3">Level :{currentQuestionLevel}</p>
+                <p className="mt-3">
+                  Correct Answer:
+                  {filteredQuestionsByLevel[currentQuestion].correct_answer
+                    ? filteredQuestionsByLevel[currentQuestion].correct_answer
+                    : ""}
+                </p>
+
+                <p className="mt-3">
+                  Score:
+                  {score.toFixed(2)}
+                </p>
               </div>
-
-              <p className="mt-3">
-                Level:
-                {filteredQuestionsByLevel[currentQuestion].level
-                  ? filteredQuestionsByLevel[currentQuestion].level
-                  : ""}
-              </p>
-
-              <p className="mt-3">
-                Correct Answer:
-                {filteredQuestionsByLevel[currentQuestion].correct_answer
-                  ? filteredQuestionsByLevel[currentQuestion].correct_answer
-                  : ""}
-              </p>
-
-              <p className="mt-3">
-                Score:
-                {score.toFixed(2)}
-              </p>
             </div>
-          </div>
+          ) : (
+            ""
+          )
         ) : (
           ""
         )}

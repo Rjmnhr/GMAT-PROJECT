@@ -8,6 +8,7 @@ import VerbalTestPage from "./pages/verbal-test-page";
 import SectionDivider from "./components/section-divider";
 import OptionalBreak from "./components/optional-break";
 import IRTestPage from "./pages/IR_section";
+import GetAllQuestions from "./components/get-all-questions";
 const AppRouter = () => {
   return (
     <>
@@ -38,6 +39,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
+                  <GetAllQuestions />
                   <VerbalTestPage />
                 </div>
               </>
@@ -48,6 +50,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
+                  <GetAllQuestions />
                   <InstructionPage />
                 </div>
               </>

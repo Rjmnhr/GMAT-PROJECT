@@ -5,8 +5,6 @@ import { questions } from "../../components/items";
 import { useNavigate } from "react-router-dom";
 
 const IRTestPage = () => {
-
-
   const [value, setValue] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [totalQuestions] = useState(12);
@@ -15,6 +13,7 @@ const IRTestPage = () => {
   const [isRunning, setIsRunning] = useState(false);
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
   const [remainingTime, setRemainingTime] = useState(30 * 60); // 61 minutes in seconds
+  const [score, setScore] = useState(0);
 
   const [questionNumber, setQuestionNumber] = useState(1);
 
@@ -112,10 +111,30 @@ const IRTestPage = () => {
 
       setCurrentQuestion((prevQuestion) => prevQuestion + 1);
 
+      // Check if the selected answer is correct and update the score
+      const correctAnswer = shuffledQuestions[currentQuestion].correct_answer;
+      if (value === correctAnswer) {
+        setScore(score + 1);
+      }
+
       setIsNextButtonDisabled(true); // Disable "Next" button again
       startStopwatch();
       setValue(null); // Reset the selected value
     } else {
+      let finalScore = score;
+      // Check if the selected answer is correct and update the score
+      const correctAnswer = shuffledQuestions[currentQuestion].correct_answer;
+      if (value === correctAnswer) {
+        setScore(score + 1);
+        finalScore = score + 1;
+      }
+
+      // Calculate the percentage score out of 8
+      const percentageScore = (finalScore / totalQuestions) * 8;
+
+      // Store the percentage score in session storage
+      sessionStorage.setItem("ir_score", percentageScore.toFixed(2));
+
       sessionStorage.setItem("current_section", "");
       sessionStorage.setItem("time_remaining", remainingTime);
       navigate("/results");
