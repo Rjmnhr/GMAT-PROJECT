@@ -9,6 +9,10 @@ import SectionDivider from "./components/section-divider";
 import OptionalBreak from "./components/optional-break";
 import IRTestPage from "./pages/IR_section";
 import GetAllQuestions from "./components/get-all-questions";
+import DashboardDetailed from "./components/detailed-dashboard";
+import HomePage from "./pages/home-page";
+import LoginPage from "./pages/login-page";
+import OtpVerification from "./pages/otp-verification";
 const AppRouter = () => {
   return (
     <>
@@ -19,11 +23,22 @@ const AppRouter = () => {
             element={
               <>
                 <div>
+                  <HomePage />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/dashboard"
+            element={
+              <>
+                <div>
                   <DashBoardComponent />
                 </div>
               </>
             }
           />
+
           <Route
             path="/quant-test"
             element={
@@ -92,6 +107,36 @@ const AppRouter = () => {
               <>
                 <div>
                   <IRTestPage />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/dashboard-detailed"
+            element={
+              <>
+                <div>
+                  <DashboardDetailed />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <>
+                <div>
+                  <LoginPage />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/otp-validation"
+            element={
+              <>
+                <div>
+                  <OtpVerification />
                 </div>
               </>
             }

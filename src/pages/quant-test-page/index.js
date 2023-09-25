@@ -29,6 +29,8 @@ const QuantTestPage = () => {
   const [attendedQuestionIds, setAttendedQuestionIds] = useState([]);
   const [threshHold, setThreshHold] = useState(1);
   const [responseHistory, setResponseHistory] = useState([]);
+  const [rightQuestions, setRightQuestions] = useState(0);
+  const [wrongQuestions, setWrongQuestions] = useState(0);
   // const { questions, setQuestions } = useApplicationContext();
 
   // useEffect(() => {
@@ -91,6 +93,33 @@ const QuantTestPage = () => {
 
   //   return array;
   // }
+
+  // Function to track user inputs and update statistics
+  const trackUserInput = (answer) => {
+    console.log(answer);
+
+    let rightAnswer = rightQuestions;
+    let wrongAnswer = wrongQuestions;
+
+    if (answer) {
+      rightAnswer = rightAnswer + 1;
+      // Increment the count of right questions
+      setRightQuestions((prevRightQuestions) => prevRightQuestions + 1);
+    } else if (!answer) {
+      wrongAnswer = wrongAnswer + 1;
+      // Increment the count of wrong questions
+      setWrongQuestions((prevWrongQuestions) => prevWrongQuestions + 1);
+    }
+
+    // Calculate the new total time spent
+    const newTotalTimeSpent = 61 * 60 - remainingTime;
+
+    sessionStorage.setItem("quant_time_spend", newTotalTimeSpent);
+
+    sessionStorage.setItem("quant_correct_questions", rightAnswer);
+
+    sessionStorage.setItem("quant_wrong_questions", wrongAnswer);
+  };
 
   const shuffledQuestions = [
     ...quantWordProblems, // Select 16 Word Problems questions
@@ -471,6 +500,8 @@ const QuantTestPage = () => {
       const isCorrect =
         value === filteredQuestionsByLevel[currentQuestion].correct_answer;
 
+      trackUserInput(isCorrect);
+
       const newTempValues = [...tempValues, isCorrect ? 1 : 0].slice(1, 4);
 
       // Update the temporary values array and calculate the sum
@@ -560,6 +591,11 @@ const QuantTestPage = () => {
     } else {
       setUserAnswers([...userAnswers, value]);
       calculateScore(currentQuestionLevel); // Calculate the score
+
+      const isCorrect =
+        value === filteredQuestionsByLevel[currentQuestion].correct_answer;
+
+      trackUserInput(isCorrect);
 
       sessionStorage.setItem("current_section", "verbal");
       sessionStorage.setItem("time_remaining", remainingTime);
@@ -704,7 +740,7 @@ const QuantTestPage = () => {
                   </Radio.Group>
                 </div>
 
-                <p className="mt-3">
+                {/* <p className="mt-3">
                   Level of question:
                   {filteredQuestionsByLevel[currentQuestion].level
                     ? filteredQuestionsByLevel[currentQuestion].level
@@ -721,7 +757,7 @@ const QuantTestPage = () => {
                 <p className="mt-3">
                   Score:
                   {score.toFixed(2)}
-                </p>
+                </p> */}
               </div>
             </div>
           ) : (

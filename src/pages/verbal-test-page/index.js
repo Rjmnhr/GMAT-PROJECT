@@ -28,6 +28,8 @@ const VerbalTestPage = () => {
   const [isSplitScreen, setIsSplitScreen] = useState(true);
   const [threshHold, setThreshHold] = useState(1);
   const [responseHistory, setResponseHistory] = useState([]);
+  const [rightQuestions, setRightQuestions] = useState(0);
+  const [wrongQuestions, setWrongQuestions] = useState(0);
   useEffect(() => {
     let newThreshold = 0;
 
@@ -72,6 +74,32 @@ const VerbalTestPage = () => {
 
   //   return array;
   // }
+
+  const trackUserInput = (answer) => {
+    console.log(answer);
+
+    let rightAnswer = rightQuestions;
+    let wrongAnswer = wrongQuestions;
+
+    if (answer) {
+      rightAnswer = rightAnswer + 1;
+      // Increment the count of right questions
+      setRightQuestions((prevRightQuestions) => prevRightQuestions + 1);
+    } else if (!answer) {
+      wrongAnswer = wrongAnswer + 1;
+      // Increment the count of wrong questions
+      setWrongQuestions((prevWrongQuestions) => prevWrongQuestions + 1);
+    }
+
+    // Calculate the new total time spent
+    const newTotalTimeSpent = 65 * 60 - remainingTime;
+
+    sessionStorage.setItem("verbal_time_spend", newTotalTimeSpent);
+
+    sessionStorage.setItem("verbal_correct_questions", rightAnswer);
+
+    sessionStorage.setItem("verbal_wrong_questions", wrongAnswer);
+  };
 
   const shuffledQuestions = [...verbalQuestions];
 
@@ -459,7 +487,7 @@ const VerbalTestPage = () => {
 
       const isCorrect =
         value === filteredQuestionsByLevel[currentQuestion].correct_answer;
-
+      trackUserInput(isCorrect);
       const newTempValues = [...tempValues, isCorrect ? 1 : 0].slice(1, 4);
 
       // Update the temporary values array and calculate the sum
@@ -545,6 +573,11 @@ const VerbalTestPage = () => {
     } else {
       setUserAnswers([...userAnswers, value]);
       calculateScore(currentQuestionLevel); // Calculate the score
+
+      const isCorrect =
+        value === filteredQuestionsByLevel[currentQuestion].correct_answer;
+      trackUserInput(isCorrect);
+
       sessionStorage.setItem("current_section", "ir");
       sessionStorage.setItem("time_remaining", remainingTime);
       navigate("/test-break");
@@ -720,7 +753,7 @@ const VerbalTestPage = () => {
                   </Radio.Group>
                 </div>
 
-                <p className="mt-3">
+                {/* <p className="mt-3">
                   Level of question:
                   {filteredQuestionsByLevel[currentQuestion].level}
                 </p>
@@ -734,7 +767,7 @@ const VerbalTestPage = () => {
                 <p className="mt-3">
                   Score:
                   {score.toFixed(2)}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

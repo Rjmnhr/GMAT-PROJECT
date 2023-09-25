@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Progress, Result } from "antd";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { LoadingOutlined } from "@ant-design/icons";
+import AxiosInstance from "../../components/axios";
 
 const ResultPage = () => {
   const [score, setScore] = useState(0);
@@ -17,16 +17,11 @@ const ResultPage = () => {
     const formData = new FormData();
     formData.append("quant_score", quant_score);
     formData.append("verbal_score", verbal_score);
-    axios
-      .post(
-        "https://gmatbackend-renjithcmrenju.b4a.run/api/gmat/final-mark",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
+    AxiosInstance.post("/api/gmat/final-mark", formData, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then(async (response) => {
         const resultData = await response.data;
 

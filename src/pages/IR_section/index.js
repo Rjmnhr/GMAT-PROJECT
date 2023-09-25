@@ -18,7 +18,35 @@ const IRTestPage = () => {
   const [questionNumber, setQuestionNumber] = useState(1);
 
   const [isSplitScreen, setIsSplitScreen] = useState(true);
+  const [rightQuestions, setRightQuestions] = useState(0);
+  const [wrongQuestions, setWrongQuestions] = useState(0);
   const navigate = useNavigate();
+
+  const trackUserInput = (answer) => {
+    console.log(answer);
+
+    let rightAnswer = rightQuestions;
+    let wrongAnswer = wrongQuestions;
+
+    if (answer) {
+      rightAnswer = rightAnswer + 1;
+      // Increment the count of right questions
+      setRightQuestions((prevRightQuestions) => prevRightQuestions + 1);
+    } else if (!answer) {
+      wrongAnswer = wrongAnswer + 1;
+      // Increment the count of wrong questions
+      setWrongQuestions((prevWrongQuestions) => prevWrongQuestions + 1);
+    }
+
+    // Calculate the new total time spent
+    const newTotalTimeSpent = 30 * 60 - remainingTime;
+
+    sessionStorage.setItem("ir_time_spend", newTotalTimeSpent);
+
+    sessionStorage.setItem("ir_correct_questions", rightAnswer);
+
+    sessionStorage.setItem("ir_wrong_questions", wrongAnswer);
+  };
 
   // Filter and shuffle questions
   const IRQuestions = questions.filter(
@@ -113,9 +141,11 @@ const IRTestPage = () => {
 
       // Check if the selected answer is correct and update the score
       const correctAnswer = shuffledQuestions[currentQuestion].correct_answer;
+      const isCorrect = value === correctAnswer;
       if (value === correctAnswer) {
         setScore(score + 1);
       }
+      trackUserInput(isCorrect);
 
       setIsNextButtonDisabled(true); // Disable "Next" button again
       startStopwatch();
@@ -124,10 +154,13 @@ const IRTestPage = () => {
       let finalScore = score;
       // Check if the selected answer is correct and update the score
       const correctAnswer = shuffledQuestions[currentQuestion].correct_answer;
+      const isCorrect = value === correctAnswer;
       if (value === correctAnswer) {
         setScore(score + 1);
         finalScore = score + 1;
       }
+
+      trackUserInput(isCorrect);
 
       // Calculate the percentage score out of 8
       const percentageScore = (finalScore / totalQuestions) * 8;
@@ -151,7 +184,10 @@ const IRTestPage = () => {
 
   useEffect(() => {
     if (shuffledQuestions) {
-      if (shuffledQuestions[currentQuestion].main_question_stem.length > 1000) {
+      if (
+        shuffledQuestions[currentQuestion].main_question_stem.length > 1000 ||
+        shuffledQuestions[currentQuestion].img_url
+      ) {
         setIsSplitScreen(true);
       } else {
         setIsSplitScreen(false);
@@ -225,23 +261,24 @@ const IRTestPage = () => {
                 <p className="mb-3">
                   {shuffledQuestions[currentQuestion].main_question_stem}
                 </p>
+                <img src={shuffledQuestions[currentQuestion].img_url} alt="" />
               </div>
 
               <div
                 className="container-fluid p-3"
                 style={{ width: `${isSplitScreen ? "50%" : ""} ` }}
               >
-                <p>
+                <p className="mb-2">
                   {shuffledQuestions[currentQuestion].subquestion1
                     ? `1) ${shuffledQuestions[currentQuestion].subquestion1}`
                     : ""}
                 </p>
-                <p>
+                <p className="mb-2">
                   {shuffledQuestions[currentQuestion].subquestion2
                     ? `2) ${shuffledQuestions[currentQuestion].subquestion2}`
                     : ""}
                 </p>
-                <p>
+                <p className="mb-2">
                   {shuffledQuestions[currentQuestion].subquestion3
                     ? `3) ${shuffledQuestions[currentQuestion].subquestion3}`
                     : ""}
@@ -290,10 +327,10 @@ const IRTestPage = () => {
                   </Radio.Group>
                 </div>
 
-                <p className="mt-3">
+                {/* <p className="mt-3">
                   Correct Answer:
                   {shuffledQuestions[currentQuestion].correct_answer}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

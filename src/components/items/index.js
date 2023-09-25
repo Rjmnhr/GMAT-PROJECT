@@ -1,7 +1,7 @@
 export const questions = [
   {
-    id: 1,
-    question_id: 1,
+    id: "1",
+    question_id: "1",
     main_question_stem:
       "In a locality, there are thrice as many buses as cabs. 10% of the buses are air-conditioned while 60% of the cabs are air-conditioned. If there are only these 2 types of vehicles, what percentage of the vehicles are air-conditioned?",
     answer_1: "0.225",
@@ -15,29 +15,35 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 2,
-    question_id: 2,
+    id: "2",
+    question_id: "2",
     main_question_stem:
       "In a school, 20% of the boys learn French while 60% of the students who learn French are girls. If there are 100 boys, how many girls learn French?",
-    answer_1: 20,
-    answer_2: 24,
-    answer_3: 30,
-    answer_4: 36,
-    answer_5: 45,
+    answer_1: "20",
+    answer_2: "24",
+    answer_3: "30",
+    answer_4: "36",
+    answer_5: "45",
     correct_answer: "C",
     Category: "Quant",
     SubCategory: "Percentage",
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 3,
-    question_id: 1,
+    id: "3",
+    question_id: "1",
     main_question_stem:
       "A and B need to do the laundry since their washing machine broke down. A can wash 1/3rd of the clothes in 30 minutes. Both A and B can wash all the clothes in 1 hour. What fraction of the clothes can B wash in 20 minutes?",
     answer_1: "1/12",
@@ -51,11 +57,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 4,
-    question_id: 2,
+    id: "4",
+    question_id: "2",
     main_question_stem:
       "A can write 10 programming codes in 15 hours, and B can write the same codes in 12 hours. If A and B work together on the codes, what fraction of the total work would B have done more than A after 3 hours?",
     answer_1: "1/5",
@@ -69,11 +78,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 5,
-    question_id: 3,
+    id: "5",
+    question_id: "3",
     main_question_stem:
       "A and B can paint 3 walls in 2 hours. Along with C, they can paint 5 walls in 3 hours. If A and C work at the same rate, how long would B take to paint 2 walls?",
     answer_1: "1.5 hours",
@@ -87,11 +99,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 6,
-    question_id: 4,
+    id: "6",
+    question_id: "4",
     main_question_stem:
       "Machines A and B can polish 3 articles in 2 hours and 5 articles every 4 hours. If the efficiency of A were tripled and that of B doubled, how long would the 2 machines together take to polish 70 articles?",
     answer_1: "10 hours",
@@ -105,11 +120,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 7,
-    question_id: 5,
+    id: "7",
+    question_id: "5",
     main_question_stem:
       "A and B can complete a work in 15 days. The same work can be completed by A and C in 20 days. If B is twice as efficient as C, in how many days can A complete the work alone?",
     answer_1: "20 days",
@@ -123,11 +141,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 8,
-    question_id: 6,
+    id: "8",
+    question_id: "6",
     main_question_stem:
       "A water pipe fills a tank at the rate of 20 litres in every 8 minutes. A second water pipe fills the tank at 20 litres in half the time of the above pipe. The tank capacity is 720 litres and a 3rd pipe along with the above 2 pipes together fill the tank in 80 minutes. At what rate per minute does the 3rd pipe fill?",
     answer_1: "1 litre/min",
@@ -141,11 +162,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 9,
-    question_id: 7,
+    id: "9",
+    question_id: "7",
     main_question_stem:
       "A water pipe fills a tank at the rate of 5 litres in every minute. Along with another water pipe, it fills the tank in 30 minutes. If the efficiency of the 2nd pipe were doubled, the time taken to fill the tank along with the 1st pipe would have been 18 minutes. What is the capacity of the tank?",
     answer_1: "90 litres",
@@ -159,11 +183,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 10,
-    question_id: 8,
+    id: "10",
+    question_id: "8",
     main_question_stem:
       "20 men can do a work in 12 days and 30 women can do double the same work in 36 days. How many days would 8 men and 12 women together take to complete the work?",
     answer_1: "6 days",
@@ -177,11 +204,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 11,
-    question_id: 9,
+    id: "11",
+    question_id: "9",
     main_question_stem:
       "4 people can paint 8 walls in 6 days. The 4 people worked on painting the 8 walls for 2 days. Thereafter, another 2 people joined them. In how many days would the 6 people paint the remaining of the 8 walls?",
     answer_1: "4/3 days",
@@ -195,11 +225,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 12,
-    question_id: 10,
+    id: "12",
+    question_id: "10",
     main_question_stem:
       "In a college, 3 automated exam-paper grading machines working at a constant rate, can grade 36 answer sheets per hour. The college installs 1 more automated exam-paper grading machine that is twice as efficient as the ones above. In how many hours can these machines grade 240 answer sheets?",
     answer_1: "2.7 hours",
@@ -213,11 +246,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 13,
-    question_id: 11,
+    id: "13",
+    question_id: "11",
     main_question_stem:
       "A and B can do a work in 12 days. B and C can complete the same work in 20 days. If A works for 6 days and C works for 10 days, how many days should B work to complete the remaining work?",
     answer_1: "8 days",
@@ -231,29 +267,35 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 14,
-    question_id: 1,
+    id: "14",
+    question_id: "1",
     main_question_stem:
       "In a college, the ratio of number of students to teachers is 12 : 1 and the ratio of non-teaching staff to students and teachers combined is 11 : 3. What percent of the people above are teachers?",
-    answer_1: 0.0045,
-    answer_2: 0.0056,
-    answer_3: 0.0123,
-    answer_4: 0.0165,
-    answer_5: 0.0189,
+    answer_1: "0.0045000000000000005",
+    answer_2: "0.0056",
+    answer_3: "0.0123",
+    answer_4: "0.0165",
+    answer_5: "0.0189",
     correct_answer: "D",
     Category: "Quant",
     SubCategory: "Ratios",
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 15,
-    question_id: 2,
+    id: "15",
+    question_id: "2",
     main_question_stem:
       "If the ratio of (2x + 3y) to (3x – y) is 7 to 3, what is the ratio of (3x + 2y) to (x + 3y)?",
     answer_1: "28 : 17",
@@ -267,11 +309,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 16,
-    question_id: 3,
+    id: "16",
+    question_id: "3",
     main_question_stem:
       "The ratio of men to women in a group is 6 : 5. The ratio of men with and without glasses is 2 : 3 and the ratio of women with and without glasses is 1 : 1. What is the fraction of the people who wear glasses?",
     answer_1: "29/110",
@@ -285,15 +330,15 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 17,
-    question_id: 1,
+    id: "17",
+    question_id: "1",
     main_question_stem: "What is the Y intercept of the straight line?",
-    subquestion1:
-      "The line is at a perpendicular distance of 3 from the origin.",
-    subquestion2: "The line has a slope ‘-1’.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -308,15 +353,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 3,
+    subquestion1:
+      "The line is at a perpendicular distance of 3 from the origin.",
+    subquestion2: "The line has a slope ‘-1’.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 18,
-    question_id: 2,
+    id: "18",
+    question_id: "2",
     main_question_stem: "What is the value of k?",
-    subquestion1:
-      "The line 2x+3y+6+k(9x-y+12)=0 is perpendicular to 7x+5y-4=0.",
-    subquestion2: "The Y intercept of the line x+ky=4 is ‘-8’.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -331,14 +377,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1:
+      "The line 2x+3y+6+k(9x-y+12)=0 is perpendicular to 7x+5y-4=0.",
+    subquestion2: "The Y intercept of the line x+ky=4 is ‘-8’.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 19,
-    question_id: 3,
+    id: "19",
+    question_id: "3",
     main_question_stem: "What is the value of (a-b)?",
-    subquestion1: "The line passes through the points (3,-6) and (a,b).",
-    subquestion2: "The line is parallel to 3x-3y+5=0.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -353,15 +401,39 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 2,
+    subquestion1: "The line passes through the points (3,-6) and (a,b).",
+    subquestion2: "The line is parallel to 3x-3y+5=0.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 20,
-    question_id: 4,
+    id: "20",
+    question_id: "4",
     main_question_stem: "What is the area of the circle?",
+    answer_1:
+      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
+    answer_2:
+      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
+    answer_3:
+      "Both statements together are sufficient, but neither statement alone is sufficient",
+    answer_4: "Each statement alone is sufficient",
+    answer_5: "Statements (1) and (2) together are not sufficient",
+    correct_answer: "A",
+    Category: "Quant",
+    SubCategory: "Co-ordinate Geometry",
+    Quant_category_1: "Data Sufficiency",
+    "Quant_category 2": "Co-ordinate Geometry",
+    level: 2,
     subquestion1:
       "The end-points of a diameter of the circle have coordinates (-3,-2) and (5,2).",
     subquestion2: "The centre of the circle is at (1,0).",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "21",
+    question_id: "5",
+    main_question_stem: "What is the area of the circle?",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -370,21 +442,22 @@ export const questions = [
       "Both statements together are sufficient, but neither statement alone is sufficient",
     answer_4: "Each statement alone is sufficient",
     answer_5: "Statements (1) and (2) together are not sufficient",
-    correct_answer: "A",
+    correct_answer: "C",
     Category: "Quant",
     SubCategory: "Co-ordinate Geometry",
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
-    level: 2,
-    img_url: "",
-  },
-  {
-    id: 21,
-    question_id: 5,
-    main_question_stem: "What is the area of the circle?",
+    level: 4,
     subquestion1:
       "The circle passes through the points having coordinates (0,6) and (6,0).",
     subquestion2: "The circle passes through the point (0,0).",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "22",
+    question_id: "6",
+    main_question_stem: "What are the coordinates of the centre of the circle",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -399,37 +472,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
-    img_url: "",
-  },
-  {
-    id: 22,
-    question_id: 6,
-    main_question_stem: "What are the coordinates of the centre of the circle",
     subquestion1:
       "The circle passes through the points having coordinates (1,2) and (5,4).",
     subquestion2: "The centre of the circle lies on the line y=2x+7",
-    answer_1:
-      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
-    answer_2:
-      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
-    answer_3:
-      "Both statements together are sufficient, but neither statement alone is sufficient",
-    answer_4: "Each statement alone is sufficient",
-    answer_5: "Statements (1) and (2) together are not sufficient",
-    correct_answer: "C",
-    Category: "Quant",
-    SubCategory: "Co-ordinate Geometry",
-    Quant_category_1: "Data Sufficiency",
-    "Quant_category 2": "Co-ordinate Geometry",
-    level: 4,
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 23,
-    question_id: 7,
+    id: "23",
+    question_id: "7",
     main_question_stem: "What is the value of k?",
-    subquestion1: "The lines 2y+kx=16, y=x+5 and ky+x=9 are concurrent.",
-    subquestion2: "k is an integer",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -444,15 +496,15 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 2,
+    subquestion1: "The lines 2y+kx=16, y=x+5 and ky+x=9 are concurrent.",
+    subquestion2: "k is an integer",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 24,
-    question_id: 8,
+    id: "24",
+    question_id: "8",
     main_question_stem: "What is the value of a?",
-    subquestion1:
-      "A line passing through the points (a,2a) and (-2,3) is perpendicular to the line 4x+3y+5=0.",
-    subquestion2: "a is a positive number.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -467,15 +519,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 2,
+    subquestion1:
+      "A line passing through the points (a,2a) and (-2,3) is perpendicular to the line 4x+3y+5=0.",
+    subquestion2: "a is a positive number.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 25,
-    question_id: 9,
+    id: "25",
+    question_id: "9",
     main_question_stem: "What is the value of the Y coordinate of a point?",
-    subquestion1:
-      "The point is at a perpendicular distance of 3 units from the line 4x-3y=12.",
-    subquestion2: "The point lies on the Y axis.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -490,15 +543,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1:
+      "The point is at a perpendicular distance of 3 units from the line 4x-3y=12.",
+    subquestion2: "The point lies on the Y axis.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 26,
-    question_id: 10,
+    id: "26",
+    question_id: "10",
     main_question_stem:
       "The coordinates of A, B, C and D are (2,0),(9,0),(11,p) and (q,6) respectively. What is the length of BC?",
-    subquestion1: "The slope of AD is 2.",
-    subquestion2: "The slope of CD is 1/",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -513,16 +568,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 3,
+    subquestion1: "The slope of AD is 2.",
+    subquestion2: "The slope of CD is 1/",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 27,
-    question_id: 1,
+    id: "27",
+    question_id: "1",
     main_question_stem:
       "Two varieties of tea are mixed together, with each pound of the costlier variety being priced at $15 more than each pound of the cheaper variety. In what ratio were the two varieties of tea mixed?",
-    subquestion1: "The average price of the mixture is $20 per pound.",
-    subquestion2:
-      "The average price of the mixture is $7 per pound cheaper than the costlier variety.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -537,16 +592,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "The average price of the mixture is $20 per pound.",
+    subquestion2:
+      "The average price of the mixture is $7 per pound cheaper than the costlier variety.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 28,
-    question_id: 1,
+    id: "28",
+    question_id: "1",
     main_question_stem:
       "A man covers a part of his journey at 20 miles per hour and the remaining at 30 miles per hour. What is the total distance covered by the man?",
-    subquestion1: "The average speed of the man is 24 miles per hour.",
-    subquestion2:
-      "The ratio of the time for which he travelled at 20 miles per hour and that for which he travelled at 30 miles per hour is 3 :",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -561,17 +617,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "The average speed of the man is 24 miles per hour.",
+    subquestion2:
+      "The ratio of the time for which he travelled at 20 miles per hour and that for which he travelled at 30 miles per hour is 3 :",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 29,
-    question_id: 2,
+    id: "29",
+    question_id: "2",
     main_question_stem:
       "A travels from point P to point Q, while B travels from point Q to point P. At what time do they meet on the way?",
-    subquestion1:
-      "A starts his journey at 9:00 am while B starts his journey from 11:00 am.",
-    subquestion2:
-      "A takes 9 hours to reach point Q while B takes 6 hours to reach point P.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -586,15 +642,18 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1:
+      "A starts his journey at 9:00 am while B starts his journey from 11:00 am.",
+    subquestion2:
+      "A takes 9 hours to reach point Q while B takes 6 hours to reach point P.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 30,
-    question_id: 3,
+    id: "30",
+    question_id: "3",
     main_question_stem:
       "A and B participate in a walkathon. If they start at the same time, does A win the contest?",
-    subquestion1: "For every 5 steps taken by A, B takes 8 steps.",
-    subquestion2: "3 steps of A are of the same length of 5 steps of B.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -609,17 +668,42 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 2,
+    subquestion1: "For every 5 steps taken by A, B takes 8 steps.",
+    subquestion2: "3 steps of A are of the same length of 5 steps of B.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 31,
-    question_id: 4,
+    id: "31",
+    question_id: "4",
     main_question_stem:
       "A boy runs between points P and Q to and from a certain number of times. What is his average speed?",
+    answer_1:
+      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
+    answer_2:
+      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
+    answer_3:
+      "Both statements together are sufficient, but neither statement alone is sufficient",
+    answer_4: "Each statement alone is sufficient",
+    answer_5: "Statements (1) and (2) together are not sufficient",
+    correct_answer: "C",
+    Category: "Quant",
+    SubCategory: "Rate and Distance",
+    Quant_category_1: "Data Sufficiency",
+    "Quant_category 2": "Arithmetic",
+    level: 3,
     subquestion1:
       "The boy covers the distance from P to Q at a speed of 2 meters per second and returns at a speed of 4 meters per second and keeps on running to and from with double the speed in the previous trip.",
     subquestion2:
       "The maximum speed at which the boy can run is 16 meters per second.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "32",
+    question_id: "5",
+    main_question_stem:
+      "A man covers a part of his journey by train and the rest by bus. What is the ratio of the distances he travelled by train and by bus?",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -634,17 +718,18 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
-    img_url: "",
-  },
-  {
-    id: 32,
-    question_id: 5,
-    main_question_stem:
-      "A man covers a part of his journey by train and the rest by bus. What is the ratio of the distances he travelled by train and by bus?",
     subquestion1:
       "The speeds of the train and bus are 80 miles per hour and 60 miles per hour respectively.",
     subquestion2:
       "Had the man covered the entire journey by train at 80 miles per hour, he would have taken only 4/5 of the time he actually took.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "33",
+    question_id: "6",
+    main_question_stem:
+      "A boy usually walks to school from his home at a uniform speed and reaches school on time. How early will he reach school if he cycles to school from his home?",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -658,17 +743,18 @@ export const questions = [
     SubCategory: "Rate and Distance",
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
-    level: 3,
-    img_url: "",
-  },
-  {
-    id: 33,
-    question_id: 6,
-    main_question_stem:
-      "A boy usually walks to school from his home at a uniform speed and reaches school on time. How early will he reach school if he cycles to school from his home?",
+    level: 4,
     subquestion1: "The boy’s cycling speed is thrice his walking speed.",
     subquestion2:
       "Had the boy travelled in a car at a speed twice that of his cycling speed, he would have reached school 10 minutes before the time he reaches while cycling.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "34",
+    question_id: "7",
+    main_question_stem:
+      "A and B start from their homes at a previously agreed time and travel towards each other at their respective uniform speeds. On the way, they meet at a point P. If B had travelled at 20% higher speed, they would have met at another point Q. What is the distance between the homes of A and B?",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -683,41 +769,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
-    img_url: "",
-  },
-  {
-    id: 34,
-    question_id: 7,
-    main_question_stem:
-      "A and B start from their homes at a previously agreed time and travel towards each other at their respective uniform speeds. On the way, they meet at a point P. If B had travelled at 20% higher speed, they would have met at another point Q. What is the distance between the homes of A and B?",
     subquestion1:
       "A and B travel at speeds of 9 miles per hour and 15 miles per hour, respectively.",
     subquestion2: "The distance between the points P and Q is 2 miles.",
-    answer_1:
-      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
-    answer_2:
-      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
-    answer_3:
-      "Both statements together are sufficient, but neither statement alone is sufficient",
-    answer_4: "Each statement alone is sufficient",
-    answer_5: "Statements (1) and (2) together are not sufficient",
-    correct_answer: "C",
-    Category: "Quant",
-    SubCategory: "Rate and Distance",
-    Quant_category_1: "Data Sufficiency",
-    "Quant_category 2": "Arithmetic",
-    level: 4,
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 35,
-    question_id: 8,
+    id: "35",
+    question_id: "8",
     main_question_stem:
       "How long does a man take to cover a certain distance travelling at his normal speed?",
-    subquestion1:
-      "If the man had travelled the same distance at 6 miles per hour greater than his normal speed, he would have taken 1 hour less than the time he would have taken while travelling at his normal speed.",
-    subquestion2:
-      "If the man had travelled the same distance at 4 miles per hour lower than his normal speed, he would have taken 1 hour more than the time he would have taken while travelling at his normal speed.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -732,16 +794,18 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 5,
+    subquestion1:
+      "If the man had travelled the same distance at 6 miles per hour greater than his normal speed, he would have taken 1 hour less than the time he would have taken while travelling at his normal speed.",
+    subquestion2:
+      "If the man had travelled the same distance at 4 miles per hour lower than his normal speed, he would have taken 1 hour more than the time he would have taken while travelling at his normal speed.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 36,
-    question_id: 9,
+    id: "36",
+    question_id: "9",
     main_question_stem:
       "A and B travel from points P and Q, respectively, towards point R, where P, Q and R lie along the same straight route. If point P lies 100 meters behind point Q, does A reach point R before B?",
-    subquestion1: "The distance between the points Q and R is 500 meters.",
-    subquestion2:
-      "If A had started from Q and B had started from P, B would have been 100 meters behind A when A would have reached R.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -756,15 +820,19 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "The distance between the points Q and R is 500 meters.",
+    subquestion2:
+      "If A had started from Q and B had started from P, B would have been 100 meters behind A when A would have reached R.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 37,
-    question_id: 1,
+    id: "37",
+    question_id: "1",
     main_question_stem:
       "A student appeared for a number of tests, each test having maximum marks of 200. His average score is 70 greater than his lowest score in any test. However, the median score is 50 greater than the lowest score in any test. If the range of scores of the student is 150, and the number of tests is an odd number, what is the minimum number of tests that the student appeared for?",
-    answer_1: 3,
-    answer_2: 5,
+    answer_1: "3",
+    answer_2: "5",
     answer_3: "7",
     answer_4: "9",
     answer_5: "11",
@@ -774,15 +842,18 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 38,
-    question_id: 2,
+    id: "38",
+    question_id: "2",
     main_question_stem:
       "Five people have some marbles with them. The numbers of marbles with them are 23, 45, 51, 66 and 73. If they redistribute the marbles among themselves such that the number of marbles with each is a distinct positive integer and the median value of the number of marbles is maximized, what is the range of the number of marbles with them?",
-    answer_1: 83,
-    answer_2: 84,
+    answer_1: "83",
+    answer_2: "84",
     answer_3: "85",
     answer_4: "86",
     answer_5: "88",
@@ -792,15 +863,18 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 39,
-    question_id: 3,
+    id: "39",
+    question_id: "3",
     main_question_stem:
       "The average of 7 numbers is 12. The average of the 4 smallest numbers in this set is 8, while the average of the 4 greatest numbers in this set is 20. How much greater is the sum of the 3 greatest numbers than the sum of the 3 smallest numbers?",
-    answer_1: 32,
-    answer_2: 46,
+    answer_1: "32",
+    answer_2: "46",
     answer_3: "48",
     answer_4: "80",
     answer_5: "84",
@@ -810,11 +884,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 40,
-    question_id: 4,
+    id: "40",
+    question_id: "4",
     main_question_stem:
       "The average age of the members of a club is greater than 32 years. If four of the members are 25 years old and none of the members are more than 60 years old, which of the following could be the number of members in the club?",
     answer_1: "Only I",
@@ -828,16 +905,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 41,
-    question_id: 5,
+    id: "41",
+    question_id: "5",
     main_question_stem:
       "For a set of 8 positive distinct integers, the mean, median, and range are calculated. If the smallest three numbers of the set are reduced by 2 each and the largest two are increased by 3 each, which of the following statements is correct?",
-    subquestion1: "The mean of the set of numbers would change",
-    subquestion2: "The median of the set of numbers would change",
-    subquestion3: "The range of the set of numbers would change",
     answer_1: "Only I",
     answer_2: "Only II",
     answer_3: "Only III",
@@ -849,37 +926,36 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 4,
-    img_url: "",
+    subquestion1: "The mean of the set of numbers would change",
+    subquestion2: "The median of the set of numbers would change",
+    subquestion3: "The range of the set of numbers would change",
   },
   {
-    id: 42,
-    question_id: 6,
+    id: "42",
+    question_id: "6",
     main_question_stem:
       "The average of five distinct integers is 65. If the largest integer is 75, what is the maximum possible value of the smallest integer?",
-    answer_1: 60,
-    answer_2: 61,
-    answer_3: "     62",
-    answer_4: "    63",
-    answer_5: "     64",
+    answer_1: "60",
+    answer_2: "61",
+    answer_3: "62",
+    answer_4: "63",
+    answer_5: "64",
     correct_answer: "B",
     Category: "Quant",
     SubCategory: "Statistics",
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 43,
-    question_id: 7,
+    id: "43",
+    question_id: "7",
     main_question_stem:
       "The range of heights of students in Class A is 9 inches and that for Class B is 6 inches. The information contained in which of the following statements may be sufficient to determine the range of height of all the students from classes A and B?",
-    subquestion1:
-      "The tallest student in class B is 5 inches taller than the tallest student in class A",
-    subquestion2:
-      "The shortest student in class B is 8 inches shorter than the tallest student in class A",
-    subquestion3:
-      "The shortest student in class B is 8 inches shorter than the shortest student in class A",
     answer_1: "Only I",
     answer_2: "Only II",
     answer_3: "Only III",
@@ -891,29 +967,37 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 4,
-    img_url: "",
+    subquestion1:
+      "The tallest student in class B is 5 inches taller than the tallest student in class A",
+    subquestion2:
+      "The shortest student in class B is 8 inches shorter than the tallest student in class A",
+    subquestion3:
+      "The shortest student in class B is 8 inches shorter than the shortest student in class A",
   },
   {
-    id: 44,
-    question_id: 8,
+    id: "44",
+    question_id: "8",
     main_question_stem:
       "Four students contributed to a charity drive, and the average amount contributed by each student was $20. If no student gave more than $25 and all contributed different amounts, what is the maximum ratio of the amounts contributed by any two students?",
-    answer_1: 3,
-    answer_2: 3.125,
-    answer_3: 3.625,
-    answer_4: 5,
-    answer_5: 5.5,
+    answer_1: "3",
+    answer_2: "3.125",
+    answer_3: "3.625",
+    answer_4: "5",
+    answer_5: "5.5",
     correct_answer: "B",
     Category: "Quant",
     SubCategory: "Statistics",
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 45,
-    question_id: 9,
+    id: "45",
+    question_id: "9",
     main_question_stem:
       "For the set of numbers {x,y,(x+y),(x-4y),xy,2y}, if y>6 and the mean of the set equals (y+3), which of the following denotes the median of the above set?",
     answer_1: "x+y",
@@ -927,11 +1011,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 46,
-    question_id: 10,
+    id: "46",
+    question_id: "10",
     main_question_stem:
       "The mean of n terms is x. If the first term is increased by 1, the second by 2, the third by 3, and so on, which of the following denotes the new mean?",
     answer_1: "x+(n-1)/2",
@@ -945,16 +1032,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 47,
-    question_id: 1,
+    id: "47",
+    question_id: "1",
     main_question_stem:
       "A teacher distributed some pens and some pencils evenly among the students in his class, with each student getting an equal number of pens and an equal number of pencils. How many students are there in the class?",
-    subquestion1: "The teacher distributed 180 pens and 40 pencils.",
-    subquestion2:
-      "The total number of items received by each student is less than 15.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -969,17 +1056,42 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "The teacher distributed 180 pens and 40 pencils.",
+    subquestion2:
+      "The total number of items received by each student is less than 15.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 48,
-    question_id: 2,
+    id: "48",
+    question_id: "2",
     main_question_stem:
       "The number 2135, when divided by a number n, leaves a remainder r. What is the value of n?",
+    answer_1:
+      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
+    answer_2:
+      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
+    answer_3:
+      "Both statements together are sufficient, but neither statement alone is sufficient",
+    answer_4: "Each statement alone is sufficient",
+    answer_5: "Statements (1) and (2) together are not sufficient",
+    correct_answer: "E",
+    Category: "Quant",
+    SubCategory: "Numbers",
+    Quant_category_1: "Data Sufficiency",
+    "Quant_category 2": "Arithmetic",
+    level: 3,
     subquestion1:
       "The number 2315, when divided by n, also leaves the same remainder r.",
     subquestion2:
       "The number 2585, when divided by n, also leaves the same remainder r.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "49",
+    question_id: "3",
+    main_question_stem: "What is the remainder when 2n is divided by 8?",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -994,37 +1106,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
-    img_url: "",
-  },
-  {
-    id: 49,
-    question_id: 3,
-    main_question_stem: "What is the remainder when 2n is divided by 8?",
     subquestion1: "n, when divided by 6, leaves remainder 5.",
     subquestion2: "3n, when divided by 6, leaves remainder 3.",
-    answer_1:
-      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
-    answer_2:
-      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
-    answer_3:
-      "Both statements together are sufficient, but neither statement alone is sufficient",
-    answer_4: "Each statement alone is sufficient",
-    answer_5: "Statements (1) and (2) together are not sufficient",
-    correct_answer: "E",
-    Category: "Quant",
-    SubCategory: "Numbers",
-    Quant_category_1: "Data Sufficiency",
-    "Quant_category 2": "Arithmetic",
-    level: 3,
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 50,
-    question_id: 4,
+    id: "50",
+    question_id: "4",
     main_question_stem:
       "The remainder, when a number n is divided by 6, is p. The remainder, when the same number n is divided by 12, is q. Is p<q?",
-    subquestion1: "n is a positive number having 8 as a factor.",
-    subquestion2: "n is a positive number having 6 as a factor.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -1039,14 +1130,38 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 5,
+    subquestion1: "n is a positive number having 8 as a factor.",
+    subquestion2: "n is a positive number having 6 as a factor.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 51,
-    question_id: 5,
+    id: "51",
+    question_id: "5",
     main_question_stem: "Is n/12 an integer?",
+    answer_1:
+      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
+    answer_2:
+      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
+    answer_3:
+      "Both statements together are sufficient, but neither statement alone is sufficient",
+    answer_4: "Each statement alone is sufficient",
+    answer_5: "Statements (1) and (2) together are not sufficient",
+    correct_answer: "C",
+    Category: "Quant",
+    SubCategory: "Numbers",
+    Quant_category_1: "Data Sufficiency",
+    "Quant_category 2": "Arithmetic",
+    level: 3,
     subquestion1: "n^2/144 is an integer.",
     subquestion2: "n/6 is an integer.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "52",
+    question_id: "6",
+    main_question_stem: "If x and y are integers, what is the value of (x+y)?",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -1061,36 +1176,15 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
-    img_url: "",
-  },
-  {
-    id: 52,
-    question_id: 6,
-    main_question_stem: "If x and y are integers, what is the value of (x+y)?",
     subquestion1: "x^y=64.",
     subquestion2: "y^x=36.",
-    answer_1:
-      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
-    answer_2:
-      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
-    answer_3:
-      "Both statements together are sufficient, but neither statement alone is sufficient",
-    answer_4: "Each statement alone is sufficient",
-    answer_5: "Statements (1) and (2) together are not sufficient",
-    correct_answer: "C",
-    Category: "Quant",
-    SubCategory: "Numbers",
-    Quant_category_1: "Data Sufficiency",
-    "Quant_category 2": "Arithmetic",
-    level: 3,
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 53,
-    question_id: 7,
+    id: "53",
+    question_id: "7",
     main_question_stem: "Can n/192 be an integer?",
-    subquestion1: "n is a multiple of 24 but not 16.",
-    subquestion2: "n is a multiple of 16 but not 24.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -1105,15 +1199,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "n is a multiple of 24 but not 16.",
+    subquestion2: "n is a multiple of 16 but not 24.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 54,
-    question_id: 8,
+    id: "54",
+    question_id: "8",
     main_question_stem:
       "If a and b are single digits from 0 to 9, inclusive, what is the value of (a+b)?",
-    subquestion1: "The number 25a7b is divisible by 36.",
-    subquestion2: "The number a1b is divisible by 4.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -1128,15 +1223,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "The number 25a7b is divisible by 36.",
+    subquestion2: "The number a1b is divisible by 4.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 55,
-    question_id: 9,
+    id: "55",
+    question_id: "9",
     main_question_stem:
       "What is the remainder obtained when n is divided by 7?",
-    subquestion1: "(2n+2) is divisible by 14.",
-    subquestion2: "(n^2-1) is divisible by 7.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -1151,15 +1247,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 2,
+    subquestion1: "(2n+2) is divisible by 14.",
+    subquestion2: "(n^2-1) is divisible by 7.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 56,
-    question_id: 10,
+    id: "56",
+    question_id: "10",
     main_question_stem:
       "p is the value of the integer such that (3^p+2) is NOT a prime number. What is the remainder when (3^p+2) is divided by p?",
-    subquestion1: "p is the least such integer.",
-    subquestion2: "3^p+2<500.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -1174,14 +1271,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "p is the least such integer.",
+    subquestion2: "3^p+2<500.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 57,
-    question_id: 1,
+    id: "57",
+    question_id: "1",
     main_question_stem:
       "(5) (10) (15) (20) (25) The Gross Domestic Product (GDP), which measures the dollar value of ﬁnished goods and services produced by an economy during a given period, serves as the chief indicator of the economic well-being of the United States. The GDP assumes that the economic signiﬁcance of goods and services lies solely in their price, and that these goods and services add to the national well-being, not because of any intrinsic value they may possess, but simply because they were produced and bought. Additionally, only those goods and services involved in monetary transactions are included in the GDP. Thus, the GDP ignores the economic utility of such things as a clean environment and cohesive families and communities. It is therefore not merely coincidental, since national policies in capitalist and noncapitalist countries alike are dependent on indicators such as the GDP, that both the environment and the social structure have been eroded in recent decades. Not only does the GDP mask this erosion, it can actually portray it as an economic gain: an oil spill off a coastal region “adds” to the GDP because it generates commercial activity. In short, the nation’s central measure of economic well-being works like a calculating machine that adds but cannot subtract. Questions 1–6 refer to the passage above.",
-    subquestion1: "The primary purpose of the passage is to",
     answer_1:
       "identify ways in which the GDP could be modiﬁed so that it would serve as a more accurate indicator of the economic well-being of the United States",
     answer_2:
@@ -1195,16 +1294,19 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1: "The primary purpose of the passage is to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 58,
-    question_id: 2,
+    id: "58",
+    question_id: "2",
     main_question_stem:
       "(5) (10) (15) (20) (25) The Gross Domestic Product (GDP), which measures the dollar value of ﬁnished goods and services produced by an economy during a given period, serves as the chief indicator of the economic well-being of the United States. The GDP assumes that the economic signiﬁcance of goods and services lies solely in their price, and that these goods and services add to the national well-being, not because of any intrinsic value they may possess, but simply because they were produced and bought. Additionally, only those goods and services involved in monetary transactions are included in the GDP. Thus, the GDP ignores the economic utility of such things as a clean environment and cohesive families and communities. It is therefore not merely coincidental, since national policies in capitalist and noncapitalist countries alike are dependent on indicators such as the GDP, that both the environment and the social structure have been eroded in recent decades. Not only does the GDP mask this erosion, it can actually portray it as an economic gain: an oil spill off a coastal region “adds” to the GDP because it generates commercial activity. In short, the nation’s central measure of economic well-being works like a calculating machine that adds but cannot subtract. Questions 1–6 refer to the passage above.",
-    subquestion1:
-      "Which of the following best describes the function of the second sentence of the passage in the context of the passage as a whole?",
     answer_1:
       "It describes an assumption about the GDP that is defended in the course of the passage.",
     answer_2: "It contributes to a discussion of the origins of the GDP.",
@@ -1214,16 +1316,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "Which of the following best describes the function of the second sentence of the passage in the context of the passage as a whole?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 59,
-    question_id: 3,
+    id: "59",
+    question_id: "3",
     main_question_stem:
       "(5) (10) (15) (20) (25) The Gross Domestic Product (GDP), which measures the dollar value of ﬁnished goods and services produced by an economy during a given period, serves as the chief indicator of the economic well-being of the United States. The GDP assumes that the economic signiﬁcance of goods and services lies solely in their price, and that these goods and services add to the national well-being, not because of any intrinsic value they may possess, but simply because they were produced and bought. Additionally, only those goods and services involved in monetary transactions are included in the GDP. Thus, the GDP ignores the economic utility of such things as a clean environment and cohesive families and communities. It is therefore not merely coincidental, since national policies in capitalist and noncapitalist countries alike are dependent on indicators such as the GDP, that both the environment and the social structure have been eroded in recent decades. Not only does the GDP mask this erosion, it can actually portray it as an economic gain: an oil spill off a coastal region “adds” to the GDP because it generates commercial activity. In short, the nation’s central measure of economic well-being works like a calculating machine that adds but cannot subtract. Questions 1–6 refer to the passage above.",
-    subquestion1:
-      "It can be inferred that the author of the passage would agree with which of the following about the “economic signiﬁcance” of those goods and services that are included in the GDP?",
     answer_1:
       "It is a comprehensive indicator of a nation’s economic well-being.",
     answer_2:
@@ -1237,16 +1343,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "It can be inferred that the author of the passage would agree with which of the following about the “economic signiﬁcance” of those goods and services that are included in the GDP?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 60,
-    question_id: 4,
+    id: "60",
+    question_id: "4",
     main_question_stem:
       "(5) (10) (15) (20) (25) The Gross Domestic Product (GDP), which measures the dollar value of ﬁnished goods and services produced by an economy during a given period, serves as the chief indicator of the economic well-being of the United States. The GDP assumes that the economic signiﬁcance of goods and services lies solely in their price, and that these goods and services add to the national well-being, not because of any intrinsic value they may possess, but simply because they were produced and bought. Additionally, only those goods and services involved in monetary transactions are included in the GDP. Thus, the GDP ignores the economic utility of such things as a clean environment and cohesive families and communities. It is therefore not merely coincidental, since national policies in capitalist and noncapitalist countries alike are dependent on indicators such as the GDP, that both the environment and the social structure have been eroded in recent decades. Not only does the GDP mask this erosion, it can actually portray it as an economic gain: an oil spill off a coastal region “adds” to the GDP because it generates commercial activity. In short, the nation’s central measure of economic well-being works like a calculating machine that adds but cannot subtract. Questions 1–6 refer to the passage above.",
-    subquestion1:
-      "The comparison of the GDP to a calculating machine serves to do which of the following?",
     answer_1:
       "Refute an assertion that the calculations involved in the GDP are relatively complex in nature",
     answer_2:
@@ -1260,16 +1370,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "The comparison of the GDP to a calculating machine serves to do which of the following?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 61,
-    question_id: 5,
+    id: "61",
+    question_id: "5",
     main_question_stem:
       "(5) (10) (15) (20) (25) The Gross Domestic Product (GDP), which measures the dollar value of ﬁnished goods and services produced by an economy during a given period, serves as the chief indicator of the economic well-being of the United States. The GDP assumes that the economic signiﬁcance of goods and services lies solely in their price, and that these goods and services add to the national well-being, not because of any intrinsic value they may possess, but simply because they were produced and bought. Additionally, only those goods and services involved in monetary transactions are included in the GDP. Thus, the GDP ignores the economic utility of such things as a clean environment and cohesive families and communities. It is therefore not merely coincidental, since national policies in capitalist and noncapitalist countries alike are dependent on indicators such as the GDP, that both the environment and the social structure have been eroded in recent decades. Not only does the GDP mask this erosion, it can actually portray it as an economic gain: an oil spill off a coastal region “adds” to the GDP because it generates commercial activity. In short, the nation’s central measure of economic well-being works like a calculating machine that adds but cannot subtract. Questions 1–6 refer to the passage above.",
-    subquestion1:
-      "The passage implies that national policies that rely heavily on economic indicators such as the GDP tend to",
     answer_1: "become increasingly capitalistic in nature",
     answer_2:
       "disregard the economic importance of environmental and social factors that do not involve monetary transactions",
@@ -1282,16 +1396,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "The passage implies that national policies that rely heavily on economic indicators such as the GDP tend to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 62,
-    question_id: 6,
+    id: "62",
+    question_id: "6",
     main_question_stem:
       "(5) (10) (15) (20) (25) The Gross Domestic Product (GDP), which measures the dollar value of ﬁnished goods and services produced by an economy during a given period, serves as the chief indicator of the economic well-being of the United States. The GDP assumes that the economic signiﬁcance of goods and services lies solely in their price, and that these goods and services add to the national well-being, not because of any intrinsic value they may possess, but simply because they were produced and bought. Additionally, only those goods and services involved in monetary transactions are included in the GDP. Thus, the GDP ignores the economic utility of such things as a clean environment and cohesive families and communities. It is therefore not merely coincidental, since national policies in capitalist and noncapitalist countries alike are dependent on indicators such as the GDP, that both the environment and the social structure have been eroded in recent decades. Not only does the GDP mask this erosion, it can actually portray it as an economic gain: an oil spill off a coastal region “adds” to the GDP because it generates commercial activity. In short, the nation’s central measure of economic well-being works like a calculating machine that adds but cannot subtract. Questions 1–6 refer to the passage above.",
-    subquestion1:
-      "It can be inferred that the author of the passage would agree with which of the following assessments of the GDP as an indicator of the economic well-being of the United States?",
     answer_1:
       "It masks social and environmental erosion more fully than the chief economic indicators of other nations.",
     answer_2:
@@ -1305,15 +1423,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "It can be inferred that the author of the passage would agree with which of the following assessments of the GDP as an indicator of the economic well-being of the United States?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 63,
-    question_id: 7,
+    id: "63",
+    question_id: "7",
     main_question_stem:
       "(5) (10) (15) (20) (25) Coral reefs are one of the most fragile, biologically complex, and diverse marine ecosystems on Earth. This ecosystem is one of the fascinating paradoxes of the biosphere: how do clear, and thus nutrient- poor, waters support such proliﬁc and productive communities? Part of the answer lies within the tissues of the corals themselves. Symbiotic cells of algae known as zooxanthellae carry out photosynthesis using the metabolic wastes of the corals, thereby producing food for themselves, for their coral hosts, and even for other members of the reef community. This symbiotic process allows organisms in the reef community to use sparse nutrient resources efﬁciently. Unfortunately for coral reefs, however, a variety of human activities are causing worldwide degradation of shallow marine habitats by adding nutrients to the water. Agriculture, slash-and-burn land clearing, sewage disposal, and manufacturing that creates waste by-products all increase nutrient loads in these waters. Typical symptoms of reef decline are destabilized herbivore populations and an increasing abundance of algae and ﬁlter-feeding animals. Declines in reef communities are consistent with observations that nutrient input is increasing in direct proportion to growing human populations, thereby threatening reef communities sensitive to subtle changes in nutrient input to their waters. Questions 7–11 refer to the passage above.",
-    subquestion1: "The passage is primarily concerned with",
     answer_1:
       "describing the effects of human activities on algae in coral reefs",
     answer_2:
@@ -1326,16 +1449,19 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1: "The passage is primarily concerned with",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 64,
-    question_id: 8,
+    id: "64",
+    question_id: "8",
     main_question_stem:
       "(5) (10) (15) (20) (25) Coral reefs are one of the most fragile, biologically complex, and diverse marine ecosystems on Earth. This ecosystem is one of the fascinating paradoxes of the biosphere: how do clear, and thus nutrient- poor, waters support such proliﬁc and productive communities? Part of the answer lies within the tissues of the corals themselves. Symbiotic cells of algae known as zooxanthellae carry out photosynthesis using the metabolic wastes of the corals, thereby producing food for themselves, for their coral hosts, and even for other members of the reef community. This symbiotic process allows organisms in the reef community to use sparse nutrient resources efﬁciently. Unfortunately for coral reefs, however, a variety of human activities are causing worldwide degradation of shallow marine habitats by adding nutrients to the water. Agriculture, slash-and-burn land clearing, sewage disposal, and manufacturing that creates waste by-products all increase nutrient loads in these waters. Typical symptoms of reef decline are destabilized herbivore populations and an increasing abundance of algae and ﬁlter-feeding animals. Declines in reef communities are consistent with observations that nutrient input is increasing in direct proportion to growing human populations, thereby threatening reef communities sensitive to subtle changes in nutrient input to their waters. Questions 7–11 refer to the passage above.",
-    subquestion1:
-      "The passage suggests which of the following about coral reef communities?",
     answer_1:
       "Coral reef communities may actually be more likely to thrive in waters that are relatively low in nutrients.",
     answer_2:
@@ -1349,16 +1475,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "The passage suggests which of the following about coral reef communities?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 65,
-    question_id: 9,
+    id: "65",
+    question_id: "9",
     main_question_stem:
       "(5) (10) (15) (20) (25) Coral reefs are one of the most fragile, biologically complex, and diverse marine ecosystems on Earth. This ecosystem is one of the fascinating paradoxes of the biosphere: how do clear, and thus nutrient- poor, waters support such proliﬁc and productive communities? Part of the answer lies within the tissues of the corals themselves. Symbiotic cells of algae known as zooxanthellae carry out photosynthesis using the metabolic wastes of the corals, thereby producing food for themselves, for their coral hosts, and even for other members of the reef community. This symbiotic process allows organisms in the reef community to use sparse nutrient resources efﬁciently. Unfortunately for coral reefs, however, a variety of human activities are causing worldwide degradation of shallow marine habitats by adding nutrients to the water. Agriculture, slash-and-burn land clearing, sewage disposal, and manufacturing that creates waste by-products all increase nutrient loads in these waters. Typical symptoms of reef decline are destabilized herbivore populations and an increasing abundance of algae and ﬁlter-feeding animals. Declines in reef communities are consistent with observations that nutrient input is increasing in direct proportion to growing human populations, thereby threatening reef communities sensitive to subtle changes in nutrient input to their waters. Questions 7–11 refer to the passage above.",
-    subquestion1:
-      "The author refers to “ﬁlter-feeding animals” (lines 23–24) in order to",
     answer_1:
       "provide an example of a characteristic sign of reef deterioration",
     answer_2: "explain how reef communities acquire sustenance for survival",
@@ -1370,16 +1500,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "The author refers to “ﬁlter-feeding animals” (lines 23–24) in order to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 66,
-    question_id: 10,
+    id: "66",
+    question_id: "10",
     main_question_stem:
       "(5) (10) (15) (20) (25) Coral reefs are one of the most fragile, biologically complex, and diverse marine ecosystems on Earth. This ecosystem is one of the fascinating paradoxes of the biosphere: how do clear, and thus nutrient- poor, waters support such proliﬁc and productive communities? Part of the answer lies within the tissues of the corals themselves. Symbiotic cells of algae known as zooxanthellae carry out photosynthesis using the metabolic wastes of the corals, thereby producing food for themselves, for their coral hosts, and even for other members of the reef community. This symbiotic process allows organisms in the reef community to use sparse nutrient resources efﬁciently. Unfortunately for coral reefs, however, a variety of human activities are causing worldwide degradation of shallow marine habitats by adding nutrients to the water. Agriculture, slash-and-burn land clearing, sewage disposal, and manufacturing that creates waste by-products all increase nutrient loads in these waters. Typical symptoms of reef decline are destabilized herbivore populations and an increasing abundance of algae and ﬁlter-feeding animals. Declines in reef communities are consistent with observations that nutrient input is increasing in direct proportion to growing human populations, thereby threatening reef communities sensitive to subtle changes in nutrient input to their waters. Questions 7–11 refer to the passage above.",
-    subquestion1:
-      "According to the passage, which of the following is a factor that is threatening the survival of coral reef communities?",
     answer_1: "The waters they inhabit contain few nutrient resources.",
     answer_2:
       "A decline in nutrient input is disrupting their symbiotic relationship with zooxanthellae.",
@@ -1392,16 +1526,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "According to the passage, which of the following is a factor that is threatening the survival of coral reef communities?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 67,
-    question_id: 11,
+    id: "67",
+    question_id: "11",
     main_question_stem:
       "(5) (10) (15) (20) (25) Coral reefs are one of the most fragile, biologically complex, and diverse marine ecosystems on Earth. This ecosystem is one of the fascinating paradoxes of the biosphere: how do clear, and thus nutrient- poor, waters support such proliﬁc and productive communities? Part of the answer lies within the tissues of the corals themselves. Symbiotic cells of algae known as zooxanthellae carry out photosynthesis using the metabolic wastes of the corals, thereby producing food for themselves, for their coral hosts, and even for other members of the reef community. This symbiotic process allows organisms in the reef community to use sparse nutrient resources efﬁciently. Unfortunately for coral reefs, however, a variety of human activities are causing worldwide degradation of shallow marine habitats by adding nutrients to the water. Agriculture, slash-and-burn land clearing, sewage disposal, and manufacturing that creates waste by-products all increase nutrient loads in these waters. Typical symptoms of reef decline are destabilized herbivore populations and an increasing abundance of algae and ﬁlter-feeding animals. Declines in reef communities are consistent with observations that nutrient input is increasing in direct proportion to growing human populations, thereby threatening reef communities sensitive to subtle changes in nutrient input to their waters. Questions 7–11 refer to the passage above.",
-    subquestion1:
-      "It can be inferred from the passage that the author describes coral reef communities as paradoxical most likely for which of the following reasons?",
     answer_1:
       "They are thriving even though human activities have depleted the nutrients in their environment.",
     answer_2:
@@ -1415,16 +1553,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "It can be inferred from the passage that the author describes coral reef communities as paradoxical most likely for which of the following reasons?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 68,
-    question_id: 12,
+    id: "68",
+    question_id: "12",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Although genetic mutations in bacteria and viruses can lead to epidemics, some epidemics are caused by bacteria and viruses that have undergone no signiﬁcant genetic change. In analyzing the latter, scientists have discovered the importance of social and ecological factors to epidemics. Poliomyelitis, for example, emerged as an epidemic in the United States in the twentieth century; by then, modern sanitation was able to delay exposure to polio until adolescence or adulthood, at which time polio infection produced paralysis. Previously, infection had occurred during infancy, when it typically provided lifelong immunity without paralysis. Thus, the hygiene that helped prevent typhoid epidemics indirectly fostered a paralytic polio epidemic. Another example is Lyme disease, which is caused by bacteria that are transmitted by deer ticks. It occurred only sporadically during the late nineteenth century but has recently become prevalent in parts of the United States, largely due to an increase in the deer population that occurred simultaneously with the growth of the suburbs and increased outdoor recreational activities in the deer’s habitat. Similarly, an outbreak of dengue hemorrhagic fever became an epidemic in Asia in the 1950s because of ecological changes that caused Aedes aegypti , the mosquito that transmits the dengue virus, to proliferate. The stage is now set in the United States for a dengue epidemic because of the inadvertent introduction and wide dissemination of another mosquito, Aedes albopictus .",
-    subquestion1:
-      "The passage suggests that a lack of modern sanitation would make which of the following most likely to occur?",
     answer_1: "An outbreak of Lyme disease",
     answer_2: "An outbreak of dengue hemorrhagic fever",
     answer_3: "An epidemic of typhoid",
@@ -1433,16 +1575,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "The passage suggests that a lack of modern sanitation would make which of the following most likely to occur?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 69,
-    question_id: 13,
+    id: "69",
+    question_id: "13",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Although genetic mutations in bacteria and viruses can lead to epidemics, some epidemics are caused by bacteria and viruses that have undergone no signiﬁcant genetic change. In analyzing the latter, scientists have discovered the importance of social and ecological factors to epidemics. Poliomyelitis, for example, emerged as an epidemic in the United States in the twentieth century; by then, modern sanitation was able to delay exposure to polio until adolescence or adulthood, at which time polio infection produced paralysis. Previously, infection had occurred during infancy, when it typically provided lifelong immunity without paralysis. Thus, the hygiene that helped prevent typhoid epidemics indirectly fostered a paralytic polio epidemic. Another example is Lyme disease, which is caused by bacteria that are transmitted by deer ticks. It occurred only sporadically during the late nineteenth century but has recently become prevalent in parts of the United States, largely due to an increase in the deer population that occurred simultaneously with the growth of the suburbs and increased outdoor recreational activities in the deer’s habitat. Similarly, an outbreak of dengue hemorrhagic fever became an epidemic in Asia in the 1950s because of ecological changes that caused Aedes aegypti , the mosquito that transmits the dengue virus, to proliferate. The stage is now set in the United States for a dengue epidemic because of the inadvertent introduction and wide dissemination of another mosquito, Aedes albopictus .",
-    subquestion1:
-      "According to the passage, the outbreak of dengue hemorrhagic fever in the 1950s occurred for which of the following reasons?",
     answer_1: "The mosquito Aedes aegypti was newly introduced into Asia.",
     answer_2: "The mosquito Aedes aegypti became more numerous.",
     answer_3:
@@ -1454,16 +1600,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "According to the passage, the outbreak of dengue hemorrhagic fever in the 1950s occurred for which of the following reasons?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 70,
-    question_id: 14,
+    id: "70",
+    question_id: "14",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Although genetic mutations in bacteria and viruses can lead to epidemics, some epidemics are caused by bacteria and viruses that have undergone no signiﬁcant genetic change. In analyzing the latter, scientists have discovered the importance of social and ecological factors to epidemics. Poliomyelitis, for example, emerged as an epidemic in the United States in the twentieth century; by then, modern sanitation was able to delay exposure to polio until adolescence or adulthood, at which time polio infection produced paralysis. Previously, infection had occurred during infancy, when it typically provided lifelong immunity without paralysis. Thus, the hygiene that helped prevent typhoid epidemics indirectly fostered a paralytic polio epidemic. Another example is Lyme disease, which is caused by bacteria that are transmitted by deer ticks. It occurred only sporadically during the late nineteenth century but has recently become prevalent in parts of the United States, largely due to an increase in the deer population that occurred simultaneously with the growth of the suburbs and increased outdoor recreational activities in the deer’s habitat. Similarly, an outbreak of dengue hemorrhagic fever became an epidemic in Asia in the 1950s because of ecological changes that caused Aedes aegypti , the mosquito that transmits the dengue virus, to proliferate. The stage is now set in the United States for a dengue epidemic because of the inadvertent introduction and wide dissemination of another mosquito, Aedes albopictus .",
-    subquestion1:
-      "It can be inferred from the passage that Lyme disease has become prevalent in parts of the United States because of which of the following?",
     answer_1:
       "The inadvertent introduction of Lyme disease bacteria to the United States",
     answer_2:
@@ -1476,16 +1626,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "It can be inferred from the passage that Lyme disease has become prevalent in parts of the United States because of which of the following?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 71,
-    question_id: 15,
+    id: "71",
+    question_id: "15",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Although genetic mutations in bacteria and viruses can lead to epidemics, some epidemics are caused by bacteria and viruses that have undergone no signiﬁcant genetic change. In analyzing the latter, scientists have discovered the importance of social and ecological factors to epidemics. Poliomyelitis, for example, emerged as an epidemic in the United States in the twentieth century; by then, modern sanitation was able to delay exposure to polio until adolescence or adulthood, at which time polio infection produced paralysis. Previously, infection had occurred during infancy, when it typically provided lifelong immunity without paralysis. Thus, the hygiene that helped prevent typhoid epidemics indirectly fostered a paralytic polio epidemic. Another example is Lyme disease, which is caused by bacteria that are transmitted by deer ticks. It occurred only sporadically during the late nineteenth century but has recently become prevalent in parts of the United States, largely due to an increase in the deer population that occurred simultaneously with the growth of the suburbs and increased outdoor recreational activities in the deer’s habitat. Similarly, an outbreak of dengue hemorrhagic fever became an epidemic in Asia in the 1950s because of ecological changes that caused Aedes aegypti , the mosquito that transmits the dengue virus, to proliferate. The stage is now set in the United States for a dengue epidemic because of the inadvertent introduction and wide dissemination of another mosquito, Aedes albopictus .",
-    subquestion1:
-      "Which of the following can most reasonably be concluded about the mosquito Aedes albopictus on the basis of information given in the passage?",
     answer_1: "It is native to the United States.",
     answer_2: "It can proliferate only in Asia.",
     answer_3: "It transmits the dengue virus.",
@@ -1495,16 +1649,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "Which of the following can most reasonably be concluded about the mosquito Aedes albopictus on the basis of information given in the passage?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 72,
-    question_id: 16,
+    id: "72",
+    question_id: "16",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Although genetic mutations in bacteria and viruses can lead to epidemics, some epidemics are caused by bacteria and viruses that have undergone no signiﬁcant genetic change. In analyzing the latter, scientists have discovered the importance of social and ecological factors to epidemics. Poliomyelitis, for example, emerged as an epidemic in the United States in the twentieth century; by then, modern sanitation was able to delay exposure to polio until adolescence or adulthood, at which time polio infection produced paralysis. Previously, infection had occurred during infancy, when it typically provided lifelong immunity without paralysis. Thus, the hygiene that helped prevent typhoid epidemics indirectly fostered a paralytic polio epidemic. Another example is Lyme disease, which is caused by bacteria that are transmitted by deer ticks. It occurred only sporadically during the late nineteenth century but has recently become prevalent in parts of the United States, largely due to an increase in the deer population that occurred simultaneously with the growth of the suburbs and increased outdoor recreational activities in the deer’s habitat. Similarly, an outbreak of dengue hemorrhagic fever became an epidemic in Asia in the 1950s because of ecological changes that caused Aedes aegypti , the mosquito that transmits the dengue virus, to proliferate. The stage is now set in the United States for a dengue epidemic because of the inadvertent introduction and wide dissemination of another mosquito, Aedes albopictus .",
-    subquestion1:
-      "Which of the following best describes the organization of the passage?",
     answer_1: "A paradox is stated, discussed, and left unresolved.",
     answer_2:
       "Two opposing explanations are presented, argued, and reconciled.",
@@ -1517,16 +1675,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "Which of the following best describes the organization of the passage?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 73,
-    question_id: 17,
+    id: "73",
+    question_id: "17",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Although genetic mutations in bacteria and viruses can lead to epidemics, some epidemics are caused by bacteria and viruses that have undergone no signiﬁcant genetic change. In analyzing the latter, scientists have discovered the importance of social and ecological factors to epidemics. Poliomyelitis, for example, emerged as an epidemic in the United States in the twentieth century; by then, modern sanitation was able to delay exposure to polio until adolescence or adulthood, at which time polio infection produced paralysis. Previously, infection had occurred during infancy, when it typically provided lifelong immunity without paralysis. Thus, the hygiene that helped prevent typhoid epidemics indirectly fostered a paralytic polio epidemic. Another example is Lyme disease, which is caused by bacteria that are transmitted by deer ticks. It occurred only sporadically during the late nineteenth century but has recently become prevalent in parts of the United States, largely due to an increase in the deer population that occurred simultaneously with the growth of the suburbs and increased outdoor recreational activities in the deer’s habitat. Similarly, an outbreak of dengue hemorrhagic fever became an epidemic in Asia in the 1950s because of ecological changes that caused Aedes aegypti , the mosquito that transmits the dengue virus, to proliferate. The stage is now set in the United States for a dengue epidemic because of the inadvertent introduction and wide dissemination of another mosquito, Aedes albopictus .",
-    subquestion1:
-      "Which of the following, if true, would most strengthen the author’s assertion about the cause of the Lyme disease outbreak in the United States?",
     answer_1:
       "The deer population was smaller in the late nineteenth century than in the mid twentieth century.",
     answer_2:
@@ -1539,15 +1701,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "Which of the following, if true, would most strengthen the author’s assertion about the cause of the Lyme disease outbreak in the United States?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 74,
-    question_id: 18,
+    id: "74",
+    question_id: "18",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In 1994, a team of scientists led by David McKay began studying the meteorite ALH84001, which had been discovered in Antarctica in 1984. Two years later, the McKay team announced that ALH84001, which scientists generally agree originated on Mars, contained compelling evidence that life once existed on Mars. This evidence includes the discovery of organic molecules in ALH84001, the ﬁrst ever found in Martian rock. Organic molecules—complex, carbon-based compounds— form the basis for terrestrial life. The organic molecules found in ALH84001 are polycyclic aromatic hydrocarbons, or PAHs. When microbes die, their organic material often decays into PAHs. Skepticism about the McKay team’s claim remains, however. For example, ALH84001 has been on Earth for 13,000 years, suggesting to some scientists that its PAHs might have resulted from terrestrial contamination. However, McKay’s team has demonstrated that the concentration of PAHs increases as one looks deeper into ALH84001, contrary to what one would expect from terrestrial contamination. The skeptics’ strongest argument, however, is that processes unrelated to organic life can easily produce all the evidence found by McKay’s team, including PAHs. For example, star formation produces PAHs. Moreover, PAHs frequently appear in other meteorites, and no one attributes their presence to life processes. Yet McKay’s team notes that the particular combination of PAHs in ALH84001 is more similar to the combinations produced by decaying organisms than to those originating from nonbiological processes. Questions 18–23 refer to the passage above.",
-    subquestion1: "The primary purpose of the passage is to",
     answer_1:
       "describe new ways of studying the possibility that life once existed on Mars",
     answer_2:
@@ -1561,16 +1728,19 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "The primary purpose of the passage is to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 75,
-    question_id: 19,
+    id: "75",
+    question_id: "19",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In 1994, a team of scientists led by David McKay began studying the meteorite ALH84001, which had been discovered in Antarctica in 1984. Two years later, the McKay team announced that ALH84001, which scientists generally agree originated on Mars, contained compelling evidence that life once existed on Mars. This evidence includes the discovery of organic molecules in ALH84001, the ﬁrst ever found in Martian rock. Organic molecules—complex, carbon-based compounds— form the basis for terrestrial life. The organic molecules found in ALH84001 are polycyclic aromatic hydrocarbons, or PAHs. When microbes die, their organic material often decays into PAHs. Skepticism about the McKay team’s claim remains, however. For example, ALH84001 has been on Earth for 13,000 years, suggesting to some scientists that its PAHs might have resulted from terrestrial contamination. However, McKay’s team has demonstrated that the concentration of PAHs increases as one looks deeper into ALH84001, contrary to what one would expect from terrestrial contamination. The skeptics’ strongest argument, however, is that processes unrelated to organic life can easily produce all the evidence found by McKay’s team, including PAHs. For example, star formation produces PAHs. Moreover, PAHs frequently appear in other meteorites, and no one attributes their presence to life processes. Yet McKay’s team notes that the particular combination of PAHs in ALH84001 is more similar to the combinations produced by decaying organisms than to those originating from nonbiological processes. Questions 18–23 refer to the passage above.",
-    subquestion1:
-      "The passage asserts which of the following about the claim that ALH84001 originated on Mars?",
     answer_1: "It was initially proposed by the McKay team of scientists.",
     answer_2: "It is not a matter of widespread scientiﬁc dispute.",
     answer_3:
@@ -1581,16 +1751,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "The passage asserts which of the following about the claim that ALH84001 originated on Mars?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 76,
-    question_id: 20,
+    id: "76",
+    question_id: "20",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In 1994, a team of scientists led by David McKay began studying the meteorite ALH84001, which had been discovered in Antarctica in 1984. Two years later, the McKay team announced that ALH84001, which scientists generally agree originated on Mars, contained compelling evidence that life once existed on Mars. This evidence includes the discovery of organic molecules in ALH84001, the ﬁrst ever found in Martian rock. Organic molecules—complex, carbon-based compounds— form the basis for terrestrial life. The organic molecules found in ALH84001 are polycyclic aromatic hydrocarbons, or PAHs. When microbes die, their organic material often decays into PAHs. Skepticism about the McKay team’s claim remains, however. For example, ALH84001 has been on Earth for 13,000 years, suggesting to some scientists that its PAHs might have resulted from terrestrial contamination. However, McKay’s team has demonstrated that the concentration of PAHs increases as one looks deeper into ALH84001, contrary to what one would expect from terrestrial contamination. The skeptics’ strongest argument, however, is that processes unrelated to organic life can easily produce all the evidence found by McKay’s team, including PAHs. For example, star formation produces PAHs. Moreover, PAHs frequently appear in other meteorites, and no one attributes their presence to life processes. Yet McKay’s team notes that the particular combination of PAHs in ALH84001 is more similar to the combinations produced by decaying organisms than to those originating from nonbiological processes. Questions 18–23 refer to the passage above.",
-    subquestion1:
-      "The passage suggests that the fact that ALH84001 has been on Earth for 13,000 years has been used by some scientists to support which of the following claims about ALH84001?",
     answer_1: "ALH84001 may not have originated on Mars.",
     answer_2:
       "ALH84001 contains PAHs that are the result of nonbiological processes.",
@@ -1601,16 +1775,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "The passage suggests that the fact that ALH84001 has been on Earth for 13,000 years has been used by some scientists to support which of the following claims about ALH84001?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 77,
-    question_id: 21,
+    id: "77",
+    question_id: "21",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In 1994, a team of scientists led by David McKay began studying the meteorite ALH84001, which had been discovered in Antarctica in 1984. Two years later, the McKay team announced that ALH84001, which scientists generally agree originated on Mars, contained compelling evidence that life once existed on Mars. This evidence includes the discovery of organic molecules in ALH84001, the ﬁrst ever found in Martian rock. Organic molecules—complex, carbon-based compounds— form the basis for terrestrial life. The organic molecules found in ALH84001 are polycyclic aromatic hydrocarbons, or PAHs. When microbes die, their organic material often decays into PAHs. Skepticism about the McKay team’s claim remains, however. For example, ALH84001 has been on Earth for 13,000 years, suggesting to some scientists that its PAHs might have resulted from terrestrial contamination. However, McKay’s team has demonstrated that the concentration of PAHs increases as one looks deeper into ALH84001, contrary to what one would expect from terrestrial contamination. The skeptics’ strongest argument, however, is that processes unrelated to organic life can easily produce all the evidence found by McKay’s team, including PAHs. For example, star formation produces PAHs. Moreover, PAHs frequently appear in other meteorites, and no one attributes their presence to life processes. Yet McKay’s team notes that the particular combination of PAHs in ALH84001 is more similar to the combinations produced by decaying organisms than to those originating from nonbiological processes. Questions 18–23 refer to the passage above.",
-    subquestion1:
-      "The passage suggests that if a meteorite contained PAHs that were the result of terrestrial contamination, then one would expect which of the following to be true?",
     answer_1:
       "The meteorite would have been on Earth for more than 13,000 years.",
     answer_2:
@@ -1624,16 +1802,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "The passage suggests that if a meteorite contained PAHs that were the result of terrestrial contamination, then one would expect which of the following to be true?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 78,
-    question_id: 22,
+    id: "78",
+    question_id: "22",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In 1994, a team of scientists led by David McKay began studying the meteorite ALH84001, which had been discovered in Antarctica in 1984. Two years later, the McKay team announced that ALH84001, which scientists generally agree originated on Mars, contained compelling evidence that life once existed on Mars. This evidence includes the discovery of organic molecules in ALH84001, the ﬁrst ever found in Martian rock. Organic molecules—complex, carbon-based compounds— form the basis for terrestrial life. The organic molecules found in ALH84001 are polycyclic aromatic hydrocarbons, or PAHs. When microbes die, their organic material often decays into PAHs. Skepticism about the McKay team’s claim remains, however. For example, ALH84001 has been on Earth for 13,000 years, suggesting to some scientists that its PAHs might have resulted from terrestrial contamination. However, McKay’s team has demonstrated that the concentration of PAHs increases as one looks deeper into ALH84001, contrary to what one would expect from terrestrial contamination. The skeptics’ strongest argument, however, is that processes unrelated to organic life can easily produce all the evidence found by McKay’s team, including PAHs. For example, star formation produces PAHs. Moreover, PAHs frequently appear in other meteorites, and no one attributes their presence to life processes. Yet McKay’s team notes that the particular combination of PAHs in ALH84001 is more similar to the combinations produced by decaying organisms than to those originating from nonbiological processes. Questions 18–23 refer to the passage above.",
-    subquestion1:
-      "Which of the following best describes the function of the last sentence of the ﬁrst paragraph?",
     answer_1:
       "It identiﬁes a possible organic source for the PAHs found in ALH84001.",
     answer_2:
@@ -1647,16 +1829,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "Which of the following best describes the function of the last sentence of the ﬁrst paragraph?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 79,
-    question_id: 23,
+    id: "79",
+    question_id: "23",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In 1994, a team of scientists led by David McKay began studying the meteorite ALH84001, which had been discovered in Antarctica in 1984. Two years later, the McKay team announced that ALH84001, which scientists generally agree originated on Mars, contained compelling evidence that life once existed on Mars. This evidence includes the discovery of organic molecules in ALH84001, the ﬁrst ever found in Martian rock. Organic molecules—complex, carbon-based compounds— form the basis for terrestrial life. The organic molecules found in ALH84001 are polycyclic aromatic hydrocarbons, or PAHs. When microbes die, their organic material often decays into PAHs. Skepticism about the McKay team’s claim remains, however. For example, ALH84001 has been on Earth for 13,000 years, suggesting to some scientists that its PAHs might have resulted from terrestrial contamination. However, McKay’s team has demonstrated that the concentration of PAHs increases as one looks deeper into ALH84001, contrary to what one would expect from terrestrial contamination. The skeptics’ strongest argument, however, is that processes unrelated to organic life can easily produce all the evidence found by McKay’s team, including PAHs. For example, star formation produces PAHs. Moreover, PAHs frequently appear in other meteorites, and no one attributes their presence to life processes. Yet McKay’s team notes that the particular combination of PAHs in ALH84001 is more similar to the combinations produced by decaying organisms than to those originating from nonbiological processes. Questions 18–23 refer to the passage above.",
-    subquestion1:
-      "The passage suggests that McKay’s team would agree with which of the following regarding the PAHs produced by nonorganic processes?",
     answer_1:
       "These PAHs are not likely to be found in any meteorite that has been on Earth for 13,000 years or more.",
     answer_2:
@@ -1669,16 +1855,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "The passage suggests that McKay’s team would agree with which of the following regarding the PAHs produced by nonorganic processes?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 80,
-    question_id: 24,
+    id: "80",
+    question_id: "24",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) Homeostasis, an animal’s maintenance of certain internal variables within an acceptable range, particularly in extreme physical environments, has long interested biologists. The desert rat and the camel in the most water-deprived environments, and marine vertebrates in an all-water environment, encounter the same regulatory problem: maintaining adequate internal ﬂuid balance. For desert rats and camels, the problem is conservation of water in an environment where standing water is nonexistent, temperature is high, and humidity is low. Despite these handicaps, desert rats are able to maintain the osmotic pressure of their blood, as well as their total body- water content, at approximately the same levels as other rats. One countermeasure is behavioral: these rats stay in burrows during the hot part of the day, thus avoiding loss of ﬂuid through panting or sweating, which are regulatory mechanisms for maintaining internal body temperature by evaporative cooling. Also, desert rats’ kidneys can excrete a urine having twice as high a salt content as seawater. Camels, on the other hand, rely more on simple endurance. They cannot store water, and their reliance on an entirely unexceptional kidney results in a rate of water loss through renal function signiﬁcantly higher than that of desert rats. As a result, camels must tolerate losses in body water of up to 30 percent of their body weight. Nevertheless, camels do rely on a special mechanism to keep water loss within a tolerable range: by sweating and panting only when their body temperature exceeds that which would kill a human, they conserve internal water. Marine vertebrates experience difﬁculty with their water balance because though there is no shortage of seawater to drink, they must drink a lot of it to maintain their internal ﬂuid balance. But the excess salts from the seawater must be discharged somehow, and the kidneys of most marine vertebrates are unable to excrete a urine in which the salts are more concentrated than in seawater. Most of these animals have special salt-secreting organs outside the kidney that enable them to eliminate excess salt. Questions 24–26 refer to the passage above.",
-    subquestion1:
-      "Which of the following most accurately states the purpose of the passage?",
     answer_1: "To compare two different approaches to the study of homeostasis",
     answer_2:
       "To summarize the ﬁndings of several studies regarding organisms’ maintenance of internal variables in extreme environments",
@@ -1691,16 +1881,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "Which of the following most accurately states the purpose of the passage?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 81,
-    question_id: 25,
+    id: "81",
+    question_id: "25",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) Homeostasis, an animal’s maintenance of certain internal variables within an acceptable range, particularly in extreme physical environments, has long interested biologists. The desert rat and the camel in the most water-deprived environments, and marine vertebrates in an all-water environment, encounter the same regulatory problem: maintaining adequate internal ﬂuid balance. For desert rats and camels, the problem is conservation of water in an environment where standing water is nonexistent, temperature is high, and humidity is low. Despite these handicaps, desert rats are able to maintain the osmotic pressure of their blood, as well as their total body- water content, at approximately the same levels as other rats. One countermeasure is behavioral: these rats stay in burrows during the hot part of the day, thus avoiding loss of ﬂuid through panting or sweating, which are regulatory mechanisms for maintaining internal body temperature by evaporative cooling. Also, desert rats’ kidneys can excrete a urine having twice as high a salt content as seawater. Camels, on the other hand, rely more on simple endurance. They cannot store water, and their reliance on an entirely unexceptional kidney results in a rate of water loss through renal function signiﬁcantly higher than that of desert rats. As a result, camels must tolerate losses in body water of up to 30 percent of their body weight. Nevertheless, camels do rely on a special mechanism to keep water loss within a tolerable range: by sweating and panting only when their body temperature exceeds that which would kill a human, they conserve internal water. Marine vertebrates experience difﬁculty with their water balance because though there is no shortage of seawater to drink, they must drink a lot of it to maintain their internal ﬂuid balance. But the excess salts from the seawater must be discharged somehow, and the kidneys of most marine vertebrates are unable to excrete a urine in which the salts are more concentrated than in seawater. Most of these animals have special salt-secreting organs outside the kidney that enable them to eliminate excess salt. Questions 24–26 refer to the passage above.",
-    subquestion1:
-      "It can be inferred from the passage that some mechanisms that regulate internal body temperature, like sweating and panting, can lead to which of the following?",
     answer_1: "A rise in the external body temperature",
     answer_2: "A drop in the body’s internal ﬂuid level",
     answer_3: "A decrease in the osmotic pressure of the blood",
@@ -1709,16 +1903,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "It can be inferred from the passage that some mechanisms that regulate internal body temperature, like sweating and panting, can lead to which of the following?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 82,
-    question_id: 26,
+    id: "82",
+    question_id: "26",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) Homeostasis, an animal’s maintenance of certain internal variables within an acceptable range, particularly in extreme physical environments, has long interested biologists. The desert rat and the camel in the most water-deprived environments, and marine vertebrates in an all-water environment, encounter the same regulatory problem: maintaining adequate internal ﬂuid balance. For desert rats and camels, the problem is conservation of water in an environment where standing water is nonexistent, temperature is high, and humidity is low. Despite these handicaps, desert rats are able to maintain the osmotic pressure of their blood, as well as their total body- water content, at approximately the same levels as other rats. One countermeasure is behavioral: these rats stay in burrows during the hot part of the day, thus avoiding loss of ﬂuid through panting or sweating, which are regulatory mechanisms for maintaining internal body temperature by evaporative cooling. Also, desert rats’ kidneys can excrete a urine having twice as high a salt content as seawater. Camels, on the other hand, rely more on simple endurance. They cannot store water, and their reliance on an entirely unexceptional kidney results in a rate of water loss through renal function signiﬁcantly higher than that of desert rats. As a result, camels must tolerate losses in body water of up to 30 percent of their body weight. Nevertheless, camels do rely on a special mechanism to keep water loss within a tolerable range: by sweating and panting only when their body temperature exceeds that which would kill a human, they conserve internal water. Marine vertebrates experience difﬁculty with their water balance because though there is no shortage of seawater to drink, they must drink a lot of it to maintain their internal ﬂuid balance. But the excess salts from the seawater must be discharged somehow, and the kidneys of most marine vertebrates are unable to excrete a urine in which the salts are more concentrated than in seawater. Most of these animals have special salt-secreting organs outside the kidney that enable them to eliminate excess salt. Questions 24–26 refer to the passage above.",
-    subquestion1:
-      "It can be inferred from the passage that the author characterizes the camel’s kidney as “entirely unexceptional” (line 26) primarily to emphasize that it",
     answer_1: "functions much as the kidney of a rat functions",
     answer_2:
       "does not aid the camel in coping with the exceptional water loss resulting from the extreme conditions of its environment",
@@ -1730,15 +1928,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "It can be inferred from the passage that the author characterizes the camel’s kidney as “entirely unexceptional” (line 26) primarily to emphasize that it",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 83,
-    question_id: 27,
+    id: "83",
+    question_id: "27",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) The new school of political history that emerged in the 1960s and 1970s sought to go beyond the traditional focus of political historians on leaders and government institutions by examining directly the political practices of ordinary citizens. Like the old approach, however, this new approach excluded women. The very techniques these historians used to uncover mass political behavior in the nineteenth century United States—quantitative analyses of election returns, for example—were useless in analyzing the political activities of women, who were denied the vote until 1920. By redeﬁning “political activity,” historian Paula Baker has developed a political history that includes women. She concludes that among ordinary citizens, political activism by women in the nineteenth century preﬁgured trends in twentieth century politics. Deﬁning “politics” as “any action taken to affect the course of behavior of government or of the community,” Baker concludes that, while voting and holding ofﬁce were restricted to men, women in the nineteenth century organized themselves into societies committed to social issues such as temperance and poverty. In other words, Baker contends, women activists were early practitioners of nonpartisan, issue-oriented politics and thus were more interested in enlisting lawmakers, regardless of their party afﬁliation, on behalf of certain issues than in ensuring that one party or another won an election. In the twentieth century, more men drew closer to women’s ideas about politics and took up modes of issue-oriented politics that Baker sees women as having pioneered. Questions 27–32 refer to the passage above.",
-    subquestion1: "The primary purpose of the passage is to",
     answer_1:
       "enumerate reasons why both traditional scholarly methods and newer scholarly methods have limitations",
     answer_2:
@@ -1752,16 +1955,19 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "The primary purpose of the passage is to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 84,
-    question_id: 28,
+    id: "84",
+    question_id: "28",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) The new school of political history that emerged in the 1960s and 1970s sought to go beyond the traditional focus of political historians on leaders and government institutions by examining directly the political practices of ordinary citizens. Like the old approach, however, this new approach excluded women. The very techniques these historians used to uncover mass political behavior in the nineteenth century United States—quantitative analyses of election returns, for example—were useless in analyzing the political activities of women, who were denied the vote until 1920. By redeﬁning “political activity,” historian Paula Baker has developed a political history that includes women. She concludes that among ordinary citizens, political activism by women in the nineteenth century preﬁgured trends in twentieth century politics. Deﬁning “politics” as “any action taken to affect the course of behavior of government or of the community,” Baker concludes that, while voting and holding ofﬁce were restricted to men, women in the nineteenth century organized themselves into societies committed to social issues such as temperance and poverty. In other words, Baker contends, women activists were early practitioners of nonpartisan, issue-oriented politics and thus were more interested in enlisting lawmakers, regardless of their party afﬁliation, on behalf of certain issues than in ensuring that one party or another won an election. In the twentieth century, more men drew closer to women’s ideas about politics and took up modes of issue-oriented politics that Baker sees women as having pioneered. Questions 27–32 refer to the passage above.",
-    subquestion1:
-      "The passage suggests which of the following concerning the techniques used by the new political historians described in the ﬁrst paragraph of the passage?",
     answer_1:
       "They involved the extensive use of the biographies of political party leaders and political theoreticians.",
     answer_2:
@@ -1775,16 +1981,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "The passage suggests which of the following concerning the techniques used by the new political historians described in the ﬁrst paragraph of the passage?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 85,
-    question_id: 29,
+    id: "85",
+    question_id: "29",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) The new school of political history that emerged in the 1960s and 1970s sought to go beyond the traditional focus of political historians on leaders and government institutions by examining directly the political practices of ordinary citizens. Like the old approach, however, this new approach excluded women. The very techniques these historians used to uncover mass political behavior in the nineteenth century United States—quantitative analyses of election returns, for example—were useless in analyzing the political activities of women, who were denied the vote until 1920. By redeﬁning “political activity,” historian Paula Baker has developed a political history that includes women. She concludes that among ordinary citizens, political activism by women in the nineteenth century preﬁgured trends in twentieth century politics. Deﬁning “politics” as “any action taken to affect the course of behavior of government or of the community,” Baker concludes that, while voting and holding ofﬁce were restricted to men, women in the nineteenth century organized themselves into societies committed to social issues such as temperance and poverty. In other words, Baker contends, women activists were early practitioners of nonpartisan, issue-oriented politics and thus were more interested in enlisting lawmakers, regardless of their party afﬁliation, on behalf of certain issues than in ensuring that one party or another won an election. In the twentieth century, more men drew closer to women’s ideas about politics and took up modes of issue-oriented politics that Baker sees women as having pioneered. Questions 27–32 refer to the passage above.",
-    subquestion1:
-      "It can be inferred that the author of the passage quotes Baker directly in the second paragraph primarily in order to",
     answer_1:
       "clarify a position before providing an alternative to that position",
     answer_2:
@@ -1796,16 +2006,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "It can be inferred that the author of the passage quotes Baker directly in the second paragraph primarily in order to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 86,
-    question_id: 30,
+    id: "86",
+    question_id: "30",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) The new school of political history that emerged in the 1960s and 1970s sought to go beyond the traditional focus of political historians on leaders and government institutions by examining directly the political practices of ordinary citizens. Like the old approach, however, this new approach excluded women. The very techniques these historians used to uncover mass political behavior in the nineteenth century United States—quantitative analyses of election returns, for example—were useless in analyzing the political activities of women, who were denied the vote until 1920. By redeﬁning “political activity,” historian Paula Baker has developed a political history that includes women. She concludes that among ordinary citizens, political activism by women in the nineteenth century preﬁgured trends in twentieth century politics. Deﬁning “politics” as “any action taken to affect the course of behavior of government or of the community,” Baker concludes that, while voting and holding ofﬁce were restricted to men, women in the nineteenth century organized themselves into societies committed to social issues such as temperance and poverty. In other words, Baker contends, women activists were early practitioners of nonpartisan, issue-oriented politics and thus were more interested in enlisting lawmakers, regardless of their party afﬁliation, on behalf of certain issues than in ensuring that one party or another won an election. In the twentieth century, more men drew closer to women’s ideas about politics and took up modes of issue-oriented politics that Baker sees women as having pioneered. Questions 27–32 refer to the passage above.",
-    subquestion1:
-      "According to the passage, Paula Baker and the new political historians of the 1960s and 1970s shared which of the following?",
     answer_1: "A commitment to interest group politics",
     answer_2: "A disregard for political theory and ideology",
     answer_3:
@@ -1816,16 +2030,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "According to the passage, Paula Baker and the new political historians of the 1960s and 1970s shared which of the following?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 87,
-    question_id: 31,
+    id: "87",
+    question_id: "31",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) The new school of political history that emerged in the 1960s and 1970s sought to go beyond the traditional focus of political historians on leaders and government institutions by examining directly the political practices of ordinary citizens. Like the old approach, however, this new approach excluded women. The very techniques these historians used to uncover mass political behavior in the nineteenth century United States—quantitative analyses of election returns, for example—were useless in analyzing the political activities of women, who were denied the vote until 1920. By redeﬁning “political activity,” historian Paula Baker has developed a political history that includes women. She concludes that among ordinary citizens, political activism by women in the nineteenth century preﬁgured trends in twentieth century politics. Deﬁning “politics” as “any action taken to affect the course of behavior of government or of the community,” Baker concludes that, while voting and holding ofﬁce were restricted to men, women in the nineteenth century organized themselves into societies committed to social issues such as temperance and poverty. In other words, Baker contends, women activists were early practitioners of nonpartisan, issue-oriented politics and thus were more interested in enlisting lawmakers, regardless of their party afﬁliation, on behalf of certain issues than in ensuring that one party or another won an election. In the twentieth century, more men drew closer to women’s ideas about politics and took up modes of issue-oriented politics that Baker sees women as having pioneered. Questions 27–32 refer to the passage above.",
-    subquestion1:
-      "Which of the following best describes the structure of the ﬁrst paragraph of the passage?",
     answer_1:
       "Two scholarly approaches are compared, and a shortcoming common to both is identiﬁed.",
     answer_2:
@@ -1837,16 +2055,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "Which of the following best describes the structure of the ﬁrst paragraph of the passage?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 88,
-    question_id: 32,
+    id: "88",
+    question_id: "32",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) The new school of political history that emerged in the 1960s and 1970s sought to go beyond the traditional focus of political historians on leaders and government institutions by examining directly the political practices of ordinary citizens. Like the old approach, however, this new approach excluded women. The very techniques these historians used to uncover mass political behavior in the nineteenth century United States—quantitative analyses of election returns, for example—were useless in analyzing the political activities of women, who were denied the vote until 1920. By redeﬁning “political activity,” historian Paula Baker has developed a political history that includes women. She concludes that among ordinary citizens, political activism by women in the nineteenth century preﬁgured trends in twentieth century politics. Deﬁning “politics” as “any action taken to affect the course of behavior of government or of the community,” Baker concludes that, while voting and holding ofﬁce were restricted to men, women in the nineteenth century organized themselves into societies committed to social issues such as temperance and poverty. In other words, Baker contends, women activists were early practitioners of nonpartisan, issue-oriented politics and thus were more interested in enlisting lawmakers, regardless of their party afﬁliation, on behalf of certain issues than in ensuring that one party or another won an election. In the twentieth century, more men drew closer to women’s ideas about politics and took up modes of issue-oriented politics that Baker sees women as having pioneered. Questions 27–32 refer to the passage above.",
-    subquestion1:
-      "The information in the passage suggests that a pre- 1960s political historian would have been most likely to undertake which of the following studies?",
     answer_1: "An analysis of voting trends among women voters of the 1920s",
     answer_2:
       "A study of male voters’ gradual ideological shift from party politics to issue-oriented politics",
@@ -1859,16 +2081,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "The information in the passage suggests that a pre- 1960s political historian would have been most likely to undertake which of the following studies?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 89,
-    question_id: 33,
+    id: "89",
+    question_id: "33",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) At the end of the nineteenth century, a rising interest in Native American customs and an increasing desire to understand Native American culture prompted ethnologists to begin recording the life stories of Native Americans. Ethnologists had a distinct reason for wanting to hear the stories: they were after linguistic or anthropological data that would supplement their own ﬁeld observations, and they believed that the personal stories, even of a single individual, could increase their understanding of the cultures that they had been observing from without. In addition many ethnologists at the turn of the century believed that Native American manners and customs were rapidly disappearing, and that it was important to preserve for posterity as much information as could be adequately recorded before the cultures disappeared forever. There were, however, arguments against this method as a way of acquiring accurate and complete information. Franz Boas, for example, described autobiographies as being “of limited value, and useful chieﬂy for the study of the perversion of truth by memory,” while Paul Radin contended that investigators rarely spent enough time with the tribes they were observing, and inevitably derived results too tinged by the investigator’s own emotional tone to be reliable. Even more importantly, as these life stories moved from the traditional oral mode to recorded written form, much was inevitably lost. Editors often decided what elements were signiﬁcant to the ﬁeld research on a given tribe. Native Americans recognized that the essence of their lives could not be communicated in English and that events that they thought signiﬁcant were often deemed unimportant by their interviewers. Indeed, the very act of telling their stories could force Native American narrators to distort their cultures, as taboos had to be broken to speak the names of dead relatives crucial to their family stories. Despite all of this, autobiography remains a useful tool for ethnological research: such personal reminiscences and impressions, incomplete as they may be, are likely to throw more light on the working of the mind and emotions than any amount of speculation from an ethnologist or ethnological theorist from another culture. Questions 33–38 refer to the passage above.",
-    subquestion1:
-      "Which of the following best describes the organization of the passage?",
     answer_1:
       "The historical backgrounds of two currently used research methods are chronicled.",
     answer_2:
@@ -1882,16 +2108,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "Which of the following best describes the organization of the passage?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 90,
-    question_id: 34,
+    id: "90",
+    question_id: "34",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) At the end of the nineteenth century, a rising interest in Native American customs and an increasing desire to understand Native American culture prompted ethnologists to begin recording the life stories of Native Americans. Ethnologists had a distinct reason for wanting to hear the stories: they were after linguistic or anthropological data that would supplement their own ﬁeld observations, and they believed that the personal stories, even of a single individual, could increase their understanding of the cultures that they had been observing from without. In addition many ethnologists at the turn of the century believed that Native American manners and customs were rapidly disappearing, and that it was important to preserve for posterity as much information as could be adequately recorded before the cultures disappeared forever. There were, however, arguments against this method as a way of acquiring accurate and complete information. Franz Boas, for example, described autobiographies as being “of limited value, and useful chieﬂy for the study of the perversion of truth by memory,” while Paul Radin contended that investigators rarely spent enough time with the tribes they were observing, and inevitably derived results too tinged by the investigator’s own emotional tone to be reliable. Even more importantly, as these life stories moved from the traditional oral mode to recorded written form, much was inevitably lost. Editors often decided what elements were signiﬁcant to the ﬁeld research on a given tribe. Native Americans recognized that the essence of their lives could not be communicated in English and that events that they thought signiﬁcant were often deemed unimportant by their interviewers. Indeed, the very act of telling their stories could force Native American narrators to distort their cultures, as taboos had to be broken to speak the names of dead relatives crucial to their family stories. Despite all of this, autobiography remains a useful tool for ethnological research: such personal reminiscences and impressions, incomplete as they may be, are likely to throw more light on the working of the mind and emotions than any amount of speculation from an ethnologist or ethnological theorist from another culture. Questions 33–38 refer to the passage above.",
-    subquestion1:
-      "Which of the following is most similar to the actions of nineteenth-century ethnologists in their editing of the life stories of Native Americans?",
     answer_1:
       "A witness in a jury trial invokes the Fifth Amendment in order to avoid relating personally incriminating evidence.",
     answer_2:
@@ -1905,16 +2135,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "Which of the following is most similar to the actions of nineteenth-century ethnologists in their editing of the life stories of Native Americans?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 91,
-    question_id: 35,
+    id: "91",
+    question_id: "35",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) At the end of the nineteenth century, a rising interest in Native American customs and an increasing desire to understand Native American culture prompted ethnologists to begin recording the life stories of Native Americans. Ethnologists had a distinct reason for wanting to hear the stories: they were after linguistic or anthropological data that would supplement their own ﬁeld observations, and they believed that the personal stories, even of a single individual, could increase their understanding of the cultures that they had been observing from without. In addition many ethnologists at the turn of the century believed that Native American manners and customs were rapidly disappearing, and that it was important to preserve for posterity as much information as could be adequately recorded before the cultures disappeared forever. There were, however, arguments against this method as a way of acquiring accurate and complete information. Franz Boas, for example, described autobiographies as being “of limited value, and useful chieﬂy for the study of the perversion of truth by memory,” while Paul Radin contended that investigators rarely spent enough time with the tribes they were observing, and inevitably derived results too tinged by the investigator’s own emotional tone to be reliable. Even more importantly, as these life stories moved from the traditional oral mode to recorded written form, much was inevitably lost. Editors often decided what elements were signiﬁcant to the ﬁeld research on a given tribe. Native Americans recognized that the essence of their lives could not be communicated in English and that events that they thought signiﬁcant were often deemed unimportant by their interviewers. Indeed, the very act of telling their stories could force Native American narrators to distort their cultures, as taboos had to be broken to speak the names of dead relatives crucial to their family stories. Despite all of this, autobiography remains a useful tool for ethnological research: such personal reminiscences and impressions, incomplete as they may be, are likely to throw more light on the working of the mind and emotions than any amount of speculation from an ethnologist or ethnological theorist from another culture. Questions 33–38 refer to the passage above.",
-    subquestion1:
-      "According to the passage, collecting life stories can be a useful methodology because",
     answer_1:
       "life stories provide deeper insights into a culture than the hypothesizing of academics who are not members of that culture",
     answer_2:
@@ -1928,16 +2162,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "According to the passage, collecting life stories can be a useful methodology because",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 92,
-    question_id: 36,
+    id: "92",
+    question_id: "36",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) At the end of the nineteenth century, a rising interest in Native American customs and an increasing desire to understand Native American culture prompted ethnologists to begin recording the life stories of Native Americans. Ethnologists had a distinct reason for wanting to hear the stories: they were after linguistic or anthropological data that would supplement their own ﬁeld observations, and they believed that the personal stories, even of a single individual, could increase their understanding of the cultures that they had been observing from without. In addition many ethnologists at the turn of the century believed that Native American manners and customs were rapidly disappearing, and that it was important to preserve for posterity as much information as could be adequately recorded before the cultures disappeared forever. There were, however, arguments against this method as a way of acquiring accurate and complete information. Franz Boas, for example, described autobiographies as being “of limited value, and useful chieﬂy for the study of the perversion of truth by memory,” while Paul Radin contended that investigators rarely spent enough time with the tribes they were observing, and inevitably derived results too tinged by the investigator’s own emotional tone to be reliable. Even more importantly, as these life stories moved from the traditional oral mode to recorded written form, much was inevitably lost. Editors often decided what elements were signiﬁcant to the ﬁeld research on a given tribe. Native Americans recognized that the essence of their lives could not be communicated in English and that events that they thought signiﬁcant were often deemed unimportant by their interviewers. Indeed, the very act of telling their stories could force Native American narrators to distort their cultures, as taboos had to be broken to speak the names of dead relatives crucial to their family stories. Despite all of this, autobiography remains a useful tool for ethnological research: such personal reminiscences and impressions, incomplete as they may be, are likely to throw more light on the working of the mind and emotions than any amount of speculation from an ethnologist or ethnological theorist from another culture. Questions 33–38 refer to the passage above.",
-    subquestion1:
-      "Information in the passage suggests that which of the following may be a possible way to eliminate bias in the editing of life stories?",
     answer_1:
       "Basing all inferences made about the culture on an ethnological theory",
     answer_2:
@@ -1951,15 +2189,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "Information in the passage suggests that which of the following may be a possible way to eliminate bias in the editing of life stories?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 93,
-    question_id: 37,
+    id: "93",
+    question_id: "37",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) At the end of the nineteenth century, a rising interest in Native American customs and an increasing desire to understand Native American culture prompted ethnologists to begin recording the life stories of Native Americans. Ethnologists had a distinct reason for wanting to hear the stories: they were after linguistic or anthropological data that would supplement their own ﬁeld observations, and they believed that the personal stories, even of a single individual, could increase their understanding of the cultures that they had been observing from without. In addition many ethnologists at the turn of the century believed that Native American manners and customs were rapidly disappearing, and that it was important to preserve for posterity as much information as could be adequately recorded before the cultures disappeared forever. There were, however, arguments against this method as a way of acquiring accurate and complete information. Franz Boas, for example, described autobiographies as being “of limited value, and useful chieﬂy for the study of the perversion of truth by memory,” while Paul Radin contended that investigators rarely spent enough time with the tribes they were observing, and inevitably derived results too tinged by the investigator’s own emotional tone to be reliable. Even more importantly, as these life stories moved from the traditional oral mode to recorded written form, much was inevitably lost. Editors often decided what elements were signiﬁcant to the ﬁeld research on a given tribe. Native Americans recognized that the essence of their lives could not be communicated in English and that events that they thought signiﬁcant were often deemed unimportant by their interviewers. Indeed, the very act of telling their stories could force Native American narrators to distort their cultures, as taboos had to be broken to speak the names of dead relatives crucial to their family stories. Despite all of this, autobiography remains a useful tool for ethnological research: such personal reminiscences and impressions, incomplete as they may be, are likely to throw more light on the working of the mind and emotions than any amount of speculation from an ethnologist or ethnological theorist from another culture. Questions 33–38 refer to the passage above.",
-    subquestion1: "The primary purpose of the passage as a whole is to",
     answer_1: "question an explanation",
     answer_2: "correct a misconception",
     answer_3: "critique a methodology",
@@ -1968,16 +2211,19 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1: "The primary purpose of the passage as a whole is to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 94,
-    question_id: 38,
+    id: "94",
+    question_id: "38",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) At the end of the nineteenth century, a rising interest in Native American customs and an increasing desire to understand Native American culture prompted ethnologists to begin recording the life stories of Native Americans. Ethnologists had a distinct reason for wanting to hear the stories: they were after linguistic or anthropological data that would supplement their own ﬁeld observations, and they believed that the personal stories, even of a single individual, could increase their understanding of the cultures that they had been observing from without. In addition many ethnologists at the turn of the century believed that Native American manners and customs were rapidly disappearing, and that it was important to preserve for posterity as much information as could be adequately recorded before the cultures disappeared forever. There were, however, arguments against this method as a way of acquiring accurate and complete information. Franz Boas, for example, described autobiographies as being “of limited value, and useful chieﬂy for the study of the perversion of truth by memory,” while Paul Radin contended that investigators rarely spent enough time with the tribes they were observing, and inevitably derived results too tinged by the investigator’s own emotional tone to be reliable. Even more importantly, as these life stories moved from the traditional oral mode to recorded written form, much was inevitably lost. Editors often decided what elements were signiﬁcant to the ﬁeld research on a given tribe. Native Americans recognized that the essence of their lives could not be communicated in English and that events that they thought signiﬁcant were often deemed unimportant by their interviewers. Indeed, the very act of telling their stories could force Native American narrators to distort their cultures, as taboos had to be broken to speak the names of dead relatives crucial to their family stories. Despite all of this, autobiography remains a useful tool for ethnological research: such personal reminiscences and impressions, incomplete as they may be, are likely to throw more light on the working of the mind and emotions than any amount of speculation from an ethnologist or ethnological theorist from another culture. Questions 33–38 refer to the passage above.",
-    subquestion1:
-      "It can be inferred from the passage that a characteristic of the ethnological research on Native Americans conducted during the nineteenth century was the use of which of the following?",
     answer_1: "Investigators familiar with the culture under study",
     answer_2:
       "A language other than the informant’s for recording life stories",
@@ -1988,15 +2234,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "It can be inferred from the passage that a characteristic of the ethnological research on Native Americans conducted during the nineteenth century was the use of which of the following?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 95,
-    question_id: 39,
+    id: "95",
+    question_id: "39",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Seeking a competitive advantage, some professional service ﬁrms (for example, ﬁrms providing advertising, accounting, or health care services) have considered offering unconditional guarantees of satisfaction. Such guarantees specify what clients can expect and what the ﬁrm will do if it fails to fulﬁll these expectations. Particularly with ﬁrst-time clients, an unconditional guarantee can be an effective marketing tool if the client is very cautious, the ﬁrm’s fees are high, the negative consequences of bad service are grave, or business is difﬁcult to obtain through referrals and word-of-mouth. However, an unconditional guarantee can sometimes hinder marketing efforts. With its implication that failure is possible, the guarantee may, paradoxically, cause clients to doubt the service ﬁrm’s ability to deliver the promised level of service. It may conﬂict with a ﬁrm’s desire to appear sophisticated, or may even suggest that a ﬁrm is begging for business. In legal and health care services, it may mislead clients by suggesting that lawsuits or medical procedures will have guaranteed outcomes. Indeed, professional service ﬁrms with outstanding reputations and performance to match have little to gain from offering unconditional guarantees. And any ﬁrm that implements an unconditional guarantee without undertaking a commensurate commitment to quality of service is merely employing a potentially costly marketing gimmick. Questions 39–44 refer to the passage above.",
-    subquestion1: "The primary function of the passage as a whole is to",
     answer_1: "account for the popularity of a practice",
     answer_2: "evaluate the utility of a practice",
     answer_3: "demonstrate how to institute a practice",
@@ -2005,16 +2256,19 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1: "The primary function of the passage as a whole is to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 96,
-    question_id: 40,
+    id: "96",
+    question_id: "40",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Seeking a competitive advantage, some professional service ﬁrms (for example, ﬁrms providing advertising, accounting, or health care services) have considered offering unconditional guarantees of satisfaction. Such guarantees specify what clients can expect and what the ﬁrm will do if it fails to fulﬁll these expectations. Particularly with ﬁrst-time clients, an unconditional guarantee can be an effective marketing tool if the client is very cautious, the ﬁrm’s fees are high, the negative consequences of bad service are grave, or business is difﬁcult to obtain through referrals and word-of-mouth. However, an unconditional guarantee can sometimes hinder marketing efforts. With its implication that failure is possible, the guarantee may, paradoxically, cause clients to doubt the service ﬁrm’s ability to deliver the promised level of service. It may conﬂict with a ﬁrm’s desire to appear sophisticated, or may even suggest that a ﬁrm is begging for business. In legal and health care services, it may mislead clients by suggesting that lawsuits or medical procedures will have guaranteed outcomes. Indeed, professional service ﬁrms with outstanding reputations and performance to match have little to gain from offering unconditional guarantees. And any ﬁrm that implements an unconditional guarantee without undertaking a commensurate commitment to quality of service is merely employing a potentially costly marketing gimmick. Questions 39–44 refer to the passage above.",
-    subquestion1:
-      "All of the following are mentioned in the passage as circumstances in which professional service ﬁrms can beneﬁt from offering an unconditional guarantee EXCEPT:",
     answer_1:
       "The ﬁrm is having difﬁculty retaining its clients of long standing.",
     answer_2:
@@ -2026,16 +2280,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "All of the following are mentioned in the passage as circumstances in which professional service ﬁrms can beneﬁt from offering an unconditional guarantee EXCEPT:",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 97,
-    question_id: 41,
+    id: "97",
+    question_id: "41",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Seeking a competitive advantage, some professional service ﬁrms (for example, ﬁrms providing advertising, accounting, or health care services) have considered offering unconditional guarantees of satisfaction. Such guarantees specify what clients can expect and what the ﬁrm will do if it fails to fulﬁll these expectations. Particularly with ﬁrst-time clients, an unconditional guarantee can be an effective marketing tool if the client is very cautious, the ﬁrm’s fees are high, the negative consequences of bad service are grave, or business is difﬁcult to obtain through referrals and word-of-mouth. However, an unconditional guarantee can sometimes hinder marketing efforts. With its implication that failure is possible, the guarantee may, paradoxically, cause clients to doubt the service ﬁrm’s ability to deliver the promised level of service. It may conﬂict with a ﬁrm’s desire to appear sophisticated, or may even suggest that a ﬁrm is begging for business. In legal and health care services, it may mislead clients by suggesting that lawsuits or medical procedures will have guaranteed outcomes. Indeed, professional service ﬁrms with outstanding reputations and performance to match have little to gain from offering unconditional guarantees. And any ﬁrm that implements an unconditional guarantee without undertaking a commensurate commitment to quality of service is merely employing a potentially costly marketing gimmick. Questions 39–44 refer to the passage above.",
-    subquestion1:
-      "Which of the following is cited in the passage as a goal of some professional service ﬁrms in offering unconditional guarantees of satisfaction?",
     answer_1: "A limit on the ﬁrm’s liability",
     answer_2: "Successful competition against other ﬁrms",
     answer_3: "Ability to justify fee increases",
@@ -2044,16 +2302,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "Which of the following is cited in the passage as a goal of some professional service ﬁrms in offering unconditional guarantees of satisfaction?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 98,
-    question_id: 42,
+    id: "98",
+    question_id: "42",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Seeking a competitive advantage, some professional service ﬁrms (for example, ﬁrms providing advertising, accounting, or health care services) have considered offering unconditional guarantees of satisfaction. Such guarantees specify what clients can expect and what the ﬁrm will do if it fails to fulﬁll these expectations. Particularly with ﬁrst-time clients, an unconditional guarantee can be an effective marketing tool if the client is very cautious, the ﬁrm’s fees are high, the negative consequences of bad service are grave, or business is difﬁcult to obtain through referrals and word-of-mouth. However, an unconditional guarantee can sometimes hinder marketing efforts. With its implication that failure is possible, the guarantee may, paradoxically, cause clients to doubt the service ﬁrm’s ability to deliver the promised level of service. It may conﬂict with a ﬁrm’s desire to appear sophisticated, or may even suggest that a ﬁrm is begging for business. In legal and health care services, it may mislead clients by suggesting that lawsuits or medical procedures will have guaranteed outcomes. Indeed, professional service ﬁrms with outstanding reputations and performance to match have little to gain from offering unconditional guarantees. And any ﬁrm that implements an unconditional guarantee without undertaking a commensurate commitment to quality of service is merely employing a potentially costly marketing gimmick. Questions 39–44 refer to the passage above.",
-    subquestion1:
-      "The passage’s description of the issue raised by unconditional guarantees for health care or legal services most clearly implies that which of the following is true?",
     answer_1:
       "The legal and medical professions have standards of practice that would be violated by attempts to fulﬁll such unconditional guarantees.",
     answer_2:
@@ -2067,16 +2329,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "The passage’s description of the issue raised by unconditional guarantees for health care or legal services most clearly implies that which of the following is true?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 99,
-    question_id: 43,
+    id: "99",
+    question_id: "43",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Seeking a competitive advantage, some professional service ﬁrms (for example, ﬁrms providing advertising, accounting, or health care services) have considered offering unconditional guarantees of satisfaction. Such guarantees specify what clients can expect and what the ﬁrm will do if it fails to fulﬁll these expectations. Particularly with ﬁrst-time clients, an unconditional guarantee can be an effective marketing tool if the client is very cautious, the ﬁrm’s fees are high, the negative consequences of bad service are grave, or business is difﬁcult to obtain through referrals and word-of-mouth. However, an unconditional guarantee can sometimes hinder marketing efforts. With its implication that failure is possible, the guarantee may, paradoxically, cause clients to doubt the service ﬁrm’s ability to deliver the promised level of service. It may conﬂict with a ﬁrm’s desire to appear sophisticated, or may even suggest that a ﬁrm is begging for business. In legal and health care services, it may mislead clients by suggesting that lawsuits or medical procedures will have guaranteed outcomes. Indeed, professional service ﬁrms with outstanding reputations and performance to match have little to gain from offering unconditional guarantees. And any ﬁrm that implements an unconditional guarantee without undertaking a commensurate commitment to quality of service is merely employing a potentially costly marketing gimmick. Questions 39–44 refer to the passage above.",
-    subquestion1:
-      "Which of the following hypothetical situations best exempliﬁes the potential problem noted in the second sentence of the second paragraph (lines 15–19)?",
     answer_1:
       "A physician’s unconditional guarantee of satisfaction encourages patients to sue for malpractice if they are unhappy with the treatment they receive.",
     answer_2:
@@ -2090,16 +2356,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "Which of the following hypothetical situations best exempliﬁes the potential problem noted in the second sentence of the second paragraph (lines 15–19)?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 100,
-    question_id: 44,
+    id: "100",
+    question_id: "44",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Seeking a competitive advantage, some professional service ﬁrms (for example, ﬁrms providing advertising, accounting, or health care services) have considered offering unconditional guarantees of satisfaction. Such guarantees specify what clients can expect and what the ﬁrm will do if it fails to fulﬁll these expectations. Particularly with ﬁrst-time clients, an unconditional guarantee can be an effective marketing tool if the client is very cautious, the ﬁrm’s fees are high, the negative consequences of bad service are grave, or business is difﬁcult to obtain through referrals and word-of-mouth. However, an unconditional guarantee can sometimes hinder marketing efforts. With its implication that failure is possible, the guarantee may, paradoxically, cause clients to doubt the service ﬁrm’s ability to deliver the promised level of service. It may conﬂict with a ﬁrm’s desire to appear sophisticated, or may even suggest that a ﬁrm is begging for business. In legal and health care services, it may mislead clients by suggesting that lawsuits or medical procedures will have guaranteed outcomes. Indeed, professional service ﬁrms with outstanding reputations and performance to match have little to gain from offering unconditional guarantees. And any ﬁrm that implements an unconditional guarantee without undertaking a commensurate commitment to quality of service is merely employing a potentially costly marketing gimmick. Questions 39–44 refer to the passage above.",
-    subquestion1:
-      "The passage most clearly implies which of the following about the professional service ﬁrms mentioned in lines 24–27?",
     answer_1:
       "They are unlikely to have offered unconditional guarantees of satisfaction in the past.",
     answer_2:
@@ -2113,15 +2383,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "The passage most clearly implies which of the following about the professional service ﬁrms mentioned in lines 24–27?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 101,
-    question_id: 45,
+    id: "101",
+    question_id: "45",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In a 1918 editorial, W. E. B. Du Bois advised African Americans to stop agitating for equality and to proclaim their solidarity with White Americans for the duration of the First World War. The editorial surprised many African Americans who viewed Du Bois as an uncompromising African American leader and a chief opponent of the accommodationist tactics urged by Booker T. Washington. In fact, however, Du Bois often shifted positions along the continuum between Washington and confrontationists such as William Trotter. In 1895, when Washington called on African Americans to concentrate on improving their communities instead of opposing discrimination and agitating for political rights, Du Bois praised Washington’s speech. In 1903, however, Du Bois aligned himself with Trotter, Washington’s militant opponent, less for ideological reasons than because Trotter had described to him Washington’s efforts to silence those in the African American press who opposed Washington’s positions. Du Bois’s wartime position thus reﬂected not a change in his long-term goals but rather a pragmatic response in the face of social pressures: government ofﬁcials had threatened African American journalists with censorship if they continued to voice grievances. Furthermore, Du Bois believed that African Americans’ contributions to past war efforts had brought them some legal and political advances. Du Bois’s accommodationism did not last, however. Upon learning of systematic discrimination experienced by African Americans in the military, he called on them to “return ﬁghting” from the war. Questions 45–49 refer to the passage above.",
-    subquestion1: "The passage is primarily concerned with",
     answer_1:
       "identifying historical circumstances that led Du Bois to alter his long-term goals",
     answer_2:
@@ -2135,16 +2410,19 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "The passage is primarily concerned with",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 102,
-    question_id: 46,
+    id: "102",
+    question_id: "46",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In a 1918 editorial, W. E. B. Du Bois advised African Americans to stop agitating for equality and to proclaim their solidarity with White Americans for the duration of the First World War. The editorial surprised many African Americans who viewed Du Bois as an uncompromising African American leader and a chief opponent of the accommodationist tactics urged by Booker T. Washington. In fact, however, Du Bois often shifted positions along the continuum between Washington and confrontationists such as William Trotter. In 1895, when Washington called on African Americans to concentrate on improving their communities instead of opposing discrimination and agitating for political rights, Du Bois praised Washington’s speech. In 1903, however, Du Bois aligned himself with Trotter, Washington’s militant opponent, less for ideological reasons than because Trotter had described to him Washington’s efforts to silence those in the African American press who opposed Washington’s positions. Du Bois’s wartime position thus reﬂected not a change in his long-term goals but rather a pragmatic response in the face of social pressures: government ofﬁcials had threatened African American journalists with censorship if they continued to voice grievances. Furthermore, Du Bois believed that African Americans’ contributions to past war efforts had brought them some legal and political advances. Du Bois’s accommodationism did not last, however. Upon learning of systematic discrimination experienced by African Americans in the military, he called on them to “return ﬁghting” from the war. Questions 45–49 refer to the passage above.",
-    subquestion1:
-      "The passage indicates which of the following about Du Bois’s attitude toward Washington?",
     answer_1:
       "It underwent a shift during the First World War as Du Bois became more sympathetic with Trotter’s views.",
     answer_2:
@@ -2158,16 +2436,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "The passage indicates which of the following about Du Bois’s attitude toward Washington?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 103,
-    question_id: 47,
+    id: "103",
+    question_id: "47",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In a 1918 editorial, W. E. B. Du Bois advised African Americans to stop agitating for equality and to proclaim their solidarity with White Americans for the duration of the First World War. The editorial surprised many African Americans who viewed Du Bois as an uncompromising African American leader and a chief opponent of the accommodationist tactics urged by Booker T. Washington. In fact, however, Du Bois often shifted positions along the continuum between Washington and confrontationists such as William Trotter. In 1895, when Washington called on African Americans to concentrate on improving their communities instead of opposing discrimination and agitating for political rights, Du Bois praised Washington’s speech. In 1903, however, Du Bois aligned himself with Trotter, Washington’s militant opponent, less for ideological reasons than because Trotter had described to him Washington’s efforts to silence those in the African American press who opposed Washington’s positions. Du Bois’s wartime position thus reﬂected not a change in his long-term goals but rather a pragmatic response in the face of social pressures: government ofﬁcials had threatened African American journalists with censorship if they continued to voice grievances. Furthermore, Du Bois believed that African Americans’ contributions to past war efforts had brought them some legal and political advances. Du Bois’s accommodationism did not last, however. Upon learning of systematic discrimination experienced by African Americans in the military, he called on them to “return ﬁghting” from the war. Questions 45–49 refer to the passage above.",
-    subquestion1:
-      "The passage suggests which of the following about the contributions of African Americans to the United States war effort during the First World War?",
     answer_1:
       "The contributions were made largely in response to Du Bois’s 1918 editorial.",
     answer_2:
@@ -2181,16 +2463,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "The passage suggests which of the following about the contributions of African Americans to the United States war effort during the First World War?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 104,
-    question_id: 48,
+    id: "104",
+    question_id: "48",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In a 1918 editorial, W. E. B. Du Bois advised African Americans to stop agitating for equality and to proclaim their solidarity with White Americans for the duration of the First World War. The editorial surprised many African Americans who viewed Du Bois as an uncompromising African American leader and a chief opponent of the accommodationist tactics urged by Booker T. Washington. In fact, however, Du Bois often shifted positions along the continuum between Washington and confrontationists such as William Trotter. In 1895, when Washington called on African Americans to concentrate on improving their communities instead of opposing discrimination and agitating for political rights, Du Bois praised Washington’s speech. In 1903, however, Du Bois aligned himself with Trotter, Washington’s militant opponent, less for ideological reasons than because Trotter had described to him Washington’s efforts to silence those in the African American press who opposed Washington’s positions. Du Bois’s wartime position thus reﬂected not a change in his long-term goals but rather a pragmatic response in the face of social pressures: government ofﬁcials had threatened African American journalists with censorship if they continued to voice grievances. Furthermore, Du Bois believed that African Americans’ contributions to past war efforts had brought them some legal and political advances. Du Bois’s accommodationism did not last, however. Upon learning of systematic discrimination experienced by African Americans in the military, he called on them to “return ﬁghting” from the war. Questions 45–49 refer to the passage above.",
-    subquestion1:
-      "The author of the passage refers to Washington’s call to African Americans in 1895 primarily in order to",
     answer_1:
       "identify Du Bois’s characteristic position on the continuum between accommodationism and confrontationism",
     answer_2:
@@ -2204,16 +2490,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "The author of the passage refers to Washington’s call to African Americans in 1895 primarily in order to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 105,
-    question_id: 49,
+    id: "105",
+    question_id: "49",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In a 1918 editorial, W. E. B. Du Bois advised African Americans to stop agitating for equality and to proclaim their solidarity with White Americans for the duration of the First World War. The editorial surprised many African Americans who viewed Du Bois as an uncompromising African American leader and a chief opponent of the accommodationist tactics urged by Booker T. Washington. In fact, however, Du Bois often shifted positions along the continuum between Washington and confrontationists such as William Trotter. In 1895, when Washington called on African Americans to concentrate on improving their communities instead of opposing discrimination and agitating for political rights, Du Bois praised Washington’s speech. In 1903, however, Du Bois aligned himself with Trotter, Washington’s militant opponent, less for ideological reasons than because Trotter had described to him Washington’s efforts to silence those in the African American press who opposed Washington’s positions. Du Bois’s wartime position thus reﬂected not a change in his long-term goals but rather a pragmatic response in the face of social pressures: government ofﬁcials had threatened African American journalists with censorship if they continued to voice grievances. Furthermore, Du Bois believed that African Americans’ contributions to past war efforts had brought them some legal and political advances. Du Bois’s accommodationism did not last, however. Upon learning of systematic discrimination experienced by African Americans in the military, he called on them to “return ﬁghting” from the war. Questions 45–49 refer to the passage above.",
-    subquestion1:
-      "According to the passage, which of the following is true of the strategy that Du Bois’s 1918 editorial urged African Americans to adopt during the First World War?",
     answer_1:
       "It was a strategy that Du Bois had consistently rejected in the past.",
     answer_2:
@@ -2227,15 +2517,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "According to the passage, which of the following is true of the strategy that Du Bois’s 1918 editorial urged African Americans to adopt during the First World War?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 106,
-    question_id: 50,
+    id: "106",
+    question_id: "50",
     main_question_stem:
       "(5) (10) (15) (20) (25) The fact that superior service can generate a competitive advantage for a company does not mean that every attempt at improving service will create such an advantage. Investments in service, like those in production and distribution, must be balanced against other types of investments on the basis of direct, tangible beneﬁts such as cost reduction and increased revenues. If a company is already effectively on a par with its competitors because it provides service that avoids a damaging reputation and keeps customers from leaving at an unacceptable rate, then investment in higher service levels may be wasted, since service is a deciding factor for customers only in extreme situations. This truth was not apparent to managers of one regional bank, which failed to improve its competitive position despite its investment in reducing the time a customer had to wait for a teller. The bank managers did not recognize the level of customer inertia in the consumer banking industry that arises from the inconvenience of switching banks. Nor did they analyze their service improvement to determine whether it would attract new customers by producing a new standard of service that would excite customers or by proving difﬁcult for competitors to copy. The only merit of the improvement was that it could easily be described to customers. Questions 50–55 refer to the passage above.",
-    subquestion1: "The primary purpose of the passage is to",
     answer_1: "contrast possible outcomes of a type of business investment",
     answer_2:
       "suggest more careful evaluation of a type of business investment",
@@ -2248,16 +2543,19 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "The primary purpose of the passage is to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 107,
-    question_id: 51,
+    id: "107",
+    question_id: "51",
     main_question_stem:
       "(5) (10) (15) (20) (25) The fact that superior service can generate a competitive advantage for a company does not mean that every attempt at improving service will create such an advantage. Investments in service, like those in production and distribution, must be balanced against other types of investments on the basis of direct, tangible beneﬁts such as cost reduction and increased revenues. If a company is already effectively on a par with its competitors because it provides service that avoids a damaging reputation and keeps customers from leaving at an unacceptable rate, then investment in higher service levels may be wasted, since service is a deciding factor for customers only in extreme situations. This truth was not apparent to managers of one regional bank, which failed to improve its competitive position despite its investment in reducing the time a customer had to wait for a teller. The bank managers did not recognize the level of customer inertia in the consumer banking industry that arises from the inconvenience of switching banks. Nor did they analyze their service improvement to determine whether it would attract new customers by producing a new standard of service that would excite customers or by proving difﬁcult for competitors to copy. The only merit of the improvement was that it could easily be described to customers. Questions 50–55 refer to the passage above.",
-    subquestion1:
-      "According to the passage, investments in service are comparable to investments in production and distribution in terms of the",
     answer_1: "tangibility of the beneﬁts that they tend to confer",
     answer_2: "increased revenues that they ultimately produce",
     answer_3: "basis on which they need to be weighed",
@@ -2266,16 +2564,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "According to the passage, investments in service are comparable to investments in production and distribution in terms of the",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 108,
-    question_id: 52,
+    id: "108",
+    question_id: "52",
     main_question_stem:
       "(5) (10) (15) (20) (25) The fact that superior service can generate a competitive advantage for a company does not mean that every attempt at improving service will create such an advantage. Investments in service, like those in production and distribution, must be balanced against other types of investments on the basis of direct, tangible beneﬁts such as cost reduction and increased revenues. If a company is already effectively on a par with its competitors because it provides service that avoids a damaging reputation and keeps customers from leaving at an unacceptable rate, then investment in higher service levels may be wasted, since service is a deciding factor for customers only in extreme situations. This truth was not apparent to managers of one regional bank, which failed to improve its competitive position despite its investment in reducing the time a customer had to wait for a teller. The bank managers did not recognize the level of customer inertia in the consumer banking industry that arises from the inconvenience of switching banks. Nor did they analyze their service improvement to determine whether it would attract new customers by producing a new standard of service that would excite customers or by proving difﬁcult for competitors to copy. The only merit of the improvement was that it could easily be described to customers. Questions 50–55 refer to the passage above.",
-    subquestion1:
-      "The passage suggests which of the following about service provided by the regional bank prior to its investment in enhancing that service?",
     answer_1: "It enabled the bank to retain customers at an acceptable rate.",
     answer_2:
       "It threatened to weaken the bank’s competitive position with respect to other regional banks.",
@@ -2288,16 +2590,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "The passage suggests which of the following about service provided by the regional bank prior to its investment in enhancing that service?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 109,
-    question_id: 53,
+    id: "109",
+    question_id: "53",
     main_question_stem:
       "(5) (10) (15) (20) (25) The fact that superior service can generate a competitive advantage for a company does not mean that every attempt at improving service will create such an advantage. Investments in service, like those in production and distribution, must be balanced against other types of investments on the basis of direct, tangible beneﬁts such as cost reduction and increased revenues. If a company is already effectively on a par with its competitors because it provides service that avoids a damaging reputation and keeps customers from leaving at an unacceptable rate, then investment in higher service levels may be wasted, since service is a deciding factor for customers only in extreme situations. This truth was not apparent to managers of one regional bank, which failed to improve its competitive position despite its investment in reducing the time a customer had to wait for a teller. The bank managers did not recognize the level of customer inertia in the consumer banking industry that arises from the inconvenience of switching banks. Nor did they analyze their service improvement to determine whether it would attract new customers by producing a new standard of service that would excite customers or by proving difﬁcult for competitors to copy. The only merit of the improvement was that it could easily be described to customers. Questions 50–55 refer to the passage above.",
-    subquestion1:
-      "The passage suggests that bank managers failed to consider whether or not the service improvement mentioned in lines 18–20",
     answer_1:
       "was too complicated to be easily described to prospective customers",
     answer_2:
@@ -2310,16 +2616,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "The passage suggests that bank managers failed to consider whether or not the service improvement mentioned in lines 18–20",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 110,
-    question_id: 54,
+    id: "110",
+    question_id: "54",
     main_question_stem:
       "(5) (10) (15) (20) (25) The fact that superior service can generate a competitive advantage for a company does not mean that every attempt at improving service will create such an advantage. Investments in service, like those in production and distribution, must be balanced against other types of investments on the basis of direct, tangible beneﬁts such as cost reduction and increased revenues. If a company is already effectively on a par with its competitors because it provides service that avoids a damaging reputation and keeps customers from leaving at an unacceptable rate, then investment in higher service levels may be wasted, since service is a deciding factor for customers only in extreme situations. This truth was not apparent to managers of one regional bank, which failed to improve its competitive position despite its investment in reducing the time a customer had to wait for a teller. The bank managers did not recognize the level of customer inertia in the consumer banking industry that arises from the inconvenience of switching banks. Nor did they analyze their service improvement to determine whether it would attract new customers by producing a new standard of service that would excite customers or by proving difﬁcult for competitors to copy. The only merit of the improvement was that it could easily be described to customers. Questions 50–55 refer to the passage above.",
-    subquestion1:
-      "The discussion of the regional bank in the second paragraph serves which of the following functions within the passage as a whole?",
     answer_1:
       "It describes an exceptional case in which investment in service actually failed to produce a competitive advantage.",
     answer_2:
@@ -2333,16 +2643,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "The discussion of the regional bank in the second paragraph serves which of the following functions within the passage as a whole?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 111,
-    question_id: 55,
+    id: "111",
+    question_id: "55",
     main_question_stem:
       "(5) (10) (15) (20) (25) The fact that superior service can generate a competitive advantage for a company does not mean that every attempt at improving service will create such an advantage. Investments in service, like those in production and distribution, must be balanced against other types of investments on the basis of direct, tangible beneﬁts such as cost reduction and increased revenues. If a company is already effectively on a par with its competitors because it provides service that avoids a damaging reputation and keeps customers from leaving at an unacceptable rate, then investment in higher service levels may be wasted, since service is a deciding factor for customers only in extreme situations. This truth was not apparent to managers of one regional bank, which failed to improve its competitive position despite its investment in reducing the time a customer had to wait for a teller. The bank managers did not recognize the level of customer inertia in the consumer banking industry that arises from the inconvenience of switching banks. Nor did they analyze their service improvement to determine whether it would attract new customers by producing a new standard of service that would excite customers or by proving difﬁcult for competitors to copy. The only merit of the improvement was that it could easily be described to customers. Questions 50–55 refer to the passage above.",
-    subquestion1:
-      "The author uses the word “only” in line 27 most likely in order to",
     answer_1: "highlight the oddity of the service improvement",
     answer_2:
       "emphasize the relatively low value of the investment in service improvement",
@@ -2355,16 +2669,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "The author uses the word “only” in line 27 most likely in order to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 112,
-    question_id: 56,
+    id: "112",
+    question_id: "56",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In an attempt to improve the overall performance of clerical workers, many companies have introduced computerized performance monitoring and control systems (CPMCS) that record and report a worker’s computer-driven activities. However, at least one study has shown that such monitoring may not be having the desired effect. In the study, researchers asked monitored clerical workers and their supervisors how assessments of productivity affected supervisors’ ratings of workers’ performance. In contrast to unmonitored workers doing the same work, who without exception identiﬁed the most important element in their jobs as customer service, the monitored workers and their supervisors all responded that productivity was the critical factor in assigning ratings. This ﬁnding suggested that there should have been a strong correlation between a monitored worker’s productivity and the overall rating the worker received. However, measures of the relationship between overall rating and individual elements of performance clearly supported the conclusion that supervisors gave considerable weight to criteria such as attendance, accuracy, and indications of customer satisfaction. It is possible that productivity may be a “hygiene factor”; that is, if it is too low, it will hurt the overall rating. But the evidence suggests that beyond the point at which productivity becomes “good enough,” higher productivity per se is unlikely to improve a rating. Questions 56–60 refer to the passage above.",
-    subquestion1:
-      "According to the passage, before the ﬁnal results of the study were known, which of the following seemed likely?",
     answer_1:
       "That workers with the highest productivity would also be the most accurate",
     answer_2:
@@ -2378,16 +2696,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "According to the passage, before the ﬁnal results of the study were known, which of the following seemed likely?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 113,
-    question_id: 57,
+    id: "113",
+    question_id: "57",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In an attempt to improve the overall performance of clerical workers, many companies have introduced computerized performance monitoring and control systems (CPMCS) that record and report a worker’s computer-driven activities. However, at least one study has shown that such monitoring may not be having the desired effect. In the study, researchers asked monitored clerical workers and their supervisors how assessments of productivity affected supervisors’ ratings of workers’ performance. In contrast to unmonitored workers doing the same work, who without exception identiﬁed the most important element in their jobs as customer service, the monitored workers and their supervisors all responded that productivity was the critical factor in assigning ratings. This ﬁnding suggested that there should have been a strong correlation between a monitored worker’s productivity and the overall rating the worker received. However, measures of the relationship between overall rating and individual elements of performance clearly supported the conclusion that supervisors gave considerable weight to criteria such as attendance, accuracy, and indications of customer satisfaction. It is possible that productivity may be a “hygiene factor”; that is, if it is too low, it will hurt the overall rating. But the evidence suggests that beyond the point at which productivity becomes “good enough,” higher productivity per se is unlikely to improve a rating. Questions 56–60 refer to the passage above.",
-    subquestion1:
-      "It can be inferred that the author of the passage discusses “unmonitored workers” (line 11) primarily in order to",
     answer_1:
       "compare the ratings of these workers with the ratings of monitored workers",
     answer_2:
@@ -2399,16 +2721,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "It can be inferred that the author of the passage discusses “unmonitored workers” (line 11) primarily in order to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 114,
-    question_id: 58,
+    id: "114",
+    question_id: "58",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In an attempt to improve the overall performance of clerical workers, many companies have introduced computerized performance monitoring and control systems (CPMCS) that record and report a worker’s computer-driven activities. However, at least one study has shown that such monitoring may not be having the desired effect. In the study, researchers asked monitored clerical workers and their supervisors how assessments of productivity affected supervisors’ ratings of workers’ performance. In contrast to unmonitored workers doing the same work, who without exception identiﬁed the most important element in their jobs as customer service, the monitored workers and their supervisors all responded that productivity was the critical factor in assigning ratings. This ﬁnding suggested that there should have been a strong correlation between a monitored worker’s productivity and the overall rating the worker received. However, measures of the relationship between overall rating and individual elements of performance clearly supported the conclusion that supervisors gave considerable weight to criteria such as attendance, accuracy, and indications of customer satisfaction. It is possible that productivity may be a “hygiene factor”; that is, if it is too low, it will hurt the overall rating. But the evidence suggests that beyond the point at which productivity becomes “good enough,” higher productivity per se is unlikely to improve a rating. Questions 56–60 refer to the passage above.",
-    subquestion1:
-      "Which of the following, if true, would most clearly have supported the conclusion referred to in lines 22–25?",
     answer_1:
       "Ratings of productivity correlated highly with ratings of both accuracy and attendance.",
     answer_2: "Electronic monitoring greatly increased productivity.",
@@ -2421,16 +2747,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "Which of the following, if true, would most clearly have supported the conclusion referred to in lines 22–25?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 115,
-    question_id: 59,
+    id: "115",
+    question_id: "59",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In an attempt to improve the overall performance of clerical workers, many companies have introduced computerized performance monitoring and control systems (CPMCS) that record and report a worker’s computer-driven activities. However, at least one study has shown that such monitoring may not be having the desired effect. In the study, researchers asked monitored clerical workers and their supervisors how assessments of productivity affected supervisors’ ratings of workers’ performance. In contrast to unmonitored workers doing the same work, who without exception identiﬁed the most important element in their jobs as customer service, the monitored workers and their supervisors all responded that productivity was the critical factor in assigning ratings. This ﬁnding suggested that there should have been a strong correlation between a monitored worker’s productivity and the overall rating the worker received. However, measures of the relationship between overall rating and individual elements of performance clearly supported the conclusion that supervisors gave considerable weight to criteria such as attendance, accuracy, and indications of customer satisfaction. It is possible that productivity may be a “hygiene factor”; that is, if it is too low, it will hurt the overall rating. But the evidence suggests that beyond the point at which productivity becomes “good enough,” higher productivity per se is unlikely to improve a rating. Questions 56–60 refer to the passage above.",
-    subquestion1:
-      "According to the passage, a “hygiene factor” (line 27) is an aspect of a worker’s performance that",
     answer_1: "has no effect on the rating of a worker’s performance",
     answer_2:
       "is so basic to performance that it is assumed to be adequate for all workers",
@@ -2443,15 +2773,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "According to the passage, a “hygiene factor” (line 27) is an aspect of a worker’s performance that",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 116,
-    question_id: 60,
+    id: "116",
+    question_id: "60",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) In an attempt to improve the overall performance of clerical workers, many companies have introduced computerized performance monitoring and control systems (CPMCS) that record and report a worker’s computer-driven activities. However, at least one study has shown that such monitoring may not be having the desired effect. In the study, researchers asked monitored clerical workers and their supervisors how assessments of productivity affected supervisors’ ratings of workers’ performance. In contrast to unmonitored workers doing the same work, who without exception identiﬁed the most important element in their jobs as customer service, the monitored workers and their supervisors all responded that productivity was the critical factor in assigning ratings. This ﬁnding suggested that there should have been a strong correlation between a monitored worker’s productivity and the overall rating the worker received. However, measures of the relationship between overall rating and individual elements of performance clearly supported the conclusion that supervisors gave considerable weight to criteria such as attendance, accuracy, and indications of customer satisfaction. It is possible that productivity may be a “hygiene factor”; that is, if it is too low, it will hurt the overall rating. But the evidence suggests that beyond the point at which productivity becomes “good enough,” higher productivity per se is unlikely to improve a rating. Questions 56–60 refer to the passage above.",
-    subquestion1: "The primary purpose of the passage is to",
     answer_1: "explain the need for the introduction of an innovative strategy",
     answer_2: "discuss a study of the use of a particular method",
     answer_3: "recommend a course of action",
@@ -2460,15 +2795,19 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "The primary purpose of the passage is to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 117,
-    question_id: 61,
+    id: "117",
+    question_id: "61",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Neotropical coastal mangrove forests are usually “zonal,” with certain mangrove species found predominantly in the seaward portion of the habitat and other mangrove species on the more landward portions of the coast. The earliest research on mangrove forests produced descriptions of species distribution from shore to land, without exploring the causes of the distributions. The idea that zonation is caused by plant succession was ﬁrst expressed by J. H. Davis in a study of Florida mangrove forests. According to Davis’ scheme, the shoreline is being extended in a seaward direction because of the “land-building” role of mangroves, which, by trapping sediments over time, extend the shore. As a habitat gradually becomes more inland as the shore extends, the “land-building” species are replaced. This continuous process of accretion and succession would be interrupted only by hurricanes or storm ﬂushings. Recently the universal application of Davis’ succession paradigm has been challenged. It appears that in areas where weak currents and weak tidal energies allow the accumulation of sediments, mangroves will follow land formation and accelerate the rate of soil accretion; succession will proceed according to Davis’ scheme. But on stable coastlines, the distribution of mangrove species results in other patterns of zonation; “land building” does not occur. To ﬁnd a principle that explains the various distribution patterns, several researchers have looked to salinity and its effects on mangroves. While mangroves can develop in fresh water, they can also thrive in salinities as high as 2.5 times that of seawater. However, those mangrove species found in freshwater habitats do well only in the absence of competition, thus suggesting that salinity tolerance is a critical factor in competitive success among mangrove species. Research suggests that mangroves will normally dominate highly saline regions, although not because they require salt. Rather, they are metabolically efﬁcient (and hence grow well) in portions of an environment whose high salinity excludes plants adapted to lower salinities. Tides create different degrees of salinity along a coastline. The characteristic mangrove species of each zone should exhibit a higher metabolic efﬁciency at that salinity than will any potential invader, including other species of mangrove. Questions 61–63 refer to the passage above.",
-    subquestion1: "The primary purpose of the passage is to",
     answer_1:
       "refute the idea that the zonation exhibited in mangrove forests is caused by adaptation to salinity",
     answer_2:
@@ -2482,16 +2821,19 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "The primary purpose of the passage is to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 118,
-    question_id: 62,
+    id: "118",
+    question_id: "62",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Neotropical coastal mangrove forests are usually “zonal,” with certain mangrove species found predominantly in the seaward portion of the habitat and other mangrove species on the more landward portions of the coast. The earliest research on mangrove forests produced descriptions of species distribution from shore to land, without exploring the causes of the distributions. The idea that zonation is caused by plant succession was ﬁrst expressed by J. H. Davis in a study of Florida mangrove forests. According to Davis’ scheme, the shoreline is being extended in a seaward direction because of the “land-building” role of mangroves, which, by trapping sediments over time, extend the shore. As a habitat gradually becomes more inland as the shore extends, the “land-building” species are replaced. This continuous process of accretion and succession would be interrupted only by hurricanes or storm ﬂushings. Recently the universal application of Davis’ succession paradigm has been challenged. It appears that in areas where weak currents and weak tidal energies allow the accumulation of sediments, mangroves will follow land formation and accelerate the rate of soil accretion; succession will proceed according to Davis’ scheme. But on stable coastlines, the distribution of mangrove species results in other patterns of zonation; “land building” does not occur. To ﬁnd a principle that explains the various distribution patterns, several researchers have looked to salinity and its effects on mangroves. While mangroves can develop in fresh water, they can also thrive in salinities as high as 2.5 times that of seawater. However, those mangrove species found in freshwater habitats do well only in the absence of competition, thus suggesting that salinity tolerance is a critical factor in competitive success among mangrove species. Research suggests that mangroves will normally dominate highly saline regions, although not because they require salt. Rather, they are metabolically efﬁcient (and hence grow well) in portions of an environment whose high salinity excludes plants adapted to lower salinities. Tides create different degrees of salinity along a coastline. The characteristic mangrove species of each zone should exhibit a higher metabolic efﬁciency at that salinity than will any potential invader, including other species of mangrove. Questions 61–63 refer to the passage above.",
-    subquestion1:
-      "According to the passage, the earliest research on mangrove forests produced which of the following?",
     answer_1:
       "Data that implied random patterns of mangrove species distribution",
     answer_2: "Descriptions of species distributions suggesting zonation",
@@ -2501,16 +2843,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "According to the passage, the earliest research on mangrove forests produced which of the following?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 119,
-    question_id: 63,
+    id: "119",
+    question_id: "63",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Neotropical coastal mangrove forests are usually “zonal,” with certain mangrove species found predominantly in the seaward portion of the habitat and other mangrove species on the more landward portions of the coast. The earliest research on mangrove forests produced descriptions of species distribution from shore to land, without exploring the causes of the distributions. The idea that zonation is caused by plant succession was ﬁrst expressed by J. H. Davis in a study of Florida mangrove forests. According to Davis’ scheme, the shoreline is being extended in a seaward direction because of the “land-building” role of mangroves, which, by trapping sediments over time, extend the shore. As a habitat gradually becomes more inland as the shore extends, the “land-building” species are replaced. This continuous process of accretion and succession would be interrupted only by hurricanes or storm ﬂushings. Recently the universal application of Davis’ succession paradigm has been challenged. It appears that in areas where weak currents and weak tidal energies allow the accumulation of sediments, mangroves will follow land formation and accelerate the rate of soil accretion; succession will proceed according to Davis’ scheme. But on stable coastlines, the distribution of mangrove species results in other patterns of zonation; “land building” does not occur. To ﬁnd a principle that explains the various distribution patterns, several researchers have looked to salinity and its effects on mangroves. While mangroves can develop in fresh water, they can also thrive in salinities as high as 2.5 times that of seawater. However, those mangrove species found in freshwater habitats do well only in the absence of competition, thus suggesting that salinity tolerance is a critical factor in competitive success among mangrove species. Research suggests that mangroves will normally dominate highly saline regions, although not because they require salt. Rather, they are metabolically efﬁcient (and hence grow well) in portions of an environment whose high salinity excludes plants adapted to lower salinities. Tides create different degrees of salinity along a coastline. The characteristic mangrove species of each zone should exhibit a higher metabolic efﬁciency at that salinity than will any potential invader, including other species of mangrove. Questions 61–63 refer to the passage above.",
-    subquestion1:
-      "It can be inferred from the passage that Davis’ paradigm does NOT apply to which of the following?",
     answer_1: "The shoreline of Florida mangrove forests ﬁrst studied by Davis",
     answer_2: "A shoreline in an area with weak currents",
     answer_3: "A shoreline in an area with weak tidal energy",
@@ -2519,15 +2865,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "It can be inferred from the passage that Davis’ paradigm does NOT apply to which of the following?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 120,
-    question_id: 64,
+    id: "120",
+    question_id: "64",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Findings from several studies on corporate mergers and acquisitions during the 1970s and 1980s raise questions about why ﬁrms initiate and consummate such transactions. One study showed, for example, that acquiring ﬁrms were on average unable to maintain acquired ﬁrms’ pre-merger levels of proﬁtability. A second study concluded that post- acquisition gains to most acquiring ﬁrms were not adequate to cover the premiums paid to obtain acquired ﬁrms. A third demonstrated that, following the announcement of a prospective merger, the stock of the prospective acquiring ﬁrm tends to increase in value much less than does that of the ﬁrm for which it bids. Yet mergers and acquisitions remain common, and bidders continue to assert that their objectives are economic ones. Acquisitions may well have the desirable effect of channeling a nation’s resources efﬁciently from less to more efﬁcient sectors of its economy, but the individual acquisitions executives arranging these deals must see them as advancing either their own or their companies’ private economic interests. It seems that factors having little to do with corporate economic interests explain acquisitions. These factors may include the incentive compensation of executives, lack of monitoring by boards of directors, and managerial error in estimating the value of ﬁrms targeted for acquisition. Alternatively, the acquisition acts of bidders may derive from modeling: a manager does what other managers do. Questions 64–70 refer to the passage above.",
-    subquestion1: "The primary purpose of the passage is to",
     answer_1:
       "review research demonstrating the beneﬁts of corporate mergers and acquisitions and examine some of the drawbacks that acquisition behavior entails",
     answer_2:
@@ -2541,16 +2892,19 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "The primary purpose of the passage is to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 121,
-    question_id: 65,
+    id: "121",
+    question_id: "65",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Findings from several studies on corporate mergers and acquisitions during the 1970s and 1980s raise questions about why ﬁrms initiate and consummate such transactions. One study showed, for example, that acquiring ﬁrms were on average unable to maintain acquired ﬁrms’ pre-merger levels of proﬁtability. A second study concluded that post- acquisition gains to most acquiring ﬁrms were not adequate to cover the premiums paid to obtain acquired ﬁrms. A third demonstrated that, following the announcement of a prospective merger, the stock of the prospective acquiring ﬁrm tends to increase in value much less than does that of the ﬁrm for which it bids. Yet mergers and acquisitions remain common, and bidders continue to assert that their objectives are economic ones. Acquisitions may well have the desirable effect of channeling a nation’s resources efﬁciently from less to more efﬁcient sectors of its economy, but the individual acquisitions executives arranging these deals must see them as advancing either their own or their companies’ private economic interests. It seems that factors having little to do with corporate economic interests explain acquisitions. These factors may include the incentive compensation of executives, lack of monitoring by boards of directors, and managerial error in estimating the value of ﬁrms targeted for acquisition. Alternatively, the acquisition acts of bidders may derive from modeling: a manager does what other managers do. Questions 64–70 refer to the passage above.",
-    subquestion1:
-      "The ﬁndings cited in the passage suggest which of the following about the outcomes of corporate mergers and acquisitions with respect to acquiring ﬁrms?",
     answer_1:
       "They include a decrease in value of many acquiring ﬁrms’ stocks.",
     answer_2:
@@ -2563,16 +2917,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "The ﬁndings cited in the passage suggest which of the following about the outcomes of corporate mergers and acquisitions with respect to acquiring ﬁrms?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 122,
-    question_id: 66,
+    id: "122",
+    question_id: "66",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Findings from several studies on corporate mergers and acquisitions during the 1970s and 1980s raise questions about why ﬁrms initiate and consummate such transactions. One study showed, for example, that acquiring ﬁrms were on average unable to maintain acquired ﬁrms’ pre-merger levels of proﬁtability. A second study concluded that post- acquisition gains to most acquiring ﬁrms were not adequate to cover the premiums paid to obtain acquired ﬁrms. A third demonstrated that, following the announcement of a prospective merger, the stock of the prospective acquiring ﬁrm tends to increase in value much less than does that of the ﬁrm for which it bids. Yet mergers and acquisitions remain common, and bidders continue to assert that their objectives are economic ones. Acquisitions may well have the desirable effect of channeling a nation’s resources efﬁciently from less to more efﬁcient sectors of its economy, but the individual acquisitions executives arranging these deals must see them as advancing either their own or their companies’ private economic interests. It seems that factors having little to do with corporate economic interests explain acquisitions. These factors may include the incentive compensation of executives, lack of monitoring by boards of directors, and managerial error in estimating the value of ﬁrms targeted for acquisition. Alternatively, the acquisition acts of bidders may derive from modeling: a manager does what other managers do. Questions 64–70 refer to the passage above.",
-    subquestion1:
-      "It can be inferred from the passage that the author would be most likely to agree with which of the following statements about corporate acquisitions?",
     answer_1:
       "Their known beneﬁts to national economies explain their appeal to individual ﬁrms during the 1970s and 1980s.",
     answer_2:
@@ -2586,16 +2944,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "It can be inferred from the passage that the author would be most likely to agree with which of the following statements about corporate acquisitions?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 123,
-    question_id: 67,
+    id: "123",
+    question_id: "67",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Findings from several studies on corporate mergers and acquisitions during the 1970s and 1980s raise questions about why ﬁrms initiate and consummate such transactions. One study showed, for example, that acquiring ﬁrms were on average unable to maintain acquired ﬁrms’ pre-merger levels of proﬁtability. A second study concluded that post- acquisition gains to most acquiring ﬁrms were not adequate to cover the premiums paid to obtain acquired ﬁrms. A third demonstrated that, following the announcement of a prospective merger, the stock of the prospective acquiring ﬁrm tends to increase in value much less than does that of the ﬁrm for which it bids. Yet mergers and acquisitions remain common, and bidders continue to assert that their objectives are economic ones. Acquisitions may well have the desirable effect of channeling a nation’s resources efﬁciently from less to more efﬁcient sectors of its economy, but the individual acquisitions executives arranging these deals must see them as advancing either their own or their companies’ private economic interests. It seems that factors having little to do with corporate economic interests explain acquisitions. These factors may include the incentive compensation of executives, lack of monitoring by boards of directors, and managerial error in estimating the value of ﬁrms targeted for acquisition. Alternatively, the acquisition acts of bidders may derive from modeling: a manager does what other managers do. Questions 64–70 refer to the passage above.",
-    subquestion1:
-      "The author of the passage mentions the effect of acquisitions on national economies most probably in order to",
     answer_1:
       "provide an explanation for the mergers and acquisitions of the 1970s and 1980s overlooked by the ﬁndings discussed in the passage",
     answer_2:
@@ -2609,16 +2971,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "The author of the passage mentions the effect of acquisitions on national economies most probably in order to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 124,
-    question_id: 68,
+    id: "124",
+    question_id: "68",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Findings from several studies on corporate mergers and acquisitions during the 1970s and 1980s raise questions about why ﬁrms initiate and consummate such transactions. One study showed, for example, that acquiring ﬁrms were on average unable to maintain acquired ﬁrms’ pre-merger levels of proﬁtability. A second study concluded that post- acquisition gains to most acquiring ﬁrms were not adequate to cover the premiums paid to obtain acquired ﬁrms. A third demonstrated that, following the announcement of a prospective merger, the stock of the prospective acquiring ﬁrm tends to increase in value much less than does that of the ﬁrm for which it bids. Yet mergers and acquisitions remain common, and bidders continue to assert that their objectives are economic ones. Acquisitions may well have the desirable effect of channeling a nation’s resources efﬁciently from less to more efﬁcient sectors of its economy, but the individual acquisitions executives arranging these deals must see them as advancing either their own or their companies’ private economic interests. It seems that factors having little to do with corporate economic interests explain acquisitions. These factors may include the incentive compensation of executives, lack of monitoring by boards of directors, and managerial error in estimating the value of ﬁrms targeted for acquisition. Alternatively, the acquisition acts of bidders may derive from modeling: a manager does what other managers do. Questions 64–70 refer to the passage above.",
-    subquestion1:
-      "According to the passage, during the 1970s and 1980s bidding ﬁrms differed from the ﬁrms for which they bid in that bidding ﬁrms",
     answer_1: "tended to be more proﬁtable before a merger than after a merger",
     answer_2:
       "were more often concerned about the impact of acquisitions on national economies",
@@ -2631,16 +2997,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "According to the passage, during the 1970s and 1980s bidding ﬁrms differed from the ﬁrms for which they bid in that bidding ﬁrms",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 125,
-    question_id: 69,
+    id: "125",
+    question_id: "69",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Findings from several studies on corporate mergers and acquisitions during the 1970s and 1980s raise questions about why ﬁrms initiate and consummate such transactions. One study showed, for example, that acquiring ﬁrms were on average unable to maintain acquired ﬁrms’ pre-merger levels of proﬁtability. A second study concluded that post- acquisition gains to most acquiring ﬁrms were not adequate to cover the premiums paid to obtain acquired ﬁrms. A third demonstrated that, following the announcement of a prospective merger, the stock of the prospective acquiring ﬁrm tends to increase in value much less than does that of the ﬁrm for which it bids. Yet mergers and acquisitions remain common, and bidders continue to assert that their objectives are economic ones. Acquisitions may well have the desirable effect of channeling a nation’s resources efﬁciently from less to more efﬁcient sectors of its economy, but the individual acquisitions executives arranging these deals must see them as advancing either their own or their companies’ private economic interests. It seems that factors having little to do with corporate economic interests explain acquisitions. These factors may include the incentive compensation of executives, lack of monitoring by boards of directors, and managerial error in estimating the value of ﬁrms targeted for acquisition. Alternatively, the acquisition acts of bidders may derive from modeling: a manager does what other managers do. Questions 64–70 refer to the passage above.",
-    subquestion1:
-      "According to the passage, which of the following was true of corporate acquisitions that occurred during the 1970s and 1980s?",
     answer_1:
       "Few of the acquisitions that ﬁrms made were subsequently divested.",
     answer_2:
@@ -2654,16 +3024,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "According to the passage, which of the following was true of corporate acquisitions that occurred during the 1970s and 1980s?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 126,
-    question_id: 70,
+    id: "126",
+    question_id: "70",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) Findings from several studies on corporate mergers and acquisitions during the 1970s and 1980s raise questions about why ﬁrms initiate and consummate such transactions. One study showed, for example, that acquiring ﬁrms were on average unable to maintain acquired ﬁrms’ pre-merger levels of proﬁtability. A second study concluded that post- acquisition gains to most acquiring ﬁrms were not adequate to cover the premiums paid to obtain acquired ﬁrms. A third demonstrated that, following the announcement of a prospective merger, the stock of the prospective acquiring ﬁrm tends to increase in value much less than does that of the ﬁrm for which it bids. Yet mergers and acquisitions remain common, and bidders continue to assert that their objectives are economic ones. Acquisitions may well have the desirable effect of channeling a nation’s resources efﬁciently from less to more efﬁcient sectors of its economy, but the individual acquisitions executives arranging these deals must see them as advancing either their own or their companies’ private economic interests. It seems that factors having little to do with corporate economic interests explain acquisitions. These factors may include the incentive compensation of executives, lack of monitoring by boards of directors, and managerial error in estimating the value of ﬁrms targeted for acquisition. Alternatively, the acquisition acts of bidders may derive from modeling: a manager does what other managers do. Questions 64–70 refer to the passage above.",
-    subquestion1:
-      "The author of the passage implies that which of the following is a possible partial explanation for acquisition behavior during the 1970s and 1980s?",
     answer_1:
       "Managers wished to imitate other managers primarily because they saw how ﬁnancially beneﬁcial other ﬁrms’ acquisitions were.",
     answer_2:
@@ -2677,15 +3051,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "The author of the passage implies that which of the following is a possible partial explanation for acquisition behavior during the 1970s and 1980s?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 127,
-    question_id: 71,
+    id: "127",
+    question_id: "71",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Caffeine, the stimulant in coffee, has been called “the most widely used psychoactive substance on Earth.” Snyder, Daly, and Bruns have recently proposed that caffeine affects behavior by countering the activity in the human brain of a naturally occurring chemical called adenosine. Adenosine normally depresses neuron ﬁring in many areas of the brain. It apparently does this by inhibiting the release of neurotransmitters, chemicals that carry nerve impulses from one neuron to the next. Like many other agents that affect neuron ﬁring, adenosine must ﬁrst bind to speciﬁc receptors on neuronal membranes. There are at least two classes of these receptors, which have been designated A 1 and A 2 . Snyder et al. propose that caffeine, which is structurally similar to adenosine, is able to bind to both types of receptors, which prevents adenosine from attaching there and allows the neurons to ﬁre more readily than they otherwise would. For many years, caffeine’s effects have been attributed to its inhibition of the production of phosphodiesterase, an enzyme that breaks down the chemical called cyclic AMP. A number of neurotransmitters exert their effects by ﬁrst increasing cyclic AMP concentrations in target neurons. Therefore, prolonged periods at the elevated concentrations, as might be brought about by a phosphodiesterase inhibitor, could lead to a greater amount of neuron ﬁring and, consequently, to behavioral stimulation. But Snyder et al. point out that the caffeine concentrations needed to inhibit the production of phosphodiesterase in the brain are much higher than those that produce stimulation. Moreover, other compounds that block phosphodiesterase’s activity are not stimulants. To buttress their case that caffeine acts instead by preventing adenosine binding, Snyder et al. compared the stimulatory effects of a series of caffeine derivatives with their ability to dislodge adenosine from its receptors in the brains of mice. “In general,” they reported, “the ability of the compounds to compete at the receptors correlates with their ability to stimulate locomotion in the mouse; i.e., the higher their capacity to bind at the receptors, the higher their ability to stimulate locomotion.” Theophylline, a close structural relative of caffeine and the major stimulant in tea, was one of the most effective compounds in both regards. (55) (60) There were some apparent exceptions to the general correlation observed between adenosine- receptor binding and stimulation. One of these was a compound called 3-isobutyl-1-methylxanthine (IBMX), which bound very well but actually depressed mouse locomotion. Snyder et al. suggest that this is not a major stumbling block to their hypothesis. The problem is that the compound has mixed effects in the brain, a not unusual occurrence with psychoactive drugs. Even caffeine, which is generally known only for its stimulatory effects, displays this property, depressing mouse locomotion at very low concentrations and stimulating it at higher ones.",
-    subquestion1: "The primary purpose of the passage is to",
     answer_1:
       "discuss a plan for investigation of a phenomenon that is not yet fully understood",
     answer_2:
@@ -2699,16 +3078,19 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "The primary purpose of the passage is to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 128,
-    question_id: 72,
+    id: "128",
+    question_id: "72",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Caffeine, the stimulant in coffee, has been called “the most widely used psychoactive substance on Earth.” Snyder, Daly, and Bruns have recently proposed that caffeine affects behavior by countering the activity in the human brain of a naturally occurring chemical called adenosine. Adenosine normally depresses neuron ﬁring in many areas of the brain. It apparently does this by inhibiting the release of neurotransmitters, chemicals that carry nerve impulses from one neuron to the next. Like many other agents that affect neuron ﬁring, adenosine must ﬁrst bind to speciﬁc receptors on neuronal membranes. There are at least two classes of these receptors, which have been designated A 1 and A 2 . Snyder et al. propose that caffeine, which is structurally similar to adenosine, is able to bind to both types of receptors, which prevents adenosine from attaching there and allows the neurons to ﬁre more readily than they otherwise would. For many years, caffeine’s effects have been attributed to its inhibition of the production of phosphodiesterase, an enzyme that breaks down the chemical called cyclic AMP. A number of neurotransmitters exert their effects by ﬁrst increasing cyclic AMP concentrations in target neurons. Therefore, prolonged periods at the elevated concentrations, as might be brought about by a phosphodiesterase inhibitor, could lead to a greater amount of neuron ﬁring and, consequently, to behavioral stimulation. But Snyder et al. point out that the caffeine concentrations needed to inhibit the production of phosphodiesterase in the brain are much higher than those that produce stimulation. Moreover, other compounds that block phosphodiesterase’s activity are not stimulants. To buttress their case that caffeine acts instead by preventing adenosine binding, Snyder et al. compared the stimulatory effects of a series of caffeine derivatives with their ability to dislodge adenosine from its receptors in the brains of mice. “In general,” they reported, “the ability of the compounds to compete at the receptors correlates with their ability to stimulate locomotion in the mouse; i.e., the higher their capacity to bind at the receptors, the higher their ability to stimulate locomotion.” Theophylline, a close structural relative of caffeine and the major stimulant in tea, was one of the most effective compounds in both regards. (55) (60) There were some apparent exceptions to the general correlation observed between adenosine- receptor binding and stimulation. One of these was a compound called 3-isobutyl-1-methylxanthine (IBMX), which bound very well but actually depressed mouse locomotion. Snyder et al. suggest that this is not a major stumbling block to their hypothesis. The problem is that the compound has mixed effects in the brain, a not unusual occurrence with psychoactive drugs. Even caffeine, which is generally known only for its stimulatory effects, displays this property, depressing mouse locomotion at very low concentrations and stimulating it at higher ones.",
-    subquestion1:
-      "According to Snyder et al., caffeine differs from adenosine in that caffeine",
     answer_1:
       "stimulates behavior in the mouse and in humans, whereas adenosine stimulates behavior in humans only",
     answer_2:
@@ -2722,16 +3104,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "According to Snyder et al., caffeine differs from adenosine in that caffeine",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 129,
-    question_id: 73,
+    id: "129",
+    question_id: "73",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Caffeine, the stimulant in coffee, has been called “the most widely used psychoactive substance on Earth.” Snyder, Daly, and Bruns have recently proposed that caffeine affects behavior by countering the activity in the human brain of a naturally occurring chemical called adenosine. Adenosine normally depresses neuron ﬁring in many areas of the brain. It apparently does this by inhibiting the release of neurotransmitters, chemicals that carry nerve impulses from one neuron to the next. Like many other agents that affect neuron ﬁring, adenosine must ﬁrst bind to speciﬁc receptors on neuronal membranes. There are at least two classes of these receptors, which have been designated A 1 and A 2 . Snyder et al. propose that caffeine, which is structurally similar to adenosine, is able to bind to both types of receptors, which prevents adenosine from attaching there and allows the neurons to ﬁre more readily than they otherwise would. For many years, caffeine’s effects have been attributed to its inhibition of the production of phosphodiesterase, an enzyme that breaks down the chemical called cyclic AMP. A number of neurotransmitters exert their effects by ﬁrst increasing cyclic AMP concentrations in target neurons. Therefore, prolonged periods at the elevated concentrations, as might be brought about by a phosphodiesterase inhibitor, could lead to a greater amount of neuron ﬁring and, consequently, to behavioral stimulation. But Snyder et al. point out that the caffeine concentrations needed to inhibit the production of phosphodiesterase in the brain are much higher than those that produce stimulation. Moreover, other compounds that block phosphodiesterase’s activity are not stimulants. To buttress their case that caffeine acts instead by preventing adenosine binding, Snyder et al. compared the stimulatory effects of a series of caffeine derivatives with their ability to dislodge adenosine from its receptors in the brains of mice. “In general,” they reported, “the ability of the compounds to compete at the receptors correlates with their ability to stimulate locomotion in the mouse; i.e., the higher their capacity to bind at the receptors, the higher their ability to stimulate locomotion.” Theophylline, a close structural relative of caffeine and the major stimulant in tea, was one of the most effective compounds in both regards. (55) (60) There were some apparent exceptions to the general correlation observed between adenosine- receptor binding and stimulation. One of these was a compound called 3-isobutyl-1-methylxanthine (IBMX), which bound very well but actually depressed mouse locomotion. Snyder et al. suggest that this is not a major stumbling block to their hypothesis. The problem is that the compound has mixed effects in the brain, a not unusual occurrence with psychoactive drugs. Even caffeine, which is generally known only for its stimulatory effects, displays this property, depressing mouse locomotion at very low concentrations and stimulating it at higher ones.",
-    subquestion1:
-      "In response to experimental results concerning IBMX, Snyder et al. contended that it is not uncommon for psychoactive drugs to have",
     answer_1: "mixed effects in the brain",
     answer_2: "inhibitory effects on enzymes in the brain",
     answer_3: "close structural relationships with caffeine",
@@ -2740,16 +3126,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "In response to experimental results concerning IBMX, Snyder et al. contended that it is not uncommon for psychoactive drugs to have",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 130,
-    question_id: 74,
+    id: "130",
+    question_id: "74",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Caffeine, the stimulant in coffee, has been called “the most widely used psychoactive substance on Earth.” Snyder, Daly, and Bruns have recently proposed that caffeine affects behavior by countering the activity in the human brain of a naturally occurring chemical called adenosine. Adenosine normally depresses neuron ﬁring in many areas of the brain. It apparently does this by inhibiting the release of neurotransmitters, chemicals that carry nerve impulses from one neuron to the next. Like many other agents that affect neuron ﬁring, adenosine must ﬁrst bind to speciﬁc receptors on neuronal membranes. There are at least two classes of these receptors, which have been designated A 1 and A 2 . Snyder et al. propose that caffeine, which is structurally similar to adenosine, is able to bind to both types of receptors, which prevents adenosine from attaching there and allows the neurons to ﬁre more readily than they otherwise would. For many years, caffeine’s effects have been attributed to its inhibition of the production of phosphodiesterase, an enzyme that breaks down the chemical called cyclic AMP. A number of neurotransmitters exert their effects by ﬁrst increasing cyclic AMP concentrations in target neurons. Therefore, prolonged periods at the elevated concentrations, as might be brought about by a phosphodiesterase inhibitor, could lead to a greater amount of neuron ﬁring and, consequently, to behavioral stimulation. But Snyder et al. point out that the caffeine concentrations needed to inhibit the production of phosphodiesterase in the brain are much higher than those that produce stimulation. Moreover, other compounds that block phosphodiesterase’s activity are not stimulants. To buttress their case that caffeine acts instead by preventing adenosine binding, Snyder et al. compared the stimulatory effects of a series of caffeine derivatives with their ability to dislodge adenosine from its receptors in the brains of mice. “In general,” they reported, “the ability of the compounds to compete at the receptors correlates with their ability to stimulate locomotion in the mouse; i.e., the higher their capacity to bind at the receptors, the higher their ability to stimulate locomotion.” Theophylline, a close structural relative of caffeine and the major stimulant in tea, was one of the most effective compounds in both regards. (55) (60) There were some apparent exceptions to the general correlation observed between adenosine- receptor binding and stimulation. One of these was a compound called 3-isobutyl-1-methylxanthine (IBMX), which bound very well but actually depressed mouse locomotion. Snyder et al. suggest that this is not a major stumbling block to their hypothesis. The problem is that the compound has mixed effects in the brain, a not unusual occurrence with psychoactive drugs. Even caffeine, which is generally known only for its stimulatory effects, displays this property, depressing mouse locomotion at very low concentrations and stimulating it at higher ones.",
-    subquestion1:
-      "According to Snyder et al., all of the following compounds can bind to speciﬁc receptors in the brain EXCEPT",
     answer_1: "IBMX",
     answer_2: "caffeine",
     answer_3: "adenosine",
@@ -2758,16 +3148,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "According to Snyder et al., all of the following compounds can bind to speciﬁc receptors in the brain EXCEPT",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 131,
-    question_id: 75,
+    id: "131",
+    question_id: "75",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Caffeine, the stimulant in coffee, has been called “the most widely used psychoactive substance on Earth.” Snyder, Daly, and Bruns have recently proposed that caffeine affects behavior by countering the activity in the human brain of a naturally occurring chemical called adenosine. Adenosine normally depresses neuron ﬁring in many areas of the brain. It apparently does this by inhibiting the release of neurotransmitters, chemicals that carry nerve impulses from one neuron to the next. Like many other agents that affect neuron ﬁring, adenosine must ﬁrst bind to speciﬁc receptors on neuronal membranes. There are at least two classes of these receptors, which have been designated A 1 and A 2 . Snyder et al. propose that caffeine, which is structurally similar to adenosine, is able to bind to both types of receptors, which prevents adenosine from attaching there and allows the neurons to ﬁre more readily than they otherwise would. For many years, caffeine’s effects have been attributed to its inhibition of the production of phosphodiesterase, an enzyme that breaks down the chemical called cyclic AMP. A number of neurotransmitters exert their effects by ﬁrst increasing cyclic AMP concentrations in target neurons. Therefore, prolonged periods at the elevated concentrations, as might be brought about by a phosphodiesterase inhibitor, could lead to a greater amount of neuron ﬁring and, consequently, to behavioral stimulation. But Snyder et al. point out that the caffeine concentrations needed to inhibit the production of phosphodiesterase in the brain are much higher than those that produce stimulation. Moreover, other compounds that block phosphodiesterase’s activity are not stimulants. To buttress their case that caffeine acts instead by preventing adenosine binding, Snyder et al. compared the stimulatory effects of a series of caffeine derivatives with their ability to dislodge adenosine from its receptors in the brains of mice. “In general,” they reported, “the ability of the compounds to compete at the receptors correlates with their ability to stimulate locomotion in the mouse; i.e., the higher their capacity to bind at the receptors, the higher their ability to stimulate locomotion.” Theophylline, a close structural relative of caffeine and the major stimulant in tea, was one of the most effective compounds in both regards. (55) (60) There were some apparent exceptions to the general correlation observed between adenosine- receptor binding and stimulation. One of these was a compound called 3-isobutyl-1-methylxanthine (IBMX), which bound very well but actually depressed mouse locomotion. Snyder et al. suggest that this is not a major stumbling block to their hypothesis. The problem is that the compound has mixed effects in the brain, a not unusual occurrence with psychoactive drugs. Even caffeine, which is generally known only for its stimulatory effects, displays this property, depressing mouse locomotion at very low concentrations and stimulating it at higher ones.",
-    subquestion1:
-      "Snyder et al. suggest that caffeine’s ability to bind to A 1 and A 2 receptors can be at least partially attributed to which of the following?",
     answer_1:
       "The chemical relationship between caffeine and phosphodiesterase",
     answer_2: "The structural relationship between caffeine and adenosine",
@@ -2778,16 +3172,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "Snyder et al. suggest that caffeine’s ability to bind to A 1 and A 2 receptors can be at least partially attributed to which of the following?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 132,
-    question_id: 76,
+    id: "132",
+    question_id: "76",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Caffeine, the stimulant in coffee, has been called “the most widely used psychoactive substance on Earth.” Snyder, Daly, and Bruns have recently proposed that caffeine affects behavior by countering the activity in the human brain of a naturally occurring chemical called adenosine. Adenosine normally depresses neuron ﬁring in many areas of the brain. It apparently does this by inhibiting the release of neurotransmitters, chemicals that carry nerve impulses from one neuron to the next. Like many other agents that affect neuron ﬁring, adenosine must ﬁrst bind to speciﬁc receptors on neuronal membranes. There are at least two classes of these receptors, which have been designated A 1 and A 2 . Snyder et al. propose that caffeine, which is structurally similar to adenosine, is able to bind to both types of receptors, which prevents adenosine from attaching there and allows the neurons to ﬁre more readily than they otherwise would. For many years, caffeine’s effects have been attributed to its inhibition of the production of phosphodiesterase, an enzyme that breaks down the chemical called cyclic AMP. A number of neurotransmitters exert their effects by ﬁrst increasing cyclic AMP concentrations in target neurons. Therefore, prolonged periods at the elevated concentrations, as might be brought about by a phosphodiesterase inhibitor, could lead to a greater amount of neuron ﬁring and, consequently, to behavioral stimulation. But Snyder et al. point out that the caffeine concentrations needed to inhibit the production of phosphodiesterase in the brain are much higher than those that produce stimulation. Moreover, other compounds that block phosphodiesterase’s activity are not stimulants. To buttress their case that caffeine acts instead by preventing adenosine binding, Snyder et al. compared the stimulatory effects of a series of caffeine derivatives with their ability to dislodge adenosine from its receptors in the brains of mice. “In general,” they reported, “the ability of the compounds to compete at the receptors correlates with their ability to stimulate locomotion in the mouse; i.e., the higher their capacity to bind at the receptors, the higher their ability to stimulate locomotion.” Theophylline, a close structural relative of caffeine and the major stimulant in tea, was one of the most effective compounds in both regards. (55) (60) There were some apparent exceptions to the general correlation observed between adenosine- receptor binding and stimulation. One of these was a compound called 3-isobutyl-1-methylxanthine (IBMX), which bound very well but actually depressed mouse locomotion. Snyder et al. suggest that this is not a major stumbling block to their hypothesis. The problem is that the compound has mixed effects in the brain, a not unusual occurrence with psychoactive drugs. Even caffeine, which is generally known only for its stimulatory effects, displays this property, depressing mouse locomotion at very low concentrations and stimulating it at higher ones.",
-    subquestion1:
-      "The author quotes Snyder et al. in lines 43–48 most probably in order to",
     answer_1: "reveal some of the assumptions underlying their theory",
     answer_2: "summarize a major ﬁnding of their experiments",
     answer_3: "point out that their experiments were limited to the mouse",
@@ -2797,16 +3195,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "The author quotes Snyder et al. in lines 43–48 most probably in order to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 133,
-    question_id: 77,
+    id: "133",
+    question_id: "77",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Historians of women’s labor in the United States at ﬁrst largely disregarded the story of female service workers—women earning wages in occupations such as salesclerk, domestic servant, and ofﬁce secretary. These historians focused instead on factory work, primarily because it seemed so different from traditional, unpaid “women’s work” in the home, and because the underlying economic forces of industrialism were presumed to be gender-blind and hence emancipatory in effect. Unfortunately, emancipation has been less profound than expected, for not even industrial wage labor has escaped continued sex segregation in the workplace. To explain this unﬁnished revolution in the status of women, historians have recently begun to emphasize the way a prevailing deﬁnition of femininity often determines the kinds of work allocated to women, even when such allocation is inappropriate to new conditions. For instance, early textile-mill entrepreneurs, in justifying women’s employment in wage labor, made much of the assumption that women were by nature skillful at detailed tasks and patient in carrying out repetitive chores; the mill owners thus imported into the new industrial order hoary stereotypes associated with the homemaking activities they presumed to have been the purview of women. Because women accepted the more unattractive new industrial tasks more readily than did men, such jobs came to be regarded as female jobs. And employers, who assumed that women’s “real” aspirations were for marriage and family life, declined to pay women wages commensurate with those of men. Thus many lower-skilled, lower-paid, less secure jobs came to be perceived as “female.” More remarkable than the original has been the persistence of such sex segregation in twentieth- century industry. Once an occupation came to be perceived as “female,” employers showed surprisingly little interest in changing that perception, even when higher proﬁts beckoned. And despite the urgent need of the United States during the Second World War to mobilize its human resources fully, job segregation by sex characterized even the most important war industries. Moreover, once the war ended, employers quickly returned to men most of the “male” jobs that women had been permitted to master.",
-    subquestion1:
-      "According to the passage, job segregation by sex in the United States was",
     answer_1:
       "greatly diminished by labor mobilization during the Second World War",
     answer_2:
@@ -2818,16 +3220,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "According to the passage, job segregation by sex in the United States was",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 134,
-    question_id: 78,
+    id: "134",
+    question_id: "78",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Historians of women’s labor in the United States at ﬁrst largely disregarded the story of female service workers—women earning wages in occupations such as salesclerk, domestic servant, and ofﬁce secretary. These historians focused instead on factory work, primarily because it seemed so different from traditional, unpaid “women’s work” in the home, and because the underlying economic forces of industrialism were presumed to be gender-blind and hence emancipatory in effect. Unfortunately, emancipation has been less profound than expected, for not even industrial wage labor has escaped continued sex segregation in the workplace. To explain this unﬁnished revolution in the status of women, historians have recently begun to emphasize the way a prevailing deﬁnition of femininity often determines the kinds of work allocated to women, even when such allocation is inappropriate to new conditions. For instance, early textile-mill entrepreneurs, in justifying women’s employment in wage labor, made much of the assumption that women were by nature skillful at detailed tasks and patient in carrying out repetitive chores; the mill owners thus imported into the new industrial order hoary stereotypes associated with the homemaking activities they presumed to have been the purview of women. Because women accepted the more unattractive new industrial tasks more readily than did men, such jobs came to be regarded as female jobs. And employers, who assumed that women’s “real” aspirations were for marriage and family life, declined to pay women wages commensurate with those of men. Thus many lower-skilled, lower-paid, less secure jobs came to be perceived as “female.” More remarkable than the original has been the persistence of such sex segregation in twentieth- century industry. Once an occupation came to be perceived as “female,” employers showed surprisingly little interest in changing that perception, even when higher proﬁts beckoned. And despite the urgent need of the United States during the Second World War to mobilize its human resources fully, job segregation by sex characterized even the most important war industries. Moreover, once the war ended, employers quickly returned to men most of the “male” jobs that women had been permitted to master.",
-    subquestion1:
-      "According to the passage, historians of women’s labor focused on factory work as a more promising area of research than service-sector work because factory work",
     answer_1: "involved the payment of higher wages",
     answer_2: "required skill in detailed tasks",
     answer_3: "was assumed to be less characterized by sex segregation",
@@ -2836,16 +3242,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "According to the passage, historians of women’s labor focused on factory work as a more promising area of research than service-sector work because factory work",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 135,
-    question_id: 79,
+    id: "135",
+    question_id: "79",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Historians of women’s labor in the United States at ﬁrst largely disregarded the story of female service workers—women earning wages in occupations such as salesclerk, domestic servant, and ofﬁce secretary. These historians focused instead on factory work, primarily because it seemed so different from traditional, unpaid “women’s work” in the home, and because the underlying economic forces of industrialism were presumed to be gender-blind and hence emancipatory in effect. Unfortunately, emancipation has been less profound than expected, for not even industrial wage labor has escaped continued sex segregation in the workplace. To explain this unﬁnished revolution in the status of women, historians have recently begun to emphasize the way a prevailing deﬁnition of femininity often determines the kinds of work allocated to women, even when such allocation is inappropriate to new conditions. For instance, early textile-mill entrepreneurs, in justifying women’s employment in wage labor, made much of the assumption that women were by nature skillful at detailed tasks and patient in carrying out repetitive chores; the mill owners thus imported into the new industrial order hoary stereotypes associated with the homemaking activities they presumed to have been the purview of women. Because women accepted the more unattractive new industrial tasks more readily than did men, such jobs came to be regarded as female jobs. And employers, who assumed that women’s “real” aspirations were for marriage and family life, declined to pay women wages commensurate with those of men. Thus many lower-skilled, lower-paid, less secure jobs came to be perceived as “female.” More remarkable than the original has been the persistence of such sex segregation in twentieth- century industry. Once an occupation came to be perceived as “female,” employers showed surprisingly little interest in changing that perception, even when higher proﬁts beckoned. And despite the urgent need of the United States during the Second World War to mobilize its human resources fully, job segregation by sex characterized even the most important war industries. Moreover, once the war ended, employers quickly returned to men most of the “male” jobs that women had been permitted to master.",
-    subquestion1:
-      "It can be inferred from the passage that early historians of women’s labor in the United States paid little attention to women’s employment in the service sector of the economy because",
     answer_1:
       "the extreme variety of these occupations made it very difﬁcult to assemble meaningful statistics about them",
     answer_2:
@@ -2859,16 +3269,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "It can be inferred from the passage that early historians of women’s labor in the United States paid little attention to women’s employment in the service sector of the economy because",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 136,
-    question_id: 80,
+    id: "136",
+    question_id: "80",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Historians of women’s labor in the United States at ﬁrst largely disregarded the story of female service workers—women earning wages in occupations such as salesclerk, domestic servant, and ofﬁce secretary. These historians focused instead on factory work, primarily because it seemed so different from traditional, unpaid “women’s work” in the home, and because the underlying economic forces of industrialism were presumed to be gender-blind and hence emancipatory in effect. Unfortunately, emancipation has been less profound than expected, for not even industrial wage labor has escaped continued sex segregation in the workplace. To explain this unﬁnished revolution in the status of women, historians have recently begun to emphasize the way a prevailing deﬁnition of femininity often determines the kinds of work allocated to women, even when such allocation is inappropriate to new conditions. For instance, early textile-mill entrepreneurs, in justifying women’s employment in wage labor, made much of the assumption that women were by nature skillful at detailed tasks and patient in carrying out repetitive chores; the mill owners thus imported into the new industrial order hoary stereotypes associated with the homemaking activities they presumed to have been the purview of women. Because women accepted the more unattractive new industrial tasks more readily than did men, such jobs came to be regarded as female jobs. And employers, who assumed that women’s “real” aspirations were for marriage and family life, declined to pay women wages commensurate with those of men. Thus many lower-skilled, lower-paid, less secure jobs came to be perceived as “female.” More remarkable than the original has been the persistence of such sex segregation in twentieth- century industry. Once an occupation came to be perceived as “female,” employers showed surprisingly little interest in changing that perception, even when higher proﬁts beckoned. And despite the urgent need of the United States during the Second World War to mobilize its human resources fully, job segregation by sex characterized even the most important war industries. Moreover, once the war ended, employers quickly returned to men most of the “male” jobs that women had been permitted to master.",
-    subquestion1:
-      "The passage supports which of the following statements about the early mill owners mentioned in the second paragraph?",
     answer_1:
       "They hoped that by creating relatively unattractive “female” jobs they would discourage women from losing interest in marriage and family life.",
     answer_2:
@@ -2882,16 +3296,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "The passage supports which of the following statements about the early mill owners mentioned in the second paragraph?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 137,
-    question_id: 81,
+    id: "137",
+    question_id: "81",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Historians of women’s labor in the United States at ﬁrst largely disregarded the story of female service workers—women earning wages in occupations such as salesclerk, domestic servant, and ofﬁce secretary. These historians focused instead on factory work, primarily because it seemed so different from traditional, unpaid “women’s work” in the home, and because the underlying economic forces of industrialism were presumed to be gender-blind and hence emancipatory in effect. Unfortunately, emancipation has been less profound than expected, for not even industrial wage labor has escaped continued sex segregation in the workplace. To explain this unﬁnished revolution in the status of women, historians have recently begun to emphasize the way a prevailing deﬁnition of femininity often determines the kinds of work allocated to women, even when such allocation is inappropriate to new conditions. For instance, early textile-mill entrepreneurs, in justifying women’s employment in wage labor, made much of the assumption that women were by nature skillful at detailed tasks and patient in carrying out repetitive chores; the mill owners thus imported into the new industrial order hoary stereotypes associated with the homemaking activities they presumed to have been the purview of women. Because women accepted the more unattractive new industrial tasks more readily than did men, such jobs came to be regarded as female jobs. And employers, who assumed that women’s “real” aspirations were for marriage and family life, declined to pay women wages commensurate with those of men. Thus many lower-skilled, lower-paid, less secure jobs came to be perceived as “female.” More remarkable than the original has been the persistence of such sex segregation in twentieth- century industry. Once an occupation came to be perceived as “female,” employers showed surprisingly little interest in changing that perception, even when higher proﬁts beckoned. And despite the urgent need of the United States during the Second World War to mobilize its human resources fully, job segregation by sex characterized even the most important war industries. Moreover, once the war ended, employers quickly returned to men most of the “male” jobs that women had been permitted to master.",
-    subquestion1:
-      "It can be inferred from the passage that the “unﬁnished revolution” the author mentions in line 15 refers to the",
     answer_1: "entry of women into the industrial labor market",
     answer_2:
       "recognition that work done by women as homemakers should be compensated at rates comparable to those prevailing in the service sector of the economy",
@@ -2903,16 +3321,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "It can be inferred from the passage that the “unﬁnished revolution” the author mentions in line 15 refers to the",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 138,
-    question_id: 82,
+    id: "138",
+    question_id: "82",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Historians of women’s labor in the United States at ﬁrst largely disregarded the story of female service workers—women earning wages in occupations such as salesclerk, domestic servant, and ofﬁce secretary. These historians focused instead on factory work, primarily because it seemed so different from traditional, unpaid “women’s work” in the home, and because the underlying economic forces of industrialism were presumed to be gender-blind and hence emancipatory in effect. Unfortunately, emancipation has been less profound than expected, for not even industrial wage labor has escaped continued sex segregation in the workplace. To explain this unﬁnished revolution in the status of women, historians have recently begun to emphasize the way a prevailing deﬁnition of femininity often determines the kinds of work allocated to women, even when such allocation is inappropriate to new conditions. For instance, early textile-mill entrepreneurs, in justifying women’s employment in wage labor, made much of the assumption that women were by nature skillful at detailed tasks and patient in carrying out repetitive chores; the mill owners thus imported into the new industrial order hoary stereotypes associated with the homemaking activities they presumed to have been the purview of women. Because women accepted the more unattractive new industrial tasks more readily than did men, such jobs came to be regarded as female jobs. And employers, who assumed that women’s “real” aspirations were for marriage and family life, declined to pay women wages commensurate with those of men. Thus many lower-skilled, lower-paid, less secure jobs came to be perceived as “female.” More remarkable than the original has been the persistence of such sex segregation in twentieth- century industry. Once an occupation came to be perceived as “female,” employers showed surprisingly little interest in changing that perception, even when higher proﬁts beckoned. And despite the urgent need of the United States during the Second World War to mobilize its human resources fully, job segregation by sex characterized even the most important war industries. Moreover, once the war ended, employers quickly returned to men most of the “male” jobs that women had been permitted to master.",
-    subquestion1:
-      "The passage supports which of the following statements about hiring policies in the United States?",
     answer_1:
       "After a crisis many formerly “male” jobs are reclassiﬁed as “female” jobs.",
     answer_2:
@@ -2926,16 +3348,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "The passage supports which of the following statements about hiring policies in the United States?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 139,
-    question_id: 83,
+    id: "139",
+    question_id: "83",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Historians of women’s labor in the United States at ﬁrst largely disregarded the story of female service workers—women earning wages in occupations such as salesclerk, domestic servant, and ofﬁce secretary. These historians focused instead on factory work, primarily because it seemed so different from traditional, unpaid “women’s work” in the home, and because the underlying economic forces of industrialism were presumed to be gender-blind and hence emancipatory in effect. Unfortunately, emancipation has been less profound than expected, for not even industrial wage labor has escaped continued sex segregation in the workplace. To explain this unﬁnished revolution in the status of women, historians have recently begun to emphasize the way a prevailing deﬁnition of femininity often determines the kinds of work allocated to women, even when such allocation is inappropriate to new conditions. For instance, early textile-mill entrepreneurs, in justifying women’s employment in wage labor, made much of the assumption that women were by nature skillful at detailed tasks and patient in carrying out repetitive chores; the mill owners thus imported into the new industrial order hoary stereotypes associated with the homemaking activities they presumed to have been the purview of women. Because women accepted the more unattractive new industrial tasks more readily than did men, such jobs came to be regarded as female jobs. And employers, who assumed that women’s “real” aspirations were for marriage and family life, declined to pay women wages commensurate with those of men. Thus many lower-skilled, lower-paid, less secure jobs came to be perceived as “female.” More remarkable than the original has been the persistence of such sex segregation in twentieth- century industry. Once an occupation came to be perceived as “female,” employers showed surprisingly little interest in changing that perception, even when higher proﬁts beckoned. And despite the urgent need of the United States during the Second World War to mobilize its human resources fully, job segregation by sex characterized even the most important war industries. Moreover, once the war ended, employers quickly returned to men most of the “male” jobs that women had been permitted to master.",
-    subquestion1:
-      "Which of the following words best expresses the opinion of the author of the passage concerning the notion that women are more skillful than men in carrying out detailed tasks?",
     answer_1: "“patient” (line 24)",
     answer_2: "“repetitive” (line 24)",
     answer_3: "“hoary” (line 26)",
@@ -2944,16 +3370,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "Which of the following words best expresses the opinion of the author of the passage concerning the notion that women are more skillful than men in carrying out detailed tasks?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 140,
-    question_id: 84,
+    id: "140",
+    question_id: "84",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Historians of women’s labor in the United States at ﬁrst largely disregarded the story of female service workers—women earning wages in occupations such as salesclerk, domestic servant, and ofﬁce secretary. These historians focused instead on factory work, primarily because it seemed so different from traditional, unpaid “women’s work” in the home, and because the underlying economic forces of industrialism were presumed to be gender-blind and hence emancipatory in effect. Unfortunately, emancipation has been less profound than expected, for not even industrial wage labor has escaped continued sex segregation in the workplace. To explain this unﬁnished revolution in the status of women, historians have recently begun to emphasize the way a prevailing deﬁnition of femininity often determines the kinds of work allocated to women, even when such allocation is inappropriate to new conditions. For instance, early textile-mill entrepreneurs, in justifying women’s employment in wage labor, made much of the assumption that women were by nature skillful at detailed tasks and patient in carrying out repetitive chores; the mill owners thus imported into the new industrial order hoary stereotypes associated with the homemaking activities they presumed to have been the purview of women. Because women accepted the more unattractive new industrial tasks more readily than did men, such jobs came to be regarded as female jobs. And employers, who assumed that women’s “real” aspirations were for marriage and family life, declined to pay women wages commensurate with those of men. Thus many lower-skilled, lower-paid, less secure jobs came to be perceived as “female.” More remarkable than the original has been the persistence of such sex segregation in twentieth- century industry. Once an occupation came to be perceived as “female,” employers showed surprisingly little interest in changing that perception, even when higher proﬁts beckoned. And despite the urgent need of the United States during the Second World War to mobilize its human resources fully, job segregation by sex characterized even the most important war industries. Moreover, once the war ended, employers quickly returned to men most of the “male” jobs that women had been permitted to master.",
-    subquestion1:
-      "Which of the following best describes the relationship of the ﬁnal paragraph to the passage as a whole?",
     answer_1:
       "The central idea is reinforced by the citation of evidence drawn from twentieth-century history.",
     answer_2:
@@ -2967,16 +3397,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "Which of the following best describes the relationship of the ﬁnal paragraph to the passage as a whole?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 141,
-    question_id: 85,
+    id: "141",
+    question_id: "85",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Two modes of argumentation have been used on behalf of women’s emancipation in Western societies. Arguments in what could be called the “relational” feminist tradition maintain the doctrine of “equality in difference,” or equity as distinct from equality. They posit that biological distinctions between the sexes result in a necessary sexual division of labor in the family and throughout society and that women’s procreative labor is currently undervalued by society, to the disadvantage of women. By contrast, the individualist feminist tradition emphasizes individual human rights and celebrates women’s quest for personal autonomy, while downplaying the importance of gender roles and minimizing discussion of childbearing and its attendant responsibilities. Before the late nineteenth century, these views coexisted within the feminist movement, often within the writings of the same individual. Between 1890 and 1920, however, relational feminism, which had been the dominant strain in feminist thought, and which still predominates among European and non-Western feminists, lost ground in England and the United States. Because the concept of individual rights was already well established in the Anglo- Saxon legal and political tradition, individualist feminism came to predominate in English-speaking countries. At the same time, the goals of the two approaches began to seem increasingly irreconcilable. Individualist feminists began to advocate a totally gender-blind system with equal rights for all. Relational feminists, while agreeing that equal educational and economic opportunities outside the home should be available for all women, continued to emphasize women’s special contributions to society as homemakers and mothers; they demanded special treatment for women, including protective legislation for women workers, state-sponsored maternity beneﬁts, and paid compensation for housework. Relational arguments have a major pitfall: because they underline women’s physiological and psychological distinctiveness, they are often appropriated by political adversaries and used to endorse male privilege. But the individualist approach, by attacking gender roles, denying the signiﬁcance of physiological difference, and condemning existing familial institutions as hopelessly patriarchal, has often simply treated as irrelevant the family roles important to many (55) women. If the individualist framework, with its claim for women’s autonomy, could be harmonized with the family-oriented concerns of relational feminists, a more fruitful model for contemporary feminist politics could emerge. Questions 85–90 refer to the passage above.",
-    subquestion1:
-      "The author of the passage alludes to the well- established nature of the concept of individual rights in the Anglo-Saxon legal and political tradition in order to",
     answer_1:
       "illustrate the inﬂuence of individualist feminist thought on more general intellectual trends in English history",
     answer_2:
@@ -2990,16 +3424,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "The author of the passage alludes to the well- established nature of the concept of individual rights in the Anglo-Saxon legal and political tradition in order to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 142,
-    question_id: 86,
+    id: "142",
+    question_id: "86",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Two modes of argumentation have been used on behalf of women’s emancipation in Western societies. Arguments in what could be called the “relational” feminist tradition maintain the doctrine of “equality in difference,” or equity as distinct from equality. They posit that biological distinctions between the sexes result in a necessary sexual division of labor in the family and throughout society and that women’s procreative labor is currently undervalued by society, to the disadvantage of women. By contrast, the individualist feminist tradition emphasizes individual human rights and celebrates women’s quest for personal autonomy, while downplaying the importance of gender roles and minimizing discussion of childbearing and its attendant responsibilities. Before the late nineteenth century, these views coexisted within the feminist movement, often within the writings of the same individual. Between 1890 and 1920, however, relational feminism, which had been the dominant strain in feminist thought, and which still predominates among European and non-Western feminists, lost ground in England and the United States. Because the concept of individual rights was already well established in the Anglo- Saxon legal and political tradition, individualist feminism came to predominate in English-speaking countries. At the same time, the goals of the two approaches began to seem increasingly irreconcilable. Individualist feminists began to advocate a totally gender-blind system with equal rights for all. Relational feminists, while agreeing that equal educational and economic opportunities outside the home should be available for all women, continued to emphasize women’s special contributions to society as homemakers and mothers; they demanded special treatment for women, including protective legislation for women workers, state-sponsored maternity beneﬁts, and paid compensation for housework. Relational arguments have a major pitfall: because they underline women’s physiological and psychological distinctiveness, they are often appropriated by political adversaries and used to endorse male privilege. But the individualist approach, by attacking gender roles, denying the signiﬁcance of physiological difference, and condemning existing familial institutions as hopelessly patriarchal, has often simply treated as irrelevant the family roles important to many (55) women. If the individualist framework, with its claim for women’s autonomy, could be harmonized with the family-oriented concerns of relational feminists, a more fruitful model for contemporary feminist politics could emerge. Questions 85–90 refer to the passage above.",
-    subquestion1:
-      "The passage suggests that the author of the passage believes which of the following?",
     answer_1:
       "The predominance of individualist feminism in English-speaking countries is a historical phenomenon, the causes of which have not yet been investigated.",
     answer_2:
@@ -3013,16 +3451,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "The passage suggests that the author of the passage believes which of the following?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 143,
-    question_id: 87,
+    id: "143",
+    question_id: "87",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Two modes of argumentation have been used on behalf of women’s emancipation in Western societies. Arguments in what could be called the “relational” feminist tradition maintain the doctrine of “equality in difference,” or equity as distinct from equality. They posit that biological distinctions between the sexes result in a necessary sexual division of labor in the family and throughout society and that women’s procreative labor is currently undervalued by society, to the disadvantage of women. By contrast, the individualist feminist tradition emphasizes individual human rights and celebrates women’s quest for personal autonomy, while downplaying the importance of gender roles and minimizing discussion of childbearing and its attendant responsibilities. Before the late nineteenth century, these views coexisted within the feminist movement, often within the writings of the same individual. Between 1890 and 1920, however, relational feminism, which had been the dominant strain in feminist thought, and which still predominates among European and non-Western feminists, lost ground in England and the United States. Because the concept of individual rights was already well established in the Anglo- Saxon legal and political tradition, individualist feminism came to predominate in English-speaking countries. At the same time, the goals of the two approaches began to seem increasingly irreconcilable. Individualist feminists began to advocate a totally gender-blind system with equal rights for all. Relational feminists, while agreeing that equal educational and economic opportunities outside the home should be available for all women, continued to emphasize women’s special contributions to society as homemakers and mothers; they demanded special treatment for women, including protective legislation for women workers, state-sponsored maternity beneﬁts, and paid compensation for housework. Relational arguments have a major pitfall: because they underline women’s physiological and psychological distinctiveness, they are often appropriated by political adversaries and used to endorse male privilege. But the individualist approach, by attacking gender roles, denying the signiﬁcance of physiological difference, and condemning existing familial institutions as hopelessly patriarchal, has often simply treated as irrelevant the family roles important to many (55) women. If the individualist framework, with its claim for women’s autonomy, could be harmonized with the family-oriented concerns of relational feminists, a more fruitful model for contemporary feminist politics could emerge. Questions 85–90 refer to the passage above.",
-    subquestion1:
-      "It can be inferred from the passage that the individualist feminist tradition denies the validity of which of the following causal statements?",
     answer_1:
       "A division of labor in a social group can result in increased efﬁciency with regard to the performance of group tasks.",
     answer_2:
@@ -3036,16 +3478,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "It can be inferred from the passage that the individualist feminist tradition denies the validity of which of the following causal statements?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 144,
-    question_id: 88,
+    id: "144",
+    question_id: "88",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Two modes of argumentation have been used on behalf of women’s emancipation in Western societies. Arguments in what could be called the “relational” feminist tradition maintain the doctrine of “equality in difference,” or equity as distinct from equality. They posit that biological distinctions between the sexes result in a necessary sexual division of labor in the family and throughout society and that women’s procreative labor is currently undervalued by society, to the disadvantage of women. By contrast, the individualist feminist tradition emphasizes individual human rights and celebrates women’s quest for personal autonomy, while downplaying the importance of gender roles and minimizing discussion of childbearing and its attendant responsibilities. Before the late nineteenth century, these views coexisted within the feminist movement, often within the writings of the same individual. Between 1890 and 1920, however, relational feminism, which had been the dominant strain in feminist thought, and which still predominates among European and non-Western feminists, lost ground in England and the United States. Because the concept of individual rights was already well established in the Anglo- Saxon legal and political tradition, individualist feminism came to predominate in English-speaking countries. At the same time, the goals of the two approaches began to seem increasingly irreconcilable. Individualist feminists began to advocate a totally gender-blind system with equal rights for all. Relational feminists, while agreeing that equal educational and economic opportunities outside the home should be available for all women, continued to emphasize women’s special contributions to society as homemakers and mothers; they demanded special treatment for women, including protective legislation for women workers, state-sponsored maternity beneﬁts, and paid compensation for housework. Relational arguments have a major pitfall: because they underline women’s physiological and psychological distinctiveness, they are often appropriated by political adversaries and used to endorse male privilege. But the individualist approach, by attacking gender roles, denying the signiﬁcance of physiological difference, and condemning existing familial institutions as hopelessly patriarchal, has often simply treated as irrelevant the family roles important to many (55) women. If the individualist framework, with its claim for women’s autonomy, could be harmonized with the family-oriented concerns of relational feminists, a more fruitful model for contemporary feminist politics could emerge. Questions 85–90 refer to the passage above.",
-    subquestion1:
-      "According to the passage, relational feminists and individualist feminists agree that",
     answer_1:
       "individual human rights take precedence over most other social claims",
     answer_2:
@@ -3059,16 +3505,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "According to the passage, relational feminists and individualist feminists agree that",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 145,
-    question_id: 89,
+    id: "145",
+    question_id: "89",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Two modes of argumentation have been used on behalf of women’s emancipation in Western societies. Arguments in what could be called the “relational” feminist tradition maintain the doctrine of “equality in difference,” or equity as distinct from equality. They posit that biological distinctions between the sexes result in a necessary sexual division of labor in the family and throughout society and that women’s procreative labor is currently undervalued by society, to the disadvantage of women. By contrast, the individualist feminist tradition emphasizes individual human rights and celebrates women’s quest for personal autonomy, while downplaying the importance of gender roles and minimizing discussion of childbearing and its attendant responsibilities. Before the late nineteenth century, these views coexisted within the feminist movement, often within the writings of the same individual. Between 1890 and 1920, however, relational feminism, which had been the dominant strain in feminist thought, and which still predominates among European and non-Western feminists, lost ground in England and the United States. Because the concept of individual rights was already well established in the Anglo- Saxon legal and political tradition, individualist feminism came to predominate in English-speaking countries. At the same time, the goals of the two approaches began to seem increasingly irreconcilable. Individualist feminists began to advocate a totally gender-blind system with equal rights for all. Relational feminists, while agreeing that equal educational and economic opportunities outside the home should be available for all women, continued to emphasize women’s special contributions to society as homemakers and mothers; they demanded special treatment for women, including protective legislation for women workers, state-sponsored maternity beneﬁts, and paid compensation for housework. Relational arguments have a major pitfall: because they underline women’s physiological and psychological distinctiveness, they are often appropriated by political adversaries and used to endorse male privilege. But the individualist approach, by attacking gender roles, denying the signiﬁcance of physiological difference, and condemning existing familial institutions as hopelessly patriarchal, has often simply treated as irrelevant the family roles important to many (55) women. If the individualist framework, with its claim for women’s autonomy, could be harmonized with the family-oriented concerns of relational feminists, a more fruitful model for contemporary feminist politics could emerge. Questions 85–90 refer to the passage above.",
-    subquestion1:
-      "According to the author, which of the following was true of feminist thought in Western societies before 1890?",
     answer_1:
       "Individualist feminist arguments were not found in the thought or writing of non-English-speaking feminists.",
     answer_2:
@@ -3082,16 +3532,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "According to the author, which of the following was true of feminist thought in Western societies before 1890?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 146,
-    question_id: 90,
+    id: "146",
+    question_id: "90",
     main_question_stem:
       "(5) (10) (15) (20) (25) (30) (35) (40) (45) (50) Two modes of argumentation have been used on behalf of women’s emancipation in Western societies. Arguments in what could be called the “relational” feminist tradition maintain the doctrine of “equality in difference,” or equity as distinct from equality. They posit that biological distinctions between the sexes result in a necessary sexual division of labor in the family and throughout society and that women’s procreative labor is currently undervalued by society, to the disadvantage of women. By contrast, the individualist feminist tradition emphasizes individual human rights and celebrates women’s quest for personal autonomy, while downplaying the importance of gender roles and minimizing discussion of childbearing and its attendant responsibilities. Before the late nineteenth century, these views coexisted within the feminist movement, often within the writings of the same individual. Between 1890 and 1920, however, relational feminism, which had been the dominant strain in feminist thought, and which still predominates among European and non-Western feminists, lost ground in England and the United States. Because the concept of individual rights was already well established in the Anglo- Saxon legal and political tradition, individualist feminism came to predominate in English-speaking countries. At the same time, the goals of the two approaches began to seem increasingly irreconcilable. Individualist feminists began to advocate a totally gender-blind system with equal rights for all. Relational feminists, while agreeing that equal educational and economic opportunities outside the home should be available for all women, continued to emphasize women’s special contributions to society as homemakers and mothers; they demanded special treatment for women, including protective legislation for women workers, state-sponsored maternity beneﬁts, and paid compensation for housework. Relational arguments have a major pitfall: because they underline women’s physiological and psychological distinctiveness, they are often appropriated by political adversaries and used to endorse male privilege. But the individualist approach, by attacking gender roles, denying the signiﬁcance of physiological difference, and condemning existing familial institutions as hopelessly patriarchal, has often simply treated as irrelevant the family roles important to many (55) women. If the individualist framework, with its claim for women’s autonomy, could be harmonized with the family-oriented concerns of relational feminists, a more fruitful model for contemporary feminist politics could emerge. Questions 85–90 refer to the passage above.",
-    subquestion1:
-      "The author implies that which of the following was true of most feminist thinkers in England and the United States after 1920?",
     answer_1:
       "They were less concerned with politics than with intellectual issues.",
     answer_2:
@@ -3105,16 +3559,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "The author implies that which of the following was true of most feminist thinkers in England and the United States after 1920?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 147,
-    question_id: 91,
+    id: "147",
+    question_id: "91",
     main_question_stem:
       "(5) (10) (15) (20) (25) In addition to conventional galaxies, the universe contains very dim galaxies that until recently went unnoticed by astronomers. Possibly as numerous as conventional galaxies, these galaxies have the same general shape and even the same approximate number of stars as a common type of conventional galaxy, the spiral, but tend to be much larger. Because these galaxies’ mass is spread out over larger areas, they have far fewer stars per unit volume than do conventional galaxies. Apparently these low-surface-brightness galaxies, as they are called, take much longer than conventional galaxies to condense their primordial gas and convert it to stars—that is, they evolve much more slowly. These galaxies may constitute an answer to the long-standing puzzle of the missing baryonic mass in the universe. Baryons—subatomic particles that are generally protons or neutrons—are the source of stellar, and therefore galactic, luminosity, and so their numbers can be estimated based on how luminous galaxies are. However, the amount of helium in the universe, as measured by spectroscopy, suggests that there are far more baryons in the universe than estimates based on galactic luminosity indicate. Astronomers have long speculated that the missing baryonic mass might eventually be discovered in intergalactic space or as some large population of galaxies that are difﬁcult to detect.",
-    subquestion1:
-      "According to the passage, conventional spiral galaxies differ from low-surface-brightness galaxies in which of the following ways?",
     answer_1: "They have fewer stars than do low-surface- brightness galaxies.",
     answer_2: "They evolve more quickly than low-surface- brightness galaxies.",
     answer_3: "They are more diffuse than low-surface- brightness galaxies.",
@@ -3124,16 +3582,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "According to the passage, conventional spiral galaxies differ from low-surface-brightness galaxies in which of the following ways?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 148,
-    question_id: 92,
+    id: "148",
+    question_id: "92",
     main_question_stem:
       "(5) (10) (15) (20) (25) In addition to conventional galaxies, the universe contains very dim galaxies that until recently went unnoticed by astronomers. Possibly as numerous as conventional galaxies, these galaxies have the same general shape and even the same approximate number of stars as a common type of conventional galaxy, the spiral, but tend to be much larger. Because these galaxies’ mass is spread out over larger areas, they have far fewer stars per unit volume than do conventional galaxies. Apparently these low-surface-brightness galaxies, as they are called, take much longer than conventional galaxies to condense their primordial gas and convert it to stars—that is, they evolve much more slowly. These galaxies may constitute an answer to the long-standing puzzle of the missing baryonic mass in the universe. Baryons—subatomic particles that are generally protons or neutrons—are the source of stellar, and therefore galactic, luminosity, and so their numbers can be estimated based on how luminous galaxies are. However, the amount of helium in the universe, as measured by spectroscopy, suggests that there are far more baryons in the universe than estimates based on galactic luminosity indicate. Astronomers have long speculated that the missing baryonic mass might eventually be discovered in intergalactic space or as some large population of galaxies that are difﬁcult to detect.",
-    subquestion1:
-      "It can be inferred from the passage that which of the following is an accurate physical description of typical low-surface-brightness galaxies?",
     answer_1:
       "They are large spiral galaxies containing fewer stars than do conventional galaxies.",
     answer_2: "They are compact but very dim spiral galaxies.",
@@ -3145,16 +3607,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "It can be inferred from the passage that which of the following is an accurate physical description of typical low-surface-brightness galaxies?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 149,
-    question_id: 93,
+    id: "149",
+    question_id: "93",
     main_question_stem:
       "(5) (10) (15) (20) (25) In addition to conventional galaxies, the universe contains very dim galaxies that until recently went unnoticed by astronomers. Possibly as numerous as conventional galaxies, these galaxies have the same general shape and even the same approximate number of stars as a common type of conventional galaxy, the spiral, but tend to be much larger. Because these galaxies’ mass is spread out over larger areas, they have far fewer stars per unit volume than do conventional galaxies. Apparently these low-surface-brightness galaxies, as they are called, take much longer than conventional galaxies to condense their primordial gas and convert it to stars—that is, they evolve much more slowly. These galaxies may constitute an answer to the long-standing puzzle of the missing baryonic mass in the universe. Baryons—subatomic particles that are generally protons or neutrons—are the source of stellar, and therefore galactic, luminosity, and so their numbers can be estimated based on how luminous galaxies are. However, the amount of helium in the universe, as measured by spectroscopy, suggests that there are far more baryons in the universe than estimates based on galactic luminosity indicate. Astronomers have long speculated that the missing baryonic mass might eventually be discovered in intergalactic space or as some large population of galaxies that are difﬁcult to detect.",
-    subquestion1:
-      "It can be inferred from the passage that the “long- standing puzzle” refers to which of the following?",
     answer_1:
       "The difference between the rate at which conventional galaxies evolve and the rate at which low-surface-brightness galaxies evolve",
     answer_2:
@@ -3168,16 +3634,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "It can be inferred from the passage that the “long- standing puzzle” refers to which of the following?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 150,
-    question_id: 94,
+    id: "150",
+    question_id: "94",
     main_question_stem:
       "(5) (10) (15) (20) (25) In addition to conventional galaxies, the universe contains very dim galaxies that until recently went unnoticed by astronomers. Possibly as numerous as conventional galaxies, these galaxies have the same general shape and even the same approximate number of stars as a common type of conventional galaxy, the spiral, but tend to be much larger. Because these galaxies’ mass is spread out over larger areas, they have far fewer stars per unit volume than do conventional galaxies. Apparently these low-surface-brightness galaxies, as they are called, take much longer than conventional galaxies to condense their primordial gas and convert it to stars—that is, they evolve much more slowly. These galaxies may constitute an answer to the long-standing puzzle of the missing baryonic mass in the universe. Baryons—subatomic particles that are generally protons or neutrons—are the source of stellar, and therefore galactic, luminosity, and so their numbers can be estimated based on how luminous galaxies are. However, the amount of helium in the universe, as measured by spectroscopy, suggests that there are far more baryons in the universe than estimates based on galactic luminosity indicate. Astronomers have long speculated that the missing baryonic mass might eventually be discovered in intergalactic space or as some large population of galaxies that are difﬁcult to detect.",
-    subquestion1:
-      "The author implies that low-surface-brightness galaxies could constitute an answer to the puzzle discussed in the second paragraph primarily because",
     answer_1:
       "they contain baryonic mass that was not taken into account by researchers using galactic luminosity to estimate the number of baryons in the universe",
     answer_2:
@@ -3191,16 +3661,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "The author implies that low-surface-brightness galaxies could constitute an answer to the puzzle discussed in the second paragraph primarily because",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 151,
-    question_id: 95,
+    id: "151",
+    question_id: "95",
     main_question_stem:
       "(5) (10) (15) (20) (25) In addition to conventional galaxies, the universe contains very dim galaxies that until recently went unnoticed by astronomers. Possibly as numerous as conventional galaxies, these galaxies have the same general shape and even the same approximate number of stars as a common type of conventional galaxy, the spiral, but tend to be much larger. Because these galaxies’ mass is spread out over larger areas, they have far fewer stars per unit volume than do conventional galaxies. Apparently these low-surface-brightness galaxies, as they are called, take much longer than conventional galaxies to condense their primordial gas and convert it to stars—that is, they evolve much more slowly. These galaxies may constitute an answer to the long-standing puzzle of the missing baryonic mass in the universe. Baryons—subatomic particles that are generally protons or neutrons—are the source of stellar, and therefore galactic, luminosity, and so their numbers can be estimated based on how luminous galaxies are. However, the amount of helium in the universe, as measured by spectroscopy, suggests that there are far more baryons in the universe than estimates based on galactic luminosity indicate. Astronomers have long speculated that the missing baryonic mass might eventually be discovered in intergalactic space or as some large population of galaxies that are difﬁcult to detect.",
-    subquestion1:
-      "The author mentions the fact that baryons are the source of stars’ luminosity primarily in order to explain",
     answer_1:
       "how astronomers determine that some galaxies contain fewer stars per unit volume than do others",
     answer_2:
@@ -3214,16 +3688,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "The author mentions the fact that baryons are the source of stars’ luminosity primarily in order to explain",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 152,
-    question_id: 96,
+    id: "152",
+    question_id: "96",
     main_question_stem:
       "(5) (10) (15) (20) (25) In addition to conventional galaxies, the universe contains very dim galaxies that until recently went unnoticed by astronomers. Possibly as numerous as conventional galaxies, these galaxies have the same general shape and even the same approximate number of stars as a common type of conventional galaxy, the spiral, but tend to be much larger. Because these galaxies’ mass is spread out over larger areas, they have far fewer stars per unit volume than do conventional galaxies. Apparently these low-surface-brightness galaxies, as they are called, take much longer than conventional galaxies to condense their primordial gas and convert it to stars—that is, they evolve much more slowly. These galaxies may constitute an answer to the long-standing puzzle of the missing baryonic mass in the universe. Baryons—subatomic particles that are generally protons or neutrons—are the source of stellar, and therefore galactic, luminosity, and so their numbers can be estimated based on how luminous galaxies are. However, the amount of helium in the universe, as measured by spectroscopy, suggests that there are far more baryons in the universe than estimates based on galactic luminosity indicate. Astronomers have long speculated that the missing baryonic mass might eventually be discovered in intergalactic space or as some large population of galaxies that are difﬁcult to detect.",
-    subquestion1:
-      "The author of the passage would be most likely to disagree with which of the following statements?",
     answer_1:
       "Low-surface-brightness galaxies are more difﬁcult to detect than are conventional galaxies.",
     answer_2: "Low-surface-brightness galaxies are often spiral in shape.",
@@ -3236,15 +3714,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "The author of the passage would be most likely to disagree with which of the following statements?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 153,
-    question_id: 97,
+    id: "153",
+    question_id: "97",
     main_question_stem:
       "(5) (10) (15) (20) (25) In addition to conventional galaxies, the universe contains very dim galaxies that until recently went unnoticed by astronomers. Possibly as numerous as conventional galaxies, these galaxies have the same general shape and even the same approximate number of stars as a common type of conventional galaxy, the spiral, but tend to be much larger. Because these galaxies’ mass is spread out over larger areas, they have far fewer stars per unit volume than do conventional galaxies. Apparently these low-surface-brightness galaxies, as they are called, take much longer than conventional galaxies to condense their primordial gas and convert it to stars—that is, they evolve much more slowly. These galaxies may constitute an answer to the long-standing puzzle of the missing baryonic mass in the universe. Baryons—subatomic particles that are generally protons or neutrons—are the source of stellar, and therefore galactic, luminosity, and so their numbers can be estimated based on how luminous galaxies are. However, the amount of helium in the universe, as measured by spectroscopy, suggests that there are far more baryons in the universe than estimates based on galactic luminosity indicate. Astronomers have long speculated that the missing baryonic mass might eventually be discovered in intergalactic space or as some large population of galaxies that are difﬁcult to detect.",
-    subquestion1: "The primary purpose of the passage is to",
     answer_1: "describe a phenomenon and consider its scientiﬁc signiﬁcance",
     answer_2:
       "contrast two phenomena and discuss a puzzling difference between them",
@@ -3256,16 +3739,19 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1: "The primary purpose of the passage is to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 154,
-    question_id: 98,
+    id: "154",
+    question_id: "98",
     main_question_stem:
       "(50) miss Thomas Paine’s point that “what we obtain too cheap we esteem too lightly.” In order for the far- ranging beneﬁts of individual ownership to be achieved by owners, companies, and countries, employees and other individuals must make their own decisions to buy, and they must commit some of their own resources to the choice. This passage was adapted from an article published in 1992. (5) (10) (15) (20) (25) (30) (35) (40) (45) While there is no blueprint for transforming a largely government-controlled economy into a free one, the experience of the United Kingdom since 1979 clearly shows one approach that works: privatization, in which state-owned industries are sold to private companies. By 1979, the total borrowings and losses of state-owned industries were running at about £3 billion a year. By selling many of these industries, the government has decreased these borrowings and losses, gained over £34 billion from the sales, and now receives tax revenues from the newly privatized companies. Along with a dramatically improved overall economy, the government has been able to repay 12.5 percent of the net national debt over a two- year period. In fact, privatization has not only rescued individual industries and a whole economy headed for disaster, but has also raised the level of performance in every area. At British Airways and British Gas, for example, productivity per employee has risen by 20 percent. At Associated British Ports, labor disruptions common in the 1970s and early 1980s have now virtually disappeared. At British Telecom, there is no longer a waiting list—as there always was before privatization—to have a telephone installed. Part of this improved productivity has come about because the employees of privatized industries were given the opportunity to buy shares in their own companies. They responded enthusiastically to the offer of shares: at British Aerospace, 89 percent of the eligible work force bought shares; at Associated British Ports, 90 percent; and at British Telecom, 92 percent. When people have a personal stake in something, they think about it, care about it, work to make it prosper. At the National Freight Consortium, the new employee-owners grew so concerned about their company’s proﬁts that during wage negotiations they actually pressed their union to lower its wage demands. Some economists have suggested that giving away free shares would provide a needed acceleration of the privatization process. Yet they",
-    subquestion1:
-      "According to the passage, all of the following were beneﬁts of privatizing state-owned industries in the United Kingdom EXCEPT:",
     answer_1: "Privatized industries paid taxes to the government.",
     answer_2:
       "The government gained revenue from selling state-owned industries.",
@@ -3276,16 +3762,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "According to the passage, all of the following were beneﬁts of privatizing state-owned industries in the United Kingdom EXCEPT:",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 155,
-    question_id: 99,
+    id: "155",
+    question_id: "99",
     main_question_stem:
       "(50) miss Thomas Paine’s point that “what we obtain too cheap we esteem too lightly.” In order for the far- ranging beneﬁts of individual ownership to be achieved by owners, companies, and countries, employees and other individuals must make their own decisions to buy, and they must commit some of their own resources to the choice. This passage was adapted from an article published in 1992. (5) (10) (15) (20) (25) (30) (35) (40) (45) While there is no blueprint for transforming a largely government-controlled economy into a free one, the experience of the United Kingdom since 1979 clearly shows one approach that works: privatization, in which state-owned industries are sold to private companies. By 1979, the total borrowings and losses of state-owned industries were running at about £3 billion a year. By selling many of these industries, the government has decreased these borrowings and losses, gained over £34 billion from the sales, and now receives tax revenues from the newly privatized companies. Along with a dramatically improved overall economy, the government has been able to repay 12.5 percent of the net national debt over a two- year period. In fact, privatization has not only rescued individual industries and a whole economy headed for disaster, but has also raised the level of performance in every area. At British Airways and British Gas, for example, productivity per employee has risen by 20 percent. At Associated British Ports, labor disruptions common in the 1970s and early 1980s have now virtually disappeared. At British Telecom, there is no longer a waiting list—as there always was before privatization—to have a telephone installed. Part of this improved productivity has come about because the employees of privatized industries were given the opportunity to buy shares in their own companies. They responded enthusiastically to the offer of shares: at British Aerospace, 89 percent of the eligible work force bought shares; at Associated British Ports, 90 percent; and at British Telecom, 92 percent. When people have a personal stake in something, they think about it, care about it, work to make it prosper. At the National Freight Consortium, the new employee-owners grew so concerned about their company’s proﬁts that during wage negotiations they actually pressed their union to lower its wage demands. Some economists have suggested that giving away free shares would provide a needed acceleration of the privatization process. Yet they",
-    subquestion1:
-      "According to the passage, which of the following resulted in increased productivity in companies that have been privatized?",
     answer_1:
       "A large number of employees chose to purchase shares in their companies.",
     answer_2: "Free shares were widely distributed to individual shareholders.",
@@ -3295,16 +3785,20 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "According to the passage, which of the following resulted in increased productivity in companies that have been privatized?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 156,
-    question_id: 100,
+    id: "156",
+    question_id: "100",
     main_question_stem:
       "(50) miss Thomas Paine’s point that “what we obtain too cheap we esteem too lightly.” In order for the far- ranging beneﬁts of individual ownership to be achieved by owners, companies, and countries, employees and other individuals must make their own decisions to buy, and they must commit some of their own resources to the choice. This passage was adapted from an article published in 1992. (5) (10) (15) (20) (25) (30) (35) (40) (45) While there is no blueprint for transforming a largely government-controlled economy into a free one, the experience of the United Kingdom since 1979 clearly shows one approach that works: privatization, in which state-owned industries are sold to private companies. By 1979, the total borrowings and losses of state-owned industries were running at about £3 billion a year. By selling many of these industries, the government has decreased these borrowings and losses, gained over £34 billion from the sales, and now receives tax revenues from the newly privatized companies. Along with a dramatically improved overall economy, the government has been able to repay 12.5 percent of the net national debt over a two- year period. In fact, privatization has not only rescued individual industries and a whole economy headed for disaster, but has also raised the level of performance in every area. At British Airways and British Gas, for example, productivity per employee has risen by 20 percent. At Associated British Ports, labor disruptions common in the 1970s and early 1980s have now virtually disappeared. At British Telecom, there is no longer a waiting list—as there always was before privatization—to have a telephone installed. Part of this improved productivity has come about because the employees of privatized industries were given the opportunity to buy shares in their own companies. They responded enthusiastically to the offer of shares: at British Aerospace, 89 percent of the eligible work force bought shares; at Associated British Ports, 90 percent; and at British Telecom, 92 percent. When people have a personal stake in something, they think about it, care about it, work to make it prosper. At the National Freight Consortium, the new employee-owners grew so concerned about their company’s proﬁts that during wage negotiations they actually pressed their union to lower its wage demands. Some economists have suggested that giving away free shares would provide a needed acceleration of the privatization process. Yet they",
-    subquestion1:
-      "It can be inferred from the passage that the author considers labor disruptions to be",
     answer_1: "an inevitable problem in a weak national economy",
     answer_2: "a positive sign of employee concern about a company",
     answer_3:
@@ -3315,16 +3809,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "It can be inferred from the passage that the author considers labor disruptions to be",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 157,
-    question_id: 101,
+    id: "157",
+    question_id: "101",
     main_question_stem:
       "(50) miss Thomas Paine’s point that “what we obtain too cheap we esteem too lightly.” In order for the far- ranging beneﬁts of individual ownership to be achieved by owners, companies, and countries, employees and other individuals must make their own decisions to buy, and they must commit some of their own resources to the choice. This passage was adapted from an article published in 1992. (5) (10) (15) (20) (25) (30) (35) (40) (45) While there is no blueprint for transforming a largely government-controlled economy into a free one, the experience of the United Kingdom since 1979 clearly shows one approach that works: privatization, in which state-owned industries are sold to private companies. By 1979, the total borrowings and losses of state-owned industries were running at about £3 billion a year. By selling many of these industries, the government has decreased these borrowings and losses, gained over £34 billion from the sales, and now receives tax revenues from the newly privatized companies. Along with a dramatically improved overall economy, the government has been able to repay 12.5 percent of the net national debt over a two- year period. In fact, privatization has not only rescued individual industries and a whole economy headed for disaster, but has also raised the level of performance in every area. At British Airways and British Gas, for example, productivity per employee has risen by 20 percent. At Associated British Ports, labor disruptions common in the 1970s and early 1980s have now virtually disappeared. At British Telecom, there is no longer a waiting list—as there always was before privatization—to have a telephone installed. Part of this improved productivity has come about because the employees of privatized industries were given the opportunity to buy shares in their own companies. They responded enthusiastically to the offer of shares: at British Aerospace, 89 percent of the eligible work force bought shares; at Associated British Ports, 90 percent; and at British Telecom, 92 percent. When people have a personal stake in something, they think about it, care about it, work to make it prosper. At the National Freight Consortium, the new employee-owners grew so concerned about their company’s proﬁts that during wage negotiations they actually pressed their union to lower its wage demands. Some economists have suggested that giving away free shares would provide a needed acceleration of the privatization process. Yet they",
-    subquestion1:
-      "The passage supports which of the following statements about employees buying shares in their own companies?",
     answer_1:
       "At three different companies, approximately nine out of ten of the workers were eligible to buy shares in their companies.",
     answer_2:
@@ -3338,16 +3836,20 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1:
+      "The passage supports which of the following statements about employees buying shares in their own companies?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 158,
-    question_id: 102,
+    id: "158",
+    question_id: "102",
     main_question_stem:
       "(50) miss Thomas Paine’s point that “what we obtain too cheap we esteem too lightly.” In order for the far- ranging beneﬁts of individual ownership to be achieved by owners, companies, and countries, employees and other individuals must make their own decisions to buy, and they must commit some of their own resources to the choice. This passage was adapted from an article published in 1992. (5) (10) (15) (20) (25) (30) (35) (40) (45) While there is no blueprint for transforming a largely government-controlled economy into a free one, the experience of the United Kingdom since 1979 clearly shows one approach that works: privatization, in which state-owned industries are sold to private companies. By 1979, the total borrowings and losses of state-owned industries were running at about £3 billion a year. By selling many of these industries, the government has decreased these borrowings and losses, gained over £34 billion from the sales, and now receives tax revenues from the newly privatized companies. Along with a dramatically improved overall economy, the government has been able to repay 12.5 percent of the net national debt over a two- year period. In fact, privatization has not only rescued individual industries and a whole economy headed for disaster, but has also raised the level of performance in every area. At British Airways and British Gas, for example, productivity per employee has risen by 20 percent. At Associated British Ports, labor disruptions common in the 1970s and early 1980s have now virtually disappeared. At British Telecom, there is no longer a waiting list—as there always was before privatization—to have a telephone installed. Part of this improved productivity has come about because the employees of privatized industries were given the opportunity to buy shares in their own companies. They responded enthusiastically to the offer of shares: at British Aerospace, 89 percent of the eligible work force bought shares; at Associated British Ports, 90 percent; and at British Telecom, 92 percent. When people have a personal stake in something, they think about it, care about it, work to make it prosper. At the National Freight Consortium, the new employee-owners grew so concerned about their company’s proﬁts that during wage negotiations they actually pressed their union to lower its wage demands. Some economists have suggested that giving away free shares would provide a needed acceleration of the privatization process. Yet they",
-    subquestion1:
-      "Which of the following statements is most consistent with the principle described in lines 35–38?",
     answer_1:
       "A democratic government that decides it is inappropriate to own a particular industry has in no way abdicated its responsibilities as guardian of the public interest.",
     answer_2:
@@ -3361,16 +3863,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "Which of the following statements is most consistent with the principle described in lines 35–38?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 159,
-    question_id: 103,
+    id: "159",
+    question_id: "103",
     main_question_stem:
       "(50) miss Thomas Paine’s point that “what we obtain too cheap we esteem too lightly.” In order for the far- ranging beneﬁts of individual ownership to be achieved by owners, companies, and countries, employees and other individuals must make their own decisions to buy, and they must commit some of their own resources to the choice. This passage was adapted from an article published in 1992. (5) (10) (15) (20) (25) (30) (35) (40) (45) While there is no blueprint for transforming a largely government-controlled economy into a free one, the experience of the United Kingdom since 1979 clearly shows one approach that works: privatization, in which state-owned industries are sold to private companies. By 1979, the total borrowings and losses of state-owned industries were running at about £3 billion a year. By selling many of these industries, the government has decreased these borrowings and losses, gained over £34 billion from the sales, and now receives tax revenues from the newly privatized companies. Along with a dramatically improved overall economy, the government has been able to repay 12.5 percent of the net national debt over a two- year period. In fact, privatization has not only rescued individual industries and a whole economy headed for disaster, but has also raised the level of performance in every area. At British Airways and British Gas, for example, productivity per employee has risen by 20 percent. At Associated British Ports, labor disruptions common in the 1970s and early 1980s have now virtually disappeared. At British Telecom, there is no longer a waiting list—as there always was before privatization—to have a telephone installed. Part of this improved productivity has come about because the employees of privatized industries were given the opportunity to buy shares in their own companies. They responded enthusiastically to the offer of shares: at British Aerospace, 89 percent of the eligible work force bought shares; at Associated British Ports, 90 percent; and at British Telecom, 92 percent. When people have a personal stake in something, they think about it, care about it, work to make it prosper. At the National Freight Consortium, the new employee-owners grew so concerned about their company’s proﬁts that during wage negotiations they actually pressed their union to lower its wage demands. Some economists have suggested that giving away free shares would provide a needed acceleration of the privatization process. Yet they",
-    subquestion1:
-      "Which of the following can be inferred from the passage about the privatization process in the United Kingdom?",
     answer_1:
       "It depends to a potentially dangerous degree on individual ownership of shares.",
     answer_2:
@@ -3384,15 +3890,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "Which of the following can be inferred from the passage about the privatization process in the United Kingdom?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 160,
-    question_id: 104,
+    id: "160",
+    question_id: "104",
     main_question_stem:
       "(50) miss Thomas Paine’s point that “what we obtain too cheap we esteem too lightly.” In order for the far- ranging beneﬁts of individual ownership to be achieved by owners, companies, and countries, employees and other individuals must make their own decisions to buy, and they must commit some of their own resources to the choice. This passage was adapted from an article published in 1992. (5) (10) (15) (20) (25) (30) (35) (40) (45) While there is no blueprint for transforming a largely government-controlled economy into a free one, the experience of the United Kingdom since 1979 clearly shows one approach that works: privatization, in which state-owned industries are sold to private companies. By 1979, the total borrowings and losses of state-owned industries were running at about £3 billion a year. By selling many of these industries, the government has decreased these borrowings and losses, gained over £34 billion from the sales, and now receives tax revenues from the newly privatized companies. Along with a dramatically improved overall economy, the government has been able to repay 12.5 percent of the net national debt over a two- year period. In fact, privatization has not only rescued individual industries and a whole economy headed for disaster, but has also raised the level of performance in every area. At British Airways and British Gas, for example, productivity per employee has risen by 20 percent. At Associated British Ports, labor disruptions common in the 1970s and early 1980s have now virtually disappeared. At British Telecom, there is no longer a waiting list—as there always was before privatization—to have a telephone installed. Part of this improved productivity has come about because the employees of privatized industries were given the opportunity to buy shares in their own companies. They responded enthusiastically to the offer of shares: at British Aerospace, 89 percent of the eligible work force bought shares; at Associated British Ports, 90 percent; and at British Telecom, 92 percent. When people have a personal stake in something, they think about it, care about it, work to make it prosper. At the National Freight Consortium, the new employee-owners grew so concerned about their company’s proﬁts that during wage negotiations they actually pressed their union to lower its wage demands. Some economists have suggested that giving away free shares would provide a needed acceleration of the privatization process. Yet they",
-    subquestion1: "The quotation in lines 46–47 is most probably used to",
     answer_1:
       "counter a position that the author of the passage believes is incorrect",
     answer_2:
@@ -3405,12 +3916,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "The quotation in lines 46–47 is most probably used to",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 161,
-    question_id: 1,
+    id: "161",
+    question_id: "1",
     main_question_stem:
       "Which of the following, if true, most logically completes the argument below? Manufacturers are now required to make all cigarette lighters child-resistant by equipping them with safety levers. But this change is unlikely to result in a signiﬁcant reduction in the number of ﬁres caused by children playing with lighters, because children given the opportunity can ﬁgure out how to work the safety levers and .",
     answer_1:
@@ -3426,12 +3942,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 162,
-    question_id: 2,
+    id: "162",
+    question_id: "2",
     main_question_stem:
       "A cost-effective solution to the problem of airport congestion is to provide high-speed ground transportation between major cities lying 200 to 500 miles apart. The successful implementation of this plan would cost far less than expanding existing airports and would also reduce the number of airplanes clogging both airports and airways. Which of the following, if true, could proponents of the plan above most appropriately cite as a piece of evidence for the soundness of their plan?",
     answer_1:
@@ -3447,12 +3968,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 163,
-    question_id: 3,
+    id: "163",
+    question_id: "3",
     main_question_stem:
       "People’s television-viewing habits could be monitored by having television sets, when on, send out low-level electromagnetic waves that are reﬂected back to the sets. The reﬂected waves could then be analyzed to determine how many persons are within the viewing area of the sets. Critics fear adverse health effects of such a monitoring system, but a proponent responds, “The average dose of radiation is less than one chest x-ray. As they watch, viewers won’t feel a thing.” Which of the following issues would it be most important to resolve in evaluating the dispute concerning the health effects of the proposed system?",
     answer_1:
@@ -3467,12 +3993,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 164,
-    question_id: 4,
+    id: "164",
+    question_id: "4",
     main_question_stem:
       "The price the government pays for standard weapons purchased from military contractors is determined by a pricing method called “historical costing.” Historical costing allows contractors to protect their proﬁts by adding a percentage increase, based on the current rate of inﬂation, to the previous year’s contractual price. Which of the following statements, if true, is the best basis for a criticism of historical costing as an economically sound pricing method for military contracts?",
     answer_1:
@@ -3488,12 +4019,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 165,
-    question_id: 5,
+    id: "165",
+    question_id: "5",
     main_question_stem:
       "Since the mayor’s publicity campaign for Greenville’s bus service began six months ago, morning automobile trafﬁc into the midtown area of the city has decreased 7 percent. During the same period, there has been an equivalent rise in the number of persons riding buses into the midtown area. Obviously, the mayor’s publicity campaign has convinced many people to leave their cars at home and ride the bus to work. Which of the following, if true, casts the most serious doubt on the conclusion drawn above?",
     answer_1:
@@ -3509,12 +4045,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 166,
-    question_id: 6,
+    id: "166",
+    question_id: "6",
     main_question_stem:
       "Patrick usually provides child care for six children. Parents leave their children at Patrick’s house in the morning and pick them up after work. At the end of each workweek, the parents pay Patrick at an hourly rate for the child care provided that week. The weekly income Patrick receives is usually adequate but not always uniform, particularly in the winter, when children are likely to get sick and be unpredictably absent. Which of the following plans, if put into effect, has the best prospect of making Patrick’s weekly income both uniform and adequate?",
     answer_1:
@@ -3530,12 +4071,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 167,
-    question_id: 7,
+    id: "167",
+    question_id: "7",
     main_question_stem:
       "A researcher discovered that people who have low levels of immune-system activity tend to score much lower on tests of mental health than do people with normal or high immune-system activity. The researcher concluded from this experiment that the immune system protects against mental illness as well as against physical disease. The researcher’s conclusion depends on which of the following assumptions?",
     answer_1:
@@ -3551,12 +4097,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 168,
-    question_id: 8,
+    id: "168",
+    question_id: "8",
     main_question_stem:
       "Extinction is a process that can depend on a variety of ecological, geographical, and physiological variables. These variables affect different species of organisms in different ways, and should, therefore, yield a random pattern of extinctions. However, the fossil record shows that extinction occurs in a surprisingly deﬁnite pattern, with many species vanishing at the same time. Which of the following, if true, forms the best basis for at least a partial explanation of the patterned extinctions revealed by the fossil record?",
     answer_1:
@@ -3572,12 +4123,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 169,
-    question_id: 9,
+    id: "169",
+    question_id: "9",
     main_question_stem:
       "In parts of South America, vitamin-A deﬁciency is a serious health problem, especially among children. In one region, agriculturists are attempting to improve nutrition by encouraging farmers to plant a new variety of sweet potato called SPK004 that is rich in beta- carotene, which the body converts into vitamin A. The plan has good chances of success, since sweet potato is a staple of the region’s diet and agriculture, and the varieties currently grown contain little beta-carotene. Which of the following, if true, most strongly supports the prediction that the plan will succeed?",
     answer_1:
@@ -3593,12 +4149,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 170,
-    question_id: 10,
+    id: "170",
+    question_id: "10",
     main_question_stem:
       "Which of the following best completes the passage below? At a recent conference on environmental threats to the North Sea, most participating countries favored uniform controls on the quality of efﬂuents, whether or not speciﬁc environmental damage could be attributed to a particular source of efﬂuent. What must, of course, be shown, in order to avoid excessively restrictive controls, is that .",
     answer_1:
@@ -3614,12 +4175,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 171,
-    question_id: 11,
+    id: "171",
+    question_id: "11",
     main_question_stem:
       "Shelby Industries manufactures and sells the same gauges as Jones Industries. Employee wages account for 40 percent of the cost of manufacturing gauges at both Shelby Industries and Jones Industries. Shelby Industries is seeking a competitive advantage over Jones Industries. Therefore, to promote this end, Shelby Industries should lower employee wages. Which of the following, if true, would most weaken the argument above?",
     answer_1:
@@ -3635,12 +4201,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 172,
-    question_id: 12,
+    id: "172",
+    question_id: "12",
     main_question_stem:
       "Large national budget deﬁcits do not cause large trade deﬁcits. If they did, countries with the largest budget deﬁcits would also have the largest trade deﬁcits. In fact, when deﬁcit ﬁgures are adjusted so that different countries are reliably comparable to each other, there is no such correlation. If the statements above are all true, which of the following can properly be inferred on the basis of them?",
     answer_1:
@@ -3656,12 +4227,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 173,
-    question_id: 13,
+    id: "173",
+    question_id: "13",
     main_question_stem:
       "Which of the following most logically completes the argument? The last members of a now-extinct species of a European wild deer called the giant deer lived in Ireland about 16,000 years ago. Prehistoric cave paintings in France depict this animal as having a large hump on its back. Fossils of this animal, however, do not show any hump. Nevertheless, there is no reason to conclude that the cave paintings are therefore inaccurate in this regard, since .",
     answer_1:
@@ -3677,12 +4253,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 174,
-    question_id: 14,
+    id: "174",
+    question_id: "14",
     main_question_stem:
       "The sustained massive use of pesticides in farming has two effects that are especially pernicious. First, it often kills off the pests’ natural enemies in the area. Second, it often unintentionally gives rise to insecticide-resistant pests, since those insects that survive a particular insecticide will be the ones most resistant to it, and they are the ones left to breed. From the passage above, it can be properly inferred that the effectiveness of the sustained massive use of pesticides can be extended by doing which of the following, assuming that each is a realistic possibility?",
     answer_1: "Using only chemically stable insecticides",
@@ -3693,12 +4274,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 175,
-    question_id: 15,
+    id: "175",
+    question_id: "15",
     main_question_stem:
       "In an attempt to promote the widespread use of paper rather than plastic, and thus reduce nonbiodegradable waste, the council of a small town plans to ban the sale of disposable plastic goods for which substitutes made of paper exist. The council argues that since most paper is entirely biodegradable, paper goods are environmentally preferable. Which of the following, if true, indicates that the plan to ban the sale of disposable plastic goods is ill suited to the town council’s environmental goals?",
     answer_1:
@@ -3714,12 +4300,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 176,
-    question_id: 16,
+    id: "176",
+    question_id: "16",
     main_question_stem:
       "Since the deregulation of airlines, delays at the nation’s increasingly busy airports have increased by 25 percent. To combat this problem, more of the takeoff and landing slots at the busiest airports must be allocated to commercial airlines. Which of the following, if true, casts the most doubt on the effectiveness of the solution proposed above?",
     answer_1:
@@ -3735,12 +4326,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 177,
-    question_id: 17,
+    id: "177",
+    question_id: "17",
     main_question_stem:
       "A major health insurance company in Lagolia pays for special procedures prescribed by physicians only if the procedure is ﬁrst approved as “medically necessary” by a company-appointed review panel. The rule is intended to save the company the money it might otherwise spend on medically unnecessary procedures. The company has recently announced that in order to reduce its costs, it will abandon this rule. Which of the following, if true, provides the strongest justiﬁcation for the company’s decision?",
     answer_1:
@@ -3756,12 +4352,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 178,
-    question_id: 18,
+    id: "178",
+    question_id: "18",
     main_question_stem:
       "Unlike the wholesale price of raw wool, the wholesale price of raw cotton has fallen considerably in the last year. Thus, although the retail price of cotton clothing at retail clothing stores has not yet fallen, it will inevitably fall. Which of the following, if true, most seriously weakens the argument above?",
     answer_1:
@@ -3777,12 +4378,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 179,
-    question_id: 19,
+    id: "179",
+    question_id: "19",
     main_question_stem:
       "A computer equipped with signature-recognition software, which restricts access to a computer to those people whose signatures are on ﬁle, identiﬁes a person’s signature by analyzing not only the form of the signature but also such characteristics as pen pressure and signing speed. Even the most adept forgers cannot duplicate all of the characteristics the program analyzes. Which of the following can be logically concluded from the passage above?",
     answer_1:
@@ -3798,12 +4404,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 180,
-    question_id: 20,
+    id: "180",
+    question_id: "20",
     main_question_stem:
       "Start-up companies ﬁnanced by venture capitalists have a much lower failure rate than companies ﬁnanced by other means. Source of ﬁnancing, therefore, must be a more important causative factor in the success of a start-up company than are such factors as the personal characteristics of the entrepreneur, the quality of strategic planning, or the management structure of the company. Which of the following, if true, most seriously weakens the argument above?",
     answer_1:
@@ -3818,12 +4429,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 181,
-    question_id: 21,
+    id: "181",
+    question_id: "21",
     main_question_stem:
       "Aphasia, an impairment of the capacity to use language, often occurs when a stroke damages the left half of the brain. Many people with stroke-related aphasia recover at least some capacity to use language within a year. One proposed explanation for such recoveries is that the right side of the brain, which is not usually the major language center, develops its latent language capabilities to compensate for the damage to the left side. Which of the following, if true, most strongly supports the explanation?",
     answer_1:
@@ -3839,12 +4455,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 182,
-    question_id: 22,
+    id: "182",
+    question_id: "22",
     main_question_stem:
       "In the arid land along the Colorado River, use of the river’s water supply is strictly controlled: farms along the river each have a limited allocation that they are allowed to use for irrigation. But the trees that grow in narrow strips along the river’s banks also use its water. Clearly, therefore, if farmers were to remove those trees, more water would be available for crop irrigation. Which of the following, if true, most seriously weakens the argument?",
     answer_1:
@@ -3860,12 +4481,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 183,
-    question_id: 23,
+    id: "183",
+    question_id: "23",
     main_question_stem:
       "Near Chicago a newly built hydroponic spinach “factory,” a completely controlled environment for growing spinach, produces on 1 acre of ﬂoor space what it takes 100 acres of ﬁelds to produce. Expenses, especially for electricity, are high, however, and the spinach produced costs about four times as much as washed California ﬁeld spinach, the spinach commonly sold throughout the United States. Which of the following, if true, best supports a projection that the spinach-growing facility near Chicago will be proﬁtable?",
     answer_1:
@@ -3881,12 +4507,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 184,
-    question_id: 24,
+    id: "184",
+    question_id: "24",
     main_question_stem:
       "Automobile Dealer’s Advertisement: The Highway Trafﬁc Safety Institute reports that the PZ 1000 has the fewest injuries per accident of any car in its class. This shows that the PZ 1000 is one of the safest cars available today. Which of the following, if true, most seriously weakens the argument in the advertisement?",
     answer_1:
@@ -3902,12 +4533,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 185,
-    question_id: 25,
+    id: "185",
+    question_id: "25",
     main_question_stem:
       "Which of the following most logically completes the reasoning? Either food scarcity or excessive hunting can threaten a population of animals. If the group faces food scarcity, individuals in the group will reach reproductive maturity later than otherwise. If the group faces excessive hunting, individuals that reach reproductive maturity earlier will come to predominate. Therefore, it should be possible to determine whether prehistoric mastodons became extinct because of food scarcity or human hunting, since there are fossilized mastodon remains from both before and after mastodon populations declined, and .",
     answer_1:
@@ -3922,12 +4558,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 186,
-    question_id: 26,
+    id: "186",
+    question_id: "26",
     main_question_stem:
       "Editorial: The mayor plans to deactivate the city’s ﬁre alarm boxes, because most calls received from them are false alarms. The mayor claims that the alarm boxes are no longer necessary, since most people now have access to either public or private telephones. But the city’s commercial district, where there is the greatest risk of ﬁre, has few residents and few public telephones, so some alarm boxes are still necessary. Which of the following, if true, most seriously weakens the editorial’s argument?",
     answer_1:
@@ -3943,12 +4584,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 187,
-    question_id: 27,
+    id: "187",
+    question_id: "27",
     main_question_stem:
       "State spokesperson: Many businesspeople who have not been to our state believe that we have an inadequate road system. Those people are mistaken, as is obvious from the fact that in each of the past six years, our state has spent more money per mile on road improvements than any other state. Which of the following, if true, most seriously undermines the reasoning in the spokesperson’s argument?",
     answer_1:
@@ -3964,12 +4610,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 188,
-    question_id: 28,
+    id: "188",
+    question_id: "28",
     main_question_stem:
       "Company Alpha buys free-travel coupons from people who are awarded the coupons by Bravo Airlines for ﬂying frequently on Bravo airplanes. The coupons are sold to people who pay less for the coupons than they would pay by purchasing tickets from Bravo. This marketing of coupons results in lost revenue for Bravo. To discourage the buying and selling of free-travel coupons, it would be best for Bravo Airlines to restrict the",
     answer_1:
@@ -3983,12 +4634,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 189,
-    question_id: 29,
+    id: "189",
+    question_id: "29",
     main_question_stem:
       "Pro-Tect Insurance Company has recently been paying out more on car-theft claims than it expected. Cars with special antitheft devices or alarm systems are much less likely to be stolen than are other cars. Consequently Pro-Tect, as part of an effort to reduce its annual payouts, will offer a discount to holders of car-theft policies if their cars have antitheft devices or alarm systems. Which of the following, if true, provides the strongest indication that the plan is likely to achieve its goal?",
     answer_1:
@@ -4004,12 +4660,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 190,
-    question_id: 30,
+    id: "190",
+    question_id: "30",
     main_question_stem:
       "Toughened hiring standards have not been the primary cause of the present stafﬁng shortage in public schools. The shortage of teachers is primarily caused by the fact that in recent years teachers have not experienced any improvements in working conditions and their salaries have not kept pace with salaries in other professions. Which of the following, if true, would most support the claims above?",
     answer_1:
@@ -4025,12 +4686,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 191,
-    question_id: 31,
+    id: "191",
+    question_id: "31",
     main_question_stem:
       "A proposed ordinance requires the installation in new homes of sprinklers automatically triggered by the presence of a ﬁre. However, a home builder argued that because more than 90 percent of residential ﬁres are extinguished by a household member, residential sprinklers would only marginally decrease property damage caused by residential ﬁres. Which of the following, if true, would most seriously weaken the home builder’s argument?",
     answer_1:
@@ -4046,12 +4712,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 192,
-    question_id: 32,
+    id: "192",
+    question_id: "32",
     main_question_stem:
       "A recent spate of launching and operating mishaps with television satellites led to a corresponding surge in claims against companies underwriting satellite insurance. As a result, insurance premiums shot up, making satellites more expensive to launch and operate. This, in turn, had added to the pressure to squeeze more performance out of currently operating satellites. Which of the following, if true, taken together with the information above, best supports the conclusion that the cost of television satellites will continue to increase?",
     answer_1:
@@ -4067,12 +4738,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 193,
-    question_id: 33,
+    id: "193",
+    question_id: "33",
     main_question_stem:
       "Art restorers who have been studying the factors that cause Renaissance oil paintings to deteriorate physically when subject to climatic changes have found that the oil paint used in these paintings actually adjusts to these changes well. The restorers therefore hypothesize that it is a layer of material called gesso, which is under the paint, that causes the deterioration. Which of the following, if true, most strongly supports the restorers’ hypothesis?",
     answer_1:
@@ -4088,12 +4764,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 194,
-    question_id: 34,
+    id: "194",
+    question_id: "34",
     main_question_stem:
       "If the airspace around centrally located airports were restricted to commercial airliners and only those private planes equipped with radar, most of the private-plane trafﬁc would be forced to use outlying airﬁelds. Such a reduction in the amount of private- plane trafﬁc would reduce the risk of midair collision around the centrally located airports. The conclusion drawn in the ﬁrst sentence depends on which of the following assumptions?",
     answer_1:
@@ -4109,12 +4790,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 195,
-    question_id: 35,
+    id: "195",
+    question_id: "35",
     main_question_stem:
       "Two decades after the Emerald River Dam was built, none of the eight ﬁsh species native to the Emerald River was still reproducing adequately in the river below the dam. Since the dam reduced the annual range of water temperature in the river below the dam from 50 degrees to 6 degrees, scientists have hypothesized that sharply rising water temperatures must be involved in signaling the native species to begin the reproductive cycle. Which of the following statements, if true, would most strengthen the scientists’ hypothesis?",
     answer_1:
@@ -4130,12 +4816,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 196,
-    question_id: 36,
+    id: "196",
+    question_id: "36",
     main_question_stem:
       "Certain messenger molecules ﬁght damage to the lungs from noxious air by telling the muscle cells encircling the lungs’ airways to contract. This partially seals off the lungs. An asthma attack occurs when the messenger molecules are activated unnecessarily, in response to harmless things like pollen or household dust. Which of the following, if true, points to the most serious ﬂaw of a plan to develop a medication that would prevent asthma attacks by blocking receipt of any messages sent by the messenger molecules referred to above?",
     answer_1:
@@ -4151,12 +4842,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 197,
-    question_id: 37,
+    id: "197",
+    question_id: "37",
     main_question_stem:
       "Which of the following most logically completes the argument? Although the pesticide TDX has been widely used by fruit growers since the early 1960s, a regulation in force since 1960 has prohibited sale of fruit on which any TDX residue can be detected. That regulation is about to be replaced by one that allows sale of fruit on which trace amounts of TDX residue are detected. In fact, however, the change will not allow more TDX on fruit than was allowed in the 1960s, because .",
     answer_1:
@@ -4172,12 +4868,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 198,
-    question_id: 38,
+    id: "198",
+    question_id: "38",
     main_question_stem:
       "Which of the following best completes the passage below? The more worried investors are about losing their money, the more they will demand a high potential return on their investment; great risks must be offset by the chance of great rewards. This principle is the fundamental one in determining interest rates, and it is illustrated by the fact that .",
     answer_1:
@@ -4193,12 +4894,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 199,
-    question_id: 39,
+    id: "199",
+    question_id: "39",
     main_question_stem:
       "A certain mayor has proposed a fee of ﬁve dollars per day on private vehicles entering the city, claiming that the fee will alleviate the city’s trafﬁc congestion. The mayor reasons that, since the fee will exceed the cost of round-trip bus fare from many nearby points, many people will switch from using their cars to using the bus. Which of the following statements, if true, provides the best evidence that the mayor’s reasoning is ﬂawed?",
     answer_1:
@@ -4214,12 +4920,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 200,
-    question_id: 40,
+    id: "200",
+    question_id: "40",
     main_question_stem:
       "Journalist: Well-known businessman Arnold Bergeron has long been popular in the state, and he has often talked about running for governor, but he has never run. However, we have just learned that Bergeron has fulﬁlled the ﬁnancial disclosure requirement for candidacy by submitting a detailed list of his current ﬁnancial holdings to the election commission. So, it is very likely that Bergeron will be a candidate for governor this year. The answer to which of the following questions would be most useful in evaluating the journalist’s argument?",
     answer_1:
@@ -4235,12 +4946,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 201,
-    question_id: 41,
+    id: "201",
+    question_id: "41",
     main_question_stem:
       "Dental researchers recently discovered that tooth- brushes can become contaminated with bacteria that cause pneumonia and strep throat. They found that contamination usually occurs after toothbrushes have been used for four weeks. For that reason, people should replace their toothbrushes at least once a month. Which of the following, if true, would most weaken the conclusion above?",
     answer_1:
@@ -4256,12 +4972,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 202,
-    question_id: 42,
+    id: "202",
+    question_id: "42",
     main_question_stem:
       "Leaders of a miners’ union on strike against Coalco are contemplating additional measures to pressure the company to accept the union’s contract proposal. The union leaders are considering as their principal new tactic a consumer boycott against Gasco gas stations, which are owned by Energy Incorporated, the same corporation that owns Coalco. The answer to which of the following questions is LEAST directly relevant to the union leaders’ consideration of whether attempting a boycott of Gasco will lead to acceptance of their contract proposal?",
     answer_1:
@@ -4276,12 +4997,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 203,
-    question_id: 43,
+    id: "203",
+    question_id: "43",
     main_question_stem:
       "Laws requiring the use of headlights during daylight hours can prevent automobile collisions. However, since daylight visibility is worse in countries farther from the equator, any such laws would obviously be more effective in preventing collisions in those countries. In fact, the only countries that actually have such laws are farther from the equator than is the continental United States. Which of the following conclusions could be most properly drawn from the information given above?",
     answer_1:
@@ -4297,12 +5023,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 204,
-    question_id: 44,
+    id: "204",
+    question_id: "44",
     main_question_stem:
       "Bank depositors in the United States are all ﬁnancially protected against bank failure because the government insures all individuals’ bank deposits. An economist argues that this insurance is partly responsible for the high rate of bank failures, since it removes from depositors any ﬁnancial incentive to ﬁnd out whether the bank that holds their money is secure against failure. If depositors were more selective, then banks would need to be secure in order to compete for depositors’ money. The economist’s argument makes which of the following assumptions?",
     answer_1:
@@ -4318,12 +5049,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 205,
-    question_id: 45,
+    id: "205",
+    question_id: "45",
     main_question_stem:
       "Often patients with ankle fractures that are stable, and thus do not require surgery, are given follow-up x-rays because their orthopedists are concerned about possibly having misjudged the stability of the fracture. When a number of follow-up x-rays were reviewed, however, all the fractures that had initially been judged stable were found to have healed correctly. Therefore, it is a waste of money to order follow-up x-rays of ankle fractures initially judged stable. Which of the following, if true, most strengthens the argument?",
     answer_1:
@@ -4339,12 +5075,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 206,
-    question_id: 46,
+    id: "206",
+    question_id: "46",
     main_question_stem:
       "A study of marital relationships in which one partner’s sleeping and waking cycles differ from those of the other partner reveals that such couples share fewer activities with each other and have more violent arguments than do couples in a relationship in which both partners follow the same sleeping and waking patterns. Thus, mismatched sleeping and waking cycles can seriously jeopardize a marriage. Which of the following, if true, most seriously weakens the argument above?",
     answer_1:
@@ -4360,12 +5101,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 207,
-    question_id: 47,
+    id: "207",
+    question_id: "47",
     main_question_stem:
       "In the past most airline companies minimized aircraft weight to minimize fuel costs. The safest airline seats were heavy, and airlines equipped their planes with few of these seats. This year the seat that has sold best to airlines has been the safest one—a clear indication that airlines are assigning a higher priority to safe seating than to minimizing fuel costs. Which of the following, if true, most seriously weakens the argument above?",
     answer_1:
@@ -4381,12 +5127,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 208,
-    question_id: 48,
+    id: "208",
+    question_id: "48",
     main_question_stem:
       "Editorial: An arrest made by a Midville police ofﬁcer is provisional until the ofﬁcer has taken the suspect to the police station and the watch commander has ofﬁcially approved the arrest. Such approval is denied if the commander judges that the evidence on which the provisional arrest is based is insufﬁcient. A government efﬁciency expert has observed that almost all provisional arrests meet the standards for adequacy of evidence that the watch commanders enforce . The expert has therefore recommended that, because the ofﬁcers’ time spent obtaining approval is largely wasted , the watch commander’s approval no longer be required. This recommendation should be rejected as dangerous, however, since there is no assurance that the watch commanders’ standards will continue to be observed once approval is no longer required. In the editorial, the two portions in boldface play which of the following roles?",
     answer_1:
@@ -4402,12 +5153,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 209,
-    question_id: 49,
+    id: "209",
+    question_id: "49",
     main_question_stem:
       "Division manager: I want to replace the Microton computers in my division with Vitech computers. General manager: Why? Division manager: It costs 28 percent less to train new staff on the Vitech. General manager: But that is not a good enough reason. We can simply hire only people who already know how to use the Microton computer. Which of the following, if true, most seriously undermines the general manager’s objection to the replacement of Microton computers with Vitechs?",
     answer_1:
@@ -4423,12 +5179,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 210,
-    question_id: 50,
+    id: "210",
+    question_id: "50",
     main_question_stem:
       "Crops can be traded on the futures market before they are harvested. If a poor corn harvest is predicted, prices of corn futures rise; if a bountiful corn harvest is predicted, prices of corn futures fall. This morning meteorologists are predicting much-needed rain for the corn-growing region starting tomorrow. Therefore, since adequate moisture is essential for the current crop’s survival, prices of corn futures will fall sharply today. Which of the following, if true, most weakens the argument above?",
     answer_1:
@@ -4444,12 +5205,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 211,
-    question_id: 51,
+    id: "211",
+    question_id: "51",
     main_question_stem:
       "A company plans to develop a prototype weeding machine that uses cutting blades with optical sensors and microprocessors that distinguish weeds from crop plants by differences in shade of color. The inventor of the machine claims that it will reduce labor costs by virtually eliminating the need for manual weeding. Which of the following is a consideration in favor of the company’s implementing its plan to develop the prototype?",
     answer_1:
@@ -4465,12 +5231,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 212,
-    question_id: 52,
+    id: "212",
+    question_id: "52",
     main_question_stem:
       "The interview is an essential part of a successful hiring program because, with it, job applicants who have personalities that are unsuited to the requirements of the job will be eliminated from consideration. The argument above logically depends on which of the following assumptions?",
     answer_1: "A hiring program will be successful if it includes interviews.",
@@ -4485,12 +5256,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 213,
-    question_id: 53,
+    id: "213",
+    question_id: "53",
     main_question_stem:
       "Useful protein drugs, such as insulin, must still be administered by the cumbersome procedure of injection under the skin. If proteins are taken orally, they are digested and cannot reach their target cells. Certain nonprotein drugs, however, contain chemical bonds that are not broken down by the digestive system. They can, thus, be taken orally. The statements above most strongly support a claim that a research procedure that successfully accomplishes which of the following would be beneﬁcial to users of protein drugs?",
     answer_1:
@@ -4506,12 +5282,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 214,
-    question_id: 54,
+    id: "214",
+    question_id: "54",
     main_question_stem:
       "Tanco, a leather manufacturer, uses large quantities of common salt to preserve animal hides. New environmental regulations have signiﬁcantly increased the cost of disposing of salt water that results from this use, and, in consequence, Tanco is considering a plan to use potassium chloride in place of common salt. Research has shown that Tanco could reprocess the by-product of potassium chloride use to yield a crop fertilizer, leaving a relatively small volume of waste for disposal. In determining the impact on company proﬁts of using potassium chloride in place of common salt, it would be important for Tanco to research all of the following EXCEPT:",
     answer_1:
@@ -4527,12 +5308,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 215,
-    question_id: 55,
+    id: "215",
+    question_id: "55",
     main_question_stem:
       "There is a great deal of geographical variation in the frequency of many surgical procedures — up to tenfold variation per hundred thousand people between different areas in the numbers of hysterectomies, prostatectomies, and tonsillectomies. To support a conclusion that much of the variation is due to unnecessary surgical procedures, it would be most important to establish which of the following?",
     answer_1:
@@ -4548,12 +5334,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 216,
-    question_id: 56,
+    id: "216",
+    question_id: "56",
     main_question_stem:
       "Gortland has long been narrowly self-sufﬁcient in both grain and meat. However, as per capita income in Gortland has risen toward the world average, per capita consumption of meat has also risen toward the world average, and it takes several pounds of grain to produce one pound of meat. Therefore, since per capita income continues to rise, whereas domestic grain production will not increase, Gortland will soon have to import either grain or meat or both. Which of the following is an assumption on which the argument depends?",
     answer_1:
@@ -4569,12 +5360,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 217,
-    question_id: 57,
+    id: "217",
+    question_id: "57",
     main_question_stem:
       "Meteorite explosions in the Earth’s atmosphere as large as the one that destroyed forests in Siberia, with approximately the force of a twelve-megaton nuclear blast, occur about once a century. The response of highly automated systems controlled by complex computer programs to unexpected circumstances is unpredictable. Which of the following conclusions can most properly be drawn, if the statements above are true, about a highly automated nuclear-missile defense system controlled by a complex computer program?",
     answer_1:
@@ -4590,12 +5386,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 218,
-    question_id: 58,
+    id: "218",
+    question_id: "58",
     main_question_stem:
       "If there is an oil-supply disruption resulting in higher international oil prices, domestic oil prices in open- market countries such as the United States will rise as well, whether such countries import all or none of their oil. If the statement above concerning oil-supply disruptions is true, which of the following policies in an open-market nation is most likely to reduce the long- term economic impact on that nation of sharp and unexpected increases in international oil prices?",
     answer_1:
@@ -4608,12 +5409,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 219,
-    question_id: 59,
+    id: "219",
+    question_id: "59",
     main_question_stem:
       "Boreal owls range over a much larger area than do other owls of similar size. The reason for this behavior is probably that the small mammals on which owls feed are especially scarce in the forests where boreal owls live, and the relative scarcity of prey requires the owls to range more extensively to ﬁnd sufﬁcient food. Which of the following, if true, most helps to conﬁrm the explanation above?",
     answer_1:
@@ -4629,12 +5435,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 220,
-    question_id: 60,
+    id: "220",
+    question_id: "60",
     main_question_stem:
       "The tobacco industry is still proﬁtable and projections are that it will remain so. In the United States this year, the total amount of tobacco sold by tobacco farmers has increased, even though the number of adults who smoke has decreased. Each of the following, if true, could explain the simultaneous increase in tobacco sales and decrease in the number of adults who smoke EXCEPT:",
     answer_1:
@@ -4650,12 +5461,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 221,
-    question_id: 61,
+    id: "221",
+    question_id: "61",
     main_question_stem:
       "A milepost on the towpath read “21” on the side facing the hiker as she approached it and “23” on its back. She reasoned that the next milepost forward on the path would indicate that she was halfway between one end of the path and the other. However, the milepost one mile further on read “20” facing her and “24” behind. Which of the following, if true, would explain the discrepancy described above?",
     answer_1: "The numbers on the next milepost had been reversed.",
@@ -4668,12 +5484,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 222,
-    question_id: 62,
+    id: "222",
+    question_id: "62",
     main_question_stem:
       "In response to viral infection, the immune systems of mice typically produce antibodies that destroy the virus by binding to proteins on its surface. Mice infected with a herpesvirus generally develop keratitis, a degenerative disease affecting part of the eye. Since proteins on the surface of cells in this part of the eye closely resemble those on the herpesvirus surface, scientists hypothesize that these cases of keratitis are caused by antibodies to herpesvirus. Which of the following, if true, gives the greatest additional support to the scientists’ hypothesis?",
     answer_1:
@@ -4689,12 +5510,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 223,
-    question_id: 63,
+    id: "223",
+    question_id: "63",
     main_question_stem:
       "Traditionally, decision making by managers that is reasoned step-by-step has been considered preferable to intuitive decision making. However, a recent study found that top managers used intuition signiﬁcantly more than did most middle- or lower-level managers. This conﬁrms the alternative view that intuition is actually more effective than careful, methodical reasoning. The conclusion above is based on which of the following assumptions?",
     answer_1:
@@ -4710,12 +5536,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 224,
-    question_id: 64,
+    id: "224",
+    question_id: "64",
     main_question_stem:
       "High levels of fertilizer and pesticides, needed when farmers try to produce high yields of the same crop year after year, pollute water supplies. Experts therefore urge farmers to diversify their crops and to rotate their plantings yearly. To receive governmental price-support beneﬁts for a crop, farmers must have produced that same crop for the past several years. The statements above, if true, best support which of the following conclusions?",
     answer_1:
@@ -4731,12 +5562,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 225,
-    question_id: 65,
+    id: "225",
+    question_id: "65",
     main_question_stem:
       "Which of the following most logically completes the argument? Utrania was formerly a major petroleum exporter, but in recent decades economic stagnation and restrictive regulations inhibited investment in new oil ﬁelds. In consequence, Utranian oil exports dropped steadily as old ﬁelds became depleted. Utrania’s currently improving economic situation, together with less- restrictive regulations, will undoubtedly result in the rapid development of new ﬁelds. However, it would be premature to conclude that the rapid development of new ﬁelds will result in higher oil exports, because .",
     answer_1:
@@ -4752,12 +5588,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 226,
-    question_id: 66,
+    id: "226",
+    question_id: "66",
     main_question_stem:
       "Hardin argued that grazing land held in common (that is, open to any user) would always be used less carefully than private grazing land. Each rancher would be tempted to overuse common land because the beneﬁts would accrue to the individual, while the costs of reduced land quality that results from overuse would be spread among all users. But a study comparing 217 million acres of common grazing land with 433 million acres of private grazing land showed that the common land was in better condition. The answer to which of the following questions would be most useful in evaluating the signiﬁcance, in relation to Hardin’s claim, of the study described above?",
     answer_1:
@@ -4773,12 +5614,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 227,
-    question_id: 67,
+    id: "227",
+    question_id: "67",
     main_question_stem:
       "A compelling optical illusion called the illusion of velocity and size makes objects appear to be moving more slowly the larger the objects are. Therefore, a motorist’s estimate of the time available for crossing a highway with a small car approaching is bound to be lower than it would be with a large truck approaching. The conclusion above would be more properly drawn if it were made clear that the",
     answer_1: "truck’s speed is assumed to be lower than the car’s",
@@ -4791,12 +5637,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 228,
-    question_id: 68,
+    id: "228",
+    question_id: "68",
     main_question_stem:
       "Manufacturers sometimes discount the price of a product to retailers for a promotion period when the product is advertised to consumers. Such promotions often result in a dramatic increase in amount of product sold by the manufacturers to retailers. Nevertheless, the manufacturers could often make more proﬁt by not holding the promotions. Which of the following, if true, most strongly supports the claim above about the manufacturers’ proﬁt?",
     answer_1:
@@ -4812,12 +5663,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 229,
-    question_id: 69,
+    id: "229",
+    question_id: "69",
     main_question_stem:
       "When people evade income taxes by not declaring taxable income, a vicious cycle results. Tax evasion forces lawmakers to raise income tax rates, which causes the tax burden on nonevading taxpayers to become heavier. This, in turn, encourages even more taxpayers to evade income taxes by hiding taxable income. The vicious cycle described above could not result unless which of the following were true?",
     answer_1:
@@ -4833,12 +5689,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 230,
-    question_id: 70,
+    id: "230",
+    question_id: "70",
     main_question_stem:
       "Plantings of cotton bioengineered to produce its own insecticide against bollworms, a major cause of crop failure, sustained little bollworm damage until this year. This year the plantings are being seriously damaged by bollworms. Bollworms, however, are not necessarily developing resistance to the cotton’s insecticide. Bollworms breed on corn, and last year more corn than usual was planted throughout cotton- growing regions. So it is likely that the cotton is simply being overwhelmed by corn-bred bollworms. In evaluating the argument, which of the following would it be most useful to establish?",
     answer_1: "Whether corn could be bioengineered to produce the insecticide",
@@ -4853,12 +5714,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 231,
-    question_id: 71,
+    id: "231",
+    question_id: "71",
     main_question_stem:
       "Because postage rates are rising, Home Decorator magazine plans to maximize its proﬁts by reducing by one-half the number of issues it publishes each year. The quality of articles, the number of articles published per year, and the subscription price will not change. Market research shows that neither subscribers nor advertisers will be lost if the magazine’s plan is instituted. Which of the following, if true, provides the strongest evidence that the magazine’s proﬁts are likely to decline if the plan is instituted?",
     answer_1:
@@ -4874,12 +5740,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 232,
-    question_id: 72,
+    id: "232",
+    question_id: "72",
     main_question_stem:
       "A discount retailer of basic household necessities employs thousands of people and pays most of them at the minimum wage rate. Yet following a federally mandated increase of the minimum wage rate that increased the retailer’s operating costs considerably, the retailer’s proﬁts increased markedly. Which of the following, if true, most helps to resolve the apparent paradox?",
     answer_1:
@@ -4895,12 +5766,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 233,
-    question_id: 73,
+    id: "233",
+    question_id: "73",
     main_question_stem:
       "The cotton farms of Country Q became so productive that the market could not absorb all that they produced. Consequently, cotton prices fell. The government tried to boost cotton prices by offering farmers who took 25 percent of their cotton acreage out of production direct support payments up to a speciﬁed maximum per farm. The government’s program, if successful, will not be a net burden on the budget. Which of the following, if true, is the best basis for an explanation of how this could be so?",
     answer_1:
@@ -4916,12 +5792,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 234,
-    question_id: 74,
+    id: "234",
+    question_id: "74",
     main_question_stem:
       "A product that represents a clear technological advance over competing products can generally command a high price. Because technological advances tend to be quickly surpassed and companies want to make large proﬁts while they still can, many companies charge the maximum possible price for such a product . But large proﬁts on the new product will give competitors a strong incentive to quickly match the new product’s capabilities. Consequently, the strategy to maximize overall proﬁt from a new product is to charge less than the greatest possible price. In the argument above, the two portions in boldface play which of the following roles?",
     answer_1:
@@ -4937,12 +5818,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 235,
-    question_id: 75,
+    id: "235",
+    question_id: "75",
     main_question_stem:
       "United States hospitals have traditionally relied primarily on revenues from paying patients to offset losses from unreimbursed care. Almost all paying patients now rely on governmental or private health insurance to pay hospital bills. Recently, insurers have been strictly limiting what they pay hospitals for the care of insured patients to amounts at or below actual costs. Which of the following conclusions is best supported by the information above?",
     answer_1:
@@ -4958,12 +5844,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 236,
-    question_id: 76,
+    id: "236",
+    question_id: "76",
     main_question_stem:
       "Generally scientists enter their ﬁeld with the goal of doing important new research and accept as their colleagues those with similar motivation. Therefore, when any scientist wins renown as an expounder of science to general audiences, most other scientists conclude that this popularizer should no longer be regarded as a true colleague. The explanation offered above for the low esteem in which scientiﬁc popularizers are held by research scientists assumes that",
     answer_1:
@@ -4979,12 +5870,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 237,
-    question_id: 77,
+    id: "237",
+    question_id: "77",
     main_question_stem:
       "Country Y uses its scarce foreign-exchange reserves to buy scrap iron for recycling into steel. Although the steel thus produced earns more foreign exchange than it costs, that policy is foolish. Country Y’s own territory has vast deposits of iron ore, which can be mined with minimal expenditure of foreign exchange. Which of the following, if true, provides the strongest support for Country Y’s policy of buying scrap iron abroad?",
     answer_1:
@@ -5000,12 +5896,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 238,
-    question_id: 78,
+    id: "238",
+    question_id: "78",
     main_question_stem:
       "Which of the following most logically completes the passage? The ﬁgures in portraits by the Spanish painter El Greco (1541–1614) are systematically elongated. In El Greco’s time, the intentional distortion of human ﬁgures was unprecedented in European painting. Consequently, some critics have suggested that El Greco had an astigmatism, a type of visual impairment, that resulted in people appearing to him in the distorted way that is characteristic of his paintings. However, this suggestion cannot be the explanation, because .",
     answer_1:
@@ -5021,12 +5922,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 239,
-    question_id: 79,
+    id: "239",
+    question_id: "79",
     main_question_stem:
       "Consumer health advocate: Your candy company adds caffeine to your chocolate candy bars so that each one delivers a speciﬁed amount of caffeine. Since caffeine is highly addictive, this indicates that you intend to keep your customers addicted. Candy manufacturer: Our manufacturing process results in there being less caffeine in each chocolate candy bar than in the unprocessed cacao beans from which the chocolate is made. The candy manufacturer’s response is ﬂawed as a refutation of the consumer health advocate’s argument because it",
     answer_1:
@@ -5042,12 +5948,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 240,
-    question_id: 80,
+    id: "240",
+    question_id: "80",
     main_question_stem:
       "To evaluate a plan to save money on ofﬁce-space expenditures by having its employees work at home, XYZ Company asked volunteers from its staff to try the arrangement for six months. During this period, the productivity of these employees was as high as or higher than before. Which of the following, if true, would argue most strongly against deciding, on the basis of the trial results, to implement the company’s plan?",
     answer_1:
@@ -5063,12 +5974,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 241,
-    question_id: 81,
+    id: "241",
+    question_id: "81",
     main_question_stem:
       "Political Advertisement: Mayor Delmont’s critics complain about the jobs that were lost in the city under Delmont’s leadership. Yet the fact is that not only were more jobs created than were eliminated, but each year since Delmont took ofﬁce the average pay for the new jobs created has been higher than that year’s average pay for jobs citywide. So it stands to reason that throughout Delmont’s tenure the average paycheck in this city has been getting steadily bigger. Which of the following, if true, most seriously weakens the argument in the advertisement?",
     answer_1:
@@ -5084,12 +6000,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 242,
-    question_id: 82,
+    id: "242",
+    question_id: "82",
     main_question_stem:
       "Vitacorp, a manufacturer, wishes to make its information booth at an industry convention more productive in terms of boosting sales. The booth offers information introducing the company’s new products and services. To achieve the desired result, Vitacorp’s marketing department will attempt to attract more people to the booth. The marketing director’s ﬁrst measure was to instruct each salesperson to call his or her ﬁve best customers and personally invite them to visit the booth. Which of the following, if true, most strongly supports the prediction that the marketing director’s ﬁrst measure will contribute to meeting the goal of boosting sales?",
     answer_1:
@@ -5105,12 +6026,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 243,
-    question_id: 83,
+    id: "243",
+    question_id: "83",
     main_question_stem:
       "An eyeglass manufacturer tried to boost sales for the summer quarter by offering its distributors a special discount if their orders for that quarter exceeded those for last year’s summer quarter by at least 20 percent. Many distributors qualiﬁed for this discount. Even with much merchandise discounted, sales increased enough to produce a healthy gain in net proﬁts. The manufacturer plans to repeat this success by offering the same sort of discount for the fall quarter. Which of the following, if true, most clearly points to a ﬂaw in the manufacturer’s plan to repeat the successful performance of the summer quarter?",
     answer_1:
@@ -5126,12 +6052,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 244,
-    question_id: 1,
+    id: "244",
+    question_id: "1",
     main_question_stem:
       "Like ants, termites have an elaborate social structure in which a few individuals reproduce and the rest are serving the colony by tending juveniles, gathering food, building the nest, or they battle intruders.",
     answer_1:
@@ -5147,12 +6078,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 245,
-    question_id: 2,
+    id: "245",
+    question_id: "2",
     main_question_stem:
       "Some bat caves, like honeybee hives, have residents that take on different duties such as defending the entrance, acting as sentinels and to sound a warning at the approach of danger, and scouting outside the cave for new food and roosting sites.",
     answer_1: "acting as sentinels and to sound",
@@ -5163,12 +6099,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 246,
-    question_id: 3,
+    id: "246",
+    question_id: "3",
     main_question_stem:
       "However much United States voters may agree that there is waste in government and that the government as a whole spends beyond its means, it is difﬁcult to ﬁnd broad support for a movement toward a minimal state.",
     answer_1: "However much United States voters may agree that",
@@ -5179,12 +6120,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 247,
-    question_id: 4,
+    id: "247",
+    question_id: "4",
     main_question_stem:
       "The voluminous personal papers of Thomas Alva Edison reveal that his inventions typically sprang to life not in a ﬂash of inspiration but evolved slowly from previous works.",
     answer_1: "sprang to life not in a ﬂash of inspiration but evolved slowly",
@@ -5199,12 +6145,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 248,
-    question_id: 5,
+    id: "248",
+    question_id: "5",
     main_question_stem:
       "Hundreds of species of ﬁsh generate and discharge electric currents, in bursts or as steady electric ﬁelds around their bodies, using their power either to ﬁnd and attack prey, to defend themselves, or also for communicating and navigating.",
     answer_1:
@@ -5220,12 +6171,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 249,
-    question_id: 6,
+    id: "249",
+    question_id: "6",
     main_question_stem:
       "A Labor Department study states that the numbers of women employed outside the home grew by more than a thirty-ﬁve percent increase in the past decade and accounted for more than sixty-two percent of the total growth in the civilian workforce.",
     answer_1:
@@ -5241,12 +6197,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 250,
-    question_id: 7,
+    id: "250",
+    question_id: "7",
     main_question_stem:
       "From the earliest days of the tribe, kinship determined the way in which the Ojibwa society organized its labor, provided access to its resources, and deﬁned rights and obligations involved in the distribution and consumption of those resources.",
     answer_1:
@@ -5262,12 +6223,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 251,
-    question_id: 8,
+    id: "251",
+    question_id: "8",
     main_question_stem:
       "As the cost of wireless service has steadily dropped over the last year and as mobile phones have become increasingly common, many people are ﬁnding that they can avoid toll charges on their home phones, using their mobile phones for making long-distance calls at night or on weekends, at a time which many wireless companies provide unlimited airtime for a small monthly fee.",
     answer_1:
@@ -5283,12 +6249,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 252,
-    question_id: 9,
+    id: "252",
+    question_id: "9",
     main_question_stem:
       "Delighted by the reported earnings for the ﬁrst quarter of the ﬁscal year, it was decided by the company manager to give her staff a raise.",
     answer_1: "it was decided by the company manager to give her staff a raise",
@@ -5300,12 +6271,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 253,
-    question_id: 10,
+    id: "253",
+    question_id: "10",
     main_question_stem:
       "The rising of costs of data-processing operations at many ﬁnancial institutions has created a growing opportunity for independent companies to provide these services more efﬁciently and at lower cost.",
     answer_1: "The rising of costs",
@@ -5316,12 +6292,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 254,
-    question_id: 11,
+    id: "254",
+    question_id: "11",
     main_question_stem:
       "Native to South America, when peanuts were introduced to Africa by Portuguese explorers early in the sixteenth century they were quickly adopted into Africa’s agriculture, probably because of being so similar to the Bambarra groundnut, a popular indigenous plant.",
     answer_1:
@@ -5337,12 +6318,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 255,
-    question_id: 12,
+    id: "255",
+    question_id: "12",
     main_question_stem:
       "William H. Johnson’s artistic debt to Scandinavia is evident in paintings that range from sensitive portraits of citizens in his wife’s Danish home, Kerteminde, and awe-inspiring views of fjords and mountain peaks in the western and northern regions of Norway.",
     answer_1: "and",
@@ -5353,12 +6339,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 256,
-    question_id: 13,
+    id: "256",
+    question_id: "13",
     main_question_stem:
       "Growing competitive pressures may be encouraging auditors to bend the rules in favor of clients; auditors may, for instance, allow a questionable loan to remain on the books in order to maintain a bank’s proﬁts on paper.",
     answer_1: "clients; auditors may, for instance, allow",
@@ -5369,12 +6360,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 257,
-    question_id: 14,
+    id: "257",
+    question_id: "14",
     main_question_stem:
       "The themes that Rita Dove explores in her poetry is universal, encompassing much of the human condition while occasionally she deals with racial issues.",
     answer_1:
@@ -5390,12 +6386,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 258,
-    question_id: 15,
+    id: "258",
+    question_id: "15",
     main_question_stem:
       "It is well known in the supermarket industry that how items are placed on shelves and the frequency of inventory turnovers can be crucial to proﬁts.",
     answer_1: "the frequency of inventory turnovers can be",
@@ -5406,12 +6407,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 259,
-    question_id: 16,
+    id: "259",
+    question_id: "16",
     main_question_stem:
       "Iguanas have been an important food source in Latin America since prehistoric times, and it is still prized as a game animal by the campesinos, who typically cook the meat in a heavily spiced stew.",
     answer_1: "it is still prized as a game animal",
@@ -5422,12 +6428,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 260,
-    question_id: 17,
+    id: "260",
+    question_id: "17",
     main_question_stem:
       "Travelers to Mars would have to endure low levels of gravity for long periods of time, avoid large doses of radiation, contend with the chemically reactive Martian soil, and perhaps even having to ward off contamination by Martian life-forms.",
     answer_1:
@@ -5443,12 +6454,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 261,
-    question_id: 18,
+    id: "261",
+    question_id: "18",
     main_question_stem:
       "Except for a concert performance that the composer himself staged in 1911, Scott Joplin’s ragtime opera Treemonisha was not produced until 1972, sixty-one years after its completion.",
     answer_1:
@@ -5464,12 +6480,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 262,
-    question_id: 19,
+    id: "262",
+    question_id: "19",
     main_question_stem:
       "Chinese, the most ancient of living writing systems, consists of tens of thousands of ideographic characters, each character a miniature calligraphic composition inside its own square frame.",
     answer_1: "each character a miniature calligraphic composition inside its",
@@ -5484,12 +6505,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 263,
-    question_id: 20,
+    id: "263",
+    question_id: "20",
     main_question_stem:
       "Declining values for farm equipment and land, the collateral against which farmers borrow to get through the harvest season, is going to force many lenders to tighten or deny credit this spring.",
     answer_1:
@@ -5505,12 +6531,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 264,
-    question_id: 21,
+    id: "264",
+    question_id: "21",
     main_question_stem:
       "While depressed property values can hurt some large investors, they are potentially devastating for homeowners, whose equity—in many cases representing a life’s savings—can plunge or even disappear.",
     answer_1: "they are potentially devastating for homeowners, whose",
@@ -5521,12 +6552,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 265,
-    question_id: 22,
+    id: "265",
+    question_id: "22",
     main_question_stem:
       "Japanese researchers are producing a series of robots that can identify human facial expressions, to which they will then respond; their goal is primarily creating a robot that will empathize with us.",
     answer_1:
@@ -5541,12 +6577,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 266,
-    question_id: 23,
+    id: "266",
+    question_id: "23",
     main_question_stem:
       "Consumers may not think of household cleaning products to be hazardous substances, but many of them can be harmful to health, especially if they are used improperly.",
     answer_1: "Consumers may not think of household cleaning products to be",
@@ -5559,12 +6600,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 267,
-    question_id: 24,
+    id: "267",
+    question_id: "24",
     main_question_stem:
       "In recent years cattle breeders have increasingly used crossbreeding, in part that their steers should acquire certain characteristics and partly because crossbreeding is said to provide hybrid vigor.",
     answer_1:
@@ -5579,12 +6625,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 268,
-    question_id: 25,
+    id: "268",
+    question_id: "25",
     main_question_stem:
       "Like Auden, the language of James Merrill is chatty, arch, and conversational—given to complex syntactic ﬂights as well as to prosaic free-verse strolls.",
     answer_1: "Like Auden, the language of James Merrill",
@@ -5595,12 +6646,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 269,
-    question_id: 26,
+    id: "269",
+    question_id: "26",
     main_question_stem:
       "The Baldrick Manufacturing Company has for several years followed a policy aimed at decreasing operating costs and improving the efﬁciency of its distribution system.",
     answer_1: "aimed at decreasing operating costs and improving",
@@ -5612,12 +6668,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 270,
-    question_id: 27,
+    id: "270",
+    question_id: "27",
     main_question_stem:
       "Obtaining an investment-grade rating will keep the county’s future borrowing costs low, protect its already-tattered image, and increase its ability to buy bond insurance.",
     answer_1:
@@ -5633,12 +6694,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 271,
-    question_id: 28,
+    id: "271",
+    question_id: "28",
     main_question_stem:
       "Eating saltwater ﬁsh may signiﬁcantly reduce the risk of heart attacks and also aid for sufferers of rheumatoid arthritis and asthma, according to three research studies published in the New England Journal of Medicine .",
     answer_1: "signiﬁcantly reduce the risk of heart attacks and also aid for",
@@ -5650,12 +6716,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 272,
-    question_id: 29,
+    id: "272",
+    question_id: "29",
     main_question_stem:
       "According to some economists, the July decrease in unemployment so that it was the lowest in two years suggests that the gradual improvement in the job market is continuing.",
     answer_1: "so that it was the lowest in two years",
@@ -5666,12 +6737,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 273,
-    question_id: 30,
+    id: "273",
+    question_id: "30",
     main_question_stem:
       "Thomas Eakins’ powerful style and his choices of subject—the advances in modern surgery, the discipline of sport, the strains of individuals in tension with society or even with themselves—was as disturbing to his own time as it is compelling for ours.",
     answer_1: "was as disturbing to his own time as it is",
@@ -5682,12 +6758,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 274,
-    question_id: 31,
+    id: "274",
+    question_id: "31",
     main_question_stem:
       "Nearly two tons of nuclear-reactor fuel have already been put into orbit around the Earth, and the chances of a collision involving such material increase greatly as the amount of both space debris and satellites continue to rise.",
     answer_1:
@@ -5703,12 +6784,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 275,
-    question_id: 32,
+    id: "275",
+    question_id: "32",
     main_question_stem:
       "Like Rousseau, Tolstoi rebelled against the unnatural complexity of human relations in modern society.",
     answer_1: "Like Rousseau, Tolstoi rebelled",
@@ -5719,12 +6805,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 276,
-    question_id: 33,
+    id: "276",
+    question_id: "33",
     main_question_stem:
       "The Wallerstein study indicates that even after a decade young men and women still experience some of the effects of a divorce occurring when a child.",
     answer_1: "occurring when a child",
@@ -5735,12 +6826,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 277,
-    question_id: 34,
+    id: "277",
+    question_id: "34",
     main_question_stem:
       "Lacking information about energy use, people tend to overestimate the amount of energy used by equipment, such as lights, that are visible and must be turned on and off and underestimate that used by unobtrusive equipment, such as water heaters.",
     answer_1:
@@ -5756,12 +6852,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 278,
-    question_id: 35,
+    id: "278",
+    question_id: "35",
     main_question_stem:
       "The rise in the Commerce Department’s index of leading economic indicators suggest that the economy should continue its expansion into the coming months, but that the mixed performance of the index’s individual components indicates that economic growth will proceed at a more moderate pace than in the ﬁrst quarter of this year.",
     answer_1:
@@ -5777,12 +6878,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 279,
-    question_id: 36,
+    id: "279",
+    question_id: "36",
     main_question_stem:
       "Polio, although it is eradicated in the United States, it continues elsewhere and is able to be brought into the country by visitors.",
     answer_1:
@@ -5798,12 +6904,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 280,
-    question_id: 37,
+    id: "280",
+    question_id: "37",
     main_question_stem:
       "Some buildings that were destroyed and heavily damaged in the earthquake last year were constructed in violation of the city’s building code.",
     answer_1:
@@ -5819,12 +6930,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 281,
-    question_id: 38,
+    id: "281",
+    question_id: "38",
     main_question_stem:
       "A study commissioned by the Department of Agriculture showed that if calves exercise and associated with other calves, they will require less medication and gain weight quicker than do those raised in conﬁnement.",
     answer_1:
@@ -5840,12 +6956,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 282,
-    question_id: 39,
+    id: "282",
+    question_id: "39",
     main_question_stem:
       "A recent study has found that within the past few years, many doctors had elected early retirement rather than face the threats of lawsuits and the rising costs of malpractice insurance.",
     answer_1: "had elected early retirement rather than face",
@@ -5856,12 +6977,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 283,
-    question_id: 40,
+    id: "283",
+    question_id: "40",
     main_question_stem:
       "The Gorton-Dodd bill requires that a bank disclose to their customers how long they will delay access to funds from deposited checks.",
     answer_1:
@@ -5877,12 +7003,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 284,
-    question_id: 41,
+    id: "284",
+    question_id: "41",
     main_question_stem:
       "Unlike a funded pension system, in which contributions are invested to pay future beneﬁciaries, a pay-as- you-go approach is the foundation of Social Security.",
     answer_1: "a pay-as-you-go approach is the foundation of Social Security",
@@ -5893,12 +7024,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 285,
-    question_id: 42,
+    id: "285",
+    question_id: "42",
     main_question_stem:
       "Twenty-two feet long and 10 feet in diameter, the AM-1 is one of the many new satellites that is a part of 15 years effort of subjecting the interactions of Earth’s atmosphere, oceans, and land surfaces to detailed scrutiny from space.",
     answer_1:
@@ -5914,12 +7050,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 286,
-    question_id: 43,
+    id: "286",
+    question_id: "43",
     main_question_stem:
       "Though the term “graphic design” may suggest laying out corporate brochures and annual reports, they have come to signify widely ranging work, from package designs and company logotypes to signs, book jackets, computer graphics, and ﬁlm titles.",
     answer_1:
@@ -5935,12 +7076,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 287,
-    question_id: 44,
+    id: "287",
+    question_id: "44",
     main_question_stem:
       "In contrast to large steel plants that take iron ore through all the steps needed to produce several different kinds of steel, processing steel scrap into a specialized group of products has enabled small mills to put capital into new technology and remain economically viable.",
     answer_1:
@@ -5956,12 +7102,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 288,
-    question_id: 45,
+    id: "288",
+    question_id: "45",
     main_question_stem:
       "Under high pressure and intense heat, graphite, the most stable form of pure carbon, changes into the substance commonly referred to as diamond and remaining this way whether or not the heat and pressure are removed.",
     answer_1: "remaining this way whether or not",
@@ -5972,12 +7123,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 289,
-    question_id: 46,
+    id: "289",
+    question_id: "46",
     main_question_stem:
       "The psychologist William James believed that facial expressions not only provide a visible sign of an emotion, actually contributing to the feeling itself.",
     answer_1: "emotion, actually contributing to the feeling itself",
@@ -5989,12 +7145,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 290,
-    question_id: 47,
+    id: "290",
+    question_id: "47",
     main_question_stem:
       "Wisconsin, Illinois, Florida, and Minnesota have begun to enforce statewide bans prohibiting landﬁlls to accept leaves, brush, and grass clippings.",
     answer_1:
@@ -6009,12 +7170,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 291,
-    question_id: 48,
+    id: "291",
+    question_id: "48",
     main_question_stem:
       "Reporting that one of its many problems had been the recent extended sales slump in women’s apparel, the seven-store retailer said it would start a three-month liquidation sale in all of its stores.",
     answer_1: "its many problems had been the recent",
@@ -6025,12 +7191,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 292,
-    question_id: 49,
+    id: "292",
+    question_id: "49",
     main_question_stem:
       "In developing new facilities for the incineration of solid wastes, we must avoid the danger of shifting environmental problems from landﬁlls polluting the water to polluting the air with incinerators.",
     answer_1:
@@ -6046,12 +7217,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 293,
-    question_id: 50,
+    id: "293",
+    question_id: "50",
     main_question_stem:
       "The bank holds $3 billion in loans that are seriously delinquent or in such trouble that they do not expect payments when due.",
     answer_1: "they do not expect payments when",
@@ -6062,12 +7238,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 294,
-    question_id: 51,
+    id: "294",
+    question_id: "51",
     main_question_stem:
       "In a 5-to-4 decision, the Supreme Court ruled that two upstate New York counties owed restitution to three tribes of Oneida Indians for the unlawful seizure of their ancestral lands in the eighteenth century.",
     answer_1:
@@ -6083,12 +7264,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 295,
-    question_id: 52,
+    id: "295",
+    question_id: "52",
     main_question_stem:
       "Recently discovered fossil remains strongly suggest that the Australian egg-laying mammals of today are a branch of the main stem of mammalian evolution rather than developing independently from a common ancestor of mammals more than 220 million years ago.",
     answer_1: "rather than developing independently from",
@@ -6099,12 +7285,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 296,
-    question_id: 53,
+    id: "296",
+    question_id: "53",
     main_question_stem:
       "The normative model of strategic decision-making suggests that executives examine a ﬁrm’s external environment and internal conditions, and in using the set of objective criteria they derive from these analyses, can decide on a strategy.",
     answer_1:
@@ -6120,12 +7311,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 297,
-    question_id: 54,
+    id: "297",
+    question_id: "54",
     main_question_stem:
       "A patient accusing a doctor of malpractice will ﬁnd it difﬁcult to prove damage if there is a lack of some other doctor to testify about proper medical procedures.",
     answer_1: "if there is a lack of some other doctor to testify",
@@ -6136,12 +7332,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 298,
-    question_id: 55,
+    id: "298",
+    question_id: "55",
     main_question_stem:
       "The energy source on Voyager 2 is not a nuclear reactor, in which atoms are actively broken apart; rather a kind of nuclear battery that uses natural radioactive decay to produce power.",
     answer_1: "apart; rather",
@@ -6152,12 +7353,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 299,
-    question_id: 56,
+    id: "299",
+    question_id: "56",
     main_question_stem:
       "Archaeologists in Ireland believe that a recently discovered chalice, which dates from the eighth century, was probably buried to keep from being stolen by invaders.",
     answer_1: "to keep from",
@@ -6168,12 +7374,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 300,
-    question_id: 57,
+    id: "300",
+    question_id: "57",
     main_question_stem:
       "According to its proponents, a proposed new style of aircraft could, by skimming along the top of the atmosphere, ﬂy between most points on Earth in under two hours.",
     answer_1:
@@ -6189,12 +7400,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 301,
-    question_id: 58,
+    id: "301",
+    question_id: "58",
     main_question_stem:
       "Lawmakers are examining measures that would require banks to disclose all fees and account requirements in writing, provide free cashing of government checks, and to create basic savings accounts to carry minimal fees and require minimal initial deposits.",
     answer_1:
@@ -6210,12 +7426,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 302,
-    question_id: 59,
+    id: "302",
+    question_id: "59",
     main_question_stem:
       "Certain pesticides can become ineffective if used repeatedly in the same place; one reason is suggested by the ﬁnding that there are much larger populations of pesticide-degrading microbes in soils with a relatively long history of pesticide use than in soils that are free of such chemicals.",
     answer_1:
@@ -6231,12 +7452,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 303,
-    question_id: 60,
+    id: "303",
+    question_id: "60",
     main_question_stem:
       "In the textbook publishing business, the second quarter is historically weak, because revenues are low and marketing expenses are high as companies prepare for the coming school year.",
     answer_1: "low and marketing expenses are high as companies prepare",
@@ -6247,12 +7473,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 304,
-    question_id: 61,
+    id: "304",
+    question_id: "61",
     main_question_stem:
       "Almost a decade after New York State passed laws to protect patients by reducing the grueling hours worked by medical residents, twelve hospitals have been investigated by state medical ofﬁcials, ﬁnding that all twelve consistently break the laws, many residents work longer than 24 hours straight, and that more than half the surgical residents work more than 95 hours a week.",
     answer_1:
@@ -6268,12 +7499,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 305,
-    question_id: 62,
+    id: "305",
+    question_id: "62",
     main_question_stem:
       "Parliament did not accord full refugee beneﬁts to twelve of the recent immigrants because it believed that to do it rewards them for entering the country illegally.",
     answer_1: "to do it rewards",
@@ -6284,12 +7520,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 306,
-    question_id: 63,
+    id: "306",
+    question_id: "63",
     main_question_stem:
       "Many policy experts say that shifting a portion of health-beneﬁt costs back to the workers helps to control the employer’s costs, but also helps to limit medical spending by making patients more careful consumers.",
     answer_1: "helps to control the employer’s costs, but also helps",
@@ -6300,12 +7541,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 307,
-    question_id: 64,
+    id: "307",
+    question_id: "64",
     main_question_stem:
       "Ms. Chambers is among the forecasters who predict that the rate of addition to arable lands will drop while those of loss rise.",
     answer_1: "those of loss rise",
@@ -6316,12 +7562,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 308,
-    question_id: 65,
+    id: "308",
+    question_id: "65",
     main_question_stem:
       "The market for recycled commodities like aluminum and other metals remain strong despite economic changes in the recycling industry.",
     answer_1: "commodities like aluminum and other metals remain",
@@ -6334,12 +7585,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 309,
-    question_id: 66,
+    id: "309",
+    question_id: "66",
     main_question_stem:
       "Unlike auto insurance, the frequency of claims does not affect the premiums for personal property coverage, but if the insurance company is able to prove excessive loss due to owner negligence, it may decline to renew the policy.",
     answer_1:
@@ -6355,12 +7611,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 310,
-    question_id: 67,
+    id: "310",
+    question_id: "67",
     main_question_stem:
       "Faced with an estimated $2 billion budget gap, the city’s mayor proposed a nearly 17 percent reduction in the amount allocated the previous year to maintain the city’s major cultural institutions and to subsidize hundreds of local arts groups.",
     answer_1:
@@ -6376,12 +7637,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 311,
-    question_id: 68,
+    id: "311",
+    question_id: "68",
     main_question_stem:
       "By offering lower prices and a menu of personal communications options, such as caller identiﬁcation and voice mail, the new telecommunications company has not only captured customers from other phone companies but also forced them to offer competitive prices.",
     answer_1:
@@ -6397,12 +7663,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 312,
-    question_id: 69,
+    id: "312",
+    question_id: "69",
     main_question_stem:
       "The Anasazi settlements at Chaco Canyon were built on a spectacular scale, with more than 75 carefully engineered structures, of up to 600 rooms each, were connected by a complex regional system of roads.",
     answer_1:
@@ -6418,12 +7689,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 313,
-    question_id: 70,
+    id: "313",
+    question_id: "70",
     main_question_stem:
       "The gyrfalcon, an Arctic bird of prey, has survived a close brush with extinction; its numbers are now ﬁve times greater than when the use of DDT was sharply restricted in the early 1970s.",
     answer_1: "extinction; its numbers are now ﬁve times greater than",
@@ -6434,12 +7710,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 314,
-    question_id: 71,
+    id: "314",
+    question_id: "71",
     main_question_stem:
       "Analysts blamed May’s sluggish retail sales on unexciting merchandise as well as the weather, colder and wetter than was usual in some regions, which slowed sales of barbecue grills and lawn furniture.",
     answer_1: "colder and wetter than was usual in some regions, which slowed",
@@ -6452,12 +7733,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 315,
-    question_id: 72,
+    id: "315",
+    question_id: "72",
     main_question_stem:
       "State ofﬁcials report that soaring rates of liability insurance have risen to force cutbacks in the operations of everything from local governments and school districts to day-care centers and recreational facilities.",
     answer_1: "rates of liability insurance have risen to force",
@@ -6468,12 +7754,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 316,
-    question_id: 73,
+    id: "316",
+    question_id: "73",
     main_question_stem:
       "After suffering $2 billion in losses and 25,000 layoffs, the nation’s semiconductor industry, which makes chips that run everything from computers and spy satellites to dishwashers, appears to have made a long-awaited recovery.",
     answer_1: "computers and spy satellites to dishwashers, appears to have",
@@ -6486,12 +7777,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 317,
-    question_id: 74,
+    id: "317",
+    question_id: "74",
     main_question_stem:
       "While some academicians believe that business ethics should be integrated into every business course, others say that students will take ethics seriously only if it would be taught as a separately required course.",
     answer_1: "only if it would be taught as a separately required course",
@@ -6502,12 +7798,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 318,
-    question_id: 75,
+    id: "318",
+    question_id: "75",
     main_question_stem:
       "Scientists have observed large concentrations of heavy-metal deposits in the upper twenty centimeters of Baltic Sea sediments, which are consistent with the growth of industrial activity there.",
     answer_1:
@@ -6523,12 +7824,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 319,
-    question_id: 76,
+    id: "319",
+    question_id: "76",
     main_question_stem:
       "Under a provision of the Constitution that was never applied, Congress has been required to call a convention for considering possible amendments to the document when formally asked to do it by the legislatures of two-thirds of the states.",
     answer_1:
@@ -6544,12 +7850,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 320,
-    question_id: 77,
+    id: "320",
+    question_id: "77",
     main_question_stem:
       "Geologists believe that the warning signs for a major earthquake may include sudden ﬂuctuations in local seismic activity, tilting and other deformations of the Earth’s crust, changing the measured strain across a fault zone and varying the electrical properties of underground rocks.",
     answer_1: "changing the measured strain across a fault zone and varying",
@@ -6564,12 +7875,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 321,
-    question_id: 78,
+    id: "321",
+    question_id: "78",
     main_question_stem:
       "The root systems of most ﬂowering perennials either become too crowded, which results in loss in vigor, and spread too far outward, producing a bare center.",
     answer_1: "which results in loss in vigor, and spread",
@@ -6580,12 +7896,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 322,
-    question_id: 79,
+    id: "322",
+    question_id: "79",
     main_question_stem:
       "The computer company has announced that it will purchase the color-printing division of a rival company for $950 million, which is part of a deal that will make it the largest manufacturer in the ofﬁce color-printing market.",
     answer_1: "million, which is part of a deal that will make",
@@ -6596,12 +7917,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 323,
-    question_id: 80,
+    id: "323",
+    question_id: "80",
     main_question_stem:
       "Any medical test will sometimes fail to detect a condition when it is present and indicate that there is one when it is not.",
     answer_1: "a condition when it is present and indicate that there is one",
@@ -6613,12 +7939,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 324,
-    question_id: 81,
+    id: "324",
+    question_id: "81",
     main_question_stem:
       "Since 1986, when the Department of Labor began to allow investment ofﬁcers’ fees to be based on how the funds they manage perform, several corporations began paying their investment advisers a small basic fee, with a contract promising higher fees if the managers perform well.",
     answer_1:
@@ -6634,12 +7965,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 325,
-    question_id: 82,
+    id: "325",
+    question_id: "82",
     main_question_stem:
       "Downzoning, zoning that typically results in the reduction of housing density, allows for more open space in areas where little water or services exist.",
     answer_1: "little water or services exist",
@@ -6650,12 +7986,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 326,
-    question_id: 83,
+    id: "326",
+    question_id: "83",
     main_question_stem:
       "In theory, international civil servants at the United Nations are prohibited from continuing to draw salaries from their own governments; in practice, however, some governments merely substitute living allowances for their employees’ paychecks, assigned by them to the United Nations.",
     answer_1: "for their employees’ paychecks, assigned by them",
@@ -6668,12 +8009,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 327,
-    question_id: 84,
+    id: "327",
+    question_id: "84",
     main_question_stem:
       "The computer company’s present troubles are a result of technological stagnation, marketing missteps, and managerial blunders so that several attempts to revise corporate strategies have failed to correct it.",
     answer_1:
@@ -6689,12 +8035,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 328,
-    question_id: 85,
+    id: "328",
+    question_id: "85",
     main_question_stem:
       "According to a study by the Carnegie Foundation for the Advancement of Teaching, companies in the United States are providing job training and general education for nearly eight million people, about equivalent to the enrollment of the nation’s four-year colleges and universities.",
     answer_1: "equivalent to the enrollment of",
@@ -6705,12 +8056,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 329,
-    question_id: 86,
+    id: "329",
+    question_id: "86",
     main_question_stem:
       "Intar, the oldest Hispanic theater company in New York, has moved away from the Spanish classics and now it draws on the works both of contemporary Hispanic authors who live abroad and of those in the United States.",
     answer_1:
@@ -6726,12 +8082,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 330,
-    question_id: 87,
+    id: "330",
+    question_id: "87",
     main_question_stem:
       "Last year, land values in most parts of the pinelands rose almost so fast, and in some parts even faster than what they did outside the pinelands.",
     answer_1: "so fast, and in some parts even faster than what they did",
@@ -6742,12 +8103,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 331,
-    question_id: 88,
+    id: "331",
+    question_id: "88",
     main_question_stem:
       "Clouds are formed from the evaporation of the oceans’ water that is warmed by the sun and rises high into the atmosphere, condensing in tiny droplets on minute particles of dust.",
     answer_1:
@@ -6763,12 +8129,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 332,
-    question_id: 89,
+    id: "332",
+    question_id: "89",
     main_question_stem:
       "If Dr. Wade was right, any apparent connection of the eating of highly processed foods and excelling at sports is purely coincidental.",
     answer_1: "If Dr. Wade was right, any apparent connection of the eating of",
@@ -6781,12 +8152,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 333,
-    question_id: 90,
+    id: "333",
+    question_id: "90",
     main_question_stem:
       "The commission proposed that funding for the park’s development, which could be open to the public early next year, is obtained through a local bond issue.",
     answer_1:
@@ -6802,12 +8178,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 334,
-    question_id: 91,
+    id: "334",
+    question_id: "91",
     main_question_stem:
       "Seismologists studying the earthquake that struck northern California in October 1989 are still investigating some of its mysteries: the unexpected power of the seismic waves, the upward thrust that threw one man straight into the air, and the strange electromagnetic signals detected hours before the temblor.",
     answer_1:
@@ -6823,12 +8204,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 335,
-    question_id: 92,
+    id: "335",
+    question_id: "92",
     main_question_stem:
       "Schistosomiasis, a disease caused by a parasitic worm, is prevalent in hot, humid climates, and it has become more widespread as irrigation projects have enlarged the habitat of the freshwater snails that are the parasite’s hosts for part of its life cycle.",
     answer_1:
@@ -6844,12 +8230,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 336,
-    question_id: 93,
+    id: "336",
+    question_id: "93",
     main_question_stem:
       "Two new studies indicate that many people become obese more due to the fact that their bodies burn calories too slowly than overeating.",
     answer_1:
@@ -6865,12 +8256,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 337,
-    question_id: 94,
+    id: "337",
+    question_id: "94",
     main_question_stem:
       "Judge Bonham denied a motion to allow members of the jury to go home at the end of each day instead of to conﬁne them to a hotel.",
     answer_1:
@@ -6886,12 +8282,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 338,
-    question_id: 95,
+    id: "338",
+    question_id: "95",
     main_question_stem:
       "Proponents of artiﬁcial intelligence say they will be able to make computers that can understand English and other human languages, recognize objects, and reason as an expert does—computers that will be used to diagnose equipment breakdowns, deciding whether to authorize a loan, or other purposes such as these.",
     answer_1:
@@ -6907,12 +8308,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 339,
-    question_id: 96,
+    id: "339",
+    question_id: "96",
     main_question_stem:
       "Floating in the waters of the equatorial Paciﬁc, an array of buoys collects and transmits data on long- term interactions between the ocean and the atmosphere, interactions that affect global climate.",
     answer_1: "atmosphere, interactions that affect",
@@ -6923,12 +8329,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 340,
-    question_id: 97,
+    id: "340",
+    question_id: "97",
     main_question_stem:
       "Unlike the United States, where farmers can usually depend on rain or snow all year long, the rains in most parts of Sri Lanka are concentrated in the monsoon months, June to September, and the skies are generally clear for the rest of the year.",
     answer_1:
@@ -6944,12 +8355,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 341,
-    question_id: 98,
+    id: "341",
+    question_id: "98",
     main_question_stem:
       "Although Napoleon’s army entered Russia with far more supplies than they had in their previous campaigns, it had provisions for only twenty-four days.",
     answer_1: "they had in their previous campaigns,",
@@ -6960,12 +8376,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 342,
-    question_id: 99,
+    id: "342",
+    question_id: "99",
     main_question_stem:
       "After the Civil War, contemporaries of Harriet Tubman’s maintained that she has all of the qualities of a great leader: coolness in the face of danger, an excellent sense of strategy, and an ability to plan in minute detail.",
     answer_1: "Tubman’s maintained that she has",
@@ -6976,12 +8397,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 343,
-    question_id: 100,
+    id: "343",
+    question_id: "100",
     main_question_stem:
       "Sixty-ﬁve million years ago, according to some scientists, an asteroid bigger than Mount Everest slammed into North America, which, causing plant and animal extinctions, marks the end of the geologic era known as the Cretaceous Period.",
     answer_1: "which, causing plant and animal extinctions, marks",
@@ -6992,12 +8418,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 344,
-    question_id: 101,
+    id: "344",
+    question_id: "101",
     main_question_stem:
       "The Federalist papers, a strong defense of the United States Constitution and important as a body of work in political science as well, represents the handiwork of three different authors.",
     answer_1:
@@ -7013,12 +8444,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 345,
-    question_id: 102,
+    id: "345",
+    question_id: "102",
     main_question_stem:
       "As business grows more complex, students majoring in specialized areas like those of ﬁnance and marketing have been becoming increasingly successful in the job market.",
     answer_1:
@@ -7034,12 +8470,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 346,
-    question_id: 103,
+    id: "346",
+    question_id: "103",
     main_question_stem:
       "Inuits of the Bering Sea were in isolation from contact with Europeans longer than Aleuts or Inuits of the North Paciﬁc and northern Alaska.",
     answer_1: "in isolation from contact with Europeans longer than",
@@ -7050,12 +8491,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 347,
-    question_id: 104,
+    id: "347",
+    question_id: "104",
     main_question_stem:
       "Although the ﬁrst pulsar, or rapidly spinning collapsed star, to be sighted was in the summer of 1967 by graduate student Jocelyn Bell, it had not been announced until February 1968.",
     answer_1:
@@ -7071,12 +8517,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 348,
-    question_id: 105,
+    id: "348",
+    question_id: "105",
     main_question_stem:
       "The physical structure of the human eye enables it to sense light of wavelengths up to 0.0005 millimeters; infrared radiation, however, is invisible because its wavelength—0.1 millimeters—is too long to be registered by the eye.",
     answer_1:
@@ -7092,12 +8543,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 349,
-    question_id: 106,
+    id: "349",
+    question_id: "106",
     main_question_stem:
       "As well as heat and light, the sun is the source of a continuous stream of atomic particles known as the solar wind.",
     answer_1:
@@ -7113,12 +8569,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 350,
-    question_id: 107,
+    id: "350",
+    question_id: "107",
     main_question_stem:
       "Bluegrass musician Bill Monroe, whose repertory, views on musical collaboration, and vocal style were inﬂuential on generations of bluegrass artists, was also an inspiration to many musicians, that included Elvis Presley and Jerry Garcia, whose music differed signiﬁcantly from his own.",
     answer_1:
@@ -7134,12 +8595,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 351,
-    question_id: 108,
+    id: "351",
+    question_id: "108",
     main_question_stem:
       "Sound can travel through water for enormous distances, prevented from dissipating its acoustic energy as a result of boundaries in the ocean created by water layers of different temperatures and densities.",
     answer_1: "prevented from dissipating its acoustic energy as a result of",
@@ -7151,12 +8617,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 352,
-    question_id: 109,
+    id: "352",
+    question_id: "109",
     main_question_stem:
       "The nephew of Pliny the Elder wrote the only eyewitness account of the great eruption of Vesuvius in two letters to the historian Tacitus.",
     answer_1:
@@ -7172,12 +8643,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 353,
-    question_id: 110,
+    id: "353",
+    question_id: "110",
     main_question_stem:
       "Being a United States citizen since 1988 and born in Calcutta in 1940, author Bharati Mukherjee has lived in England and Canada, and ﬁrst came to the United States in 1961 to study at the Iowa Writers’ Workshop.",
     answer_1:
@@ -7193,12 +8669,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 354,
-    question_id: 111,
+    id: "354",
+    question_id: "111",
     main_question_stem:
       "Initiated ﬁve centuries after Europeans arrived in the New World on Columbus Day 1992, Project SETI pledged a $100 million investment in the search for extraterrestrial intelligence.",
     answer_1:
@@ -7214,12 +8695,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 355,
-    question_id: 112,
+    id: "355",
+    question_id: "112",
     main_question_stem:
       "In the 1980s the federal government was the largest single provider of day care for children, offering child care, health, and educational services to hundreds of thousands of children from poor households through the Head Start program and which supported private day-care facilities through child-care tax credits, state block grants, and tax breaks for employers who subsidized day-care services.",
     answer_1:
@@ -7235,12 +8721,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 356,
-    question_id: 113,
+    id: "356",
+    question_id: "113",
     main_question_stem:
       "In A.D. 391, resulting from the destruction of the largest library of the ancient world at Alexandria, later generations lost all but the Iliad and Odyssey among Greek epics, most of the poetry of Pindar and Sappho, and dozens of plays by Aeschylus and Euripides.",
     answer_1:
@@ -7256,12 +8747,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 357,
-    question_id: 1,
+    id: "357",
+    question_id: "1",
     main_question_stem:
       "The price of 19 chocolates and 21 pens is $29, while the price of 21 chocolates and 19 pens is $31. What is the price of 1 chocolate?",
     answer_1: "$0.50",
@@ -7275,11 +8771,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 358,
-    question_id: 2,
+    id: "358",
+    question_id: "2",
     main_question_stem:
       "Abe’s age is equal to the sum of the ages of his son and 12 year old daughter. If Abe’s son is elder to Abe’s daughter, and the average age of Abe and his two children ten years ago was 8 years, what is Abe’ present age?",
     answer_1: "1 2 years",
@@ -7293,11 +8792,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 359,
-    question_id: 3,
+    id: "359",
+    question_id: "3",
     main_question_stem:
       "3 apples, 3 guavas and 4 bananas together cost $10. Also, 3 apples, 2 guava and 4 bananas together cost $ 9. What is the total cost of 9 apples, 8 guavas and 1 2 bananas ?",
     answer_1: "26",
@@ -7311,11 +8813,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 360,
-    question_id: 4,
+    id: "360",
+    question_id: "4",
     main_question_stem:
       "A person has a few cents and a few dollars such that the total amount is 𝑎 dollars and 𝑏 cents , where 𝑏 < 100 . After spending $3.50, he was left with 2 𝑏 dollars and 64 cents. What is the value of ( 𝑎 + 𝑏 ) ?",
     answer_1: "14",
@@ -7329,11 +8834,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 6,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 361,
-    question_id: 5,
+    id: "361",
+    question_id: "5",
     main_question_stem:
       "In a fraction, if 4 is added to both numerator and denominator, the fraction increases by 1/8 . If however, 2 is subtracted from both numerator and denominator, the fraction decreases by 1/4 . What is the value of the original fraction?",
     answer_1: "7/8",
@@ -7347,11 +8855,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 362,
-    question_id: 6,
+    id: "362",
+    question_id: "6",
     main_question_stem:
       "If 7 𝑥 − 2 𝑦 = 12 , 4 𝑥 + 𝑦 = 9 and 2 𝑥 + 5 𝑦 = 𝐾 , what is the value of 𝐾 ?",
     answer_1: "9",
@@ -7365,11 +8876,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 363,
-    question_id: 7,
+    id: "363",
+    question_id: "7",
     main_question_stem:
       "If 2 𝑥 + 3 𝑦 = 7 , 5 𝑥 + 3 𝑦 = 13 and 𝑥/𝐴 = y/𝐵 = 1/𝐶 , where 𝐴 , 𝐵 and 𝐶 are positive integers and the greatest common divisor of 𝐴 , 𝐵 and 𝐶 is 1, what is the value of ( 𝐴 + 𝐵 + 𝐶 ) ?",
     answer_1: "1",
@@ -7383,11 +8897,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 364,
-    question_id: 8,
+    id: "364",
+    question_id: "8",
     main_question_stem:
       "The sum of the digits of a two - digit number is 5 . The ratio of 20 less than the number and 12 more than the number is 3/11 . What is the product of the digits of the number?",
     answer_1: "4",
@@ -7401,11 +8918,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 365,
-    question_id: 9,
+    id: "365",
+    question_id: "9",
     main_question_stem:
       "𝑥 , 𝑦 and 𝑧 satisfy the following set of equations: 3 𝑥 + 7 𝑦 − 11 𝑧 = 0, 6𝑥 − 𝑦 − 7𝑧 = 0, 3𝑥 + 𝑦 − 𝑘𝑧 = 0 What is the value of 𝑘 ?",
     answer_1: "1",
@@ -7419,11 +8939,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 366,
-    question_id: 10,
+    id: "366",
+    question_id: "10",
     main_question_stem:
       "A group of children have a number of pens, such that each child has at least one pen. If one of the children, Ann, takes 1 pen from each of the other, the number of pens with her would be thrice the number of children in the group . If the total number of pens among the children is 42, which of the following could be the number of children in the group, so that it can be ensured that Ann has the greatest number of pens?",
     answer_1: "Only I",
@@ -7437,15 +8960,15 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 367,
-    question_id: 11,
+    id: "367",
+    question_id: "11",
     main_question_stem: "What is the largest possible integer value of 𝑘 ?",
-    subquestion1:
-      "T he roots of x ^ 2 - kx + 35 = 0 and the roots of x ^ 2 - 7x + k = 0 are real numbers.",
-    subquestion2: "𝑘 > 0",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7460,14 +8983,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1:
+      "T he roots of x ^ 2 - kx + 35 = 0 and the roots of x ^ 2 - 7x + k = 0 are real numbers.",
+    subquestion2: "𝑘 > 0",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 368,
-    question_id: 12,
+    id: "368",
+    question_id: "12",
     main_question_stem: "Is 1/(x + 1) + 1/(y + 1) = 2a a+b ?",
-    subquestion1: "a * x ^ 2 = by",
-    subquestion2: "b * y ^ 2 = ax",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7482,16 +9007,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 5,
+    subquestion1: "a * x ^ 2 = by",
+    subquestion2: "b * y ^ 2 = ax",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 369,
-    question_id: 13,
+    id: "369",
+    question_id: "13",
     main_question_stem:
       "P , Q , R and S are four cakes such that. Is the total cost of P and S less than that of Q and R?",
-    subquestion1: "The cost of R is half of the cost of S.",
-    subquestion2:
-      "The cost of Q is twice that of R, which in turn, is costlier than P.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7506,15 +9031,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 3,
+    subquestion1: "The cost of R is half of the cost of S.",
+    subquestion2:
+      "The cost of Q is twice that of R, which in turn, is costlier than P.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 370,
-    question_id: 14,
+    id: "370",
+    question_id: "14",
     main_question_stem:
       "If 𝑚 and 𝑛 are integers, what is the largest possible value of 𝑚 ?",
-    subquestion1: "1/𝑚 + 2/𝑛 = 1/10",
-    subquestion2: "𝑚 and 𝑛 are positive integers.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7529,17 +9056,42 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "1/𝑚 + 2/𝑛 = 1/10",
+    subquestion2: "𝑚 and 𝑛 are positive integers.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 371,
-    question_id: 15,
+    id: "371",
+    question_id: "15",
     main_question_stem:
       "A, B and C have some marbles with them. Did C have at least 57 percent of all the marbles with them together?",
+    answer_1:
+      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
+    answer_2:
+      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
+    answer_3:
+      "Both statements together are sufficient, but neither statement alone is sufficient",
+    answer_4: "Each statement alone is sufficient",
+    answer_5: "Statements (1) and (2) together are not sufficient",
+    correct_answer: "C",
+    Category: "Quant",
+    SubCategory: "Quadratic equations",
+    Quant_category_1: "Data Sufficiency",
+    "Quant_category 2": "Algebra",
+    level: 3,
     subquestion1:
       "The sum of the number of marbles with A and B together is 40 percent less than that with B and C together .",
     subquestion2:
       "The sum of the number of marbles with B and C together is 20 percent less than that with A and C together.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "372",
+    question_id: "16",
+    main_question_stem:
+      "A group of friends wanted to purchase a camera by sharing the cost equally. What is the price of the camera?",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7554,40 +9106,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 3,
-    img_url: "",
-  },
-  {
-    id: 372,
-    question_id: 16,
-    main_question_stem:
-      "A group of friends wanted to purchase a camera by sharing the cost equally. What is the price of the camera?",
     subquestion1: "The price of the camera is between $210 and $230.",
     subquestion2:
       "If two friends back out, the remaining friends have to contribute $1 extra to purchase the camera.",
-    answer_1:
-      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
-    answer_2:
-      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
-    answer_3:
-      "Both statements together are sufficient, but neither statement alone is sufficient",
-    answer_4: "Each statement alone is sufficient",
-    answer_5: "Statements (1) and (2) together are not sufficient",
-    correct_answer: "C",
-    Category: "Quant",
-    SubCategory: "Quadratic equations",
-    Quant_category_1: "Data Sufficiency",
-    "Quant_category 2": "Algebra",
-    level: 3,
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 373,
-    question_id: 17,
+    id: "373",
+    question_id: "17",
     main_question_stem:
       "A man has a certain amount of money in $1 and $ 10 notes. Can the total number of notes with him be 9 ?",
-    subquestion1:
-      "The number of $ 1 notes multiplied by the number of $ 10 notes is equal to the total money (in dollars ) with him .",
-    subquestion2: "The number of $ 1 notes is greater than eight .",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7602,15 +9131,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 2,
+    subquestion1:
+      "The number of $ 1 notes multiplied by the number of $ 10 notes is equal to the total money (in dollars ) with him .",
+    subquestion2: "The number of $ 1 notes is greater than eight .",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 374,
-    question_id: 18,
+    id: "374",
+    question_id: "18",
     main_question_stem:
       "The letters A, B, C, D and E represent distinct numbers among 2, 4, 5, 6 and 10, not ne cessarily in the same order. What is the value of B ?",
-    subquestion1: "A + C = E and A + E = B",
-    subquestion2: "B = 2D",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7625,15 +9156,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 2,
+    subquestion1: "A + C = E and A + E = B",
+    subquestion2: "B = 2D",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 375,
-    question_id: 19,
+    id: "375",
+    question_id: "19",
     main_question_stem:
       "If 𝑥 , 𝑦 and 𝑧 are positive numbers and 5 𝑥 + 7 𝑦 + 8 𝑧 = 𝑘 , can the value of 𝑘 equal 20?",
-    subquestion1: "2 𝑥 + 3 𝑦 + 4 𝑧 = 10",
-    subquestion2: "3 𝑥 + 4 𝑦 + 5 𝑧 = 12",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7648,14 +9180,15 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 2,
+    subquestion1: "2 𝑥 + 3 𝑦 + 4 𝑧 = 10",
+    subquestion2: "3 𝑥 + 4 𝑦 + 5 𝑧 = 12",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 376,
-    question_id: 20,
+    id: "376",
+    question_id: "20",
     main_question_stem: "If 𝑓 ( 𝑥 ) = 𝑥^3 − 4𝑥 + 𝑝 , i s 0 < 𝑝 < 3 ?",
-    subquestion1: "𝑓 ( 0 ) ∗ 𝑓 ( 1 ) < 0",
-    subquestion2: "𝑓 ( 0 ) > 0",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7670,11 +9203,14 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 1,
+    subquestion1: "𝑓 ( 0 ) ∗ 𝑓 ( 1 ) < 0",
+    subquestion2: "𝑓 ( 0 ) > 0",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 377,
-    question_id: 51,
+    id: "377",
+    question_id: "51",
     main_question_stem:
       "The graph of a quadratic function 𝑓 ( 𝑥 ) shown below is symmetric about the line 𝑥 = 4 . If 𝑓 ( 1 ) = 9 , what is the value of 𝑓 ( 7 ) ?",
     answer_1: "3",
@@ -7688,12 +9224,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694519773/xsdixyahtft5y1sjkdnq.png",
   },
   {
-    id: 378,
-    question_id: 52,
+    id: "378",
+    question_id: "52",
     main_question_stem:
       "In the graph shown below, the functions 𝑓 ( 𝑥 ) = x^ 2 − 6 𝑥 + 8 , which intersects the X - axis at 𝑥 = 2 and 𝑥 = 4 and 𝑔 ( 𝑥 ) = 𝑥 − 2 are shown. For how many integer values of 𝑥 is 𝑔 ( 𝑥 ) ≥ 𝑓 ( 𝑥 ) ?",
     answer_1: "One",
@@ -7707,12 +9247,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694519833/nmy3kmclyofodsgnd2o0.png",
   },
   {
-    id: 379,
-    question_id: 53,
+    id: "379",
+    question_id: "53",
     main_question_stem:
       "The graphs of 𝑓 ( 𝑥 ) and 𝑔 ( 𝑥 ) are shown below. Which of the options is correct ?",
     answer_1: "𝑓 ( 𝑥 ) = 5 𝑥",
@@ -7726,12 +9270,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694519914/wcev3pduukhbrlulur35.png",
   },
   {
-    id: 380,
-    question_id: 54,
+    id: "380",
+    question_id: "54",
     main_question_stem:
       "What is the area of the triangle bounded by the lines 𝑓 ( 𝑥 ) = 𝑥 − 2 , 𝑔 ( 𝑥 ) = 2 𝑥 − 3 and the Y - axis, as shaded in the graph below?",
     answer_1: "1/4",
@@ -7745,31 +9293,39 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694520079/u1msmxxeafbudlifijq8.png",
   },
   {
-    id: 381,
-    question_id: 55,
+    id: "381",
+    question_id: "55",
     main_question_stem:
-      "The graph of a quadratic function 𝑓 ( 𝑥 ) = 𝑎x^ 2 + 𝑏𝑥 + 𝑐 shown below intersects the X - axis at ( 2 , 0 ) and ( 4 , 0 ) and intersects the Y - axis at ( 0 , 4 ) . What is the value of ( 𝑎 + 𝑏 + 𝑐 ) ? ",
+      "The graph of a quadratic function 𝑓 ( 𝑥 ) = 𝑎x^ 2 + 𝑏𝑥 + 𝑐 shown below intersects the X - axis at ( 2 , 0 ) and ( 4 , 0 ) and intersects the Y - axis at ( 0 , 4 ) . What is the value of ( 𝑎 + 𝑏 + 𝑐 ) ?",
     answer_1: "1/2",
     answer_2: "3/2",
     answer_3: "3",
     answer_4: "4",
-    answer_5: 6,
+    answer_5: "6",
     correct_answer: "B",
     Category: "Quant",
     SubCategory: "Functions",
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694520123/qj3c4xhp3qowelcodeoi.png",
   },
   {
-    id: 382,
-    question_id: 56,
+    id: "382",
+    question_id: "56",
     main_question_stem:
       "𝑓 ( 𝑥 ) is a function which satisfies 2 𝑓 ( 𝑥 ) + 𝑓 ( − 𝑥 ) = 2 𝑥 + 1 . What is the value of 𝑓 ( 1 ) ?",
     answer_1: "1",
@@ -7783,11 +9339,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 383,
-    question_id: 57,
+    id: "383",
+    question_id: "57",
     main_question_stem:
       "𝑓 ( 𝑥 ) is a function such that 𝑓 ( 2 𝑥 − 1 ) = 𝑥 ^2 + 3 𝑥 . What is the value of 𝑓 ( 5 ) ?",
     answer_1: "3",
@@ -7801,11 +9360,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 384,
-    question_id: 58,
+    id: "384",
+    question_id: "58",
     main_question_stem:
       "If 𝑓 ( 𝑥 ) = 𝑎 𝑥 ^2 + 𝑏𝑥 + 𝑐 and 𝑓 ( 𝑥 + 1 ) = 𝑓 ( 𝑥 ) + 𝑥 + 1 , what is the value of 𝑎 ?",
     answer_1: "− 1",
@@ -7819,11 +9381,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 385,
-    question_id: 59,
+    id: "385",
+    question_id: "59",
     main_question_stem:
       "Let 𝑥 and 𝑦 be positive integers and the function 𝑓 ( 𝑎 , 𝑏 ) is defined as shown :  𝑓 ( 𝑎 , 𝑏 ) = 𝑎 if 𝑎 ≤ 𝑏  𝑓 ( 𝑎 , 𝑏 ) = 𝑏 if 𝑎 > 𝑏 If 𝑎 = 6 𝑥 − 8 and 𝑏 = 𝑥 ^2 , for how many integer values of 𝑥 will 𝑓 ( 𝑎 , 𝑏 ) = 𝑏 ?",
     answer_1: "None",
@@ -7837,11 +9402,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 386,
-    question_id: 60,
+    id: "386",
+    question_id: "60",
     main_question_stem:
       "If 𝑓 ( 𝑥 ) = | 𝑥 − 1 | , 𝑔 ( 𝑥 ) = 𝑥 + 𝑎 and 𝑓 ( 𝑔 ( − 3 ) ) = 2 , what is the sum of the possible value s of 𝑎 ?",
     answer_1: "2",
@@ -7855,15 +9423,15 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 387,
-    question_id: 1,
+    id: "387",
+    question_id: "1",
     main_question_stem: "What is the Y intercept of the straight line ?",
-    subquestion1:
-      "The line is at a perpendicular distance of 3 from the origin .",
-    subquestion2: "The line has a slope ‘ − 1 ’.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7878,15 +9446,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1:
+      "The line is at a perpendicular distance of 3 from the origin .",
+    subquestion2: "The line has a slope ‘ − 1 ’.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 388,
-    question_id: 2,
+    id: "388",
+    question_id: "2",
     main_question_stem: "What is the value of 𝑘 ?",
-    subquestion1:
-      "The line 2 𝑥 + 3 𝑦 + 6 + 𝑘 ( 9 𝑥 − 𝑦 + 12 ) = 0 is perpendicular to 7 𝑥 + 5 𝑦 − 4 = 0 .",
-    subquestion2: "The Y intercept of the line 𝑥 + 𝑘𝑦 = 4 is ‘ − 8 ’.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7901,15 +9470,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1:
+      "The line 2 𝑥 + 3 𝑦 + 6 + 𝑘 ( 9 𝑥 − 𝑦 + 12 ) = 0 is perpendicular to 7 𝑥 + 5 𝑦 − 4 = 0 .",
+    subquestion2: "The Y intercept of the line 𝑥 + 𝑘𝑦 = 4 is ‘ − 8 ’.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 389,
-    question_id: 3,
+    id: "389",
+    question_id: "3",
     main_question_stem: "What is the value of ( 𝑎 − 𝑏 ) ?",
-    subquestion1:
-      "The line passes through the points ( 3 , − 6 ) and ( 𝑎 , 𝑏 ) .",
-    subquestion2: "The line is parallel to 3 𝑥 − 3 𝑦 + 5 = 0 .",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7924,15 +9494,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1:
+      "The line passes through the points ( 3 , − 6 ) and ( 𝑎 , 𝑏 ) .",
+    subquestion2: "The line is parallel to 3 𝑥 − 3 𝑦 + 5 = 0 .",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 390,
-    question_id: 4,
+    id: "390",
+    question_id: "4",
     main_question_stem: "What is the area of the circle?",
-    subquestion1:
-      "The end - points of a diameter of the circle have coordinates ( − 3 , − 2 ) and ( 5 , 2 ) .",
-    subquestion2: "The centre of the circle is at ( 1 , 0 ) .",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7947,15 +9518,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1:
+      "The end - points of a diameter of the circle have coordinates ( − 3 , − 2 ) and ( 5 , 2 ) .",
+    subquestion2: "The centre of the circle is at ( 1 , 0 ) .",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 391,
-    question_id: 5,
+    id: "391",
+    question_id: "5",
     main_question_stem: "What is the area of the circle?",
-    subquestion1:
-      "The circle passes through the points having coordinates ( 0 , 6 ) and ( 6 , 0 ) .",
-    subquestion2: "The circle passes through the point ( 0 , 0 ) .",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7970,15 +9542,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1:
+      "The circle passes through the points having coordinates ( 0 , 6 ) and ( 6 , 0 ) .",
+    subquestion2: "The circle passes through the point ( 0 , 0 ) .",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 392,
-    question_id: 6,
+    id: "392",
+    question_id: "6",
     main_question_stem: "What are the coordinates of the centre of the circle?",
-    subquestion1:
-      "The circle passes through the points having coordinates ( 1 , 2 ) and ( 5 , 4 ) .",
-    subquestion2: "The centre of the circle lies on the line 𝑦 = 2 𝑥 + 7 .",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -7993,16 +9566,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1:
+      "The circle passes through the points having coordinates ( 1 , 2 ) and ( 5 , 4 ) .",
+    subquestion2: "The centre of the circle lies on the line 𝑦 = 2 𝑥 + 7 .",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 393,
-    question_id: 7,
+    id: "393",
+    question_id: "7",
     main_question_stem: "What is the value of 𝑘 ?",
-    subquestion1:
-      "T he lines 2 𝑦 + 𝑘𝑥 = 16 , 𝑦 = 𝑥 + 5 and 𝑘𝑦 + 𝑥 = 9 are concurrent .",
-    subquestion2:
-      "𝑘 is an integer. OR 1. – Insufficient From statement B: The value of 𝑘 cannot be determined only knowing that it is an integer. – Insufficient Thus, from both statements together: 𝑘 = 1 . – Sufficient",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8017,15 +9590,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1:
+      "T he lines 2 𝑦 + 𝑘𝑥 = 16 , 𝑦 = 𝑥 + 5 and 𝑘𝑦 + 𝑥 = 9 are concurrent .",
+    subquestion2:
+      "𝑘 is an integer. OR 1. – Insufficient From statement B: The value of 𝑘 cannot be determined only knowing that it is an integer. – Insufficient Thus, from both statements together: 𝑘 = 1 . – Sufficient",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 394,
-    question_id: 8,
+    id: "394",
+    question_id: "8",
     main_question_stem: "What is the value of 𝑎 ?",
-    subquestion1:
-      "A l ine passing through the p oin ts ( 𝑎 , 2 𝑎 ) and ( − 2 , 3 ) is perpendicular to the line 4 𝑥 + 3 𝑦 + 5 = 0 .",
-    subquestion2: "𝑎 is a positive number.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8040,15 +9615,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1:
+      "A l ine passing through the p oin ts ( 𝑎 , 2 𝑎 ) and ( − 2 , 3 ) is perpendicular to the line 4 𝑥 + 3 𝑦 + 5 = 0 .",
+    subquestion2: "𝑎 is a positive number.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 395,
-    question_id: 9,
+    id: "395",
+    question_id: "9",
     main_question_stem: "What is the value of the Y coordinate of a point?",
-    subquestion1:
-      "The point is at a perpendicular distance of 3 units from the line 4 𝑥 − 3 𝑦 = 12 .",
-    subquestion2: "The point lies on the Y axis.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8063,15 +9639,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1:
+      "The point is at a perpendicular distance of 3 units from the line 4 𝑥 − 3 𝑦 = 12 .",
+    subquestion2: "The point lies on the Y axis.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 396,
-    question_id: 10,
+    id: "396",
+    question_id: "10",
     main_question_stem:
       "The coordinates of A, B, C and D are ( 2 , 0 ) , ( 9 , 0 ) , ( 11 , 𝑝 ) and ( 𝑞 , 6 ) respectively. What is the length of BC?",
-    subquestion1: "The slope of AD is 2.",
-    subquestion2: "The slope of CD is 1 2 .",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8086,16 +9664,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1: "The slope of AD is 2.",
+    subquestion2: "The slope of CD is 1 2 .",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 397,
-    question_id: 31,
+    id: "397",
+    question_id: "31",
     main_question_stem:
       "Two varieties of tea are mixed together, with each pound of the costlier variety being priced at $15 more than each pound of the cheaper variety. In what ratio were the two varieties of tea mixed?",
-    subquestion1: "The average price of the mixture is $20 per pound.",
-    subquestion2:
-      "The average price of the mixture is $ 7 per pound cheaper than the costlier variety.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8110,16 +9688,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "The average price of the mixture is $20 per pound.",
+    subquestion2:
+      "The average price of the mixture is $ 7 per pound cheaper than the costlier variety.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 398,
-    question_id: 32,
+    id: "398",
+    question_id: "32",
     main_question_stem:
       "A man covers a part of his journey at 20 miles per hour and the remaining at 30 miles per hour. What is the total distance covered by the man?",
-    subquestion1: "The average speed of the man is 24 miles per hour.",
-    subquestion2:
-      "The ratio of the time for which he travelled at 20 miles per hour and that for which he travelled at 30 miles per hour is 3 : 2.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8134,17 +9713,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "The average speed of the man is 24 miles per hour.",
+    subquestion2:
+      "The ratio of the time for which he travelled at 20 miles per hour and that for which he travelled at 30 miles per hour is 3 : 2.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 399,
-    question_id: 33,
+    id: "399",
+    question_id: "33",
     main_question_stem:
       "A travels from point P to point Q, while B travels from point Q to point P. At what time do they meet on the way?",
-    subquestion1:
-      "A starts his journey at 9:00 am while B starts his journey from 11:00 am.",
-    subquestion2:
-      "A takes 9 hours to reach point Q while B takes 6 hours to reach point P.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8159,15 +9738,18 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1:
+      "A starts his journey at 9:00 am while B starts his journey from 11:00 am.",
+    subquestion2:
+      "A takes 9 hours to reach point Q while B takes 6 hours to reach point P.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 400,
-    question_id: 34,
+    id: "400",
+    question_id: "34",
     main_question_stem:
       "A and B participate in a walkathon. If they start at the same time, does A win the contest?",
-    subquestion1: "For every 5 steps taken by A, B takes 8 steps.",
-    subquestion2: "3 steps of A are of the same length of 5 steps of B.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8182,17 +9764,42 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "For every 5 steps taken by A, B takes 8 steps.",
+    subquestion2: "3 steps of A are of the same length of 5 steps of B.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 401,
-    question_id: 35,
+    id: "401",
+    question_id: "35",
     main_question_stem:
       "A boy runs between points P and Q to and fro m a certain number of times . What is his average speed?",
+    answer_1:
+      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
+    answer_2:
+      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
+    answer_3:
+      "Both statements together are sufficient, but neither statement alone is sufficient",
+    answer_4: "Each statement alone is sufficient",
+    answer_5: "Statements (1) and (2) together are not sufficient",
+    correct_answer: "C",
+    Category: "Quant",
+    SubCategory: "Average",
+    Quant_category_1: "Data Sufficiency",
+    "Quant_category 2": "Arithmetic",
+    level: 3,
     subquestion1:
       "The boy covers the distance from P to Q at a speed of 2 meters per second and returns at a speed of 4 meters per second and keeps on running to and fro m with double the speed in the previous trip.",
     subquestion2:
       "The maximum speed at which the boy can run is 16 meters per secon d.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "402",
+    question_id: "36",
+    main_question_stem:
+      "A man covers a part of his journey by train and the rest by bus. What is the ratio of the distance s he travelled by train and by bus ?",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8207,41 +9814,18 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
-    img_url: "",
-  },
-  {
-    id: 402,
-    question_id: 36,
-    main_question_stem:
-      "A man covers a part of his journey by train and the rest by bus. What is the ratio of the distance s he travelled by train and by bus ?",
     subquestion1:
       "The speeds of the train and bus are 80 miles per hour and 60 miles per hour respectively.",
     subquestion2:
       "Had the man covered the entire journey by train at 80 miles per hour, he would have taken only 4 5 of the time he actually took.",
-    answer_1:
-      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
-    answer_2:
-      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
-    answer_3:
-      "Both statements together are sufficient, but neither statement alone is sufficient",
-    answer_4: "Each statement alone is sufficient",
-    answer_5: "Statements (1) and (2) together are not sufficient",
-    correct_answer: "C",
-    Category: "Quant",
-    SubCategory: "Average",
-    Quant_category_1: "Data Sufficiency",
-    "Quant_category 2": "Arithmetic",
-    level: 3,
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 403,
-    question_id: 37,
+    id: "403",
+    question_id: "37",
     main_question_stem:
       "A boy usually walks to school from his home at a uniform speed and reaches school on time. How early will he reach school if he cycles to school from his home?",
-    subquestion1: "The boy’s cycling speed is thrice his walking speed.",
-    subquestion2:
-      "Had the boy travelled in a car at a speed twice that of his cyclin g spee d, he would have reach ed school 1 0 minutes before the time he reaches while cycl ing.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8256,16 +9840,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "The boy’s cycling speed is thrice his walking speed.",
+    subquestion2:
+      "Had the boy travelled in a car at a speed twice that of his cyclin g spee d, he would have reach ed school 1 0 minutes before the time he reaches while cycl ing.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 404,
-    question_id: 38,
+    id: "404",
+    question_id: "38",
     main_question_stem:
       "A and B start from their homes at a previously agreed time and travel towards each other at their respective uniform speeds. On the way, they meet at a point P. If B had travelled at 20% higher speed , they would have met at another point Q. What is the distance between the homes of A and B ?",
-    subquestion1:
-      "A and B travel at speeds of 9 m iles per hour and 15 m iles per hour, respectively.",
-    subquestion2: "The distance bet ween the points P and Q is 2 m iles .",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8280,17 +9865,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1:
+      "A and B travel at speeds of 9 m iles per hour and 15 m iles per hour, respectively.",
+    subquestion2: "The distance bet ween the points P and Q is 2 m iles .",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 405,
-    question_id: 39,
+    id: "405",
+    question_id: "39",
     main_question_stem:
       "How long does a man take to cover a certain distance travelling at his normal speed?",
-    subquestion1:
-      "If the man had travelled the same distance at 6 miles per hour greater than his normal speed, he would have taken 1 hour less than the time he would have taken while travelling at his normal speed.",
-    subquestion2:
-      "If the man had travelled the same distance at 4 miles per hour lower than his normal speed, he woul d have taken 1 hour more than the time he would have taken while travelling at his normal speed.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8305,16 +9890,18 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1:
+      "If the man had travelled the same distance at 6 miles per hour greater than his normal speed, he would have taken 1 hour less than the time he would have taken while travelling at his normal speed.",
+    subquestion2:
+      "If the man had travelled the same distance at 4 miles per hour lower than his normal speed, he woul d have taken 1 hour more than the time he would have taken while travelling at his normal speed.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 406,
-    question_id: 40,
+    id: "406",
+    question_id: "40",
     main_question_stem:
       "A and B travel from points P and Q , respectively, towards point R, where P, Q and R lie along the same straight route. If point P lies 100 meters behind point Q, d oes A reach point R before B ?",
-    subquestion1: "The distance between the points Q and R is 500 meters.",
-    subquestion2:
-      "If A had started from Q and B had started from P, B woul d have been 100 meters behind A when A would have reached R.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8329,16 +9916,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "The distance between the points Q and R is 500 meters.",
+    subquestion2:
+      "If A had started from Q and B had started from P, B woul d have been 100 meters behind A when A would have reached R.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 407,
-    question_id: 121,
+    id: "407",
+    question_id: "121",
     main_question_stem:
       "A teacher distributed some pens and some pencils evenly among the students in his class, with each student getting an equal number of pens and an equal number of pencils. How many students are there in the class?",
-    subquestion1: "The teacher distributed 180 pens and 40 pencils.",
-    subquestion2:
-      "The total number of items received by each student is less than 15.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8353,17 +9941,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "The teacher distributed 180 pens and 40 pencils.",
+    subquestion2:
+      "The total number of items received by each student is less than 15.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 408,
-    question_id: 122,
+    id: "408",
+    question_id: "122",
     main_question_stem:
       "The number 2135 , when divided by a number 𝑛 , leaves a remainder 𝑟 . What is the value of 𝑛 ?",
-    subquestion1:
-      "The number 2315, when divided by 𝑛 , also leaves the same remainder 𝑟 .",
-    subquestion2:
-      "The number 2585, when divided by 𝑛 , also leaves the same remainder 𝑟 .",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8378,14 +9966,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1:
+      "The number 2315, when divided by 𝑛 , also leaves the same remainder 𝑟 .",
+    subquestion2:
+      "The number 2585, when divided by 𝑛 , also leaves the same remainder 𝑟 .",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 409,
-    question_id: 123,
+    id: "409",
+    question_id: "123",
     main_question_stem: "What is the remainder when 2 𝑛 is divided by 8?",
-    subquestion1: "𝑛 , when divided by 6, leaves remainder 5.",
-    subquestion2: "3 𝑛 , when divided by 6, leaves remainder 3.",
     answer_1:
       "Stat ement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8400,15 +9991,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "𝑛 , when divided by 6, leaves remainder 5.",
+    subquestion2: "3 𝑛 , when divided by 6, leaves remainder 3.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 410,
-    question_id: 124,
+    id: "410",
+    question_id: "124",
     main_question_stem:
       "The remainder , when a number 𝑛 is divided by 6 , is 𝑝 . The remainder , when the same number 𝑛 is divided by 12 , is 𝑞 . Is 𝑝 < 𝑞 ?",
-    subquestion1: "𝑛 is a positive number having 8 as a factor.",
-    subquestion2: "𝑛 is a positive number having 6 as a factor.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8423,37 +10015,39 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "𝑛 is a positive number having 8 as a factor.",
+    subquestion2: "𝑛 is a positive number having 6 as a factor.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 411,
-    question_id: 125,
+    id: "411",
+    question_id: "125",
     main_question_stem: "Is 𝑛/12 an integer?",
+    answer_1:
+      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
+    answer_2:
+      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
+    answer_3:
+      "Both statements together are sufficient, but neither statement alone is sufficient",
+    answer_4: "Each statement alone is sufficient",
+    answer_5: "Statements (1) and (2) together are not sufficient",
+    correct_answer: "C",
+    Category: "Quant",
+    SubCategory: "Numbers",
+    Quant_category_1: "Data Sufficiency",
+    "Quant_category 2": "Arithmetic",
+    level: 4,
     subquestion1: "𝑛^2 /144 is an integer.",
     subquestion2: "𝑛/6 is an integer",
-    answer_1:
-      "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
-    answer_2:
-      "Statement (2) alone is sufficient but statement (1) alone is not sufficient",
-    answer_3:
-      "Both statements together are sufficient, but neither statement alone is sufficient",
-    answer_4: "Each statement alone is sufficient",
-    answer_5: "Statements (1) and (2) together are not sufficient",
-    correct_answer: "C",
-    Category: "Quant",
-    SubCategory: "Numbers",
-    Quant_category_1: "Data Sufficiency",
-    "Quant_category 2": "Arithmetic",
-    level: 4,
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 412,
-    question_id: 126,
+    id: "412",
+    question_id: "126",
     main_question_stem:
       "If 𝑥 and 𝑦 are integers, w hat is the value of ( 𝑥 + 𝑦 ) ?",
-    subquestion1: "𝑥 ^𝑦 = 64 .",
-    subquestion2: "𝑦^ 𝑥 = 36 .",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8468,14 +10062,15 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "𝑥 ^𝑦 = 64 .",
+    subquestion2: "𝑦^ 𝑥 = 36 .",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 413,
-    question_id: 127,
+    id: "413",
+    question_id: "127",
     main_question_stem: "Can 𝑛 /192 be an integer?",
-    subquestion1: "𝑛 is a multiple of 24 but not 16.",
-    subquestion2: "𝑛 is a multiple of 16 but not 24.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8490,15 +10085,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "𝑛 is a multiple of 24 but not 16.",
+    subquestion2: "𝑛 is a multiple of 16 but not 24.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 414,
-    question_id: 128,
+    id: "414",
+    question_id: "128",
     main_question_stem:
       "If 𝑎 and 𝑏 are single digits from 0 to 9, inclusive, what is the value of ( 𝑎 + 𝑏 ) ?",
-    subquestion1: "The number 25 𝑎 7 𝑏 is divisible by 36.",
-    subquestion2: "The number 𝑎 1 𝑏 is divisible by 4.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8513,15 +10109,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "The number 25 𝑎 7 𝑏 is divisible by 36.",
+    subquestion2: "The number 𝑎 1 𝑏 is divisible by 4.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 415,
-    question_id: 129,
+    id: "415",
+    question_id: "129",
     main_question_stem:
       "What is the remainder obtained when 𝑛 is divided by 7?",
-    subquestion1: "( 2 𝑛 + 2 ) is divisible by 14.",
-    subquestion2: "( 𝑛^2 − 1 ) is divisible by 7.",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8536,15 +10133,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "( 2 𝑛 + 2 ) is divisible by 14.",
+    subquestion2: "( 𝑛^2 − 1 ) is divisible by 7.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 416,
-    question_id: 130,
+    id: "416",
+    question_id: "130",
     main_question_stem:
       "𝑝 is the value of the integer such that ( 3^ 𝑝 + 2 ) is NOT a prime number. What is the remainder when ( 3^ 𝑝 + 2 ) is divided by 𝑝 ?",
-    subquestion1: "𝑝 is the least such integer.",
-    subquestion2: "3^𝑝 + 2 < 500",
     answer_1:
       "Statement (1) alone is sufficient but statement (2) alone is not sufficient",
     answer_2:
@@ -8559,11 +10157,14 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "𝑝 is the least such integer.",
+    subquestion2: "3^𝑝 + 2 < 500",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 417,
-    question_id: 11,
+    id: "417",
+    question_id: "11",
     main_question_stem:
       "The radius of a circle is 13 and the leng th of one of its chords is 10 . What is the shortest distance of the ch ord from the centre of the circle? e chord from the centre is 12.",
     answer_1: "5",
@@ -8577,11 +10178,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 418,
-    question_id: 12,
+    id: "418",
+    question_id: "12",
     main_question_stem:
       "In the diagram below , O is the centre of the circle. What is the measure of angle AOC?",
     answer_1: "70°",
@@ -8595,12 +10199,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694520605/bmagax3xcbmu3fyslfkl.png",
   },
   {
-    id: 419,
-    question_id: 13,
+    id: "419",
+    question_id: "13",
     main_question_stem:
       "In the diagram below , O is the centre of the circle. What is the measure of angle PQB?",
     answer_1: "30°",
@@ -8614,12 +10222,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694520635/b1rjffz22ul8ftmh6du6.png",
   },
   {
-    id: 420,
-    question_id: 14,
+    id: "420",
+    question_id: "14",
     main_question_stem:
       "In the diagram below, PQRS is a quadrilateral such that sum of the angles at P and Q is 180 0 . What is the value of ( 𝑥 + 𝑦 ) ?",
     answer_1: "18",
@@ -8633,12 +10245,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694520685/lyawofgeqir8jj1alelz.png",
   },
   {
-    id: 421,
-    question_id: 15,
+    id: "421",
+    question_id: "15",
     main_question_stem:
       "Two circles of radii 20 and 13 intersect at two points and the length of the line joining the two points is 24 . What is t he distance between their center s of the two circles?",
     answer_1: "5",
@@ -8652,11 +10268,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 422,
-    question_id: 16,
+    id: "422",
+    question_id: "16",
     main_question_stem:
       "In the diagram below , O is the center of the circle. C hord ED is parallel to the diameter AC of the circle. If angle CBE = 65 0 , what is the measure of angle DEC?",
     answer_1: "20°",
@@ -8670,12 +10289,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694520728/xo59er3dt96vpnvjadfx.png",
   },
   {
-    id: 423,
-    question_id: 17,
+    id: "423",
+    question_id: "17",
     main_question_stem:
       "In the diagram shown below, if AB = BC, what is the measure of angle DCA ?",
     answer_1: "10°",
@@ -8689,31 +10312,39 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694520767/rzrzm0ljpwcgyr4gd6ym.png",
   },
   {
-    id: 424,
-    question_id: 18,
+    id: "424",
+    question_id: "18",
     main_question_stem:
       "In the diagram below, O is the centre of the circle and AC and BD are diameters. What is the value of 𝑥 ?",
     answer_1: "26",
     answer_2: "35",
     answer_3: "52",
     answer_4: "76",
-    answer_5: 104,
+    answer_5: "104",
     correct_answer: "C",
     Category: "Quant",
     SubCategory: "Geometry",
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694520810/doy1vsbbvoh13uukxtr7.png",
   },
   {
-    id: 425,
-    question_id: 19,
+    id: "425",
+    question_id: "19",
     main_question_stem:
       "ABCD is a quadrilateral such that angle D = 90 0 . A circle drawn inside the quadrilateral touches the sides AB, BC, CD and DA at P, Q, R a nd S respectively. If BC = 38, CD = 25 and BP = 27 , what is the radius of the circle ?",
     answer_1: "1 1",
@@ -8727,11 +10358,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 426,
-    question_id: 20,
+    id: "426",
+    question_id: "20",
     main_question_stem:
       "In the diagram below , PQ is a tangent to circle. If angle ABC = 80 0 , what is the value of 𝑥 ?",
     answer_1: "40",
@@ -8745,12 +10379,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694520850/v6vwhzoxbfvzbttzc1qs.png",
   },
   {
-    id: 427,
-    question_id: 1,
+    id: "427",
+    question_id: "1",
     main_question_stem:
       "In a locality, there are thrice as many buses as cabs. 1 0 % of the buses are air - conditioned while 60% of the cabs are air - conditioned. If there are only these 2 types of vehicles, w hat percentage of the vehicles are air - conditioned ?",
     answer_1: "22.5 %",
@@ -8764,11 +10402,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 428,
-    question_id: 2,
+    id: "428",
+    question_id: "2",
     main_question_stem:
       "In a school, 20% of the boys learn French while 60% of the students who learn French are girls. If there are 100 boys, how many girls learn French?",
     answer_1: "20",
@@ -8782,11 +10423,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 429,
-    question_id: 3,
+    id: "429",
+    question_id: "3",
     main_question_stem:
       "A and B need to do the laundry since their washing machine broke down. A can wash 1/3 rd of the clothes in 30 minutes . Both A and B can wash all the clothes in 1 hour. What fraction of the clothes can B wash in 20 minutes?",
     answer_1: "1/12",
@@ -8800,11 +10444,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 430,
-    question_id: 4,
+    id: "430",
+    question_id: "4",
     main_question_stem:
       "A can write 10 programming codes in 15 hours, and B can write the same codes in 12 hours . If A and B work together on the codes, what fraction of the total work would B have done more than A after 3 hours?",
     answer_1: "1/5",
@@ -8818,11 +10465,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 431,
-    question_id: 5,
+    id: "431",
+    question_id: "5",
     main_question_stem:
       "A and B can paint 3 walls in 2 hours. Along with C, they can paint 5 walls in 3 hours. If A and C work at the same rate, how long would B take to paint 2 walls?",
     answer_1: "1.5 hours",
@@ -8836,11 +10486,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 432,
-    question_id: 6,
+    id: "432",
+    question_id: "6",
     main_question_stem:
       "Machine s A and B can polish 3 articles in 2 hours and 5 articles every 4 hours. If the efficiency of A were tripled and that of B doubled, how long would the 2 machines together take to polish 7 0 articles ?",
     answer_1: "10 hours",
@@ -8854,11 +10507,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 433,
-    question_id: 7,
+    id: "433",
+    question_id: "7",
     main_question_stem:
       "A and B can complete a work in 15 days. The same work can be completed by A and C in 20 days. If B is twice as efficient as C, in how many days can A complete the work alone?",
     answer_1: "2 0 days",
@@ -8872,11 +10528,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 434,
-    question_id: 8,
+    id: "434",
+    question_id: "8",
     main_question_stem:
       "A water pipe fills a tank at the rate of 20 litres in every 8 minutes. A second water pipe fills the tank at 20 litres in half the time of the above pipe. The tank capacity is 720 litres and a 3 rd pipe along with the above 2 pipes together fill the tank in 8 0 minutes. At what rate per minute does the 3 rd pipe fill?",
     answer_1: "1 litre/min",
@@ -8890,11 +10549,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 435,
-    question_id: 9,
+    id: "435",
+    question_id: "9",
     main_question_stem:
       "A water pipe fills a tank at the rate of 5 litres in every minute. Along with another water pipe, it fills the tank in 30 minutes. If the efficiency of the 2 nd pipe were doubled, the time taken to fill the tank along with the 1 st pipe would have been 18 minutes. What is the capacity of the tank?",
     answer_1: "90 litres",
@@ -8908,11 +10570,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 436,
-    question_id: 10,
+    id: "436",
+    question_id: "10",
     main_question_stem:
       "20 men can do a work in 12 days and 30 women can do double the same work in 36 days. How many days would 8 men and 12 women together take to complete the work ?",
     answer_1: "6 days",
@@ -8926,11 +10591,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 437,
-    question_id: 11,
+    id: "437",
+    question_id: "11",
     main_question_stem:
       "4 people can paint 8 wall s in 6 days. The 4 people worked on painting the 8 walls for 2 days. Thereafter, another 2 people joined them. In how many days would the 6 people paint the remaining of the 8 walls?",
     answer_1: "4/3 days",
@@ -8944,11 +10612,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 438,
-    question_id: 12,
+    id: "438",
+    question_id: "12",
     main_question_stem:
       "In a college, 3 automated exam - paper grading machines working at a constant rate, can grade 36 answer sheets per hour. The college installs 1 more automated exam - paper grading machine that is twice as efficient as the ones above. In how many hours can these machines grade 240 answer sheets ?",
     answer_1: "2.7 hours",
@@ -8962,11 +10633,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 439,
-    question_id: 13,
+    id: "439",
+    question_id: "13",
     main_question_stem:
       "A and B can do a work in 12 days. B and C can complete the same work in 20 days. If A works for 6 days and C works for 10 days, how many days should B work to complete the remaining work?",
     answer_1: "8 days",
@@ -8980,11 +10654,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 440,
-    question_id: 14,
+    id: "440",
+    question_id: "14",
     main_question_stem:
       "In a college, the ratio of number of students to teachers is 12 : 1 and the ratio of non - teaching staff to students and teachers combined is 11 : 3 . What percent of the people above are teachers?",
     answer_1: "0.45%",
@@ -8998,11 +10675,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 441,
-    question_id: 15,
+    id: "441",
+    question_id: "15",
     main_question_stem:
       "If the ratio of ( 2x + 3y) to (3x – y ) is 7 to 3 , what is the ratio of (3 x + 2y) to (x + 3y) ?",
     answer_1: "28 : 17",
@@ -9016,11 +10696,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 442,
-    question_id: 16,
+    id: "442",
+    question_id: "16",
     main_question_stem:
       "The ratio of men to wo men in a group is 6 : 5. The ratio of men with and without glasses is 2 : 3 and the ratio of women with and without glasses is 1 : 1. What is the fraction of the people who wear glasses?",
     answer_1: "29/110",
@@ -9034,11 +10717,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 443,
-    question_id: 17,
+    id: "443",
+    question_id: "17",
     main_question_stem:
       "In a class, the ratio of boys to girls is 4 : 5 . Some boys joined the class and an equal number of girls left the class. As a result, the ratio of boys and girls reversed. What fraction of the girls left the class?",
     answer_1: "16.67%",
@@ -9052,11 +10738,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 444,
-    question_id: 18,
+    id: "444",
+    question_id: "18",
     main_question_stem:
       "In a parking lot, the ratio of number of red and green cars is 4 : 9 and the ratio of blue cars to red cars is 8 : 5 . Which of the following can be the total number of red, green, and blue cars in the parking lot?",
     answer_1: "196",
@@ -9070,11 +10759,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 445,
-    question_id: 19,
+    id: "445",
+    question_id: "19",
     main_question_stem:
       "The ratio of the red and white marbles in a box is 4 : 5 . If 10 red and 10 white marbles are added to the box, which of the following can be the percentage of marbles that are now red?",
     answer_1: "30%",
@@ -9088,11 +10780,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 446,
-    question_id: 20,
+    id: "446",
+    question_id: "20",
     main_question_stem:
       "Components P and Q are mixed in the ratio 3 cups to 5 cups to make a solution S . If there are 10 cups of P and 24 cups of Q , and given that taking fractional parts of a cup is not allowed, how many cups of P and Q will be wasted if these are used only to make the solution S?",
     answer_1: "5",
@@ -9106,11 +10801,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 447,
-    question_id: 21,
+    id: "447",
+    question_id: "21",
     main_question_stem:
       "The ratio of boys to girls in the 10 th standard is 4 : 5 and that in the 9 th standard is 2 : 3. If there are 40 students in the 9 th standard, which of the following could be the total number of boys in the 2 standards together?",
     answer_1: "2 6",
@@ -9124,11 +10822,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 448,
-    question_id: 22,
+    id: "448",
+    question_id: "22",
     main_question_stem:
       "A cake was divided in 2 pieces in the ratio 4 : 15 by weight. The larger piece was further divided in 3 parts in the ratio 4 : 5 : 3. The smallest piece is what percent of the entire cake?",
     answer_1: "15. 7 %",
@@ -9142,11 +10843,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 449,
-    question_id: 23,
+    id: "449",
+    question_id: "23",
     main_question_stem:
       "Red and green marbles in a bag are in the ratio 4 : 3 . If red and green marbles in the ratio 2 : 1 are removed from the bag, the ratio of red and green marbles remaining in the bag becomes 1 : 1. What fraction of the marbles were removed from the bag?",
     answer_1: "1/5",
@@ -9160,11 +10864,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 450,
-    question_id: 24,
+    id: "450",
+    question_id: "24",
     main_question_stem:
       "If t he ratio of 2 consecutive even positive int egers is equal 8 : 9, what is the ratio of the smaller of the two numbers to the mean of the above two numbers?",
     answer_1: "15 : 19",
@@ -9178,11 +10885,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 451,
-    question_id: 25,
+    id: "451",
+    question_id: "25",
     main_question_stem:
       "A solution M has components P and Q in the ratio 2 : 1 and a solution N has the same 2 components P and Q in the ratio 5 : 4. If equal quantities of M and N are added, what will be the ratio of P and Q in the new mixture?",
     answer_1: "11 : 7",
@@ -9196,11 +10906,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 452,
-    question_id: 26,
+    id: "452",
+    question_id: "26",
     main_question_stem:
       "A bag has some red, blue and green marbles such that twice the number of red marbles is equal to four times the number of blue marbles which is also equal to thrice the number of green marbles. What percent of all marbles are green?",
     answer_1: "15.4%",
@@ -9214,11 +10927,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 453,
-    question_id: 27,
+    id: "453",
+    question_id: "27",
     main_question_stem:
       "If p% of 2q equals p/2, and q% of p equals q 2 , what percent of q is (p + q)?",
     answer_1: "1.01%",
@@ -9232,11 +10948,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 454,
-    question_id: 28,
+    id: "454",
+    question_id: "28",
     main_question_stem:
       "The ratio of the populations in cities A and B is 1 : 3. If the populations in A and B grow by 20% and 10% respectively, which of the following is closest to the population ratio of A and B after 2 years?",
     answer_1: "1 : 2",
@@ -9250,11 +10969,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 455,
-    question_id: 29,
+    id: "455",
+    question_id: "29",
     main_question_stem:
       "In a store, the number of shirts is twice the number of trousers. For the festive season, anticipating increase in customers, the store purchases 20% more shirts and 10% more trousers. By what percent did the number of shirts and trousers combined increase ?",
     answer_1: "12.5%",
@@ -9268,11 +10990,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 456,
-    question_id: 30,
+    id: "456",
+    question_id: "30",
     main_question_stem:
       "A man spends 10% of his monthly salary on rent. He spends 20% of the remaining on food. He saves 30% of his salary and spends equally on clothes and entertainment. His expense on clothes is what percent of his expense on rent? Assume that there are no othe r expenses than what is mentioned above.",
     answer_1: "47.6%",
@@ -9286,11 +11011,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 457,
-    question_id: 31,
+    id: "457",
+    question_id: "31",
     main_question_stem:
       "The pressure in a beaker during an experiment increased by a fixed percentage every hour. If the pressure at 3 pm was 120 Pascal and at 4 pm was 150 Pascal, what was the pressure at 2 pm?",
     answer_1: "75 Pascal",
@@ -9304,11 +11032,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 458,
-    question_id: 32,
+    id: "458",
+    question_id: "32",
     main_question_stem:
       "A boy managed to pot fire 60% of all 20 shots on target. How many shots should his friend, having 90% accuracy, fire, so that overall they managed to hit the target in 80% of all shots?",
     answer_1: "20",
@@ -9322,17 +11053,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 459,
-    question_id: 1,
+    id: "459",
+    question_id: "1",
     main_question_stem:
       "If a doughnut-making machine is operated for three hours, how many cases of doughnuts will the machine be able to produce?",
-    subquestion1:
-      "The machine produces doughnuts at a rate of five doughnuts per minute.",
-    subquestion2:
-      "The doughnut company sells cases of doughnuts in two sizes: cases of 80 doughnuts, and cases of 240 doughnuts.",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9349,15 +11079,18 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Geometry",
     level: 4,
+    subquestion1:
+      "The machine produces doughnuts at a rate of five doughnuts per minute.",
+    subquestion2:
+      "The doughnut company sells cases of doughnuts in two sizes: cases of 80 doughnuts, and cases of 240 doughnuts.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 460,
-    question_id: 2,
+    id: "460",
+    question_id: "2",
     main_question_stem:
       "The figure depicts a rectangle and a circle. Point A is the corner of the rectangle and the center of the circle. Point B, where the shapes intersect, bisects the length of the rectangle. What is the area of the circle?",
-    subquestion1: "y = 6",
-    subquestion2: "The area of the rectangle is 18.",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9374,12 +11107,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Geometry",
     level: 4,
+    subquestion1: "y = 6",
+    subquestion2: "The area of the rectangle is 18.",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694521085/cjprbh08cynqqg1cfbd9.png",
   },
   {
-    id: 461,
-    question_id: 3,
+    id: "461",
+    question_id: "3",
     main_question_stem:
       "(10xy + 15x)/(2y + 3) + 3y = 1 If x = 4 and y = 1 5 . , what is the value of y ?",
     answer_1: "19/3",
@@ -9393,11 +11130,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 462,
-    question_id: 4,
+    id: "462",
+    question_id: "4",
     main_question_stem:
       "A stand at a farmer’s market is selling peaches individually and in cartons. An individual peach costs $1. When bought in a carton of 30, the price of each peach is discounted by 10 percent. Since it is the end of the growing sea - son, there is a sale going on where the price is further discounted by 60 percent. What is the price of two cartons of peaches?",
     answer_1: "$9.00",
@@ -9411,14 +11151,15 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 463,
-    question_id: 5,
+    id: "463",
+    question_id: "5",
     main_question_stem: "If y = 4 , what is the value of 2x + 7y ?",
-    subquestion1: "x + 3y = 2",
-    subquestion2: "2x + 5y = 0",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9435,11 +11176,14 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "x + 3y = 2",
+    subquestion2: "2x + 5y = 0",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 464,
-    question_id: 6,
+    id: "464",
+    question_id: "6",
     main_question_stem:
       "The table shows the peak price each year for stocks from five different companies. Which stock had the greatest increase in peak price from Year 1 to Year 3?",
     answer_1: "OMK",
@@ -9453,18 +11197,18 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694521126/rrtpdjke8darwvitagou.png",
   },
   {
-    id: 465,
-    question_id: 7,
+    id: "465",
+    question_id: "7",
     main_question_stem:
       "How many kilometers does a bullet train travel to get from Tokyo to Kyoto?",
-    subquestion1:
-      "It takes the bullet train two hours to get from Tokyo to Kyoto.",
-    subquestion2:
-      "The bullet train travels at an average speed of 250 kilometers per hour from Tokyo to Kyoto.",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9481,11 +11225,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1:
+      "It takes the bullet train two hours to get from Tokyo to Kyoto.",
+    subquestion2:
+      "The bullet train travels at an average speed of 250 kilometers per hour from Tokyo to Kyoto.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 466,
-    question_id: 8,
+    id: "466",
+    question_id: "8",
     main_question_stem:
       "If y = 1 , what is the value of the following expression: 4y+² ×16×4¯²?",
     answer_1: "4",
@@ -9499,11 +11248,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 467,
-    question_id: 9,
+    id: "467",
+    question_id: "9",
     main_question_stem:
       "When x ne0,( 2 x + 1 3 )( x 2 ) can be simplified to which of the following?",
     answer_1: "1 + x/6",
@@ -9517,16 +11269,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 468,
-    question_id: 10,
+    id: "468",
+    question_id: "10",
     main_question_stem:
       "Sophia is buying a smartphone and a phone charger at an electronics store for a total price of $630. This price reflects a discount from the original prices of both devices due to a sale the store is offering. Assuming no taxes or other fees are involved, what was the original price of the phone charger alone?",
-    subquestion1:
-      "The sale that the store is offering is 15 percent off a total purchase of $500 or more or 20 percent off a total purchase of $800 or more.",
-    subquestion2: "The original price of the smartphone alone was $720.",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9543,11 +11295,15 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1:
+      "The sale that the store is offering is 15 percent off a total purchase of $500 or more or 20 percent off a total purchase of $800 or more.",
+    subquestion2: "The original price of the smartphone alone was $720.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 469,
-    question_id: 11,
+    id: "469",
+    question_id: "11",
     main_question_stem:
       "A line passes through the points (–2, 2) and (–1, –3). At what point does this line intersect the line with the equation y = x - 8 ?",
     answer_1: "(–5, 3)",
@@ -9561,11 +11317,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Co-ordinate Geometry",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 470,
-    question_id: 12,
+    id: "470",
+    question_id: "12",
     main_question_stem:
       "If y = x/2 and x ne 0 , which of the following is equal to y/(2x) + x 4 ?",
     answer_1: "(4x ^ 2 + x)/4",
@@ -9579,17 +11338,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 471,
-    question_id: 13,
+    id: "471",
+    question_id: "13",
     main_question_stem:
       "In a survey of 20 families living on Oak Street, 17 said they had previously shopped at Fresh Food Mart, and 12 said they had previously shopped at Sally’s Market. How many families said they had shopped at both stores?",
-    subquestion1:
-      "Fifteen percent of the families surveyed said they had not shopped at either store.",
-    subquestion2:
-      "All of the families that said they had shopped at Sally’s Market also said they had shopped at Fresh Food Mart.",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9606,11 +11364,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Statistics",
     level: 4,
+    subquestion1:
+      "Fifteen percent of the families surveyed said they had not shopped at either store.",
+    subquestion2:
+      "All of the families that said they had shopped at Sally’s Market also said they had shopped at Fresh Food Mart.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 472,
-    question_id: 14,
+    id: "472",
+    question_id: "14",
     main_question_stem:
       "Anthony runs a business manufacturing machine parts. If Anthony’s business manufactured 80,000 machine parts last year and 88,000 machine parts this year, how many parts will the business need to produce next year to maintain the same percent growth from year to year?",
     answer_1: "88,000",
@@ -9624,11 +11387,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 473,
-    question_id: 15,
+    id: "473",
+    question_id: "15",
     main_question_stem:
       "What is the surface area of a right circular cyl- inder with a height of 3 and a diameter of 1?",
     answer_1: "3.5π",
@@ -9642,14 +11408,15 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 474,
-    question_id: 16,
+    id: "474",
+    question_id: "16",
     main_question_stem: "If x and y are positive integers, is x/y > 1 ?",
-    subquestion1: "x + 3 = y",
-    subquestion2: "(x + 5)/y > 1",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9666,11 +11433,14 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "x + 3 = y",
+    subquestion2: "(x + 5)/y > 1",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 475,
-    question_id: 17,
+    id: "475",
+    question_id: "17",
     main_question_stem:
       "Patrick and Mel are each selling shirts at a rock concert to promote their favorite bands. It costs each of them the same amount to produce each shirt. Mel is selling her shirts for $60. If Patrick is making 20 percent more profit than Mel, and his profit is $24 per shirt, how much is Patrick charging for his shirts?",
     answer_1: "$48.00",
@@ -9684,11 +11454,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 476,
-    question_id: 18,
+    id: "476",
+    question_id: "18",
     main_question_stem: "If 7(x/2 + x/5) = 3, what is the value of x ?",
     answer_1: "3/ 49",
     answer_2: "30 /49",
@@ -9701,15 +11474,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 477,
-    question_id: 19,
+    id: "477",
+    question_id: "19",
     main_question_stem:
       "f(x, y) = x ^ 3 + x + 3y. If y = 1, what is the value of f(x, y) ?",
-    subquestion1: "(y + 1)/2 = 2",
-    subquestion2: "x + 4y = 5",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9726,15 +11500,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "(y + 1)/2 = 2",
+    subquestion2: "x + 4y = 5",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 478,
-    question_id: 20,
+    id: "478",
+    question_id: "20",
     main_question_stem:
       "In the triangle in the figure, what is the length of side m ?",
-    subquestion1: "p = 4",
-    subquestion2: "angle A = 90 deg",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9751,12 +11526,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Geometry",
     level: 4,
+    subquestion1: "p = 4",
+    subquestion2: "angle A = 90 deg",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694521205/qgnxvvixqrzddavaf8wm.png",
   },
   {
-    id: 479,
-    question_id: 21,
+    id: "479",
+    question_id: "21",
     main_question_stem:
       "Given (3 - 5x)/2 + 4 < (x + 2)/3, which of the following describes the possible values for x ?",
     answer_1: "x < 29/ 17",
@@ -9770,16 +11549,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 480,
-    question_id: 22,
+    id: "480",
+    question_id: "22",
     main_question_stem:
       "Roland and Felicia are testing circuit boards for wiring errors. Working together, they can test a circuit board in eight minutes. How many circuit boards can Felicia test in an hour on her own?",
-    subquestion1: "Felicia can test circuit boards twice as fast as Roland.",
-    subquestion2:
-      "If Roland and Felicia get their friend Cory to help them, they can all work together to test a circuit board in seven minutes.",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9796,29 +11575,36 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "Felicia can test circuit boards twice as fast as Roland.",
+    subquestion2:
+      "If Roland and Felicia get their friend Cory to help them, they can all work together to test a circuit board in seven minutes.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 481,
-    question_id: 23,
+    id: "481",
+    question_id: "23",
     main_question_stem:
       "A parking lot contains ten cars. The average age of the cars is seven years. If the average age of nine of the cars is six years, what is the age of the remaining car in years?",
     answer_1: "3",
     answer_2: "7",
     answer_3: "10",
     answer_4: "16",
-    answer_5: 20,
+    answer_5: "20",
     correct_answer: "D",
     Category: "Quant",
     SubCategory: "Linear equations",
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 482,
-    question_id: 24,
+    id: "482",
+    question_id: "24",
     main_question_stem:
       "If Cindy ran at 7.5 miles per hour for 16 min - utes, and then ran at 6 miles per hour for 10 minutes, how far in miles did she run total?",
     answer_1: "2.5",
@@ -9832,15 +11618,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 483,
-    question_id: 25,
+    id: "483",
+    question_id: "25",
     main_question_stem:
       "If a = 0.01b + 3.5 * 10 ^ - 2, what is the value of a ?",
-    subquestion1: "300a - 3b = 10.5",
-    subquestion2: "100a + 10b = 58.5",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9857,14 +11644,15 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "300a - 3b = 10.5",
+    subquestion2: "100a + 10b = 58.5",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 484,
-    question_id: 26,
+    id: "484",
+    question_id: "26",
     main_question_stem: "What is the perimeter of the shape in the figure?",
-    subquestion1: "All angles in the figure are right angles.",
-    subquestion2: "t = 2",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9881,12 +11669,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Geometry",
     level: 4,
+    subquestion1: "All angles in the figure are right angles.",
+    subquestion2: "t = 2",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694521244/ylr89pj6argtliuc7qa4.png",
   },
   {
-    id: 485,
-    question_id: 27,
+    id: "485",
+    question_id: "27",
     main_question_stem:
       "Jerry is moving from his current apartment into a house. He is spending a total of $2,000 on moving expenses. These expenses are distributed between buying moving supplies, hiring labor for moving his items, and renting a truck. Ten percent of his moving expenses were spent on supplies, and the truck rental cost five times as much as hiring labor. How much did Jerry spend on his truck rental?",
     answer_1: "$300",
@@ -9900,11 +11692,14 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 486,
-    question_id: 28,
+    id: "486",
+    question_id: "28",
     main_question_stem:
       "The figure shows a right triangle with base x and height y . If y is doubled, by what percent does x need to be increased to triple the area of the triangle?",
     answer_1: "20 percent",
@@ -9918,17 +11713,18 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694521300/rjpl34p5xjfpxieuzwis.png",
   },
   {
-    id: 487,
-    question_id: 29,
+    id: "487",
+    question_id: "29",
     main_question_stem:
       "At Bailey’s bike shop, 75 percent of the bikes sold are mountain bikes, and the rest are road bikes. What percentage of the bikes sold are mountain bikes for kids?",
-    subquestion1:
-      "Twenty percent of the bikes sold are for kids and 80 percent are for adults.",
-    subquestion2: "Twenty percent of the bikes sold are road bikes for adults.",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9945,15 +11741,17 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1:
+      "Twenty percent of the bikes sold are for kids and 80 percent are for adults.",
+    subquestion2: "Twenty percent of the bikes sold are road bikes for adults.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 488,
-    question_id: 30,
+    id: "488",
+    question_id: "30",
     main_question_stem:
       "Using the expression 4x + 3y +z = 8, what is the value of x ?",
-    subquestion1: "x = y = z",
-    subquestion2: "z = 4 - 3y",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9970,16 +11768,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "x = y = z",
+    subquestion2: "z = 4 - 3y",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 489,
-    question_id: 31,
+    id: "489",
+    question_id: "31",
     main_question_stem:
       "George’s Gas Station gets fuel from two differ - ent fuel suppliers: Dyon and Brian’s Biofuels. Each supplier provides fuel with a different percentage of ethanol, and George mixes them together in his supply tank. If George currently has 1,000 gallons of fuel at 11 percent ethanol in his supply tank, how much fuel from Bri- an’s Biofuels would he need to add to achieve a final mixture that is 12 percent ethanol?",
-    subquestion1: "Brian’s Biofuels provides fuel with 80 percent ethanol.",
-    subquestion2:
-      "The mixture currently in George’s supply tank has 10 gallons of fuel from Brian’s Biofuels and 990 gallons of fuel from Dyon.",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -9996,11 +11794,15 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "Brian’s Biofuels provides fuel with 80 percent ethanol.",
+    subquestion2:
+      "The mixture currently in George’s supply tank has 10 gallons of fuel from Brian’s Biofuels and 990 gallons of fuel from Dyon.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 490,
-    question_id: 32,
+    id: "490",
+    question_id: "32",
     main_question_stem:
       "If the hypotenuse of the triangle in the figure has a length of 9, what is x ?",
     answer_1: "4.5",
@@ -10014,12 +11816,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Geometry",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694521349/rnclp9tbfsfcveavbnoz.png",
   },
   {
-    id: 491,
-    question_id: 33,
+    id: "491",
+    question_id: "33",
     main_question_stem:
       "Taco Fusion restaurant served a total of 60 guests for lunch today. Twenty of the guests ordered sushi, and 45 of the guests ordered tacos. If five of the guests didn’t order tacos or sushi, how many of the guests ordered both?",
     answer_1: "0",
@@ -10033,17 +11839,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Statistics",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 492,
-    question_id: 34,
+    id: "492",
+    question_id: "34",
     main_question_stem:
       "The population of Greenvale increases by 10 percent each year. Assuming constant growth, how many people will be living in Greenvale at the end of this year?",
-    subquestion1:
-      "Over a two-year period, the population growth in Greenvale is 21 percent.",
-    subquestion2:
-      "At the beginning of last year, there were 10,000 people living in Greenvale.",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -10060,15 +11865,18 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1:
+      "Over a two-year period, the population growth in Greenvale is 21 percent.",
+    subquestion2:
+      "At the beginning of last year, there were 10,000 people living in Greenvale.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 493,
-    question_id: 35,
+    id: "493",
+    question_id: "35",
     main_question_stem:
       "The figure depicts a triangle with a base of x and a height of y . What is the value of the area of the triangle?",
-    subquestion1: "xy = 100",
-    subquestion2: "y = 10",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -10085,12 +11893,16 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Geometry",
     level: 4,
+    subquestion1: "xy = 100",
+    subquestion2: "y = 10",
+    subquestion3: "",
+
     img_url:
       "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1694521441/ukzsxb5u8xifcj7m7hhw.png",
   },
   {
-    id: 494,
-    question_id: 36,
+    id: "494",
+    question_id: "36",
     main_question_stem:
       "A company is selling liquid nitrogen at a price of $2.00 per gallon. If they want to make a profit of 25 percent of their cost of production, how much can they spend on production of each gallon of liquid nitrogen?",
     answer_1: "$1.25",
@@ -10104,17 +11916,16 @@ export const questions = [
     Quant_category_1: "Word problems",
     "Quant_category 2": "Algebra",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 495,
-    question_id: 37,
+    id: "495",
+    question_id: "37",
     main_question_stem:
       "Jack’s morning routine includes three activi- ties: taking a shower, drinking coffee, and walking to work. He does each activity in sequential order without overlapping. Assuming no gaps between each activity, it takes him 45 minutes to complete his routine. How long does it take him to drink coffee?",
-    subquestion1:
-      "It takes him four times as long to walk to work as it takes him to drink coffee.",
-    subquestion2:
-      "Showering and drinking coffee take him a total of 25 minutes.",
     answer_1:
       "Statement (1) alone is sufficient, but Statement (2) alone is not sufficient to answer the question asked.",
     answer_2:
@@ -10131,14 +11942,18 @@ export const questions = [
     Quant_category_1: "Data Sufficiency",
     "Quant_category 2": "Arithmetic",
     level: 4,
+    subquestion1:
+      "It takes him four times as long to walk to work as it takes him to drink coffee.",
+    subquestion2:
+      "Showering and drinking coffee take him a total of 25 minutes.",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 496,
-    question_id: 1,
+    id: "496",
+    question_id: "1",
     main_question_stem:
       "Questions 1–6 refer to the following passage, which is excerpted from Playing against Nature: Integrating Science and Economics to Mitigate Natural Hazards in an Uncertain World, by Seth Stein and Jerome Stein (Wiley 2014). Natural hazards are the price we pay for living on an active planet. The tectonic plate subduction producing Japan’s rugged Tohoku coast gives rise to earthquakes and tsunamis. Florida’s warm sunny weather results from the processes in the ocean and atmosphere that cause hurricanes. The volcanoes that produced Hawaii’s spectacular islands sometimes threaten people. Rivers that provide the water for the farms that feed us sometimes flood. Humans have to live with natural hazards. We describe this challenge in terms of hazards, the natural occurrence of earthquakes or other phe- nomena, and the risks, or dangers they pose to lives and property. In this formulation, the risk is the product of hazard and vulnerability. We want to assess the hazards — estimate how significant they are — and develop methods to mitigate or reduce the resulting losses. Hazards are geological facts that are not under human control. All we can do is try to assess them as best we can. In contrast, risks are affected by human actions that increase or decrease vulnerabil- ity, such as where people live and how they build. We increase vulnerability by building in hazardous areas, and decrease it by making buildings more hazard resistant. Areas with high hazard can have low risk because few people live there. Areas of modest hazard can have high risk due to large population and poor construction. A disaster occurs when — owing to high vulnerability — a natural event has major consequences for society. The harm from natural disasters is enormous. On average, about 100,000 people per year are killed by natural disasters, with some disasters — such as the 2004 Indian Ocean tsunami — causing many more deaths. Although the actual numbers of deaths in many events, such as the 2010 Haiti earthquake, are poorly known, they are very large. Economic impacts are even harder to quantify, and various measures are used to try to do so. Disasters cause losses, which are the total negative economic impact. These include direct losses due to destruction of physical assets such as buildings, farmland, forests, etc., and indirect losses that result from the direct losses. Because losses are hard to determine, what is reported is often the cost, which refers to payouts by insurers (called insured losses) or governments to reimburse some of the losses. Thus, the reported cost does not reflect the losses to people who do not receive such payments.",
-    subquestion1: "The main idea of the first paragraph is best expressed as",
     answer_1:
       "The factors that make an area desirable are also those that can pose the most risk.",
     answer_2:
@@ -10152,16 +11967,19 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "The main idea of the first paragraph is best expressed as",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 497,
-    question_id: 2,
+    id: "497",
+    question_id: "2",
     main_question_stem:
       "Questions 1–6 refer to the following passage, which is excerpted from Playing against Nature: Integrating Science and Economics to Mitigate Natural Hazards in an Uncertain World, by Seth Stein and Jerome Stein (Wiley 2014). Natural hazards are the price we pay for living on an active planet. The tectonic plate subduction producing Japan’s rugged Tohoku coast gives rise to earthquakes and tsunamis. Florida’s warm sunny weather results from the processes in the ocean and atmosphere that cause hurricanes. The volcanoes that produced Hawaii’s spectacular islands sometimes threaten people. Rivers that provide the water for the farms that feed us sometimes flood. Humans have to live with natural hazards. We describe this challenge in terms of hazards, the natural occurrence of earthquakes or other phe- nomena, and the risks, or dangers they pose to lives and property. In this formulation, the risk is the product of hazard and vulnerability. We want to assess the hazards — estimate how significant they are — and develop methods to mitigate or reduce the resulting losses. Hazards are geological facts that are not under human control. All we can do is try to assess them as best we can. In contrast, risks are affected by human actions that increase or decrease vulnerabil- ity, such as where people live and how they build. We increase vulnerability by building in hazardous areas, and decrease it by making buildings more hazard resistant. Areas with high hazard can have low risk because few people live there. Areas of modest hazard can have high risk due to large population and poor construction. A disaster occurs when — owing to high vulnerability — a natural event has major consequences for society. The harm from natural disasters is enormous. On average, about 100,000 people per year are killed by natural disasters, with some disasters — such as the 2004 Indian Ocean tsunami — causing many more deaths. Although the actual numbers of deaths in many events, such as the 2010 Haiti earthquake, are poorly known, they are very large. Economic impacts are even harder to quantify, and various measures are used to try to do so. Disasters cause losses, which are the total negative economic impact. These include direct losses due to destruction of physical assets such as buildings, farmland, forests, etc., and indirect losses that result from the direct losses. Because losses are hard to determine, what is reported is often the cost, which refers to payouts by insurers (called insured losses) or governments to reimburse some of the losses. Thus, the reported cost does not reflect the losses to people who do not receive such payments.",
-    subquestion1:
-      "Which of the following might the author of the passage consider an “indirect loss” associated with a disaster?",
     answer_1: "Desecration of a library due to vandalism",
     answer_2: "Damage to a school building in a fire",
     answer_3: "Loss of retail clothing sales due to a mall flood",
@@ -10170,16 +11988,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1:
+      "Which of the following might the author of the passage consider an “indirect loss” associated with a disaster?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 498,
-    question_id: 3,
+    id: "498",
+    question_id: "3",
     main_question_stem:
       "Questions 1–6 refer to the following passage, which is excerpted from Playing against Nature: Integrating Science and Economics to Mitigate Natural Hazards in an Uncertain World, by Seth Stein and Jerome Stein (Wiley 2014). Natural hazards are the price we pay for living on an active planet. The tectonic plate subduction producing Japan’s rugged Tohoku coast gives rise to earthquakes and tsunamis. Florida’s warm sunny weather results from the processes in the ocean and atmosphere that cause hurricanes. The volcanoes that produced Hawaii’s spectacular islands sometimes threaten people. Rivers that provide the water for the farms that feed us sometimes flood. Humans have to live with natural hazards. We describe this challenge in terms of hazards, the natural occurrence of earthquakes or other phe- nomena, and the risks, or dangers they pose to lives and property. In this formulation, the risk is the product of hazard and vulnerability. We want to assess the hazards — estimate how significant they are — and develop methods to mitigate or reduce the resulting losses. Hazards are geological facts that are not under human control. All we can do is try to assess them as best we can. In contrast, risks are affected by human actions that increase or decrease vulnerabil- ity, such as where people live and how they build. We increase vulnerability by building in hazardous areas, and decrease it by making buildings more hazard resistant. Areas with high hazard can have low risk because few people live there. Areas of modest hazard can have high risk due to large population and poor construction. A disaster occurs when — owing to high vulnerability — a natural event has major consequences for society. The harm from natural disasters is enormous. On average, about 100,000 people per year are killed by natural disasters, with some disasters — such as the 2004 Indian Ocean tsunami — causing many more deaths. Although the actual numbers of deaths in many events, such as the 2010 Haiti earthquake, are poorly known, they are very large. Economic impacts are even harder to quantify, and various measures are used to try to do so. Disasters cause losses, which are the total negative economic impact. These include direct losses due to destruction of physical assets such as buildings, farmland, forests, etc., and indirect losses that result from the direct losses. Because losses are hard to determine, what is reported is often the cost, which refers to payouts by insurers (called insured losses) or governments to reimburse some of the losses. Thus, the reported cost does not reflect the losses to people who do not receive such payments.",
-    subquestion1:
-      "According to the passage, an important distinction between hazards and risks is",
     answer_1:
       "risks occur naturally, while hazards arise because of human actions",
     answer_2: "hazards result from risks, and risks result from vulnerability",
@@ -10189,15 +12011,20 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "According to the passage, an important distinction between hazards and risks is",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 499,
-    question_id: 4,
+    id: "499",
+    question_id: "4",
     main_question_stem:
       "Questions 1–6 refer to the following passage, which is excerpted from Playing against Nature: Integrating Science and Economics to Mitigate Natural Hazards in an Uncertain World, by Seth Stein and Jerome Stein (Wiley 2014). Natural hazards are the price we pay for living on an active planet. The tectonic plate subduction producing Japan’s rugged Tohoku coast gives rise to earthquakes and tsunamis. Florida’s warm sunny weather results from the processes in the ocean and atmosphere that cause hurricanes. The volcanoes that produced Hawaii’s spectacular islands sometimes threaten people. Rivers that provide the water for the farms that feed us sometimes flood. Humans have to live with natural hazards. We describe this challenge in terms of hazards, the natural occurrence of earthquakes or other phe- nomena, and the risks, or dangers they pose to lives and property. In this formulation, the risk is the product of hazard and vulnerability. We want to assess the hazards — estimate how significant they are — and develop methods to mitigate or reduce the resulting losses. Hazards are geological facts that are not under human control. All we can do is try to assess them as best we can. In contrast, risks are affected by human actions that increase or decrease vulnerabil- ity, such as where people live and how they build. We increase vulnerability by building in hazardous areas, and decrease it by making buildings more hazard resistant. Areas with high hazard can have low risk because few people live there. Areas of modest hazard can have high risk due to large population and poor construction. A disaster occurs when — owing to high vulnerability — a natural event has major consequences for society. The harm from natural disasters is enormous. On average, about 100,000 people per year are killed by natural disasters, with some disasters — such as the 2004 Indian Ocean tsunami — causing many more deaths. Although the actual numbers of deaths in many events, such as the 2010 Haiti earthquake, are poorly known, they are very large. Economic impacts are even harder to quantify, and various measures are used to try to do so. Disasters cause losses, which are the total negative economic impact. These include direct losses due to destruction of physical assets such as buildings, farmland, forests, etc., and indirect losses that result from the direct losses. Because losses are hard to determine, what is reported is often the cost, which refers to payouts by insurers (called insured losses) or governments to reimburse some of the losses. Thus, the reported cost does not reflect the losses to people who do not receive such payments.",
-    subquestion1: "The passage is primarily concerned with",
     answer_1: "describing the causes and impacts of natural disasters",
     answer_2:
       "assessing the impact that disasters render on the global economy",
@@ -10208,16 +12035,19 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1: "The passage is primarily concerned with",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 500,
-    question_id: 5,
+    id: "500",
+    question_id: "5",
     main_question_stem:
       "Questions 1–6 refer to the following passage, which is excerpted from Playing against Nature: Integrating Science and Economics to Mitigate Natural Hazards in an Uncertain World, by Seth Stein and Jerome Stein (Wiley 2014). Natural hazards are the price we pay for living on an active planet. The tectonic plate subduction producing Japan’s rugged Tohoku coast gives rise to earthquakes and tsunamis. Florida’s warm sunny weather results from the processes in the ocean and atmosphere that cause hurricanes. The volcanoes that produced Hawaii’s spectacular islands sometimes threaten people. Rivers that provide the water for the farms that feed us sometimes flood. Humans have to live with natural hazards. We describe this challenge in terms of hazards, the natural occurrence of earthquakes or other phe- nomena, and the risks, or dangers they pose to lives and property. In this formulation, the risk is the product of hazard and vulnerability. We want to assess the hazards — estimate how significant they are — and develop methods to mitigate or reduce the resulting losses. Hazards are geological facts that are not under human control. All we can do is try to assess them as best we can. In contrast, risks are affected by human actions that increase or decrease vulnerabil- ity, such as where people live and how they build. We increase vulnerability by building in hazardous areas, and decrease it by making buildings more hazard resistant. Areas with high hazard can have low risk because few people live there. Areas of modest hazard can have high risk due to large population and poor construction. A disaster occurs when — owing to high vulnerability — a natural event has major consequences for society. The harm from natural disasters is enormous. On average, about 100,000 people per year are killed by natural disasters, with some disasters — such as the 2004 Indian Ocean tsunami — causing many more deaths. Although the actual numbers of deaths in many events, such as the 2010 Haiti earthquake, are poorly known, they are very large. Economic impacts are even harder to quantify, and various measures are used to try to do so. Disasters cause losses, which are the total negative economic impact. These include direct losses due to destruction of physical assets such as buildings, farmland, forests, etc., and indirect losses that result from the direct losses. Because losses are hard to determine, what is reported is often the cost, which refers to payouts by insurers (called insured losses) or governments to reimburse some of the losses. Thus, the reported cost does not reflect the losses to people who do not receive such payments.",
-    subquestion1:
-      "Which of the following best describes the pur- pose of the fourth paragraph in relation to the passage as a whole?",
     answer_1:
       "It uses numerical data and metrics to describe the economic impacts of natural disasters.",
     answer_2:
@@ -10231,16 +12061,20 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1:
+      "Which of the following best describes the pur- pose of the fourth paragraph in relation to the passage as a whole?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 501,
-    question_id: 6,
+    id: "501",
+    question_id: "6",
     main_question_stem:
       "Questions 1–6 refer to the following passage, which is excerpted from Playing against Nature: Integrating Science and Economics to Mitigate Natural Hazards in an Uncertain World, by Seth Stein and Jerome Stein (Wiley 2014). Natural hazards are the price we pay for living on an active planet. The tectonic plate subduction producing Japan’s rugged Tohoku coast gives rise to earthquakes and tsunamis. Florida’s warm sunny weather results from the processes in the ocean and atmosphere that cause hurricanes. The volcanoes that produced Hawaii’s spectacular islands sometimes threaten people. Rivers that provide the water for the farms that feed us sometimes flood. Humans have to live with natural hazards. We describe this challenge in terms of hazards, the natural occurrence of earthquakes or other phe- nomena, and the risks, or dangers they pose to lives and property. In this formulation, the risk is the product of hazard and vulnerability. We want to assess the hazards — estimate how significant they are — and develop methods to mitigate or reduce the resulting losses. Hazards are geological facts that are not under human control. All we can do is try to assess them as best we can. In contrast, risks are affected by human actions that increase or decrease vulnerabil- ity, such as where people live and how they build. We increase vulnerability by building in hazardous areas, and decrease it by making buildings more hazard resistant. Areas with high hazard can have low risk because few people live there. Areas of modest hazard can have high risk due to large population and poor construction. A disaster occurs when — owing to high vulnerability — a natural event has major consequences for society. The harm from natural disasters is enormous. On average, about 100,000 people per year are killed by natural disasters, with some disasters — such as the 2004 Indian Ocean tsunami — causing many more deaths. Although the actual numbers of deaths in many events, such as the 2010 Haiti earthquake, are poorly known, they are very large. Economic impacts are even harder to quantify, and various measures are used to try to do so. Disasters cause losses, which are the total negative economic impact. These include direct losses due to destruction of physical assets such as buildings, farmland, forests, etc., and indirect losses that result from the direct losses. Because losses are hard to determine, what is reported is often the cost, which refers to payouts by insurers (called insured losses) or governments to reimburse some of the losses. Thus, the reported cost does not reflect the losses to people who do not receive such payments.",
-    subquestion1:
-      "Which of the following logically follows the information given in the passage?",
     answer_1:
       "The number of unreported deaths in the 2010 Haitian earthquake exceeded the number of unreported deaths in the 2004 Indian Ocean tsunami.",
     answer_2:
@@ -10254,12 +12088,18 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1:
+      "Which of the following logically follows the information given in the passage?",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 502,
-    question_id: 7,
+    id: "502",
+    question_id: "7",
     main_question_stem:
       "Before the primary school can open to the public in time for the fall semester, the crew in charge of the project must finish construction, cleaning, and safety-proofing it’s interior .",
     answer_1:
@@ -10275,12 +12115,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 503,
-    question_id: 8,
+    id: "503",
+    question_id: "8",
     main_question_stem:
       "So many accounts of this continents’ past begin with Europeans striding ashore, claim- ing this “newfound land” and its human inhabitants for its respective empires.",
     answer_1:
@@ -10296,12 +12141,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 504,
-    question_id: 9,
+    id: "504",
+    question_id: "9",
     main_question_stem:
       "Injera, an East African flatbread, has been a main component of Ethiopian dishes for gen- erations and are still used by many Ethiopians today, who use it to feed themselves in the same manner Americans use flatware.",
     answer_1:
@@ -10316,12 +12166,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 505,
-    question_id: 10,
+    id: "505",
+    question_id: "10",
     main_question_stem:
       "The size of oceanic waves is a function of the velocity of the wind and of fetch, the length of the surface of the water subject to those winds. The impact of waves against a coastline is a function of the size of the waves and the shape of the sea bottom. The degree of erosion to which a coastline is subject is a function of the average impact of waves and the geologic composition of the coastline. If these statements are true, which one of the following must also be true?",
     answer_1:
@@ -10336,12 +12191,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 506,
-    question_id: 11,
+    id: "506",
+    question_id: "11",
     main_question_stem:
       "Health insurers are largely immune to the factors that are limiting profit in many sec - tors of the healthcare economy. Consumers have shown a willingness to pay almost any price for health insurance premiums. Capital demands, which are the responsibility of doc- tors and hospitals, are increasing dramatically, even as cost-containment measures, largely encouraged by the insurers and their friends in government, have forced new levels of fiscal discipline upon hospitals and doctors. Patients still need MRIs and buildings to put them in, but hospitals are limited in how much they can charge patients for the use of these facilities. Which one of the following most accurately describes the role that the statement “patients still need MRIs and buildings to put them in” plays in the argument?",
     answer_1:
@@ -10357,12 +12217,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 507,
-    question_id: 12,
+    id: "507",
+    question_id: "12",
     main_question_stem:
       "The softball team tried to raise enough money to purchase new uniforms for the upcoming season, but between them, the 20 players were only able to raise about 70 percent of the cost.",
     answer_1:
@@ -10378,12 +12243,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 508,
-    question_id: 13,
+    id: "508",
+    question_id: "13",
     main_question_stem:
       "Forcing businesses to furnish employees with paid leave for family concerns, such as paternity leave or leave to care for a sick child, is a terrible idea. If a business allows employ- ees to take this time off, the workers will take advantage of the privilege and come to work as little as possible. This will destroy productivity and workplace morale. Which one of the following, if true, most seri- ously weakens the argument?",
     answer_1:
@@ -10399,12 +12269,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 509,
-    question_id: 14,
+    id: "509",
+    question_id: "14",
     main_question_stem:
       "Not all of the players was on board with the new uniforms for the girls’ basketball team, but the team made their choices.",
     answer_1:
@@ -10420,12 +12295,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 510,
-    question_id: 15,
+    id: "510",
+    question_id: "15",
     main_question_stem:
       "The nation’s increasing reliance on automa- tion is reducing the number of jobs available to hardworking people, forcing many families to make the unfortunate choice between having a roof over their heads or receiving healthcare.",
     answer_1:
@@ -10441,12 +12321,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 511,
-    question_id: 16,
+    id: "511",
+    question_id: "16",
     main_question_stem:
       "Software engineers know that a poorly written application can consume more memory than it should and that running out of memory can cause an application to crash. However, if a crashing application causes the whole oper- ating system to crash, the fault lies with the operating system. Which one of the following, if true, is least helpful in establishing that this conclusion is properly drawn?",
     answer_1:
@@ -10462,12 +12347,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 512,
-    question_id: 17,
+    id: "512",
+    question_id: "17",
     main_question_stem:
       "This museum does not grant people the right to use images of items in its collection in online publications. We are obliged to do everything in our power to ensure the contin- ued appeal of visiting our collection in person. The conclusion above depends on assuming which one of the following?",
     answer_1:
@@ -10483,12 +12373,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 513,
-    question_id: 18,
+    id: "513",
+    question_id: "18",
     main_question_stem:
       "The town’s legislators heard arguments from the crowd about how town facilities and parks no longer properly accommodate the towns- people now that the number of residents have increased so considerably.",
     answer_1: "the number of residents have increased so considerably",
@@ -10499,12 +12394,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 514,
-    question_id: 19,
+    id: "514",
+    question_id: "19",
     main_question_stem:
       "Risks are effected by human actions that increase or decrease vulnerability, like where people live and how they build.",
     answer_1:
@@ -10520,12 +12420,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 515,
-    question_id: 20,
+    id: "515",
+    question_id: "20",
     main_question_stem:
       "According to the passage, being able to resist distractions is a form of",
     answer_1: "socioemotional growth",
@@ -10536,12 +12441,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 516,
-    question_id: 21,
+    id: "516",
+    question_id: "21",
     main_question_stem:
       "The author of the passage makes the distinc- tion between the guiding principles of school readiness and those observed by the K–12 system to",
     answer_1:
@@ -10556,12 +12466,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 517,
-    question_id: 22,
+    id: "517",
+    question_id: "22",
     main_question_stem:
       "The passage indicates that attention to which of the following school readiness skills has likely increased in recent years?",
     answer_1: "responding accurately on standardized achievement tests",
@@ -10572,12 +12487,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 6,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 518,
-    question_id: 23,
+    id: "518",
+    question_id: "23",
     main_question_stem:
       "It can be inferred from the passage that children who interact successfully with their teachers and other students have strong",
     answer_1: "motor skills",
@@ -10588,12 +12508,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 519,
-    question_id: 24,
+    id: "519",
+    question_id: "24",
     main_question_stem:
       "Career counselor: Many large international companies have changed their practices regarding international assignments. They are placing much more emphasis on help- ing spouses of expatriate employees to adjust to the foreign environment. This has reduced premature returns by 67 percent. Which one of the following is an assumption upon which the career counselor’s argument depends?",
     answer_1:
@@ -10609,12 +12534,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 520,
-    question_id: 25,
+    id: "520",
+    question_id: "25",
     main_question_stem:
       "One work of art is not more important because it was made after another nor does it make its predecessor obsolete.",
     answer_1: "after another nor does it make its predecessor obsolete",
@@ -10625,12 +12555,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 521,
-    question_id: 26,
+    id: "521",
+    question_id: "26",
     main_question_stem:
       "A most unsociable dog he proved to be, resent- ing all their advances, refusing to let them lay hands on him, menacing them with bared fangs and bristling hair.",
     answer_1:
@@ -10646,12 +12581,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 522,
-    question_id: 27,
+    id: "522",
+    question_id: "27",
     main_question_stem:
       "Scientists have discovered a gene that controls whether an individual is monogamous. They took a gene from the monogamous prairie vole and implanted it into its more promiscuous rel- ative, the meadow vole. Thereafter, the meadow voles with the new gene became monogamous. Which one of the following, if true, would provide the most support for the argument’s conclusion?",
     answer_1:
@@ -10667,12 +12607,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 523,
-    question_id: 28,
+    id: "523",
+    question_id: "28",
     main_question_stem:
       "Physician: Scottish researchers have developed a test that allows them to predict at what age a woman will experience menopause. The sci- entists use a model that compares a woman’s ovaries to “average” ovaries to see whether her ovaries are aging faster or more slowly than average. They have discovered that the size of ovaries is directly related to the number of eggs they contain, which in turn is directly related to fertility. This discovery will signifi - cantly influence women’s decisions on when to have children. The physician’s conclusion follows logically if which one of the following is assumed? starts to decline at the age of 37.",
     answer_1:
@@ -10688,12 +12633,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 524,
-    question_id: 29,
+    id: "524",
+    question_id: "29",
     main_question_stem:
       "The top two students, Arthur and Abraham, excelled not only academically but in athletics too.",
     answer_1: "excelled not only academically but in athletics too",
@@ -10704,12 +12654,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 525,
-    question_id: 30,
+    id: "525",
+    question_id: "30",
     main_question_stem:
       "To earn a graduate equivalency diploma, a student must pass tests on subjects taught in high schools, proving that he or she has mastered them to the degree assumed of a high-school graduate. It makes sense for a student to drop out of high school and earn a GED. A GED takes much less time to earn than a high-school diploma and provides evidence that the student has learned everything he or she would have learned in high school. Which one of the following, if true, most seri- ously weakens the argument?",
     answer_1:
@@ -10725,12 +12680,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 526,
-    question_id: 31,
+    id: "526",
+    question_id: "31",
     main_question_stem: "The primary purpose of this passage is to",
     answer_1:
       "identify gaps in the business world that lead to cybersecurity breaches",
@@ -10744,12 +12704,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 527,
-    question_id: 32,
+    id: "527",
+    question_id: "32",
     main_question_stem:
       "According to the passage, all of the following decrease the economic benefits of technologi - cal investment EXCEPT:",
     answer_1: "experiencing stolen intellectual property",
@@ -10760,12 +12725,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 528,
-    question_id: 33,
+    id: "528",
+    question_id: "33",
     main_question_stem:
       "When the author asserts that companies take a “siloed and reactive” approach to cybersecu- rity, he is implying that companies",
     answer_1:
@@ -10779,12 +12749,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 5,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 529,
-    question_id: 34,
+    id: "529",
+    question_id: "34",
     main_question_stem:
       "Which of the following is most likely an example of intellectual property as mentioned in the second paragraph?",
     answer_1: "works of art posted to social media",
@@ -10796,12 +12771,17 @@ export const questions = [
     correct_answer: "E",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 3,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 530,
-    question_id: 35,
+    id: "530",
+    question_id: "35",
     main_question_stem:
       "It can be inferred from the passage that the author considers which of the following to be true regarding increased global connectivity?",
     answer_1:
@@ -10816,12 +12796,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Reading Comprehension",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 531,
-    question_id: 36,
+    id: "531",
+    question_id: "36",
     main_question_stem:
       "I bought a pair of glasses from an optometrist. One of the lenses regularly pops out of the frame. Therefore, this optometrist doesn’t know how to make a good pair of glasses. The reasoning in the argument is most vul- nerable to criticism on the grounds that the argument",
     answer_1: "does not allow the optometrist a chance to defend himself",
@@ -10835,12 +12820,17 @@ export const questions = [
     correct_answer: "D",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 532,
-    question_id: 37,
+    id: "532",
+    question_id: "37",
     main_question_stem:
       "A new kind of primate, the fat-tailed lemur, has been discovered in Madagascar. These lemurs hibernate, sleeping in holes in trees for up to seven months out of the year. Winter temperatures in Madagascar rarely drop below 86 degrees, so these lemurs do not hibernate to escape the cold but perhaps to conserve energy during the dry season, when food is scarce. This is the first time anyone has found an animal that hibernates during hot weather, disproving the common belief that only ani- mals in cold climates hibernate. Which one of the following most accurately describes the role played in the argument by the assertion that this is the first time anyone has found an animal that hibernates during hot weather?",
     answer_1:
@@ -10856,12 +12846,17 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Critical Reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 533,
-    question_id: 38,
+    id: "533",
+    question_id: "38",
     main_question_stem:
       "When we think about peoples of the past, we intuitively try to imagine what he or she would have looked like in real life and to visual- ize their physical features, dress, and general appearance.",
     answer_1:
@@ -10877,12 +12872,17 @@ export const questions = [
     correct_answer: "B",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 534,
-    question_id: 39,
+    id: "534",
+    question_id: "39",
     main_question_stem:
       "Motorcyclists are told to always wear helmets when they ride their motorcycles. But helmets only protect riders when they have wrecks, and wrecks occur only once out of every 1,000 rides. Therefore, a motorcyclist would be per- fectly safe if he wore his helmet only once out of every 1,000 rides. Which one of the following employs a flawed argumentative strategy that is most closely parallel to the flawed argumentative strategy in this statement?",
     answer_1:
@@ -10898,12 +12898,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 4,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 535,
-    question_id: 40,
+    id: "535",
+    question_id: "40",
     main_question_stem:
       "Even though Carter had fewer quarters in his piggybank than did his brother Clark, Clark had less money overall.",
     answer_1:
@@ -10919,12 +12924,17 @@ export const questions = [
     correct_answer: "A",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 1,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 536,
-    question_id: 41,
+    id: "536",
+    question_id: "41",
     main_question_stem:
       "Rugby is somewhat like American football in that both involve downs, tackles, and touch- downs, but it also combines elements from other sports, like soccer and hurling.",
     answer_1:
@@ -10940,338 +12950,536 @@ export const questions = [
     correct_answer: "C",
     Category: "Verbal",
     SubCategory: "Sentence Correction",
+    Quant_category_1: "",
+    "Quant_category 2": "",
     level: 2,
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
     img_url: "",
   },
   {
-    id: 537,
-    question_id: 1,
+    id: "537",
+    question_id: "1",
     main_question_stem:
       "A certain start-up company that makes specialized computer games with historical themes is to hold a meeting of the five partners. Prior to the meeting, three of the partners have circulated memos about Xanthia. From the finance expert The amount of money we have spent on developing Xanthia has been much more than we have spent on any other of our games. The returns, as yet, have not been sufficient even to cover our costs. I propose a limit of $150,000 for next year�s marketing budget for Xanthia. If sales do not rise by the end of the year to a level that would, if continued, lead to at least a modest profit on our investment by the end of two or three years, I suggest that we cut our losses and divert our attention to other games. From the marketing expert As yet our exciting new game, Xanthia has not gained attention in the media. I would like to see a sizable budget increase this coming year to something in the order of $300,000 for advertising. I feel that once we reach a certain level of media exposure, further expense will be minimal as knowledge of the product will spread by word of mouth and the social media. Without this initial push, the game might languish and our company might never recover the development costs, which have been much higher than the average for our other games. From the company founder Xanthia adds a new dimension to our offerings. It is true that development costs have been high, but we should add the costs to the low costs of our other games and not, at least for the next two years, look at any game as a free-standing product. It is more important for us to grow our position in the market. To do this we have to launch more games this year. We should market Xanthia along with all the games we offer and as such we have to participate in specialist fairs and competitions, rather than advertising any one product in the press or on TV.",
+    answer_1: "Yes",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "A",
+    Category: "Integrated reasoning",
+    SubCategory: "Multi -source reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1: "It can be inferred that",
     subquestion2:
       "Only the company founder would be interested in launching new games in the next year",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "538",
+    question_id: "2",
+    main_question_stem:
+      "A certain start-up company that makes specialized computer games with historical themes is to hold a meeting of the five partners. Prior to the meeting, three of the partners have circulated memos about Xanthia. From the finance expert The amount of money we have spent on developing Xanthia has been much more than we have spent on any other of our games. The returns, as yet, have not been sufficient even to cover our costs. I propose a limit of $150,000 for next year�s marketing budget for Xanthia. If sales do not rise by the end of the year to a level that would, if continued, lead to at least a modest profit on our investment by the end of two or three years, I suggest that we cut our losses and divert our attention to other games. From the marketing expert As yet our exciting new game, Xanthia has not gained attention in the media. I would like to see a sizable budget increase this coming year to something in the order of $300,000 for advertising. I feel that once we reach a certain level of media exposure, further expense will be minimal as knowledge of the product will spread by word of mouth and the social media. Without this initial push, the game might languish and our company might never recover the development costs, which have been much higher than the average for our other games. From the company founder Xanthia adds a new dimension to our offerings. It is true that development costs have been high, but we should add the costs to the low costs of our other games and not, at least for the next two years, look at any game as a free-standing product. It is more important for us to grow our position in the market. To do this we have to launch more games this year. We should market Xanthia along with all the games we offer and as such we have to participate in specialist fairs and competitions, rather than advertising any one product in the press or on TV.",
     answer_1: "Yes",
-    answer_2: "No ",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Multi -source reasoning",
-  },
-  {
-    id: 538,
-    question_id: 2,
-    main_question_stem:
-      "A certain start-up company that makes specialized computer games with historical themes is to hold a meeting of the five partners. Prior to the meeting, three of the partners have circulated memos about Xanthia. From the finance expert The amount of money we have spent on developing Xanthia has been much more than we have spent on any other of our games. The returns, as yet, have not been sufficient even to cover our costs. I propose a limit of $150,000 for next year�s marketing budget for Xanthia. If sales do not rise by the end of the year to a level that would, if continued, lead to at least a modest profit on our investment by the end of two or three years, I suggest that we cut our losses and divert our attention to other games. From the marketing expert As yet our exciting new game, Xanthia has not gained attention in the media. I would like to see a sizable budget increase this coming year to something in the order of $300,000 for advertising. I feel that once we reach a certain level of media exposure, further expense will be minimal as knowledge of the product will spread by word of mouth and the social media. Without this initial push, the game might languish and our company might never recover the development costs, which have been much higher than the average for our other games. From the company founder Xanthia adds a new dimension to our offerings. It is true that development costs have been high, but we should add the costs to the low costs of our other games and not, at least for the next two years, look at any game as a free-standing product. It is more important for us to grow our position in the market. To do this we have to launch more games this year. We should market Xanthia along with all the games we offer and as such we have to participate in specialist fairs and competitions, rather than advertising any one product in the press or on TV.",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1: "It can be inferred that",
     subquestion2:
       "All three partners believe that the development costs for Xanthia have been above the average for the company's games",
-    answer_1: "Yes",
-    answer_2: "No ",
-    correct_answer: "A",
-    Category: "Integrated reasoning",
-    SubCategory: "Multi -source reasoning",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 539,
-    question_id: 3,
+    id: "539",
+    question_id: "3",
     main_question_stem:
       "A certain start-up company that makes specialized computer games with historical themes is to hold a meeting of the five partners. Prior to the meeting, three of the partners have circulated memos about Xanthia. From the finance expert The amount of money we have spent on developing Xanthia has been much more than we have spent on any other of our games. The returns, as yet, have not been sufficient even to cover our costs. I propose a limit of $150,000 for next year�s marketing budget for Xanthia. If sales do not rise by the end of the year to a level that would, if continued, lead to at least a modest profit on our investment by the end of two or three years, I suggest that we cut our losses and divert our attention to other games. From the marketing expert As yet our exciting new game, Xanthia has not gained attention in the media. I would like to see a sizable budget increase this coming year to something in the order of $300,000 for advertising. I feel that once we reach a certain level of media exposure, further expense will be minimal as knowledge of the product will spread by word of mouth and the social media. Without this initial push, the game might languish and our company might never recover the development costs, which have been much higher than the average for our other games. From the company founder Xanthia adds a new dimension to our offerings. It is true that development costs have been high, but we should add the costs to the low costs of our other games and not, at least for the next two years, look at any game as a free-standing product. It is more important for us to grow our position in the market. To do this we have to launch more games this year. We should market Xanthia along with all the games we offer and as such we have to participate in specialist fairs and competitions, rather than advertising any one product in the press or on TV.",
-    subquestion1: "It can be inferred that",
-    subquestion2:
-      "Less than $150,000 has been spent on marketing Xanthia in the current year",
     answer_1: "Yes",
-    answer_2: "No ",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Multi -source reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1: "It can be inferred that",
+    subquestion2:
+      "Less than $150,000 has been spent on marketing Xanthia in the current year",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 540,
-    question_id: 4,
+    id: "540",
+    question_id: "4",
     main_question_stem:
       "A certain start-up company that makes specialized computer games with historical themes is to hold a meeting of the five partners. Prior to the meeting, three of the partners have circulated memos about Xanthia. From the finance expert The amount of money we have spent on developing Xanthia has been much more than we have spent on any other of our games. The returns, as yet, have not been sufficient even to cover our costs. I propose a limit of $150,000 for next year�s marketing budget for Xanthia. If sales do not rise by the end of the year to a level that would, if continued, lead to at least a modest profit on our investment by the end of two or three years, I suggest that we cut our losses and divert our attention to other games. From the marketing expert As yet our exciting new game, Xanthia has not gained attention in the media. I would like to see a sizable budget increase this coming year to something in the order of $300,000 for advertising. I feel that once we reach a certain level of media exposure, further expense will be minimal as knowledge of the product will spread by word of mouth and the social media. Without this initial push, the game might languish and our company might never recover the development costs, which have been much higher than the average for our other games. From the company founder Xanthia adds a new dimension to our offerings. It is true that development costs have been high, but we should add the costs to the low costs of our other games and not, at least for the next two years, look at any game as a free-standing product. It is more important for us to grow our position in the market. To do this we have to launch more games this year. We should market Xanthia along with all the games we offer and as such we have to participate in specialist fairs and competitions, rather than advertising any one product in the press or on TV.",
+    answer_1: "Yes",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "A",
+    Category: "Integrated reasoning",
+    SubCategory: "Multi -source reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1: "It can be inferred that",
     subquestion2:
       "The attitudes of the finance and marketing experts to development costs are more similar to each other than to the views of the company founder",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "541",
+    question_id: "5",
+    main_question_stem:
+      "A certain start-up company that makes specialized computer games with historical themes is to hold a meeting of the five partners. Prior to the meeting, three of the partners have circulated memos about Xanthia. From the finance expert The amount of money we have spent on developing Xanthia has been much more than we have spent on any other of our games. The returns, as yet, have not been sufficient even to cover our costs. I propose a limit of $150,000 for next year�s marketing budget for Xanthia. If sales do not rise by the end of the year to a level that would, if continued, lead to at least a modest profit on our investment by the end of two or three years, I suggest that we cut our losses and divert our attention to other games. From the marketing expert As yet our exciting new game, Xanthia has not gained attention in the media. I would like to see a sizable budget increase this coming year to something in the order of $300,000 for advertising. I feel that once we reach a certain level of media exposure, further expense will be minimal as knowledge of the product will spread by word of mouth and the social media. Without this initial push, the game might languish and our company might never recover the development costs, which have been much higher than the average for our other games. From the company founder Xanthia adds a new dimension to our offerings. It is true that development costs have been high, but we should add the costs to the low costs of our other games and not, at least for the next two years, look at any game as a free-standing product. It is more important for us to grow our position in the market. To do this we have to launch more games this year. We should market Xanthia along with all the games we offer and as such we have to participate in specialist fairs and competitions, rather than advertising any one product in the press or on TV.",
     answer_1: "Yes",
-    answer_2: "No ",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Multi -source reasoning",
-  },
-  {
-    id: 541,
-    question_id: 5,
-    main_question_stem:
-      "A certain start-up company that makes specialized computer games with historical themes is to hold a meeting of the five partners. Prior to the meeting, three of the partners have circulated memos about Xanthia. From the finance expert The amount of money we have spent on developing Xanthia has been much more than we have spent on any other of our games. The returns, as yet, have not been sufficient even to cover our costs. I propose a limit of $150,000 for next year�s marketing budget for Xanthia. If sales do not rise by the end of the year to a level that would, if continued, lead to at least a modest profit on our investment by the end of two or three years, I suggest that we cut our losses and divert our attention to other games. From the marketing expert As yet our exciting new game, Xanthia has not gained attention in the media. I would like to see a sizable budget increase this coming year to something in the order of $300,000 for advertising. I feel that once we reach a certain level of media exposure, further expense will be minimal as knowledge of the product will spread by word of mouth and the social media. Without this initial push, the game might languish and our company might never recover the development costs, which have been much higher than the average for our other games. From the company founder Xanthia adds a new dimension to our offerings. It is true that development costs have been high, but we should add the costs to the low costs of our other games and not, at least for the next two years, look at any game as a free-standing product. It is more important for us to grow our position in the market. To do this we have to launch more games this year. We should market Xanthia along with all the games we offer and as such we have to participate in specialist fairs and competitions, rather than advertising any one product in the press or on TV.",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1: "It can be inferred that",
     subquestion2:
       "It is probable that one of the main points on the agenda for the meeting is marketing strategies",
-    answer_1: "Yes",
-    answer_2: "No ",
-    correct_answer: "A",
-    Category: "Integrated reasoning",
-    SubCategory: "Multi -source reasoning",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 542,
-    question_id: 6,
+    id: "542",
+    question_id: "6",
     main_question_stem:
       "A certain organization has explicit rules for promotions and appointments. There are five salary grades: A, B, C, D and E with A being the highest. Three extracts from the rules are given. Promotion from Grade D to Grade C ● Promotion is automatic if the employee has spent five years at Grade D and there are no adverse reports about him or her and his or her age is above 35 ● Promotion cannot be allowed if less than two years have been spent at Grade D ● The age restriction can be relaxed if two or three members of the promotion committee recommend the person strongly ● New entrants to the organization cannot be taken in at Grade C Promotion from Grade C to Grade B ● Promotion from C to B can only be considered if more than three years have been spent at Grade C ● The employee must have two or three strong recommendations from senior persons at salary level A ● Age must be above 35 ● New entrants are not normally taken at this level, but exceptions can be made if there is no internal candidate for promotion Promotion from Grade B to Grade A ● The candidate must be above 38 ● Must have three strong recommendations from persons who have been at grade A for more than two years ● The candidate will normally have been at Grade B for at least two years ● New entrants at this level can be considered depending on the requirements of the organization",
+    answer_1: "Yes",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Multi -source reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Using all the information provided, answer the two questions with either yes or no.",
     subquestion2:
       "Sally joined the company at Grade D when she was 28. Three years later she has applied for promotion to Grade C. Is it possible that she will be promoted?",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "543",
+    question_id: "7",
+    main_question_stem:
+      "A certain organization has explicit rules for promotions and appointments. There are five salary grades: A, B, C, D and E with A being the highest. Three extracts from the rules are given. Promotion from Grade D to Grade C ● Promotion is automatic if the employee has spent five years at Grade D and there are no adverse reports about him or her and his or her age is above 35 ● Promotion cannot be allowed if less than two years have been spent at Grade D ● The age restriction can be relaxed if two or three members of the promotion committee recommend the person strongly ● New entrants to the organization cannot be taken in at Grade C Promotion from Grade C to Grade B ● Promotion from C to B can only be considered if more than three years have been spent at Grade C ● The employee must have two or three strong recommendations from senior persons at salary level A ● Age must be above 35 ● New entrants are not normally taken at this level, but exceptions can be made if there is no internal candidate for promotion Promotion from Grade B to Grade A ● The candidate must be above 38 ● Must have three strong recommendations from persons who have been at grade A for more than two years ● The candidate will normally have been at Grade B for at least two years ● New entrants at this level can be considered depending on the requirements of the organization",
     answer_1: "Yes",
-    answer_2: "No ",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Multi -source reasoning",
-  },
-  {
-    id: 543,
-    question_id: 7,
-    main_question_stem:
-      "A certain organization has explicit rules for promotions and appointments. There are five salary grades: A, B, C, D and E with A being the highest. Three extracts from the rules are given. Promotion from Grade D to Grade C ● Promotion is automatic if the employee has spent five years at Grade D and there are no adverse reports about him or her and his or her age is above 35 ● Promotion cannot be allowed if less than two years have been spent at Grade D ● The age restriction can be relaxed if two or three members of the promotion committee recommend the person strongly ● New entrants to the organization cannot be taken in at Grade C Promotion from Grade C to Grade B ● Promotion from C to B can only be considered if more than three years have been spent at Grade C ● The employee must have two or three strong recommendations from senior persons at salary level A ● Age must be above 35 ● New entrants are not normally taken at this level, but exceptions can be made if there is no internal candidate for promotion Promotion from Grade B to Grade A ● The candidate must be above 38 ● Must have three strong recommendations from persons who have been at grade A for more than two years ● The candidate will normally have been at Grade B for at least two years ● New entrants at this level can be considered depending on the requirements of the organization",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Using all the information provided, answer the two questions with either yes or no.",
     subquestion2:
       "Norman has never worked with the company. He is 35 years old. Can we conclude that the only possible level at which he can enter the organization is at Grade B?",
-    answer_1: "Yes",
-    answer_2: "No ",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Multi -source reasoning",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 544,
-    question_id: 8,
+    id: "544",
+    question_id: "8",
     main_question_stem:
       "A certain organization has explicit rules for promotions and appointments. There are five salary grades: A, B, C, D and E with A being the highest. Three extracts from the rules are given. Promotion from Grade D to Grade C ● Promotion is automatic if the employee has spent five years at Grade D and there are no adverse reports about him or her and his or her age is above 35 ● Promotion cannot be allowed if less than two years have been spent at Grade D ● The age restriction can be relaxed if two or three members of the promotion committee recommend the person strongly ● New entrants to the organization cannot be taken in at Grade C Promotion from Grade C to Grade B ● Promotion from C to B can only be considered if more than three years have been spent at Grade C ● The employee must have two or three strong recommendations from senior persons at salary level A ● Age must be above 35 ● New entrants are not normally taken at this level, but exceptions can be made if there is no internal candidate for promotion Promotion from Grade B to Grade A ● The candidate must be above 38 ● Must have three strong recommendations from persons who have been at grade A for more than two years ● The candidate will normally have been at Grade B for at least two years ● New entrants at this level can be considered depending on the requirements of the organization",
-    subquestion1:
-      "For any employee joining the organization at age 24 at Grade D, what is the minimum number of years before he or she can reach Grade A. (Assume that the employee is in continuous employment, i.e. does not leave and rejoin at a later date)",
-    answer_1: 14,
-    answer_2: 9,
-    answer_3: 8,
-    answer_4: 7,
-    answer_5: 5,
+    answer_1: "14",
+    answer_2: "9",
+    answer_3: "8",
+    answer_4: "7",
+    answer_5: "5",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Multi -source reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "For any employee joining the organization at age 24 at Grade D, what is the minimum number of years before he or she can reach Grade A. (Assume that the employee is in continuous employment, i.e. does not leave and rejoin at a later date)",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 545,
-    question_id: 9,
+    id: "545",
+    question_id: "9",
     main_question_stem: "Refer to the table above",
+    answer_1: "True",
+    answer_2: "False",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Table analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "In the Fiction � sci-fi category over the 25-years depicted in the table the ratio of new titles by female authors to those by male authors is 1:6",
-    answer_1: true,
-    answer_2: false,
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695568181/bu4mk0yfh5l1mlwkfaab.png",
+  },
+  {
+    id: "546",
+    question_id: "10",
+    main_question_stem: "Refer to the table above",
+    answer_1: "True",
+    answer_2: "False",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Table analysis",
-  },
-  {
-    id: 546,
-    question_id: 10,
-    main_question_stem: "Refer to the table above",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "The average (arithmetic mean) number of titles published each five-year period in the category Fiction - Historical is 8.6",
-    answer_1: true,
-    answer_2: false,
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Table analysis",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695568181/bu4mk0yfh5l1mlwkfaab.png",
   },
   {
-    id: 547,
-    question_id: 11,
+    id: "547",
+    question_id: "11",
     main_question_stem: "Refer to the table above",
-    subquestion1:
-      "The total number of new titles published in period 5 is greater than the total number of new titles published in period 1",
-    answer_1: true,
-    answer_2: false,
+    answer_1: "True",
+    answer_2: "False",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Table analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "The total number of new titles published in period 5 is greater than the total number of new titles published in period 1",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695568181/bu4mk0yfh5l1mlwkfaab.png",
   },
   {
-    id: 548,
-    question_id: 12,
+    id: "548",
+    question_id: "12",
     main_question_stem:
       "A certain company is launching three new products. Color schemes for the packaging are to be selected from colors in the four sets above. Four different colors are needed for each product. For each color scheme, not more than two colors can be selected from one set and colors from not more than three sets can be used.",
+    answer_1: "Could not be used",
+    answer_2: "Could be used",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Two -part analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
       "Select a color that could be used for the fourth color for all three products. Select a color that could not be used as the fourth color for any of the products.",
     subquestion3: "Orange",
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695568227/fih66lmudbwpq0hjl2kr.png",
+  },
+  {
+    id: "549",
+    question_id: "13",
+    main_question_stem:
+      "A certain company is launching three new products. Color schemes for the packaging are to be selected from colors in the four sets above. Four different colors are needed for each product. For each color scheme, not more than two colors can be selected from one set and colors from not more than three sets can be used.",
     answer_1: "Could not be used",
     answer_2: "Could be used",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Two -part analysis",
-  },
-  {
-    id: 549,
-    question_id: 13,
-    main_question_stem:
-      "A certain company is launching three new products. Color schemes for the packaging are to be selected from colors in the four sets above. Four different colors are needed for each product. For each color scheme, not more than two colors can be selected from one set and colors from not more than three sets can be used.",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
       "Select a color that could be used for the fourth color for all three products. Select a color that could not be used as the fourth color for any of the products.",
     subquestion3: "White",
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695568227/fih66lmudbwpq0hjl2kr.png",
+  },
+  {
+    id: "550",
+    question_id: "14",
+    main_question_stem:
+      "A certain company is launching three new products. Color schemes for the packaging are to be selected from colors in the four sets above. Four different colors are needed for each product. For each color scheme, not more than two colors can be selected from one set and colors from not more than three sets can be used.",
     answer_1: "Could not be used",
     answer_2: "Could be used",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Two -part analysis",
-  },
-  {
-    id: 550,
-    question_id: 14,
-    main_question_stem:
-      "A certain company is launching three new products. Color schemes for the packaging are to be selected from colors in the four sets above. Four different colors are needed for each product. For each color scheme, not more than two colors can be selected from one set and colors from not more than three sets can be used.",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
       "Select a color that could be used for the fourth color for all three products. Select a color that could not be used as the fourth color for any of the products.",
     subquestion3: "Yellow",
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695568227/fih66lmudbwpq0hjl2kr.png",
+  },
+  {
+    id: "551",
+    question_id: "15",
+    main_question_stem:
+      "A certain company is launching three new products. Color schemes for the packaging are to be selected from colors in the four sets above. Four different colors are needed for each product. For each color scheme, not more than two colors can be selected from one set and colors from not more than three sets can be used.",
     answer_1: "Could not be used",
     answer_2: "Could be used",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Two -part analysis",
-  },
-  {
-    id: 551,
-    question_id: 15,
-    main_question_stem:
-      "A certain company is launching three new products. Color schemes for the packaging are to be selected from colors in the four sets above. Four different colors are needed for each product. For each color scheme, not more than two colors can be selected from one set and colors from not more than three sets can be used.",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
       "Select a color that could be used for the fourth color for all three products. Select a color that could not be used as the fourth color for any of the products.",
     subquestion3: "Purple",
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695568227/fih66lmudbwpq0hjl2kr.png",
+  },
+  {
+    id: "552",
+    question_id: "16",
+    main_question_stem:
+      "A certain company is launching three new products. Color schemes for the packaging are to be selected from colors in the four sets above. Four different colors are needed for each product. For each color scheme, not more than two colors can be selected from one set and colors from not more than three sets can be used.",
     answer_1: "Could not be used",
     answer_2: "Could be used",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Two -part analysis",
-  },
-  {
-    id: 552,
-    question_id: 16,
-    main_question_stem:
-      "A certain company is launching three new products. Color schemes for the packaging are to be selected from colors in the four sets above. Four different colors are needed for each product. For each color scheme, not more than two colors can be selected from one set and colors from not more than three sets can be used.",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
       "Select a color that could be used for the fourth color for all three products. Select a color that could not be used as the fourth color for any of the products.",
     subquestion3: "Green",
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695568227/fih66lmudbwpq0hjl2kr.png",
+  },
+  {
+    id: "553",
+    question_id: "17",
+    main_question_stem:
+      "A certain company is launching three new products. Color schemes for the packaging are to be selected from colors in the four sets above. Four different colors are needed for each product. For each color scheme, not more than two colors can be selected from one set and colors from not more than three sets can be used.",
     answer_1: "Could not be used",
     answer_2: "Could be used",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Two -part analysis",
-  },
-  {
-    id: 553,
-    question_id: 17,
-    main_question_stem:
-      "A certain company is launching three new products. Color schemes for the packaging are to be selected from colors in the four sets above. Four different colors are needed for each product. For each color scheme, not more than two colors can be selected from one set and colors from not more than three sets can be used.",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
       "Select a color that could be used for the fourth color for all three products. Select a color that could not be used as the fourth color for any of the products.",
     subquestion3: "Brown",
-    answer_1: "Could not be used",
-    answer_2: "Could be used",
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695568227/fih66lmudbwpq0hjl2kr.png",
+  },
+  {
+    id: "554",
+    question_id: "18",
+    main_question_stem:
+      "A taxi service charges a base fare of $5, and a rate of $M per mile for the first 10 miles. Thereafter the rate is $0.5M per mile. There is also a charge of $3 per suitcase. Students traveling from and to the local college get a twenty percent discount on the mileage rates. A is a teacher traveling a distance of 8 miles with one suitcase. B is a student traveling 30 miles with two suitcases from the college to the station. Select the expression for the difference between the amounts paid by A and B in dollars, and for the amount paid by A in dollars.",
+    answer_1: "Difference",
+    answer_2: "Amount paid by A",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Two -part analysis",
-  },
-  {
-    id: 554,
-    question_id: 18,
-    main_question_stem:
-      "A taxi service charges a base fare of $5, and a rate of $M per mile for the first 10 miles. Thereafter the rate is $0.5M per mile. There is also a charge of $3 per suitcase. Students traveling from and to the local college get a twenty percent discount on the mileage rates. A is a teacher traveling a distance of 8 miles with one suitcase. B is a student traveling 30 miles with two suitcases from the college to the station. Select the expression for the difference between the amounts paid by A and B in dollars, and for the amount paid by A in dollars.",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1: "8(1 + M)",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "555",
+    question_id: "19",
+    main_question_stem:
+      "A taxi service charges a base fare of $5, and a rate of $M per mile for the first 10 miles. Thereafter the rate is $0.5M per mile. There is also a charge of $3 per suitcase. Students traveling from and to the local college get a twenty percent discount on the mileage rates. A is a teacher traveling a distance of 8 miles with one suitcase. B is a student traveling 30 miles with two suitcases from the college to the station. Select the expression for the difference between the amounts paid by A and B in dollars, and for the amount paid by A in dollars.",
     answer_1: "Difference",
     answer_2: "Amount paid by A",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Two -part analysis",
-  },
-  {
-    id: 555,
-    question_id: 19,
-    main_question_stem:
-      "A taxi service charges a base fare of $5, and a rate of $M per mile for the first 10 miles. Thereafter the rate is $0.5M per mile. There is also a charge of $3 per suitcase. Students traveling from and to the local college get a twenty percent discount on the mileage rates. A is a teacher traveling a distance of 8 miles with one suitcase. B is a student traveling 30 miles with two suitcases from the college to the station. Select the expression for the difference between the amounts paid by A and B in dollars, and for the amount paid by A in dollars.",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1: "3 + 8M",
-    answer_1: "Difference",
-    answer_2: "Amount paid by A",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Two -part analysis",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 556,
-    question_id: 20,
+    id: "556",
+    question_id: "20",
     main_question_stem:
       "A taxi service charges a base fare of $5, and a rate of $M per mile for the first 10 miles. Thereafter the rate is $0.5M per mile. There is also a charge of $3 per suitcase. Students traveling from and to the local college get a twenty percent discount on the mileage rates. A is a teacher traveling a distance of 8 miles with one suitcase. B is a student traveling 30 miles with two suitcases from the college to the station. Select the expression for the difference between the amounts paid by A and B in dollars, and for the amount paid by A in dollars.",
+    answer_1: "Difference",
+    answer_2: "Amount paid by A",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "A",
+    Category: "Integrated reasoning",
+    SubCategory: "Two -part analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1: "3 + 16M",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "557",
+    question_id: "21",
+    main_question_stem:
+      "A taxi service charges a base fare of $5, and a rate of $M per mile for the first 10 miles. Thereafter the rate is $0.5M per mile. There is also a charge of $3 per suitcase. Students traveling from and to the local college get a twenty percent discount on the mileage rates. A is a teacher traveling a distance of 8 miles with one suitcase. B is a student traveling 30 miles with two suitcases from the college to the station. Select the expression for the difference between the amounts paid by A and B in dollars, and for the amount paid by A in dollars.",
     answer_1: "Difference",
     answer_2: "Amount paid by A",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Two -part analysis",
-  },
-  {
-    id: 557,
-    question_id: 21,
-    main_question_stem:
-      "A taxi service charges a base fare of $5, and a rate of $M per mile for the first 10 miles. Thereafter the rate is $0.5M per mile. There is also a charge of $3 per suitcase. Students traveling from and to the local college get a twenty percent discount on the mileage rates. A is a teacher traveling a distance of 8 miles with one suitcase. B is a student traveling 30 miles with two suitcases from the college to the station. Select the expression for the difference between the amounts paid by A and B in dollars, and for the amount paid by A in dollars.",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1: "11 + 16M",
-    answer_1: "Difference",
-    answer_2: "Amount paid by A",
-    correct_answer: "A",
-    Category: "Integrated reasoning",
-    SubCategory: "Two -part analysis",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 558,
-    question_id: 22,
+    id: "558",
+    question_id: "22",
     main_question_stem:
       "A taxi service charges a base fare of $5, and a rate of $M per mile for the first 10 miles. Thereafter the rate is $0.5M per mile. There is also a charge of $3 per suitcase. Students traveling from and to the local college get a twenty percent discount on the mileage rates. A is a teacher traveling a distance of 8 miles with one suitcase. B is a student traveling 30 miles with two suitcases from the college to the station. Select the expression for the difference between the amounts paid by A and B in dollars, and for the amount paid by A in dollars.",
+    answer_1: "Difference",
+    answer_2: "Amount paid by A",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Two -part analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1: "3(1 + 8M)",
-    answer_1: "Difference",
-    answer_2: "Amount paid by A",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Two -part analysis",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 559,
-    question_id: 23,
+    id: "559",
+    question_id: "23",
     main_question_stem:
       "A taxi service charges a base fare of $5, and a rate of $M per mile for the first 10 miles. Thereafter the rate is $0.5M per mile. There is also a charge of $3 per suitcase. Students traveling from and to the local college get a twenty percent discount on the mileage rates. A is a teacher traveling a distance of 8 miles with one suitcase. B is a student traveling 30 miles with two suitcases from the college to the station. Select the expression for the difference between the amounts paid by A and B in dollars, and for the amount paid by A in dollars.",
-    subquestion1: "8M",
     answer_1: "Difference",
     answer_2: "Amount paid by A",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Two -part analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1: "8M",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 560,
-    question_id: 24,
+    id: "560",
+    question_id: "24",
     main_question_stem:
       "Refer to the pictograph that describes all of the students who play soccer at Douglas High School. Each star represents 5 students from a sample of 75 total students. Identify the missing information in the following statements using the pictograph.",
-    subquestion1:
-      "I. If one student is selected at random from the 75, the chance that the student will be older than 17 or on the Varsity team, or both is __________.",
-    subquestion2:
-      "II. If one student is selected at random from the 75, the chance that the students is both younger than 17 and on the Varsity Soccer Team is __________.",
     answer_1: "I. 2 out of 5 II. 2 out of 6",
     answer_2: "I. 2 out of 3 II. 1 out of 5",
     answer_3: "I. 1 out of 3 II. 1 out of 5",
@@ -11280,15 +13488,23 @@ export const questions = [
     correct_answer: "E",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "I. If one student is selected at random from the 75, the chance that the student will be older than 17 or on the Varsity team, or both is __________.",
+    subquestion2:
+      "II. If one student is selected at random from the 75, the chance that the students is both younger than 17 and on the Varsity Soccer Team is __________.",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695568268/xbkytqwoligaghagqzbl.png",
   },
   {
-    id: 561,
-    question_id: 25,
+    id: "561",
+    question_id: "25",
     main_question_stem:
       "The graph depicts the hours prep time for students who took the ACT test and their corresponding average score Identify the missing information for the following statements using the graph.",
-    subquestion1:
-      "I. The relationship between study time and test scores is __________.",
-    subquestion2: "II. The slope of the regression line is __________ .",
     answer_1: "I. negative II. positive",
     answer_2: "I. positive II. positive",
     answer_3: "I. zero II. non-applicable",
@@ -11297,30 +13513,46 @@ export const questions = [
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "I. The relationship between study time and test scores is __________.",
+    subquestion2: "II. The slope of the regression line is __________ .",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695569049/czwakln7hm9yo8lgsrfz.png",
   },
   {
-    id: 562,
-    question_id: 26,
+    id: "562",
+    question_id: "26",
     main_question_stem:
       "The graph above plots sixteen points that each describe the shoe size of sixteen individual children. Identify the missing information of the following statement.",
-    subquestion1:
-      "The relationship between the age of the child and the child's shoe size is __________.",
     answer_1: "positive",
     answer_2: "negative",
     answer_3: "zero",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "The relationship between the age of the child and the child's shoe size is __________.",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695569081/cplkzzsqnqiscibl0z4v.png",
   },
   {
-    id: 563,
-    question_id: 27,
+    id: "563",
+    question_id: "27",
     main_question_stem:
       "The table displays the academic class spread among Dawn County schools in 2005. Based on the given information in the table, select the options that can be proven to be true.",
-    subquestion1:
-      "I. No class is offered in less than one-third of the schools.",
-    subquestion2:
-      "II. Every school in the district offers either Gym or at least one Art class (Painting or Sculpting).",
     answer_1: "II. and III",
     answer_2: "I. and II.",
     answer_3: "III.",
@@ -11329,18 +13561,23 @@ export const questions = [
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Table analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "I. No class is offered in less than one-third of the schools.",
+    subquestion2:
+      "II. Every school in the district offers either Gym or at least one Art class (Painting or Sculpting).",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695569128/mvaufxtpuh8u6qufqr09.png",
   },
   {
-    id: 564,
-    question_id: 28,
+    id: "564",
+    question_id: "28",
     main_question_stem:
       "The table above give information for 2013 on the total passengers for 5 train stations in the western United States. These stations were chosen because in 2013 they were among the most popular. The table also includes the percent increase and decrease from the precious year. Consider the following statements and determine whether the statements are true or false based on the information provided by the table.",
-    subquestion1:
-      "I. The percent of change in the passenger count from 2012 created the rank identifier for 2013.",
-    subquestion2:
-      "II. The train station that has the median number of passengers also has the median rank.",
-    subquestion3:
-      "III. Over 50 percent of the stations that experienced a percentage increase are in the state of Utah.",
     answer_1: "I. True II. False III. False",
     answer_2: "I. False II. True III. False",
     answer_3: "I. False II. True III. True",
@@ -11349,18 +13586,23 @@ export const questions = [
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Table analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "I. The percent of change in the passenger count from 2012 created the rank identifier for 2013.",
+    subquestion2:
+      "II. The train station that has the median number of passengers also has the median rank.",
+    subquestion3:
+      "III. Over 50 percent of the stations that experienced a percentage increase are in the state of Utah.",
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695569149/inixmbea6fjgboucxp7w.png",
   },
   {
-    id: 565,
-    question_id: 29,
+    id: "565",
+    question_id: "29",
     main_question_stem:
       'Email #1 Email from wedding coordinator to bride and groom February 12, at 10:13am "The final headcount for booking the pavilion for the reception is today. Right now we have a rough estimate of 425 people. Is this still true and if so, do we know how many people will be having the chicken dinner?" Email #2 Email from the bride to the wedding coordinator February 12, at 10:27am "We are still waiting on 40 invitations to RSVP; we gave a deadline of February 15. Is there a possibility for an extension to the 15th? Of the current 425 guests 375 have opted for the chicken dinner." Email #3 Email from the wedding coordinator to the bride February 12, at 11:02am "I will reach out to the pavilion to see if an extension is possible and get back to you this afternoon. We can always assume for more since the pavilion does offer a refund if any changes are made at least one week prior to the wedding." Based on the given information in the emails, determine whether the statements are justified.',
-    subquestion1:
-      "I. The wedding coordinator is not willing to extend the guest headcount deadline.",
-    subquestion2:
-      "II. The bride does not have a specific, expected date to receive RSVPs.",
-    subquestion3:
-      "III. The wedding coordinator gives additional options to the bride in case the pavilion will not give an extension.",
     answer_1: "I. Justified II. Not justified III. Justified",
     answer_2: "I. Not justified II. Justified III. Justified",
     answer_3: "I. Not justified II. Not justified III. Justified",
@@ -11369,18 +13611,21 @@ export const questions = [
     correct_answer: "C",
     Category: "Integrated reasoning",
     SubCategory: "Multi -source reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "I. The wedding coordinator is not willing to extend the guest headcount deadline.",
+    subquestion2:
+      "II. The bride does not have a specific, expected date to receive RSVPs.",
+    subquestion3:
+      "III. The wedding coordinator gives additional options to the bride in case the pavilion will not give an extension.",
   },
   {
-    id: 566,
-    question_id: 30,
+    id: "566",
+    question_id: "30",
     main_question_stem:
       "Techniques At a gym there are three different paths an individual can take to obtaining membership. The first option is personal training. The second option is group fitness classes and the last option is individual direction. Members are only allowed to partake in individual direction after 5 personal training sessions and 10 group fitness classes. Personnel For personal training, there must be one trainer per individual. For group fitness classes there must be one trainer per eight individuals. For individual direction, no trainer is required; however, only 25 members can partake in individual direction at a time. At this particular gym there are 12 trainers. Price The price of membership depends on the technique the individual chooses. Personal training costs between $40 and $75 per session, depending on the trainer. Group fitness classes cost $20 per session. Individual direction costs $15 per visit. Based on the given information, determine whether each of the statements is justified.",
-    subquestion1:
-      "I. An individual who is experienced in fitness and has taken 3 group classes can choose to pay for the individual direction membership.",
-    subquestion2:
-      "II. An individual who has a budget of $160 a month to spend on fitness after going through the personal training and group sessions can attend 8 classes per month.",
-    subquestion3:
-      "III. Tina has completed all the necessary requirements to have an individual direction membership; Tina would make the 26th member of this type.",
     answer_1: "I. Not justified II. Justified III. Not justified",
     answer_2: "I. Not justified II. Justified III. Justified",
     answer_3: "I. Not justified II. Not Justified III. Justified",
@@ -11389,10 +13634,19 @@ export const questions = [
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Multi -source reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "I. An individual who is experienced in fitness and has taken 3 group classes can choose to pay for the individual direction membership.",
+    subquestion2:
+      "II. An individual who has a budget of $160 a month to spend on fitness after going through the personal training and group sessions can attend 8 classes per month.",
+    subquestion3:
+      "III. Tina has completed all the necessary requirements to have an individual direction membership; Tina would make the 26th member of this type.",
   },
   {
-    id: 567,
-    question_id: 31,
+    id: "567",
+    question_id: "31",
     main_question_stem:
       "In 2011, the Cornucopia Products Company (CPC) realized $100,000 in profits. Their 2011 customer base of 20,000 is relatively stable. Based on past trends, they can expect to retain that customer base in 2012. If they make no additional changes in marketing or R & D, then it is reasonable to expect their customer base in 2012 will be remain the same. Increasing their profits will depend on generating new customers either through successful advertising campaigns and or attractive fruits of research & development. The total customer base C in 2012 will be the retained customers plus any new customers. If C is their 2012 customer base in thousands, then their profit P (in thousands of dollars) is given by P = 0.01C^2 + 7C – 44 At what level of investment would TV & movie advertising create, on average, the same number of new customers as web based advertising?",
     answer_1: "$16,000",
@@ -11403,17 +13657,19 @@ export const questions = [
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Multi -source reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 568,
-    question_id: 32,
+    id: "568",
+    question_id: "32",
     main_question_stem:
       "In 2012, CPC can choose to invest some part of its 2011 profits in one or more forms of advertising. In everything on this card, X = money (in thousands of dollars) invested in that form of advertising, and N is the number of new customers (in thousands), on average, that form of advertising is likely to generate in 2012.",
-    subquestion1:
-      "1) Print Media Investment: no more than $10,000, due to sharply diminishing returns above that threshold. If X < 10, N = X/2",
-    subquestion2: "2) TV & Movie advertising Investment: minimum of $15,000",
-    subquestion3:
-      "3) Web-based advertising Investment: no lower or upper limit N = X/4 At what level of investment would TV & movie advertising create, on average, the same number of new customers as web based advertising?",
     answer_1: "$16,001",
     answer_2: "$18,001",
     answer_3: "$24,001",
@@ -11422,10 +13678,18 @@ export const questions = [
     correct_answer: "C",
     Category: "Integrated reasoning",
     SubCategory: "Multi -source reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "1) Print Media Investment: no more than $10,000, due to sharply diminishing returns above that threshold. If X < 10, N = X/2",
+    subquestion2: "2) TV & Movie advertising Investment: minimum of $15,000",
+    subquestion3:
+      "3) Web-based advertising Investment: no lower or upper limit N = X/4 At what level of investment would TV & movie advertising create, on average, the same number of new customers as web based advertising?",
   },
   {
-    id: 569,
-    question_id: 33,
+    id: "569",
+    question_id: "33",
     main_question_stem:
       "In CPC's Research and Development (R & D), many new products have been developed in the past, contributing to its financial success. In 2012, CPC has already allocated a small baseline budget to ongoing R & D, without any expectation that those results will bear fruit in this calendar year. Beyond that, CPC has to decide about whether to put more money from its 2011 profits into two ongoing projects. Project A has been in development for a little over a year. It is close to completion. The most reliable data about Project A suggest if CPC makes a $10000 investment in 2011, there's an 80% chance of producing a new product that would add 5,000 new customers in 2012; if CPC makes a $30,000 investment, there's a 20% chance of producing a suite of new products that would add 30,000 new customers. Project B is a relatively new product, involving some cutting edge technology. It's very expensive, and the results are uncertain. The most reliable data about Project B suggest if CPC makes a $40000 investment in 2011, there's a 40% chance that the new products would add 50,000 new customers in 2012. At what level of investment would TV & movie advertising create, on average, the same number of new customers as web based advertising?",
     answer_1: "$16,002",
@@ -11436,371 +13700,612 @@ export const questions = [
     correct_answer: "C",
     Category: "Integrated reasoning",
     SubCategory: "Multi -source reasoning",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 570,
-    question_id: 34,
+    id: "570",
+    question_id: "34",
     main_question_stem:
       "For each of the following questions, select Yes if the statement can be shown to be true based on the information in the table. Otherwise, select No.",
-    subquestion1:
-      "1. No country with more than a quarter of people over 20 year old in tertiary programs spends more than $50/student on tertiary programs",
     answer_1: "Yes",
     answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Table analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "1. No country with more than a quarter of people over 20 year old in tertiary programs spends more than $50/student on tertiary programs",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695570947/gx6bhdsh6t1b4dlhs9hn.png",
   },
   {
-    id: 571,
-    question_id: 35,
+    id: "571",
+    question_id: "35",
     main_question_stem:
       "For each of the following questions, select Yes if the statement can be shown to be true based on the information in the table. Otherwise, select No.",
+    answer_1: "Yes",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Table analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "2.No country that spends more than $40/student on tertiary programs has more than 40% of all people over 20 year old in tertiary programs.",
-    answer_1: "Yes",
-    answer_2: "No",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Table analysis",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695570947/gx6bhdsh6t1b4dlhs9hn.png",
   },
   {
-    id: 572,
-    question_id: 36,
+    id: "572",
+    question_id: "36",
     main_question_stem:
       "For each of the following questions, select Yes if the statement can be shown to be true based on the information in the table. Otherwise, select No.",
-    subquestion1:
-      "3.No country. that spends more than $20/student on tertiary programs has less than 20% of all people over 20 year old in tertiary programs.",
     answer_1: "Yes",
     answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Table analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "3.No country. that spends more than $20/student on tertiary programs has less than 20% of all people over 20 year old in tertiary programs.",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695570947/gx6bhdsh6t1b4dlhs9hn.png",
   },
   {
-    id: 573,
-    question_id: 37,
+    id: "573",
+    question_id: "37",
     main_question_stem:
       "The graph shows the different commuting options chosen by commuters in the Farview City metropolitan region in 1995 and in 2005.",
-    subquestion1:
-      "The commuting mode whose ridership increased by approximately 29% from 1995 to 2005 is",
     answer_1: "bike",
     answer_2: "subway and bus",
     answer_3: "commuter trains",
     answer_4: "car",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "The commuting mode whose ridership increased by approximately 29% from 1995 to 2005 is",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695570982/tqx1zcydhxy1bgyyjuvq.png",
   },
   {
-    id: 574,
-    question_id: 38,
+    id: "574",
+    question_id: "38",
     main_question_stem:
       "The graph shows the different commuting options chosen by commuters in the Farview City metropolitan region in 1995 and in 2005.",
-    subquestion1:
-      "Assume the graph above shows all commuters in the two relevant years. In 2005, the car commuters were _______ percent of all commuters.",
-    answer_1: 25,
-    answer_2: 32,
-    answer_3: 48,
-    answer_4: 60,
+    answer_1: "25",
+    answer_2: "32",
+    answer_3: "48",
+    answer_4: "60",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "Assume the graph above shows all commuters in the two relevant years. In 2005, the car commuters were _______ percent of all commuters.",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695570982/tqx1zcydhxy1bgyyjuvq.png",
   },
   {
-    id: 575,
-    question_id: 39,
+    id: "575",
+    question_id: "39",
     main_question_stem:
       "In a certain academic competition, there are three rounds, and three possible results in each round. The folks who “lose” acquire no commendations and do not advance to the next round. The folks who “place”, acquire a set of commendations for that round, but do not advance to the next round. The folks who “win” acquire a set of commendations for that round, and, in the case of the first two rounds, advance to the next round; in the case of the third round, the “win” means winning the entire competition. The following chart shows, on average, the percentages of participants who achieve the three results in each of the three rounds.",
+    answer_1: "800",
+    answer_2: "3200",
+    answer_3: "7000",
+    answer_4: "10000",
+    answer_5: "",
+    correct_answer: "A",
+    Category: "Integrated reasoning",
+    SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "If 100,000 participants start this process, and if all the percentages in the chart are correct, _______ people of them would win the entire competition.",
-    answer_1: 800,
-    answer_2: 3200,
-    answer_3: 7000,
-    answer_4: 10000,
-    correct_answer: "A",
-    Category: "Integrated reasoning",
-    SubCategory: "Graphics Interpretation",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571009/v7rnlp2ehrebe8j8lz8s.png",
   },
   {
-    id: 576,
-    question_id: 40,
+    id: "576",
+    question_id: "40",
     main_question_stem:
       "In a certain academic competition, there are three rounds, and three possible results in each round. The folks who “lose” acquire no commendations and do not advance to the next round. The folks who “place”, acquire a set of commendations for that round, but do not advance to the next round. The folks who “win” acquire a set of commendations for that round, and, in the case of the first two rounds, advance to the next round; in the case of the third round, the “win” means winning the entire competition. The following chart shows, on average, the percentages of participants who achieve the three results in each of the three rounds.",
+    answer_1: "16",
+    answer_2: "16.8",
+    answer_3: "20",
+    answer_4: "21.6",
+    answer_5: "",
+    correct_answer: "C",
+    Category: "Integrated reasoning",
+    SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Exactly _______ % of participants who start acquire exactly two sets of commendations.",
-    answer_1: 16,
-    answer_2: 16.8,
-    answer_3: 20,
-    answer_4: 21.6,
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571009/v7rnlp2ehrebe8j8lz8s.png",
+  },
+  {
+    id: "577",
+    question_id: "41",
+    main_question_stem:
+      "For years, the Bethel Company had a Gamma division. The year 2008 was the first year that Rho division was in operation. The chart shows the profits generated by these two divisions. Assume these two divisions were the only source of profits for the Bethel Company during these years",
+    answer_1: "28.6",
+    answer_2: "42.4",
+    answer_3: "54.1",
+    answer_4: "73.2",
+    answer_5: "",
     correct_answer: "C",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
-  },
-  {
-    id: 577,
-    question_id: 41,
-    main_question_stem:
-      "For years, the Bethel Company had a Gamma division. The year 2008 was the first year that Rho division was in operation. The chart shows the profits generated by these two divisions. Assume these two divisions were the only source of profits for the Bethel Company during these years",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "In 2010 and 2011 combined, Rho division accounted for _____ % of Bethel’s profits.",
-    answer_1: 28.6,
-    answer_2: 42.4,
-    answer_3: 54.1,
-    answer_4: 73.2,
-    correct_answer: "C",
-    Category: "Integrated reasoning",
-    SubCategory: "Graphics Interpretation",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571045/nfthfgtsaecyhhp8rdvs.png",
   },
   {
-    id: 578,
-    question_id: 42,
+    id: "578",
+    question_id: "42",
     main_question_stem:
       "For years, the Bethel Company had a Gamma division. The year 2008 was the first year that Rho division was in operation. The chart shows the profits generated by these two divisions. Assume these two divisions were the only source of profits for the Bethel Company during these years",
-    subquestion1: "From 2008 to 2011, Rho division increased by ______%",
-    answer_1: 80,
-    answer_2: 150,
-    answer_3: 200,
-    answer_4: 300,
+    answer_1: "80",
+    answer_2: "150",
+    answer_3: "200",
+    answer_4: "300",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1: "From 2008 to 2011, Rho division increased by ______%",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571045/nfthfgtsaecyhhp8rdvs.png",
   },
   {
-    id: 579,
-    question_id: 43,
+    id: "579",
+    question_id: "43",
     main_question_stem:
       "The charts below show the breakdown for the 2010 revenues for Goliath Corporation, a major supplier of food and food preparation materials. The pie chart shows the breakdown of sales to grocery stores. Assume these two charts contain all the revenue for Goliath Corporation.",
-    subquestion1:
-      "The revenue from foreign export sales is __________ the revenue from grocery stores in the Northeast.",
     answer_1: "grater than",
     answer_2: "equal to",
     answer_3: "less than",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "C",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "The revenue from foreign export sales is __________ the revenue from grocery stores in the Northeast.",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571077/ubmofeoqfinaicyqyoqu.png",
   },
   {
-    id: 580,
-    question_id: 44,
+    id: "580",
+    question_id: "44",
     main_question_stem:
       "The charts below show the breakdown for the 2010 revenues for Goliath Corporation, a major supplier of food and food preparation materials. The pie chart shows the breakdown of sales to grocery stores. Assume these two charts contain all the revenue for Goliath Corporation.",
-    subquestion1:
-      "Revenue from governmental contracts would have to increase by ________% to equal the revenue from grocery sales in the Midwest.",
-    answer_1: 68,
-    answer_2: 101,
-    answer_3: 135,
-    answer_4: 226,
+    answer_1: "68",
+    answer_2: "101",
+    answer_3: "135",
+    answer_4: "226",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "Revenue from governmental contracts would have to increase by ________% to equal the revenue from grocery sales in the Midwest.",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571077/ubmofeoqfinaicyqyoqu.png",
   },
   {
-    id: 581,
-    question_id: 45,
+    id: "581",
+    question_id: "45",
     main_question_stem:
       "The graph below shows the population & land areas for eight major US cities. The area of the circle indicates the size of the GDP for the city’s extended metropolitan region.",
-    subquestion1:
-      "Population density is the ratio of population/land area. Among the eight cities shown, __________ is the city with the lowest population density.",
     answer_1: "Atlanta,GA",
     answer_2: "Boston,MA",
     answer_3: "Houston,TX",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "Population density is the ratio of population/land area. Among the eight cities shown, __________ is the city with the lowest population density.",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571153/fsumuncffcyizmvh2p3q.png",
   },
   {
-    id: 582,
-    question_id: 46,
+    id: "582",
+    question_id: "46",
     main_question_stem:
       "The graph below shows the population & land areas for eight major US cities. The area of the circle indicates the size of the GDP for the city’s extended metropolitan region.",
-    subquestion1:
-      "According to this graph, the population of a city is ________________ with the size of the GDP of the metropolitan region.",
     answer_1: "Positively correlated",
     answer_2: "Not correlated",
     answer_3: "Negatively correlated",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "According to this graph, the population of a city is ________________ with the size of the GDP of the metropolitan region.",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571153/fsumuncffcyizmvh2p3q.png",
   },
   {
-    id: 583,
-    question_id: 47,
+    id: "583",
+    question_id: "47",
     main_question_stem:
       "Apex Appliances is a regional appliance retailer with multiple stores through seven states. The graph below shows their performance over two calendar years, 2011 and 2012. Each dot is one month, and shows the total number of store visitors and the sales revenue from that month. The six dots with the highest numbers are store visitors are the “fourth quarter” months, October – December, of each year.",
+    answer_1: "0",
+    answer_2: "3",
+    answer_3: "9",
+    answer_4: "18",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "During this two-year period, Apex Appliance had ________ non-fourth-quarter month(s) with higher sales revenue than the fourth-quarter month with the lowest sales revenue.",
-    answer_1: 0,
-    answer_2: 3,
-    answer_3: 9,
-    answer_4: 18,
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Graphics Interpretation",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571177/dqbumu0qi6bao2s2wm1r.png",
   },
   {
-    id: 584,
-    question_id: 48,
+    id: "584",
+    question_id: "48",
     main_question_stem:
       "Apex Appliances is a regional appliance retailer with multiple stores through seven states. The graph below shows their performance over two calendar years, 2011 and 2012. Each dot is one month, and shows the total number of store visitors and the sales revenue from that month. The six dots with the highest numbers are store visitors are the “fourth quarter” months, October – December, of each year.",
-    subquestion1:
-      "In Apex’s accounting system, the “yield” of a month is the ratio of sales revenue to number of customers in that month. In the month shown here with the highest yield, Apex earned _________ in monthly sales revenue",
     answer_1: "$5700000",
     answer_2: "$7500000",
     answer_3: "$8400000",
     answer_4: "$9400000",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Graphics Interpretation",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "In Apex’s accounting system, the “yield” of a month is the ratio of sales revenue to number of customers in that month. In the month shown here with the highest yield, Apex earned _________ in monthly sales revenue",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571177/dqbumu0qi6bao2s2wm1r.png",
   },
   {
-    id: 585,
-    question_id: 49,
+    id: "585",
+    question_id: "49",
     main_question_stem:
       'The table above gives sale information for the 20 bathroom cleaners in the United States in 2010. For each product, the table describes the brand of the product, the product type, fragrance, unit sales, percent change in unit sales since 2009, total dollar sales, percent change in dollar sales since 2009, average price of each unit sold, and the dollar change in price since 2009. Each column of the table can be sorted in ascending order by clicking on the word "Select" above the table and choosing, from the drop-down menu, the heading of the column on which you want the table to be sorted. Consider each of the following statements about these sales figures. For each statement, indicated whether the statement is true or false, based on the information provided in the table.',
+    answer_1: "True",
+    answer_2: "False",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "A",
+    Category: "Integrated reasoning",
+    SubCategory: "Table analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "The product with the highest unit sales in 2010 also had the highest dollar increase in price since 2009.",
-    answer_1: true,
-    answer_2: false,
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571204/o57pny0i80emowh1rpmx.png",
+  },
+  {
+    id: "586",
+    question_id: "50",
+    main_question_stem:
+      'The table above gives sale information for the 20 bathroom cleaners in the United States in 2010. For each product, the table describes the brand of the product, the product type, fragrance, unit sales, percent change in unit sales since 2009, total dollar sales, percent change in dollar sales since 2009, average price of each unit sold, and the dollar change in price since 2009. Each column of the table can be sorted in ascending order by clicking on the word "Select" above the table and choosing, from the drop-down menu, the heading of the column on which you want the table to be sorted. Consider each of the following statements about these sales figures. For each statement, indicated whether the statement is true or false, based on the information provided in the table.',
+    answer_1: "True",
+    answer_2: "False",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Table analysis",
-  },
-  {
-    id: 586,
-    question_id: 50,
-    main_question_stem:
-      'The table above gives sale information for the 20 bathroom cleaners in the United States in 2010. For each product, the table describes the brand of the product, the product type, fragrance, unit sales, percent change in unit sales since 2009, total dollar sales, percent change in dollar sales since 2009, average price of each unit sold, and the dollar change in price since 2009. Each column of the table can be sorted in ascending order by clicking on the word "Select" above the table and choosing, from the drop-down menu, the heading of the column on which you want the table to be sorted. Consider each of the following statements about these sales figures. For each statement, indicated whether the statement is true or false, based on the information provided in the table.',
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Every orange scented product experienced growth in unit sales from 2009 to 2010.",
-    answer_1: true,
-    answer_2: false,
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571204/o57pny0i80emowh1rpmx.png",
+  },
+  {
+    id: "587",
+    question_id: "51",
+    main_question_stem:
+      'The table above gives sale information for the 20 bathroom cleaners in the United States in 2010. For each product, the table describes the brand of the product, the product type, fragrance, unit sales, percent change in unit sales since 2009, total dollar sales, percent change in dollar sales since 2009, average price of each unit sold, and the dollar change in price since 2009. Each column of the table can be sorted in ascending order by clicking on the word "Select" above the table and choosing, from the drop-down menu, the heading of the column on which you want the table to be sorted. Consider each of the following statements about these sales figures. For each statement, indicated whether the statement is true or false, based on the information provided in the table.',
+    answer_1: "True",
+    answer_2: "False",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Table analysis",
-  },
-  {
-    id: 587,
-    question_id: 51,
-    main_question_stem:
-      'The table above gives sale information for the 20 bathroom cleaners in the United States in 2010. For each product, the table describes the brand of the product, the product type, fragrance, unit sales, percent change in unit sales since 2009, total dollar sales, percent change in dollar sales since 2009, average price of each unit sold, and the dollar change in price since 2009. Each column of the table can be sorted in ascending order by clicking on the word "Select" above the table and choosing, from the drop-down menu, the heading of the column on which you want the table to be sorted. Consider each of the following statements about these sales figures. For each statement, indicated whether the statement is true or false, based on the information provided in the table.',
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "No product experienced growth in dollar sales but a decline in unit sales from 2009 to 2010.",
-    answer_1: true,
-    answer_2: false,
-    correct_answer: "A",
-    Category: "Integrated reasoning",
-    SubCategory: "Table analysis",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571204/o57pny0i80emowh1rpmx.png",
   },
   {
-    id: 588,
-    question_id: 52,
+    id: "588",
+    question_id: "52",
     main_question_stem:
       'The table above gives sale information for the 20 bathroom cleaners in the United States in 2010. For each product, the table describes the brand of the product, the product type, fragrance, unit sales, percent change in unit sales since 2009, total dollar sales, percent change in dollar sales since 2009, average price of each unit sold, and the dollar change in price since 2009. Each column of the table can be sorted in ascending order by clicking on the word "Select" above the table and choosing, from the drop-down menu, the heading of the column on which you want the table to be sorted. Consider each of the following statements about these sales figures. For each statement, indicated whether the statement is true or false, based on the information provided in the table.',
-    subquestion1:
-      "The highest-priced product in 2010 was also the highest-priced product in 2009.",
-    answer_1: true,
-    answer_2: false,
+    answer_1: "True",
+    answer_2: "False",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Table analysis",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "The highest-priced product in 2010 was also the highest-priced product in 2009.",
+    subquestion2: "",
+    subquestion3: "",
+
+    img_url:
+      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695571204/o57pny0i80emowh1rpmx.png",
   },
   {
-    id: 589,
-    question_id: 53,
+    id: "589",
+    question_id: "53",
     main_question_stem:
-      "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product. ",
+      "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product.",
+    answer_1: "Inferable",
+    answer_2: "Not Inferable",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
       "Only the company founder would be interested in launching new products in the next year",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "590",
+    question_id: "54",
+    main_question_stem:
+      "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product.",
     answer_1: "Inferable",
     answer_2: "Not Inferable",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
-  },
-  {
-    id: 590,
-    question_id: 54,
-    main_question_stem:
-      "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product. ",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
       "All three executives believe that the development costs for Qoop have been above the average for the company's other products.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "591",
+    question_id: "55",
+    main_question_stem:
+      "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product.",
     answer_1: "Inferable",
     answer_2: "Not Inferable",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
-  },
-  {
-    id: 591,
-    question_id: 55,
-    main_question_stem:
-      "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product. ",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
       "Less than $100,000 has been spent on marketing Qoop in the current year.",
-    answer_1: "Inferable",
-    answer_2: "Not Inferable",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 592,
-    question_id: 56,
+    id: "592",
+    question_id: "56",
     main_question_stem:
       "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product.",
+    answer_1: "Inferable",
+    answer_2: "Not Inferable",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "A",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
       "The attitudes of the CFO and CMO toward development costs are more similar to each other than to the views of the CEO.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "593",
+    question_id: "57",
+    main_question_stem:
+      "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product.",
     answer_1: "Inferable",
     answer_2: "Not Inferable",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
-  },
-  {
-    id: 593,
-    question_id: 57,
-    main_question_stem:
-      "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product.",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
       "It is probable that one of the main points on the agenda for the meeting is marketing strategies.",
-    answer_1: "Inferable",
-    answer_2: "Not Inferable",
-    correct_answer: "A",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 594,
-    question_id: 58,
+    id: "594",
+    question_id: "58",
     main_question_stem:
       "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product.",
+    answer_1: "Inferable",
+    answer_2: "Not Inferable",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
       "The attitudes of the CFO and CMO toward marketing strategies are more similar to each other than to the views of the CEO.",
-    answer_1: "Inferable",
-    answer_2: "Not Inferable",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 595,
-    question_id: 59,
+    id: "595",
+    question_id: "59",
     main_question_stem:
       "The costs we have incurred to develop a smartphone application for our company's Qoop product has far exceeded the costs to develop our web platform and the mobile-friendly version of our website. The returns, thus far, do not even come close to recouping our initial investment. We should cap next year's marketing budget for Qoop at $100K. If user adoption for Qoop does not increase to a level that would result in conversion in sales that would, in 2-3 years, result in a modest profit, we should stop the project, cut our losses, and focus on developing another product.",
-    subquestion1:
-      " Based on the statements, which one of the following can be most reasonably be inferred to be a view held by the company's Qoop developers?",
     answer_1:
       "(A) The company has enough funds for development on a new product.",
     answer_2:
@@ -11814,14 +14319,20 @@ export const questions = [
     correct_answer: "C",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "Based on the statements, which one of the following can be most reasonably be inferred to be a view held by the company's Qoop developers?",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 596,
-    question_id: 60,
+    id: "596",
+    question_id: "60",
     main_question_stem:
       "We at CBO produce original programming for TV shows, miniseries, and movies. We sell contracts to television conglomerate networks for the exclusive right to broadcast our programming and sell them via DVDs. For this right, the television networks pay CBO substantial fees that help finance CBO expenses and fund future CBO programming projects. For members of the media, we provide kits complete with information on the actors / actresses in our shows, story plots, list of reviews, video clips and images. Now, however, some internet companies, through user generated content have not just a collection of video clips and digital photographs of our media programming throughout their site, but also full length versions of our movies and TV shows. Some of these users pirate our content and make it available for free via online video streaming just hours after initial release - this directly affects our DVD sales. Conditions must be placed on these practices, which go beyond basic media exposure; they harm the value of our contracts with television conglomerate networks and violate our rights as owners of the entertainment content. Videobased internet companies that wish to post such content on their websites should therefore sign contracts with the programming company that stipulate what content will be allowed and how much it will cost. As we have in the past, we will legally pursue internet video-based companies and push to have them shut down.",
-    subquestion1:
-      "Which of the following can most reasonably be inferred to be a view held by the online video websites? ",
     answer_1:
       "(A) Online consumers have the right to reproduce programming content that has been posted on online video websites.",
     answer_2:
@@ -11835,317 +14346,492 @@ export const questions = [
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "Which of the following can most reasonably be inferred to be a view held by the online video websites?",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 597,
-    question_id: 61,
+    id: "597",
+    question_id: "61",
     main_question_stem:
       "We at CBO produce original programming for TV shows, miniseries, and movies. We sell contracts to television conglomerate networks for the exclusive right to broadcast our programming and sell them via DVDs. For this right, the television networks pay CBO substantial fees that help finance CBO expenses and fund future CBO programming projects. For members of the media, we provide kits complete with information on the actors / actresses in our shows, story plots, list of reviews, video clips and images. Now, however, some internet companies, through user generated content have not just a collection of video clips and digital photographs of our media programming throughout their site, but also full length versions of our movies and TV shows. Some of these users pirate our content and make it available for free via online video streaming just hours after initial release - this directly affects our DVD sales. Conditions must be placed on these practices, which go beyond basic media exposure; they harm the value of our contracts with television conglomerate networks and violate our rights as owners of the entertainment content. Videobased internet companies that wish to post such content on their websites should therefore sign contracts with the programming company that stipulate what content will be allowed and how much it will cost. As we have in the past, we will legally pursue internet video-based companies and push to have them shut down.",
-    subquestion1:
-      "For each of the following statements, select Both Accept if, based on the information provided, it can be inferred that both the programming company and the online video company would likely accept that the statement is true. If not, select Otherwise. ",
-    subquestion2:
-      "There should be no restrictions in the freedom to upload and share.",
     answer_1: "Both Accept",
     answer_2: "Otherwise",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "For each of the following statements, select Both Accept if, based on the information provided, it can be inferred that both the programming company and the online video company would likely accept that the statement is true. If not, select Otherwise.",
+    subquestion2:
+      "There should be no restrictions in the freedom to upload and share.",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 598,
-    question_id: 62,
+    id: "598",
+    question_id: "62",
     main_question_stem:
       "We at CBO produce original programming for TV shows, miniseries, and movies. We sell contracts to television conglomerate networks for the exclusive right to broadcast our programming and sell them via DVDs. For this right, the television networks pay CBO substantial fees that help finance CBO expenses and fund future CBO programming projects. For members of the media, we provide kits complete with information on the actors / actresses in our shows, story plots, list of reviews, video clips and images. Now, however, some internet companies, through user generated content have not just a collection of video clips and digital photographs of our media programming throughout their site, but also full length versions of our movies and TV shows. Some of these users pirate our content and make it available for free via online video streaming just hours after initial release - this directly affects our DVD sales. Conditions must be placed on these practices, which go beyond basic media exposure; they harm the value of our contracts with television conglomerate networks and violate our rights as owners of the entertainment content. Videobased internet companies that wish to post such content on their websites should therefore sign contracts with the programming company that stipulate what content will be allowed and how much it will cost. As we have in the past, we will legally pursue internet video-based companies and push to have them shut down.",
-    subquestion1:
-      "For each of the following statements, select Both Accept if, based on the information provided, it can be inferred that both the programming company and the online video company would likely accept that the statement is true. If not, select Otherwise. ",
-    subquestion2:
-      "Any online activity that substantially increases many people's interest in the programming content, its actors and actresses, etc. benefits the programming company.",
     answer_1: "Both Accept",
     answer_2: "Otherwise",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "For each of the following statements, select Both Accept if, based on the information provided, it can be inferred that both the programming company and the online video company would likely accept that the statement is true. If not, select Otherwise.",
+    subquestion2:
+      "Any online activity that substantially increases many people's interest in the programming content, its actors and actresses, etc. benefits the programming company.",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 599,
-    question_id: 63,
+    id: "599",
+    question_id: "63",
     main_question_stem:
       "We at CBO produce original programming for TV shows, miniseries, and movies. We sell contracts to television conglomerate networks for the exclusive right to broadcast our programming and sell them via DVDs. For this right, the television networks pay CBO substantial fees that help finance CBO expenses and fund future CBO programming projects. For members of the media, we provide kits complete with information on the actors / actresses in our shows, story plots, list of reviews, video clips and images. Now, however, some internet companies, through user generated content have not just a collection of video clips and digital photographs of our media programming throughout their site, but also full length versions of our movies and TV shows. Some of these users pirate our content and make it available for free via online video streaming just hours after initial release - this directly affects our DVD sales. Conditions must be placed on these practices, which go beyond basic media exposure; they harm the value of our contracts with television conglomerate networks and violate our rights as owners of the entertainment content. Videobased internet companies that wish to post such content on their websites should therefore sign contracts with the programming company that stipulate what content will be allowed and how much it will cost. As we have in the past, we will legally pursue internet video-based companies and push to have them shut down.",
-    subquestion1:
-      "For each of the following statements, select Both Accept if, based on the information provided, it can be inferred that both the programming company and the online video company would likely accept that the statement is true. If not, select Otherwise. ",
-    subquestion2:
-      "An entertainment program can get adequate media exposure without making the program's entire content free for everyone on a website.",
     answer_1: "Both Accept",
     answer_2: "Otherwise",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "For each of the following statements, select Both Accept if, based on the information provided, it can be inferred that both the programming company and the online video company would likely accept that the statement is true. If not, select Otherwise.",
+    subquestion2:
+      "An entertainment program can get adequate media exposure without making the program's entire content free for everyone on a website.",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 600,
-    question_id: 64,
+    id: "600",
+    question_id: "64",
     main_question_stem:
       "We at CBO produce original programming for TV shows, mini-series, and movies. We sell contracts to television conglomerate networks for the exclusive right to broadcast our programming and sell them via DVDs. For this right, the television networks pay CBO substantial fees that help finance CBO expenses and fund future CBO programming projects. For members of the media, we provide kits complete with information on the actors / actresses in our shows, story plots, list of reviews, video clips and images. Now, however, some internet companies, through user generated content have not just a collection of video clips and digital photographs of our media programming throughout their site, but also full length versions of our movies and TV shows. Some of these users pirate our content and make it available for free via online video streaming just hours after initial release - this directly affects our DVD sales. Conditions must be placed on these practices, which go beyond basic media exposure; they harm the value of our contracts with television conglomerate networks and violate our rights as owners of the entertainment content. Video-based internet companies that wish to post such content on their websites should therefore sign contracts with the programming company that stipulate what content will be allowed and how much it will cost. As we have in the past, we will legally pursue internet videobased companies and push to have them shut down.",
+    answer_1: "Can Infer Disagreement",
+    answer_2: "Cannot Infer Disagreement",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "A",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following issues, select Can Infer Disagreement if, based on the information provided, it can be inferred that the programming company and the online video websites would hold opposing positions on the issue. Otherwise, select Cannot Infer Disagreement.",
     subquestion2:
       "How soon a website should be able to host programming content after it is initially released.",
-    answer_1: "Can Infer Disagreement",
-    answer_2: "Cannot Infer Disagreement",
-    correct_answer: "A",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 601,
-    question_id: 65,
+    id: "601",
+    question_id: "65",
     main_question_stem:
       "We at CBO produce original programming for TV shows, mini-series, and movies. We sell contracts to television conglomerate networks for the exclusive right to broadcast our programming and sell them via DVDs. For this right, the television networks pay CBO substantial fees that help finance CBO expenses and fund future CBO programming projects. For members of the media, we provide kits complete with information on the actors / actresses in our shows, story plots, list of reviews, video clips and images. Now, however, some internet companies, through user generated content have not just a collection of video clips and digital photographs of our media programming throughout their site, but also full length versions of our movies and TV shows. Some of these users pirate our content and make it available for free via online video streaming just hours after initial release - this directly affects our DVD sales. Conditions must be placed on these practices, which go beyond basic media exposure; they harm the value of our contracts with television conglomerate networks and violate our rights as owners of the entertainment content. Video-based internet companies that wish to post such content on their websites should therefore sign contracts with the programming company that stipulate what content will be allowed and how much it will cost. As we have in the past, we will legally pursue internet videobased companies and push to have them shut down.",
+    answer_1: "Can Infer Disagreement",
+    answer_2: "Cannot Infer Disagreement",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following issues, select Can Infer Disagreement if, based on the information provided, it can be inferred that the programming company and the online video websites would hold opposing positions on the issue. Otherwise, select Cannot Infer Disagreement.",
     subquestion2:
       "The degree to which online media exposure generates interest in entertainment content.",
-    answer_1: "Can Infer Disagreement",
-    answer_2: "Cannot Infer Disagreement",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 602,
-    question_id: 66,
+    id: "602",
+    question_id: "66",
     main_question_stem:
       "We at CBO produce original programming for TV shows, mini-series, and movies. We sell contracts to television conglomerate networks for the exclusive right to broadcast our programming and sell them via DVDs. For this right, the television networks pay CBO substantial fees that help finance CBO expenses and fund future CBO programming projects. For members of the media, we provide kits complete with information on the actors / actresses in our shows, story plots, list of reviews, video clips and images. Now, however, some internet companies, through user generated content have not just a collection of video clips and digital photographs of our media programming throughout their site, but also full length versions of our movies and TV shows. Some of these users pirate our content and make it available for free via online video streaming just hours after initial release - this directly affects our DVD sales. Conditions must be placed on these practices, which go beyond basic media exposure; they harm the value of our contracts with television conglomerate networks and violate our rights as owners of the entertainment content. Video-based internet companies that wish to post such content on their websites should therefore sign contracts with the programming company that stipulate what content will be allowed and how much it will cost. As we have in the past, we will legally pursue internet videobased companies and push to have them shut down.",
+    answer_1: "Can Infer Disagreement",
+    answer_2: "Cannot Infer Disagreement",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "A",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following issues, select Can Infer Disagreement if, based on the information provided, it can be inferred that the programming company and the online video websites would hold opposing positions on the issue. Otherwise, select Cannot Infer Disagreement.",
     subquestion2:
       "The conditions under which an online video site should be allowed to disseminate programming media content (video, images).",
-    answer_1: "Can Infer Disagreement",
-    answer_2: "Cannot Infer Disagreement",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "603",
+    question_id: "67",
+    main_question_stem:
+      "Candidate must have University GPA over 3.2 and must not have an MBA degree  Candidate must (or will) have graduated from a Top 15 University  Candidate must have demonstrated interest in finance  Candidate must have the ability to work long hours, be highly analytical, and become a master of Microsoft Excel  Candidate total years of experience must be less than 3 years",
+    answer_1: "Yes",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
-  },
-  {
-    id: 603,
-    question_id: 67,
-    main_question_stem:
-      "Candidate must have University GPA over 3.2 and must not have an MBA degree  Candidate must (or will) have graduated from a Top 15 University  Candidate must have demonstrated interest in finance  Candidate must have the ability to work long hours, be highly analytical, and become a master of Microsoft Excel  Candidate total years of experience must be less than 3 years ",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Using all the information provided, select Yes if the statement about eligibility / promotion is possible. Otherwise, select No.",
     subquestion2:
       "John joined the bank as an Analyst when he was 22. One year later he asked for promotion to Associate. Is it possible that he will be promoted?",
-    answer_1: "Yes",
-    answer_2: "No",
-    correct_answer: "A",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 604,
-    question_id: 68,
+    id: "604",
+    question_id: "68",
     main_question_stem:
-      "Candidate must have University GPA over 3.2 and must not have an MBA degree  Candidate must (or will) have graduated from a Top 15 University  Candidate must have demonstrated interest in finance  Candidate must have the ability to work long hours, be highly analytical, and become a master of Microsoft Excel  Candidate total years of experience must be less than 3 years ",
-    subquestion1:
-      "Using all the information provided, select Yes if the statement about eligibility / promotion is possible. Otherwise, select No.",
-    subquestion2:
-      "Cameron has never worked with this particular bank. He is 28 years old with 4+ years of investment banking experience and an MBA from a two-year program outside of the top 15 business schools. Is it possible for Cameron to be eligible to apply for the position of Principal? ",
+      "Candidate must have University GPA over 3.2 and must not have an MBA degree  Candidate must (or will) have graduated from a Top 15 University  Candidate must have demonstrated interest in finance  Candidate must have the ability to work long hours, be highly analytical, and become a master of Microsoft Excel  Candidate total years of experience must be less than 3 years",
     answer_1: "Yes",
     answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "Using all the information provided, select Yes if the statement about eligibility / promotion is possible. Otherwise, select No.",
+    subquestion2:
+      "Cameron has never worked with this particular bank. He is 28 years old with 4+ years of investment banking experience and an MBA from a two-year program outside of the top 15 business schools. Is it possible for Cameron to be eligible to apply for the position of Principal?",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 605,
-    question_id: 69,
+    id: "605",
+    question_id: "69",
     main_question_stem:
-      "Candidate must have University GPA over 3.2 and must not have an MBA degree  Candidate must (or will) have graduated from a Top 15 University  Candidate must have demonstrated interest in finance  Candidate must have the ability to work long hours, be highly analytical, and become a master of Microsoft Excel  Candidate total years of experience must be less than 3 years ",
+      "Candidate must have University GPA over 3.2 and must not have an MBA degree  Candidate must (or will) have graduated from a Top 15 University  Candidate must have demonstrated interest in finance  Candidate must have the ability to work long hours, be highly analytical, and become a master of Microsoft Excel  Candidate total years of experience must be less than 3 years",
+    answer_1: "Yes",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "A",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Using all the information provided, select Yes if the statement about eligibility / promotion is possible. Otherwise, select No.",
     subquestion2:
       "George was promoted from Analyst to Associate 3 years ago. Assuming George has remained in his position as Associate, is he eligible to be promoted to Principal?",
-    answer_1: "Yes",
-    answer_2: "No",
-    correct_answer: "A",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 606,
-    question_id: 70,
+    id: "606",
+    question_id: "70",
     main_question_stem:
       " Candidate must have University GPA over 3.2 and must not have an MBA degree  Candidate must (or will) have graduated from a Top 15 University  Candidate must have demonstrated interest in finance  Candidate must have the ability to work long hours, be highly analytical, and become a master of Microsoft Excel  Candidate total years of experience must be less than 3 years Assume that all students finishing up university have zero years of work experience.",
+    answer_1: "Conclusively Eligible",
+    answer_2: "Not Conclusively Eligible",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following statements, select Conclusively Eligible if the candidate is absolutely eligible for the position he/she is applying for. Otherwise, select Not Conclusively Eligible.",
     subquestion2:
       "Joe has 5 years of experience at a large bank doing insurance underwriting and modeling. He is currently at Harvard Business School (a top 3 business school) and wishes to apply for the position of Principal once recruiting begins in the fall.",
-    answer_1: "Conclusively Eligible",
-    answer_2: "Not Conclusively Eligible",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 607,
-    question_id: 71,
+    id: "607",
+    question_id: "71",
     main_question_stem:
       " Candidate must have University GPA over 3.2 and must not have an MBA degree  Candidate must (or will) have graduated from a Top 15 University  Candidate must have demonstrated interest in finance  Candidate must have the ability to work long hours, be highly analytical, and become a master of Microsoft Excel  Candidate total years of experience must be less than 3 years Assume that all students finishing up university have zero years of work experience.",
+    answer_1: "Conclusively Eligible",
+    answer_2: "Not Conclusively Eligible",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "A",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following statements, select Conclusively Eligible if the candidate is absolutely eligible for the position he/she is applying for. Otherwise, select Not Conclusively Eligible.",
     subquestion2:
       "Brian studied computer science with a GPA of 3.4 from a Top 15 University. After the internet bubble burst, he applied his analytical skills to learning Excel and financial modeling in his free time. He is applying as an Analyst during his senior year in school.",
-    answer_1: "Conclusively Eligible",
-    answer_2: "Not Conclusively Eligible",
-    correct_answer: "A",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 608,
-    question_id: 72,
+    id: "608",
+    question_id: "72",
     main_question_stem:
       " Candidate must have University GPA over 3.2 and must not have an MBA degree  Candidate must (or will) have graduated from a Top 15 University  Candidate must have demonstrated interest in finance  Candidate must have the ability to work long hours, be highly analytical, and become a master of Microsoft Excel  Candidate total years of experience must be less than 3 years Assume that all students finishing up university have zero years of work experience.",
+    answer_1: "Conclusively Eligible",
+    answer_2: "Not Conclusively Eligible",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "For each of the following statements, select Conclusively Eligible if the candidate is absolutely eligible for the position he/she is applying for. Otherwise, select Not Conclusively Eligible.",
     subquestion2:
       "Patricia has been working in healthcare consulting for 2.5 years. She is considering a job as an investment banking analyst for less travel but more hours into the weekends. She decides to pass her resume along to her friend for the position of Analyst.",
-    answer_1: "Conclusively Eligible",
-    answer_2: "Not Conclusively Eligible",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 609,
-    question_id: 73,
+    id: "609",
+    question_id: "73",
     main_question_stem:
       " Candidate must have University GPA over 3.2 and must not have an MBA degree  Candidate must (or will) have graduated from a Top 15 University  Candidate must have demonstrated interest in finance  Candidate must have the ability to work long hours, be highly analytical, and become a master of Microsoft Excel  Candidate total years of experience must be less than 3 years",
-    answer_1: 2,
-    answer_2: 4,
-    answer_3: 4.5,
-    answer_4: 6,
-    answer_5: 6.5,
+    answer_1: "2",
+    answer_2: "4",
+    answer_3: "4.5",
+    answer_4: "6",
+    answer_5: "6.5",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1: "",
+    subquestion2: "",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 610,
-    question_id: 74,
+    id: "610",
+    question_id: "74",
     main_question_stem:
       "News article in a popular business publication June 7 - If current trends continue, farmed seafood will overtake ocean fishing as the world's largest source of seafood by 2025. Aggressive overfishing of the world's oceans and the inability of world governments to agree on fishing limits mean that farming will become critical to the industry's ability to meet worldwide seafood demand. Additionally, recent concerns about mercury levels in wild-caught fish have led many consumers to prefer farmed fish, further creating increased demand for this relatively new source of seafood.",
-    subquestion1:
-      "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
-    subquestion2:
-      "The world's governments usually do not agree with one another on how to deal with matters related to fishing and seafood farming. ",
     answer_1: "Yes",
     answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "A",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
-  },
-  {
-    id: 611,
-    question_id: 75,
-    main_question_stem:
-      "News article in a popular business publication June 7 - If current trends continue, farmed seafood will overtake ocean fishing as the world's largest source of seafood by 2025. Aggressive overfishing of the world's oceans and the inability of world governments to agree on fishing limits mean that farming will become critical to the industry's ability to meet worldwide seafood demand. Additionally, recent concerns about mercury levels in wild-caught fish have led many consumers to prefer farmed fish, further creating increased demand for this relatively new source of seafood.",
-    subquestion1:
-      "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
-    subquestion2:
-      "An increase in worldwide demand for tilapia has driven the world's ocean fish population to dangerously low levels.",
-    answer_1: "Yes",
-    answer_2: "No",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
-  },
-  {
-    id: 612,
-    question_id: 76,
-    main_question_stem:
-      "News article in a popular business publication June 7 - If current trends continue, farmed seafood will overtake ocean fishing as the world's largest source of seafood by 2025. Aggressive overfishing of the world's oceans and the inability of world governments to agree on fishing limits mean that farming will become critical to the industry's ability to meet worldwide seafood demand. Additionally, recent concerns about mercury levels in wild-caught fish have led many consumers to prefer farmed fish, further creating increased demand for this relatively new source of seafood.",
-    subquestion1:
-      "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
-    subquestion2: "Dr. Dempster supports an increase in fish farming.",
-    answer_1: "Yes",
-    answer_2: "No",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
-  },
-  {
-    id: 613,
-    question_id: 77,
-    main_question_stem:
-      "News article in a popular business publication June 7 - If current trends continue, farmed seafood will overtake ocean fishing as the world's largest source of seafood by 2025. Aggressive overfishing of the world's oceans and the inability of world governments to agree on fishing limits mean that farming will become critical to the industry's ability to meet worldwide seafood demand. Additionally, recent concerns about mercury levels in wild-caught fish have led many consumers to prefer farmed fish, further creating increased demand for this relatively new source of seafood.",
-    subquestion1:
-      "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
-    subquestion2:
-      "Chinese tilapia farms have led some U.S. consumers to worry about the levels of mercury in their seafood.",
-    answer_1: "Yes",
-    answer_2: "No",
-    correct_answer: "A",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
-  },
-  {
-    id: 614,
-    question_id: 78,
-    main_question_stem:
-      "Interview with a well known scientist in a technology journal July 2-Dr. Jason Dempster, one of the world's most outspoken critics of the seafood industry's unwillingness to curb its output in order to protect the fish population, suggests that more than two dozen popular species may become virtually extinct in the next several decades. \"I understand that consumers keep buying the seafood, and fishermen are naturally going to meet demand wherever they can find it. However, if something isn't done to meet the demand another way, by the middle of this century even something as common as tuna may become a delicacy only the world's wealthiest families can afford.\"",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
     subquestion2:
       "The world's governments usually do not agree with one another on how to deal with matters related to fishing and seafood farming.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "611",
+    question_id: "75",
+    main_question_stem:
+      "News article in a popular business publication June 7 - If current trends continue, farmed seafood will overtake ocean fishing as the world's largest source of seafood by 2025. Aggressive overfishing of the world's oceans and the inability of world governments to agree on fishing limits mean that farming will become critical to the industry's ability to meet worldwide seafood demand. Additionally, recent concerns about mercury levels in wild-caught fish have led many consumers to prefer farmed fish, further creating increased demand for this relatively new source of seafood.",
     answer_1: "Yes",
     answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
-  },
-  {
-    id: 615,
-    question_id: 79,
-    main_question_stem:
-      "Interview with a well known scientist in a technology journal July 2-Dr. Jason Dempster, one of the world's most outspoken critics of the seafood industry's unwillingness to curb its output in order to protect the fish population, suggests that more than two dozen popular species may become virtually extinct in the next several decades. \"I understand that consumers keep buying the seafood, and fishermen are naturally going to meet demand wherever they can find it. However, if something isn't done to meet the demand another way, by the middle of this century even something as common as tuna may become a delicacy only the world's wealthiest families can afford.\"",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
     subquestion2:
       "An increase in worldwide demand for tilapia has driven the world's ocean fish population to dangerously low levels.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "612",
+    question_id: "76",
+    main_question_stem:
+      "News article in a popular business publication June 7 - If current trends continue, farmed seafood will overtake ocean fishing as the world's largest source of seafood by 2025. Aggressive overfishing of the world's oceans and the inability of world governments to agree on fishing limits mean that farming will become critical to the industry's ability to meet worldwide seafood demand. Additionally, recent concerns about mercury levels in wild-caught fish have led many consumers to prefer farmed fish, further creating increased demand for this relatively new source of seafood.",
     answer_1: "Yes",
     answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
-  },
-  {
-    id: 616,
-    question_id: 80,
-    main_question_stem:
-      "Interview with a well known scientist in a technology journal July 2-Dr. Jason Dempster, one of the world's most outspoken critics of the seafood industry's unwillingness to curb its output in order to protect the fish population, suggests that more than two dozen popular species may become virtually extinct in the next several decades. \"I understand that consumers keep buying the seafood, and fishermen are naturally going to meet demand wherever they can find it. However, if something isn't done to meet the demand another way, by the middle of this century even something as common as tuna may become a delicacy only the world's wealthiest families can afford.\"",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
-    subquestion2: "Dr. Dempster supports, an increase in fish farming",
-    answer_1: "Yes",
-    answer_2: "No",
-    correct_answer: "B",
-    Category: "Integrated reasoning",
-    SubCategory: "Inference-Based Questions",
+    subquestion2: "Dr. Dempster supports an increase in fish farming.",
+    subquestion3: "",
+    img_url: "",
   },
   {
-    id: 617,
-    question_id: 81,
+    id: "613",
+    question_id: "77",
     main_question_stem:
-      "Interview with a well known scientist in a technology journal July 2-Dr. Jason Dempster, one of the world's most outspoken critics of the seafood industry's unwillingness to curb its output in order to protect the fish population, suggests that more than two dozen popular species may become virtually extinct in the next several decades. \"I understand that consumers keep buying the seafood, and fishermen are naturally going to meet demand wherever they can find it. However, if something isn't done to meet the demand another way, by the middle of this century even something as common as tuna may become a delicacy only the world's wealthiest families can afford.\"",
+      "News article in a popular business publication June 7 - If current trends continue, farmed seafood will overtake ocean fishing as the world's largest source of seafood by 2025. Aggressive overfishing of the world's oceans and the inability of world governments to agree on fishing limits mean that farming will become critical to the industry's ability to meet worldwide seafood demand. Additionally, recent concerns about mercury levels in wild-caught fish have led many consumers to prefer farmed fish, further creating increased demand for this relatively new source of seafood.",
+    answer_1: "Yes",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "A",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
     subquestion2:
       "Chinese tilapia farms have led some U.S. consumers to worry about the levels of mercury in their seafood.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "614",
+    question_id: "78",
+    main_question_stem:
+      "Interview with a well known scientist in a technology journal July 2-Dr. Jason Dempster, one of the world's most outspoken critics of the seafood industry's unwillingness to curb its output in order to protect the fish population, suggests that more than two dozen popular species may become virtually extinct in the next several decades. \"I understand that consumers keep buying the seafood, and fishermen are naturally going to meet demand wherever they can find it. However, if something isn't done to meet the demand another way, by the middle of this century even something as common as tuna may become a delicacy only the world's wealthiest families can afford.\"",
     answer_1: "Yes",
     answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
     correct_answer: "B",
     Category: "Integrated reasoning",
     SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
+    subquestion2:
+      "The world's governments usually do not agree with one another on how to deal with matters related to fishing and seafood farming.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "615",
+    question_id: "79",
+    main_question_stem:
+      "Interview with a well known scientist in a technology journal July 2-Dr. Jason Dempster, one of the world's most outspoken critics of the seafood industry's unwillingness to curb its output in order to protect the fish population, suggests that more than two dozen popular species may become virtually extinct in the next several decades. \"I understand that consumers keep buying the seafood, and fishermen are naturally going to meet demand wherever they can find it. However, if something isn't done to meet the demand another way, by the middle of this century even something as common as tuna may become a delicacy only the world's wealthiest families can afford.\"",
+    answer_1: "Yes",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
+    subquestion2:
+      "An increase in worldwide demand for tilapia has driven the world's ocean fish population to dangerously low levels.",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "616",
+    question_id: "80",
+    main_question_stem:
+      "Interview with a well known scientist in a technology journal July 2-Dr. Jason Dempster, one of the world's most outspoken critics of the seafood industry's unwillingness to curb its output in order to protect the fish population, suggests that more than two dozen popular species may become virtually extinct in the next several decades. \"I understand that consumers keep buying the seafood, and fishermen are naturally going to meet demand wherever they can find it. However, if something isn't done to meet the demand another way, by the middle of this century even something as common as tuna may become a delicacy only the world's wealthiest families can afford.\"",
+    answer_1: "Yes",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
+    subquestion2: "Dr. Dempster supports, an increase in fish farming",
+    subquestion3: "",
+    img_url: "",
+  },
+  {
+    id: "617",
+    question_id: "81",
+    main_question_stem:
+      "Interview with a well known scientist in a technology journal July 2-Dr. Jason Dempster, one of the world's most outspoken critics of the seafood industry's unwillingness to curb its output in order to protect the fish population, suggests that more than two dozen popular species may become virtually extinct in the next several decades. \"I understand that consumers keep buying the seafood, and fishermen are naturally going to meet demand wherever they can find it. However, if something isn't done to meet the demand another way, by the middle of this century even something as common as tuna may become a delicacy only the world's wealthiest families can afford.\"",
+    answer_1: "Yes",
+    answer_2: "No",
+    answer_3: "",
+    answer_4: "",
+    answer_5: "",
+    correct_answer: "B",
+    Category: "Integrated reasoning",
+    SubCategory: "Inference-Based Questions",
+    Quant_category_1: "",
+    "Quant_category 2": "",
+    level: "",
+    subquestion1:
+      "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
+    subquestion2:
+      "Chinese tilapia farms have led some U.S. consumers to worry about the levels of mercury in their seafood.",
+    subquestion3: "",
+    img_url: "",
   },
 ];

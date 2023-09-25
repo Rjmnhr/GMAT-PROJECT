@@ -76,7 +76,8 @@ const DashBoardComponent = () => {
               </div>
               <div
                 onClick={() => {
-                  navigate("/instructions");
+                  sessionStorage.setItem("practice_exam_section", "1");
+                  navigate("/dashboard-detailed");
                   localStorage.setItem("exam_no", "1");
                 }}
                 className="container col-12 d-flex justify-content-around align-items-center border-bottom px-3 py-2 gap-3 practice-exam-container"
@@ -98,7 +99,8 @@ const DashBoardComponent = () => {
               </div>
               <div
                 onClick={() => {
-                  navigate("/instructions");
+                  sessionStorage.setItem("practice_exam_section", "2");
+                  navigate("/dashboard-detailed");
                   localStorage.setItem("exam_no", "2");
                 }}
                 className="container col-12 d-flex justify-content-around align-items-center border-bottom px-3 py-2 gap-3 practice-exam-container "
@@ -120,7 +122,8 @@ const DashBoardComponent = () => {
               </div>
               <div
                 onClick={() => {
-                  navigate("/instructions");
+                  sessionStorage.setItem("practice_exam_section", "3");
+                  navigate("/dashboard-detailed");
                   localStorage.setItem("exam_no", "3");
                 }}
                 className="container col-12 d-flex justify-content-around align-items-center border-bottom px-3 py-2 gap-3 practice-exam-container "
