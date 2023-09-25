@@ -127,12 +127,10 @@ const SignIn = () => {
                       >
                         <div className="text-center">
                           <div className="mb-5">
-                            <h3 className="card-title">Login to Azkroflyz</h3>
+                            <h4 className="card-title">
+                              Login to Adeft Education
+                            </h4>
                           </div>
-
-                          <span className="divider-center text-muted mb-4">
-                            OR
-                          </span>
                         </div>
 
                         <div className="mb-4">

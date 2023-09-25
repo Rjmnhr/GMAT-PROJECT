@@ -9,7 +9,7 @@ const NavBarHome = () => {
       style={{ color: "white" }}
     >
       <div className="d-flex justify-content-between align-items-center">
-        <h3 style={{ color: "white", margin: "0" }}>ADEFT EDUCATION</h3>
+        <p style={{ color: "white", margin: "0" }}>www.adefteducation.com</p>
       </div>
 
       <div>
