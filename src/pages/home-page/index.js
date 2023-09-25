@@ -10,7 +10,7 @@ const HomePage = () => {
       className="container-fluid img_container "
       style={{
         backgroundImage:
-          "url(https://lh5.googleusercontent.com/5fVJIifi1CIJ76Og-mHkXlY2Us2xcnaboBFakE2UVDbfMANy4tv_FFs4gZyMkiK6FduI2GhCXiu79qwMbkyMpu8=w16383)",
+          "url(https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695657433/pgsgfjhvitdmjl0pnbco.png)",
         backgroundPosition: "center",
         backgroundSize: "cover",
         height: "100vh",
