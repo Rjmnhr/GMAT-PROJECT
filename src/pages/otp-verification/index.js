@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { OtpVerificationPageStyled } from "./style";
 
 import AxiosInstance from "../../components/axios";
+import { useApplicationContext } from "../../app-context";
 
 const OtpVerification = () => {
   const [warning, setWarning] = useState("");
@@ -17,6 +18,8 @@ const OtpVerification = () => {
   const first_name = localStorage.getItem("first_name");
   const last_name = localStorage.getItem("last_name");
   const password = localStorage.getItem("password");
+
+  const { setIsSignIn } = useApplicationContext();
 
   const clearLocalStorage = () => {
     localStorage.removeItem("email");
@@ -106,8 +109,8 @@ const OtpVerification = () => {
     })
       .then(async (response) => {
         const data = await response.data;
+        setIsSignIn(false);
         console.log(data);
-
         clearLocalStorage();
         navigate("/");
       })

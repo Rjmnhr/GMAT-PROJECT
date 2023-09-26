@@ -6,9 +6,7 @@ import SideBar from "../../components/side-bar";
 
 const DashBoardComponent = () => {
   const navigate = useNavigate();
-  const practice_score_1 = localStorage.getItem("practice_score_1");
-  const practice_score_2 = localStorage.getItem("practice_score_2");
-  const practice_score_3 = localStorage.getItem("practice_score_3");
+
   const practice_status_1 = localStorage.getItem("practice_status_1");
   const practice_status_2 = localStorage.getItem("practice_status_2");
   const practice_status_3 = localStorage.getItem("practice_status_3");
@@ -62,9 +60,9 @@ const DashBoardComponent = () => {
                 >
                   Practice Exam Time
                 </p>
-                <p style={{ fontWeight: "bold", width: "200px" }}>
+                {/* <p style={{ fontWeight: "bold", width: "200px" }}>
                   Scaled Score
-                </p>
+                </p> */}
                 <p style={{ fontWeight: "bold", width: "200px" }}>Status</p>
               </div>
               <div
@@ -79,12 +77,14 @@ const DashBoardComponent = () => {
                   Practice Exam 1
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>
-                  31 Questions
+                  79 Questions
                 </p>
-                <p style={{ width: "200px", textAlign: "start" }}>61 minutes</p>
-                <p style={{ width: "200px" }}>
+                <p style={{ width: "200px", textAlign: "start" }}>
+                  157 minutes
+                </p>
+                {/* <p style={{ width: "200px" }}>
                   {practice_score_1 ? practice_score_1 : "--"}
-                </p>
+                </p> */}
                 <p style={{ width: "200px" }}>
                   {" "}
                   {practice_status_1 ? practice_status_1 : "--"}
@@ -102,12 +102,14 @@ const DashBoardComponent = () => {
                   Practice Exam 2
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>
-                  31 Questions
+                  79 Questions
                 </p>
-                <p style={{ width: "200px", textAlign: "start" }}>61 minutes</p>
-                <p style={{ width: "200px" }}>
+                <p style={{ width: "200px", textAlign: "start" }}>
+                  157 minutes
+                </p>
+                {/* <p style={{ width: "200px" }}>
                   {practice_score_2 ? practice_score_2 : "--"}
-                </p>
+                </p> */}
                 <p style={{ width: "200px" }}>
                   {" "}
                   {practice_status_2 ? practice_status_2 : "--"}
@@ -125,12 +127,14 @@ const DashBoardComponent = () => {
                   Practice Exam 3
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>
-                  31 Questions
+                  79 Questions
                 </p>
-                <p style={{ width: "200px", textAlign: "start" }}>61 minutes</p>
-                <p style={{ width: "200px" }}>
+                <p style={{ width: "200px", textAlign: "start" }}>
+                  157 minutes
+                </p>
+                {/* <p style={{ width: "200px" }}>
                   {practice_score_3 ? practice_score_3 : "--"}
-                </p>
+                </p> */}
                 <p style={{ width: "200px" }}>
                   {" "}
                   {practice_status_3 ? practice_status_3 : "--"}

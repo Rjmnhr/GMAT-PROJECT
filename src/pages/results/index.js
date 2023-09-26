@@ -14,6 +14,8 @@ const ResultPage = () => {
   const exam_no = localStorage.getItem("exam_no");
   const ir_score = sessionStorage.getItem("ir_score");
   const user_id = localStorage.getItem("user_id");
+  const user_name = localStorage.getItem("user_name");
+  const email = localStorage.getItem("email");
   useEffect(() => {
     if (!quant_score) return;
 
@@ -123,6 +125,9 @@ const ResultPage = () => {
       parseInt(verbal_correct_questions) +
       parseInt(ir_correct_questions);
 
+    formData.append("email", email);
+
+    formData.append("user_name", user_name);
     formData.append("user_id", user_id);
     formData.append("total_score", score);
     formData.append("percentile_rank", "");

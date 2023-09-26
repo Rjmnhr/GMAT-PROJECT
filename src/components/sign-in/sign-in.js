@@ -38,18 +38,21 @@ const SignIn = () => {
     })
       .then(async (response) => {
         const data = await response.data;
+        console.log("🚀 ~ file: sign-in.js:41 ~ .then ~ data:", data);
         setIsLoading(false);
 
-        if (!response.status === 200) {
-          error("wrong password or username");
+        if (!data === "Wrong username or password") {
           document.querySelector("#signupSrPassword").style.border =
             "1px solid red";
+          console.log("1");
           document.querySelector("#signinSrEmail").style.border =
             "1px solid red";
+          setEmail("");
+          setPassword("");
           return;
         }
 
-        success();
+        // success();
 
         const accessToken = data.accessToken;
         const id = data.id;
@@ -62,6 +65,9 @@ const SignIn = () => {
         localStorage.setItem("accessToken", accessToken);
         localStorage.setItem("isLoggedIn", true);
         localStorage.setItem("user_id", id);
+        localStorage.setItem("user_name", data.first_name);
+        localStorage.setItem("email", data.email);
+
         sessionStorage.setItem("info", "");
 
         if (userType === "admin") {
@@ -84,12 +90,12 @@ const SignIn = () => {
       });
   };
 
-  const success = () => {
-    messageApi.open({
-      type: "success",
-      content: "Login successfully",
-    });
-  };
+  // const success = () => {
+  //   messageApi.open({
+  //     type: "success",
+  //     content: "Login successfully",
+  //   });
+  // };
 
   const error = (data) => {
     messageApi.open({
