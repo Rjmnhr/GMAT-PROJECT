@@ -747,17 +747,19 @@ const QuantTestPage = () => {
                     : ""}
                 </p>
                 <p className="mt-3">Level :{currentQuestionLevel}</p>
+           
+
+                <p className="mt-3">
+                  Score:
+                  {score.toFixed(2)}
+                </p> */}
+
                 <p className="mt-3">
                   Correct Answer:
                   {filteredQuestionsByLevel[currentQuestion].correct_answer
                     ? filteredQuestionsByLevel[currentQuestion].correct_answer
                     : ""}
                 </p>
-
-                <p className="mt-3">
-                  Score:
-                  {score.toFixed(2)}
-                </p> */}
               </div>
             </div>
           ) : (

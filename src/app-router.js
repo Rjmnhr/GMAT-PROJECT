@@ -13,6 +13,9 @@ import DashboardDetailed from "./components/detailed-dashboard";
 import HomePage from "./pages/home-page";
 import LoginPage from "./pages/login-page";
 import OtpVerification from "./pages/otp-verification";
+import AdminDashboard from "./components/admin-dashboard";
+import UserDataComponent from "./components/user-details";
+import UserDetailedDashboard from "./components/user-details/user-detailed-dashboard";
 const AppRouter = () => {
   return (
     <>
@@ -38,7 +41,6 @@ const AppRouter = () => {
               </>
             }
           />
-
           <Route
             path="/quant-test"
             element={
@@ -122,7 +124,27 @@ const AppRouter = () => {
             }
           />
           <Route
+            path="/admin-dashboard"
+            element={
+              <>
+                <div>
+                  <AdminDashboard />
+                </div>
+              </>
+            }
+          />
+          <Route
             path="/login"
+            element={
+              <>
+                <div>
+                  <LoginPage />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/login-app"
             element={
               <>
                 <div>
@@ -137,6 +159,27 @@ const AppRouter = () => {
               <>
                 <div>
                   <OtpVerification />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/user/:id"
+            element={
+              <>
+                <div>
+                  <UserDataComponent />
+                </div>
+              </>
+            }
+          />
+          UserDetailedDashboard
+          <Route
+            path="/dashboard-detailed/:id"
+            element={
+              <>
+                <div>
+                  <UserDetailedDashboard />
                 </div>
               </>
             }

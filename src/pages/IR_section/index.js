@@ -327,10 +327,10 @@ const IRTestPage = () => {
                   </Radio.Group>
                 </div>
 
-                {/* <p className="mt-3">
+                <p className="mt-3">
                   Correct Answer:
                   {shuffledQuestions[currentQuestion].correct_answer}
-                </p> */}
+                </p>
               </div>
             </div>
           </div>

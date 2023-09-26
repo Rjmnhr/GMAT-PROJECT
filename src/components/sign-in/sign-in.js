@@ -52,6 +52,7 @@ const SignIn = () => {
         success();
 
         const accessToken = data.accessToken;
+        const id = data.id;
 
         if (!accessToken) return error(data);
 
@@ -60,6 +61,7 @@ const SignIn = () => {
         localStorage.setItem("userType", userType);
         localStorage.setItem("accessToken", accessToken);
         localStorage.setItem("isLoggedIn", true);
+        localStorage.setItem("user_id", id);
         sessionStorage.setItem("info", "");
 
         if (userType === "admin") {

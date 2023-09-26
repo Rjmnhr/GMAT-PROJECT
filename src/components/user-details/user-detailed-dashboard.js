@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../../components/nav-bar";
-import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import AxiosInstance from "../axios";
-import SideBar from "../side-bar";
-const DashboardDetailed = () => {
-  const navigate = useNavigate();
-  const user_id = localStorage.getItem("user_id");
+
+const UserDetailedDashboard = () => {
   const [userData, setUserData] = useState(null);
+  const { id } = useParams();
 
   const practice_exam_number = sessionStorage.getItem("practice_exam_section");
 
@@ -14,7 +13,7 @@ const DashboardDetailed = () => {
     const formData = new FormData();
     formData.append("practice_exam", practice_exam_number);
 
-    formData.append("id", user_id);
+    formData.append("id", id);
 
     AxiosInstance.post("/api/exams/get-data", formData, {
       headers: {
@@ -55,13 +54,11 @@ const DashboardDetailed = () => {
     : "";
 
   const dateOnly = dateString.split("T")[0];
-
   const isAttempted = userData ? (userData.length > 0 ? true : false) : false;
   return (
     <>
       <NavBar />
       <div className="d-flex justify-content-center align-items-center">
-        <SideBar />
         <div
           className="container col-10 p-5"
           style={{ background: "#f8f8f8", height: "100vh" }}
@@ -72,22 +69,6 @@ const DashboardDetailed = () => {
                 <div className="d-flex align-items-center">
                   <h4 className="pl-3">Practice Exam {practice_exam_number}</h4>
                 </div>
-                {isAttempted ? (
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => navigate("/instructions")}
-                    disabled
-                  >
-                    Completed
-                  </button>
-                ) : (
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => navigate("/instructions")}
-                  >
-                    Start Exam
-                  </button>
-                )}
               </div>
 
               <div className="container col-12 d-flex justify-content-around align-items-center border-bottom p-3 gap-3  ">
@@ -291,4 +272,4 @@ const DashboardDetailed = () => {
   );
 };
 
-export default DashboardDetailed;
+export default UserDetailedDashboard;

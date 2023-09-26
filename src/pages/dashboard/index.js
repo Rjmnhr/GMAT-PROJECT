@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavBar from "../../components/nav-bar";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import SideBar from "../../components/side-bar";
 
 const DashBoardComponent = () => {
   const navigate = useNavigate();
@@ -12,32 +13,24 @@ const DashBoardComponent = () => {
   const practice_status_2 = localStorage.getItem("practice_status_2");
   const practice_status_3 = localStorage.getItem("practice_status_3");
 
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+    if (isLoggedIn !== "true") {
+      navigate("/login-app");
+    }
+  });
+
   return (
     <>
       <NavBar />
       <div className="d-flex justify-content-center align-items-center">
-        <div
-          className="side-bar col-2"
-          style={{ background: "#111d2c", height: "100vh" }}
-        >
-          <div className="pt-3 border-bottom">
-            <button style={{ color: "white" }} className="btn ">
-              Dashboard
-            </button>
-          </div>
-        </div>
+        <SideBar />
         <div
           className="container col-10 p-5"
           style={{ background: "#f8f8f8", height: "100vh" }}
         >
           <div className="card w-100 pb-3" style={{ height: "50vh" }}>
-            {/* <img
-              style={{ width: "100%", height: "50%" }}
-              src={
-                "https://www.gmaxworld.com/blog/wp-content/uploads/2021/02/GMAT-Free-Resources.jpg"
-              }
-              alt=""
-            /> */}
             <div className="sub-content mt-3 ">
               <h4>Practice Exams</h4>
 
