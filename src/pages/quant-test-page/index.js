@@ -35,32 +35,32 @@ const QuantTestPage = () => {
 
   // const { questions, setQuestions } = useApplicationContext();
 
-  useEffect(() => {
-    const handleBeforeUnload = (e) => {
-      e.preventDefault();
-      e.returnValue =
-        "Refreshing the page will remove you from the exam. Are you sure you want to leave?";
+  // useEffect(() => {
+  //   const handleBeforeUnload = (e) => {
+  //     e.preventDefault();
+  //     e.returnValue =
+  //       "Refreshing the page will remove you from the exam. Are you sure you want to leave?";
 
-      const confirmationMessage =
-        "Refreshing the page will remove you from the exam. Are you sure you want to leave?";
-      e.returnValue = confirmationMessage;
+  //     const confirmationMessage =
+  //       "Refreshing the page will remove you from the exam. Are you sure you want to leave?";
+  //     e.returnValue = confirmationMessage;
 
-      if (window.confirm(confirmationMessage)) {
-        // User clicked OK, navigate to "/"
-        navigate("/");
-      } else {
-        // User clicked Cancel, prevent page refresh
+  //     if (window.confirm(confirmationMessage)) {
+  //       // User clicked OK, navigate to "/"
+  //       navigate("/");
+  //     } else {
+  //       // User clicked Cancel, prevent page refresh
 
-        return false;
-      }
-    };
+  //       return false;
+  //     }
+  //   };
 
-    window.addEventListener("beforeunload", handleBeforeUnload);
+  //   window.addEventListener("beforeunload", handleBeforeUnload);
 
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, [navigate]); // Include history in the dependency array
+  //   return () => {
+  //     window.removeEventListener("beforeunload", handleBeforeUnload);
+  //   };
+  // }, [navigate]); // Include history in the dependency array
 
   // useEffect(() => {
   //   axios
@@ -692,7 +692,6 @@ const QuantTestPage = () => {
               <ClockCircleTwoTone />
               Remaining Time: {formatTimer(remainingTime)}
             </p>
-            <button className="btn border">Pause</button>
           </div>
         </div>
         <div className="container d-flex justify-content-around align-items-center p-2 border-bottom ">
@@ -727,7 +726,7 @@ const QuantTestPage = () => {
                     ? filteredQuestionsByLevel[0].main_question_stem
                     : ""}
                 </p>
-                <p>{0}</p>
+
                 {filteredQuestionsByLevel[0].img_url ? (
                   <img
                     className="mb-3"
@@ -789,7 +788,7 @@ const QuantTestPage = () => {
                   </Radio.Group>
                 </div>
 
-                <p className="mt-3">
+                {/* <p className="mt-3">
                   Level of question:
                   {filteredQuestionsByLevel[0].level
                     ? filteredQuestionsByLevel[0].level
@@ -807,7 +806,7 @@ const QuantTestPage = () => {
                   {filteredQuestionsByLevel[0].correct_answer
                     ? filteredQuestionsByLevel[0].correct_answer
                     : ""}
-                </p>
+                </p> */}
               </div>
             </div>
           ) : (

@@ -245,7 +245,6 @@ const IRTestPage = () => {
               <ClockCircleTwoTone />
               Remaining Time: {formatTimer(remainingTime)}
             </p>
-            <button className="btn border">Pause</button>
           </div>
         </div>
         <div className="container d-flex justify-content-around align-items-center p-2 border-bottom ">
@@ -358,10 +357,10 @@ const IRTestPage = () => {
                   </Radio.Group>
                 </div>
 
-                <p className="mt-3">
+                {/* <p className="mt-3">
                   Correct Answer:
                   {shuffledQuestions[currentQuestion].correct_answer}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

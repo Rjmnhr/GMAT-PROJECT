@@ -692,7 +692,6 @@ const VerbalTestPage = () => {
               <ClockCircleTwoTone />
               Remaining Time: {formatTimer(remainingTime)}
             </p>
-            <button className="btn border">Pause</button>
           </div>
         </div>
         <div className="container d-flex justify-content-around align-items-center p-2 border-bottom ">
@@ -801,10 +800,10 @@ const VerbalTestPage = () => {
                   {score.toFixed(2)}
                 </p> */}
 
-                <p className="mt-3">
+                {/* <p className="mt-3">
                   Correct Answer:
                   {filteredQuestionsByLevel[0].correct_answer}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
