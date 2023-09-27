@@ -16,7 +16,7 @@ const QuantTestPage = () => {
   const [isRunning, setIsRunning] = useState(false);
 
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
-  const [remainingTime, setRemainingTime] = useState(61 * 60); // 61 minutes in seconds
+  const [remainingTime, setRemainingTime] = useState(62 * 60); // 61 minutes in seconds
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
@@ -31,7 +31,36 @@ const QuantTestPage = () => {
   const [responseHistory, setResponseHistory] = useState([]);
   const [rightQuestions, setRightQuestions] = useState(0);
   const [wrongQuestions, setWrongQuestions] = useState(0);
+  const [shuffledQuestions, setShuffledQuestions] = useState(null);
+
   // const { questions, setQuestions } = useApplicationContext();
+
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      e.preventDefault();
+      e.returnValue =
+        "Refreshing the page will remove you from the exam. Are you sure you want to leave?";
+
+      const confirmationMessage =
+        "Refreshing the page will remove you from the exam. Are you sure you want to leave?";
+      e.returnValue = confirmationMessage;
+
+      if (window.confirm(confirmationMessage)) {
+        // User clicked OK, navigate to "/"
+        navigate("/");
+      } else {
+        // User clicked Cancel, prevent page refresh
+
+        return false;
+      }
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, [navigate]); // Include history in the dependency array
 
   // useEffect(() => {
   //   axios
@@ -74,25 +103,31 @@ const QuantTestPage = () => {
       question.Quant_category_1 === "Data Sufficiency"
   );
 
-  // function shuffleArray(array) {
-  //   let currentIndex = array.length,
-  //     randomIndex,
-  //     temporaryValue;
+  function shuffleArray(array) {
+    let currentIndex = array.length,
+      randomIndex,
+      temporaryValue;
 
-  //   // While there remain elements to shuffle...
-  //   while (currentIndex !== 0) {
-  //     // Pick a remaining element...
-  //     randomIndex = Math.floor(Math.random() * currentIndex);
-  //     currentIndex--;
+    // While there remain elements to shuffle...
+    while (currentIndex !== 0) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
 
-  //     // And swap it with the current element.
-  //     temporaryValue = array[currentIndex];
-  //     array[currentIndex] = array[randomIndex];
-  //     array[randomIndex] = temporaryValue;
-  //   }
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
 
-  //   return array;
-  // }
+    return array;
+  }
+
+  if (remainingTime === 0) {
+    alert("The Allowed time for this session is over");
+    sessionStorage.setItem("current_section", "verbal");
+    navigate("/test-break");
+  }
 
   // Function to track user inputs and update statistics
   const trackUserInput = (answer) => {
@@ -121,10 +156,16 @@ const QuantTestPage = () => {
     sessionStorage.setItem("quant_wrong_questions", wrongAnswer);
   };
 
-  const shuffledQuestions = [
+  const QuestionsArray = [
     ...quantWordProblems, // Select 16 Word Problems questions
     ...quantDataSufficiency, // Select 15 Data Sufficiency questions
   ];
+
+  useEffect(() => {
+    const shuffledArr = shuffleArray(QuestionsArray);
+    setShuffledQuestions(shuffledArr);
+    //eslint-disable-next-line
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -195,8 +236,7 @@ const QuantTestPage = () => {
   };
 
   const calculateScore = async (level) => {
-    const isCorrect =
-      value === filteredQuestionsByLevel[currentQuestion].correct_answer;
+    const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
 
     let scoreIncrement = 0;
 
@@ -481,24 +521,30 @@ const QuantTestPage = () => {
       resetStopwatch();
       setUserAnswers([...userAnswers, value]);
 
-      // Add the ID of the answered question to the attendedQuestionIds array
-      const answeredQuestionId = filteredQuestionsByLevel[currentQuestion].id;
-      setAttendedQuestionIds([...attendedQuestionIds, answeredQuestionId]);
-
       // Check if currentQuestion is within the valid range
       if (currentQuestion + 2 < filteredQuestionsByLevel.length) {
-        console.log("inside");
         setCurrentQuestion((prevQuestion) => prevQuestion + 1);
       } else {
+        console.log("inside");
         // Handle the case where there are no more questions for the current level
         setCurrentQuestion(0);
       }
+
+      // Add the ID of the answered question to the attendedQuestionIds array
+      const answeredQuestionId = filteredQuestionsByLevel[0].id;
+
+      const AttendedQuestionIdsArr = [
+        ...attendedQuestionIds,
+        answeredQuestionId,
+      ];
+
+      setAttendedQuestionIds([...attendedQuestionIds, answeredQuestionId]);
+
       setIsNextButtonDisabled(true); // Disable "Next" button again
       startStopwatch();
       setValue(null); // Reset the selected value
 
-      const isCorrect =
-        value === filteredQuestionsByLevel[currentQuestion].correct_answer;
+      const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
 
       trackUserInput(isCorrect);
 
@@ -541,12 +587,15 @@ const QuantTestPage = () => {
       }
 
       let mappedLevel = mappingTheLevels(nextQuestionLevel);
-
+      console.log(
+        "🚀 ~ file: index.js:550 ~ handleNext ~ attendedQuestionIds:",
+        attendedQuestionIds
+      );
       // Filter questions based on the currentQuestionLevel and attendedQuestionIds
       const filteredArray = shuffledQuestions.filter(
         (question) =>
           question.level === mappedLevel &&
-          !attendedQuestionIds.includes(question.id)
+          !AttendedQuestionIdsArr.includes(question.id)
       );
 
       const response = {
@@ -579,7 +628,7 @@ const QuantTestPage = () => {
         const filteredArray = shuffledQuestions.filter(
           (question) =>
             question.level === mappedLevel &&
-            !attendedQuestionIds.includes(question.id)
+            !AttendedQuestionIdsArr.includes(question.id)
         );
 
         setFilteredQuestionsByLevel(filteredArray);
@@ -592,8 +641,7 @@ const QuantTestPage = () => {
       setUserAnswers([...userAnswers, value]);
       calculateScore(currentQuestionLevel); // Calculate the score
 
-      const isCorrect =
-        value === filteredQuestionsByLevel[currentQuestion].correct_answer;
+      const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
 
       trackUserInput(isCorrect);
 
@@ -607,15 +655,16 @@ const QuantTestPage = () => {
   useEffect(() => {
     const mappedLevel = mappingTheLevels(currentQuestionLevel);
 
-    // Filter questions based on the currentQuestionLevel
-    const filteredArray = shuffledQuestions.filter(
-      (question) => question.level === mappedLevel
-    );
-
-    setFilteredQuestionsByLevel(filteredArray);
+    if (shuffledQuestions) {
+      // Filter questions based on the currentQuestionLevel
+      const filteredArray = shuffledQuestions.filter(
+        (question) => question.level === mappedLevel
+      );
+      setFilteredQuestionsByLevel(filteredArray);
+    }
 
     // eslint-disable-next-line
-  }, []);
+  }, [shuffledQuestions]);
 
   useEffect(() => {
     GMATScoreConversion(score);
@@ -674,15 +723,15 @@ const QuantTestPage = () => {
             <div className="qstn-box">
               <div className="container-fluid px-5 mt-5 text-start">
                 <p className="mb-3">
-                  {filteredQuestionsByLevel[currentQuestion].main_question_stem
-                    ? filteredQuestionsByLevel[currentQuestion]
-                        .main_question_stem
+                  {filteredQuestionsByLevel[0].main_question_stem
+                    ? filteredQuestionsByLevel[0].main_question_stem
                     : ""}
                 </p>
-                {filteredQuestionsByLevel[currentQuestion].img_url ? (
+                <p>{0}</p>
+                {filteredQuestionsByLevel[0].img_url ? (
                   <img
                     className="mb-3"
-                    src={filteredQuestionsByLevel[currentQuestion].img_url}
+                    src={filteredQuestionsByLevel[0].img_url}
                     alt="not available"
                   />
                 ) : (
@@ -690,74 +739,73 @@ const QuantTestPage = () => {
                 )}
 
                 <p>
-                  {filteredQuestionsByLevel[currentQuestion].subquestion1
-                    ? `1) ${filteredQuestionsByLevel[currentQuestion].subquestion1}`
+                  {filteredQuestionsByLevel[0].subquestion1
+                    ? `1) ${filteredQuestionsByLevel[0].subquestion1}`
                     : ""}
                 </p>
                 <p>
-                  {filteredQuestionsByLevel[currentQuestion].subquestion2
-                    ? `2) ${filteredQuestionsByLevel[currentQuestion].subquestion2}`
+                  {filteredQuestionsByLevel[0].subquestion2
+                    ? `2) ${filteredQuestionsByLevel[0].subquestion2}`
                     : ""}
                 </p>
                 <p>
-                  {filteredQuestionsByLevel[currentQuestion].subquestion3
-                    ? `3) ${filteredQuestionsByLevel[currentQuestion].subquestion3}`
+                  {filteredQuestionsByLevel[0].subquestion3
+                    ? `3) ${filteredQuestionsByLevel[0].subquestion3}`
                     : ""}
                 </p>
                 <div className="mt-2">
                   <Radio.Group onChange={onChange} value={value}>
                     <Space direction="vertical">
                       <Radio value={"A"}>
-                        {filteredQuestionsByLevel[currentQuestion].answer_1
-                          ? filteredQuestionsByLevel[currentQuestion].answer_1
+                        {filteredQuestionsByLevel[0].answer_1
+                          ? filteredQuestionsByLevel[0].answer_1
                           : ""}
                       </Radio>
 
                       <Radio value={"B"}>
-                        {filteredQuestionsByLevel[currentQuestion].answer_2
-                          ? filteredQuestionsByLevel[currentQuestion].answer_2
+                        {filteredQuestionsByLevel[0].answer_2
+                          ? filteredQuestionsByLevel[0].answer_2
                           : ""}
                       </Radio>
 
                       <Radio value={"C"}>
-                        {filteredQuestionsByLevel[currentQuestion].answer_3
-                          ? filteredQuestionsByLevel[currentQuestion].answer_3
+                        {filteredQuestionsByLevel[0].answer_3
+                          ? filteredQuestionsByLevel[0].answer_3
                           : ""}
                       </Radio>
 
                       <Radio value={"D"}>
-                        {filteredQuestionsByLevel[currentQuestion].answer_4
-                          ? filteredQuestionsByLevel[currentQuestion].answer_4
+                        {filteredQuestionsByLevel[0].answer_4
+                          ? filteredQuestionsByLevel[0].answer_4
                           : ""}
                       </Radio>
 
                       <Radio value={"E"}>
-                        {filteredQuestionsByLevel[currentQuestion].answer_5
-                          ? filteredQuestionsByLevel[currentQuestion].answer_5
+                        {filteredQuestionsByLevel[0].answer_5
+                          ? filteredQuestionsByLevel[0].answer_5
                           : ""}
                       </Radio>
                     </Space>
                   </Radio.Group>
                 </div>
 
-                {/* <p className="mt-3">
+                <p className="mt-3">
                   Level of question:
-                  {filteredQuestionsByLevel[currentQuestion].level
-                    ? filteredQuestionsByLevel[currentQuestion].level
+                  {filteredQuestionsByLevel[0].level
+                    ? filteredQuestionsByLevel[0].level
                     : ""}
                 </p>
                 <p className="mt-3">Level :{currentQuestionLevel}</p>
-           
 
                 <p className="mt-3">
                   Score:
                   {score.toFixed(2)}
-                </p> */}
+                </p>
 
                 <p className="mt-3">
                   Correct Answer:
-                  {filteredQuestionsByLevel[currentQuestion].correct_answer
-                    ? filteredQuestionsByLevel[currentQuestion].correct_answer
+                  {filteredQuestionsByLevel[0].correct_answer
+                    ? filteredQuestionsByLevel[0].correct_answer
                     : ""}
                 </p>
               </div>

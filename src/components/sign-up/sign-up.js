@@ -245,7 +245,10 @@ const SignUp = () => {
                             required
                           />
                           <label class="form-check-label" for="termsCheckbox">
-                            I accept the <a href="/">Terms and Conditions</a>
+                            I accept the{" "}
+                            <span className="text-primary">
+                              Terms and Conditions
+                            </span>
                           </label>
                           <span class="invalid-feedback">
                             Please accept our Terms and Conditions.

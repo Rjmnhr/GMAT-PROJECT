@@ -1,38 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NavBar from "../../components/nav-bar";
 import { useNavigate } from "react-router-dom";
-import AxiosInstance from "../axios";
 import SideBar from "../side-bar";
 const DashboardDetailed = () => {
   const navigate = useNavigate();
-  const user_id = localStorage.getItem("user_id");
-  const [userData, setUserData] = useState(null);
 
   const practice_exam_number = sessionStorage.getItem("practice_exam_section");
 
-  useEffect(() => {
-    const formData = new FormData();
-    formData.append("practice_exam", practice_exam_number);
-
-    formData.append("id", user_id);
-
-    AxiosInstance.post("/api/exams/get-data", formData, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then(async (response) => {
-        const resultData = await response.data;
-        console.log(
-          "🚀 ~ file: index.js:150 ~ .then ~ resultData:",
-          resultData
-        );
-        setUserData(resultData);
-        // setDataLinkedIn(resultData);
-      })
-      .catch((err) => console.log("error", err));
-    //eslint-disable-next-line
-  }, []);
+  let userData = null;
+  if (practice_exam_number === "1") {
+    userData = JSON.parse(sessionStorage.getItem("practice_1_data"));
+  } else if (practice_exam_number === "2") {
+    userData = JSON.parse(sessionStorage.getItem("practice_2_data"));
+  } else if (practice_exam_number === "2") {
+    userData = JSON.parse(sessionStorage.getItem("practice_3_data"));
+  }
 
   function formatTime(seconds) {
     const minutes = Math.floor(seconds / 60);

@@ -30,6 +30,8 @@ const VerbalTestPage = () => {
   const [responseHistory, setResponseHistory] = useState([]);
   const [rightQuestions, setRightQuestions] = useState(0);
   const [wrongQuestions, setWrongQuestions] = useState(0);
+  const [shuffledQuestions, setShuffledQuestions] = useState(null);
+
   useEffect(() => {
     let newThreshold = 0;
 
@@ -49,6 +51,33 @@ const VerbalTestPage = () => {
   const verbalQuestions = questions.filter(
     (question) => question.Category === "Verbal"
   );
+  const QuestionsArray = [...verbalQuestions];
+
+  useEffect(() => {
+    const shuffledArr = shuffleArray(QuestionsArray);
+    setShuffledQuestions(shuffledArr);
+    //eslint-disable-next-line
+  }, []);
+
+  function shuffleArray(array) {
+    let currentIndex = array.length,
+      randomIndex,
+      temporaryValue;
+
+    // While there remain elements to shuffle...
+    while (currentIndex !== 0) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
 
   function underlineMatchingText(question, answer) {
     const regex = new RegExp(answer, "g");
@@ -100,8 +129,6 @@ const VerbalTestPage = () => {
 
     sessionStorage.setItem("verbal_wrong_questions", wrongAnswer);
   };
-
-  const shuffledQuestions = [...verbalQuestions];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -183,9 +210,14 @@ const VerbalTestPage = () => {
     // Logic to determine the next question level based on tempSum
   };
 
+  if (remainingTime === 0) {
+    alert("The Allowed time for this session is over");
+    sessionStorage.setItem("current_section", "ir");
+    navigate("/test-break");
+  }
+
   const calculateScore = (level) => {
-    const isCorrect =
-      value === filteredQuestionsByLevel[currentQuestion].correct_answer;
+    const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
 
     let scoreIncrement = 0;
 
@@ -469,10 +501,6 @@ const VerbalTestPage = () => {
       resetStopwatch();
       setUserAnswers([...userAnswers, value]);
 
-      // Add the ID of the answered question to the attendedQuestionIds array
-      const answeredQuestionId = filteredQuestionsByLevel[currentQuestion].id;
-      setAttendedQuestionIds([...attendedQuestionIds, answeredQuestionId]);
-
       // Check if currentQuestion is within the valid range
       if (currentQuestion + 2 < filteredQuestionsByLevel.length) {
         console.log("inside");
@@ -481,12 +509,21 @@ const VerbalTestPage = () => {
         // Handle the case where there are no more questions for the current level
         setCurrentQuestion(0);
       }
+
+      // Add the ID of the answered question to the attendedQuestionIds array
+      const answeredQuestionId = filteredQuestionsByLevel[0].id;
+
+      const AttendedQuestionIdsArr = [
+        ...attendedQuestionIds,
+        answeredQuestionId,
+      ];
+      setAttendedQuestionIds([...attendedQuestionIds, answeredQuestionId]);
+
       setIsNextButtonDisabled(true); // Disable "Next" button again
       startStopwatch();
       setValue(null); // Reset the selected value
 
-      const isCorrect =
-        value === filteredQuestionsByLevel[currentQuestion].correct_answer;
+      const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
       trackUserInput(isCorrect);
       const newTempValues = [...tempValues, isCorrect ? 1 : 0].slice(1, 4);
 
@@ -532,7 +569,7 @@ const VerbalTestPage = () => {
       const filteredArray = shuffledQuestions.filter(
         (question) =>
           question.level === mappedLevel &&
-          !attendedQuestionIds.includes(question.id)
+          !AttendedQuestionIdsArr.includes(question.id)
       );
 
       const response = {
@@ -562,7 +599,7 @@ const VerbalTestPage = () => {
         const filteredArray = shuffledQuestions.filter(
           (question) =>
             question.level === mappedLevel &&
-            !attendedQuestionIds.includes(question.id)
+            !AttendedQuestionIdsArr.includes(question.id)
         );
 
         setFilteredQuestionsByLevel(filteredArray);
@@ -574,8 +611,7 @@ const VerbalTestPage = () => {
       setUserAnswers([...userAnswers, value]);
       calculateScore(currentQuestionLevel); // Calculate the score
 
-      const isCorrect =
-        value === filteredQuestionsByLevel[currentQuestion].correct_answer;
+      const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
       trackUserInput(isCorrect);
 
       sessionStorage.setItem("current_section", "ir");
@@ -598,30 +634,29 @@ const VerbalTestPage = () => {
 
   useEffect(() => {
     const mappedLevel = mappingTheLevels(currentQuestionLevel);
-    // Filter questions based on the currentQuestionLevel
-    const filteredArray = shuffledQuestions.filter(
-      (question) => question.level === mappedLevel
-    );
 
-    setFilteredQuestionsByLevel(filteredArray);
+    if (shuffledQuestions) {
+      // Filter questions based on the currentQuestionLevel
+      const filteredArray = shuffledQuestions.filter(
+        (question) => question.level === mappedLevel
+      );
+      setFilteredQuestionsByLevel(filteredArray);
+    }
 
     // eslint-disable-next-line
-  }, []);
+  }, [shuffledQuestions]);
 
   useEffect(() => {
     if (filteredQuestionsByLevel) {
-      if (
-        filteredQuestionsByLevel[currentQuestion].main_question_stem.length >
-        1000
-      ) {
+      if (filteredQuestionsByLevel[0].main_question_stem.length > 1000) {
         setIsSplitScreen(true);
       } else {
         setIsSplitScreen(false);
       }
 
       console.log(
-        "🚀 ~ file: index.js:320 ~ useEffect ~ filteredQuestionsByLevel[currentQuestion].main_question_stem.length:",
-        filteredQuestionsByLevel[currentQuestion].main_question_stem.length
+        "🚀 ~ file: index.js:320 ~ useEffect ~ filteredQuestionsByLevel[0].main_question_stem.length:",
+        filteredQuestionsByLevel[0].main_question_stem.length
       );
     }
 
@@ -631,7 +666,7 @@ const VerbalTestPage = () => {
   let questionStemWithUnderline = "";
 
   if (filteredQuestionsByLevel) {
-    const currentQuestionData = filteredQuestionsByLevel[currentQuestion];
+    const currentQuestionData = filteredQuestionsByLevel[0];
 
     questionStemWithUnderline = underlineMatchingText(
       currentQuestionData.main_question_stem,
@@ -713,41 +748,41 @@ const VerbalTestPage = () => {
                 style={{ width: `${isSplitScreen ? "50%" : ""} ` }}
               >
                 <p>
-                  {filteredQuestionsByLevel[currentQuestion].subquestion1
-                    ? `1) ${filteredQuestionsByLevel[currentQuestion].subquestion1}`
+                  {filteredQuestionsByLevel[0].subquestion1
+                    ? `1) ${filteredQuestionsByLevel[0].subquestion1}`
                     : ""}
                 </p>
                 <p>
-                  {filteredQuestionsByLevel[currentQuestion].subquestion2
-                    ? `2) ${filteredQuestionsByLevel[currentQuestion].subquestion2}`
+                  {filteredQuestionsByLevel[0].subquestion2
+                    ? `2) ${filteredQuestionsByLevel[0].subquestion2}`
                     : ""}
                 </p>
                 <p>
-                  {filteredQuestionsByLevel[currentQuestion].subquestion3
-                    ? `3) ${filteredQuestionsByLevel[currentQuestion].subquestion3}`
+                  {filteredQuestionsByLevel[0].subquestion3
+                    ? `3) ${filteredQuestionsByLevel[0].subquestion3}`
                     : ""}
                 </p>
                 <div className="mt-2">
                   <Radio.Group onChange={onChange} value={value}>
                     <Space direction="vertical">
                       <Radio value={"A"}>
-                        {filteredQuestionsByLevel[currentQuestion].answer_1}
+                        {filteredQuestionsByLevel[0].answer_1}
                       </Radio>
 
                       <Radio value={"B"}>
-                        {filteredQuestionsByLevel[currentQuestion].answer_2}
+                        {filteredQuestionsByLevel[0].answer_2}
                       </Radio>
 
                       <Radio value={"C"}>
-                        {filteredQuestionsByLevel[currentQuestion].answer_3}
+                        {filteredQuestionsByLevel[0].answer_3}
                       </Radio>
 
                       <Radio value={"D"}>
-                        {filteredQuestionsByLevel[currentQuestion].answer_4}
+                        {filteredQuestionsByLevel[0].answer_4}
                       </Radio>
 
                       <Radio value={"E"}>
-                        {filteredQuestionsByLevel[currentQuestion].answer_5}
+                        {filteredQuestionsByLevel[0].answer_5}
                       </Radio>
                     </Space>
                   </Radio.Group>
@@ -755,7 +790,7 @@ const VerbalTestPage = () => {
 
                 {/* <p className="mt-3">
                   Level of question:
-                  {filteredQuestionsByLevel[currentQuestion].level}
+                  {filteredQuestionsByLevel[0].level}
                 </p>
                 <p className="mt-3">Level :{currentQuestionLevel}</p>
 
@@ -768,7 +803,7 @@ const VerbalTestPage = () => {
 
                 <p className="mt-3">
                   Correct Answer:
-                  {filteredQuestionsByLevel[currentQuestion].correct_answer}
+                  {filteredQuestionsByLevel[0].correct_answer}
                 </p>
               </div>
             </div>

@@ -201,6 +201,7 @@ const ResultPage = () => {
               display: "grid",
               placeItems: "center",
               justifyItems: "center",
+              alignContent: "center",
             }}
           >
             <LoadingOutlined />

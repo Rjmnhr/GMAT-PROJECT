@@ -8,15 +8,49 @@ import VerbalTestPage from "./pages/verbal-test-page";
 import SectionDivider from "./components/section-divider";
 import OptionalBreak from "./components/optional-break";
 import IRTestPage from "./pages/IR_section";
-import GetAllQuestions from "./components/get-all-questions";
 import DashboardDetailed from "./components/detailed-dashboard";
-import HomePage from "./pages/home-page";
+
 import LoginPage from "./pages/login-page";
 import OtpVerification from "./pages/otp-verification";
 import AdminDashboard from "./components/admin-dashboard";
 import UserDataComponent from "./components/user-details";
 import UserDetailedDashboard from "./components/user-details/user-detailed-dashboard";
+import "./pages/home-page/style.css";
+
+const ConditionalComponent = () => {
+  return (
+    <>
+      <div
+        className="container-fluid img_container "
+        style={{
+          backgroundImage:
+            "url(https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695657433/pgsgfjhvitdmjl0pnbco.png)",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          height: "100vh",
+          transform: "translate3d(0px, 0px, 0px)",
+          display: "grid",
+          alignContent: "center",
+          justifyItems: "center",
+        }}
+      >
+        <img
+          src="https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695818576/ichnuzqxvbetqcymqti4.svg"
+          alt=""
+          width={250}
+          height={250}
+        />
+
+        <p style={{ color: "white" }}>
+          Please view this website on a web screen for the best experience.
+        </p>
+      </div>
+    </>
+  );
+};
 const AppRouter = () => {
+  const screenWidth = window.innerWidth;
+  const isMobile = screenWidth < 912; // Change this value to adjust the threshold
   return (
     <>
       <BrowserRouter>
@@ -26,7 +60,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  <HomePage />
+                  {isMobile ? <ConditionalComponent /> : <DashBoardComponent />}
                 </div>
               </>
             }
@@ -36,7 +70,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  <DashBoardComponent />
+                  {isMobile ? <ConditionalComponent /> : <DashBoardComponent />}
                 </div>
               </>
             }
@@ -46,7 +80,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  <QuantTestPage />
+                  {isMobile ? <ConditionalComponent /> : <QuantTestPage />}
                 </div>
               </>
             }
@@ -56,8 +90,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  <GetAllQuestions />
-                  <VerbalTestPage />
+                  {isMobile ? <ConditionalComponent /> : <VerbalTestPage />}
                 </div>
               </>
             }
@@ -67,7 +100,6 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  <GetAllQuestions />
                   <InstructionPage />
                 </div>
               </>
@@ -108,7 +140,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  <IRTestPage />
+                  {isMobile ? <ConditionalComponent /> : <IRTestPage />}
                 </div>
               </>
             }
@@ -118,7 +150,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  <DashboardDetailed />
+                  {isMobile ? <ConditionalComponent /> : <DashboardDetailed />}
                 </div>
               </>
             }
@@ -128,7 +160,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  <AdminDashboard />
+                  {isMobile ? <ConditionalComponent /> : <AdminDashboard />}
                 </div>
               </>
             }
@@ -168,7 +200,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  <UserDataComponent />
+                  {isMobile ? <ConditionalComponent /> : <UserDataComponent />}
                 </div>
               </>
             }
@@ -179,7 +211,32 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  <UserDetailedDashboard />
+                  {isMobile ? (
+                    <ConditionalComponent />
+                  ) : (
+                    <UserDetailedDashboard />
+                  )}
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="*"
+            element={
+              <>
+                <div
+                  style={{
+                    height: "100vh",
+                    display: "grid",
+                    alignContent: "center",
+                    justifyItems: "center",
+                  }}
+                >
+                  <h1>404 Error</h1>
+                  <h1>Page not found</h1>
+                  <a href="https://www.adefteducation.com/">
+                    <button className="btn border">Go Back</button>
+                  </a>
                 </div>
               </>
             }

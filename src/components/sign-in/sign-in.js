@@ -119,112 +119,118 @@ const SignIn = () => {
   return (
     <>
       {contextHolder}
+      <body
+        className="d-flex align-items-center min-h-100  "
+        style={{ transition: "all 0.3s ease", background: "none" }}
+      >
+        <main id="content" role="main" className="flex-grow-1 overflow-hidden">
+          <div className="container mt-3 mt-lg-0 mb-5 ">
+            <div className="mx-lg-auto" style={{ maxWidth: "55rem" }}>
+              <div className="d-flex justify-content-center align-items-center flex-column min-vh-lg-100">
+                <div className="position-relative">
+                  <div className="card card-shadow card-login">
+                    <div className="row">
+                      <div className="col-md-12">
+                        <div className="card-body">
+                          <form
+                            className="js-validate needs-validation"
+                            novalidate
+                            onSubmit={handleSubmit}
+                          >
+                            <div className="text-center">
+                              <div className="mb-5">
+                                <h4 className="card-title">
+                                  Login to Adeft Education
+                                </h4>
+                              </div>
+                            </div>
 
-      <div className="container mt-3 mt-lg-0 mb-5 ">
-        <div className="mx-lg-auto" style={{ maxWidth: "55rem" }}>
-          <div className="d-flex justify-content-center align-items-center flex-column min-vh-lg-100">
-            <div className="position-relative">
-              <div className="card card-shadow card-login">
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="card-body">
-                      <form
-                        className="js-validate needs-validation"
-                        novalidate
-                        onSubmit={handleSubmit}
-                      >
-                        <div className="text-center">
-                          <div className="mb-5">
-                            <h4 className="card-title">
-                              Login to Adeft Education
-                            </h4>
-                          </div>
-                        </div>
+                            <div className="mb-4">
+                              <input
+                                type="email"
+                                className="form-control form-control-lg"
+                                name="email"
+                                id="signinSrEmail"
+                                tabindex="1"
+                                placeholder="Email"
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                              />
+                              <span className="invalid-feedback">
+                                Please enter a valid email address.
+                              </span>
+                            </div>
 
-                        <div className="mb-4">
-                          <input
-                            type="email"
-                            className="form-control form-control-lg"
-                            name="email"
-                            id="signinSrEmail"
-                            tabindex="1"
-                            placeholder="Email"
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                          />
-                          <span className="invalid-feedback">
-                            Please enter a valid email address.
-                          </span>
-                        </div>
-
-                        <div className="mb-4">
-                          <div className="input-group-merge">
-                            <input
-                              type={passwordVisible ? "text" : "password"}
-                              className="js-toggle-password form-control form-control-lg"
-                              name="password"
-                              id="signupSrPassword"
-                              placeholder="Password"
-                              required
-                              data-hs-toggle-password-options='{
+                            <div className="mb-4">
+                              <div className="input-group-merge">
+                                <input
+                                  type={passwordVisible ? "text" : "password"}
+                                  className="js-toggle-password form-control form-control-lg"
+                                  name="password"
+                                  id="signupSrPassword"
+                                  placeholder="Password"
+                                  required
+                                  data-hs-toggle-password-options='{
                                    "target": "#changePassTarget",
                                    "defaultClass": "bi-eye-slash",
                                    "showClass": "bi-eye",
                                    "classChangeTarget": "#changePassIcon"
                                  }'
-                              onChange={(e) => setPassword(e.target.value)}
-                            />
-                            <p
-                              id="changePassTarget"
-                              className="input-group-append input-group-text "
-                              onClick={togglePasswordVisibility}
-                              style={{ cursor: "pointer" }}
-                            >
-                              <i id="changePassIcon" className="bi-eye"></i>
-                            </p>
+                                  onChange={(e) => setPassword(e.target.value)}
+                                />
+                                <p
+                                  id="changePassTarget"
+                                  className="input-group-append input-group-text "
+                                  onClick={togglePasswordVisibility}
+                                  style={{ cursor: "pointer" }}
+                                >
+                                  <i id="changePassIcon" className="bi-eye"></i>
+                                </p>
 
-                            <span className="invalid-feedback">
-                              Please enter a valid password.
-                            </span>
-                          </div>
-                        </div>
+                                <span className="invalid-feedback">
+                                  Please enter a valid password.
+                                </span>
+                              </div>
+                            </div>
 
-                        <div className="d-flex justify-content-end mb-4">
-                          <a
-                            className="form-label-link"
-                            href="/forgot-password"
-                          >
-                            Forgot Password?
-                          </a>
-                        </div>
+                            <div className="d-flex justify-content-end mb-4">
+                              <a
+                                className="form-label-link"
+                                href="/forgot-password"
+                              >
+                                Forgot Password?
+                              </a>
+                            </div>
 
-                        <div className="d-grid gap-4">
-                          <button
-                            type="submit"
-                            className="btn btn-primary btn-lg"
-                          >
-                            {isLoading ? <LoadingOutlined /> : "Sign in"}
-                          </button>
-                          <p className="card-text text-muted">
-                            Don't have an account yet?{" "}
-                            <p
-                              className="link"
-                              style={{ cursor: "pointer" }}
-                              onClick={handleSwitch}
-                            >
-                              Sign up here
-                            </p>
-                          </p>
+                            <div className="d-grid gap-4">
+                              <button
+                                type="submit"
+                                className="btn btn-primary btn-lg"
+                              >
+                                {isLoading ? <LoadingOutlined /> : "Sign in"}
+                              </button>
+                              <p className="card-text text-muted">
+                                Don't have an account yet?{" "}
+                                <p
+                                  className="link"
+                                  style={{ cursor: "pointer" }}
+                                  onClick={handleSwitch}
+                                >
+                                  Sign up here
+                                </p>
+                              </p>
+                            </div>
+                          </form>
                         </div>
-                      </form>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </main>
+      </body>
     </>
   );
 };

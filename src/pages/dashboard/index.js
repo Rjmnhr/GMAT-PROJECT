@@ -1,16 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../../components/nav-bar";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 import SideBar from "../../components/side-bar";
+import AxiosInstance from "../../components/axios";
 
 const DashBoardComponent = () => {
   const navigate = useNavigate();
+  const [practiceExam1, setPracticeExam1] = useState(null);
+  const [practiceExam2, setPracticeExam2] = useState(null);
+  const [practiceExam3, setPracticeExam3] = useState(null);
 
-  const practice_status_1 = localStorage.getItem("practice_status_1");
-  const practice_status_2 = localStorage.getItem("practice_status_2");
-  const practice_status_3 = localStorage.getItem("practice_status_3");
-
+  const user_id = localStorage.getItem("user_id");
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
 
@@ -18,6 +19,62 @@ const DashBoardComponent = () => {
       navigate("/login-app");
     }
   });
+
+  const fetchData = async (examNo) => {
+    try {
+      const response = await AxiosInstance.post("/api/exams/get-data", {
+        id: user_id,
+        practice_exam: examNo,
+      });
+
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      throw error; // Rethrow the error to handle it outside this function if needed
+    }
+  };
+
+  // In your component:
+
+  useEffect(() => {
+    const fetchPracticeData = async () => {
+      try {
+        const result1 = await fetchData("1");
+        setPracticeExam1(result1);
+        sessionStorage.setItem("practice_1_data", JSON.stringify(result1));
+
+        const result2 = await fetchData("2");
+        setPracticeExam2(result2);
+        sessionStorage.setItem("practice_2_data", JSON.stringify(result2));
+        const result3 = await fetchData("3");
+        setPracticeExam3(result3);
+        sessionStorage.setItem("practice_3_data", JSON.stringify(result3));
+      } catch (error) {
+        // Handle errors here if needed
+        console.error("Error fetching practice data:", error);
+      }
+    };
+
+    fetchPracticeData();
+
+    //eslint-disable-next-line
+  }, []);
+
+  const isPrcaticeOneDone = practiceExam1
+    ? practiceExam1.length > 0
+      ? true
+      : false
+    : false;
+  const isPrcaticeTwoDone = practiceExam2
+    ? practiceExam2.length > 0
+      ? true
+      : false
+    : false;
+  const isPrcaticeThreeDone = practiceExam3
+    ? practiceExam3.length > 0
+      ? true
+      : false
+    : false;
 
   return (
     <>
@@ -30,7 +87,7 @@ const DashBoardComponent = () => {
         >
           <div className="card w-100 pb-3" style={{ height: "50vh" }}>
             <div className="sub-content mt-3 ">
-              <h4>Practice Exams</h4>
+              <h4>GMAT Practice Exams</h4>
 
               <div className="container col-12 d-flex justify-content-around align-items-center border-bottom p-3 gap-3 ">
                 <p
@@ -87,7 +144,7 @@ const DashBoardComponent = () => {
                 </p> */}
                 <p style={{ width: "200px" }}>
                   {" "}
-                  {practice_status_1 ? practice_status_1 : "--"}
+                  {isPrcaticeOneDone ? "Completed" : "--"}
                 </p>
               </div>
               <div
@@ -112,7 +169,7 @@ const DashBoardComponent = () => {
                 </p> */}
                 <p style={{ width: "200px" }}>
                   {" "}
-                  {practice_status_2 ? practice_status_2 : "--"}
+                  {isPrcaticeTwoDone ? "Completed" : "--"}
                 </p>
               </div>
               <div
@@ -137,7 +194,7 @@ const DashBoardComponent = () => {
                 </p> */}
                 <p style={{ width: "200px" }}>
                   {" "}
-                  {practice_status_3 ? practice_status_3 : "--"}
+                  {isPrcaticeThreeDone ? "Completed" : "--"}
                 </p>
               </div>
             </div>

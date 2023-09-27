@@ -20,6 +20,7 @@ const IRTestPage = () => {
   const [isSplitScreen, setIsSplitScreen] = useState(true);
   const [rightQuestions, setRightQuestions] = useState(0);
   const [wrongQuestions, setWrongQuestions] = useState(0);
+  const [shuffledQuestions, setShuffledQuestions] = useState(null);
   const navigate = useNavigate();
 
   const trackUserInput = (answer) => {
@@ -53,8 +54,31 @@ const IRTestPage = () => {
     (question) => question.Category === "Integrated reasoning"
   );
 
-  const shuffledQuestions = [...IRQuestions];
+  useEffect(() => {
+    const shuffledArr = shuffleArray(IRQuestions);
+    setShuffledQuestions(shuffledArr);
+    //eslint-disable-next-line
+  }, []);
 
+  function shuffleArray(array) {
+    let currentIndex = array.length,
+      randomIndex,
+      temporaryValue;
+
+    // While there remain elements to shuffle...
+    while (currentIndex !== 0) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
   useEffect(() => {
     const timer = setInterval(() => {
       if (remainingTime > 0) {
@@ -168,7 +192,7 @@ const IRTestPage = () => {
       // Store the percentage score in session storage
       sessionStorage.setItem("ir_score", percentageScore.toFixed(2));
 
-      sessionStorage.setItem("current_section", "");
+      sessionStorage.removeItem("current_section");
       sessionStorage.setItem("time_remaining", remainingTime);
       navigate("/results");
       if (exam_no === "1") {
@@ -181,6 +205,12 @@ const IRTestPage = () => {
       // Handle the end of the test, e.g., show results
     }
   };
+
+  if (remainingTime === 0) {
+    alert("The Allowed time for this session is over");
+    sessionStorage.removeItem("current_section");
+    navigate("/results");
+  }
 
   useEffect(() => {
     if (shuffledQuestions) {
@@ -261,6 +291,7 @@ const IRTestPage = () => {
                 <p className="mb-3">
                   {shuffledQuestions[currentQuestion].main_question_stem}
                 </p>
+
                 <img src={shuffledQuestions[currentQuestion].img_url} alt="" />
               </div>
 
