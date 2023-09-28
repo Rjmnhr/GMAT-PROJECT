@@ -3,9 +3,10 @@ import { useState, useRef } from "react";
 
 import { useNavigate } from "react-router-dom";
 import { OtpVerificationPageStyled } from "./style";
-
+import { message } from "antd";
 import AxiosInstance from "../../components/axios";
 import { useApplicationContext } from "../../app-context";
+import { LoadingOutlined } from "@ant-design/icons";
 
 const OtpVerification = () => {
   const [warning, setWarning] = useState("");
@@ -18,6 +19,9 @@ const OtpVerification = () => {
   const first_name = localStorage.getItem("first_name");
   const last_name = localStorage.getItem("last_name");
   const password = localStorage.getItem("password");
+  const phone = localStorage.getItem("phone");
+  const [isLoading, setIsLoading] = useState(false);
+  const [messageApi, contextHolder] = message.useMessage();
 
   const { setIsSignIn } = useApplicationContext();
 
@@ -26,6 +30,7 @@ const OtpVerification = () => {
     localStorage.removeItem("first_name");
     localStorage.removeItem("last_name");
     localStorage.removeItem("password");
+    localStorage.removeItem("phone");
   };
 
   const handleInputChange = (index, event) => {
@@ -94,6 +99,13 @@ const OtpVerification = () => {
       });
   };
 
+  const error = (data) => {
+    messageApi.open({
+      type: "error",
+      content: data,
+    });
+  };
+
   const CreateProfile = () => {
     const formData = new FormData();
 
@@ -101,6 +113,7 @@ const OtpVerification = () => {
     formData.append("last_name", last_name);
     formData.append("email", email);
     formData.append("password", password);
+    formData.append("phone", phone);
 
     AxiosInstance.post("/api/user/signup", formData, {
       headers: {
@@ -110,9 +123,40 @@ const OtpVerification = () => {
       .then(async (response) => {
         const data = await response.data;
         setIsSignIn(false);
+        setIsLoading(false);
+
+        const accessToken = data.accessToken;
+        const id = data.id;
+
+        if (!accessToken) {
+          error("Registration failed");
+          navigate("/login");
+          return;
+        }
+
+        const userType = data.user_type;
+
+        localStorage.setItem("userType", userType);
+        localStorage.setItem("accessToken", accessToken);
+        localStorage.setItem("isLoggedIn", true);
+        localStorage.setItem("user_id", id);
+        localStorage.setItem("user_name", data.first_name);
+        localStorage.setItem("email", data.email);
+
+        if (userType === "admin") {
+          localStorage.setItem("isAdmin", "true");
+        } else {
+          localStorage.setItem("isAdmin", "false");
+        }
+
         console.log(data);
         clearLocalStorage();
-        navigate("/");
+
+        if (Location.pathname === "/login-app") {
+          navigate("/dashboard");
+        } else {
+          navigate("/");
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -123,6 +167,7 @@ const OtpVerification = () => {
 
   return (
     <>
+      {contextHolder}
       <OtpVerificationPageStyled>
         <div className="main-container">
           <div
@@ -179,7 +224,9 @@ const OtpVerification = () => {
 
                 <p style={{ color: "red" }}>{warning}</p>
                 <br />
-                <button type="submit">Next</button>
+                <button type="submit">
+                  {isLoading ? <LoadingOutlined /> : "NEXT"}
+                </button>
               </form>
             </div>
           </div>

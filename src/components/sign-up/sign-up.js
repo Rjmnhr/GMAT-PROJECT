@@ -12,6 +12,7 @@ import { useApplicationContext } from "../../app-context";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState(0);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
@@ -59,6 +60,7 @@ const SignUp = () => {
         localStorage.setItem("first_name", firstName);
         localStorage.setItem("last_name", lastName);
         localStorage.setItem("password", password);
+        localStorage.setItem("phone", phone);
         navigate("/otp-validation");
       })
       .catch((err) => console.log(err));
@@ -154,6 +156,22 @@ const SignUp = () => {
                           />
                           <span class="invalid-feedback">
                             Please enter a valid email address.
+                          </span>
+                        </div>
+                        <div class="mb-4">
+                          <input
+                            type="number"
+                            class="form-control form-control-lg"
+                            name="phone"
+                            id="signupSrphone"
+                            placeholder="Phone"
+                            minLength={10}
+                            min={10}
+                            required
+                            onChange={(e) => setPhone(e.target.value)}
+                          />
+                          <span class="invalid-feedback">
+                            Please enter a valid phone number.
                           </span>
                         </div>
 
