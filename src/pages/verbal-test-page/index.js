@@ -648,16 +648,14 @@ const VerbalTestPage = () => {
 
   useEffect(() => {
     if (filteredQuestionsByLevel) {
-      if (filteredQuestionsByLevel[0].main_question_stem.length > 1000) {
+      if (
+        filteredQuestionsByLevel[0].main_question_stem.length > 1000 ||
+        filteredQuestionsByLevel[0].img_url
+      ) {
         setIsSplitScreen(true);
       } else {
         setIsSplitScreen(false);
       }
-
-      console.log(
-        "🚀 ~ file: index.js:320 ~ useEffect ~ filteredQuestionsByLevel[0].main_question_stem.length:",
-        filteredQuestionsByLevel[0].main_question_stem.length
-      );
     }
 
     // eslint-disable-next-line
@@ -740,6 +738,7 @@ const VerbalTestPage = () => {
                     __html: questionStemWithUnderline,
                   }}
                 ></p>
+                <img src={filteredQuestionsByLevel[0].img_url} alt="" />
               </div>
 
               <div

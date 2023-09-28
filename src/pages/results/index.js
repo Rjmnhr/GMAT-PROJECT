@@ -16,8 +16,16 @@ const ResultPage = () => {
   const user_id = localStorage.getItem("user_id");
   const user_name = localStorage.getItem("user_name");
   const email = localStorage.getItem("email");
+  const [notQualified, setNotQualified] = useState(false);
+
   useEffect(() => {
-    if (!quant_score) return;
+    if (
+      quant_score < 27 ||
+      verbal_score < 27 ||
+      isNaN(verbal_score) ||
+      isNaN(quant_score)
+    )
+      return;
 
     const formData = new FormData();
     formData.append("quant_score", quant_score);
@@ -113,8 +121,6 @@ const ResultPage = () => {
   const storeData = (score) => {
     const formData = new FormData();
 
-    if (!quant_score) return;
-
     const total_time_spent =
       parseInt(quant_time_spend) +
       parseInt(verbal_time_spend) +
@@ -189,6 +195,19 @@ const ResultPage = () => {
       })
       .catch((err) => console.log("error", err));
   };
+  useEffect(() => {
+    if (
+      quant_score < 27 ||
+      verbal_score < 27 ||
+      isNaN(verbal_score) ||
+      isNaN(quant_score)
+    ) {
+      setIsLoading(false);
+      setNotQualified(true);
+      storeData(0);
+    }
+    //eslint-disable-next-line
+  }, []);
 
   return (
     <>
@@ -210,19 +229,61 @@ const ResultPage = () => {
         </>
       ) : (
         <>
-          <div>
-            <Result
-              status="success"
-              title={`Your GMAT Score: ${score}`}
-              subTitle={`Category: ${category}`}
-            />
-            <Progress type="circle" percent={parseFloat(scorePercentage)} />
-          </div>
+          {notQualified ? (
+            <div
+              className=" p-3"
+              style={{
+                display: "grid",
+                justifyItems: "center",
+                alignContent: "center",
+                placeItems: "center",
+              }}
+            >
+              <h1>GMAT Practice Exam Results</h1>
+              <p>
+                Unfortunately, you did not qualify for the GMAT practice exam.
+              </p>
+              <p>
+                Your score on the online practice exam was below the required
+                threshold for qualification.
+              </p>
+              <p>
+                We encourage you to continue your preparation and consider
+                additional study resources to improve your GMAT skills.
+              </p>
+              <p>
+                Don't be discouraged; many candidates improve their scores with
+                dedicated preparation. You can retake the practice exam once you
+                feel more prepared.
+              </p>
+              <p>
+                If you have any questions or need further assistance, please
+                don't hesitate to contact our support team.
+              </p>
+              <button
+                className="btn border mt-5 w-50 w-lg-25"
+                onClick={() => navigate("/")}
+              >
+                Go to Dashboard
+              </button>
+            </div>
+          ) : (
+            <>
+              <div>
+                <Result
+                  status="success"
+                  title={`Your GMAT Score: ${score}`}
+                  subTitle={`Category: ${category}`}
+                />
+                <Progress type="circle" percent={parseFloat(scorePercentage)} />
+              </div>
 
-          <p>Your Integrated Reasoning score : {ir_score}</p>
-          <button className="btn border mt-5" onClick={() => navigate("/")}>
-            Go to Dashboard
-          </button>
+              <p>Your Integrated Reasoning score : {ir_score}</p>
+              <button className="btn border mt-5" onClick={() => navigate("/")}>
+                Go to Dashboard
+              </button>
+            </>
+          )}
         </>
       )}
     </>
