@@ -3,7 +3,7 @@ import React from "react";
 const NavBar = () => {
   return (
     <header id="header" class="fixed-top">
-      <div class="container d-flex align-items-center">
+      <div class="container d-flex justify-content-between align-items-center">
         <h1 class="logo me-auto">
           <a href="/">
             Adeft<span>.</span>
@@ -17,30 +17,30 @@ const NavBar = () => {
         <nav class="nav-menu d-none d-lg-block">
           <ul>
             <li class="active">
-              <a href="#header">Home</a>
+              <a href="/#header">Home</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="/#about">About</a>
             </li>
             <li>
-              <a href="#services">Services</a>
-            </li>
-
-            <li>
-              <a href="#team">Team</a>
-            </li>
-            <li>
-              <a href="#faq">Frequently Asked Questions</a>
+              <a href="/#services">Services</a>
             </li>
 
             <li>
-              <a href="#contact">Contact</a>
+              <a href="/#team">Team</a>
             </li>
             <li>
+              <a href="/#faq">Frequently Asked Questions</a>
+            </li>
+
+            <li>
+              <a href="/#contact">Contact</a>
+            </li>
+            {/* <li>
               <a href="https://adeftconsulting.com.au/mba/login">
                 Login or Register
               </a>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>
