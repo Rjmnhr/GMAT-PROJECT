@@ -42,7 +42,10 @@ const DashboardDetailed = () => {
   return (
     <>
       <NavBar />
-      <div className="d-flex justify-content-center align-items-center">
+      <div
+        style={{ marginTop: "80px" }}
+        className="d-flex justify-content-center align-items-center"
+      >
         <SideBar />
         <div
           className="container col-10 p-5"

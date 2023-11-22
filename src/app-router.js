@@ -16,6 +16,8 @@ import AdminDashboard from "./components/admin-dashboard";
 import UserDataComponent from "./components/user-details";
 import UserDetailedDashboard from "./components/user-details/user-detailed-dashboard";
 import "./pages/home-page/style.css";
+import HomePage from "./pages/home-page";
+import ProfilerPage from "./pages/profiler-page";
 
 const ConditionalComponent = () => {
   return (
@@ -59,8 +61,16 @@ const AppRouter = () => {
             path="/"
             element={
               <>
+                <div>{isMobile ? <ConditionalComponent /> : <HomePage />}</div>
+              </>
+            }
+          />
+          <Route
+            path="/profiler"
+            element={
+              <>
                 <div>
-                  {isMobile ? <ConditionalComponent /> : <DashBoardComponent />}
+                  {isMobile ? <ConditionalComponent /> : <ProfilerPage />}
                 </div>
               </>
             }

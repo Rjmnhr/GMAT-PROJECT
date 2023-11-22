@@ -10,7 +10,7 @@ const SideBar = () => {
       <SideBarStyled>
         <div
           className="side-bar container-fluid"
-          style={{ background: "#111d2c", height: "100vh", padding: "0" }}
+          style={{ background: "black", height: "100vh", padding: "0" }}
         >
           <div className="pt-3 px-0 container-fluid ">
             <div className=" border-bottom button  container-fluid">

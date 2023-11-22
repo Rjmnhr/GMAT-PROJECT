@@ -718,7 +718,7 @@ const VerbalTestPage = () => {
         {filteredQuestionsByLevel ? (
           <div className="qstn-box">
             <div
-              className={`container-fluid px-5 mt-5 text-start ${
+              className={`container-fluid px-5 mt-5 text-left ${
                 isSplitScreen ? "d-flex" : "d-block"
               }   justify-content-center align-items-start`}
             >

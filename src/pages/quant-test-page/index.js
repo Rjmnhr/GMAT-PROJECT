@@ -587,10 +587,7 @@ const QuantTestPage = () => {
       }
 
       let mappedLevel = mappingTheLevels(nextQuestionLevel);
-      console.log(
-        "🚀 ~ file: index.js:550 ~ handleNext ~ attendedQuestionIds:",
-        attendedQuestionIds
-      );
+
       // Filter questions based on the currentQuestionLevel and attendedQuestionIds
       const filteredArray = shuffledQuestions.filter(
         (question) =>
@@ -685,11 +682,15 @@ const QuantTestPage = () => {
           </div>
           <div className=" d-flex justify-content-between align-items-center gap-3">
             <p className="m-0 p-0 d-flex justify-content-between align-items-center gap-1">
-              <ClockCircleTwoTone /> This question: {formatTime(elapsedTime)}
+              <ClockCircleTwoTone style={{ marginRight: "5px" }} /> This
+              question: {formatTime(elapsedTime)}
             </p>
-            <p className="m-0 p-0 d-flex justify-content-between align-items-center gap-1">
+            <p
+              style={{ marginLeft: "8px" }}
+              className="  d-flex justify-content-between align-items-center gap-1"
+            >
               {" "}
-              <ClockCircleTwoTone />
+              <ClockCircleTwoTone style={{ marginRight: "5px" }} />
               Remaining Time: {formatTimer(remainingTime)}
             </p>
           </div>
@@ -720,7 +721,7 @@ const QuantTestPage = () => {
         {filteredQuestionsByLevel ? (
           filteredQuestionsByLevel.length > 0 ? (
             <div className="qstn-box">
-              <div className="container-fluid px-5 mt-5 text-start">
+              <div className="container-fluid px-5 mt-5 text-left">
                 <p className="mb-3">
                   {filteredQuestionsByLevel[0].main_question_stem
                     ? filteredQuestionsByLevel[0].main_question_stem

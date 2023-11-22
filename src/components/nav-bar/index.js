@@ -1,52 +1,50 @@
-import { UserOutlined } from "@ant-design/icons";
 import React from "react";
-import { Avatar } from "antd";
-import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
-  const navigate = useNavigate();
-  const user_name = localStorage.getItem("user_name");
-
-  const handleLogOut = () => {
-    navigate("https://www.adefteducation.com");
-    localStorage.setItem("accessToken", "");
-    localStorage.setItem("isLoggedIn", false);
-  };
   return (
-    <div className="container-fluid  d-flex justify-content-between align-items-center border-bottom">
-      <div className="d-flex justify-content-between align-items-center">
-        <div className="d-flex align-items-center ">
-          <img
-            src="https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695818576/ichnuzqxvbetqcymqti4.svg"
-            alt=""
-            width={60}
-            height={60}
-          />
-          <p
-            className="fs-3 pb-1"
-            onClick={() => navigate("https://www.adefteducation.com")}
-          >
-            ADEFT EDUCATION
-          </p>
-        </div>
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+        <h1 class="logo me-auto">
+          <a href="/">
+            Adeft<span>.</span>
+          </a>
+        </h1>
 
-        {/* <button className="btn border">Dashboard</button> */}
-      </div>
+        <a href="/" class="logo me-auto">
+          <img src="assets/img/logo.png" alt="" />
+        </a>
 
-      <div className="d-flex align-items-center gap-2">
-        <Avatar
-          style={{ backgroundColor: "#87d068" }}
-          icon={<UserOutlined />}
-        />
-        <p style={{ fontWeight: "bold", cursor: "pointer" }}>{user_name}</p>
-        <p
-          style={{ marginLeft: "5px", fontWeight: "bold", cursor: "pointer" }}
-          onClick={handleLogOut}
-        >
-          Log out
-        </p>
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active">
+              <a href="#header">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+
+            <li>
+              <a href="#team">Team</a>
+            </li>
+            <li>
+              <a href="#faq">Frequently Asked Questions</a>
+            </li>
+
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="https://adeftconsulting.com.au/mba/login">
+                Login or Register
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 };
 

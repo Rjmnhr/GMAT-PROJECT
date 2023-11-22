@@ -12,13 +12,6 @@ const DashBoardComponent = () => {
   const [practiceExam3, setPracticeExam3] = useState(null);
 
   const user_id = localStorage.getItem("user_id");
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-
-    if (isLoggedIn !== "true") {
-      navigate("/login-app");
-    }
-  });
 
   const fetchData = async (examNo) => {
     try {
@@ -79,7 +72,10 @@ const DashBoardComponent = () => {
   return (
     <>
       <NavBar />
-      <div className="d-flex justify-content-center align-items-center">
+      <div
+        style={{ marginTop: "80px" }}
+        className="d-flex justify-content-center align-items-center"
+      >
         <SideBar />
         <div
           className="container col-10 p-5"
