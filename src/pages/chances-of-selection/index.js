@@ -1,42 +1,106 @@
-// import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../../components/nav-bar";
 import { ChancesOfSelectionStyled } from "./style";
-// import AxiosInstance from "../../components/axios";
+import AxiosInstance from "../../components/axios";
 
 const ChancesOfSelection = () => {
-  // const storedBasicDetails = JSON.parse(
-  //   sessionStorage.getItem("basic-details")
-  // );
-  // const storedGraduate = JSON.parse(sessionStorage.getItem("graduate"));
-  // // const storedExperience = JSON.parse(sessionStorage.getItem("experience"))
-  // // const storedService = JSON.parse(sessionStorage.getItem("service"))
-  // // const storedHobbies = JSON.parse(sessionStorage.getItem("hobbies"))
-  // // State variable to hold the data array
+  const storedBasicDetails = JSON.parse(
+    sessionStorage.getItem("basic-details")
+  );
+  const storedGraduate = JSON.parse(sessionStorage.getItem("graduate"));
+  // const storedExperience = JSON.parse(sessionStorage.getItem("experience"))
+  const storedService = JSON.parse(sessionStorage.getItem("service"));
+  // const storedHobbies = JSON.parse(sessionStorage.getItem("hobbies"))
+  // State variable to hold the data array
+  const [data, setData] = useState([]);
 
-  // //  const [data, setData] = useState([]);
+  // Percentage values for GMAT ranges
+  const gmatPercentageValues = {
+    ">=750": 45,
+    ">=720": 35,
+    ">=700": 25,
+    ">=680": 15,
+    ">=650": 10,
+    ">=620": 5,
+    "<620": 5,
+  };
 
-  // // Percentage values for GMAT ranges
-  // const gmatPercentageValues = {
-  //   ">=750": 45,
-  //   ">=720": 35,
-  //   ">=700": 25,
-  //   ">=680": 15,
-  //   ">=650": 10,
-  //   ">=620": 5,
-  //   "<620": 5,
-  // };
+  // Function to calculate individual value for GMAT
+  const calculateGMATIndividualValue = (userGMAT) => {
+    // Get the percentage value for the user's GMAT range
+    const value = gmatPercentageValues[userGMAT];
 
-  // // Function to calculate individual value for GMAT
-  // const calculateGMATIndividualValue = (userGMAT) => {
-  //   // Get the percentage value for the user's GMAT range
-  //   const value = gmatPercentageValues[userGMAT];
-  //   const percentageValue = value / 45;
+    const percentageValue = value / 45;
 
-  //   // If the GMAT range is not found, default to 0
-  //   return percentageValue || 0;
-  // };
+    // If the GMAT range is not found, default to 0
+    return percentageValue || 0;
+  };
 
-  // const calculateGraduateIndividualValue = (valueObject) => {
+  const calculateGraduateIndividualValue = (valueObject) => {
+    const valueMappingsCollegeType = {
+      premier: 4,
+      selective: 3,
+      recognized: 2,
+      new: 1,
+    };
+
+    const valueMappingsPerformance = {
+      top10: 3,
+      top30: 2.5,
+      "Top 30% of your class (Credit)": 2,
+      average: 1.5,
+      bottom50: 1,
+    };
+
+    const CollegeValue = valueMappingsCollegeType[valueObject.collegeType];
+    const PerformanceValue =
+      valueMappingsPerformance[valueObject.yourPerformance];
+
+    const value = CollegeValue + PerformanceValue;
+
+    const graduateValue = value / 12;
+    // If the GMAT range is not found, default to 0
+    return graduateValue || 0;
+  };
+
+  const calculateServiceIndividualValue = (valueObject) => {
+    const valueMappingsActivityNature = {
+      international: 2,
+      national: 1,
+      stateWide: 0.5,
+      localised: 0.25,
+    };
+
+    const valueMappingContribution = {
+      leading: 5,
+      regular: 4,
+      sometimes: 2,
+      rarely: 1,
+    };
+
+    const valueMappingInvolvement = {
+      "<1": 0.5,
+      "<2": 1,
+      "<3": 3,
+      "<5": 4,
+      ">=5": 5,
+    };
+
+    const activityValue =
+      valueMappingsActivityNature[valueObject.natureOfActivity];
+    const contributionValue =
+      valueMappingContribution[valueObject.levelOfContribution];
+    const involvementValue =
+      valueMappingInvolvement[valueObject.yearsOfInvolvement];
+
+    const value = activityValue + contributionValue + involvementValue;
+
+    const serviceValue = value / 12;
+    // If the GMAT range is not found, default to 0
+    return serviceValue || 0;
+  };
+
+  // const calculateExperienceIndividualValue = (valueObject) => {
   //   const valueMappingsCollegeType = {
   //     premier: 4,
   //     selective: 3,
@@ -62,65 +126,85 @@ const ChancesOfSelection = () => {
   //   // If the GMAT range is not found, default to 0
   //   return graduateValue || 0;
   // };
+  const gmatIndividualValue = calculateGMATIndividualValue(
+    storedBasicDetails.gmat
+  );
 
-  // const gmatIndividualValue = calculateGMATIndividualValue(
-  //   storedBasicDetails.gmat
-  // );
-  // console.log(
-  //   "🚀 ~ file: index.js:66 ~ ChancesOfSelection ~ gmatIndividualValue:",
-  //   gmatIndividualValue
-  // );
-  // const graduateIndividualValue =
-  //   calculateGraduateIndividualValue(storedGraduate);
-  // console.log(
-  //   "🚀 ~ file: index.js:68 ~ ChancesOfSelection ~ graduateIndividualValue:",
-  //   graduateIndividualValue
-  // );
+  const graduateIndividualValue =
+    calculateGraduateIndividualValue(storedGraduate);
+
+  const serviceIndividualValue = calculateServiceIndividualValue(storedService);
+  // const experienceIndividualValue =
+  // calculateExperienceIndividualValue(storedExperience);
+
   // Example array of factor values
-  // const factorValues = [
-  //   gmatIndividualValue,
-  //   graduateIndividualValue , 0.2,0.8,0.1,0.36,0.41
-  // ];
+  const factorValues = [
+    gmatIndividualValue,
+    graduateIndividualValue,
+    0.2,
+    0.8,
+    0.1,
+    serviceIndividualValue,
+    0.41,
+  ];
 
   // Sample factor names for creating the 'data' array
-  //  const factorNames = ['GMAT', 'Undergraduate', 'Work experience','Leadership experience','Commercial experience','Extra-curricular','Hobbies' ];
+  const factorNames = [
+    "GMAT",
+    "Undergraduate",
+    "Work experience",
+    "Leadership experience",
+    "Commercial experience",
+    "Extra-curricular",
+    "Hobbies",
+  ];
 
-  //  useEffect(() => {
-  //    // Function to fetch data for a single factor
-  //    const fetchDataForFactor = async (factorValue) => {
-  //      try {
-  //        const response = await AxiosInstance.post('/api/profiler/individual', {
-  //          score: factorValue,
-  //        });
-  //        return response.data;
-  //      } catch (error) {
-  //        console.error(`Error fetching data for factor ${factorValue}:`, error);
-  //        return null;
-  //      }
-  //    };
+  useEffect(() => {
+    // Function to fetch data for a single factor
+    const fetchDataForFactor = async (factorValue) => {
+      try {
+        const response = await AxiosInstance.post("/api/profiler/individual", {
+          score: factorValue,
+        });
+        // Exclude the value associated with the key 'score'
+        return response.data;
+      } catch (error) {
+        console.error(`Error fetching data for factor ${factorValue}:`, error);
+        return null;
+      }
+    };
 
-  //    // Fetch data for all factors in parallel
-  //    const fetchResponses = async () => {
-  //      const responses = await Promise.all(factorValues.map(fetchDataForFactor));
-  //      // Filter out null responses (failed API calls)
-  //      const validResponses = responses.filter((response) => response !== null);
-  //      console.log("🚀 ~ file: index.js:111 ~ fetchResponses ~ validResponses:", validResponses)
+    // Fetch data for all factors in parallel
+    const fetchResponses = async () => {
+      const responses = await Promise.all(factorValues.map(fetchDataForFactor));
+      // Filter out null responses (failed API calls)
+      const validResponses = responses.filter((response) => response !== null);
 
-  //      // Update the 'data' array based on API responses
-  //      const updatedData = validResponses.map((response, index) => ({
-  //        factor: factorNames[index],
-  //        values: Object.keys(response).map((key) => response[key]),
-  //      }));
-  //      console.log("🚀 ~ file: index.js:117 ~ updatedData ~ updatedData:", updatedData)
+      // Create a new 2D array of objects without the "score" key-value pair
+      const newArray = validResponses.map((innerArray) => {
+        return innerArray.map((obj) => {
+          // Destructure the object to get a copy without the "Score" key
+          const { Score, ...newObj } = obj;
+          return newObj;
+        });
+      });
 
-  //      // Set the updated 'data' array in the state
-  //      setData(updatedData);
-  //    };
+      // Update the 'data' array based on API responses
+      const updatedData = newArray.map((response, index) => ({
+        factor: factorNames[index],
+        values: response.map((obj) => Object.values(obj))[0],
+      }));
 
-  //    // Call the function to fetch data
-  //    fetchResponses();
-  //  }, []); // Ensure useEffect runs when factorValues change
-  // // Function to determine the background color based on the value
+      // Set the updated 'data' array in the state
+      setData(updatedData);
+    };
+
+    // Call the function to fetch data
+    fetchResponses();
+    //eslint-disable-next-line
+  }, []); // Ensure useEffect runs when factorValues change
+
+  // Function to determine the background color based on the value
   const getColor = (value) => {
     if (value < 0.3) {
       return "#f74a64"; // Light red for values less than 0.3
@@ -131,8 +215,8 @@ const ChancesOfSelection = () => {
     }
   };
 
-  // Dummy data for illustration (replace with your actual data)
-  const data = [
+  // // Dummy data for illustration (replace with your actual data)
+  const demoData = [
     { factor: "GMAT", values: [0.2, 0.4, 0.6, 0.7, 0.5, 0.2] },
     { factor: "Undergraduate", values: [0.3, 0.2, 0.5, 0.6, 0.4, 0.7] },
     { factor: "Work experience", values: [0.4, 0.5, 0.2, 0.7, 0.6, 0.3] },
@@ -143,7 +227,7 @@ const ChancesOfSelection = () => {
   ];
 
   // Calculate total row values
-  const totalValues = data[0].values.map((_, index) =>
+  const totalValues = demoData[0].values.map((_, index) =>
     data.reduce((sum, factor) => sum + factor.values[index], 0)
   );
 

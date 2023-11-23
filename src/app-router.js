@@ -62,7 +62,7 @@ const AppRouter = () => {
             path="/"
             element={
               <>
-                <div>{isMobile ? <ConditionalComponent /> : <HomePage />}</div>
+                <HomePage />
               </>
             }
           />
@@ -71,7 +71,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  {isMobile ? <ConditionalComponent /> : <ProfilerPage />}
+                  <ProfilerPage />
                 </div>
               </>
             }
@@ -81,7 +81,7 @@ const AppRouter = () => {
             element={
               <>
                 <div>
-                  {isMobile ? <ConditionalComponent /> : <ChancesOfSelection />}
+                  <ChancesOfSelection />
                 </div>
               </>
             }
