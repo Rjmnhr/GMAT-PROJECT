@@ -40,11 +40,11 @@ const NavBar = () => {
             <li>
               <a href="/#contact">Contact</a>
             </li>
-            {/* <li>
-              <a href="https://adeftconsulting.com.au/mba/login">
-                Login or Register
+            <li>
+              <a href="/login-app">
+                Login
               </a>
-            </li> */}
+            </li> 
           </ul>
         </nav>
       </div>
