@@ -2,7 +2,11 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <header id="header" class="fixed-top">
+    <header
+      style={{ boxShadow: "0px 2px 15px rgba(0, 0, 0, 0.1)" }}
+      id="header"
+      className="fixed-top"
+    >
       <div class="container d-flex justify-content-between align-items-center">
         <h1 class="logo me-auto">
           <a href="/">

@@ -18,6 +18,7 @@ import UserDetailedDashboard from "./components/user-details/user-detailed-dashb
 import "./pages/home-page/style.css";
 import HomePage from "./pages/home-page";
 import ProfilerPage from "./pages/profiler-page";
+import ChancesOfSelection from "./pages/chances-of-selection";
 
 const ConditionalComponent = () => {
   return (
@@ -71,6 +72,16 @@ const AppRouter = () => {
               <>
                 <div>
                   {isMobile ? <ConditionalComponent /> : <ProfilerPage />}
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/selection-chance"
+            element={
+              <>
+                <div>
+                  {isMobile ? <ConditionalComponent /> : <ChancesOfSelection />}
                 </div>
               </>
             }
