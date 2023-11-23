@@ -12,13 +12,7 @@ const DashBoardComponent = () => {
   const [practiceExam3, setPracticeExam3] = useState(null);
 
   const user_id = localStorage.getItem("user_id");
-  useEffect(() => {
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
 
-    if (isLoggedIn !== "true") {
-      navigate("/login-app");
-    }
-  });
   const fetchData = async (examNo) => {
     try {
       const response = await AxiosInstance.post("/api/exams/get-data", {
