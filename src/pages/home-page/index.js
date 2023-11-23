@@ -105,6 +105,11 @@ const HomePage = () => {
                   <a href="#contact">Contact</a>
                 </ScrollLink>
               </li>
+                      <li>
+              <a href="/login">
+                Login
+              </a>
+            </li> 
             </ul>
           </nav>
         </div>
