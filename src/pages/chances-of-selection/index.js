@@ -4,78 +4,78 @@ import { ChancesOfSelectionStyled } from "./style";
 // import AxiosInstance from "../../components/axios";
 
 const ChancesOfSelection = () => {
-  const storedBasicDetails = JSON.parse(
-    sessionStorage.getItem("basic-details")
-  );
-  const storedGraduate = JSON.parse(sessionStorage.getItem("graduate"));
-  // const storedExperience = JSON.parse(sessionStorage.getItem("experience"))
-  // const storedService = JSON.parse(sessionStorage.getItem("service"))
-  // const storedHobbies = JSON.parse(sessionStorage.getItem("hobbies"))
-  // State variable to hold the data array
+  // const storedBasicDetails = JSON.parse(
+  //   sessionStorage.getItem("basic-details")
+  // );
+  // const storedGraduate = JSON.parse(sessionStorage.getItem("graduate"));
+  // // const storedExperience = JSON.parse(sessionStorage.getItem("experience"))
+  // // const storedService = JSON.parse(sessionStorage.getItem("service"))
+  // // const storedHobbies = JSON.parse(sessionStorage.getItem("hobbies"))
+  // // State variable to hold the data array
 
-  //  const [data, setData] = useState([]);
+  // //  const [data, setData] = useState([]);
 
-  // Percentage values for GMAT ranges
-  const gmatPercentageValues = {
-    ">=750": 45,
-    ">=720": 35,
-    ">=700": 25,
-    ">=680": 15,
-    ">=650": 10,
-    ">=620": 5,
-    "<620": 5,
-  };
+  // // Percentage values for GMAT ranges
+  // const gmatPercentageValues = {
+  //   ">=750": 45,
+  //   ">=720": 35,
+  //   ">=700": 25,
+  //   ">=680": 15,
+  //   ">=650": 10,
+  //   ">=620": 5,
+  //   "<620": 5,
+  // };
 
-  // Function to calculate individual value for GMAT
-  const calculateGMATIndividualValue = (userGMAT) => {
-    // Get the percentage value for the user's GMAT range
-    const value = gmatPercentageValues[userGMAT];
-    const percentageValue = value / 45;
+  // // Function to calculate individual value for GMAT
+  // const calculateGMATIndividualValue = (userGMAT) => {
+  //   // Get the percentage value for the user's GMAT range
+  //   const value = gmatPercentageValues[userGMAT];
+  //   const percentageValue = value / 45;
 
-    // If the GMAT range is not found, default to 0
-    return percentageValue || 0;
-  };
+  //   // If the GMAT range is not found, default to 0
+  //   return percentageValue || 0;
+  // };
 
-  const calculateGraduateIndividualValue = (valueObject) => {
-    const valueMappingsCollegeType = {
-      premier: 4,
-      selective: 3,
-      recognized: 2,
-      new: 1,
-    };
+  // const calculateGraduateIndividualValue = (valueObject) => {
+  //   const valueMappingsCollegeType = {
+  //     premier: 4,
+  //     selective: 3,
+  //     recognized: 2,
+  //     new: 1,
+  //   };
 
-    const valueMappingsPerformance = {
-      top10: 3,
-      top30: 2.5,
-      "Top 30% of your class (Credit)": 2,
-      average: 1.5,
-      bottom50: 1,
-    };
+  //   const valueMappingsPerformance = {
+  //     top10: 3,
+  //     top30: 2.5,
+  //     "Top 30% of your class (Credit)": 2,
+  //     average: 1.5,
+  //     bottom50: 1,
+  //   };
 
-    const CollegeValue = valueMappingsCollegeType[valueObject.collegeType];
-    const PerformanceValue =
-      valueMappingsPerformance[valueObject.yourPerformance];
+  //   const CollegeValue = valueMappingsCollegeType[valueObject.collegeType];
+  //   const PerformanceValue =
+  //     valueMappingsPerformance[valueObject.yourPerformance];
 
-    const value = CollegeValue + PerformanceValue;
+  //   const value = CollegeValue + PerformanceValue;
 
-    const graduateValue = value / 12;
-    // If the GMAT range is not found, default to 0
-    return graduateValue || 0;
-  };
+  //   const graduateValue = value / 12;
+  //   // If the GMAT range is not found, default to 0
+  //   return graduateValue || 0;
+  // };
 
-  const gmatIndividualValue = calculateGMATIndividualValue(
-    storedBasicDetails.gmat
-  );
-  console.log(
-    "🚀 ~ file: index.js:66 ~ ChancesOfSelection ~ gmatIndividualValue:",
-    gmatIndividualValue
-  );
-  const graduateIndividualValue =
-    calculateGraduateIndividualValue(storedGraduate);
-  console.log(
-    "🚀 ~ file: index.js:68 ~ ChancesOfSelection ~ graduateIndividualValue:",
-    graduateIndividualValue
-  );
+  // const gmatIndividualValue = calculateGMATIndividualValue(
+  //   storedBasicDetails.gmat
+  // );
+  // console.log(
+  //   "🚀 ~ file: index.js:66 ~ ChancesOfSelection ~ gmatIndividualValue:",
+  //   gmatIndividualValue
+  // );
+  // const graduateIndividualValue =
+  //   calculateGraduateIndividualValue(storedGraduate);
+  // console.log(
+  //   "🚀 ~ file: index.js:68 ~ ChancesOfSelection ~ graduateIndividualValue:",
+  //   graduateIndividualValue
+  // );
   // Example array of factor values
   // const factorValues = [
   //   gmatIndividualValue,
