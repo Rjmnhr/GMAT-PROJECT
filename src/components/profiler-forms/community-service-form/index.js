@@ -1,25 +1,45 @@
 // CommunityServiceForm.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Form, Select } from "antd";
 import { BasicDetailsFormStyled } from "../basic-details/style";
 
-const CommunityServiceForm = ({ formRef, onSubmit }) => {
+const CommunityServiceForm = ({
+  formRef,
+  onSubmit,
+  onChange,
+  onSaveChanges,
+}) => {
   const [form] = Form.useForm();
 
   const { Option } = Select;
 
-  const onFinish = (values) => {
-    console.log("Received values:", values);
-    sessionStorage.setItem("service", JSON.stringify(values));
+  useEffect(() => {
     formRef.current = form;
-    onSubmit();
+  }, [form, formRef]);
+
+  const handleFormChange = (changedValues, allValues) => {
+    if (onChange) {
+      onChange(changedValues, allValues);
+    }
   };
 
+  const handleSave = (values) => {
+    if (onSaveChanges) {
+      onSaveChanges(values);
+    }
+    if (onSubmit) {
+      onSubmit(values);
+    }
+
+    // Store values in sessionStorage
+    sessionStorage.setItem("service", JSON.stringify(values));
+  };
   return (
     <>
       <BasicDetailsFormStyled>
         <Form
-          onFinish={onFinish}
+          onValuesChange={handleFormChange}
+          onFinish={handleSave}
           labelCol={{ span: 5 }}
           wrapperCol={{ span: 16 }}
         >

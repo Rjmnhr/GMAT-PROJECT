@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Form, Button, Select, Table } from "antd";
 import { BasicDetailsFormStyled } from "../basic-details/style";
 
-const WorkExperienceForm = ({ formRef, onSubmit }) => {
+const WorkExperienceForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
   const { Option } = Select;
   const [form] = Form.useForm();
-  const onFinish = (values) => {
-    console.log("Received values:", values);
-    sessionStorage.setItem("experience", JSON.stringify(values));
+  useEffect(() => {
     formRef.current = form;
-    onSubmit();
+  }, [form, formRef]);
+
+  const handleFormChange = (changedValues, allValues) => {
+    if (onChange) {
+      onChange(changedValues, allValues);
+    }
+  };
+
+  const handleSave = (values) => {
+    if (onSaveChanges) {
+      onSaveChanges(values);
+    }
+    if (onSubmit) {
+      onSubmit(values);
+    }
+
+    // Store values in sessionStorage
+    sessionStorage.setItem("experience", JSON.stringify(values));
   };
 
   const columns = [
@@ -109,7 +124,8 @@ const WorkExperienceForm = ({ formRef, onSubmit }) => {
         <Form
           form={form}
           name="workExperienceForm"
-          onFinish={onFinish}
+          onValuesChange={handleFormChange}
+          onFinish={handleSave}
           labelCol={{ span: 10 }}
           wrapperCol={{ span: 16 }}
         >
