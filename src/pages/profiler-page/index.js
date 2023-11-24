@@ -6,6 +6,7 @@ import WorkExperienceForm from "../../components/profiler-forms/work-experience"
 import UndergraduateDegreeForm from "../../components/profiler-forms/graduate-form";
 import CommunityServiceForm from "../../components/profiler-forms/community-service-form";
 import HobbiesForm from "../../components/profiler-forms/hobbies-form";
+import { ProfilerPageStyled } from "./style";
 
 const ProfilerPage = () => {
   const { TabPane } = Tabs;
@@ -88,101 +89,101 @@ const ProfilerPage = () => {
   };
 
   return (
-    <div
-      style={{
-        background:
-          "url(https://res.cloudinary.com/dsw1ubwyh/image/upload/v1700829772/esg3s03v8mowch7yfzat.png)",
-        backgroundSize: "contain",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "right",
-      }}
-    >
-      <NavBar />
-      <div className="container">
-        <div
-          className="vh-100 container col-12"
-          style={{
-            paddingTop: "100px",
-            display: "grid",
-            alignContent: `${activeKey === "1" ? "center" : "space-between"}`,
-            justifyContent: `${activeKey === "1" ? "start" : "center"}`,
-          }}
-        >
-          <div>
+    <>
+      <ProfilerPageStyled>
+        <div className="background-container">
+          <NavBar />
+          <div className="container">
             <div
-              style={{ textAlign: `${activeKey === "1" ? "left" : "center"}` }}
-              class="section-title pb-0 "
+              className="vh-100 container col-12"
+              style={{
+                paddingTop: "100px",
+                display: "grid",
+                alignContent: `${
+                  activeKey === "1" ? "center" : "space-between"
+                }`,
+                justifyContent: `${activeKey === "1" ? "start" : "center"}`,
+              }}
             >
-              <h2>
-                {" "}
-                {activeKey === "1"
-                  ? "Get started filling your basic details"
-                  : "your profile"}{" "}
-              </h2>
-            </div>
+              <div>
+                <div
+                  style={{
+                    textAlign: `${activeKey === "1" ? "left" : "center"}`,
+                  }}
+                  class="section-title pb-0 "
+                >
+                  <h2>
+                    {" "}
+                    {activeKey === "1"
+                      ? "Get started filling your basic details"
+                      : "your profile"}{" "}
+                  </h2>
+                </div>
 
-            <Tabs
-              tabBarStyle={{ display: "none" }}
-              activeKey={activeKey}
-              centered
-              onChange={handleTabChange}
-            >
-              <TabPane className="display" tab="Your Basic Details" key="1">
-                <BasicDetailsForm
-                  formRef={formRef1}
-                  onSubmit={handleSubmitBasicDetails}
-                  onChange={handleFormChange}
-                  onSaveChanges={handleSaveChanges}
-                />
-              </TabPane>
-              <TabPane
-                tab="Your Work Experience"
-                key="2"
-                disabled={!completedForms.includes("1")}
-              >
-                <WorkExperienceForm
-                  formRef={formRef2}
-                  onSubmit={handleSubmitWorkExperience}
-                  onChange={handleFormChange}
-                  onSaveChanges={handleSaveChanges}
-                />
-              </TabPane>
-              <TabPane
-                tab="Your Undergraduate Degree"
-                key="3"
-                disabled={!completedForms.includes("2")}
-              >
-                <UndergraduateDegreeForm
-                  formRef={formRef3}
-                  onSubmit={handleSubmitGraduate}
-                  onChange={handleFormChange}
-                  onSaveChanges={handleSaveChanges}
-                />
-              </TabPane>
-              <TabPane
-                tab="Community Service"
-                key="4"
-                disabled={!completedForms.includes("3")}
-              >
-                <CommunityServiceForm
-                  formRef={formRef4}
-                  onSubmit={handleSubmitService}
-                  onChange={handleFormChange}
-                  onSaveChanges={handleSaveChanges}
-                />
-              </TabPane>
-              <TabPane
-                tab="Hobbies"
-                key="5"
-                disabled={!completedForms.includes("4")}
-              >
-                <HobbiesForm />
-              </TabPane>
-            </Tabs>
+                <Tabs
+                  tabBarStyle={{ display: "none" }}
+                  activeKey={activeKey}
+                  centered
+                  onChange={handleTabChange}
+                >
+                  <TabPane className="display" tab="Your Basic Details" key="1">
+                    <BasicDetailsForm
+                      formRef={formRef1}
+                      onSubmit={handleSubmitBasicDetails}
+                      onChange={handleFormChange}
+                      onSaveChanges={handleSaveChanges}
+                    />
+                  </TabPane>
+                  <TabPane
+                    tab="Your Work Experience"
+                    key="2"
+                    disabled={!completedForms.includes("1")}
+                  >
+                    <WorkExperienceForm
+                      formRef={formRef2}
+                      onSubmit={handleSubmitWorkExperience}
+                      onChange={handleFormChange}
+                      onSaveChanges={handleSaveChanges}
+                    />
+                  </TabPane>
+                  <TabPane
+                    tab="Your Undergraduate Degree"
+                    key="3"
+                    disabled={!completedForms.includes("2")}
+                  >
+                    <UndergraduateDegreeForm
+                      formRef={formRef3}
+                      onSubmit={handleSubmitGraduate}
+                      onChange={handleFormChange}
+                      onSaveChanges={handleSaveChanges}
+                    />
+                  </TabPane>
+                  <TabPane
+                    tab="Community Service"
+                    key="4"
+                    disabled={!completedForms.includes("3")}
+                  >
+                    <CommunityServiceForm
+                      formRef={formRef4}
+                      onSubmit={handleSubmitService}
+                      onChange={handleFormChange}
+                      onSaveChanges={handleSaveChanges}
+                    />
+                  </TabPane>
+                  <TabPane
+                    tab="Hobbies"
+                    key="5"
+                    disabled={!completedForms.includes("4")}
+                  >
+                    <HobbiesForm />
+                  </TabPane>
+                </Tabs>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </ProfilerPageStyled>
+    </>
   );
 };
 

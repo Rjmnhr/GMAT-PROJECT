@@ -42,13 +42,13 @@ const BasicDetailsForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
   };
 
   return (
-    <div
-      className="col-lg-8"
-      style={{
-        padding: "20px",
-      }}
-    >
-      <BasicDetailsFormStyled>
+    <BasicDetailsFormStyled>
+      <div
+        className="col-lg-8 parent-container"
+        style={{
+          padding: "20px",
+        }}
+      >
         <Form
           name="basicDetailsForm"
           onValuesChange={handleFormChange}
@@ -161,8 +161,8 @@ const BasicDetailsForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
             </button>
           </div>
         </Form>
-      </BasicDetailsFormStyled>
-    </div>
+      </div>
+    </BasicDetailsFormStyled>
   );
 };
 
