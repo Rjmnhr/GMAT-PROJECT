@@ -91,24 +91,36 @@ const ProfilerPage = () => {
   return (
     <>
       <ProfilerPageStyled>
-        <div className="background-container">
+        <div className={`${activeKey === "1" ? "background-container" : ""}`}>
           <NavBar />
+          <img
+            src={
+              "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1700885900/hihviyhqjhupwqeqr8gr.png"
+            }
+            alt=""
+            style={{
+              width: "50%",
+              position: "absolute",
+              left: "0",
+              bottom: "0",
+              display: `${activeKey === "1" ? "none" : "block"}`,
+            }}
+          />
           <div className="container">
             <div
               className="vh-100 container col-12"
               style={{
                 paddingTop: "100px",
                 display: "grid",
-                alignContent: `${
-                  activeKey === "1" ? "center" : "space-between"
-                }`,
-                justifyContent: `${activeKey === "1" ? "start" : "center"}`,
+                alignContent: "center",
+                justifyContent: "start",
               }}
             >
               <div>
                 <div
                   style={{
                     textAlign: `${activeKey === "1" ? "left" : "center"}`,
+                    display: `${activeKey === "1" ? "block" : "none"}`,
                   }}
                   class="section-title pb-0 "
                 >
@@ -116,7 +128,7 @@ const ProfilerPage = () => {
                     {" "}
                     {activeKey === "1"
                       ? "Get started filling your basic details"
-                      : "your profile"}{" "}
+                      : "Describe the Company"}{" "}
                   </h2>
                 </div>
 
@@ -125,8 +137,14 @@ const ProfilerPage = () => {
                   activeKey={activeKey}
                   centered
                   onChange={handleTabChange}
+                  animated={false} // Disable Ant Design default animation
                 >
-                  <TabPane className="display" tab="Your Basic Details" key="1">
+                  <TabPane
+                    className="display"
+                    tab="Your Basic Details"
+                    key="1"
+                    style={{ transition: "opacity 0.3s ease-in-out" }}
+                  >
                     <BasicDetailsForm
                       formRef={formRef1}
                       onSubmit={handleSubmitBasicDetails}
@@ -139,12 +157,18 @@ const ProfilerPage = () => {
                     key="2"
                     disabled={!completedForms.includes("1")}
                   >
-                    <WorkExperienceForm
-                      formRef={formRef2}
-                      onSubmit={handleSubmitWorkExperience}
-                      onChange={handleFormChange}
-                      onSaveChanges={handleSaveChanges}
-                    />
+                    <div
+                      className={`tab-content ${
+                        activeKey !== "2" ? "tab-content-hidden" : ""
+                      }`}
+                    >
+                      <WorkExperienceForm
+                        formRef={formRef2}
+                        onSubmit={handleSubmitWorkExperience}
+                        onChange={handleFormChange}
+                        onSaveChanges={handleSaveChanges}
+                      />
+                    </div>
                   </TabPane>
                   <TabPane
                     tab="Your Undergraduate Degree"

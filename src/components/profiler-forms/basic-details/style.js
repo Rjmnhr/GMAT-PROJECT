@@ -16,7 +16,8 @@ export const BasicDetailsFormStyled = styled.div`
     font-size: 12px;
   }
 
-  .age-cards {
+  .age-cards,
+  .college-cards {
     display: flex;
     justify-content: start;
     margin-bottom: 20px;
@@ -39,6 +40,14 @@ export const BasicDetailsFormStyled = styled.div`
       border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 
+  .college-card {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow effect */
+
+    margin-right: 12px;
+    margin-top: 8px;
+    margin-left: 0;
+  }
   .age-card:hover {
     border-color: 1px solid #e83e8c; /* Change border color on hover */
   }
@@ -77,5 +86,50 @@ export const BasicDetailsFormStyled = styled.div`
   .gender-icon {
     font-size: 24px;
     color: white;
+  }
+
+  .work-experience-container,
+  .graduate-container,
+  .other-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .work-image-container img,
+  .graduate-container img,
+  .other-container img {
+    width: 100%;
+  }
+
+  .work-image-container {
+    flex-basis: 60%;
+  }
+  .form {
+    flex-basis: 40%;
+  }
+  .other-image-container {
+    flex-basis: 55%;
+  }
+  .form-other {
+    flex-basis: 45%;
+  }
+  .graduate-image-container {
+    flex-basis: 50%;
+  }
+  .form-graduate {
+    flex-basis: 50%;
+  }
+  .section-title h2::after {
+    left: 0 !important;
+  }
+  .tab-content {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .tab-content-hidden {
+    opacity: 0;
+    pointer-events: none;
   }
 `;

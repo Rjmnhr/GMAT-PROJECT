@@ -1,7 +1,57 @@
-// UndergraduateDegreeForm.jsx
-import React, { useEffect } from "react";
-import { Button, Form, Select } from "antd";
+import React, { useEffect, useState } from "react";
+import { Card, Form, Tooltip } from "antd";
 import { BasicDetailsFormStyled } from "../basic-details/style";
+
+const CollegeTypeOptions = [
+  {
+    value: "premier",
+    label: "Premier",
+    description: "Top 10-15 in your field of specialization",
+  },
+  {
+    value: "selective",
+    label: "Selective",
+    description: "Selective/hard to get into",
+  },
+  {
+    value: "recognized",
+    label: "Recognized",
+    description: "Recognized within the state and entry is restrictive",
+  },
+  {
+    value: "new",
+    label: "New",
+    description: "New/relatively easy to get in/significant quotas in place",
+  },
+];
+
+const PerformanceOptions = [
+  {
+    value: "top5",
+    label: "Top 5%",
+    description: "High Distinction",
+  },
+  {
+    value: "top10",
+    label: "Top 10%",
+    description: "Distinction",
+  },
+  {
+    value: "top30",
+    label: "Top 30%",
+    description: "Credit",
+  },
+  {
+    value: "average",
+    label: "Average",
+    description: "Average",
+  },
+  {
+    value: "bottom50",
+    label: "Bottom 50%",
+    description: "Below Average",
+  },
+];
 
 const UndergraduateDegreeForm = ({
   formRef,
@@ -9,9 +59,9 @@ const UndergraduateDegreeForm = ({
   onChange,
   onSaveChanges,
 }) => {
+  const [selectedCollegeType, setSelectedCollegeType] = useState(null);
+  const [selectedPerformance, setSelectedPerformance] = useState(null);
   const [form] = Form.useForm();
-
-  const { Option } = Select;
 
   useEffect(() => {
     formRef.current = form;
@@ -35,58 +85,87 @@ const UndergraduateDegreeForm = ({
     sessionStorage.setItem("graduate", JSON.stringify(values));
   };
 
+  const handleSelectCollegeType = (collegeType) => {
+    setSelectedCollegeType(collegeType);
+  };
+
+  const handleSelectPerformance = (performance) => {
+    setSelectedPerformance(performance);
+  };
+
   return (
     <>
       <BasicDetailsFormStyled>
-        <Form
-          onValuesChange={handleFormChange}
-          onFinish={handleSave}
-          labelCol={{ span: 5 }}
-          wrapperCol={{ span: 16 }}
+        <div
+          style={{ display: "flex" }}
+          className="graduate-container container-fluid"
         >
-          <Form.Item
-            label="College Type"
-            name="collegeType"
-            rules={[{ required: true, message: "Please select College Type" }]}
-          >
-            <Select className="text-left" placeholder="Select College Type">
-              <Option value="premier">
-                Premier (top 10-15 in your field of specialisation)
-              </Option>
-              <Option value="selective">Selective/hard to get into</Option>
-              <Option value="recognized">
-                Recognised within the state and entry is restrictive
-              </Option>
-              <Option value="new">
-                New/relatively easy to get in/significant quotas in place
-              </Option>
-            </Select>
-          </Form.Item>
-          <Form.Item
-            label="Your Performance"
-            name="yourPerformance"
-            rules={[
-              { required: true, message: "Please select Your Performance" },
-            ]}
-          >
-            <Select className="text-left" placeholder="Select Your Performance">
-              <Option value="top5">
-                Top 5% of your class (High Distinction)
-              </Option>
-              <Option value="top10">Top 10% of your class (Distinction)</Option>
-              <Option value="top30">Top 30% of your class (Credit)</Option>
-              <Option value="average">Average</Option>
-              <Option value="bottom50">
-                Bottom 50% of your class (Average)
-              </Option>
-            </Select>
-          </Form.Item>
-          <div className="my-3" style={{ width: "100%" }}>
-            <Button className="btn-primary w-25" htmlType="submit">
-              Next
-            </Button>
+          <div className="graduate-image-container invisible">
+            <img
+              src={
+                "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1700885900/hihviyhqjhupwqeqr8gr.png"
+              }
+              className="work-background"
+              alt=""
+            />
           </div>
-        </Form>
+          <div className="form-graduate">
+            <div class="section-title pb-0 text-left ">
+              <h2>Undergraduate</h2>
+            </div>
+            <Form
+              onValuesChange={handleFormChange}
+              onFinish={handleSave}
+              labelCol={{ span: 10 }}
+              wrapperCol={{ span: 16 }}
+            >
+              <h5 className="text-left mb-2">College type </h5>
+              <div className="college-cards">
+                {CollegeTypeOptions.map((option) => (
+                  <Tooltip title={option.description} key={option.value}>
+                    <Card
+                      className={`college-card ${
+                        selectedCollegeType === option.value
+                          ? "selected-card"
+                          : ""
+                      }`}
+                      onClick={() => handleSelectCollegeType(option.value)}
+                    >
+                      <p>{option.label}</p>
+                    </Card>
+                  </Tooltip>
+                ))}
+              </div>
+
+              <h5 className="text-left mb-2">Your performance </h5>
+              <div className="college-cards">
+                {PerformanceOptions.map((option) => (
+                  <Tooltip title={option.description} key={option.value}>
+                    <Card
+                      className={`college-card ${
+                        selectedPerformance === option.value
+                          ? "selected-card"
+                          : ""
+                      }`}
+                      onClick={() => handleSelectPerformance(option.value)}
+                    >
+                      <p>{option.label}</p>
+                    </Card>
+                  </Tooltip>
+                ))}
+              </div>
+
+              <div className="my-3 text-left" style={{ width: "100%" }}>
+                <button
+                  htmlType="submit"
+                  className="btn btn-lg btn-primary w-50"
+                >
+                  Next
+                </button>
+              </div>
+            </Form>
+          </div>
+        </div>
       </BasicDetailsFormStyled>
     </>
   );

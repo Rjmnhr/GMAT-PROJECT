@@ -1,6 +1,5 @@
-// CommunityServiceForm.jsx
-import React, { useEffect } from "react";
-import { Button, Form, Select } from "antd";
+import React, { useEffect, useState } from "react";
+import { Card, Form, Tooltip } from "antd";
 import { BasicDetailsFormStyled } from "../basic-details/style";
 
 const CommunityServiceForm = ({
@@ -10,8 +9,63 @@ const CommunityServiceForm = ({
   onSaveChanges,
 }) => {
   const [form] = Form.useForm();
+  const [selectedActivity, setSelectedActivity] = useState(null);
+  const [selectedContribution, setSelectedContribution] = useState(null);
+  const [selectedYears, setSelectedYears] = useState(null);
 
-  const { Option } = Select;
+  const ActivityOptions = [
+    {
+      value: "international",
+      label: "International",
+      description: "International community service",
+    },
+    {
+      value: "national",
+      label: "National",
+      description: "National community service",
+    },
+    {
+      value: "stateWide",
+      label: "State",
+      description: "State-wide community service",
+    },
+    {
+      value: "localised",
+      label: "Localised",
+      description: "Localised community service",
+    },
+  ];
+
+  const ContributionOptions = [
+    {
+      value: "leading",
+      label: "Leading",
+      description: "Leading activities/groups",
+    },
+    {
+      value: "regular",
+      label: "Regular",
+      description: "Regularly part of a team doing activities",
+    },
+    {
+      value: "sometimes",
+      label: "Sometimes",
+      description: "Sometimes being involved in some activities",
+    },
+    {
+      value: "rarely",
+      label: "Rarely",
+      description: "Rarely being involved in any activity",
+    },
+  ];
+
+  const YearsOptions = [
+    { value: "<1", label: "< 1", description: "Less than 1 year" },
+    { value: "<2", label: "< 2", description: "Less than 2 years" },
+    { value: "<3", label: "< 3", description: "Less than 3 years" },
+    { value: "<5", label: "< 5", description: "Less than 5 years" },
+    { value: ">=5", label: ">= 5", description: "5 years or more" },
+  ];
 
   useEffect(() => {
     formRef.current = form;
@@ -34,87 +88,91 @@ const CommunityServiceForm = ({
     // Store values in sessionStorage
     sessionStorage.setItem("service", JSON.stringify(values));
   };
+
   return (
     <>
       <BasicDetailsFormStyled>
-        <Form
-          onValuesChange={handleFormChange}
-          onFinish={handleSave}
-          labelCol={{ span: 5 }}
-          wrapperCol={{ span: 16 }}
-        >
-          <Form.Item
-            label="Nature of Activity"
-            name="natureOfActivity"
-            rules={[
-              { required: true, message: "Please select Nature of Activity" },
-            ]}
-          >
-            <Select
-              className="text-left"
-              placeholder="Select Nature of Activity"
-            >
-              <Option value="international">
-                International community service
-              </Option>
-              <Option value="national">National community service</Option>
-              <Option value="stateWide">State wide community service</Option>
-              <Option value="localised">Localised community service</Option>
-            </Select>
-          </Form.Item>
-          <Form.Item
-            label="Your Level of Contribution"
-            name="levelOfContribution"
-            rules={[
-              {
-                required: true,
-                message: "Please select Your Level of Contribution",
-              },
-            ]}
-          >
-            <Select
-              className="text-left"
-              placeholder="Select Your Level of Contribution"
-            >
-              <Option value="leading">Leading activities/groups</Option>
-              <Option value="regular">
-                Regularly part of a team doing activities
-              </Option>
-              <Option value="sometimes">
-                Sometimes being involved in some activities
-              </Option>
-              <Option value="rarely">
-                Rarely being involved in any activity
-              </Option>
-            </Select>
-          </Form.Item>
-          <Form.Item
-            label="Number of Years of Being Involved"
-            name="yearsOfInvolvement"
-            rules={[
-              {
-                required: true,
-                message: "Please select Number of Years of Being Involved",
-              },
-            ]}
-          >
-            <Select
-              className="text-left"
-              placeholder="Select Number of Years of Being Involved"
-            >
-              <Option value="<1">{"< 1 year"}</Option>
-              <Option value="<2">{"< 2 years"}</Option>
-              <Option value="<3">{"< 3 years"}</Option>
-              <Option value="<5">{"< 5 years"}</Option>
-              <Option value=">=5">{">= 5 years"}</Option>
-            </Select>
-          </Form.Item>
-          <div className="my-3" style={{ width: "100%" }}>
-            <Button className="btn-primary w-25" htmlType="submit">
-              Next
-            </Button>
+        <div className="other-container container-fluid">
+          <div className="other-image-container invisible">
+            <img
+              src={
+                "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1700885900/hihviyhqjhupwqeqr8gr.png"
+              }
+              className="other-background"
+              alt=""
+            />
           </div>
-        </Form>
+          <div className="form-other">
+            <div class="section-title pb-0 text-left">
+              <h2>Community Service</h2>
+            </div>
+            <Form
+              onValuesChange={handleFormChange}
+              onFinish={handleSave}
+              labelCol={{ span: 5 }}
+              wrapperCol={{ span: 16 }}
+            >
+              <h5 className="text-left mb-2">Nature of activity </h5>
+              <div className="college-cards">
+                {ActivityOptions.map((option) => (
+                  <Tooltip title={option.description} key={option.value}>
+                    <Card
+                      className={`college-card ${
+                        selectedActivity === option.value ? "selected-card" : ""
+                      }`}
+                      onClick={() => setSelectedActivity(option.value)}
+                    >
+                      <p>{option.label}</p>
+                    </Card>
+                  </Tooltip>
+                ))}
+              </div>
+
+              <h5 className="text-left mb-2">Contribution level</h5>
+              <div className="college-cards">
+                {ContributionOptions.map((option) => (
+                  <Tooltip title={option.description} key={option.value}>
+                    <Card
+                      className={`college-card ${
+                        selectedContribution === option.value
+                          ? "selected-card"
+                          : ""
+                      }`}
+                      onClick={() => setSelectedContribution(option.value)}
+                    >
+                      <p>{option.label}</p>
+                    </Card>
+                  </Tooltip>
+                ))}
+              </div>
+
+              <h5 className="text-left mb-2">Years involved</h5>
+              <div className="college-cards">
+                {YearsOptions.map((option) => (
+                  <Tooltip title={option.description} key={option.value}>
+                    <Card
+                      className={`college-card ${
+                        selectedYears === option.value ? "selected-card" : ""
+                      }`}
+                      onClick={() => setSelectedYears(option.value)}
+                    >
+                      <p>{option.label}</p>
+                    </Card>
+                  </Tooltip>
+                ))}
+              </div>
+
+              <div className="my-3 text-left" style={{ width: "100%" }}>
+                <button
+                  htmlType="submit"
+                  className="btn btn-lg btn-primary w-50"
+                >
+                  Next
+                </button>
+              </div>
+            </Form>
+          </div>
+        </div>
       </BasicDetailsFormStyled>
     </>
   );
