@@ -101,6 +101,7 @@ const BasicDetailsForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
             <h5 className="text-left" style={{ marginRight: "8px" }}>
               Choose your gender
             </h5>
+
             <div className="gender-options">
               <div
                 className={`gender-option ${

@@ -78,15 +78,22 @@ const CommunityServiceForm = ({
   };
 
   const handleSave = (values) => {
+    const finalObject = {
+      ...selectedActivity,
+      ...selectedContribution,
+      ...selectedYears,
+      ...values,
+    };
+
     if (onSaveChanges) {
-      onSaveChanges(values);
+      onSaveChanges(finalObject);
     }
     if (onSubmit) {
-      onSubmit(values);
+      onSubmit(finalObject);
     }
 
     // Store values in sessionStorage
-    sessionStorage.setItem("service", JSON.stringify(values));
+    sessionStorage.setItem("service", JSON.stringify(finalObject));
   };
 
   return (
@@ -118,9 +125,13 @@ const CommunityServiceForm = ({
                   <Tooltip title={option.description} key={option.value}>
                     <Card
                       className={`college-card ${
-                        selectedActivity === option.value ? "selected-card" : ""
+                        selectedActivity?.natureOfActivity === option.value
+                          ? "selected-card"
+                          : ""
                       }`}
-                      onClick={() => setSelectedActivity(option.value)}
+                      onClick={() =>
+                        setSelectedActivity({ natureOfActivity: option.value })
+                      }
                     >
                       <p>{option.label}</p>
                     </Card>
@@ -134,11 +145,16 @@ const CommunityServiceForm = ({
                   <Tooltip title={option.description} key={option.value}>
                     <Card
                       className={`college-card ${
-                        selectedContribution === option.value
+                        selectedContribution?.levelOfContribution ===
+                        option.value
                           ? "selected-card"
                           : ""
                       }`}
-                      onClick={() => setSelectedContribution(option.value)}
+                      onClick={() =>
+                        setSelectedContribution({
+                          levelOfContribution: option.value,
+                        })
+                      }
                     >
                       <p>{option.label}</p>
                     </Card>
@@ -152,9 +168,13 @@ const CommunityServiceForm = ({
                   <Tooltip title={option.description} key={option.value}>
                     <Card
                       className={`college-card ${
-                        selectedYears === option.value ? "selected-card" : ""
+                        selectedYears?.yearsOfInvolvement === option.value
+                          ? "selected-card"
+                          : ""
                       }`}
-                      onClick={() => setSelectedYears(option.value)}
+                      onClick={() =>
+                        setSelectedYears({ yearsOfInvolvement: option.value })
+                      }
                     >
                       <p>{option.label}</p>
                     </Card>

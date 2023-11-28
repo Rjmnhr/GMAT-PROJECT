@@ -7,6 +7,7 @@ import UndergraduateDegreeForm from "../../components/profiler-forms/graduate-fo
 import CommunityServiceForm from "../../components/profiler-forms/community-service-form";
 import HobbiesForm from "../../components/profiler-forms/hobbies-form";
 import { ProfilerPageStyled } from "./style";
+import NatureOfWorkForm from "../../components/profiler-forms/work-experience/nature-of-work";
 
 const ProfilerPage = () => {
   const { TabPane } = Tabs;
@@ -14,6 +15,7 @@ const ProfilerPage = () => {
   const formRef2 = useRef(null);
   const formRef3 = useRef(null);
   const formRef4 = useRef(null);
+  const formRef5 = useRef(null);
 
   const [activeKey, setActiveKey] = useState("1");
   const [completedForms, setCompletedForms] = useState([]);
@@ -53,11 +55,11 @@ const ProfilerPage = () => {
       });
   };
 
-  const handleSubmitGraduate = () => {
+  const handleSubmitNatureOfExperience = () => {
     formRef3.current
       .validateFields()
       .then(() => {
-        // message.success("Graduate degree form submitted!");
+        // message.success("Work Experience form submitted!");
         setCompletedForms((prev) => [...prev, "3"]);
         setActiveKey("4");
       })
@@ -66,13 +68,26 @@ const ProfilerPage = () => {
       });
   };
 
-  const handleSubmitService = () => {
+  const handleSubmitGraduate = () => {
     formRef4.current
       .validateFields()
       .then(() => {
-        // message.success("Community Service form submitted!");
+        // message.success("Graduate degree form submitted!");
         setCompletedForms((prev) => [...prev, "4"]);
         setActiveKey("5");
+      })
+      .catch((errorInfo) => {
+        console.log("Failed:", errorInfo);
+      });
+  };
+
+  const handleSubmitService = () => {
+    formRef5.current
+      .validateFields()
+      .then(() => {
+        // message.success("Community Service form submitted!");
+        setCompletedForms((prev) => [...prev, "5"]);
+        setActiveKey("6");
       })
       .catch((errorInfo) => {
         console.log("Failed:", errorInfo);
@@ -171,12 +186,31 @@ const ProfilerPage = () => {
                     </div>
                   </TabPane>
                   <TabPane
-                    tab="Your Undergraduate Degree"
+                    tab="Nature of Experience"
                     key="3"
                     disabled={!completedForms.includes("2")}
                   >
+                    <div
+                      className={`tab-content ${
+                        activeKey !== "3" ? "tab-content-hidden" : ""
+                      }`}
+                    >
+                      <NatureOfWorkForm
+                        formRef={formRef3}
+                        onSubmit={handleSubmitNatureOfExperience}
+                        onChange={handleFormChange}
+                        onSaveChanges={handleSaveChanges}
+                      />
+                    </div>
+                  </TabPane>
+
+                  <TabPane
+                    tab="Your Undergraduate Degree"
+                    key="4"
+                    disabled={!completedForms.includes("3")}
+                  >
                     <UndergraduateDegreeForm
-                      formRef={formRef3}
+                      formRef={formRef4}
                       onSubmit={handleSubmitGraduate}
                       onChange={handleFormChange}
                       onSaveChanges={handleSaveChanges}
@@ -184,11 +218,11 @@ const ProfilerPage = () => {
                   </TabPane>
                   <TabPane
                     tab="Community Service"
-                    key="4"
-                    disabled={!completedForms.includes("3")}
+                    key="5"
+                    disabled={!completedForms.includes("4")}
                   >
                     <CommunityServiceForm
-                      formRef={formRef4}
+                      formRef={formRef5}
                       onSubmit={handleSubmitService}
                       onChange={handleFormChange}
                       onSaveChanges={handleSaveChanges}
@@ -196,7 +230,7 @@ const ProfilerPage = () => {
                   </TabPane>
                   <TabPane
                     tab="Hobbies"
-                    key="5"
+                    key="6"
                     disabled={!completedForms.includes("4")}
                   >
                     <HobbiesForm />

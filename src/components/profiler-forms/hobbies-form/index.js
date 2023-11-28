@@ -10,8 +10,14 @@ const HobbiesForm = () => {
   const [selectedYears, setSelectedYears] = useState(null);
 
   const onFinish = (values) => {
-    console.log("Received values:", values);
-    sessionStorage.setItem("hobbies", JSON.stringify(values));
+    const finalObject = {
+      ...selectedActivity,
+      ...selectedExpertise,
+      ...selectedYears,
+      ...values,
+    };
+
+    sessionStorage.setItem("hobbies", JSON.stringify(finalObject));
     navigate("/selection-chance");
   };
 
@@ -89,9 +95,13 @@ const HobbiesForm = () => {
                   <Tooltip title={option.description} key={option.value}>
                     <Card
                       className={`college-card ${
-                        selectedActivity === option.value ? "selected-card" : ""
+                        selectedActivity?.natureOfActivity === option.value
+                          ? "selected-card"
+                          : ""
                       }`}
-                      onClick={() => setSelectedActivity(option.value)}
+                      onClick={() =>
+                        setSelectedActivity({ natureOfActivity: option.value })
+                      }
                     >
                       <p>{option.label}</p>
                     </Card>
@@ -105,11 +115,13 @@ const HobbiesForm = () => {
                   <Tooltip title={option.description} key={option.value}>
                     <Card
                       className={`college-card ${
-                        selectedExpertise === option.value
+                        selectedExpertise?.levelOfExpertise === option.value
                           ? "selected-card"
                           : ""
                       }`}
-                      onClick={() => setSelectedExpertise(option.value)}
+                      onClick={() =>
+                        setSelectedExpertise({ levelOfExpertise: option.value })
+                      }
                     >
                       <p>{option.label}</p>
                     </Card>
@@ -123,9 +135,13 @@ const HobbiesForm = () => {
                   <Tooltip title={option.description} key={option.value}>
                     <Card
                       className={`college-card ${
-                        selectedYears === option.value ? "selected-card" : ""
+                        selectedYears?.yearsOfInvolvement === option.value
+                          ? "selected-card"
+                          : ""
                       }`}
-                      onClick={() => setSelectedYears(option.value)}
+                      onClick={() =>
+                        setSelectedYears({ yearsOfInvolvement: option.value })
+                      }
                     >
                       <p>{option.label}</p>
                     </Card>

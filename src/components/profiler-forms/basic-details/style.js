@@ -15,7 +15,19 @@ export const BasicDetailsFormStyled = styled.div`
   .ant-form-item .ant-form-item-explain-error {
     font-size: 12px;
   }
+  .ant-table-wrapper .ant-table-thead > tr > th,
+  .ant-table-wrapper .ant-table-tbody > tr > th,
+  .ant-table-wrapper .ant-table-tbody > tr > td,
+  .ant-table-wrapper tfoot > tr > th,
+  .ant-table-wrapper tfoot > tr > td {
+    position: relative;
+    padding: 10px 10px;
+    overflow-wrap: break-word;
+  }
 
+  .ant-select.ant-select-in-form-item {
+    width: auto;
+  }
   .age-cards,
   .college-cards {
     display: flex;

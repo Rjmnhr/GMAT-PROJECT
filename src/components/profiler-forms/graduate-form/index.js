@@ -74,23 +74,21 @@ const UndergraduateDegreeForm = ({
   };
 
   const handleSave = (values) => {
+    const finalObject = {
+      ...selectedCollegeType,
+      ...selectedPerformance,
+      ...values,
+    };
+
     if (onSaveChanges) {
-      onSaveChanges(values);
+      onSaveChanges(finalObject);
     }
     if (onSubmit) {
-      onSubmit(values);
+      onSubmit(finalObject);
     }
 
     // Store values in sessionStorage
-    sessionStorage.setItem("graduate", JSON.stringify(values));
-  };
-
-  const handleSelectCollegeType = (collegeType) => {
-    setSelectedCollegeType(collegeType);
-  };
-
-  const handleSelectPerformance = (performance) => {
-    setSelectedPerformance(performance);
+    sessionStorage.setItem("graduate", JSON.stringify(finalObject));
   };
 
   return (
@@ -125,11 +123,13 @@ const UndergraduateDegreeForm = ({
                   <Tooltip title={option.description} key={option.value}>
                     <Card
                       className={`college-card ${
-                        selectedCollegeType === option.value
+                        selectedCollegeType?.collegeType === option.value
                           ? "selected-card"
                           : ""
                       }`}
-                      onClick={() => handleSelectCollegeType(option.value)}
+                      onClick={() =>
+                        setSelectedCollegeType({ collegeType: option.value })
+                      }
                     >
                       <p>{option.label}</p>
                     </Card>
@@ -143,11 +143,15 @@ const UndergraduateDegreeForm = ({
                   <Tooltip title={option.description} key={option.value}>
                     <Card
                       className={`college-card ${
-                        selectedPerformance === option.value
+                        selectedPerformance?.yourPerformance === option.value
                           ? "selected-card"
                           : ""
                       }`}
-                      onClick={() => handleSelectPerformance(option.value)}
+                      onClick={() =>
+                        setSelectedPerformance({
+                          yourPerformance: option.value,
+                        })
+                      }
                     >
                       <p>{option.label}</p>
                     </Card>
