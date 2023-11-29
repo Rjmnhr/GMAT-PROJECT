@@ -1,13 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import NavBar from "../../components/nav-bar";
-import { Tabs, message } from "antd";
+import { Tabs, message, Progress } from "antd";
 import BasicDetailsForm from "../../components/profiler-forms/basic-details";
 import WorkExperienceForm from "../../components/profiler-forms/work-experience";
 import UndergraduateDegreeForm from "../../components/profiler-forms/graduate-form";
 import CommunityServiceForm from "../../components/profiler-forms/community-service-form";
 import HobbiesForm from "../../components/profiler-forms/hobbies-form";
-import { ProfilerPageStyled } from "./style";
 import NatureOfWorkForm from "../../components/profiler-forms/work-experience/nature-of-work";
+
+import { ProfilerPageStyled } from "./style";
 
 const ProfilerPage = () => {
   const { TabPane } = Tabs;
@@ -20,6 +21,35 @@ const ProfilerPage = () => {
   const [activeKey, setActiveKey] = useState("1");
   const [completedForms, setCompletedForms] = useState([]);
   const [unsavedChanges, setUnsavedChanges] = useState(false);
+  const [overallProgress, setOverallProgress] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const formProgress = {
+    1: 33, // Basic Details
+    2: 66, // Work Experience
+    3: 77, // Nature of Work Experience
+    4: 88, // Undergraduate Degree
+    5: 99, // Community Service
+    6: 100, // Hobbies
+  };
 
   const handleTabChange = (key) => {
     if (unsavedChanges) {
@@ -29,12 +59,19 @@ const ProfilerPage = () => {
     }
   };
 
+  const updateOverallProgress = (formKey) => {
+    const completedKeys = [...completedForms, formKey];
+    const totalForms = Object.keys(formProgress).length;
+    const progress = Math.ceil((completedKeys.length / totalForms) * 100);
+    setOverallProgress(progress);
+  };
+
   const handleSubmitBasicDetails = () => {
     formRef1.current
       .validateFields()
       .then(() => {
-        // message.success("Basic Details form submitted!");
         setCompletedForms((prev) => [...prev, "1"]);
+        updateOverallProgress("1");
         setActiveKey("2");
       })
       .catch((errorInfo) => {
@@ -46,8 +83,8 @@ const ProfilerPage = () => {
     formRef2.current
       .validateFields()
       .then(() => {
-        // message.success("Work Experience form submitted!");
         setCompletedForms((prev) => [...prev, "2"]);
+        updateOverallProgress("2");
         setActiveKey("3");
       })
       .catch((errorInfo) => {
@@ -59,8 +96,8 @@ const ProfilerPage = () => {
     formRef3.current
       .validateFields()
       .then(() => {
-        // message.success("Work Experience form submitted!");
         setCompletedForms((prev) => [...prev, "3"]);
+        updateOverallProgress("3");
         setActiveKey("4");
       })
       .catch((errorInfo) => {
@@ -72,8 +109,8 @@ const ProfilerPage = () => {
     formRef4.current
       .validateFields()
       .then(() => {
-        // message.success("Graduate degree form submitted!");
         setCompletedForms((prev) => [...prev, "4"]);
+        updateOverallProgress("4");
         setActiveKey("5");
       })
       .catch((errorInfo) => {
@@ -85,8 +122,8 @@ const ProfilerPage = () => {
     formRef5.current
       .validateFields()
       .then(() => {
-        // message.success("Community Service form submitted!");
         setCompletedForms((prev) => [...prev, "5"]);
+        updateOverallProgress("5");
         setActiveKey("6");
       })
       .catch((errorInfo) => {
@@ -118,7 +155,7 @@ const ProfilerPage = () => {
               position: "absolute",
               left: "0",
               bottom: "0",
-              display: `${activeKey === "1" ? "none" : "block"}`,
+              display: `${activeKey === "1" ? "none" : "none"}`,
             }}
           />
           <div className="container">
@@ -128,31 +165,34 @@ const ProfilerPage = () => {
                 paddingTop: "100px",
                 display: "grid",
                 alignContent: "center",
-                justifyContent: "start",
+                justifyContent: `${
+                  activeKey === "1"
+                    ? "start"
+                    : `${isMobile ? "start" : "center"}`
+                }`,
               }}
             >
               <div>
-                <div
-                  style={{
-                    textAlign: `${activeKey === "1" ? "left" : "center"}`,
-                    display: `${activeKey === "1" ? "block" : "none"}`,
-                  }}
-                  class="section-title pb-0 "
-                >
-                  <h2>
-                    {" "}
-                    {activeKey === "1"
-                      ? "Get started filling your basic details"
-                      : "Describe the Company"}{" "}
-                  </h2>
-                </div>
-
+                {overallProgress > 0 && activeKey !== "1" && (
+                  <div style={{ marginBottom: "20px" }}>
+                    <Progress
+                      percent={overallProgress}
+                      status="active"
+                      showInfo={false}
+                    />
+                  </div>
+                )}
                 <Tabs
-                  tabBarStyle={{ display: "none" }}
+                  tabBarStyle={{
+                    display: `${
+                      activeKey === "1"
+                        ? "none"
+                        : `${isMobile ? "none" : "block"}`
+                    }`,
+                  }}
                   activeKey={activeKey}
                   centered
                   onChange={handleTabChange}
-                  animated={false} // Disable Ant Design default animation
                 >
                   <TabPane
                     className="display"

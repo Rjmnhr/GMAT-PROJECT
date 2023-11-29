@@ -94,81 +94,64 @@ const UndergraduateDegreeForm = ({
   return (
     <>
       <BasicDetailsFormStyled>
-        <div
-          style={{ display: "flex" }}
-          className="graduate-container container-fluid"
-        >
-          <div className="graduate-image-container invisible">
-            <img
-              src={
-                "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1700885900/hihviyhqjhupwqeqr8gr.png"
-              }
-              className="work-background"
-              alt=""
-            />
-          </div>
-          <div className="form-graduate">
-            <div class="section-title pb-0 text-left ">
+        <div style={{ display: "flex" }} className=" container-fluid">
+          {/* <div class="section-title pb-0 text-left ">
               <h2>Undergraduate</h2>
+            </div> */}
+          <Form
+            onValuesChange={handleFormChange}
+            onFinish={handleSave}
+            labelCol={{ span: 10 }}
+            wrapperCol={{ span: 16 }}
+          >
+            <h5 className="text-left mb-2">College type </h5>
+            <div className="college-cards">
+              {CollegeTypeOptions.map((option) => (
+                <Tooltip title={option.description} key={option.value}>
+                  <Card
+                    className={`college-card ${
+                      selectedCollegeType?.collegeType === option.value
+                        ? "selected-card"
+                        : ""
+                    }`}
+                    onClick={() =>
+                      setSelectedCollegeType({ collegeType: option.value })
+                    }
+                  >
+                    <p>{option.label}</p>
+                  </Card>
+                </Tooltip>
+              ))}
             </div>
-            <Form
-              onValuesChange={handleFormChange}
-              onFinish={handleSave}
-              labelCol={{ span: 10 }}
-              wrapperCol={{ span: 16 }}
-            >
-              <h5 className="text-left mb-2">College type </h5>
-              <div className="college-cards">
-                {CollegeTypeOptions.map((option) => (
-                  <Tooltip title={option.description} key={option.value}>
-                    <Card
-                      className={`college-card ${
-                        selectedCollegeType?.collegeType === option.value
-                          ? "selected-card"
-                          : ""
-                      }`}
-                      onClick={() =>
-                        setSelectedCollegeType({ collegeType: option.value })
-                      }
-                    >
-                      <p>{option.label}</p>
-                    </Card>
-                  </Tooltip>
-                ))}
-              </div>
 
-              <h5 className="text-left mb-2">Your performance </h5>
-              <div className="college-cards">
-                {PerformanceOptions.map((option) => (
-                  <Tooltip title={option.description} key={option.value}>
-                    <Card
-                      className={`college-card ${
-                        selectedPerformance?.yourPerformance === option.value
-                          ? "selected-card"
-                          : ""
-                      }`}
-                      onClick={() =>
-                        setSelectedPerformance({
-                          yourPerformance: option.value,
-                        })
-                      }
-                    >
-                      <p>{option.label}</p>
-                    </Card>
-                  </Tooltip>
-                ))}
-              </div>
+            <h5 className="text-left mb-2">Your performance </h5>
+            <div className="college-cards">
+              {PerformanceOptions.map((option) => (
+                <Tooltip title={option.description} key={option.value}>
+                  <Card
+                    className={`college-card ${
+                      selectedPerformance?.yourPerformance === option.value
+                        ? "selected-card"
+                        : ""
+                    }`}
+                    onClick={() =>
+                      setSelectedPerformance({
+                        yourPerformance: option.value,
+                      })
+                    }
+                  >
+                    <p>{option.label}</p>
+                  </Card>
+                </Tooltip>
+              ))}
+            </div>
 
-              <div className="my-3 text-left" style={{ width: "100%" }}>
-                <button
-                  htmlType="submit"
-                  className="btn btn-lg btn-primary w-50"
-                >
-                  Next
-                </button>
-              </div>
-            </Form>
-          </div>
+            <div className="my-3 text-left" style={{ width: "100%" }}>
+              <button htmlType="submit" className="btn btn-lg btn-primary w-50">
+                Next
+              </button>
+            </div>
+          </Form>
         </div>
       </BasicDetailsFormStyled>
     </>

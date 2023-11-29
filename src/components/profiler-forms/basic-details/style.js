@@ -15,6 +15,9 @@ export const BasicDetailsFormStyled = styled.div`
   .ant-form-item .ant-form-item-explain-error {
     font-size: 12px;
   }
+  .ant-card .ant-card-body {
+    padding: 10px;
+  }
   .ant-table-wrapper .ant-table-thead > tr > th,
   .ant-table-wrapper .ant-table-tbody > tr > th,
   .ant-table-wrapper .ant-table-tbody > tr > td,
@@ -143,5 +146,10 @@ export const BasicDetailsFormStyled = styled.div`
   .tab-content-hidden {
     opacity: 0;
     pointer-events: none;
+  }
+
+  .icon-labels {
+    height: 100;
+    width: 100;
   }
 `;

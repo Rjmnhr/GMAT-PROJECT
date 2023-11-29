@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const ChancesOfSelectionStyled = styled.div`
+  .selected-tab {
+    background-color: #e03a3c !important;
+    color: white;
+  }
   table {
     border-collapse: collapse;
     width: 100%;
@@ -56,7 +60,6 @@ export const ChancesOfSelectionStyled = styled.div`
     height: 100%;
     background-color: red;
     transform-origin: top;
-    transform: skew(60deg);
   }
 
   .child-number::after {
@@ -142,5 +145,47 @@ export const ChancesOfSelectionStyled = styled.div`
     left: 50%;
     transform: translate(-50%, -50%); /* Center the sticker */
     background-color: white;
+  }
+
+  .table-container {
+    margin: 20px;
+  }
+
+  .styled-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  .styled-table th {
+    background-color: #f2f2f2;
+  }
+
+  .styled-table td {
+    /* Add other styling properties like border-radius, box-shadow, etc. */
+  }
+
+  /* Tooltip styles */
+  .styled-table td[title]:hover:after {
+    content: attr(title);
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+
+  /* Add responsive styles using media queries as needed */
+  @media (max-width: 600px) {
+    .styled-table {
+      /* Adjust styling for smaller screens */
+    }
   }
 `;
