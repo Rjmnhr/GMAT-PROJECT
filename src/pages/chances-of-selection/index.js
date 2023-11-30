@@ -5,6 +5,48 @@ import AxiosInstance from "../../components/axios";
 import { LoadingOutlined } from "@ant-design/icons";
 import SelectionOutput from "../../components/selection-output";
 
+import PreferenceAndGoalsPage from "../prefernece_and_goals_page";
+// import sticker from "../../icons/businessman.png";
+
+// const BarChartExample = ({ data }) => {
+//   const categories = ["Top 10", "11-20", "21-40", "41-60", "61-80", "81-100"];
+
+//   const getColor = (value) => {
+//     if (value < 0.3) {
+//       return "#f74a64"; // Light red for values less than 0.3
+//     } else if (value >= 0.3 && value <= 0.5) {
+//       return "#97c8d9"; // Light orange for values between 0.3 and 0.5
+//     } else {
+//       return "#99ff99"; // Light green for values greater than 0.5
+//     }
+//   };
+
+//   return (
+//     <ResponsiveContainer width="100%" height={400}>
+//       <BarChart
+//         data={data}
+//         margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
+//         layout="vertical"
+//       >
+//         <CartesianGrid strokeDasharray="3 3" />
+//         <XAxis type="number" tickFormatter={(value) => `${value}%`} />
+//         <YAxis dataKey="factor" type="category" />
+//         <Tooltip formatter={(value) => `${value}%`} />
+//         <Legend />
+//         {categories.map((category, index) => (
+//           <Bar
+//             key={category}
+//             dataKey={`values[${index}]`}
+//             stackId="a"
+//             fill={getColor(data[index].values[index])}
+//             name={category} // Added to display category names in the legend
+//           />
+//         ))}
+//       </BarChart>
+//     </ResponsiveContainer>
+//   );
+// };
+
 const ChancesOfSelection = () => {
   const storedBasicDetails = JSON.parse(
     sessionStorage.getItem("basic-details")
@@ -30,6 +72,7 @@ const ChancesOfSelection = () => {
   const [extraCurricularObtained, setExtraCurricularObtained] = useState(0);
   const [hobbiesObtained, setHobbiesObtained] = useState(0);
   const [selectedTab, setSelectedTab] = useState("selection");
+  const [activeIndex, setActiveIndex] = useState(0);
 
   // State variable to hold the data array
   const [data, setData] = useState([]);
@@ -50,6 +93,7 @@ const ChancesOfSelection = () => {
   const calculateGMATIndividualValue = (userGMAT) => {
     // Get the percentage value for the user's GMAT range
     const value = gmatPercentageValues[userGMAT];
+    sessionStorage.setItem("gmat_value", value);
     setGmatObtained(value);
 
     const percentageValue = value / 45;
@@ -78,7 +122,7 @@ const ChancesOfSelection = () => {
 
     const PerformanceValue =
       valueMappingsPerformance[valueObject.yourPerformance];
-
+    sessionStorage.setItem("graduate_performance", PerformanceValue);
     const value = CollegeValue * PerformanceValue;
     setGraduateObtained(value);
 
@@ -280,6 +324,17 @@ const ChancesOfSelection = () => {
       "N/A": 0,
     };
 
+    const generalMappings = {
+      "<1": 0.6,
+      "1-2": 1.5,
+      "1-3": 2,
+      "2-3": 2.5,
+      ">=3": 4,
+      "3-5": 4,
+      ">=5": 6,
+      "N/A": 0.6,
+    };
+
     const productOrServiceValue =
       valueMappingsProductOrService[valueObject.productServices];
     const multiNationalCompanyValue =
@@ -290,51 +345,84 @@ const ChancesOfSelection = () => {
       valueMappingsNonTechnicalITIndividual[
         valueObject["1_individualContributor"]
       ];
+    const nonTechnicalITIndividualValueGeneral =
+      generalMappings[valueObject["1_individualContributor"]];
     const nonTechnicalHRIndividualValue =
       valueMappingsNonTechnicalHRIndividual[
         valueObject["2_individualContributor"]
       ];
+    const nonTechnicalHRIndividualValueGeneral =
+      generalMappings[valueObject["2_individualContributor"]];
     const commercialTechnicalIndividualValue =
       valueMappingsCommercialTechnicalIndividual[
         valueObject["3_individualContributor"]
       ];
+    const commercialTechnicalIndividualValueGeneral =
+      generalMappings[valueObject["3_individualContributor"]];
     const commercialGeneralistIndividualValue =
       valueMappingsCommercialGeneralistIndividual[
         valueObject["4_individualContributor"]
       ];
-
+    const commercialGeneralistIndividualValueGeneral =
+      generalMappings[valueObject["4_individualContributor"]];
     const nonTechnicalITSupervisoryValue =
       valueMappingsNonTechnicalITSupervisory[valueObject["1_supervisory"]];
+    const nonTechnicalITSupervisoryValueGeneral =
+      generalMappings[valueObject["1_supervisory"]];
     const nonTechnicalHRSupervisoryValue =
       valueMappingsNonTechnicalHRSupervisory[valueObject["2_supervisory"]];
+    const nonTechnicalHRSupervisoryValueGeneral =
+      generalMappings[valueObject["2_supervisory"]];
     const commercialTechnicalSupervisoryValue =
       valueMappingsCommercialTechnicalSupervisory[valueObject["3_supervisory"]];
+    const commercialTechnicalSupervisoryValueGeneral =
+      generalMappings[valueObject["3_supervisory"]];
     const commercialGeneralistSupervisoryValue =
       valueMappingsCommercialGeneralistSupervisory[
         valueObject["4_supervisory"]
       ];
+    const commercialGeneralistSupervisoryValueGeneral =
+      generalMappings[valueObject["4_supervisory"]];
 
     const nonTechnicalITLeadershipValue =
       valueMappingsNonTechnicalITLeadership[
         valueObject["1_leadershipManagerial"]
       ];
+    const nonTechnicalITLeadershipValueGeneral =
+      generalMappings[valueObject["1_leadershipManagerial"]];
     const nonTechnicalHRLeadershipValue =
       valueMappingsNonTechnicalHRLeadership[
         valueObject["2_leadershipManagerial"]
       ];
+    const nonTechnicalHRLeadershipValueGeneral =
+      generalMappings[valueObject["2_leadershipManagerial"]];
     const commercialTechnicalLeadershipValue =
       valueMappingsCommercialTechnicalLeadership[
         valueObject["3_leadershipManagerial"]
       ];
+    const commercialTechnicalLeadershipValueGeneral =
+      generalMappings[valueObject["3_leadershipManagerial"]];
     const commercialGeneralistLeadershipValue =
       valueMappingsCommercialGeneralistLeadership[
         valueObject["4_leadershipManagerial"]
       ];
-    console.log(
-      "🚀 ~ file: index.js:330 ~ calculateExperienceIndividualValue ~ commercialGeneralistLeadershipValue:",
-      commercialGeneralistLeadershipValue
-    );
+    const commercialGeneralistLeadershipValueGeneral =
+      generalMappings[valueObject["4_leadershipManagerial"]];
 
+    const totalGeneralValue =
+      nonTechnicalITIndividualValueGeneral +
+      nonTechnicalHRIndividualValueGeneral +
+      commercialTechnicalIndividualValueGeneral +
+      commercialGeneralistIndividualValueGeneral +
+      nonTechnicalITSupervisoryValueGeneral +
+      nonTechnicalHRSupervisoryValueGeneral +
+      commercialTechnicalSupervisoryValueGeneral +
+      commercialGeneralistSupervisoryValueGeneral +
+      nonTechnicalITLeadershipValueGeneral +
+      nonTechnicalHRLeadershipValueGeneral +
+      commercialTechnicalLeadershipValueGeneral +
+      commercialGeneralistLeadershipValueGeneral;
+    sessionStorage.setItem("experience_general_value", totalGeneralValue);
     const nonTechnicalITTotal =
       nonTechnicalITIndividualValue +
       nonTechnicalITSupervisoryValue +
@@ -366,11 +454,6 @@ const ChancesOfSelection = () => {
 
     const describeTheCompanyValue =
       productOrServiceValue * multiNationalCompanyValue * companySizeValue;
-
-    console.log(
-      "🚀 ~ file: index.js:354 ~ calculateExperienceIndividualValue ~ productOrServiceValue:",
-      productOrServiceValue
-    );
 
     const supervisoryValueArr = [
       nonTechnicalITSupervisoryValue,
@@ -533,6 +616,7 @@ const ChancesOfSelection = () => {
             const { Score, ...newObj } = obj;
             return newObj;
           });
+          assignCategories(newArray);
           const convertedArray = newArray.map((obj) => {
             // Extract values from the object and return as an array
             return Object.values(obj);
@@ -546,6 +630,41 @@ const ChancesOfSelection = () => {
     //eslint-disable-next-line
   }, [data]);
 
+  const assignCategories = (data) => {
+    const sortedArray = Object.entries(data[0]).sort((a, b) => b[1] - a[1]);
+
+    let safeCategory = "";
+    let achievableCategory = "";
+    let stretchCategory = "";
+
+    for (const [key, value] of Object.entries(data[0])) {
+      if (value === 0.7) {
+        safeCategory = key;
+        break;
+      }
+    }
+
+    if (!safeCategory) {
+      // If no 0.7 value, consider the highest value
+      safeCategory = sortedArray[0][0];
+    }
+
+    const indexOfSafe = Object.keys(data[0]).indexOf(safeCategory);
+
+    if (indexOfSafe > 0) {
+      achievableCategory = Object.keys(data[0])[indexOfSafe - 1];
+    }
+
+    if (indexOfSafe > 1) {
+      stretchCategory = Object.keys(data[0])[indexOfSafe - 2];
+    }
+
+    // Here you can use the assigned categories (safeCategory, achievableCategory, stretchCategory)
+    sessionStorage.setItem("safe", safeCategory);
+    sessionStorage.setItem("achievable", achievableCategory);
+    sessionStorage.setItem("stretch", stretchCategory);
+  };
+
   return (
     <>
       <NavBar />
@@ -557,7 +676,11 @@ const ChancesOfSelection = () => {
           >
             <div className="mt-3">
               <p
-                onClick={() => setSelectedTab("selection")}
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  setSelectedTab("selection");
+                  setActiveIndex(0);
+                }}
                 className={`border p-3 w-100 m-0 cursor-pointer ${
                   selectedTab === "selection" ? "selected-tab" : ""
                 }`}
@@ -565,7 +688,11 @@ const ChancesOfSelection = () => {
                 Selection chances
               </p>
               <p
-                onClick={() => setSelectedTab("college")}
+                style={{ cursor: "pointer" }}
+                onClick={() => {
+                  setSelectedTab("college");
+                  setActiveIndex(1);
+                }}
                 className={`border p-3 w-100 m-0 ${
                   selectedTab === "college" ? "selected-tab" : ""
                 }`}
@@ -575,30 +702,45 @@ const ChancesOfSelection = () => {
             </div>
           </div>
           <div className="output-container container py-3 col-lg-10 col-12">
-            <div className="section-title">
-              <h2>Chances of selection</h2>
-              {data?.length > 1 && totalValues?.length > 1 ? (
-                <div>
-                  <SelectionOutput data={data} totalValues={totalValues} />{" "}
+            {activeIndex === 0 ? (
+              <div>
+                <div className="section-title">
+                  <h2>Chances of selection</h2>
                 </div>
-              ) : (
-                <>
+                {data?.length > 1 && totalValues?.length > 1 ? (
                   <div
-                    className="container"
-                    style={{
-                      height: "50vh",
-                      display: "grid",
-                      placeItems: "center",
-                    }}
+                    className="scrollable-container"
+                    style={{ height: "90vh", overflowY: "scroll" }}
                   >
-                    <p>
-                      Results are loading...
-                      <LoadingOutlined />
-                    </p>
+                    <SelectionOutput data={data} totalValues={totalValues} />{" "}
                   </div>
-                </>
-              )}
-            </div>
+                ) : (
+                  <>
+                    <div
+                      className="container"
+                      style={{
+                        height: "50vh",
+                        display: "grid",
+                        placeItems: "center",
+                      }}
+                    >
+                      <p>
+                        Results are loading...
+                        <LoadingOutlined />
+                      </p>
+                    </div>
+                  </>
+                )}
+              </div>
+            ) : (
+              <div>
+                {/* <div className="section-title">
+                  <h2>College Information</h2>
+                 
+                </div> */}
+                <PreferenceAndGoalsPage />
+              </div>
+            )}
           </div>
         </div>
       </ChancesOfSelectionStyled>

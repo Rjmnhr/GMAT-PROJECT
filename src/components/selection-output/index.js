@@ -6,55 +6,10 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   ResponsiveContainer,
-  // BarChart,
-  // Bar,
-  // XAxis,
-  // YAxis,
-  // CartesianGrid,
-  // Tooltip,
-  // Legend,
 } from "recharts";
 import Plot from "react-plotly.js";
 // import sticker from "../../icons/businessman.png";
 
-// const BarChartExample = ({ data }) => {
-//   const categories = ["Top 10", "11-20", "21-40", "41-60", "61-80", "81-100"];
-
-//   const getColor = (value) => {
-//     if (value < 0.3) {
-//       return "#f74a64"; // Light red for values less than 0.3
-//     } else if (value >= 0.3 && value <= 0.5) {
-//       return "#97c8d9"; // Light orange for values between 0.3 and 0.5
-//     } else {
-//       return "#99ff99"; // Light green for values greater than 0.5
-//     }
-//   };
-
-//   return (
-//     <ResponsiveContainer width="100%" height={400}>
-//       <BarChart
-//         data={data}
-//         margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-//         layout="vertical"
-//       >
-//         <CartesianGrid strokeDasharray="3 3" />
-//         <XAxis type="number" tickFormatter={(value) => `${value}%`} />
-//         <YAxis dataKey="factor" type="category" />
-//         <Tooltip formatter={(value) => `${value}%`} />
-//         <Legend />
-//         {categories.map((category, index) => (
-//           <Bar
-//             key={category}
-//             dataKey={`values[${index}]`}
-//             stackId="a"
-//             fill={getColor(data[index].values[index])}
-//             name={category} // Added to display category names in the legend
-//           />
-//         ))}
-//       </BarChart>
-//     </ResponsiveContainer>
-//   );
-// };
 const HeatmapExample = ({ data }) => {
   // Extract factor names and category names
   const factors = data.map((item) => item.factor);
@@ -76,12 +31,12 @@ const HeatmapExample = ({ data }) => {
 
   // Layout configuration for the heatmap
   const layout = {
-    title: <h5>Heat Map of Selection Chances</h5>,
+    title: "Chances of Selection Heatmap",
     xaxis: {
-      title: "",
+      title: "Categories",
     },
     yaxis: {
-      title: "",
+      title: "Factors",
     },
   };
 
@@ -115,7 +70,6 @@ const Interactive3DRadarChart = ({ data }) => {
       data={chartData}
       config={{ displayModeBar: false }}
       layout={{
-        title: <h5>Interactive Radial Map</h5>,
         polar: {
           radialaxis: {
             visible: true,
@@ -197,11 +151,7 @@ const SelectionOutput = ({ data, totalValues }) => {
   };
   return (
     <>
-      {" "}
-      <div
-        // style={{ height: "95vh", overflowY: "scroll" }}
-        className="container d-lg-flex justify-content-center align-items-center table-container"
-      >
+      <div className="container d-lg-flex justify-content-center align-items-center table-container">
         <div className="col-12 col-lg-6">
           <table className="table styled-table">
             <thead>
@@ -299,7 +249,7 @@ const SelectionOutput = ({ data, totalValues }) => {
         </div>
       </div>
       <Interactive3DRadarChart data={data} />
-      <HeatmapExample data={data} />
+      <HeatmapExample data={data} />{" "}
       {/* <BarChartExample data={data} totalValues={totalValues} /> */}
       {/* <div style={{ display: "grid", placeItems: "center" }}>
 <div className="clock">

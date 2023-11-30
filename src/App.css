@@ -12,6 +12,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.scrollable-container::-webkit-scrollbar{
+  display: none;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
