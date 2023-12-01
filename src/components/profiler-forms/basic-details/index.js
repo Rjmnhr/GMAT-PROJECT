@@ -4,48 +4,40 @@ import { BasicDetailsFormStyled } from "./style";
 import maleIcon from "../../../icons/man.png";
 import femaleIcon from "../../../icons/woman.png";
 
-const BasicDetailsForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
-  const [selectedAge, setSelectedAge] = useState(null);
-  const [selectedGender, setSelectedGender] = useState(null);
-  const [selectedGMAT, setSelectedGMAT] = useState(null);
-
-  const [form] = Form.useForm();
+const BasicDetailsForm = ({ formRef }) => {
+  const [selectedAge, setSelectedAge] = useState("<26");
+  const [selectedGender, setSelectedGender] = useState("male");
+  const [selectedGMAT, setSelectedGMAT] = useState("<620");
 
   useEffect(() => {
-    formRef.current = form;
-  }, [form, formRef]);
-
-  const handleFormChange = (changedValues, allValues) => {
-    if (onChange) {
-      onChange(changedValues, allValues);
-    }
-  };
-
-  const handleSave = (values) => {
-    const finalObject = {
-      ...selectedGMAT,
-      ...values,
+    // Store default values in session storage when the component is rendered for the first time
+    const defaultValues = {
+      age: "<26",
+      gender: "male",
+      gmat: "<620",
     };
-    if (onSaveChanges) {
-      onSaveChanges(finalObject);
-    }
-    if (onSubmit) {
-      onSubmit(finalObject);
-    }
+    sessionStorage.setItem("basic-details", JSON.stringify(defaultValues));
 
-    // Store values in sessionStorage
-    sessionStorage.setItem("basic-details", JSON.stringify(finalObject));
-  };
+    // Set form values based on the default values
+  }, []);
+
+  useEffect(() => {
+    // Update session storage whenever form values change
+    const formValues = {
+      age: selectedAge,
+      gender: selectedGender,
+      gmat: selectedGMAT,
+    };
+    sessionStorage.setItem("basic-details", JSON.stringify(formValues));
+  }, [selectedAge, selectedGender, selectedGMAT]);
 
   const { Meta } = Card;
 
   const handleAgeCardClick = (age) => {
-    form.setFieldsValue({ age });
     setSelectedAge(age);
   };
 
   const handleGenderOptionClick = (gender) => {
-    form.setFieldsValue({ gender });
     setSelectedGender(gender);
   };
 
@@ -53,7 +45,7 @@ const BasicDetailsForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
     setSelectedGMAT(gmat);
   };
 
-  const gmatOptions = ["≥750", "≥720", "≥700", "≥680", "≥650", "≥620", "<620"];
+  const gmatOptions = ["<620", "≥620", "≥650", "≥680", "≥700", "≥720", "≥750"];
 
   return (
     <BasicDetailsFormStyled>
@@ -63,14 +55,7 @@ const BasicDetailsForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
           padding: "20px",
         }}
       >
-        <div class="section-title pb-0 text-left">
-          <h2>Get started with basic details</h2>
-        </div>
-        <Form
-          name="basicDetailsForm"
-          onValuesChange={handleFormChange}
-          onFinish={handleSave}
-        >
+        <Form name="basicDetailsForm">
           <h5 className="text-left mb-2">Choose your age </h5>
           <div className="age-cards mt-2">
             {["<26", "<30", "<32", "<35", "≥35"].map((age) => (
@@ -136,20 +121,14 @@ const BasicDetailsForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
                   }}
                   key={gmat}
                   className={`age-card ${
-                    selectedGMAT?.gmat === gmat ? "selected-card" : ""
+                    selectedGMAT === gmat ? "selected-card" : ""
                   }`}
-                  onClick={() => handleGMATCardClick({ gmat: gmat })}
+                  onClick={() => handleGMATCardClick(gmat)}
                 >
                   <Meta title={gmat} />
                 </Card>
               ))}
             </div>
-          </div>
-
-          <div className="my-3 text-left" style={{ width: "100%" }}>
-            <button htmlType="submit" className="btn btn-lg btn-primary w-50">
-              Start
-            </button>
           </div>
         </Form>
       </div>

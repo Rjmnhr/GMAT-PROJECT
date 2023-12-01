@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import NavBar from "../../components/nav-bar";
-import { Tabs, message, Progress } from "antd";
+import { Tabs, Tab, Typography, Box } from "@mui/material";
 import BasicDetailsForm from "../../components/profiler-forms/basic-details";
 import WorkExperienceForm from "../../components/profiler-forms/work-experience";
 import UndergraduateDegreeForm from "../../components/profiler-forms/graduate-form";
@@ -11,14 +11,13 @@ import NatureOfWorkForm from "../../components/profiler-forms/work-experience/na
 import { ProfilerPageStyled } from "./style";
 
 const ProfilerPage = () => {
-  const { TabPane } = Tabs;
   const formRef1 = useRef(null);
   const formRef2 = useRef(null);
   const formRef3 = useRef(null);
   const formRef4 = useRef(null);
   const formRef5 = useRef(null);
 
-  const [activeKey, setActiveKey] = useState("1");
+  const [activeTab, setActiveTab] = useState(0);
   const [completedForms, setCompletedForms] = useState([]);
   const [unsavedChanges, setUnsavedChanges] = useState(false);
   const [overallProgress, setOverallProgress] = useState(0);
@@ -51,11 +50,11 @@ const ProfilerPage = () => {
     6: 100, // Hobbies
   };
 
-  const handleTabChange = (key) => {
+  const handleTabChange = (event, newValue) => {
     if (unsavedChanges) {
-      message.warning("Please save changes before moving to another form.");
+      // Handle unsaved changes logic here
     } else {
-      setActiveKey(key);
+      setActiveTab(newValue);
     }
   };
 
@@ -66,65 +65,13 @@ const ProfilerPage = () => {
     setOverallProgress(progress);
   };
 
-  const handleSubmitBasicDetails = () => {
-    formRef1.current
+  const handleSubmit = (formRef, formKey, nextTab) => {
+    formRef.current
       .validateFields()
       .then(() => {
-        setCompletedForms((prev) => [...prev, "1"]);
-        updateOverallProgress("1");
-        setActiveKey("2");
-      })
-      .catch((errorInfo) => {
-        console.log("Failed:", errorInfo);
-      });
-  };
-
-  const handleSubmitWorkExperience = () => {
-    formRef2.current
-      .validateFields()
-      .then(() => {
-        setCompletedForms((prev) => [...prev, "2"]);
-        updateOverallProgress("2");
-        setActiveKey("3");
-      })
-      .catch((errorInfo) => {
-        console.log("Failed:", errorInfo);
-      });
-  };
-
-  const handleSubmitNatureOfExperience = () => {
-    formRef3.current
-      .validateFields()
-      .then(() => {
-        setCompletedForms((prev) => [...prev, "3"]);
-        updateOverallProgress("3");
-        setActiveKey("4");
-      })
-      .catch((errorInfo) => {
-        console.log("Failed:", errorInfo);
-      });
-  };
-
-  const handleSubmitGraduate = () => {
-    formRef4.current
-      .validateFields()
-      .then(() => {
-        setCompletedForms((prev) => [...prev, "4"]);
-        updateOverallProgress("4");
-        setActiveKey("5");
-      })
-      .catch((errorInfo) => {
-        console.log("Failed:", errorInfo);
-      });
-  };
-
-  const handleSubmitService = () => {
-    formRef5.current
-      .validateFields()
-      .then(() => {
-        setCompletedForms((prev) => [...prev, "5"]);
-        updateOverallProgress("5");
-        setActiveKey("6");
+        setCompletedForms((prev) => [...prev, formKey]);
+        updateOverallProgress(formKey);
+        setActiveTab(nextTab);
       })
       .catch((errorInfo) => {
         console.log("Failed:", errorInfo);
@@ -136,153 +83,127 @@ const ProfilerPage = () => {
   };
 
   const handleSaveChanges = () => {
-    message.success("Changes saved!");
-    setUnsavedChanges(false);
+    // Handle save changes logic here
   };
 
   return (
-    <>
-      <ProfilerPageStyled>
-        <div className={`${activeKey === "1" ? "background-container" : ""}`}>
-          <NavBar />
-          <img
-            src={
-              "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1700885900/hihviyhqjhupwqeqr8gr.png"
-            }
-            alt=""
+    <ProfilerPageStyled>
+      <NavBar />
+      <div
+        className="container-fluid"
+        style={{ background: "rgb(248, 248, 248)" }}
+      >
+        <div style={{ background: "white" }} className="container">
+          <div
+            className="vh-100 container col-12"
             style={{
-              width: "50%",
-              position: "absolute",
-              left: "0",
-              bottom: "0",
-              display: `${activeKey === "1" ? "none" : "none"}`,
+              paddingTop: "100px",
+              display: "grid",
+              alignContent: "center",
+              justifyContent: `${
+                activeTab === 0 ? "center" : `${isMobile ? "start" : "center"}`
+              }`,
             }}
-          />
-          <div className="container">
-            <div
-              className="vh-100 container col-12"
-              style={{
-                paddingTop: "100px",
-                display: "grid",
-                alignContent: "center",
-                justifyContent: `${
-                  activeKey === "1"
-                    ? "start"
-                    : `${isMobile ? "start" : "center"}`
-                }`,
-              }}
-            >
-              <div>
-                {overallProgress > 0 && activeKey !== "1" && (
-                  <div style={{ marginBottom: "20px" }}>
-                    <Progress
-                      percent={overallProgress}
-                      status="active"
-                      showInfo={false}
-                    />
-                  </div>
-                )}
-                <Tabs
-                  tabBarStyle={{
-                    display: `${
-                      activeKey === "1"
-                        ? "none"
-                        : `${isMobile ? "none" : "block"}`
-                    }`,
-                  }}
-                  activeKey={activeKey}
-                  centered
-                  onChange={handleTabChange}
-                >
-                  <TabPane
-                    className="display"
-                    tab="Your Basic Details"
-                    key="1"
-                    style={{ transition: "opacity 0.3s ease-in-out" }}
-                  >
-                    <BasicDetailsForm
-                      formRef={formRef1}
-                      onSubmit={handleSubmitBasicDetails}
-                      onChange={handleFormChange}
-                      onSaveChanges={handleSaveChanges}
-                    />
-                  </TabPane>
-                  <TabPane
-                    tab="Your Work Experience"
-                    key="2"
-                    disabled={!completedForms.includes("1")}
-                  >
-                    <div
-                      className={`tab-content ${
-                        activeKey !== "2" ? "tab-content-hidden" : ""
-                      }`}
-                    >
-                      <WorkExperienceForm
-                        formRef={formRef2}
-                        onSubmit={handleSubmitWorkExperience}
-                        onChange={handleFormChange}
-                        onSaveChanges={handleSaveChanges}
-                      />
-                    </div>
-                  </TabPane>
-                  <TabPane
-                    tab="Nature of Experience"
-                    key="3"
-                    disabled={!completedForms.includes("2")}
-                  >
-                    <div
-                      className={`tab-content ${
-                        activeKey !== "3" ? "tab-content-hidden" : ""
-                      }`}
-                    >
-                      <NatureOfWorkForm
-                        formRef={formRef3}
-                        onSubmit={handleSubmitNatureOfExperience}
-                        onChange={handleFormChange}
-                        onSaveChanges={handleSaveChanges}
-                      />
-                    </div>
-                  </TabPane>
-
-                  <TabPane
-                    tab="Your Undergraduate Degree"
-                    key="4"
-                    disabled={!completedForms.includes("3")}
-                  >
-                    <UndergraduateDegreeForm
-                      formRef={formRef4}
-                      onSubmit={handleSubmitGraduate}
-                      onChange={handleFormChange}
-                      onSaveChanges={handleSaveChanges}
-                    />
-                  </TabPane>
-                  <TabPane
-                    tab="Community Service"
-                    key="5"
-                    disabled={!completedForms.includes("4")}
-                  >
-                    <CommunityServiceForm
-                      formRef={formRef5}
-                      onSubmit={handleSubmitService}
-                      onChange={handleFormChange}
-                      onSaveChanges={handleSaveChanges}
-                    />
-                  </TabPane>
-                  <TabPane
-                    tab="Hobbies"
-                    key="6"
-                    disabled={!completedForms.includes("4")}
-                  >
-                    <HobbiesForm />
-                  </TabPane>
-                </Tabs>
+          >
+            {overallProgress > 0 && activeTab !== 0 && (
+              <div style={{ marginBottom: "20px" }}>
+                {/* Display your progress bar here */}
               </div>
-            </div>
+            )}
+            <Tabs
+              value={activeTab}
+              centered
+              onChange={handleTabChange}
+              indicatorColor="primary"
+              textColor="primary"
+            >
+              <Tab label="Basic Details" />
+              <Tab label="Work Experience" />
+              <Tab label="Nature of Experience" />
+              <Tab label="Undergraduate Degree" />
+              <Tab label="Community Service" />
+              <Tab label="Hobbies" />
+            </Tabs>
+            <TabPanel value={activeTab} index={0}>
+              <div style={{ minHeight: "70vh" }}>
+                <BasicDetailsForm
+                  formRef={formRef1}
+                  onSubmit={() => handleSubmit(formRef1, "1", 1)}
+                  onChange={handleFormChange}
+                  onSaveChanges={handleSaveChanges}
+                />
+              </div>
+            </TabPanel>
+            <TabPanel value={activeTab} index={1}>
+              <div style={{ minHeight: "70vh" }}>
+                <WorkExperienceForm
+                  formRef={formRef2}
+                  onSubmit={() => handleSubmit(formRef2, "2", 2)}
+                  onChange={handleFormChange}
+                  onSaveChanges={handleSaveChanges}
+                />
+              </div>
+            </TabPanel>
+            <TabPanel value={activeTab} index={2}>
+              <div style={{ minHeight: "70vh" }}>
+                <NatureOfWorkForm
+                  formRef={formRef3}
+                  onSubmit={() => handleSubmit(formRef3, "3", 3)}
+                  onChange={handleFormChange}
+                  onSaveChanges={handleSaveChanges}
+                />
+              </div>
+            </TabPanel>
+            <TabPanel value={activeTab} index={3}>
+              <div style={{ minHeight: "70vh" }}>
+                <UndergraduateDegreeForm
+                  formRef={formRef4}
+                  onSubmit={() => handleSubmit(formRef4, "4", 4)}
+                  onChange={handleFormChange}
+                  onSaveChanges={handleSaveChanges}
+                />
+              </div>
+            </TabPanel>
+            <TabPanel value={activeTab} index={4}>
+              <div style={{ minHeight: "70vh" }}>
+                <CommunityServiceForm
+                  formRef={formRef5}
+                  onSubmit={() => handleSubmit(formRef5, "5", 5)}
+                  onChange={handleFormChange}
+                  onSaveChanges={handleSaveChanges}
+                />
+              </div>
+            </TabPanel>
+            <TabPanel value={activeTab} index={5}>
+              <div style={{ minHeight: "70vh" }}>
+                <HobbiesForm />
+              </div>
+            </TabPanel>
           </div>
         </div>
-      </ProfilerPageStyled>
-    </>
+      </div>
+    </ProfilerPageStyled>
   );
 };
 
 export default ProfilerPage;
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`tabpanel-${index}`}
+      aria-labelledby={`tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography component="div">{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}

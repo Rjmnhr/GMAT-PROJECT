@@ -25,41 +25,50 @@ const companySizeOptions = [
   },
 ];
 
-const WorkExperienceForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
-  const [selectedType, setSelectedType] = useState(null);
+const WorkExperienceForm = ({ formRef }) => {
+  const [selectedType, setSelectedType] = useState("Product");
   const [selectedGeographicalReach, setSelectedGeographicalReach] =
-    useState(null);
-  const [selectedCompanySize, setSelectedCompanySize] = useState(null);
+    useState("oneLocation");
+  const [selectedCompanySize, setSelectedCompanySize] = useState("<1000");
 
   const [form] = Form.useForm();
 
   useEffect(() => {
-    formRef.current = form;
-  }, [form, formRef]);
+    // Store default values in session storage when the component is rendered for the first time
+    const defaultValues = {
+      type: "Product",
+      geographicalReach: "oneLocation",
+      companySize: "<1000",
+    };
+    sessionStorage.setItem("experience", JSON.stringify(defaultValues));
 
-  const handleFormChange = (changedValues, allValues) => {
-    if (onChange) {
-      onChange(changedValues, allValues);
-    }
+    // Set form values based on the default values
+    form.setFieldsValue(defaultValues);
+  }, [form]);
+
+  useEffect(() => {
+    // Update session storage whenever form values change
+    const formValues = {
+      type: selectedType,
+      geographicalReach: selectedGeographicalReach,
+      companySize: selectedCompanySize,
+    };
+    sessionStorage.setItem("experience", JSON.stringify(formValues));
+  }, [selectedType, selectedGeographicalReach, selectedCompanySize]);
+
+  const handleTypeCardClick = (type) => {
+    form.setFieldsValue({ type });
+    setSelectedType(type);
   };
 
-  const handleSave = (values) => {
-    const finalObject = {
-      ...selectedType,
-      ...selectedGeographicalReach,
-      ...selectedCompanySize,
-      ...values,
-    };
+  const handleGeographicalReachOptionClick = (option) => {
+    form.setFieldsValue({ geographicalReach: option });
+    setSelectedGeographicalReach(option);
+  };
 
-    if (onSaveChanges) {
-      onSaveChanges(finalObject);
-    }
-    if (onSubmit) {
-      onSubmit(finalObject);
-    }
-
-    // Store values in sessionStorage
-    sessionStorage.setItem("experience", JSON.stringify(finalObject));
+  const handleCompanySizeCardClick = (size) => {
+    form.setFieldsValue({ companySize: size });
+    setSelectedCompanySize(size);
   };
 
   const geographicalReachOptions = [
@@ -84,36 +93,40 @@ const WorkExperienceForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
     <>
       <BasicDetailsFormStyled>
         <div className={` container-fluid`}>
-          {/* <div class="section-title pb-0 text-left">
-            <h2>Describe the Company</h2>
-          </div> */}
           <Form
             form={form}
             name="workExperienceForm"
-            onValuesChange={handleFormChange}
-            onFinish={handleSave}
             labelCol={{ span: 15 }}
             wrapperCol={{ span: 16 }}
           >
             <h5 className="text-left mb-2">Company type </h5>
             <div className="age-cards mt-2">
-              {["Product", "Services"].map((type) => (
-                <div
-                  style={{
-                    marginRight: "12px",
-                    marginTop: "8px",
-                    marginLeft: "0",
-                  }}
-                  key={type}
-                  className={`age-card ${
-                    selectedType?.productServices === type
-                      ? "selected-card"
-                      : ""
-                  }`}
-                  onClick={() => setSelectedType({ productServices: type })}
-                >
-                  {type}
-                </div>
+              {[
+                {
+                  label: "Product",
+                  url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701443744/gakt7sccsbxjxdh1oqvf.png",
+                },
+                {
+                  label: "Services",
+                  url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701444050/gs2ttnhot7wyls3obcxh.png",
+                },
+              ].map((type) => (
+                <Tooltip title={type.label} key={type.label}>
+                  <div
+                    style={{
+                      marginRight: "12px",
+                      marginTop: "8px",
+                      marginLeft: "0",
+                    }}
+                    key={type.label}
+                    className={`age-card ${
+                      selectedType === type.label ? "selected-card" : ""
+                    }`}
+                    onClick={() => handleTypeCardClick(type)}
+                  >
+                    <img src={type.url} alt="" />
+                  </div>
+                </Tooltip>
               ))}
             </div>
 
@@ -123,16 +136,13 @@ const WorkExperienceForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
                 <Tooltip title={option.description} key={option.value}>
                   <Card
                     className={`college-card ${
-                      selectedGeographicalReach?.multiNationalCompany ===
-                      option.value
+                      selectedGeographicalReach === option.value
                         ? "selected-card"
                         : ""
                     }`}
-                    onClick={() => {
-                      setSelectedGeographicalReach({
-                        multiNationalCompany: option.value,
-                      });
-                    }}
+                    onClick={() =>
+                      handleGeographicalReachOptionClick(option.value)
+                    }
                   >
                     <p>{option.label}</p>
                   </Card>
@@ -146,25 +156,16 @@ const WorkExperienceForm = ({ formRef, onSubmit, onChange, onSaveChanges }) => {
                 <Tooltip title={option.description} key={option.value}>
                   <Card
                     className={`college-card ${
-                      selectedCompanySize?.companySize === option.value
+                      selectedCompanySize === option.value
                         ? "selected-card"
                         : ""
                     }`}
-                    onClick={() => {
-                      setSelectedCompanySize({ companySize: option.value });
-                    }}
+                    onClick={() => handleCompanySizeCardClick(option.value)}
                   >
                     <p>{option.value}</p>
                   </Card>
                 </Tooltip>
               ))}
-            </div>
-
-            {/* Add a Next button to move to the next section */}
-            <div className="my-3 text-left" style={{ width: "100%" }}>
-              <button htmlType="submit" className="btn btn-lg btn-primary w-50">
-                Next
-              </button>
             </div>
           </Form>
         </div>

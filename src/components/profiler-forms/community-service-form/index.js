@@ -2,125 +2,114 @@ import React, { useEffect, useState } from "react";
 import { Card, Form, Tooltip } from "antd";
 import { BasicDetailsFormStyled } from "../basic-details/style";
 
-const CommunityServiceForm = ({
-  formRef,
-  onSubmit,
-  onChange,
-  onSaveChanges,
-}) => {
-  const [form] = Form.useForm();
-  const [selectedActivity, setSelectedActivity] = useState(null);
-  const [selectedContribution, setSelectedContribution] = useState(null);
-  const [selectedYears, setSelectedYears] = useState(null);
+const ActivityOptions = [
+  {
+    value: "international",
+    label: "International",
+    description: "International community service",
+  },
+  {
+    value: "national",
+    label: "National",
+    description: "National community service",
+  },
+  {
+    value: "stateWide",
+    label: "State",
+    description: "State-wide community service",
+  },
+  {
+    value: "localised",
+    label: "Localised",
+    description: "Localised community service",
+  },
+];
 
-  const ActivityOptions = [
-    {
-      value: "international",
-      label: "International",
-      description: "International community service",
-    },
-    {
-      value: "national",
-      label: "National",
-      description: "National community service",
-    },
-    {
-      value: "stateWide",
-      label: "State",
-      description: "State-wide community service",
-    },
-    {
-      value: "localised",
-      label: "Localised",
-      description: "Localised community service",
-    },
-  ];
+const ContributionOptions = [
+  {
+    value: "leading",
+    label: "Leading",
+    description: "Leading activities/groups",
+  },
+  {
+    value: "regular",
+    label: "Regular",
+    description: "Regularly part of a team doing activities",
+  },
+  {
+    value: "sometimes",
+    label: "Sometimes",
+    description: "Sometimes being involved in some activities",
+  },
+  {
+    value: "rarely",
+    label: "Rarely",
+    description: "Rarely being involved in any activity",
+  },
+];
 
-  const ContributionOptions = [
-    {
-      value: "leading",
-      label: "Leading",
-      description: "Leading activities/groups",
-    },
-    {
-      value: "regular",
-      label: "Regular",
-      description: "Regularly part of a team doing activities",
-    },
-    {
-      value: "sometimes",
-      label: "Sometimes",
-      description: "Sometimes being involved in some activities",
-    },
-    {
-      value: "rarely",
-      label: "Rarely",
-      description: "Rarely being involved in any activity",
-    },
-  ];
+const YearsOptions = [
+  { value: "<1", label: "< 1", description: "Less than 1 year" },
+  { value: "<2", label: "< 2", description: "Less than 2 years" },
+  { value: "<3", label: "< 3", description: "Less than 3 years" },
+  { value: "<5", label: "< 5", description: "Less than 5 years" },
+  { value: ">=5", label: ">= 5", description: "5 years or more" },
+];
 
-  const YearsOptions = [
-    { value: "<1", label: "< 1", description: "Less than 1 year" },
-    { value: "<2", label: "< 2", description: "Less than 2 years" },
-    { value: "<3", label: "< 3", description: "Less than 3 years" },
-    { value: "<5", label: "< 5", description: "Less than 5 years" },
-    { value: ">=5", label: ">= 5", description: "5 years or more" },
-  ];
+const CommunityServiceForm = ({ formRef }) => {
+  const [selectedActivity, setSelectedActivity] = useState(
+    ActivityOptions[0].value
+  );
+  const [selectedContribution, setSelectedContribution] = useState(
+    ContributionOptions[0].value
+  );
+  const [selectedYears, setSelectedYears] = useState(YearsOptions[0].value);
+
+  const handleCardClick = (key, value) => {
+    if (key === "natureOfActivity") {
+      setSelectedActivity(value);
+    } else if (key === "levelOfContribution") {
+      setSelectedContribution(value);
+    } else if (key === "yearsOfInvolvement") {
+      setSelectedYears(value);
+    }
+  };
 
   useEffect(() => {
-    formRef.current = form;
-  }, [form, formRef]);
-
-  const handleFormChange = (changedValues, allValues) => {
-    if (onChange) {
-      onChange(changedValues, allValues);
-    }
-  };
-
-  const handleSave = (values) => {
-    const finalObject = {
-      ...selectedActivity,
-      ...selectedContribution,
-      ...selectedYears,
-      ...values,
+    // Store default values in sessionStorage when the component is rendered for the first time
+    const defaultValues = {
+      natureOfActivity: ActivityOptions[0].value,
+      levelOfContribution: ContributionOptions[0].value,
+      yearsOfInvolvement: YearsOptions[0].value,
     };
+    sessionStorage.setItem("service", JSON.stringify(defaultValues));
+  }, []);
 
-    if (onSaveChanges) {
-      onSaveChanges(finalObject);
-    }
-    if (onSubmit) {
-      onSubmit(finalObject);
-    }
-
-    // Store values in sessionStorage
-    sessionStorage.setItem("service", JSON.stringify(finalObject));
-  };
+  useEffect(() => {
+    // Update session storage whenever form values change
+    const formValues = {
+      natureOfActivity: selectedActivity,
+      levelOfContribution: selectedContribution,
+      yearsOfInvolvement: selectedYears,
+    };
+    sessionStorage.setItem("service", JSON.stringify(formValues));
+  }, [selectedActivity, selectedContribution, selectedYears]);
 
   return (
     <>
       <BasicDetailsFormStyled>
         <div className=" container-fluid">
-          {/* <div class="section-title pb-0 text-left">
-              <h2>Community Service</h2>
-            </div> */}
-          <Form
-            onValuesChange={handleFormChange}
-            onFinish={handleSave}
-            labelCol={{ span: 5 }}
-            wrapperCol={{ span: 16 }}
-          >
+          <Form labelCol={{ span: 5 }} wrapperCol={{ span: 16 }}>
             <h5 className="text-left mb-2">Nature of activity </h5>
             <div className="college-cards">
               {ActivityOptions.map((option) => (
                 <Tooltip title={option.description} key={option.value}>
                   <Card
                     className={`college-card ${
-                      selectedActivity?.natureOfActivity === option.value
-                        ? "selected-card"
-                        : ""
+                      selectedActivity === option.value ? "selected-card" : ""
                     }`}
                     onClick={() =>
-                      setSelectedActivity({ natureOfActivity: option.value })
+                      handleCardClick("natureOfActivity", option.value)
                     }
                   >
                     <p>{option.label}</p>
@@ -135,14 +124,12 @@ const CommunityServiceForm = ({
                 <Tooltip title={option.description} key={option.value}>
                   <Card
                     className={`college-card ${
-                      selectedContribution?.levelOfContribution === option.value
+                      selectedContribution === option.value
                         ? "selected-card"
                         : ""
                     }`}
                     onClick={() =>
-                      setSelectedContribution({
-                        levelOfContribution: option.value,
-                      })
+                      handleCardClick("levelOfContribution", option.value)
                     }
                   >
                     <p>{option.label}</p>
@@ -157,24 +144,16 @@ const CommunityServiceForm = ({
                 <Tooltip title={option.description} key={option.value}>
                   <Card
                     className={`college-card ${
-                      selectedYears?.yearsOfInvolvement === option.value
-                        ? "selected-card"
-                        : ""
+                      selectedYears === option.value ? "selected-card" : ""
                     }`}
                     onClick={() =>
-                      setSelectedYears({ yearsOfInvolvement: option.value })
+                      handleCardClick("yearsOfInvolvement", option.value)
                     }
                   >
                     <p>{option.label}</p>
                   </Card>
                 </Tooltip>
               ))}
-            </div>
-
-            <div className="my-3 text-left" style={{ width: "100%" }}>
-              <button htmlType="submit" className="btn btn-lg btn-primary w-50">
-                Next
-              </button>
             </div>
           </Form>
         </div>

@@ -4,6 +4,7 @@ import { Card } from "antd";
 import safeIcon from "../../icons/shield.png";
 import achievableIcon from "../../icons/medal.png";
 import stretchIcon from "../../icons/achievement.png";
+import collegeIcon from "../../icons/graduation-hat.png";
 import { CollegeInformationOutputStyled } from "./style";
 
 const countrySourceData = [
@@ -95,82 +96,481 @@ const countrySourceData = [
   },
 ];
 
-const calculateLivingFactor = (country) => {
+const careerSourceData = [
+  {
+    label: "Financial services",
+    "Own business/venture": 1,
+    "Product Manager": 0,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 1,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "consulting",
+    "Own business/venture": 1,
+    "Product Manager": 0,
+    "Management Consulting": 1,
+    "Investment Banking/Private Equity": 1,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 0,
+  },
+  {
+    label: "Technology",
+    "Own business/venture": 0,
+    "Product Manager": 0,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "manufacturing",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 0,
+  },
+  {
+    label: "financial",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "consumer products",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 0,
+  },
+  {
+    label: "IT",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "health care",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 0,
+  },
+  {
+    label: "marketing",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 0,
+  },
+  {
+    label: "general management",
+    "Own business/venture": 1,
+    "Product Manager": 0,
+    "Management Consulting": 1,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "corporate sectors",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "software/internet",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "business development",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 0,
+  },
+  {
+    label: "Telecom",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "marketing/sales",
+    "Own business/venture": 0,
+    "Product Manager": 0,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 0,
+  },
+  {
+    label: "building/construction",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "human resources",
+    "Own business/venture": 0,
+    "Product Manager": 0,
+    "Management Consulting": 1,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "Investment Banking/Brokerage",
+    "Own business/venture": 0,
+    "Product Manager": 0,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 1,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 0,
+  },
+  {
+    label: "food/beverage",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "media/gaming",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "energy",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "professional services",
+    "Own business/venture": 0,
+    "Product Manager": 0,
+    "Management Consulting": 1,
+    "Investment Banking/Private Equity": 1,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 0,
+  },
+  {
+    label: "real estate",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "transportation",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "Retail",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "internet/ecommerce",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "social impact",
+    "Own business/venture": 1,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "energy/utilities",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "healt care",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "supply chain",
+    "Own business/venture": 0,
+    "Product Manager": 0,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "operations/logistics",
+    "Own business/venture": 0,
+    "Product Manager": 0,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "logistics",
+    "Own business/venture": 0,
+    "Product Manager": 0,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 0,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "construction",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "other",
+    "Own business/venture": 1,
+    "Product Manager": 1,
+    "Management Consulting": 1,
+    "Investment Banking/Private Equity": 1,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "others",
+    "Own business/venture": 1,
+    "Product Manager": 1,
+    "Management Consulting": 1,
+    "Investment Banking/Private Equity": 1,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "undefined",
+    "Own business/venture": 1,
+    "Product Manager": 1,
+    "Management Consulting": 1,
+    "Investment Banking/Private Equity": 1,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "Industry",
+    "Own business/venture": 1,
+    "Product Manager": 1,
+    "Management Consulting": 1,
+    "Investment Banking/Private Equity": 1,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+  {
+    label: "development",
+    "Own business/venture": 0,
+    "Product Manager": 1,
+    "Management Consulting": 0,
+    "Investment Banking/Private Equity": 0,
+    "Sales and Marketing": 1,
+    "Senior Manager (Finance, IT, Supply Chain)": 1,
+  },
+];
+
+const calculateLivingFactor = (country, importance) => {
   const livingFactor = countrySourceData.find(
     (factor) => factor.label === "Living"
   );
   return livingFactor && livingFactor[country] === "Y"
-    ? parseFloat(livingFactor.Factor)
+    ? parseFloat(livingFactor.Factor) * importance
     : 0;
 };
 
 // Helper function to calculate MBA factor value
-const calculateMBAFactor = (country) => {
+const calculateMBAFactor = (country, importance) => {
   const mbaFactor = countrySourceData.find((factor) => factor.label === "MBA");
   return mbaFactor && mbaFactor[country] === "Y"
-    ? parseFloat(mbaFactor.Factor)
+    ? parseFloat(mbaFactor.Factor) * importance
     : 0;
 };
 
 // Helper function to calculate Choice of courses factor value
-const calculateChoiceOfCoursesFactor = (country) => {
+const calculateChoiceOfCoursesFactor = (country, importance) => {
   const choiceOfCoursesFactor = countrySourceData.find(
     (factor) => factor.label === "Choice of courses"
   );
   return choiceOfCoursesFactor && choiceOfCoursesFactor[country] === "Y"
-    ? parseFloat(choiceOfCoursesFactor.Factor)
+    ? parseFloat(choiceOfCoursesFactor.Factor) * importance
     : 0;
 };
 
 // Helper function to calculate Internship factor value
-const calculateInternshipFactor = (country) => {
+const calculateInternshipFactor = (country, importance) => {
   const internshipFactor = countrySourceData.find(
     (factor) => factor.label === "Internship"
   );
   return internshipFactor && internshipFactor[country] === "Y"
-    ? parseFloat(internshipFactor.Factor)
+    ? parseFloat(internshipFactor.Factor) * importance
     : 0;
 };
 
 // Helper function to calculate English speaking factor value
-const calculateEnglishSpeakingFactor = (country) => {
+const calculateEnglishSpeakingFactor = (country, importance) => {
   const englishSpeakingFactor = countrySourceData.find(
     (factor) => factor.label === "English speaking"
   );
   return englishSpeakingFactor && englishSpeakingFactor[country] === "Y"
-    ? parseFloat(englishSpeakingFactor.Factor)
+    ? parseFloat(englishSpeakingFactor.Factor) * importance
     : 0;
 };
 
 // Helper function to calculate Weather factor value
-const calculateWeatherFactor = (country) => {
+const calculateWeatherFactor = (country, importance) => {
   const weatherFactor = countrySourceData.find(
     (factor) => factor.label === "Weather"
   );
   return weatherFactor && weatherFactor[country] === "Y"
-    ? parseFloat(weatherFactor.Factor)
+    ? parseFloat(weatherFactor.Factor) * importance
     : 0;
 };
 
-const calculateTuitionFeeFactor = (valueForMoneyRank) => {
+const calculateTuitionFeeFactor = (valueForMoneyRank, importance) => {
   return valueForMoneyRank < 30
     ? parseFloat(
         countrySourceData.find((factor) => factor.label === "Tuition Fee")
-          .Factor
+          .Factor * importance
       )
     : 0;
 };
 
 // Helper function to calculate Scholarship factor value
-const calculateScholarshipFactor = (valueForMoneyRank) => {
+const calculateScholarshipFactor = (valueForMoneyRank, importance) => {
   return valueForMoneyRank < 30
     ? parseFloat(
         countrySourceData.find((factor) => factor.label === "Scholarship")
-          .Factor
+          .Factor * importance
       )
     : 0;
 };
 
+const calculateCareerThreshold = (
+  college,
+  careerSourceData,
+  selectedOption
+) => {
+  const choices = [
+    college.top_career_choice_1,
+    college.top_career_choice_2,
+    college.top_career_choice_3,
+    college.top_career_choice_4,
+  ];
+
+  const factorValues = choices.map((choice, index) => {
+    const label = `top_career_choice_${index + 1}`;
+    const choiceObject = careerSourceData.find((obj) => obj.label === label);
+
+    if (choiceObject) {
+      const choiceValue = choiceObject[selectedOption] || 0;
+      return choiceValue * (4 - index);
+    }
+    return 0;
+  });
+
+  const sum = factorValues.reduce((acc, val) => acc + val, 0);
+  return sum === 0 ? 3 : sum;
+};
+
+const calculateCareerFactor = (
+  employedAtThreeMonths,
+  salaryTodayUS,
+  careerThreshold
+) => {
+  // Extract leftmost two characters from employedAtThreeMonths
+  const leftAF3Two = employedAtThreeMonths.toString().slice(0, 2);
+  // Extract leftmost three characters from employedAtThreeMonths
+  const leftAF3Three = employedAtThreeMonths.toString().slice(0, 3);
+
+  // Convert salaryTodayUS from currency format to a number
+  const numericSalaryTodayUS = parseFloat(
+    salaryTodayUS.replace(/[^0-9.-]+/g, "")
+  );
+
+  const firstResult =
+    ((numericSalaryTodayUS * parseInt(leftAF3Two, 10)) / 100 / 220000) * 8;
+  const secondResult =
+    ((numericSalaryTodayUS * parseInt(leftAF3Three, 10)) / 100 / 220000) * 8;
+  const thirdResult =
+    ((numericSalaryTodayUS * parseInt(leftAF3Two, 10)) / 100 / 220000) * 5;
+
+  const condition = firstResult < 1 ? secondResult : thirdResult;
+  const finalResult = condition + careerThreshold * 1;
+
+  return finalResult;
+};
 const CollegeInformationOutput = () => {
   const storedSafe = sessionStorage.getItem("safe");
   const storedAchievable = sessionStorage.getItem("achievable");
@@ -178,9 +578,16 @@ const CollegeInformationOutput = () => {
   const storedTotalGeneralValue = sessionStorage.getItem(
     "experience_general_value"
   );
+  const storedPreferenceInput = JSON.parse(
+    sessionStorage.getItem("preferenceInputObject")
+  );
+  const storedGoalsInput = JSON.parse(
+    sessionStorage.getItem("goalsInputObject")
+  );
   const [collegeData, setCollegeData] = useState([]);
   const [gmatScore, setGmatScore] = useState(0);
   const [gpaScore, setGpaScore] = useState(0);
+  const selectedOption = storedGoalsInput?.shortTermGoals;
   useEffect(() => {
     AxiosInstance.post(
       "api/profiler/college-information",
@@ -316,18 +723,48 @@ const CollegeInformationOutput = () => {
       );
     }
   };
+
   // Separate colleges into different arrays based on categories
   const safeColleges = collegeData.safe?.map((college) => {
     return {
       ...college,
-      living: calculateLivingFactor(college.country),
-      mba: calculateMBAFactor(college.country),
-      weather: calculateWeatherFactor(college.country),
-      englishSpeaking: calculateEnglishSpeakingFactor(college.country),
-      choiceOfCourses: calculateChoiceOfCoursesFactor(college.country),
-      internship: calculateInternshipFactor(college.country),
-      tuitionFee: calculateTuitionFeeFactor(college.value_for_money_rank),
-      scholarship: calculateScholarshipFactor(college.value_for_money_rank),
+      living: calculateLivingFactor(
+        college.country,
+        storedPreferenceInput.livingCountry
+      ),
+      mba: calculateMBAFactor(
+        college.country,
+        storedPreferenceInput.internationalMBA
+      ),
+      weather: calculateWeatherFactor(
+        college.country,
+        storedPreferenceInput.weather
+      ),
+      englishSpeaking: calculateEnglishSpeakingFactor(
+        college.country,
+        storedPreferenceInput.englishSpeaking
+      ),
+      choiceOfCourses: calculateChoiceOfCoursesFactor(
+        college.country,
+        storedPreferenceInput.choiceOfCourses
+      ),
+      internship: calculateInternshipFactor(
+        college.country,
+        storedPreferenceInput.internship
+      ),
+      tuitionFee: calculateTuitionFeeFactor(
+        college.value_for_money_rank,
+        storedPreferenceInput.tuitionFee
+      ),
+      scholarship: calculateScholarshipFactor(
+        college.value_for_money_rank,
+        storedPreferenceInput.scholarship
+      ),
+      careerThreshold: calculateCareerThreshold(
+        college,
+        careerSourceData,
+        selectedOption
+      ),
       difficulty: calculateDifficultyFactor(college.acceptance_rate, "safe"),
       gmat: calculateGmatFactor(college.average_gmat, "safe"),
       gpa: calculateGpaFactor(college.undergraduate_gpa, "safe"),
@@ -341,14 +778,43 @@ const CollegeInformationOutput = () => {
   const achievableColleges = collegeData.achievable?.map((college) => {
     return {
       ...college,
-      living: calculateLivingFactor(college.country),
-      mba: calculateMBAFactor(college.country),
-      weather: calculateWeatherFactor(college.country),
-      englishSpeaking: calculateEnglishSpeakingFactor(college.country),
-      choiceOfCourses: calculateChoiceOfCoursesFactor(college.country),
-      internship: calculateInternshipFactor(college.country),
-      tuitionFee: calculateTuitionFeeFactor(college.value_for_money_rank),
-      scholarship: calculateScholarshipFactor(college.value_for_money_rank),
+      living: calculateLivingFactor(
+        college.country,
+        storedPreferenceInput.livingCountry
+      ),
+      mba: calculateMBAFactor(
+        college.country,
+        storedPreferenceInput.internationalMBA
+      ),
+      weather: calculateWeatherFactor(
+        college.country,
+        storedPreferenceInput.weather
+      ),
+      englishSpeaking: calculateEnglishSpeakingFactor(
+        college.country,
+        storedPreferenceInput.englishSpeaking
+      ),
+      choiceOfCourses: calculateChoiceOfCoursesFactor(
+        college.country,
+        storedPreferenceInput.choiceOfCourses
+      ),
+      internship: calculateInternshipFactor(
+        college.country,
+        storedPreferenceInput.internship
+      ),
+      tuitionFee: calculateTuitionFeeFactor(
+        college.value_for_money_rank,
+        storedPreferenceInput.tuitionFee
+      ),
+      scholarship: calculateScholarshipFactor(
+        college.value_for_money_rank,
+        storedPreferenceInput.scholarship
+      ),
+      careerThreshold: calculateCareerThreshold(
+        college,
+        careerSourceData,
+        selectedOption
+      ),
       difficulty: calculateDifficultyFactor(
         college.acceptance_rate,
         "achievable"
@@ -365,20 +831,90 @@ const CollegeInformationOutput = () => {
   const stretchColleges = collegeData.stretch?.map((college) => {
     return {
       ...college,
-      living: calculateLivingFactor(college.country),
-      mba: calculateMBAFactor(college.country),
-      weather: calculateWeatherFactor(college.country),
-      englishSpeaking: calculateEnglishSpeakingFactor(college.country),
-      choiceOfCourses: calculateChoiceOfCoursesFactor(college.country),
-      internship: calculateInternshipFactor(college.country),
-      tuitionFee: calculateTuitionFeeFactor(college.value_for_money_rank),
-      scholarship: calculateScholarshipFactor(college.value_for_money_rank),
+
+      living: calculateLivingFactor(
+        college.country,
+        storedPreferenceInput.livingCountry
+      ),
+      mba: calculateMBAFactor(
+        college.country,
+        storedPreferenceInput.internationalMBA
+      ),
+      weather: calculateWeatherFactor(
+        college.country,
+        storedPreferenceInput.weather
+      ),
+      englishSpeaking: calculateEnglishSpeakingFactor(
+        college.country,
+        storedPreferenceInput.englishSpeaking
+      ),
+      choiceOfCourses: calculateChoiceOfCoursesFactor(
+        college.country,
+        storedPreferenceInput.choiceOfCourses
+      ),
+      internship: calculateInternshipFactor(
+        college.country,
+        storedPreferenceInput.internship
+      ),
+      tuitionFee: calculateTuitionFeeFactor(
+        college.value_for_money_rank,
+        storedPreferenceInput.tuitionFee
+      ),
+      scholarship: calculateScholarshipFactor(
+        college.value_for_money_rank,
+        storedPreferenceInput.scholarship
+      ),
+      careerThreshold: calculateCareerThreshold(
+        college,
+        careerSourceData,
+        selectedOption
+      ),
       difficulty: calculateDifficultyFactor(college.acceptance_rate, "stretch"),
       gmat: calculateGmatFactor(college.average_gmat, "stretch"),
       gpa: calculateGpaFactor(college.undergraduate_gpa, "stretch"),
       experience: calculateExperienceFactor(
         college.average_years_of_experience,
         "stretch"
+      ),
+    };
+  });
+
+  // Adding Career factor value to each category
+  const safeCollegesWithCareerFactor = safeColleges?.map((college) => {
+    return {
+      ...college,
+      careerFactor: calculateCareerFactor(
+        college.employed_at_three_months,
+        college.salary_today_us,
+        college.careerThreshold
+      ),
+    };
+  });
+  console.log(
+    "🚀 ~ file: index.js:814 ~ safeCollegesWithCareerFactor ~ safeCollegesWithCareerFactor:",
+    safeCollegesWithCareerFactor
+  );
+
+  const achievableCollegesWithCareerFactor = achievableColleges?.map(
+    (college) => {
+      return {
+        ...college,
+        careerFactor: calculateCareerFactor(
+          college.employed_at_three_months,
+          college.salary_today_us,
+          college.careerThreshold
+        ),
+      };
+    }
+  );
+
+  const stretchCollegesWithCareerFactor = stretchColleges?.map((college) => {
+    return {
+      ...college,
+      careerFactor: calculateCareerFactor(
+        college.employed_at_three_months,
+        college.salary_today_us,
+        college.careerThreshold
       ),
     };
   });
@@ -396,7 +932,8 @@ const CollegeInformationOutput = () => {
       college.difficulty +
       college.gmat +
       college.gpa +
-      college.experience;
+      college.experience +
+      college.careerFactor;
 
     return factorsSum + (100 - college.rank_in_2020) / 100;
   };
@@ -412,9 +949,13 @@ const CollegeInformationOutput = () => {
   };
 
   // Calculate and get the final results for each category
-  const finalResultsSafe = calculateFinalResults(safeColleges);
-  const finalResultsAchievable = calculateFinalResults(achievableColleges);
-  const finalResultsStretch = calculateFinalResults(stretchColleges);
+  const finalResultsSafe = calculateFinalResults(safeCollegesWithCareerFactor);
+  const finalResultsAchievable = calculateFinalResults(
+    achievableCollegesWithCareerFactor
+  );
+  const finalResultsStretch = calculateFinalResults(
+    stretchCollegesWithCareerFactor
+  );
 
   // Find the top two schools from each category based on weightage
   const topSchoolsSafe = finalResultsSafe
@@ -428,113 +969,186 @@ const CollegeInformationOutput = () => {
     ?.sort((a, b) => b.weightage - a.weightage)
     ?.slice(0, 2);
 
+  const combinedTopColleges = [
+    ...topSchoolsSafe,
+    ...topSchoolsAchievable,
+    ...topSchoolsStretch,
+  ];
+  // Sort combinedTopColleges based on weightage
+  const sortedCombinedTopColleges = combinedTopColleges?.sort(
+    (a, b) => b.weightage - a.weightage
+  );
+
   return (
     <CollegeInformationOutputStyled>
       <div>
         <div className="section-title">
           <h2>College information</h2>
-          <div>
-            <h5 className="mb-3 mt-3 text-left">
-              Shortlisted Colleges Based on the ranking
-            </h5>
-            <div className="mb-3 text-left">
-              {topSchoolsSafe?.map((item) => {
-                return (
-                  <Card
-                    className="mb-2"
-                    style={{
-                      width: "75%",
-                      boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
-                    }}
-                  >
-                    <div className="d-flex justify-content-start align-items-center">
-                      <img
-                        height={50}
-                        width={50}
-                        style={{ borderRadius: "50%" }}
-                        src={safeIcon}
-                        alt=""
-                      />
-                      <p
-                        style={{
-                          fontWeight: "bold",
-                          fontSize: "18px",
-                          marginLeft: "10px",
-                        }}
-                      >
-                        {item.school_name} (
-                        <span style={{ color: "blue" }}>Safe</span>)
-                      </p>
-                    </div>
-                  </Card>
-                );
-              })}
+          <div className="d-lg-flex">
+            <div className="col-6">
+              <h5 className="mb-3 mt-3 text-left">
+                Top 6 colleges based on FT rankings
+              </h5>
+              <div className="mb-3 text-left">
+                {topSchoolsSafe?.map((item) => {
+                  return (
+                    <Card
+                      className="mb-2"
+                      style={{
+                        width: "100%",
+                        boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
+                      }}
+                    >
+                      <div className="d-flex justify-content-start align-items-center">
+                        <img
+                          height={30}
+                          width={30}
+                          style={{ borderRadius: "50%" }}
+                          src={safeIcon}
+                          alt=""
+                        />
+                        <p
+                          style={{
+                            fontWeight: "bold",
+                            fontSize: "18px",
+                            marginLeft: "10px",
+                          }}
+                        >
+                          {item.school_name}{" "}
+                          <span
+                            style={{
+                              color: "blue",
+
+                              fontWeight: "normal",
+                            }}
+                          >
+                            (Safe)
+                          </span>
+                        </p>
+                      </div>
+                    </Card>
+                  );
+                })}
+              </div>
+              <div className="mb-3 text-left">
+                {topSchoolsAchievable?.map((item) => {
+                  return (
+                    <Card
+                      className="mb-2"
+                      style={{
+                        width: "100%",
+                        boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
+                      }}
+                    >
+                      <div className="d-flex justify-content-start align-items-center">
+                        <img
+                          height={30}
+                          width={30}
+                          style={{ borderRadius: "50%" }}
+                          src={achievableIcon}
+                          alt=""
+                        />
+                        <p
+                          style={{
+                            fontWeight: "bold",
+                            fontSize: "18px",
+                            marginLeft: "10px",
+                          }}
+                        >
+                          {item.school_name}{" "}
+                          <span
+                            style={{
+                              color: "blue",
+
+                              fontWeight: "normal",
+                            }}
+                          >
+                            (Achievable)
+                          </span>
+                        </p>
+                      </div>
+                    </Card>
+                  );
+                })}
+              </div>
+              <div className="mb-3 text-left">
+                {topSchoolsStretch?.map((item) => {
+                  return (
+                    <Card
+                      className="mb-2"
+                      style={{
+                        width: "100%",
+                        boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
+                      }}
+                    >
+                      <div className="d-flex justify-content-start align-items-center">
+                        <img
+                          height={30}
+                          width={30}
+                          style={{ borderRadius: "50%" }}
+                          src={stretchIcon}
+                          alt=""
+                        />
+                        <p
+                          style={{
+                            fontWeight: "bold",
+                            fontSize: "18px",
+                            marginLeft: "10px",
+                          }}
+                        >
+                          {item.school_name}
+                          <span
+                            style={{
+                              color: "blue",
+
+                              fontWeight: "normal",
+                            }}
+                          >
+                            (Stretch)
+                          </span>
+                        </p>
+                      </div>
+                    </Card>
+                  );
+                })}
+              </div>
             </div>
-            <div className="mb-3 text-left">
-              {topSchoolsAchievable?.map((item) => {
-                return (
-                  <Card
-                    className="mb-2"
-                    style={{
-                      width: "75%",
-                      boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
-                    }}
-                  >
-                    <div className="d-flex justify-content-start align-items-center">
-                      <img
-                        height={50}
-                        width={50}
-                        style={{ borderRadius: "50%" }}
-                        src={achievableIcon}
-                        alt=""
-                      />
-                      <p
-                        style={{
-                          fontWeight: "bold",
-                          fontSize: "18px",
-                          marginLeft: "10px",
-                        }}
-                      >
-                        {item.school_name} (
-                        <span style={{ color: "blue" }}>Achievable</span>)
-                      </p>
-                    </div>
-                  </Card>
-                );
-              })}
-            </div>
-            <div className="mb-3 text-left">
-              {topSchoolsStretch?.map((item) => {
-                return (
-                  <Card
-                    className="mb-2"
-                    style={{
-                      width: "75%",
-                      boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
-                    }}
-                  >
-                    <div className="d-flex justify-content-start align-items-center">
-                      <img
-                        height={50}
-                        width={50}
-                        style={{ borderRadius: "50%" }}
-                        src={stretchIcon}
-                        alt=""
-                      />
-                      <p
-                        style={{
-                          fontWeight: "bold",
-                          fontSize: "18px",
-                          marginLeft: "10px",
-                        }}
-                      >
-                        {item.school_name} (
-                        <span style={{ color: "blue" }}>Stretch</span>)
-                      </p>
-                    </div>
-                  </Card>
-                );
-              })}
+            <div className="col-6">
+              <h5 className="mb-3 mt-3 text-left">
+                Top 6 colleges based on your background
+              </h5>
+              <div className="mb-3 text-left">
+                {sortedCombinedTopColleges?.map((item) => {
+                  return (
+                    <Card
+                      className="mb-2"
+                      style={{
+                        width: "100%",
+                        boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
+                      }}
+                    >
+                      <div className="d-flex justify-content-start align-items-center">
+                        <img
+                          height={30}
+                          width={30}
+                          style={{ borderRadius: "50%" }}
+                          src={collegeIcon}
+                          alt=""
+                        />
+                        <p
+                          style={{
+                            fontWeight: "bold",
+                            fontSize: "18px",
+                            marginLeft: "10px",
+                          }}
+                        >
+                          {item.school_name}
+                        </p>
+                      </div>
+                    </Card>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

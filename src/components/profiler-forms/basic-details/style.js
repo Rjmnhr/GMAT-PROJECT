@@ -1,6 +1,23 @@
 import styled from "styled-components";
 
 export const BasicDetailsFormStyled = styled.div`
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    margin-bottom: 20px;
+  }
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    border-right: 5px solid #cfcecc;
+    border-bottom: none;
+  }
+  .css-10d9dml-MuiTabs-indicator {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    width: 5px;
+    -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: rgb(0, 128, 128);
+    right: 0;
+  }
   .ant-form-item .ant-form-item-label {
     text-align: left;
   }
@@ -64,11 +81,11 @@ export const BasicDetailsFormStyled = styled.div`
     margin-left: 0;
   }
   .age-card:hover {
-    border-color: 1px solid #e83e8c; /* Change border color on hover */
+    border-color: 1px solid #049494; /* Change border color on hover */
   }
 
   .selected-card {
-    border: 2px solid #e83e8c;
+    border: 2px solid #049494;
   }
 
   .gender-options {

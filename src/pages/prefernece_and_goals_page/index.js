@@ -17,6 +17,10 @@ const PreferenceForm = ({ onSubmit }) => {
   const onFinish = (values) => {
     console.log("🚀 ~ file: index.js:17 ~ onFinish ~ values:", values);
     console.log(selectedOptions);
+    sessionStorage.setItem(
+      "preferenceInputObject",
+      JSON.stringify(selectedOptions)
+    );
     onSubmit();
   };
 
@@ -255,6 +259,145 @@ const AfterMBAForm = ({ onNext, onBack }) => {
   );
 };
 
+const GoalsForm = ({ onNext, onBack }) => {
+  const [selectedOptions, setSelectedOptions] = useState({});
+
+  const handleCardClick = (label, value) => {
+    setSelectedOptions({
+      ...selectedOptions,
+      [label]: value,
+    });
+  };
+
+  const onFinish = (values) => {
+    sessionStorage.setItem("goalsInputObject", JSON.stringify(selectedOptions));
+
+    onNext();
+  };
+
+  const longTermGoalsOptions = [
+    {
+      value: "Own business/venture",
+      text: "Own business/venture",
+      label: "Own business/venture",
+    },
+    {
+      value: "General Manager",
+      text: "General Manager of a business unit or function",
+      label: "General Manager",
+    },
+    { value: "CEO", text: "CEO of a business unit/function", label: "CEO" },
+    {
+      value: "Partner",
+      text: "Partner of a consulting firm",
+      label: "Partner",
+    },
+  ];
+
+  const shortTermGoalsOptions = [
+    {
+      value: "Own business/venture",
+      text: "Own business/venture",
+      label: "Own business/venture",
+    },
+    {
+      value: "Product Manager",
+      text: "Product Manager",
+      label: "Product Manager",
+    },
+    {
+      value: "Management Consulting",
+      text: "Management Consulting",
+      label: "Management Consulting",
+    },
+    {
+      value: "Investment Banking",
+      text: "Investment Banking/Private Equity",
+      label: "Investment Banking",
+    },
+    {
+      value: "Sales and Marketing",
+      text: "Sales and Marketing",
+      label: "Sales and Marketing",
+    },
+    {
+      value: "Senior Manager",
+      text: "Senior Manager (Finance, IT, Supply Chain)",
+      label: "Senior Manager",
+    },
+  ];
+
+  const renderCardOptions = (label, options) => {
+    return (
+      <div className="college-cards">
+        {options.map((option) => (
+          <Card
+            className="college-card"
+            key={option.label}
+            onClick={() => handleCardClick(label, option.label)}
+            style={{
+              border:
+                selectedOptions[label] === option.label
+                  ? "2px solid #1890ff"
+                  : "2px solid #d9d9d9",
+            }}
+          >
+            <p>{option.label}</p>
+          </Card>
+        ))}
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      <PreferenceAndGoalsPageStyled>
+        <h5 className="mb-3 mt-3">Set your long term and short term goals:</h5>
+
+        <Form onFinish={onFinish}>
+          <div className=" d-lg-flex container-fluid">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "start",
+                alignItems: "center",
+                flexDirection: "column",
+              }}
+              className="col-lg-12"
+            >
+              <Form.Item name="longTermGoals">
+                <p className="text-left">Long Term Goals</p>
+                {renderCardOptions("longTermGoals", longTermGoalsOptions)}
+              </Form.Item>
+
+              <Form.Item name="shortTermGoals">
+                <p className="text-left">Short Term Goals</p>
+                {renderCardOptions("shortTermGoals", shortTermGoalsOptions)}
+              </Form.Item>
+            </div>
+          </div>
+
+          <div
+            className="my-3 text-center d-flex justify-content-center align-items-center"
+            style={{ width: "100%" }}
+          >
+            <button
+              onClick={onBack}
+              className="btn btn-lg border"
+              style={{ marginRight: 8 }}
+            >
+              Back
+            </button>
+            <button htmlType="submit" className="btn btn-lg btn-primary w-25">
+              Next
+            </button>
+          </div>
+        </Form>
+      </PreferenceAndGoalsPageStyled>
+    </div>
+  );
+};
+
 const PreferenceAndGoalsPage = () => {
   const [currentStep, setCurrentStep] = useState("1");
   const { TabPane } = Tabs;
@@ -288,6 +431,9 @@ const PreferenceAndGoalsPage = () => {
           <AfterMBAForm onNext={handleNext} onBack={handleBack} />
         </TabPane>
         <TabPane className="display" tab="output" key="3">
+          <GoalsForm onNext={handleNext} onBack={handleBack} />
+        </TabPane>
+        <TabPane className="display" tab="output" key="4">
           <CollegeInformationOutput />
         </TabPane>
       </Tabs>

@@ -671,7 +671,7 @@ const ChancesOfSelection = () => {
       <ChancesOfSelectionStyled>
         <div className="d-lg-flex" style={{ marginTop: "85px" }}>
           <div
-            style={{ height: "100vh", background: "#f8f8f8" }}
+            style={{ height: "20vh", background: "#f8f8f8" }}
             className="side-bar p-0  col-lg-2 col-12"
           >
             <div className="mt-3">
