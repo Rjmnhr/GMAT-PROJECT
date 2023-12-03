@@ -4,10 +4,16 @@ import { BasicDetailsFormStyled } from "./style";
 import maleIcon from "../../../icons/man.png";
 import femaleIcon from "../../../icons/woman.png";
 
-const BasicDetailsForm = ({ formRef }) => {
-  const [selectedAge, setSelectedAge] = useState("<26");
-  const [selectedGender, setSelectedGender] = useState("male");
-  const [selectedGMAT, setSelectedGMAT] = useState("<620");
+const BasicDetailsForm = ({ onUpdateProgress }) => {
+  const [selectedAge, setSelectedAge] = useState(
+    JSON.parse(sessionStorage.getItem("basic-details"))?.age
+  );
+  const [selectedGender, setSelectedGender] = useState(
+    JSON.parse(sessionStorage.getItem("basic-details"))?.gender
+  );
+  const [selectedGMAT, setSelectedGMAT] = useState(
+    JSON.parse(sessionStorage.getItem("basic-details"))?.gmat
+  );
 
   useEffect(() => {
     // Store default values in session storage when the component is rendered for the first time
@@ -16,7 +22,10 @@ const BasicDetailsForm = ({ formRef }) => {
       gender: "male",
       gmat: "<620",
     };
-    sessionStorage.setItem("basic-details", JSON.stringify(defaultValues));
+    sessionStorage.setItem(
+      "basic-details-default",
+      JSON.stringify(defaultValues)
+    );
 
     // Set form values based on the default values
   }, []);
@@ -29,6 +38,12 @@ const BasicDetailsForm = ({ formRef }) => {
       gmat: selectedGMAT,
     };
     sessionStorage.setItem("basic-details", JSON.stringify(formValues));
+    const nonEmptyCount = [selectedAge, selectedGender, selectedGMAT].filter(
+      Boolean
+    ).length;
+
+    onUpdateProgress("basic-details", nonEmptyCount);
+    //eslint-disable-next-line
   }, [selectedAge, selectedGender, selectedGMAT]);
 
   const { Meta } = Card;

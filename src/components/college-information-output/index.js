@@ -446,7 +446,7 @@ const calculateLivingFactor = (country, importance) => {
     (factor) => factor.label === "Living"
   );
   return livingFactor && livingFactor[country] === "Y"
-    ? parseFloat(livingFactor.Factor) * importance
+    ? parseFloat(livingFactor.Factor) * (importance ? importance : 1)
     : 0;
 };
 
@@ -454,7 +454,7 @@ const calculateLivingFactor = (country, importance) => {
 const calculateMBAFactor = (country, importance) => {
   const mbaFactor = countrySourceData.find((factor) => factor.label === "MBA");
   return mbaFactor && mbaFactor[country] === "Y"
-    ? parseFloat(mbaFactor.Factor) * importance
+    ? parseFloat(mbaFactor.Factor) * (importance ? importance : 1)
     : 0;
 };
 
@@ -464,7 +464,7 @@ const calculateChoiceOfCoursesFactor = (country, importance) => {
     (factor) => factor.label === "Choice of courses"
   );
   return choiceOfCoursesFactor && choiceOfCoursesFactor[country] === "Y"
-    ? parseFloat(choiceOfCoursesFactor.Factor) * importance
+    ? parseFloat(choiceOfCoursesFactor.Factor) * (importance ? importance : 1)
     : 0;
 };
 
@@ -474,7 +474,7 @@ const calculateInternshipFactor = (country, importance) => {
     (factor) => factor.label === "Internship"
   );
   return internshipFactor && internshipFactor[country] === "Y"
-    ? parseFloat(internshipFactor.Factor) * importance
+    ? parseFloat(internshipFactor.Factor) * (importance ? importance : 1)
     : 0;
 };
 
@@ -484,7 +484,7 @@ const calculateEnglishSpeakingFactor = (country, importance) => {
     (factor) => factor.label === "English speaking"
   );
   return englishSpeakingFactor && englishSpeakingFactor[country] === "Y"
-    ? parseFloat(englishSpeakingFactor.Factor) * importance
+    ? parseFloat(englishSpeakingFactor.Factor) * (importance ? importance : 1)
     : 0;
 };
 
@@ -494,7 +494,7 @@ const calculateWeatherFactor = (country, importance) => {
     (factor) => factor.label === "Weather"
   );
   return weatherFactor && weatherFactor[country] === "Y"
-    ? parseFloat(weatherFactor.Factor) * importance
+    ? parseFloat(weatherFactor.Factor) * (importance ? importance : 1)
     : 0;
 };
 
@@ -502,7 +502,7 @@ const calculateTuitionFeeFactor = (valueForMoneyRank, importance) => {
   return valueForMoneyRank < 30
     ? parseFloat(
         countrySourceData.find((factor) => factor.label === "Tuition Fee")
-          .Factor * importance
+          .Factor * (importance ? importance : 1)
       )
     : 0;
 };
@@ -512,7 +512,7 @@ const calculateScholarshipFactor = (valueForMoneyRank, importance) => {
   return valueForMoneyRank < 30
     ? parseFloat(
         countrySourceData.find((factor) => factor.label === "Scholarship")
-          .Factor * importance
+          .Factor * (importance ? importance : 1)
       )
     : 0;
 };
@@ -605,7 +605,7 @@ const CollegeInformationOutput = () => {
       .then(async (res) => {
         const response = await res.data;
         setCollegeData(response);
-        console.log("🚀 ~ file: index.js:54 ~ .then ~ response:", response);
+        sessionStorage.setItem("form-filled", true);
       })
       .catch((err) => console.log(err));
     //eslint-disable-next-line
@@ -890,10 +890,6 @@ const CollegeInformationOutput = () => {
       ),
     };
   });
-  console.log(
-    "🚀 ~ file: index.js:814 ~ safeCollegesWithCareerFactor ~ safeCollegesWithCareerFactor:",
-    safeCollegesWithCareerFactor
-  );
 
   const achievableCollegesWithCareerFactor = achievableColleges?.map(
     (college) => {
@@ -969,11 +965,16 @@ const CollegeInformationOutput = () => {
     ?.sort((a, b) => b.weightage - a.weightage)
     ?.slice(0, 2);
 
-  const combinedTopColleges = [
-    ...topSchoolsSafe,
-    ...topSchoolsAchievable,
-    ...topSchoolsStretch,
-  ];
+  let combinedTopColleges;
+
+  if (topSchoolsSafe && topSchoolsAchievable && topSchoolsStretch) {
+    combinedTopColleges = [
+      ...topSchoolsSafe,
+      ...topSchoolsAchievable,
+      ...topSchoolsStretch,
+    ];
+  }
+
   // Sort combinedTopColleges based on weightage
   const sortedCombinedTopColleges = combinedTopColleges?.sort(
     (a, b) => b.weightage - a.weightage

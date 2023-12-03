@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ChancesOfSelectionStyled = styled.div`
   .selected-tab {
-    background-color: #e03a3c !important;
+    background-color: #049494 !important;
     color: white;
   }
   table {

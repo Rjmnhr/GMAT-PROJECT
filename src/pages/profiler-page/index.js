@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../../components/nav-bar";
 import { Tabs, Tab, Typography, Box } from "@mui/material";
 import BasicDetailsForm from "../../components/profiler-forms/basic-details";
@@ -9,19 +9,79 @@ import HobbiesForm from "../../components/profiler-forms/hobbies-form";
 import NatureOfWorkForm from "../../components/profiler-forms/work-experience/nature-of-work";
 
 import { ProfilerPageStyled } from "./style";
+import { Progress, message } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const ProfilerPage = () => {
-  const formRef1 = useRef(null);
-  const formRef2 = useRef(null);
-  const formRef3 = useRef(null);
-  const formRef4 = useRef(null);
-  const formRef5 = useRef(null);
-
   const [activeTab, setActiveTab] = useState(0);
-  const [completedForms, setCompletedForms] = useState([]);
-  const [unsavedChanges, setUnsavedChanges] = useState(false);
-  const [overallProgress, setOverallProgress] = useState(0);
+  const [progress, setProgress] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [totalNonEmptyCountValue, setTotalNonEmptyCountValue] = useState(0);
+  const [overAllProgress, setOverAllProgress] = useState(0);
+  const navigate = useNavigate();
+  const [messageApi, contextHolder] = message.useMessage();
+  const totalQuestions = 26;
+
+  const handleSaveAndContinue = () => {
+    try {
+      updateFormValues("basic-details");
+      updateFormValues("experience");
+
+      updateFormValues("natureExperience");
+      updateFormValues("graduate");
+      updateFormValues("service");
+      updateFormValues("hobbies");
+      sessionStorage.removeItem("form-filled");
+      navigate("/selection-chance");
+    } catch {
+      messageApi.open({
+        type: "error",
+        content: "You have not answered enough questions to continue",
+      });
+    }
+  };
+  const updateFormValues = (formName) => {
+    const defaultValues = JSON.parse(
+      sessionStorage.getItem(`${formName}-default`)
+    );
+    const currentValues = JSON.parse(sessionStorage.getItem(formName));
+
+    // Check if all keys from defaultValues are present in currentValues
+    const missingKeys = Object.keys(defaultValues).filter(
+      (key) => !currentValues.hasOwnProperty(key)
+    );
+
+    // If there are missing keys, update currentValues with default values
+    if (missingKeys.length > 0) {
+      const updatedValues = { ...currentValues, ...defaultValues };
+      sessionStorage.setItem(formName, JSON.stringify(updatedValues));
+    }
+  };
+  useEffect(() => {
+    // Clear session storage items when the component is reloaded
+    const handleBeforeUnload = () => {
+      sessionStorage.removeItem("experience");
+      sessionStorage.removeItem("experience-default");
+      sessionStorage.removeItem("natureExperience");
+      sessionStorage.removeItem("natureExperience-default");
+      sessionStorage.removeItem("basic-details");
+      sessionStorage.removeItem("basic-details-default");
+      sessionStorage.removeItem("graduate");
+      sessionStorage.removeItem("graduate-default");
+      sessionStorage.removeItem("service");
+      sessionStorage.removeItem("service-default");
+      sessionStorage.removeItem("hobbies");
+      sessionStorage.removeItem("hobbies-default");
+    };
+
+    // Attach the event listener for beforeunload
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
 
   useEffect(() => {
     // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
@@ -41,53 +101,34 @@ const ProfilerPage = () => {
     };
   }, []);
 
-  const formProgress = {
-    1: 33, // Basic Details
-    2: 66, // Work Experience
-    3: 77, // Nature of Work Experience
-    4: 88, // Undergraduate Degree
-    5: 99, // Community Service
-    6: 100, // Hobbies
+  const handleUpdateProgress = (formName, nonEmptyCount) => {
+    // Update the progress state based on the formName and nonEmptyCount
+    // Add the nonEmptyCount to the progress state or update it if already present
+    setProgress((prevProgress) => ({
+      ...prevProgress,
+      [formName]: nonEmptyCount,
+    }));
   };
+
+  useEffect(() => {
+    // Calculate the overall progress by summing up the nonEmptyCount from all forms
+    const totalNonEmptyCount = Object.values(progress).reduce(
+      (total, count) => total + count,
+      0
+    );
+    setTotalNonEmptyCountValue(totalNonEmptyCount);
+    const overallProgressPercentage =
+      (totalNonEmptyCount / totalQuestions) * 100;
+    setOverAllProgress(overallProgressPercentage?.toFixed(2));
+  }, [progress]);
 
   const handleTabChange = (event, newValue) => {
-    if (unsavedChanges) {
-      // Handle unsaved changes logic here
-    } else {
-      setActiveTab(newValue);
-    }
+    setActiveTab(newValue);
   };
-
-  const updateOverallProgress = (formKey) => {
-    const completedKeys = [...completedForms, formKey];
-    const totalForms = Object.keys(formProgress).length;
-    const progress = Math.ceil((completedKeys.length / totalForms) * 100);
-    setOverallProgress(progress);
-  };
-
-  const handleSubmit = (formRef, formKey, nextTab) => {
-    formRef.current
-      .validateFields()
-      .then(() => {
-        setCompletedForms((prev) => [...prev, formKey]);
-        updateOverallProgress(formKey);
-        setActiveTab(nextTab);
-      })
-      .catch((errorInfo) => {
-        console.log("Failed:", errorInfo);
-      });
-  };
-
-  const handleFormChange = () => {
-    setUnsavedChanges(true);
-  };
-
-  const handleSaveChanges = () => {
-    // Handle save changes logic here
-  };
-
+  const twoColors = { "0%": "#108ee9", "100%": "#87d068" };
   return (
     <ProfilerPageStyled>
+      {contextHolder}
       <NavBar />
       <div
         className="container-fluid"
@@ -97,7 +138,7 @@ const ProfilerPage = () => {
           <div
             className="vh-100 container col-12"
             style={{
-              paddingTop: "100px",
+              marginTop: "100px",
               display: "grid",
               alignContent: "center",
               justifyContent: `${
@@ -105,11 +146,27 @@ const ProfilerPage = () => {
               }`,
             }}
           >
-            {overallProgress > 0 && activeTab !== 0 && (
-              <div style={{ marginBottom: "20px" }}>
-                {/* Display your progress bar here */}
+            <div className="d-flex justify-content-between mb-2 align-items-center">
+              <div style={{ textAlign: "left", marginTop: "10px" }}>
+                <Progress
+                  size={40}
+                  type="circle"
+                  percent={overAllProgress}
+                  strokeColor={twoColors}
+                />
+                <span style={{ fontWeight: "bold", marginLeft: "10px" }}>
+                  Answered {totalNonEmptyCountValue} out of {totalQuestions}{" "}
+                </span>
               </div>
-            )}
+              <div>
+                <button
+                  onClick={handleSaveAndContinue}
+                  className="btn btn-primary"
+                >
+                  Save & continue{" "}
+                </button>
+              </div>
+            </div>
             <Tabs
               value={activeTab}
               centered
@@ -126,57 +183,37 @@ const ProfilerPage = () => {
             </Tabs>
             <TabPanel value={activeTab} index={0}>
               <div style={{ minHeight: "70vh" }}>
-                <BasicDetailsForm
-                  formRef={formRef1}
-                  onSubmit={() => handleSubmit(formRef1, "1", 1)}
-                  onChange={handleFormChange}
-                  onSaveChanges={handleSaveChanges}
-                />
+                <BasicDetailsForm onUpdateProgress={handleUpdateProgress} />
               </div>
             </TabPanel>
             <TabPanel value={activeTab} index={1}>
               <div style={{ minHeight: "70vh" }}>
-                <WorkExperienceForm
-                  formRef={formRef2}
-                  onSubmit={() => handleSubmit(formRef2, "2", 2)}
-                  onChange={handleFormChange}
-                  onSaveChanges={handleSaveChanges}
-                />
+                <WorkExperienceForm onUpdateProgress={handleUpdateProgress} />
               </div>
             </TabPanel>
             <TabPanel value={activeTab} index={2}>
-              <div style={{ minHeight: "70vh" }}>
-                <NatureOfWorkForm
-                  formRef={formRef3}
-                  onSubmit={() => handleSubmit(formRef3, "3", 3)}
-                  onChange={handleFormChange}
-                  onSaveChanges={handleSaveChanges}
-                />
+              <div
+                className="scrollable-container"
+                style={{ height: "70vh", overflowY: "scroll" }}
+              >
+                <NatureOfWorkForm onUpdateProgress={handleUpdateProgress} />
               </div>
             </TabPanel>
             <TabPanel value={activeTab} index={3}>
               <div style={{ minHeight: "70vh" }}>
                 <UndergraduateDegreeForm
-                  formRef={formRef4}
-                  onSubmit={() => handleSubmit(formRef4, "4", 4)}
-                  onChange={handleFormChange}
-                  onSaveChanges={handleSaveChanges}
+                  onUpdateProgress={handleUpdateProgress}
                 />
               </div>
             </TabPanel>
             <TabPanel value={activeTab} index={4}>
               <div style={{ minHeight: "70vh" }}>
-                <CommunityServiceForm
-                  formRef={formRef5}
-                  onSubmit={() => handleSubmit(formRef5, "5", 5)}
-                  onChange={handleFormChange}
-                  onSaveChanges={handleSaveChanges}
-                />
+                <CommunityServiceForm onUpdateProgress={handleUpdateProgress} />
               </div>
             </TabPanel>
             <TabPanel value={activeTab} index={5}>
               <div style={{ minHeight: "70vh" }}>
-                <HobbiesForm />
+                <HobbiesForm onUpdateProgress={handleUpdateProgress} />
               </div>
             </TabPanel>
           </div>

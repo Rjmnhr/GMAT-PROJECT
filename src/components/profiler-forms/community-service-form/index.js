@@ -56,14 +56,16 @@ const YearsOptions = [
   { value: ">=5", label: ">= 5", description: "5 years or more" },
 ];
 
-const CommunityServiceForm = ({ formRef }) => {
+const CommunityServiceForm = ({ onUpdateProgress }) => {
   const [selectedActivity, setSelectedActivity] = useState(
-    ActivityOptions[0].value
+    JSON.parse(sessionStorage.getItem("service"))?.natureOfActivity
   );
   const [selectedContribution, setSelectedContribution] = useState(
-    ContributionOptions[0].value
+    JSON.parse(sessionStorage.getItem("service"))?.levelOfContribution
   );
-  const [selectedYears, setSelectedYears] = useState(YearsOptions[0].value);
+  const [selectedYears, setSelectedYears] = useState(
+    JSON.parse(sessionStorage.getItem("service"))?.yearsOfInvolvement
+  );
 
   const handleCardClick = (key, value) => {
     if (key === "natureOfActivity") {
@@ -75,15 +77,24 @@ const CommunityServiceForm = ({ formRef }) => {
     }
   };
 
-  useEffect(() => {
-    // Store default values in sessionStorage when the component is rendered for the first time
-    const defaultValues = {
-      natureOfActivity: ActivityOptions[0].value,
-      levelOfContribution: ContributionOptions[0].value,
-      yearsOfInvolvement: YearsOptions[0].value,
-    };
-    sessionStorage.setItem("service", JSON.stringify(defaultValues));
-  }, []);
+  useEffect(
+    () => {
+      // Store default values in sessionStorage when the component is rendered for the first time
+      const defaultValues = {
+        natureOfActivity: ActivityOptions[0].value,
+        levelOfContribution: ContributionOptions[0].value,
+        yearsOfInvolvement: YearsOptions[0].value,
+      };
+      sessionStorage.setItem("service-default", JSON.stringify(defaultValues));
+
+      // Set form values based on the default values
+      // You may need to replace this with the actual form library's method to set form values
+      // For example, if you are using Ant Design Form, it would be form.setFieldsValue(defaultValues);
+    },
+    [
+      /* Add dependencies if needed */
+    ]
+  );
 
   useEffect(() => {
     // Update session storage whenever form values change
@@ -93,6 +104,14 @@ const CommunityServiceForm = ({ formRef }) => {
       yearsOfInvolvement: selectedYears,
     };
     sessionStorage.setItem("service", JSON.stringify(formValues));
+    const nonEmptyCount = [
+      selectedActivity,
+      selectedContribution,
+      selectedYears,
+    ].filter(Boolean).length;
+
+    onUpdateProgress("service", nonEmptyCount);
+    //eslint-disable-next-line
   }, [selectedActivity, selectedContribution, selectedYears]);
 
   return (

@@ -8,6 +8,10 @@ export const ProfilerPageStyled = styled.div`
     background-position: right;
   }
 
+  .ant-progress.ant-progress-circle .ant-progress-text {
+    font-size: 10px;
+  }
+
   .css-1aquho2-MuiTabs-indicator {
     position: absolute;
     height: 5px;

@@ -120,11 +120,11 @@ const SelectionOutput = ({ data, totalValues }) => {
   // Function to determine the background color based on the value
   const getColor = (value) => {
     if (value < 0.3) {
-      return " linear-gradient(to right, #ed213a, #93291e)"; // Light red for values less than 0.3
+      return "#f8a66e"; // Light red for values less than 0.3
     } else if (value >= 0.3 && value <= 0.5) {
-      return "linear-gradient(to right, #7474bf, #348ac7)"; // Light orange for values between 0.3 and 0.5
+      return "#0c6eab"; // Light orange for values between 0.3 and 0.5
     } else {
-      return "#00ff87"; // Light green for values greater than 0.5
+      return "#00aaa4"; // Light green for values greater than 0.5
     }
   };
 
@@ -205,7 +205,7 @@ const SelectionOutput = ({ data, totalValues }) => {
               <div style={{ marginRight: "20px" }}>
                 <div
                   style={{
-                    backgroundColor: "#99ff99",
+                    backgroundColor: "#00aaa4",
                     width: "40px",
                     height: "20px",
                     display: "inline-block",
@@ -218,7 +218,7 @@ const SelectionOutput = ({ data, totalValues }) => {
               <div style={{ marginRight: "20px" }}>
                 <div
                   style={{
-                    backgroundColor: "#97c8d9",
+                    backgroundColor: "#0c6eab",
                     width: "40px",
                     height: "20px",
                     display: "inline-block",
@@ -231,7 +231,7 @@ const SelectionOutput = ({ data, totalValues }) => {
               <div style={{}}>
                 <div
                   style={{
-                    backgroundColor: "#f74a64",
+                    backgroundColor: "#f8a66e",
                     width: "40px",
                     height: "20px",
                     display: "inline-block",

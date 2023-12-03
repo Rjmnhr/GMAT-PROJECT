@@ -53,14 +53,13 @@ const PerformanceOptions = [
   },
 ];
 
-const UndergraduateDegreeForm = ({ formRef }) => {
-  const [selectedCollegeType, setSelectedCollegeType] = useState("premier");
-  const [selectedPerformance, setSelectedPerformance] = useState("top5");
-  const [form] = Form.useForm();
-
-  useEffect(() => {
-    formRef.current = form;
-  }, [form, formRef]);
+const UndergraduateDegreeForm = ({ onUpdateProgress }) => {
+  const [selectedCollegeType, setSelectedCollegeType] = useState(
+    JSON.parse(sessionStorage.getItem("graduate"))?.collegeType
+  );
+  const [selectedPerformance, setSelectedPerformance] = useState(
+    JSON.parse(sessionStorage.getItem("graduate"))?.yourPerformance
+  );
 
   useEffect(() => {
     // Store default values in session storage when the component is rendered for the first time
@@ -68,11 +67,10 @@ const UndergraduateDegreeForm = ({ formRef }) => {
       collegeType: "premier",
       yourPerformance: "top5",
     };
-    sessionStorage.setItem("graduate", JSON.stringify(defaultValues));
+    sessionStorage.setItem("graduate-default", JSON.stringify(defaultValues));
 
     // Set form values based on the default values
-    form.setFieldsValue(defaultValues);
-  }, [form]);
+  }, []);
 
   useEffect(() => {
     // Update session storage whenever form values change
@@ -81,10 +79,15 @@ const UndergraduateDegreeForm = ({ formRef }) => {
       yourPerformance: selectedPerformance,
     };
     sessionStorage.setItem("graduate", JSON.stringify(formValues));
+    const nonEmptyCount = [selectedCollegeType, selectedPerformance].filter(
+      Boolean
+    ).length;
+
+    onUpdateProgress("graduate", nonEmptyCount);
+    //eslint-disable-next-line
   }, [selectedCollegeType, selectedPerformance]);
 
   const handleCardClick = (key, value) => {
-    form.setFieldsValue({ [key]: value });
     if (key === "collegeType") {
       setSelectedCollegeType(value);
     } else if (key === "yourPerformance") {

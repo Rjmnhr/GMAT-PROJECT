@@ -48,24 +48,35 @@ const YearsOptions = [
   { value: ">=5", label: ">= 5 ", description: "5 years or more" },
 ];
 
-const HobbiesForm = ({ formRef }) => {
+const HobbiesForm = ({ onUpdateProgress }) => {
   const [selectedActivity, setSelectedActivity] = useState(
-    ActivityOptions[0].value
+    JSON.parse(sessionStorage.getItem("hobbies"))?.natureOfActivity
   );
   const [selectedExpertise, setSelectedExpertise] = useState(
-    ExpertiseOptions[0].value
+    JSON.parse(sessionStorage.getItem("hobbies"))?.levelOfExpertise
   );
-  const [selectedYears, setSelectedYears] = useState(YearsOptions[0].value);
+  const [selectedYears, setSelectedYears] = useState(
+    JSON.parse(sessionStorage.getItem("hobbies"))?.yearsOfInvolvement
+  );
 
-  useEffect(() => {
-    // Store default values in sessionStorage when the component is rendered for the first time
-    const defaultValues = {
-      natureOfActivity: ActivityOptions[0].value,
-      levelOfExpertise: ExpertiseOptions[0].value,
-      yearsOfInvolvement: YearsOptions[0].value,
-    };
-    sessionStorage.setItem("hobbies", JSON.stringify(defaultValues));
-  }, []);
+  useEffect(
+    () => {
+      // Store default values in sessionStorage when the component is rendered for the first time
+      const defaultValues = {
+        natureOfActivity: ActivityOptions[0].value,
+        levelOfExpertise: ExpertiseOptions[0].value,
+        yearsOfInvolvement: YearsOptions[0].value,
+      };
+      sessionStorage.setItem("hobbies-default", JSON.stringify(defaultValues));
+
+      // Set form values based on the default values
+      // You may need to replace this with the actual form library's method to set form values
+      // For example, if you are using Ant Design Form, it would be form.setFieldsValue(defaultValues);
+    },
+    [
+      /* Add dependencies if needed */
+    ]
+  );
 
   useEffect(() => {
     // Update session storage whenever form values change
@@ -75,8 +86,15 @@ const HobbiesForm = ({ formRef }) => {
       yearsOfInvolvement: selectedYears,
     };
     sessionStorage.setItem("hobbies", JSON.stringify(formValues));
-  }, [selectedActivity, selectedExpertise, selectedYears]);
+    const nonEmptyCount = [
+      selectedActivity,
+      selectedExpertise,
+      selectedYears,
+    ].filter(Boolean).length;
 
+    onUpdateProgress("hobbies", nonEmptyCount);
+    //eslint-disable-next-line
+  }, [selectedActivity, selectedExpertise, selectedYears]);
   const handleCardClick = (key, value) => {
     if (key === "natureOfActivity") {
       setSelectedActivity(value);

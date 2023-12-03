@@ -25,13 +25,16 @@ const companySizeOptions = [
   },
 ];
 
-const WorkExperienceForm = ({ formRef }) => {
-  const [selectedType, setSelectedType] = useState("Product");
-  const [selectedGeographicalReach, setSelectedGeographicalReach] =
-    useState("oneLocation");
-  const [selectedCompanySize, setSelectedCompanySize] = useState("<1000");
-
-  const [form] = Form.useForm();
+const WorkExperienceForm = ({ onUpdateProgress }) => {
+  const [selectedType, setSelectedType] = useState(
+    JSON.parse(sessionStorage.getItem("experience"))?.type
+  );
+  const [selectedGeographicalReach, setSelectedGeographicalReach] = useState(
+    JSON.parse(sessionStorage.getItem("experience"))?.geographicalReach
+  );
+  const [selectedCompanySize, setSelectedCompanySize] = useState(
+    JSON.parse(sessionStorage.getItem("experience"))?.companySize
+  );
 
   useEffect(() => {
     // Store default values in session storage when the component is rendered for the first time
@@ -40,11 +43,8 @@ const WorkExperienceForm = ({ formRef }) => {
       geographicalReach: "oneLocation",
       companySize: "<1000",
     };
-    sessionStorage.setItem("experience", JSON.stringify(defaultValues));
-
-    // Set form values based on the default values
-    form.setFieldsValue(defaultValues);
-  }, [form]);
+    sessionStorage.setItem("experience-default", JSON.stringify(defaultValues));
+  }, []);
 
   useEffect(() => {
     // Update session storage whenever form values change
@@ -54,20 +54,25 @@ const WorkExperienceForm = ({ formRef }) => {
       companySize: selectedCompanySize,
     };
     sessionStorage.setItem("experience", JSON.stringify(formValues));
+    const nonEmptyCount = [
+      selectedType,
+      selectedGeographicalReach,
+      selectedCompanySize,
+    ].filter(Boolean).length;
+
+    onUpdateProgress("experience", nonEmptyCount);
+    //eslint-disable-next-line
   }, [selectedType, selectedGeographicalReach, selectedCompanySize]);
 
   const handleTypeCardClick = (type) => {
-    form.setFieldsValue({ type });
     setSelectedType(type);
   };
 
   const handleGeographicalReachOptionClick = (option) => {
-    form.setFieldsValue({ geographicalReach: option });
     setSelectedGeographicalReach(option);
   };
 
   const handleCompanySizeCardClick = (size) => {
-    form.setFieldsValue({ companySize: size });
     setSelectedCompanySize(size);
   };
 
@@ -94,7 +99,6 @@ const WorkExperienceForm = ({ formRef }) => {
       <BasicDetailsFormStyled>
         <div className={` container-fluid`}>
           <Form
-            form={form}
             name="workExperienceForm"
             labelCol={{ span: 15 }}
             wrapperCol={{ span: 16 }}
@@ -122,7 +126,7 @@ const WorkExperienceForm = ({ formRef }) => {
                     className={`age-card ${
                       selectedType === type.label ? "selected-card" : ""
                     }`}
-                    onClick={() => handleTypeCardClick(type)}
+                    onClick={() => handleTypeCardClick(type.label)}
                   >
                     <img src={type.url} alt="" />
                   </div>

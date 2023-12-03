@@ -1,249 +1,324 @@
-import React, { useState, useEffect } from "react";
-import { Form, Select, Table, Tooltip, Button } from "antd";
+import React, { useEffect, useState } from "react";
+import { Form, Tooltip } from "antd";
 import { BasicDetailsFormStyled } from "../basic-details/style";
 
-import { Tabs, Tab } from "@mui/material";
+import { Card, Collapse } from "@mui/material";
+import CardActions from "@mui/material/CardActions";
+import IconButton from "@mui/material/IconButton";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
-import accountingIcon from "../../../icons/economics.png";
-import salesIcon from "../../../icons/profit.png";
-import generalistIcon from "../../../icons/product-management.png";
+const initialValues = {};
+const keys = [1, 2, 3, 4];
 
-const { Option } = Select;
-const NatureOfWorkForm = ({ formRef, onChange }) => {
-  const [selectedNature, setSelectedNature] = useState(null);
-  const [currentStep, setCurrentStep] = useState(0);
-  const [form] = Form.useForm();
-  const [isTransitioning, setIsTransitioning] = useState(false);
+keys.forEach((key) => {
+  initialValues[`${key}_individualContributor`] = "N/A";
+  initialValues[`${key}_supervisory`] = "N/A";
+  initialValues[`${key}_leadershipManagerial`] = "N/A";
+});
 
-  const steps = [
+const NatureOfWorkForm = ({ onUpdateProgress }) => {
+  const [expanded, setExpanded] = useState(Array(keys.length).fill(false));
+  const [fieldsValue, setFieldsValue] = useState(
+    JSON.parse(sessionStorage.getItem("natureExperience")) || {}
+  );
+
+  useEffect(() => {
+    sessionStorage.setItem("natureExperience", JSON.stringify(fieldsValue));
+    // Calculate non-empty count for progress
+    const nonEmptyCount = Object.values(fieldsValue).filter(Boolean).length;
+
+    // Update progress
+    onUpdateProgress("natureExperience", nonEmptyCount);
+    //eslint-disable-next-line
+  }, [fieldsValue]);
+  useEffect(() => {
+    sessionStorage.setItem(
+      "natureExperience-default",
+      JSON.stringify(initialValues)
+    );
+  }, []);
+
+  const handleExpandClick = (index) => {
+    setExpanded((prevExpanded) =>
+      prevExpanded.map((value, i) => (i === index ? !value : value))
+    );
+  };
+
+  const columns = [
     {
-      title: "Non-commercial technical",
-      icon: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701448809/zcdenthewcmww1elbmx7.png",
-      tooltip: "Engineering, Science, IT, Technology",
+      title: "Individual Contributor",
+      dataIndex: "individualContributor",
+      key: "individualContributor",
+      render: (record) => (
+        <Form.Item
+          style={{ margin: "0" }}
+          name={`${record.key}_individualContributor`}
+        >
+          <div className="d-flex align-items-center justify-content-center">
+            {["<1", "1-3", "3-5", ">=5", "N/A"].map((option) => (
+              <Tooltip title={` ${option} year(s)`} key={option}>
+                <Card
+                  className={`college-card ${
+                    fieldsValue[`${record.key}_individualContributor`] ===
+                    option
+                      ? "selected-card"
+                      : ""
+                  }`}
+                  style={{ padding: "0.575rem 1rem" }}
+                  onClick={() =>
+                    handleInputChange(
+                      record.key,
+                      "individualContributor",
+                      option
+                    )
+                  }
+                >
+                  <p>{option}</p>
+                </Card>
+              </Tooltip>
+            ))}
+          </div>
+        </Form.Item>
+      ),
     },
     {
-      title: "Non-commercial technical",
-      icon: accountingIcon,
-      tooltip: "Accounting, Finance, HR",
+      title: "Supervisory",
+      dataIndex: "supervisory",
+      key: "supervisory",
+      render: (record) => (
+        <Form.Item style={{ margin: "0" }} name={`${record.key}_supervisory`}>
+          <div className="d-flex align-items-center justify-content-center">
+            {["<1", "1-2", "2-3", ">=3", "N/A"].map((option) => (
+              <Tooltip title={`${option} year(s)`} key={option}>
+                <Card
+                  style={{ padding: "0.575rem 1rem" }}
+                  className={`college-card ${
+                    fieldsValue[`${record.key}_supervisory`] === option
+                      ? "selected-card"
+                      : ""
+                  }`}
+                  onClick={() =>
+                    handleInputChange(record.key, "supervisory", option)
+                  }
+                >
+                  <p>{option}</p>
+                </Card>
+              </Tooltip>
+            ))}
+          </div>
+        </Form.Item>
+      ),
     },
     {
-      title: "Commercial technical",
-      icon: salesIcon,
-      tooltip: "Sales, Marketing",
-    },
-    {
-      title: "Commercial generalist",
-      icon: generalistIcon,
-      tooltip: "Strategy, Consulting, Supply Chain, Operations",
+      title: "Leadership/Managerial",
+      dataIndex: "leadershipManagerial",
+      key: "leadershipManagerial",
+      render: (record) => (
+        <Form.Item
+          style={{ margin: "0" }}
+          name={`${record.key}_leadershipManagerial`}
+        >
+          <div className="d-flex align-items-center justify-content-center">
+            {["<1", "1-2", "2-3", ">=3", "N/A"].map((option) => (
+              <Tooltip title={`${option} year(s)`} key={option}>
+                <Card
+                  style={{ padding: "0.575rem 1rem" }}
+                  className={`college-card ${
+                    fieldsValue[`${record.key}_leadershipManagerial`] === option
+                      ? "selected-card"
+                      : ""
+                  }`}
+                  onClick={() =>
+                    handleInputChange(
+                      record.key,
+                      "leadershipManagerial",
+                      option
+                    )
+                  }
+                >
+                  <p>{option}</p>
+                </Card>
+              </Tooltip>
+            ))}
+          </div>
+        </Form.Item>
+      ),
     },
   ];
 
-  const initialValues = {};
-
-  steps.forEach((step, index) => {
-    initialValues[`individualContributor_${index}`] = "N/A";
-    initialValues[`supervisory_${index}`] = "N/A";
-    initialValues[`leadershipManagerial_${index}`] = "N/A";
-  });
-
-  useEffect(() => {
-    const defaultValues = initialValues;
-    sessionStorage.setItem("natureExperience", JSON.stringify(defaultValues));
-    //eslint-disable-next-line
-  }, []);
+  const dataSource = [
+    {
+      key: "1",
+      title: "Non-commercial technical (Engineering, Science, IT, Technology)",
+      natureOfExperience: (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "start",
+            gap: "8px",
+          }}
+        >
+          <img
+            className="icon-labels"
+            alt=""
+            src={
+              "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701635178/l73gy7y4omwaccdwrpsb.png"
+            }
+          />
+        </div>
+      ),
+    },
+    {
+      key: "2",
+      title: "Non-commercial technical (Accounting, Finance, HR)",
+      natureOfExperience: (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "start",
+            gap: "8px",
+          }}
+        >
+          <img
+            className="icon-labels"
+            alt=""
+            src={
+              "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701635859/b8obzoxbksuh4ucmfyre.png"
+            }
+          />
+        </div>
+      ),
+    },
+    {
+      key: "3",
+      title: "Commercial technical (Sales, Marketing)",
+      natureOfExperience: (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "start",
+            gap: "8px",
+          }}
+        >
+          <img
+            className="icon-labels"
+            alt=""
+            src={
+              "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701636376/triir2nwwkmlnlrlbqis.png"
+            }
+          />
+        </div>
+      ),
+    },
+    {
+      key: "4",
+      title:
+        "Commercial generalist (Strategy, Consulting, Supply Chain, Operations)",
+      natureOfExperience: (
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "start",
+            gap: "8px",
+          }}
+        >
+          <img
+            className="icon-labels"
+            alt=""
+            src={
+              "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701636951/tjlpv2hpxcczwzrgxakp.png"
+            }
+          />
+        </div>
+      ),
+    },
+  ];
 
   const handleInputChange = (key, field, value) => {
-    form.setFieldsValue({
+    setFieldsValue((prevFieldsValue) => ({
+      ...prevFieldsValue,
       [`${key}_${field}`]: value,
-    });
+    }));
   };
 
-  const handleFormChange = (changedValues, allValues) => {
-    if (onChange) {
-      onChange(changedValues, allValues);
-    }
-  };
-
-  const handleSave = (values) => {
-    sessionStorage.setItem("natureExperience", JSON.stringify(values));
-  };
-
-  const handleNatureSelection = (index) => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setSelectedNature(index);
-      setCurrentStep(1);
-      setIsTransitioning(false);
-    }, 500); // Adjust the duration of the transition
-  };
-  const renderStepContent = (stepIndex) => (
-    <Table
-      dataSource={[steps[stepIndex]]}
-      columns={[
-        {
-          title: "Nature of Experience",
-          dataIndex: "title",
-          key: "title",
-          render: (text, record) => (
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "start",
-                gap: "8px",
-              }}
-            >
-              {record.icon && (
-                <img
-                  height={60}
-                  width={60}
-                  className="icon-labels"
-                  alt=""
-                  src={record.icon}
-                />
-              )}
-              <Tooltip title={record.tooltip}></Tooltip>
-            </div>
-          ),
-        },
-        {
-          title: "Individual Contributor",
-          dataIndex: "individualContributor",
-          key: "individualContributor",
-          render: (text, record) => (
-            <Select
-              style={{ width: "100%" }}
-              className="text-left"
-              placeholder="Select an option"
-              onChange={(value) =>
-                handleInputChange(stepIndex, "individualContributor", value)
-              }
-              defaultValue="N/A"
-            >
-              {record.options?.map((option) => (
-                <Option key={option.value} value={option.value}>
-                  {option.label}
-                </Option>
-              ))}
-            </Select>
-          ),
-        },
-        {
-          title: "Supervisory",
-          dataIndex: "supervisory",
-          key: "supervisory",
-          render: (text, record) => (
-            <Select
-              style={{ width: "100%" }}
-              className="text-left"
-              placeholder="Select an option"
-              onChange={(value) =>
-                handleInputChange(stepIndex, "supervisory", value)
-              }
-              defaultValue="N/A"
-            >
-              {record.options?.map((option) => (
-                <Option key={option.value} value={option.value}>
-                  {option.label}
-                </Option>
-              ))}
-            </Select>
-          ),
-        },
-        {
-          title: "Leadership/Managerial",
-          dataIndex: "leadershipManagerial",
-          key: "leadershipManagerial",
-          render: (text, record) => (
-            <Select
-              style={{ width: "100%" }}
-              className="text-left"
-              placeholder="Select an option"
-              onChange={(value) =>
-                handleInputChange(stepIndex, "leadershipManagerial", value)
-              }
-              defaultValue="N/A"
-            >
-              {record.options?.map((option) => (
-                <Option key={option.value} value={option.value}>
-                  {option.label}
-                </Option>
-              ))}
-            </Select>
-          ),
-        },
-      ]}
-      pagination={false}
-    />
-  );
   return (
     <BasicDetailsFormStyled>
       <div className={`container-fluid`}>
-        <Form
-          form={form}
-          name="natureOfExperience"
-          onValuesChange={handleFormChange}
-          onFinish={handleSave}
-          initialValues={initialValues}
-          labelCol={{ span: 15 }}
-          wrapperCol={{ span: 16 }}
-        >
-          {currentStep === 0 && (
-            <div style={{ display: "flex", gap: "16px", overflow: "hidden" }}>
-              {steps?.map((step, index) => (
-                <div
-                  key={index}
-                  style={{
-                    textAlign: "center",
-                    cursor: "pointer",
-                    opacity: isTransitioning ? 0 : 1,
-                    transition: "opacity 0.5s ease-in-out",
-                  }}
-                  onClick={() => handleNatureSelection(index)}
-                >
-                  <img
-                    height={60}
-                    width={60}
-                    className="icon-labels"
-                    alt=""
-                    src={step.icon}
-                    style={{ marginBottom: 8 }}
-                  />
-                  <p>{step.title}</p>
-                </div>
-              ))}
-            </div>
-          )}
-          {selectedNature !== null && currentStep === 1 && (
-            <div style={{ display: "flex", gap: "16px", overflow: "hidden" }}>
-              <Tabs
-                orientation="vertical"
-                variant="scrollable"
-                value={selectedNature}
-                onChange={(event, newValue) => handleNatureSelection(newValue)}
-                sx={{ width: 120 }}
+        <Form name="natureOfExperience" initialValues={initialValues}></Form>
+        {dataSource.map((item, index) => (
+          <Card className="mb-3" key={index}>
+            <CardActions disableSpacing>
+              <div
+                style={{
+                  margin: "0",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  width: "100%",
+                }}
               >
-                {steps?.map((step, index) => (
-                  <Tab label={step.title} key={index} />
-                ))}
-              </Tabs>
-              <div style={{ flex: 1 }}>{renderStepContent(selectedNature)}</div>
-            </div>
-          )}
-          {currentStep > 0 && (
-            <Button
-              style={{ margin: "16px 0" }}
-              onClick={() => setCurrentStep(currentStep - 1)}
+                <div
+                  style={{
+                    margin: "0",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  {item.natureOfExperience}
+                  {""}
+                  <span className="ml-3">{item.title}</span>
+                </div>
+
+                <div>
+                  {expanded[index] ? (
+                    <IconButton
+                      onClick={() => handleExpandClick(index)}
+                      aria-label="show less"
+                    >
+                      <RemoveIcon />
+                    </IconButton>
+                  ) : (
+                    <IconButton
+                      onClick={() => handleExpandClick(index)}
+                      aria-label="show more"
+                    >
+                      <AddIcon />
+                    </IconButton>
+                  )}
+                </div>
+              </div>
+            </CardActions>
+            <Collapse
+              in={expanded[index] || false}
+              timeout="auto"
+              unmountOnExit
             >
-              Back
-            </Button>
-          )}
-          {currentStep === 1 && (
-            <Button type="primary" onClick={form.submit}>
-              Finish
-            </Button>
-          )}
-        </Form>
+              <div
+                style={{ borderTop: "1px solid #049494" }}
+                className="text-left"
+              >
+                {columns.map((content, colIndex) => {
+                  return (
+                    <div
+                      className="d-flex align-items-center mb-2 px-3 py-2 w-75 justify-content-between"
+                      key={colIndex}
+                    >
+                      <div>
+                        <p>{content.title}</p>
+                      </div>
+                      <div>{content.render({ key: index + 1 })}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </Collapse>
+          </Card>
+        ))}
       </div>
     </BasicDetailsFormStyled>
   );

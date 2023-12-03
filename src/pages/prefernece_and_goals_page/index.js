@@ -399,7 +399,11 @@ const GoalsForm = ({ onNext, onBack }) => {
 };
 
 const PreferenceAndGoalsPage = () => {
-  const [currentStep, setCurrentStep] = useState("1");
+  const formFilled = sessionStorage.getItem("form-filled");
+
+  const [currentStep, setCurrentStep] = useState(
+    formFilled === "true" ? "4" : "1"
+  );
   const { TabPane } = Tabs;
   const handleNext = () => {
     setCurrentStep(() => {
@@ -434,7 +438,17 @@ const PreferenceAndGoalsPage = () => {
           <GoalsForm onNext={handleNext} onBack={handleBack} />
         </TabPane>
         <TabPane className="display" tab="output" key="4">
-          <CollegeInformationOutput />
+          {currentStep === "4" ? <CollegeInformationOutput /> : ""}
+
+          <button
+            className="btn btn-primary"
+            onClick={() => {
+              setCurrentStep("1");
+              sessionStorage.setItem("form-filled", false);
+            }}
+          >
+            Try filling form again
+          </button>
         </TabPane>
       </Tabs>
     </div>

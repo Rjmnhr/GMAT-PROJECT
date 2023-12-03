@@ -336,9 +336,9 @@ const ChancesOfSelection = () => {
     };
 
     const productOrServiceValue =
-      valueMappingsProductOrService[valueObject.productServices];
+      valueMappingsProductOrService[valueObject.type];
     const multiNationalCompanyValue =
-      valueMappingsMultiNationalCompany[valueObject.multiNationalCompany];
+      valueMappingsMultiNationalCompany[valueObject.geographicalReach];
     const companySizeValue = valueMappingsCompanySize[valueObject.companySize];
 
     const nonTechnicalITIndividualValue =
@@ -454,6 +454,18 @@ const ChancesOfSelection = () => {
 
     const describeTheCompanyValue =
       productOrServiceValue * multiNationalCompanyValue * companySizeValue;
+    console.log(
+      "🚀 ~ file: index.js:457 ~ calculateExperienceIndividualValue ~ companySizeValue:",
+      companySizeValue
+    );
+    console.log(
+      "🚀 ~ file: index.js:457 ~ calculateExperienceIndividualValue ~ multiNationalCompanyValue:",
+      multiNationalCompanyValue
+    );
+    console.log(
+      "🚀 ~ file: index.js:457 ~ calculateExperienceIndividualValue ~ productOrServiceValue:",
+      productOrServiceValue
+    );
 
     const supervisoryValueArr = [
       nonTechnicalITSupervisoryValue,
@@ -491,6 +503,10 @@ const ChancesOfSelection = () => {
     const leadershipExperience = maxSupervisoryValue * maxLeadershipValue;
 
     const workExperience = describeTheCompanyValue + maxValue * 2;
+    console.log(
+      "🚀 ~ file: index.js:494 ~ calculateExperienceIndividualValue ~ describeTheCompanyValue:",
+      describeTheCompanyValue
+    );
 
     setWorkExperienceObtained(workExperience);
     setLeadershipExperienceObtained(leadershipExperience);
@@ -617,7 +633,7 @@ const ChancesOfSelection = () => {
             return newObj;
           });
           assignCategories(newArray);
-          const convertedArray = newArray.map((obj) => {
+          const convertedArray = newArray?.map((obj) => {
             // Extract values from the object and return as an array
             return Object.values(obj);
           });
@@ -671,7 +687,7 @@ const ChancesOfSelection = () => {
       <ChancesOfSelectionStyled>
         <div className="d-lg-flex" style={{ marginTop: "85px" }}>
           <div
-            style={{ height: "20vh", background: "#f8f8f8" }}
+            style={{ height: "90vh", background: "#f8f8f8" }}
             className="side-bar p-0  col-lg-2 col-12"
           >
             <div className="mt-3">
