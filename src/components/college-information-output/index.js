@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import AxiosInstance from "../axios";
-import { Card } from "antd";
+import { Card, Skeleton } from "antd";
 import safeIcon from "../../icons/shield.png";
 import achievableIcon from "../../icons/medal.png";
 import stretchIcon from "../../icons/achievement.png";
@@ -983,176 +983,184 @@ const CollegeInformationOutput = () => {
   return (
     <CollegeInformationOutputStyled>
       <div>
-        <div className="section-title">
-          <h2>College information</h2>
-          <div className="d-lg-flex">
-            <div className="col-6">
-              <h5 className="mb-3 mt-3 text-left">
-                Top 6 colleges based on FT rankings
-              </h5>
-              <div className="mb-3 text-left">
-                {topSchoolsSafe?.map((item) => {
-                  return (
-                    <Card
-                      className="mb-2"
-                      style={{
-                        width: "100%",
-                        boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
-                      }}
-                    >
-                      <div className="d-flex justify-content-start align-items-center">
-                        <img
-                          height={30}
-                          width={30}
-                          style={{ borderRadius: "50%" }}
-                          src={safeIcon}
-                          alt=""
-                        />
-                        <p
-                          style={{
-                            fontWeight: "bold",
-                            fontSize: "18px",
-                            marginLeft: "10px",
-                          }}
-                        >
-                          {item.school_name}{" "}
-                          <span
+        {topSchoolsSafe && topSchoolsAchievable && topSchoolsStretch ? (
+          <div className="section-title">
+            <h2>College information</h2>
+            <div className="d-lg-flex">
+              <div className="col-lg-6 col-12">
+                <h5 className="mb-3 mt-3 text-left">
+                  Top colleges based on FT rankings
+                </h5>
+                <div className="mb-3 text-left">
+                  {topSchoolsSafe?.map((item) => {
+                    return (
+                      <Card
+                        className="mb-2"
+                        style={{
+                          width: "100%",
+                          boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
+                        }}
+                      >
+                        <div className="d-flex justify-content-start align-items-center">
+                          <img
+                            height={30}
+                            width={30}
+                            style={{ borderRadius: "50%" }}
+                            src={safeIcon}
+                            alt=""
+                          />
+                          <p
                             style={{
-                              color: "blue",
-
-                              fontWeight: "normal",
+                              fontWeight: "bold",
+                              fontSize: "18px",
+                              marginLeft: "10px",
                             }}
                           >
-                            (Safe)
-                          </span>
-                        </p>
-                      </div>
-                    </Card>
-                  );
-                })}
-              </div>
-              <div className="mb-3 text-left">
-                {topSchoolsAchievable?.map((item) => {
-                  return (
-                    <Card
-                      className="mb-2"
-                      style={{
-                        width: "100%",
-                        boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
-                      }}
-                    >
-                      <div className="d-flex justify-content-start align-items-center">
-                        <img
-                          height={30}
-                          width={30}
-                          style={{ borderRadius: "50%" }}
-                          src={achievableIcon}
-                          alt=""
-                        />
-                        <p
-                          style={{
-                            fontWeight: "bold",
-                            fontSize: "18px",
-                            marginLeft: "10px",
-                          }}
-                        >
-                          {item.school_name}{" "}
-                          <span
-                            style={{
-                              color: "blue",
+                            {item.school_name}{" "}
+                            <span
+                              style={{
+                                color: "blue",
 
-                              fontWeight: "normal",
+                                fontWeight: "normal",
+                              }}
+                            >
+                              (Safe)
+                            </span>
+                          </p>
+                        </div>
+                      </Card>
+                    );
+                  })}
+                </div>
+                <div className="mb-3 text-left">
+                  {topSchoolsAchievable?.map((item) => {
+                    return (
+                      <Card
+                        className="mb-2"
+                        style={{
+                          width: "100%",
+                          boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
+                        }}
+                      >
+                        <div className="d-flex justify-content-start align-items-center">
+                          <img
+                            height={30}
+                            width={30}
+                            style={{ borderRadius: "50%" }}
+                            src={achievableIcon}
+                            alt=""
+                          />
+                          <p
+                            style={{
+                              fontWeight: "bold",
+                              fontSize: "18px",
+                              marginLeft: "10px",
                             }}
                           >
-                            (Achievable)
-                          </span>
-                        </p>
-                      </div>
-                    </Card>
-                  );
-                })}
-              </div>
-              <div className="mb-3 text-left">
-                {topSchoolsStretch?.map((item) => {
-                  return (
-                    <Card
-                      className="mb-2"
-                      style={{
-                        width: "100%",
-                        boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
-                      }}
-                    >
-                      <div className="d-flex justify-content-start align-items-center">
-                        <img
-                          height={30}
-                          width={30}
-                          style={{ borderRadius: "50%" }}
-                          src={stretchIcon}
-                          alt=""
-                        />
-                        <p
-                          style={{
-                            fontWeight: "bold",
-                            fontSize: "18px",
-                            marginLeft: "10px",
-                          }}
-                        >
-                          {item.school_name}
-                          <span
-                            style={{
-                              color: "blue",
+                            {item.school_name}{" "}
+                            <span
+                              style={{
+                                color: "blue",
 
-                              fontWeight: "normal",
+                                fontWeight: "normal",
+                              }}
+                            >
+                              (Achievable)
+                            </span>
+                          </p>
+                        </div>
+                      </Card>
+                    );
+                  })}
+                </div>
+                <div className="mb-3 text-left">
+                  {topSchoolsStretch?.map((item) => {
+                    return (
+                      <Card
+                        className="mb-2"
+                        style={{
+                          width: "100%",
+                          boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
+                        }}
+                      >
+                        <div className="d-flex justify-content-start align-items-center">
+                          <img
+                            height={30}
+                            width={30}
+                            style={{ borderRadius: "50%" }}
+                            src={stretchIcon}
+                            alt=""
+                          />
+                          <p
+                            style={{
+                              fontWeight: "bold",
+                              fontSize: "18px",
+                              marginLeft: "10px",
                             }}
                           >
-                            (Stretch)
-                          </span>
-                        </p>
-                      </div>
-                    </Card>
-                  );
-                })}
+                            {item.school_name}
+                            <span
+                              style={{
+                                color: "blue",
+
+                                fontWeight: "normal",
+                              }}
+                            >
+                              (Stretch)
+                            </span>
+                          </p>
+                        </div>
+                      </Card>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-            <div className="col-6">
-              <h5 className="mb-3 mt-3 text-left">
-                Top 6 colleges based on your background
-              </h5>
-              <div className="mb-3 text-left">
-                {sortedCombinedTopColleges?.map((item) => {
-                  return (
-                    <Card
-                      className="mb-2"
-                      style={{
-                        width: "100%",
-                        boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
-                      }}
-                    >
-                      <div className="d-flex justify-content-start align-items-center">
-                        <img
-                          height={30}
-                          width={30}
-                          style={{ borderRadius: "50%" }}
-                          src={collegeIcon}
-                          alt=""
-                        />
-                        <p
-                          style={{
-                            fontWeight: "bold",
-                            fontSize: "18px",
-                            marginLeft: "10px",
-                          }}
-                        >
-                          {item.school_name}
-                        </p>
-                      </div>
-                    </Card>
-                  );
-                })}
+              <div className="col-lg-6 col-12">
+                <h5 className="mb-3 mt-3 text-left">
+                  Top colleges based on your background
+                </h5>
+                <div className="mb-3 text-left">
+                  {sortedCombinedTopColleges?.map((item) => {
+                    return (
+                      <Card
+                        className="mb-2"
+                        style={{
+                          width: "100%",
+                          boxShadow: " 0 4px 8px rgba(0, 0, 0, 0.1)",
+                        }}
+                      >
+                        <div className="d-flex justify-content-start align-items-center">
+                          <img
+                            height={30}
+                            width={30}
+                            style={{ borderRadius: "50%" }}
+                            src={collegeIcon}
+                            alt=""
+                          />
+                          <p
+                            style={{
+                              fontWeight: "bold",
+                              fontSize: "18px",
+                              marginLeft: "10px",
+                            }}
+                          >
+                            {item.school_name}
+                          </p>
+                        </div>
+                      </Card>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        ) : (
+          <div className="p-3">
+            <Skeleton />
+            <Skeleton />
+            <Skeleton />
+          </div>
+        )}
       </div>
     </CollegeInformationOutputStyled>
   );

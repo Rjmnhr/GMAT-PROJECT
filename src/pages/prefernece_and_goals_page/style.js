@@ -10,6 +10,7 @@ export const PreferenceAndGoalsPageStyled = styled.div`
     display: flex;
     justify-content: start;
     margin-bottom: 20px;
+    flex-wrap: wrap;
   }
 
   .age-card {

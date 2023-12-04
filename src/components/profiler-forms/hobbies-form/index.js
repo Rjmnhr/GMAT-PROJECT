@@ -48,7 +48,7 @@ const YearsOptions = [
   { value: ">=5", label: ">= 5 ", description: "5 years or more" },
 ];
 
-const HobbiesForm = ({ onUpdateProgress }) => {
+const HobbiesForm = ({ onUpdateProgress, onFormValidation }) => {
   const [selectedActivity, setSelectedActivity] = useState(
     JSON.parse(sessionStorage.getItem("hobbies"))?.natureOfActivity
   );
@@ -93,6 +93,7 @@ const HobbiesForm = ({ onUpdateProgress }) => {
     ].filter(Boolean).length;
 
     onUpdateProgress("hobbies", nonEmptyCount);
+    onFormValidation("graduate", 6);
     //eslint-disable-next-line
   }, [selectedActivity, selectedExpertise, selectedYears]);
   const handleCardClick = (key, value) => {

@@ -2,10 +2,18 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../../components/nav-bar";
 import { ChancesOfSelectionStyled } from "./style";
 import AxiosInstance from "../../components/axios";
-import { LoadingOutlined } from "@ant-design/icons";
+import {
+  AppstoreAddOutlined,
+  BankOutlined,
+  BulbOutlined,
+  LoadingOutlined,
+  RadarChartOutlined,
+} from "@ant-design/icons";
 import SelectionOutput from "../../components/selection-output";
 
 import PreferenceAndGoalsPage from "../prefernece_and_goals_page";
+import ApplicationStrategyPage from "../application-strategy-page";
+import AdmissionTips from "../../components/tips-component";
 // import sticker from "../../icons/businessman.png";
 
 // const BarChartExample = ({ data }) => {
@@ -71,8 +79,9 @@ const ChancesOfSelection = () => {
     useState(0);
   const [extraCurricularObtained, setExtraCurricularObtained] = useState(0);
   const [hobbiesObtained, setHobbiesObtained] = useState(0);
-  const [selectedTab, setSelectedTab] = useState("selection");
+  const [selectedTab, setSelectedTab] = useState("Selection Chance");
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   // State variable to hold the data array
   const [data, setData] = useState([]);
@@ -454,18 +463,6 @@ const ChancesOfSelection = () => {
 
     const describeTheCompanyValue =
       productOrServiceValue * multiNationalCompanyValue * companySizeValue;
-    console.log(
-      "🚀 ~ file: index.js:457 ~ calculateExperienceIndividualValue ~ companySizeValue:",
-      companySizeValue
-    );
-    console.log(
-      "🚀 ~ file: index.js:457 ~ calculateExperienceIndividualValue ~ multiNationalCompanyValue:",
-      multiNationalCompanyValue
-    );
-    console.log(
-      "🚀 ~ file: index.js:457 ~ calculateExperienceIndividualValue ~ productOrServiceValue:",
-      productOrServiceValue
-    );
 
     const supervisoryValueArr = [
       nonTechnicalITSupervisoryValue,
@@ -503,10 +500,6 @@ const ChancesOfSelection = () => {
     const leadershipExperience = maxSupervisoryValue * maxLeadershipValue;
 
     const workExperience = describeTheCompanyValue + maxValue * 2;
-    console.log(
-      "🚀 ~ file: index.js:494 ~ calculateExperienceIndividualValue ~ describeTheCompanyValue:",
-      describeTheCompanyValue
-    );
 
     setWorkExperienceObtained(workExperience);
     setLeadershipExperienceObtained(leadershipExperience);
@@ -680,44 +673,74 @@ const ChancesOfSelection = () => {
     sessionStorage.setItem("achievable", achievableCategory);
     sessionStorage.setItem("stretch", stretchCategory);
   };
+  const sideBarTabs = [
+    {
+      label: "Selection Chance",
+      icon: <RadarChartOutlined />,
+    },
+    { label: "College Shortlisting", icon: <BankOutlined /> },
+    { label: "Application Strategy", icon: <AppstoreAddOutlined /> },
+    { label: "Tips", icon: <BulbOutlined /> },
+  ];
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
       <NavBar />
-      <ChancesOfSelectionStyled>
+      <ChancesOfSelectionStyled ChancesOfSelectionStyled>
         <div className="d-lg-flex" style={{ marginTop: "85px" }}>
           <div
-            style={{ height: "90vh", background: "#f8f8f8" }}
+            style={{
+              height: `${isMobile ? "" : "90vh"}`,
+              background: "#f8f8f8",
+              position: `${isMobile ? "fixed" : ""}`,
+              bottom: "0",
+              left: "0",
+              zIndex: `${isMobile ? "999" : ""}`,
+            }}
             className="side-bar p-0  col-lg-2 col-12"
           >
-            <div className="mt-3">
-              <p
-                style={{ cursor: "pointer" }}
-                onClick={() => {
-                  setSelectedTab("selection");
-                  setActiveIndex(0);
-                }}
-                className={`border p-3 w-100 m-0 cursor-pointer ${
-                  selectedTab === "selection" ? "selected-tab" : ""
-                }`}
-              >
-                Selection chances
-              </p>
-              <p
-                style={{ cursor: "pointer" }}
-                onClick={() => {
-                  setSelectedTab("college");
-                  setActiveIndex(1);
-                }}
-                className={`border p-3 w-100 m-0 ${
-                  selectedTab === "college" ? "selected-tab" : ""
-                }`}
-              >
-                College shortlisting
-              </p>
+            <div className="mt-0 mt-lg-3 d-flex d-lg-block">
+              {sideBarTabs.map((tab, index) => {
+                return (
+                  <p
+                    key={tab.label}
+                    style={{
+                      cursor: "pointer",
+                      borderBottom: "1px solid #c9c8c7",
+                      fontWeight: "bold",
+                    }}
+                    onClick={() => {
+                      setSelectedTab(tab.label);
+                      setActiveIndex(index);
+                    }}
+                    className={` p-3 w-100 m-0 cursor-pointer text-left ${
+                      selectedTab === tab.label ? "selected-tab" : ""
+                    }`}
+                  >
+                    {isMobile ? tab.icon : tab.label}
+                  </p>
+                );
+              })}
             </div>
           </div>
-          <div className="output-container container py-3 col-lg-10 col-12">
+          <div className="output-container container pt-3 col-lg-10 col-12">
             {activeIndex === 0 ? (
               <div>
                 <div className="section-title">
@@ -726,7 +749,7 @@ const ChancesOfSelection = () => {
                 {data?.length > 1 && totalValues?.length > 1 ? (
                   <div
                     className="scrollable-container"
-                    style={{ height: "90vh", overflowY: "scroll" }}
+                    style={{ height: "70vh", overflowY: "scroll" }}
                   >
                     <SelectionOutput data={data} totalValues={totalValues} />{" "}
                   </div>
@@ -748,13 +771,23 @@ const ChancesOfSelection = () => {
                   </>
                 )}
               </div>
-            ) : (
+            ) : activeIndex === 1 ? (
               <div>
-                {/* <div className="section-title">
-                  <h2>College Information</h2>
-                 
-                </div> */}
                 <PreferenceAndGoalsPage />
+              </div>
+            ) : activeIndex === 2 ? (
+              <div
+                className="scrollable-container"
+                style={{ height: "90vh", overflowY: "scroll" }}
+              >
+                <ApplicationStrategyPage />
+              </div>
+            ) : (
+              <div
+                className="scrollable-container"
+                style={{ height: "90vh", overflowY: "scroll" }}
+              >
+                <AdmissionTips />
               </div>
             )}
           </div>

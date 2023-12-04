@@ -17,11 +17,29 @@ keys.forEach((key) => {
   initialValues[`${key}_leadershipManagerial`] = "N/A";
 });
 
-const NatureOfWorkForm = ({ onUpdateProgress }) => {
+const NatureOfWorkForm = ({ onUpdateProgress, onFormValidation }) => {
   const [expanded, setExpanded] = useState(Array(keys.length).fill(false));
   const [fieldsValue, setFieldsValue] = useState(
     JSON.parse(sessionStorage.getItem("natureExperience")) || {}
   );
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     sessionStorage.setItem("natureExperience", JSON.stringify(fieldsValue));
@@ -30,6 +48,7 @@ const NatureOfWorkForm = ({ onUpdateProgress }) => {
 
     // Update progress
     onUpdateProgress("natureExperience", nonEmptyCount);
+    onFormValidation("natureExperience", 3);
     //eslint-disable-next-line
   }, [fieldsValue]);
   useEffect(() => {
@@ -55,7 +74,7 @@ const NatureOfWorkForm = ({ onUpdateProgress }) => {
           style={{ margin: "0" }}
           name={`${record.key}_individualContributor`}
         >
-          <div className="d-flex align-items-center justify-content-center">
+          <div className="d-flex flex-wrap align-items-center justify-content-lg-center justify-content-start">
             {["<1", "1-3", "3-5", ">=5", "N/A"].map((option) => (
               <Tooltip title={` ${option} year(s)`} key={option}>
                 <Card
@@ -88,7 +107,7 @@ const NatureOfWorkForm = ({ onUpdateProgress }) => {
       key: "supervisory",
       render: (record) => (
         <Form.Item style={{ margin: "0" }} name={`${record.key}_supervisory`}>
-          <div className="d-flex align-items-center justify-content-center">
+          <div className="d-flex flex-wrap align-items-center justify-content-lg-center justify-content-start">
             {["<1", "1-2", "2-3", ">=3", "N/A"].map((option) => (
               <Tooltip title={`${option} year(s)`} key={option}>
                 <Card
@@ -119,7 +138,7 @@ const NatureOfWorkForm = ({ onUpdateProgress }) => {
           style={{ margin: "0" }}
           name={`${record.key}_leadershipManagerial`}
         >
-          <div className="d-flex align-items-center justify-content-center">
+          <div className="d-flex flex-wrap align-items-center justify-content-lg-center justify-content-start">
             {["<1", "1-2", "2-3", ">=3", "N/A"].map((option) => (
               <Tooltip title={`${option} year(s)`} key={option}>
                 <Card
@@ -151,6 +170,7 @@ const NatureOfWorkForm = ({ onUpdateProgress }) => {
     {
       key: "1",
       title: "Non-commercial technical (Engineering, Science, IT, Technology)",
+      title_mobile: "Technical (IT)",
       natureOfExperience: (
         <div
           style={{
@@ -173,6 +193,7 @@ const NatureOfWorkForm = ({ onUpdateProgress }) => {
     {
       key: "2",
       title: "Non-commercial technical (Accounting, Finance, HR)",
+      title_mobile: "Business Tech ",
       natureOfExperience: (
         <div
           style={{
@@ -195,6 +216,7 @@ const NatureOfWorkForm = ({ onUpdateProgress }) => {
     {
       key: "3",
       title: "Commercial technical (Sales, Marketing)",
+      title_mobile: "Commercial technical",
       natureOfExperience: (
         <div
           style={{
@@ -218,6 +240,7 @@ const NatureOfWorkForm = ({ onUpdateProgress }) => {
       key: "4",
       title:
         "Commercial generalist (Strategy, Consulting, Supply Chain, Operations)",
+      title_mobile: "Commercial generalist ",
       natureOfExperience: (
         <div
           style={{
@@ -271,7 +294,9 @@ const NatureOfWorkForm = ({ onUpdateProgress }) => {
                 >
                   {item.natureOfExperience}
                   {""}
-                  <span className="ml-3">{item.title}</span>
+                  <span className="ml-3">
+                    {isMobile ? item.title_mobile : item.title}
+                  </span>
                 </div>
 
                 <div>
@@ -305,7 +330,9 @@ const NatureOfWorkForm = ({ onUpdateProgress }) => {
                 {columns.map((content, colIndex) => {
                   return (
                     <div
-                      className="d-flex align-items-center mb-2 px-3 py-2 w-75 justify-content-between"
+                      className={`d-lg-flex align-items-center mb-2 px-3 py-2 ${
+                        isMobile ? "w-100" : "w-75"
+                      } justify-content-between`}
                       key={colIndex}
                     >
                       <div>

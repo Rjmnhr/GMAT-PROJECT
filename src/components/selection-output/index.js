@@ -38,14 +38,24 @@ const HeatmapExample = ({ data }) => {
     yaxis: {
       title: "Factors",
     },
+    autosize: true, // Automatically adjust the size of the chart to fit the container
+    margin: {
+      l: 50,
+      r: 50,
+      b: 50,
+      t: 50,
+      pad: 4,
+    },
   };
 
   return (
-    <Plot
-      data={heatmapData}
-      layout={layout}
-      config={{ displayModeBar: false }}
-    />
+    <div className="mb-3">
+      <Plot
+        data={heatmapData}
+        layout={layout}
+        config={{ displayModeBar: false }}
+      />
+    </div>
   );
 };
 
@@ -66,19 +76,29 @@ const Interactive3DRadarChart = ({ data }) => {
   }, [data]);
 
   return (
-    <Plot
-      data={chartData}
-      config={{ displayModeBar: false }}
-      layout={{
-        polar: {
-          radialaxis: {
-            visible: true,
-            range: [0, 1],
+    <ResponsiveContainer width="100%" height={400}>
+      <Plot
+        data={chartData}
+        config={{ displayModeBar: false }}
+        layout={{
+          polar: {
+            radialaxis: {
+              visible: true,
+              range: [0, 1],
+            },
           },
-        },
-        showlegend: true,
-      }}
-    />
+          showlegend: true,
+          autosize: true,
+          margin: {
+            l: 50,
+            r: 50,
+            b: 50,
+            t: 50,
+            pad: 4,
+          },
+        }}
+      />
+    </ResponsiveContainer>
   );
 };
 const RadarChartExample = ({ data }) => {
@@ -117,6 +137,7 @@ const RadarChartExample = ({ data }) => {
 };
 
 const SelectionOutput = ({ data, totalValues }) => {
+  const [isMobile, setIsMobile] = useState(false);
   // Function to determine the background color based on the value
   const getColor = (value) => {
     if (value < 0.3) {
@@ -149,11 +170,30 @@ const SelectionOutput = ({ data, totalValues }) => {
         return "❓"; // Default icon for unknown factors
     }
   };
+
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
-      <div className="container d-lg-flex justify-content-center align-items-center table-container">
+      <div className="container m-0 p-0 d-lg-flex justify-content-center align-items-center table-container">
         <div className="col-12 col-lg-6">
-          <table className="table styled-table">
+          <table style={{ width: "100%" }} className="table styled-table">
             <thead>
               <tr>
                 <th style={{ textAlign: "center" }} rowSpan="2">
@@ -202,7 +242,7 @@ const SelectionOutput = ({ data, totalValues }) => {
           </table>
           <div className="legend container">
             <div style={{ textAlign: "left", marginTop: "20px" }}>
-              <div style={{ marginRight: "20px" }}>
+              <div className="d-flex  mb-1 justify-content-lg-start justify-content-between align-items-center">
                 <div
                   style={{
                     backgroundColor: "#00aaa4",
@@ -211,11 +251,16 @@ const SelectionOutput = ({ data, totalValues }) => {
                     display: "inline-block",
                   }}
                 ></div>
-                <span style={{ marginLeft: "5px" }}>
+                <div
+                  style={{
+                    marginLeft: "5px",
+                    fontSize: `${isMobile ? "14px" : "18px"}`,
+                  }}
+                >
                   You are competitive in that group
-                </span>
+                </div>
               </div>
-              <div style={{ marginRight: "20px" }}>
+              <div className="d-flex mb-1 justify-content-lg-start justify-content-between align-items-center">
                 <div
                   style={{
                     backgroundColor: "#0c6eab",
@@ -224,11 +269,16 @@ const SelectionOutput = ({ data, totalValues }) => {
                     display: "inline-block",
                   }}
                 ></div>
-                <span style={{ marginLeft: "5px" }}>
-                  You have a decent chance to get admission in the group
-                </span>
+                <div
+                  style={{
+                    marginLeft: "5px",
+                    fontSize: `${isMobile ? "14px" : "18px"}`,
+                  }}
+                >
+                  You may be admitted to the group.
+                </div>
               </div>
-              <div style={{}}>
+              <div className="d-flex  mb-1 justify-content-lg-start justify-content-between align-items-center">
                 <div
                   style={{
                     backgroundColor: "#f8a66e",
@@ -237,9 +287,14 @@ const SelectionOutput = ({ data, totalValues }) => {
                     display: "inline-block",
                   }}
                 ></div>
-                <span style={{ marginLeft: "5px" }}>
+                <div
+                  style={{
+                    marginLeft: "5px",
+                    fontSize: `${isMobile ? "14px" : "18px"}`,
+                  }}
+                >
                   You are not competitive in that group
-                </span>
+                </div>
               </div>
             </div>
           </div>
@@ -248,8 +303,8 @@ const SelectionOutput = ({ data, totalValues }) => {
           <RadarChartExample data={data} />
         </div>
       </div>
-      <Interactive3DRadarChart data={data} />
-      <HeatmapExample data={data} />{" "}
+      {isMobile ? "" : <Interactive3DRadarChart data={data} />}
+      {isMobile ? "" : <HeatmapExample data={data} />}{" "}
       {/* <BarChartExample data={data} totalValues={totalValues} /> */}
       {/* <div style={{ display: "grid", placeItems: "center" }}>
 <div className="clock">

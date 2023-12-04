@@ -3,6 +3,18 @@ import { Link as ScrollLink } from "react-scroll";
 import { Carousel } from "antd";
 
 const HomePage = () => {
+  sessionStorage.removeItem("experience");
+  sessionStorage.removeItem("experience-default");
+  sessionStorage.removeItem("natureExperience");
+  sessionStorage.removeItem("natureExperience-default");
+  sessionStorage.removeItem("basic-details");
+  sessionStorage.removeItem("basic-details-default");
+  sessionStorage.removeItem("graduate");
+  sessionStorage.removeItem("graduate-default");
+  sessionStorage.removeItem("service");
+  sessionStorage.removeItem("service-default");
+  sessionStorage.removeItem("hobbies");
+  sessionStorage.removeItem("hobbies-default");
   return (
     <>
       <header id="header" className="fixed-top">

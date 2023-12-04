@@ -7,7 +7,6 @@ import UndergraduateDegreeForm from "../../components/profiler-forms/graduate-fo
 import CommunityServiceForm from "../../components/profiler-forms/community-service-form";
 import HobbiesForm from "../../components/profiler-forms/hobbies-form";
 import NatureOfWorkForm from "../../components/profiler-forms/work-experience/nature-of-work";
-
 import { ProfilerPageStyled } from "./style";
 import { Progress, message } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -126,29 +125,52 @@ const ProfilerPage = () => {
     setActiveTab(newValue);
   };
   const twoColors = { "0%": "#108ee9", "100%": "#87d068" };
+
+  const handleFormValidation = (formName, tab) => {
+    const defaultValues = JSON.parse(
+      sessionStorage.getItem(`${formName}-default`)
+    );
+    const currentValues = JSON.parse(sessionStorage.getItem(formName));
+    if (defaultValues) {
+      const missingKeys = Object.keys(defaultValues).filter(
+        (key) => !currentValues.hasOwnProperty(key)
+      );
+      if (missingKeys?.length === 0 && isMobile) {
+        if (tab === 6) {
+          navigate("/selection-chance");
+        } else {
+          setActiveTab(tab);
+        }
+      }
+    }
+    // Chec)k if all keys from defaultValues are present in currentValues
+  };
+
   return (
     <ProfilerPageStyled>
       {contextHolder}
+
       <NavBar />
       <div
         className="container-fluid"
         style={{ background: "rgb(248, 248, 248)" }}
       >
-        <div style={{ background: "white" }} className="container">
+        <div style={{ background: "white" }} className="container p-0 p-lg-2">
           <div
             className="vh-100 container col-12"
             style={{
               marginTop: "100px",
-              display: "grid",
+              display: `${isMobile ? "block" : "grid"}`,
               alignContent: "center",
               justifyContent: `${
                 activeTab === 0 ? "center" : `${isMobile ? "start" : "center"}`
               }`,
             }}
           >
-            <div className="d-flex justify-content-between mb-2 align-items-center">
+            <div className="d-lg-flex justify-content-between mb-2 align-items-center">
               <div style={{ textAlign: "left", marginTop: "10px" }}>
                 <Progress
+                  style={{ display: `${isMobile ? "none" : "inline-block"}` }}
                   size={40}
                   type="circle"
                   percent={overAllProgress}
@@ -160,6 +182,7 @@ const ProfilerPage = () => {
               </div>
               <div>
                 <button
+                  style={{ display: `${isMobile ? "none" : "block"}` }}
                   onClick={handleSaveAndContinue}
                   className="btn btn-primary"
                 >
@@ -168,8 +191,11 @@ const ProfilerPage = () => {
               </div>
             </div>
             <Tabs
+              style={{ display: `${isMobile ? "none" : "block"}` }}
+              orientation={isMobile ? "vertical" : "horizontal"} // Set orientation based on the screen size
+              variant={isMobile ? "scrollable" : "standard"} // Use scrollable variant for vertical tabs
               value={activeTab}
-              centered
+              centered={!isMobile} // Center tabs for horizontal layout
               onChange={handleTabChange}
               indicatorColor="primary"
               textColor="primary"
@@ -182,38 +208,54 @@ const ProfilerPage = () => {
               <Tab label="Hobbies" />
             </Tabs>
             <TabPanel value={activeTab} index={0}>
-              <div style={{ minHeight: "70vh" }}>
-                <BasicDetailsForm onUpdateProgress={handleUpdateProgress} />
+              <div style={{ minHeight: `${isMobile ? "" : "70vh"}` }}>
+                <BasicDetailsForm
+                  onUpdateProgress={handleUpdateProgress}
+                  onFormValidation={handleFormValidation}
+                />
               </div>
             </TabPanel>
             <TabPanel value={activeTab} index={1}>
               <div style={{ minHeight: "70vh" }}>
-                <WorkExperienceForm onUpdateProgress={handleUpdateProgress} />
+                <WorkExperienceForm
+                  onUpdateProgress={handleUpdateProgress}
+                  onFormValidation={handleFormValidation}
+                />
               </div>
             </TabPanel>
-            <TabPanel value={activeTab} index={2}>
+            <TabPanel style={{ padding: "0" }} value={activeTab} index={2}>
               <div
                 className="scrollable-container"
                 style={{ height: "70vh", overflowY: "scroll" }}
               >
-                <NatureOfWorkForm onUpdateProgress={handleUpdateProgress} />
+                <NatureOfWorkForm
+                  onUpdateProgress={handleUpdateProgress}
+                  onFormValidation={handleFormValidation}
+                />
               </div>
             </TabPanel>
             <TabPanel value={activeTab} index={3}>
               <div style={{ minHeight: "70vh" }}>
                 <UndergraduateDegreeForm
                   onUpdateProgress={handleUpdateProgress}
+                  onFormValidation={handleFormValidation}
                 />
               </div>
             </TabPanel>
             <TabPanel value={activeTab} index={4}>
               <div style={{ minHeight: "70vh" }}>
-                <CommunityServiceForm onUpdateProgress={handleUpdateProgress} />
+                <CommunityServiceForm
+                  onUpdateProgress={handleUpdateProgress}
+                  onFormValidation={handleFormValidation}
+                />
               </div>
             </TabPanel>
             <TabPanel value={activeTab} index={5}>
               <div style={{ minHeight: "70vh" }}>
-                <HobbiesForm onUpdateProgress={handleUpdateProgress} />
+                <HobbiesForm
+                  onUpdateProgress={handleUpdateProgress}
+                  onFormValidation={handleFormValidation}
+                />
               </div>
             </TabPanel>
           </div>
@@ -227,6 +269,24 @@ export default ProfilerPage;
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div
@@ -237,7 +297,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
+        <Box style={{ padding: `${isMobile ? "0" : ""}` }} p={3}>
           <Typography component="div">{children}</Typography>
         </Box>
       )}

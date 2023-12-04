@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const BasicDetailsFormStyled = styled.div`
-  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+  .MuiButtonBase-root-MuiTab-root {
     margin-bottom: 20px;
   }
-  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+  .MuiButtonBase-root-MuiTab-root {
     border-right: 5px solid #cfcecc;
     border-bottom: none;
   }
-  .css-10d9dml-MuiTabs-indicator {
+  .MuiTabs-indicator {
     position: absolute;
     height: 100%;
     bottom: 0;
@@ -53,6 +53,7 @@ export const BasicDetailsFormStyled = styled.div`
     display: flex;
     justify-content: start;
     margin-bottom: 20px;
+    flex-wrap: wrap;
   }
 
   .age-card {

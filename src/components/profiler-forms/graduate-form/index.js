@@ -53,7 +53,7 @@ const PerformanceOptions = [
   },
 ];
 
-const UndergraduateDegreeForm = ({ onUpdateProgress }) => {
+const UndergraduateDegreeForm = ({ onUpdateProgress, onFormValidation }) => {
   const [selectedCollegeType, setSelectedCollegeType] = useState(
     JSON.parse(sessionStorage.getItem("graduate"))?.collegeType
   );
@@ -84,6 +84,7 @@ const UndergraduateDegreeForm = ({ onUpdateProgress }) => {
     ).length;
 
     onUpdateProgress("graduate", nonEmptyCount);
+    onFormValidation("graduate", 4);
     //eslint-disable-next-line
   }, [selectedCollegeType, selectedPerformance]);
 

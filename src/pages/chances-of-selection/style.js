@@ -184,8 +184,14 @@ export const ChancesOfSelectionStyled = styled.div`
 
   /* Add responsive styles using media queries as needed */
   @media (max-width: 600px) {
-    .styled-table {
-      /* Adjust styling for smaller screens */
+    th,
+    td {
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
     }
   }
 `;

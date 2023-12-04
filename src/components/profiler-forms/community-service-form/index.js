@@ -56,7 +56,7 @@ const YearsOptions = [
   { value: ">=5", label: ">= 5", description: "5 years or more" },
 ];
 
-const CommunityServiceForm = ({ onUpdateProgress }) => {
+const CommunityServiceForm = ({ onUpdateProgress, onFormValidation }) => {
   const [selectedActivity, setSelectedActivity] = useState(
     JSON.parse(sessionStorage.getItem("service"))?.natureOfActivity
   );
@@ -111,6 +111,7 @@ const CommunityServiceForm = ({ onUpdateProgress }) => {
     ].filter(Boolean).length;
 
     onUpdateProgress("service", nonEmptyCount);
+    onFormValidation("service", 5);
     //eslint-disable-next-line
   }, [selectedActivity, selectedContribution, selectedYears]);
 

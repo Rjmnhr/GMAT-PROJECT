@@ -25,7 +25,7 @@ const companySizeOptions = [
   },
 ];
 
-const WorkExperienceForm = ({ onUpdateProgress }) => {
+const WorkExperienceForm = ({ onUpdateProgress, onFormValidation }) => {
   const [selectedType, setSelectedType] = useState(
     JSON.parse(sessionStorage.getItem("experience"))?.type
   );
@@ -61,6 +61,7 @@ const WorkExperienceForm = ({ onUpdateProgress }) => {
     ].filter(Boolean).length;
 
     onUpdateProgress("experience", nonEmptyCount);
+    onFormValidation("experience", 2);
     //eslint-disable-next-line
   }, [selectedType, selectedGeographicalReach, selectedCompanySize]);
 
@@ -97,8 +98,9 @@ const WorkExperienceForm = ({ onUpdateProgress }) => {
   return (
     <>
       <BasicDetailsFormStyled>
-        <div className={` container-fluid`}>
+        <div className={`col-lg-8 p-0 p-lg-3  container`}>
           <Form
+            className="p-0"
             name="workExperienceForm"
             labelCol={{ span: 15 }}
             wrapperCol={{ span: 16 }}

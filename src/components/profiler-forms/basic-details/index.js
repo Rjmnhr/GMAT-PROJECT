@@ -4,7 +4,7 @@ import { BasicDetailsFormStyled } from "./style";
 import maleIcon from "../../../icons/man.png";
 import femaleIcon from "../../../icons/woman.png";
 
-const BasicDetailsForm = ({ onUpdateProgress }) => {
+const BasicDetailsForm = ({ onUpdateProgress, onFormValidation }) => {
   const [selectedAge, setSelectedAge] = useState(
     JSON.parse(sessionStorage.getItem("basic-details"))?.age
   );
@@ -43,6 +43,7 @@ const BasicDetailsForm = ({ onUpdateProgress }) => {
     ).length;
 
     onUpdateProgress("basic-details", nonEmptyCount);
+    onFormValidation("basic-details", 1);
     //eslint-disable-next-line
   }, [selectedAge, selectedGender, selectedGMAT]);
 
@@ -64,13 +65,8 @@ const BasicDetailsForm = ({ onUpdateProgress }) => {
 
   return (
     <BasicDetailsFormStyled>
-      <div
-        className="col-lg-8 parent-container"
-        style={{
-          padding: "20px",
-        }}
-      >
-        <Form name="basicDetailsForm">
+      <div className="col-lg-8 p-0 p-lg-3 parent-container">
+        <Form className="p-0" name="basicDetailsForm">
           <h5 className="text-left mb-2">Choose your age </h5>
           <div className="age-cards mt-2">
             {["<26", "<30", "<32", "<35", "≥35"].map((age) => (
