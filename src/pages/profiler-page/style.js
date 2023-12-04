@@ -12,7 +12,7 @@ export const ProfilerPageStyled = styled.div`
     font-size: 10px;
   }
 
-  .css-1aquho2-MuiTabs-indicator {
+  .MuiTabs-indicator {
     position: absolute;
     height: 5px;
     bottom: 0px;
@@ -22,11 +22,11 @@ export const ProfilerPageStyled = styled.div`
     background-color: rgb(0, 128, 128);
   }
 
-  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  .MuiButtonBase-root-MuiTab-root.Mui-selected {
     color: rgb(0, 128, 128);
   }
 
-  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+  .MuiButtonBase-root-MuiTab-root {
     border-bottom: 5px solid #cfcecc;
     padding: 0;
     margin-left: 15px;
