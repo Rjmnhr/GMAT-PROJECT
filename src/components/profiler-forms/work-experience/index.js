@@ -98,13 +98,8 @@ const WorkExperienceForm = ({ onUpdateProgress, onFormValidation }) => {
   return (
     <>
       <BasicDetailsFormStyled>
-        <div className={`col-lg-8 p-0 p-lg-3  container`}>
-          <Form
-            className="p-0"
-            name="workExperienceForm"
-            labelCol={{ span: 15 }}
-            wrapperCol={{ span: 16 }}
-          >
+        <div className={` p-0 p-lg-3  container`}>
+          <Form className="p-0" name="workExperienceForm">
             <h5 className="text-left mb-2">Company type </h5>
             <div className="age-cards mt-2">
               {[
