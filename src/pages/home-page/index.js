@@ -34,6 +34,12 @@ const HomePage = () => {
               <li class="active">
                 <a href="#header">Home</a>
               </li>
+              <li>
+                <a href="/profiler">Profiler</a>
+              </li>
+              <li>
+                <a href="/dashboard">GMAT</a>
+              </li>
 
               <li>
                 <ScrollLink
@@ -69,36 +75,7 @@ const HomePage = () => {
               </li>
 
               <li>
-                <ScrollLink
-                  to="team"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={1000} // Adjust this duration value
-                  // Use the easeInOutQuart easing function
-                  // For custom easing functions, you can use external libraries like bezier-easing
-                  // See: https://github.com/gre/bezier-easing
-                  // easing="cubicBezier(0.77, 0, 0.175, 1)"
-                  easing="easeInOutQuart"
-                >
-                  <a href="#team">Team</a>
-                </ScrollLink>
-              </li>
-              <li>
-                <ScrollLink
-                  to="faq"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={1000} // Adjust this duration value
-                  // Use the easeInOutQuart easing function
-                  // For custom easing functions, you can use external libraries like bezier-easing
-                  // See: https://github.com/gre/bezier-easing
-                  // easing="cubicBezier(0.77, 0, 0.175, 1)"
-                  easing="easeInOutQuart"
-                >
-                  <a href="#faq">Frequently Asked Questions</a>
-                </ScrollLink>
+                <a href="/videos">Videos</a>
               </li>
 
               <li>

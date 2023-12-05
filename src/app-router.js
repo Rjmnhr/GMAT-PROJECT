@@ -9,7 +9,7 @@ import SectionDivider from "./components/section-divider";
 import OptionalBreak from "./components/optional-break";
 import IRTestPage from "./pages/IR_section";
 import DashboardDetailed from "./components/detailed-dashboard";
-
+import VideosPage from "./pages/videos-page";
 import LoginPage from "./pages/login-page";
 import OtpVerification from "./pages/otp-verification";
 import AdminDashboard from "./components/admin-dashboard";
@@ -72,6 +72,16 @@ const AppRouter = () => {
               <>
                 <div>
                   <ProfilerPage />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/videos"
+            element={
+              <>
+                <div>
+                  <VideosPage />
                 </div>
               </>
             }

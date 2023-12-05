@@ -24,6 +24,13 @@ const NavBar = () => {
               <a href="/#header">Home</a>
             </li>
             <li>
+              <a href="/profiler">Profiler</a>
+            </li>
+            <li>
+              <a href="/dashboard">GMAT</a>
+            </li>
+
+            <li>
               <a href="/#about">About</a>
             </li>
             <li>
@@ -31,20 +38,14 @@ const NavBar = () => {
             </li>
 
             <li>
-              <a href="/#team">Team</a>
+              <a href="/videos">Videos</a>
             </li>
-            <li>
-              <a href="/#faq">Frequently Asked Questions</a>
-            </li>
-
             <li>
               <a href="/#contact">Contact</a>
             </li>
             <li>
-              <a href="/login-app">
-                Login
-              </a>
-            </li> 
+              <a href="/login-app">Login</a>
+            </li>
           </ul>
         </nav>
       </div>
