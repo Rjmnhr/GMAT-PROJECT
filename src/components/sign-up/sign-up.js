@@ -2,13 +2,11 @@ import React, { useState } from "react";
 // import InfoModal from "../modals/info-modal";
 
 import { LoadingOutlined } from "@ant-design/icons";
-
+import { useApplicationContext } from "../../context/app-context";
 import { useNavigate } from "react-router-dom";
 import AxiosInstance from "../axios";
 import { useEffect } from "react";
 import { message } from "antd";
-
-import { useApplicationContext } from "../../app-context";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");

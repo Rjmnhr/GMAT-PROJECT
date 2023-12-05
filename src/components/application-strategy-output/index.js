@@ -205,10 +205,9 @@ const ApplicationStrategyOutput = () => {
   const [shortTermSkillsGapValues, setShortTermSkillsGapValues] = useState({});
   const [isMobile, setIsMobile] = useState(false);
 
-  console.log("rendering");
   useEffect(() => {
     // Find the matching long term goal data
-    const selectedLongTermGoalData = longTermDataSource.find(
+    const selectedLongTermGoalData = longTermDataSource?.find(
       (goalData) =>
         goalData["Long term goal"] === storedGoalsInput.longTermGoals
     );
@@ -231,7 +230,7 @@ const ApplicationStrategyOutput = () => {
 
   useEffect(() => {
     // Find the matching short term goal data
-    const selectedShortTermGoalData = shortTermDataSource.find(
+    const selectedShortTermGoalData = shortTermDataSource?.find(
       (goalData) =>
         goalData["Short term goal"] === storedGoalsInput.shortTermGoals
     );
@@ -295,9 +294,9 @@ const ApplicationStrategyOutput = () => {
           <table className="skill-matrix">
             <thead>
               <tr>
-                <th>Skill Factor</th>
-                <th>Long Term</th>
-                <th>Short Term</th>
+                <th>The skills you need to develop </th>
+                <th>Based on long term goals</th>
+                <th>Based on short term goals</th>
               </tr>
             </thead>
             <tbody>

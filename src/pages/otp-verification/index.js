@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { OtpVerificationPageStyled } from "./style";
 import { message } from "antd";
 import AxiosInstance from "../../components/axios";
-import { useApplicationContext } from "../../app-context";
+import { useApplicationContext } from "../../context/app-context";
 import { LoadingOutlined } from "@ant-design/icons";
 
 const OtpVerification = () => {

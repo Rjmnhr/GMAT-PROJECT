@@ -2,7 +2,7 @@ import SignIn from "../../components/sign-in/sign-in";
 
 import { LoginPagestyled } from "./style";
 import SignUp from "../../components/sign-up/sign-up";
-import { useApplicationContext } from "../../app-context";
+import { useApplicationContext } from "../../context/app-context";
 import { useLocation } from "react-router-dom";
 
 const LoginPage = () => {
