@@ -1,55 +1,79 @@
-import SignIn from "../../components/sign-in/sign-in";
-
-import { LoginPagestyled } from "./style";
-import SignUp from "../../components/sign-up/sign-up";
+import SignIn from "../../components/sign-in/index";
+import NavBar from "../../components/nav-bar";
+import { LoginPageStyled } from "./style";
+import SignUp from "../../components/sign-up/index";
 import { useApplicationContext } from "../../context/app-context";
-import { useLocation } from "react-router-dom";
-
+import pointArrow from "../../icons/right-arrow.png";
 const LoginPage = () => {
   const { isSignIn } = useApplicationContext();
-  const Location = useLocation();
-  const showContent = Location.pathname === "/login-app";
+
   return (
     <>
-      <LoginPagestyled>
+      <LoginPageStyled>
+        <NavBar />
+
         <div className="main-container" style={{ height: "100vh" }}>
           <div
-            className="left-container img_container"
+            className="left-container img_container bg-dark"
             style={{
-              backgroundImage:
-                "url(https://res.cloudinary.com/dsw1ubwyh/image/upload/v1695657433/pgsgfjhvitdmjl0pnbco.png)",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
               height: "100vh",
               transform: "translate3d(0px, 0px, 0px)",
             }}
           >
-            <p style={{ fontSize: "80px" }}>
-              <span className="text-primary" style={{ fontWeight: "bold" }}>
-                {" "}
-                Adeft
-              </span>{" "}
-              <span style={{ color: "white" }}>Education</span>
-            </p>
+            <h2 className="text-left w-100">
+              Log in to unlock exclusive content
+            </h2>
+
+            <div className="text-left w-100 mt-3">
+              <h5 className="d-flex justify-contents-start align-items-center mb-3  col-12">
+                <img
+                  style={{ marginRight: "8px" }}
+                  src={pointArrow}
+                  alt=""
+                  height={50}
+                  width={50}
+                />{" "}
+                GMAT Practice Test
+              </h5>
+              <h5 className="d-flex justify-contents-start align-items-center mb-3  col-12">
+                <img
+                  style={{ marginRight: "8px" }}
+                  src={pointArrow}
+                  alt=""
+                  height={50}
+                  width={50}
+                />
+                Profiler
+              </h5>
+              <h5 className="d-flex justify-contents-start align-items-center mb-3  col-12">
+                <img
+                  style={{ marginRight: "8px" }}
+                  src={pointArrow}
+                  alt=""
+                  height={50}
+                  width={50}
+                />
+                Recorded Videos
+              </h5>
+              <h5 className="d-flex justify-contents-start align-items-center mb-3  col-12">
+                <img
+                  style={{ marginRight: "8px" }}
+                  src={pointArrow}
+                  alt=""
+                  height={50}
+                  width={50}
+                />
+                Practice Questions
+              </h5>
+            </div>
           </div>
           <div className="right-container">
             <div className="right-sub-container">
-              <div>
-                {showContent ? (
-                  <p>
-                    To access our free GMAT test, please register or log in to
-                    your account. Registration is quick and easy.
-                  </p>
-                ) : (
-                  ""
-                )}
-
-                {isSignIn ? <SignIn /> : <SignUp />}
-              </div>
+              <div>{isSignIn ? <SignIn /> : <SignUp />}</div>
             </div>
           </div>
         </div>
-      </LoginPagestyled>
+      </LoginPageStyled>
     </>
   );
 };

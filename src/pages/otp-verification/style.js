@@ -61,6 +61,18 @@ export const OtpVerificationPageStyled = styled.div`
     z-index: -1;
   }
 
+  input[type="number"] {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+
   @media (max-width: 912px) {
     .left-container {
       display: none;

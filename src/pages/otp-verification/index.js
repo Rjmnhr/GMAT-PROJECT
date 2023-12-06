@@ -15,22 +15,22 @@ const OtpVerification = () => {
   const navigate = useNavigate();
   const inputRefs = useRef([]);
 
-  const email = localStorage.getItem("email");
-  const first_name = localStorage.getItem("first_name");
-  const last_name = localStorage.getItem("last_name");
-  const password = localStorage.getItem("password");
-  const phone = localStorage.getItem("phone");
+  const email = sessionStorage.getItem("email");
+  const first_name = sessionStorage.getItem("first_name");
+  const last_name = sessionStorage.getItem("last_name");
+  const password = sessionStorage.getItem("password");
+  const phone = sessionStorage.getItem("phone");
   const [isLoading, setIsLoading] = useState(false);
   const [messageApi, contextHolder] = message.useMessage();
 
   const { setIsSignIn } = useApplicationContext();
 
-  const clearLocalStorage = () => {
-    localStorage.removeItem("email");
-    localStorage.removeItem("first_name");
-    localStorage.removeItem("last_name");
-    localStorage.removeItem("password");
-    localStorage.removeItem("phone");
+  const clearSessionStorage = () => {
+    sessionStorage.removeItem("email");
+    sessionStorage.removeItem("first_name");
+    sessionStorage.removeItem("last_name");
+    sessionStorage.removeItem("password");
+    sessionStorage.removeItem("phone");
   };
 
   const handleInputChange = (index, event) => {
@@ -136,24 +136,24 @@ const OtpVerification = () => {
 
         const userType = data.user_type;
 
-        localStorage.setItem("userType", userType);
-        localStorage.setItem("accessToken", accessToken);
-        localStorage.setItem("isLoggedIn", true);
-        localStorage.setItem("user_id", id);
-        localStorage.setItem("user_name", data.first_name);
-        localStorage.setItem("email", data.email);
+        localStorage.setItem("adefteducation_userType", userType);
+        localStorage.setItem("adefteducation_accessToken", accessToken);
+        localStorage.setItem("adefteducation_isLoggedIn", true);
+        localStorage.setItem("adefteducation_user_id", id);
+        localStorage.setItem("adefteducation_user_name", data.first_name);
+        localStorage.setItem("adefteducation_email", data.email);
 
         if (userType === "admin") {
-          localStorage.setItem("isAdmin", "true");
+          localStorage.setItem("adefteducation_isAdmin", "true");
         } else {
-          localStorage.setItem("isAdmin", "false");
+          localStorage.setItem("adefteducation_isAdmin", "false");
         }
 
         console.log(data);
-        clearLocalStorage();
+        clearSessionStorage();
 
         if (Location.pathname === "/login-app") {
-          navigate("/dashboard");
+          navigate("/");
         } else {
           navigate("/");
         }
@@ -205,7 +205,7 @@ const OtpVerification = () => {
                 {otpPin.map((otp, index) => (
                   <input
                     style={{
-                      width: "12px",
+                      width: "20px",
                       background: "none",
                       border: "none",
                       borderBottom: "1px solid black",

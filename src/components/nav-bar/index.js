@@ -1,6 +1,46 @@
-import React from "react";
+import { Avatar, Dropdown } from "antd";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { UserOutlined } from "@ant-design/icons";
 
 const NavBar = () => {
+  const navigate = useNavigate();
+  const [userName, setUserName] = useState("");
+  const isLoggedIn = localStorage.getItem("adefteducation_isLoggedIn");
+  const storedUserName = localStorage.getItem("adefteducation_user_name");
+
+  useEffect(() => {
+    if (storedUserName) {
+      // Split the full name into an array of words
+      const nameArray = storedUserName.split(" ");
+
+      // Get the first element of the array, which is the first name
+      const firstName = nameArray[0];
+
+      setUserName(firstName);
+    }
+  }, [storedUserName]);
+
+  const handleLogOut = () => {
+    navigate("/");
+    localStorage.removeItem("adefteducation_accessToken", "");
+    localStorage.setItem("adefteducation_isLoggedIn", false);
+  };
+  const items = [
+    // {
+    //   key: "1",
+    //   label: <a href="/account">My Account</a>,
+    // },
+    {
+      key: "1",
+      label: (
+        <a href="#eq" onClick={handleLogOut}>
+          Log out
+        </a>
+      ),
+    },
+  ];
+
   return (
     <header
       style={{ boxShadow: "0px 2px 15px rgba(0, 0, 0, 0.1)" }}
@@ -43,9 +83,40 @@ const NavBar = () => {
             <li>
               <a href="/#contact">Contact</a>
             </li>
-            <li>
-              <a href="/login-app">Login</a>
-            </li>
+            {isLoggedIn === "true" ? (
+              <>
+                <Dropdown
+                  menu={{
+                    items,
+                  }}
+                  placement="bottomRight"
+                  arrow
+                >
+                  <li
+                    style={{
+                      paddingTop: "5px",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                    }}
+                  >
+                    {" "}
+                    <a href="?#">{userName}</a>
+                    <Avatar
+                      size="small"
+                      style={{
+                        background: "#049494",
+                      }}
+                      icon={<UserOutlined />}
+                    />
+                  </li>
+                </Dropdown>
+              </>
+            ) : (
+              <li>
+                <a href="/login">Log in</a>
+              </li>
+            )}
           </ul>
         </nav>
       </div>

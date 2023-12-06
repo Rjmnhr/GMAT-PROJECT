@@ -82,131 +82,161 @@ const AppRouter = () => {
           <Route
             path="/videos"
             element={
-              <>
-                <div>
-                  <VideosPage />
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    <VideosPage />
+                  </>
+                }
+              />
             }
           />
           <Route
             path="/category-videos"
             element={
-              <>
-                <div>
-                  <CategoryVideos />
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    <CategoryVideos />
+                  </>
+                }
+              />
             }
           />
           <Route
             path="/selection-chance"
             element={
-              <>
-                <div>
-                  <ChancesOfSelection />
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    <ChancesOfSelection />
+                  </>
+                }
+              />
             }
           />
           <Route
             path="/dashboard"
             element={
-              <>
-                <div>
-                  {isMobile ? <ConditionalComponent /> : <DashBoardComponent />}
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    {isMobile ? (
+                      <ConditionalComponent />
+                    ) : (
+                      <DashBoardComponent />
+                    )}
+                  </>
+                }
+              />
             }
           />
           <Route
             path="/quant-test"
             element={
-              <>
-                <div>
-                  {isMobile ? <ConditionalComponent /> : <QuantTestPage />}
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>{isMobile ? <ConditionalComponent /> : <QuantTestPage />}</>
+                }
+              />
             }
           />
           <Route
             path="verbal-test"
             element={
-              <>
-                <div>
-                  {isMobile ? <ConditionalComponent /> : <VerbalTestPage />}
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    {isMobile ? <ConditionalComponent /> : <VerbalTestPage />}
+                  </>
+                }
+              />
             }
           />
           <Route
             path="/instructions"
             element={
-              <>
-                <div>
-                  <InstructionPage />
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    <InstructionPage />
+                  </>
+                }
+              />
             }
           />
           <Route
             path="/section"
             element={
-              <>
-                <div>
-                  <SectionDivider />
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    <SectionDivider />
+                  </>
+                }
+              />
             }
           />
           <Route
             path="/results"
             element={
-              <>
-                <div>
-                  <ResultPage />
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    <ResultPage />
+                  </>
+                }
+              />
             }
           />
           <Route
             path="/test-break"
             element={
-              <>
-                <div>
-                  <OptionalBreak />
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    <OptionalBreak />
+                  </>
+                }
+              />
             }
           />
           <Route
             path="/ir-test"
             element={
-              <>
-                <div>
-                  {isMobile ? <ConditionalComponent /> : <IRTestPage />}
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>{isMobile ? <ConditionalComponent /> : <IRTestPage />}</>
+                }
+              />
             }
           />
           <Route
             path="/dashboard-detailed"
             element={
-              <>
-                <div>
-                  {isMobile ? <ConditionalComponent /> : <DashboardDetailed />}
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    {isMobile ? (
+                      <ConditionalComponent />
+                    ) : (
+                      <DashboardDetailed />
+                    )}
+                  </>
+                }
+              />
             }
           />
           <Route
             path="/admin-dashboard"
             element={
-              <>
-                <div>
-                  {isMobile ? <ConditionalComponent /> : <AdminDashboard />}
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    {isMobile ? <ConditionalComponent /> : <AdminDashboard />}
+                  </>
+                }
+              />
             }
           />
           <Route
@@ -242,26 +272,34 @@ const AppRouter = () => {
           <Route
             path="/user/:id"
             element={
-              <>
-                <div>
-                  {isMobile ? <ConditionalComponent /> : <UserDataComponent />}
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    {isMobile ? (
+                      <ConditionalComponent />
+                    ) : (
+                      <UserDataComponent />
+                    )}
+                  </>
+                }
+              />
             }
           />
-          UserDetailedDashboard
+
           <Route
             path="/dashboard-detailed/:id"
             element={
-              <>
-                <div>
-                  {isMobile ? (
-                    <ConditionalComponent />
-                  ) : (
-                    <UserDetailedDashboard />
-                  )}
-                </div>
-              </>
+              <ProtectedRoute
+                element={
+                  <>
+                    {isMobile ? (
+                      <ConditionalComponent />
+                    ) : (
+                      <UserDetailedDashboard />
+                    )}
+                  </>
+                }
+              />
             }
           />
           <Route

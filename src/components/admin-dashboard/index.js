@@ -17,10 +17,7 @@ const AdminDashboard = () => {
     AxiosInstance.get("/api/user/get-all")
       .then(async (response) => {
         const resultData = await response.data;
-        console.log(
-          "🚀 ~ file: index.js:150 ~ .then ~ resultData:",
-          resultData
-        );
+
         setUserData(resultData);
         // setDataLinkedIn(resultData);
       })

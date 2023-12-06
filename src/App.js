@@ -1,5 +1,5 @@
 import "./App.css";
-import AppRouter from "./app-router";
+import AppRouter from "./app-routes/app-router";
 import { AppContextProvider } from "./context/app-context";
 
 function App() {

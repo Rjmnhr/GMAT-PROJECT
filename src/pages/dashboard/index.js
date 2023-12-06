@@ -11,7 +11,7 @@ const DashBoardComponent = () => {
   const [practiceExam2, setPracticeExam2] = useState(null);
   const [practiceExam3, setPracticeExam3] = useState(null);
 
-  const user_id = localStorage.getItem("user_id");
+  const user_id = localStorage.getItem("adefteducation_user_id");
 
   const fetchData = async (examNo) => {
     try {

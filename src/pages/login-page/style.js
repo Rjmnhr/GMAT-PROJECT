@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export const LoginPagestyled = styled.div`
+export const LoginPageStyled = styled.div`
   .main-container {
     display: flex;
     align-items: center;
@@ -8,16 +8,15 @@ export const LoginPagestyled = styled.div`
 
   .left-container {
     width: 50%;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     background: black;
     color: white;
     padding: 20px;
-  }
-
-  .left-container h1 {
-    font-size: 80px;
+    text-align: left;
   }
 
   .right-container {

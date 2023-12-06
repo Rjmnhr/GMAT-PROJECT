@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { Carousel } from "antd";
+import { Avatar, Carousel, Dropdown } from "antd";
+import { UserOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   sessionStorage.removeItem("experience");
@@ -15,6 +17,44 @@ const HomePage = () => {
   sessionStorage.removeItem("service-default");
   sessionStorage.removeItem("hobbies");
   sessionStorage.removeItem("hobbies-default");
+  const [userName, setUserName] = useState("");
+  const navigate = useNavigate();
+
+  const isLoggedIn = localStorage.getItem("adefteducation_isLoggedIn");
+
+  const storedUserName = localStorage.getItem("adefteducation_user_name");
+
+  useEffect(() => {
+    if (storedUserName) {
+      // Split the full name into an array of words
+      const nameArray = storedUserName.split(" ");
+
+      // Get the first element of the array, which is the first name
+      const firstName = nameArray[0];
+
+      setUserName(firstName);
+    }
+  }, [storedUserName]);
+  const handleLogOut = () => {
+    navigate("/");
+    localStorage.removeItem("adefteducation_accessToken", "");
+    localStorage.setItem("adefteducation_isLoggedIn", false);
+  };
+  const items = [
+    // {
+    //   key: "1",
+    //   label: <a href="/account">My Account</a>,
+    // },
+    {
+      key: "1",
+      label: (
+        <a href="#eq" onClick={handleLogOut}>
+          Log out
+        </a>
+      ),
+    },
+  ];
+
   return (
     <>
       <header id="header" className="fixed-top">
@@ -94,9 +134,39 @@ const HomePage = () => {
                   <a href="#contact">Contact</a>
                 </ScrollLink>
               </li>
-              <li>
-                <a href="/login">Login</a>
-              </li>
+              {isLoggedIn === "true" ? (
+                <>
+                  <Dropdown
+                    menu={{
+                      items,
+                    }}
+                    placement="bottomRight"
+                    arrow
+                  >
+                    <li
+                      style={{
+                        paddingTop: "5px",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px",
+                      }}
+                    >
+                      <a href="?#">{userName}</a>
+                      <Avatar
+                        size="small"
+                        style={{
+                          background: "#049494",
+                        }}
+                        icon={<UserOutlined />}
+                      />
+                    </li>
+                  </Dropdown>
+                </>
+              ) : (
+                <li>
+                  <a href="/login">Log in</a>
+                </li>
+              )}
             </ul>
           </nav>
         </div>
