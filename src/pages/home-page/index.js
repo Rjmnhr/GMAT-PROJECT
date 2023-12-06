@@ -17,12 +17,31 @@ const HomePage = () => {
   sessionStorage.removeItem("service-default");
   sessionStorage.removeItem("hobbies");
   sessionStorage.removeItem("hobbies-default");
+  const [isMobile, setIsMobile] = useState(false);
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
 
   const isLoggedIn = localStorage.getItem("adefteducation_isLoggedIn");
 
   const storedUserName = localStorage.getItem("adefteducation_user_name");
+
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (storedUserName) {
@@ -193,7 +212,7 @@ const HomePage = () => {
               >
                 Take Free GMAT Test
               </a>
-
+              {isMobile ? <br /> : ""}
               <a
                 href="/videos"
                 class="btn-get-started ml-lg-2 "
