@@ -73,11 +73,16 @@ export const VideoPlayer = ({ videoId, title }) => {
 const VideoCarousel = ({ videos }) => {
   const slider = React.useRef(null);
   const [isMobile, setIsMobile] = useState(false);
-
+  const [visibleVideos, setVisibleVideos] = useState(isMobile ? 1 : 8); // Number of initially visible videos
   useEffect(() => {
     // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
+      if (window.innerWidth < 768) {
+        setVisibleVideos(2);
+      } else {
+        setVisibleVideos(8);
+      }
     };
 
     // Add an event listener to handle window resizing
@@ -91,7 +96,6 @@ const VideoCarousel = ({ videos }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const [visibleVideos, setVisibleVideos] = useState(isMobile ? 1 : 8); // Number of initially visible videos
 
   const settings = {
     lazyLoad: true,
