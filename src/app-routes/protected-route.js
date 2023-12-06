@@ -7,11 +7,14 @@ const ProtectedRoute = ({ element }) => {
 
   const VerifyToken = async () => {
     try {
-      const res = await fetch("http://localhost:8003/api/token/verify", {
-        headers: {
-          token: `Bearer ${accessToken}`,
-        },
-      });
+      const res = await fetch(
+        "https://gmatbackend1-7b38iqrn.b4a.run/api/token/verify",
+        {
+          headers: {
+            token: `Bearer ${accessToken}`,
+          },
+        }
+      );
 
       if (res.status === 200) {
         setIsAuthenticated(true);
