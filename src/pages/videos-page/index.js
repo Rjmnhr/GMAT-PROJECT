@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 import NavBar from "../../components/nav-bar";
 import Slider from "react-slick";
@@ -71,8 +71,27 @@ export const VideoPlayer = ({ videoId, title }) => {
 };
 
 const VideoCarousel = ({ videos }) => {
-  const [visibleVideos, setVisibleVideos] = useState(8); // Number of initially visible videos
   const slider = React.useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  const [visibleVideos, setVisibleVideos] = useState(isMobile ? 3 : 8); // Number of initially visible videos
 
   const settings = {
     lazyLoad: true,
