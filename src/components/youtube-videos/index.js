@@ -2,216 +2,216 @@ export const categories = [
   [
     {
       videoId: "lhfKDKdtNGU",
-      title: "GMAT Data sufficiency 1 - Saahil Chouhan",
+      title: "GMAT Data sufficiency 1",
     },
     {
       videoId: "WdvpswptBC4",
-      title: "GMAT Arithmetic Class 1 - Ankit",
+      title: "GMAT Arithmetic Class 1 ",
     },
     {
       videoId: "eA9O1NsYZ1A",
-      title: "GMAT Data Sufficiency 1 - Ankit",
+      title: "GMAT Data Sufficiency 1 ",
     },
     {
       videoId: "js2dAijpU3k",
-      title: "GMAT Permutation and combination - Parth Joshi",
+      title: "GMAT Permutation and combination ",
     },
     {
       videoId: "3qL7B5f0QCg",
-      title: "GMAT Arithmetic - Parth Joshi",
+      title: "GMAT Arithmetic ",
     },
     {
       videoId: "Kb9PDQuJJBk",
-      title: "GRE Arithmetic - Hetal Salhotra",
+      title: "GRE Arithmetic ",
     },
     {
       videoId: "JHjFO2ztHrc",
-      title: "GRE Quant - Hetal Salhotra",
+      title: "GRE Quant ",
     },
     {
       videoId: "9CN_Vm9MttA",
-      title: "GRE Quant 2 - Hetal Salhotra",
+      title: "GRE Quant 2 ",
     },
     {
       videoId: "flGfWT9YsCI",
-      title: "GRE Quant 3 - Hetal Salhotra",
+      title: "GRE Quant 3 ",
     },
     {
       videoId: "VNSbqFRCGrI",
-      title: "GRE Quant and RC 5 question solving - Hetal Salhotra",
+      title: "GRE Quant and RC 5 question solving ",
     },
     {
       videoId: "6gqjWTdJosg",
-      title: "GRE Quant 5 - Hetal Salhotra",
+      title: "GRE Quant 5 ",
     },
     {
       videoId: "VRPiLDEwghQ",
-      title: "GRE - Quant 6 -  Geometry - Hetal Salhotra",
+      title: "GRE - Quant 6 -  Geometry ",
     },
 
     {
       videoId: "m45NnbfT5DM",
-      title: "GMAT DATA SUFFICIENCY BY GHANSHYAM- PARTH",
+      title: "GMAT DATA SUFFICIENCY  ",
     },
 
     {
       videoId: "s2CTdzlkDg0",
-      title: "GMAT Arithmetic - Nithin Reddy",
+      title: "GMAT Arithmetic ",
     },
     {
       videoId: "4gTMlekIq8A",
-      title: "GMAT Data Sufficiency - Nithin Reddy",
+      title: "GMAT Data Sufficiency ",
     },
     {
       videoId: "M-TFPvTEoWw",
-      title: "GMAT Permutation and Combination - Anubhav Gupta",
+      title: "GMAT Permutation and Combination ",
     },
     {
       videoId: "QVFHs6gCPeM",
-      title: "GMAT-Arithmetic Anubhav Gupta",
+      title: "GMAT-Arithmetic ",
     },
     {
       videoId: "DKwHPUSZjGI",
-      title: "19/03/2022 DATA SUFFICIENCY-ASITH",
+      title: "19/03/2022 DATA SUFFICIENCY-",
     },
     {
       videoId: "1ACUmF2po78",
-      title: "ASITH GEOMETRY 14 MARCH (KIRAN)",
+      title: " GEOMETRY 14 MARCH ",
     },
     {
       videoId: "mTem1xfV084",
-      title: "ASITH'S GMAT CLASS GEOMETRY- (KIRAN)",
+      title: " GMAT CLASS GEOMETRY ",
     },
     {
       videoId: "s7R4u67_4gk",
-      title: "GMAT ALGEBRA - ASITH",
+      title: "GMAT ALGEBRA  ",
     },
     {
       videoId: "JXMS6toswhs",
-      title: "GMAT Algebra - Anubhav Gupta",
+      title: "GMAT Algebra ",
     },
     {
       videoId: "B5DWEVYMo0c",
-      title: "GMAT Algebra - Nithin Reddy",
+      title: "GMAT Algebra ",
     },
     {
       videoId: "uVIp3mQEuW4",
-      title: "GMAT Geometry - Nithin Reddy",
+      title: "GMAT Geometry ",
     },
     {
       videoId: "iRzljyyaueM",
-      title: "GMAT Geometry 2 - Nithin Reddy",
+      title: "GMAT Geometry 2 ",
     },
     {
       videoId: "hO0zS2ektuY",
-      title: "GMAT Probability - Nithin Reddy",
+      title: "GMAT Probability ",
     },
     {
       videoId: "ASqEO1FAyVc",
-      title: "GMAT Probability - Parth",
+      title: "GMAT Probability ",
     },
     {
       videoId: "zATWKmpQGNI",
-      title: "GMAT Geometry - Parth Joshi",
+      title: "GMAT Geometry ",
     },
     {
       videoId: "SlA8-gR_YM4",
-      title: "GMAT Algebra - Shirish Verma",
+      title: "GMAT Algebra ",
     },
     {
       videoId: "YoOEYMSTdOo",
-      title: "GMAT Geometry 1 - Shirish Verma",
+      title: "GMAT Geometry 1 ",
     },
     {
       videoId: "570qYVl8RrA",
-      title: "GMAT Geometry 2 - Shirish Verma",
+      title: "GMAT Geometry 2 ",
     },
     {
       videoId: "htBQ-OlJmuQ",
-      title: "GMAT Algebra 2 - Practice question - Shirish Verma",
+      title: "GMAT Algebra 2 - Practice question ",
     },
     {
       videoId: "7XmXogeRgXg",
-      title: "GMAT Algebra 2 continued - Practice questions - Shirish Verma",
+      title: "GMAT Algebra 2 continued - Practice questions ",
     },
     {
       videoId: "2mQM3og7WiA",
-      title: "GMAT Probability - Shirish Verma",
+      title: "GMAT Probability ",
     },
     {
       videoId: "K-aYWbBXdS0",
-      title: "GMAT Probability 1 - Ankit",
+      title: "GMAT Probability 1",
     },
     {
       videoId: "oiORLypc5Ck",
-      title: "GMAT Class Algebra - Ankit",
+      title: "GMAT Class Algebra",
     },
     {
       videoId: "avmzO-IMp5Y",
-      title: "GMAT Geometry 1 - Ankit",
+      title: "GMAT Geometry 1",
     },
     {
       videoId: "opLTB5V9PkM",
-      title: "GMAT Algebra 2 - Saahil Chouhan",
+      title: "GMAT Algebra 2 ",
     },
     {
       videoId: "phE8Y5yeAU8",
-      title: "GMAT Algebra 1 - Saahil Chouhan",
+      title: "GMAT Algebra 1 ",
     },
     {
       videoId: "U5n4aM6NbUQ",
-      title: "GMAT Probability 1 - Saahil Chouhan",
+      title: "GMAT Probability 1 ",
     },
     {
       videoId: "c_dCTvVFqUM",
-      title: "GMAT Geometry 1 - Saahil Chouhan",
+      title: "GMAT Geometry 1 ",
     },
     {
       videoId: "PK8lRS4EHhQ",
-      title: "GMAT Geometry 2 - Saahil Chouhan",
+      title: "GMAT Geometry 2 ",
     },
     {
       videoId: "zH6BXK7GIqk",
-      title: "GMAT Probability - Saahil Chouhan",
+      title: "GMAT Probability ",
     },
   ],
   [
     {
       videoId: "TLhf9eXoyRA",
-      title: "GRE RC 2 - Hetal Salhotra",
+      title: "GRE RC 2 ",
     },
     {
       videoId: "lJCRdQPjN1E",
-      title: "GRE RC 2 continued - Hetal Salhotra",
+      title: "GRE RC 2 continued ",
     },
     {
       videoId: "7GArcj0C3To",
-      title: "GRE RC 3 - Hetal Salhotra",
+      title: "GRE RC 3 ",
     },
     {
       videoId: "w7FNoSZ4Fqw",
-      title: "GRE RC 4 - Question solving - Hetal Salhotra",
+      title: "GRE RC 4 - Question solving ",
     },
     {
       videoId: "PUtD0wmQ2Y4",
-      title: "GMAT Sentence Correction 2 - Ankit",
+      title: "GMAT Sentence Correction 2",
     },
     {
       videoId: "k4-JM45voP0",
-      title: "GMAT Sentence Correction 1 - Ankit",
+      title: "GMAT Sentence Correction 1",
     },
     {
       videoId: "hqQCVDe4fTM",
-      title: "GRE RC 1 - Hetal Salhotra",
+      title: "GRE RC 1 ",
     },
 
     {
       videoId: "o4vTHyWjTxM",
-      title: "BLOSSOM'S RC1 QUESTIONS SESSION-PARTH",
+      title: "BLOSSOM RC1 QUESTIONS SESSION",
     },
     {
       videoId: "cu2vYsRUeec",
-      title: "RC 2 and SC doubt clearing - Varun Salhotra",
+      title: "RC 2 and SC doubt clearing ",
     },
     {
       videoId: "BpVcrKv8LrA",
@@ -219,201 +219,201 @@ export const categories = [
     },
     {
       videoId: "xencbwPag4w",
-      title: "GMAT BLOSSOM'S RC1 SESSION- ASITH",
+      title: "GMAT BLOSSOM RC1 SESSION ",
     },
     {
       videoId: "rFk3Y_2wzxU",
-      title: "GMAT CLASS WITH BLOSSOM RC1- Asith",
+      title: "GMAT CLASS WITH BLOSSOM RC1 ",
     },
     {
       videoId: "IIrPuWCKmEE",
-      title: "GMAT CLASS WITH BLOSSOM CR2-  MANKIRAT",
+      title: "GMAT CLASS WITH BLOSSOM CR2",
     },
     {
       videoId: "Bmzb-53g9Gc",
-      title: "GMAT CLASS WITH BLOSSOM CR1- MANKIRAT",
+      title: "GMAT CLASS WITH BLOSSOM CR1",
     },
     {
       videoId: "7GVggKKSW1Y",
-      title: "GMAT CLASS WITH BLOSSOM RC2- MANKIRAT",
+      title: "GMAT CLASS WITH BLOSSOM RC2",
     },
     {
       videoId: "6zMeLJC5OCE",
-      title: "19TH FEB GMAT CLASSES MANKIRAT WITH BLOSSOM- RC1",
+      title: "19TH FEB GMAT CLASSES  WITH BLOSSOM- RC1",
     },
     {
       videoId: "teEMDkCr5Do",
-      title: "GMAT Verbal accelerator session - Orientation for Varun",
+      title: "GMAT Verbal accelerator session - Orientation ",
     },
     {
       videoId: "HpjLxfD-4L8",
-      title: "GMAT SC 1 - Varun Salhotra",
+      title: "GMAT SC 1 ",
     },
     {
       videoId: "nI2HHuf2u6k",
-      title: "GMAT SC 2 - Varun Salhotra",
+      title: "GMAT SC 2 ",
     },
     {
       videoId: "vUIIOFwOKg8",
-      title: "GMAT CR 1 - Varun Salhotra",
+      title: "GMAT CR 1 ",
     },
     {
       videoId: "ARCm5S4kna8",
-      title: "GMAT CR 2 - Varun Salhotra",
+      title: "GMAT CR 2 ",
     },
     {
       videoId: "bdpJbYdB0ok",
-      title: "GMAT SC | Doubt clearing session | Varun Salhotra",
+      title: "GMAT SC | Doubt clearing session ",
     },
     {
       videoId: "mQUBlmFMy50",
-      title: "GMAT RC 1 - Varun Salhotra",
+      title: "GMAT RC 1 ",
     },
     {
       videoId: "vC65Ui_csIk",
-      title: "GMAT CLASS WITH BLOSSOM RC2-ANUBHAV",
+      title: "GMAT CLASS WITH BLOSSOM RC2",
     },
     {
       videoId: "S6ukiDaN9Hk",
-      title: "GMAT CLASS WITH BLOSSOM RC1-ANUBHAV",
+      title: "GMAT CLASS WITH BLOSSOM RC1",
     },
     {
       videoId: "VUuqahJq71U",
-      title: "GMAT CR 1 continued and CR 2 - Anubhav Gupta",
+      title: "GMAT CR 1 continued and CR 2 ",
     },
     {
       videoId: "osyg5CGsSgo",
-      title: "GMAT CR 1 - Anubhav Gupta",
+      title: "GMAT CR 1 ",
     },
     {
       videoId: "y1a8VR5gED4",
-      title: "GMAT SC 2 - Anubhav Gupta",
+      title: "GMAT SC 2 ",
     },
     {
       videoId: "zQyUz04Dkyc",
-      title: "GMAT SC 1 continued - Anubhav Gupta",
+      title: "GMAT SC 1 continued ",
     },
     {
       videoId: "u1rg8uID_sI",
-      title: "GMAT SC 1 - Nithin Reddy",
+      title: "GMAT SC 1 ",
     },
     {
       videoId: "5X6xINqaals",
-      title: "GMAT SC 2 - Nithin Reddy",
+      title: "GMAT SC 2 ",
     },
     {
       videoId: "j-b4T64yUtA",
-      title: "GMAT CR 1 - Nithin Reddy",
+      title: "GMAT CR 1 ",
     },
     {
       videoId: "SZV_PMnZ0xU",
-      title: "GMAT CR 2 - Nithin Reddy",
+      title: "GMAT CR 2 ",
     },
     {
       videoId: "59Rrid_v_OQ",
-      title: "GMAT RC 2 - Nithin Reddy",
+      title: "GMAT RC 2 ",
     },
     {
       videoId: "c6lcto8zHy8",
-      title: "GMAT RC 1 CLASS- Parth Joshi",
+      title: "GMAT RC 1 CLASS",
     },
     {
       videoId: "7s7c3f6wSzE",
-      title: "GMAT SC Doubt clearing 1 continued - Parth Joshi",
+      title: "GMAT SC Doubt clearing 1 continued ",
     },
     {
       videoId: "7AGdUmCxSSE",
-      title: "GMAT SC Doubt clearing 1 - Parth Joshi",
+      title: "GMAT SC Doubt clearing 1 ",
     },
     {
       videoId: "iUoFs4PNxTg",
-      title: "GMAT CR 2 - Parth Joshi",
+      title: "GMAT CR 2 ",
     },
     {
       videoId: "Qh4c4L425MY",
-      title: "GMAT CR 1 - Parth Joshi",
+      title: "GMAT CR 1 ",
     },
     {
       videoId: "6BrXvcf0D6Y",
-      title: "GMAT SC 1 continued 2 - Parth",
+      title: "GMAT SC 1 continued 2 ",
     },
     {
       videoId: "zeen0k4zYEM",
-      title: "GMAT SC 1 continued - Parth Joshi",
+      title: "GMAT SC 1 continued ",
     },
     {
       videoId: "jyOmvnYVfdM",
-      title: "GMAT SC 1 - Parth Joshi",
+      title: "GMAT SC 1 ",
     },
     {
       videoId: "thTN-RKLSGs",
-      title: "GMAT SC 1 - Shirish Verma",
+      title: "GMAT SC 1 ",
     },
     {
       videoId: "nS9gHGmxo-I",
-      title: "GMAT SC 2 - Shirish Verma",
+      title: "GMAT SC 2 ",
     },
     {
       videoId: "HPE-xNY5ilk",
-      title: "GMAT RC 1 - Shirish Verma",
+      title: "GMAT RC 1 ",
     },
     {
       videoId: "_z9aD-LIgAc",
-      title: "GMAT CR 1 - Shirish Verma",
+      title: "GMAT CR 1 ",
     },
     {
       videoId: "u0BVfsnq0RU",
-      title: "GMAT RC 2 - Ankit",
+      title: "GMAT RC 2",
     },
     {
       videoId: "Nql02WpcBV0",
-      title: "GMAT RC 1 - Ankit",
+      title: "GMAT RC 1",
     },
     {
       videoId: "hcx652XUiiE",
-      title: "GMAT CR 2 - Ankit",
+      title: "GMAT CR 2",
     },
     {
       videoId: "hu1cRvZXCJ8",
-      title: "GMAT CR 1 continued - Ankit",
+      title: "GMAT CR 1 continued",
     },
     {
       videoId: "_X0gSBOKc5w",
-      title: "GMAT - CR 1 - Ankit Rawat",
+      title: "GMAT - CR 1 ",
     },
     {
       videoId: "WiE6hqI1q9U",
-      title: "GMAT SC Doubt Clearing - Ankit",
+      title: "GMAT SC Doubt Clearing",
     },
     {
       videoId: "uIAIm9B4m08",
-      title: "GMAT SC 1 - Saahil Chouhan",
+      title: "GMAT SC 1 ",
     },
     {
       videoId: "q5GlINbi2q0",
-      title: "GMAT SC 1 continued - Saahil Chouhan",
+      title: "GMAT SC 1 continued ",
     },
     {
       videoId: "y0G6Wj2i2S4",
-      title: "GMAT CR 1 - Saahil chouhan",
+      title: "GMAT CR 1 ",
     },
     {
       videoId: "oCugv--Pfx4",
-      title: "GMAT CR 2 - Saahil chouhan",
+      title: "GMAT CR 2 ",
     },
     {
       videoId: "JQfwx4NyD0w",
-      title: "GMAT RC 1 - Saahil chouhan",
+      title: "GMAT RC 1 ",
     },
     {
       videoId: "PfcQ4e3MDI4",
-      title: "GMAT RC 2 - Saahil Chouhan",
+      title: "GMAT RC 2 ",
     },
   ],
   [
     {
       videoId: "RMTDXRMPj9c",
-      title: "IR Session with Indradeep- Parth",
+      title: "IR Session ",
     },
     {
       videoId: "JOURL9Plbyw",
@@ -421,105 +421,106 @@ export const categories = [
     },
     {
       videoId: "9AxxRHnh8qA",
-      title: "ASITH - CR1 Recording",
+      title: " - CR1 Recording",
     },
     {
       videoId: "CYKOlkdVuBQ",
-      title: "ASITH'S GMAT Classes- (KIRAN)",
+      title: " GMAT Classes- ",
     },
     {
       videoId: "KLq89ZD9dYc",
-      title: "ASITH GMAT 4 APRIL (KIRAN)",
+      title: " GMAT 4 APRIL ",
     },
     {
       videoId: "4zYk6rjTmTE",
-      title: "GMAT trainer hiring: Kiran - Demo class",
+      title: "GMAT trainer hiring:  Demo class",
     },
     {
       videoId: "MusIiKycHy0",
-      title: "Demo class - Karthik | GMAT trainer hiring",
+      title: "Demo class  | GMAT trainer hiring",
     },
     {
       videoId: "1EGdle0yiDs",
-      title: "Demo class: Ghanshyam - GMAT hiring",
+      title: "Demo class:  - GMAT hiring",
     },
     {
       videoId: "oMnoqu9Exkk",
-      title: "GMAT IR - Nithin Reddy",
+      title: "GMAT IR ",
     },
     {
       videoId: "NT4K3PJHZLc",
-      title: "GMAT Arithmetic 1 - Shirish Verma",
+      title: "GMAT Arithmetic 1 ",
     },
     {
       videoId: "-zoFfY3Seaw",
-      title: "GMAT Doubt clearing session 1 - Shirish",
+      title: "GMAT Doubt clearing session 1 ",
     },
     {
       videoId: "OjrxvsbQ3Vo",
-      title: "GMAT IR - Shirish Verma",
+      title: "GMAT IR ",
     },
   ],
   [
     {
       videoId: "Cmo2Y3h3BBI",
-      title: "Admission consulting session 1 - Himanshu",
+      title: "Admission consulting session 1 ",
     },
     {
       videoId: "pypjh5d1zXg",
-      title: "Profile evaluation session with Deepshika by Manas",
+      title: "Profile evaluation session 2",
     },
     {
       videoId: "JcxgT7hGrps",
-      title: "Profile evaluation session - Amarnath",
+      title: "Profile evaluation session 3 ",
     },
     {
       videoId: "8_hDZgls6cI",
-      title: "Profile evaluation session - Viraat",
+      title: "Profile evaluation session 4",
     },
     {
       videoId: "lFdh0PWA7vM",
-      title: "Profile evaluation session - Snehajeet",
+      title: "Profile evaluation session 5",
     },
     {
       videoId: "PO0gLRFb-SY",
-      title: "Profile evaluation meeting - Rishabh",
+      title: "Profile evaluation meeting ",
     },
-    {
-      videoId: "URBLkQAaJxs",
-      title: "Admission consulting session 1 - Dilip Singh",
-    },
+
     {
       videoId: "Ktl47SFVlrY",
-      title: "Admission consulting session 1 - Kunal Doshi",
+      title: "Admission consulting session 1 ",
     },
     {
       videoId: "ZZRGggo5PDg",
-      title: "Admission consulting session 2 - Kunal Doshi",
+      title: "Admission consulting session 2 ",
     },
     {
       videoId: "gHKu7fpsHGE",
-      title: "Admission consulting session 3 - Kunal Doshi",
+      title: "Admission consulting session 3 ",
     },
     {
       videoId: "_nPJ9VCQHeM",
-      title: "Admission consulting session 4 - Kunal Doshi",
+      title: "Admission consulting session 4 ",
     },
     {
       videoId: "SOLEFYoJWiA",
-      title: "Admission consulting session 5 - Kunal",
+      title: "Admission consulting session 5 ",
+    },
+    {
+      videoId: "URBLkQAaJxs",
+      title: "Admission consulting session 6",
     },
     {
       videoId: "AlOVVqOjOaw",
-      title: "Admission Consulting Session 3 - Manikrat Khurrana",
+      title: "Admission Consulting Session 7",
     },
     {
       videoId: "AXMmqS1ZXYI",
-      title: "Admission consulting session 2 - Mankirat Khuranna",
+      title: "Admission consulting session 8  ",
     },
     {
       videoId: "DP4n9JBRhpE",
-      title: "Admission consulting session 1 - Mankirat",
+      title: "Admission consulting session 9 ",
     },
     {
       videoId: "ta3tV_aDb2E",
@@ -528,172 +529,171 @@ export const categories = [
     },
     {
       videoId: "1GXu25rSt5o",
-      title: "Admission consulting session - Mankirat",
+      title: "Admission consulting session 10 ",
     },
     {
       videoId: "zU0s51cfk3U",
-      title: "Admission consulting session 1 - Varun Salhotra",
+      title: "Admission consulting session 111 ",
     },
     {
       videoId: "_X87CQxEDZQ",
-      title: "Admission consulting session 2 - Varun Salhotra",
+      title: "Admission consulting session 12 ",
     },
     {
       videoId: "iOlTl24ZYSg",
-      title: "Admission consulting session 3 - Varun Salhotra",
+      title: "Admission consulting session 13 ",
     },
     {
       videoId: "PEw3nCNy7mY",
-      title: "Admission consulting session 1 - Apurva",
+      title: "Admission consulting session 14 ",
     },
     {
       videoId: "gbKb5tLf5FU",
-      title: "Admission consulting session 2 - Apurva",
+      title: "Admission consulting session 15 ",
     },
     {
       videoId: "JFQIERvVW1Q",
-      title: "Admission consulting session 1 - Ameya",
+      title: "Admission consulting session 16",
     },
     {
       videoId: "8NDqkbdzA4s",
-      title: "Admission consulting session 2 - Ameya",
+      title: "Admission consulting session 17",
     },
     {
       videoId: "yF8Ftb9or-E",
-      title: "Admission consulting session 3 - Ameya",
+      title: "Admission consulting session 18",
     },
     {
       videoId: "YmiCf0UfxE0",
-      title: "Admission consulting session 4 - Ameya",
+      title: "Admission consulting session 19",
     },
     {
       videoId: "iswbXS8yzbY",
-      title: "Admission consulting session 5 - Ameya",
+      title: "Admission consulting session 20",
     },
     {
       videoId: "0A1BbItD54c",
-      title:
-        "GMAT and Admission consulting | Orientation session | Nithin Reddy",
+      title: "GMAT and Admission consulting | Orientation session |  Reddy",
     },
     {
       videoId: "_jzFa3Y3mTI",
-      title: "Admission consulting session - Subin Ram Mohan",
+      title: "Admission consulting session 21",
     },
     {
       videoId: "RbNT0MsQHJc",
-      title: "Admission consulting session 1 - Varun Sharma",
+      title: "Admission consulting session 22 ",
     },
     {
       videoId: "pqRAC8bm3ng",
-      title: "Profile evaluation meeting for Varun Sharma",
+      title: "Profile evaluation meeting  ",
     },
     {
       videoId: "2QaoihBPgjI",
-      title: "Admission consulting session 2 - Varun sharma",
+      title: "Admission consulting session 23 ",
     },
     {
       videoId: "k5sRWWAN_-A",
-      title: "Admission consulting session 1 - Suhail",
+      title: "Admission consulting session 24 ",
     },
     {
       videoId: "-0EVylHuMJg",
-      title: "Profile evaluation meeting for Suhail - with Indradeep",
+      title: "Profile evaluation meeting 2 ",
     },
     {
       videoId: "wvKowcmUT_0",
-      title: "Admission consulting session 2 - Suhail",
+      title: "Admission consulting session 25 ",
     },
     {
       videoId: "zEMMIg_LoGA",
-      title: "Admission consulting session 3 - Suhail",
+      title: "Admission consulting session 26 ",
     },
     {
       videoId: "UWGb6949Kjs",
-      title: "Admission consulting session 4 - Suhail",
+      title: "Admission consulting session 27 ",
     },
     {
       videoId: "ffLyGEia7JE",
-      title: "Admission consulting session 5 - Suhail",
+      title: "Admission consulting session 28 ",
     },
     {
       videoId: "uxD9TSm5JtI",
-      title: "Admission consulting session 1 - Timila Garg",
+      title: "Admission consulting session 29",
     },
     {
       videoId: "04cNfsnWl3k",
-      title: "Admission consulting session 2 - Timila",
+      title: "Admission consulting session 30",
     },
     {
       videoId: "2v2viuVAojg",
-      title: "Admission consulting session 3 - Timila",
+      title: "Admission consulting session 31 ",
     },
     {
       videoId: "ZPsqNSwkteI",
-      title: "Admission consulting session 1 - Kapil",
+      title: "Admission consulting session 32 ",
     },
     {
       videoId: "dSEHswMUtQg",
-      title: "Admission consulting session 2 - Kapil",
+      title: "Admission consulting session 34 ",
     },
     {
       videoId: "DFq6UrVXpfo",
-      title: "Profile evaluation meeting for Kapil",
+      title: "Profile evaluation meeting 3",
     },
     {
       videoId: "Jmgi-r6gN7M",
-      title: "Admission consulting session 1 - Furqan",
+      title: "Admission consulting session 35 ",
     },
     {
       videoId: "M9a-HC8PI0k",
-      title: "Admission consulting session 2 - Furqan",
+      title: "Admission consulting session 36 ",
     },
     {
       videoId: "UjzhfgiO7n4",
-      title: "Admission consulting session 3 - Furqan",
+      title: "Admission consulting session 37 ",
     },
     {
       videoId: "Icv39KrsHVg",
-      title: "Admission consulting session 1 - Lakshya Chopra",
+      title: "Admission consulting session 38 ",
     },
     {
       videoId: "peWutBioXtU",
-      title: "Admission consulting session 2 - Lakshya Chopra",
+      title: "Admission consulting session 39 ",
     },
     {
       videoId: "ueFUApKQQxo",
-      title: "Admission consulting session 3 - Lakshya Chopra",
+      title: "Admission consulting session 40 ",
     },
     {
       videoId: "4qdZX7Yj0Q0",
-      title: "Admission consulting session 4 - Lakshya Chopra",
+      title: "Admission consulting session 41 ",
     },
     {
       videoId: "6egFymS0ueY",
-      title: "Admission consulting session 5 - Lakshya Chopra",
+      title: "Admission consulting session 42 ",
     },
     {
       videoId: "p38JhzBfHbg",
-      title: "Admission consulting session 6 - Lakshya chopra",
+      title: "Admission consulting session 43 ",
     },
     {
       videoId: "qKuQy01QkuE",
-      title: "Admission consulting session 7 - Lakshya chopra",
+      title: "Admission consulting session 44 ",
     },
     {
       videoId: "oCDKkjUDNhA",
-      title: "Admission consulting session 1 - Kaustav Karmakar",
+      title: "Admission consulting session 45",
     },
     {
       videoId: "oS7xpUKldEQ",
-      title: "Admission consulting session 2 - Kaustav Karmakar",
+      title: "Admission consulting session 46",
     },
     {
       videoId: "zxgLk8rxQlE",
-      title: "Admission consulting session 3 - Kaustav",
+      title: "Admission consulting session 47",
     },
     {
       videoId: "h0xOSs_ZsHA",
-      title: "Admission consulting session 4 - Kaustav",
+      title: "Admission consulting session 50",
     },
     {
       videoId: "3p_1zm17rUI",
@@ -865,11 +865,11 @@ export const categories = [
     },
     {
       videoId: "-0EVylHuMJg",
-      title: "Profile evaluation meeting for Suhail - with Indradeep",
+      title: "Profile evaluation meeting for Suhail - ",
     },
     {
       videoId: "pqRAC8bm3ng",
-      title: "Profile evaluation meeting for Varun Sharma",
+      title: "Profile evaluation meeting  Sharma",
     },
     {
       videoId: "XaaOMIjui9s",
@@ -905,7 +905,7 @@ export const categories = [
     },
     {
       videoId: "KNcjFs8-jEs",
-      title: "Profile evaluation session - Mankirat",
+      title: "Profile evaluation session ",
     },
     {
       videoId: "UXIoB4hyuAI",
@@ -925,56 +925,55 @@ export const categories = [
     },
     {
       videoId: "X8pGUVOIPNs",
-      title: "Admission Consulting session 8 - Ankit",
+      title: "Admission Consulting session 8",
     },
     {
       videoId: "yUPDlcuCWBw",
-      title: "Admission consulting session 7 - Ankit",
+      title: "Admission consulting session 7",
     },
     {
       videoId: "cAhzjOL31Qk",
-      title:
-        "GMAT doubt clearing and Admission consulting session 7 - Ankit Rawat",
+      title: "GMAT doubt clearing and Admission consulting session 7 ",
     },
     {
       videoId: "polNc-Xjd9k",
-      title: "Admission consulting session 6 - Ankit",
+      title: "Admission consulting session 6",
     },
     {
       videoId: "8ZqZSMKMkiU",
-      title: "Admission Consulting session 4 - Ankit",
+      title: "Admission Consulting session 4",
     },
     {
       videoId: "4PDq_iJrVjE",
-      title: "Admission Consulting session 2 - Ankit",
+      title: "Admission Consulting session 2",
     },
     {
       videoId: "7iTDB6G-vyE",
-      title: "GMAT IR and Admission consulting session 9 - Ankit Rawat",
+      title: "GMAT IR and Admission consulting session 9 ",
     },
     {
       videoId: "dHyR0jdjUUk",
-      title: "Admission consulting session 10 - Ankit Rawat",
+      title: "Admission consulting session 10 ",
     },
     {
       videoId: "ebJmsqUs9fU",
-      title: "Admission consulting session 11 - Ankit Rawat",
+      title: "Admission consulting session 11 ",
     },
     {
       videoId: "uneMz9QjNSE",
-      title: "Admission consulting session 12 - Ankit Rawat",
+      title: "Admission consulting session 12 ",
     },
     {
       videoId: "ocg08-s5WkA",
-      title: "Admission consulting session 13 - Ankit Rawat",
+      title: "Admission consulting session 13 ",
     },
     {
       videoId: "qbUjq5nvmY8",
-      title: "Admission consulting session 14 - Ankit Rawat",
+      title: "Admission consulting session 14 ",
     },
     {
       videoId: "KOUVEn9eyaA",
-      title: "Admission consulting session 15 - Ankit",
+      title: "Admission consulting session 15",
     },
     {
       videoId: "ta3tV_aDb2E",
@@ -987,7 +986,7 @@ export const categories = [
     },
     {
       videoId: "maiOodjNYUg",
-      title: "Admission consulting session 1 - Shaista Aafreen",
+      title: "Admission consulting session 1 ",
     },
     {
       videoId: "3Y3dX_AGRo0",
@@ -1003,7 +1002,7 @@ export const categories = [
     },
     {
       videoId: "0Zwu1Hl0BhI",
-      title: "Admission consulting session 6 - Shaista Aafreen",
+      title: "Admission consulting session 6 ",
     },
   ],
   [
@@ -1013,19 +1012,19 @@ export const categories = [
     },
     {
       videoId: "JCigrAao3dY",
-      title: "Admission Counselling- Asith",
+      title: "Admission Counselling- ",
     },
     {
       videoId: "6W0QaLN4P9E",
-      title: "Admission Counselling- Swarnava",
+      title: "Admission Counselling",
     },
     {
       videoId: "apo4r8QNFTw",
-      title: "Your unique life story for MBA admissions - Indradeep Mazumdar",
+      title: "Your unique life story for MBA admissions",
     },
     {
       videoId: "mJHrneLFWYo",
-      title: "Key things admissions committees look for - Indradeep Mazumdar",
+      title: "Key things admissions committees",
     },
     {
       videoId: "ZB3bVQ2_VcQ",
@@ -1034,7 +1033,7 @@ export const categories = [
     },
     {
       videoId: "FAGslxEjWtg",
-      title: "5 Most common MBA Essays - Live webinar by Indradeep Mazumdar",
+      title: "5 Most common MBA Essays - Live webinar ",
     },
     {
       videoId: "6IHjmV-jJfs",
@@ -1052,7 +1051,7 @@ export const categories = [
     },
     {
       videoId: "I2NPLZHHdw4",
-      title: "Admission Strategy session 1 - Ankit",
+      title: "Admission Strategy session 1",
     },
     {
       videoId: "6IHjmV-jJfs",
@@ -1060,7 +1059,7 @@ export const categories = [
     },
     {
       videoId: "FAGslxEjWtg",
-      title: "5 Most common MBA Essays - Live webinar by Indradeep Mazumdar",
+      title: "5 Most common MBA Essays - Live webinar ",
     },
     {
       videoId: "Qgf3dDE8a5c",
@@ -1085,47 +1084,47 @@ export const categories = [
     },
     {
       videoId: "Ya8nc49MroE",
-      title: "Ankit's video testimonial for GMAT Coaching",
+      title: "Ankit video testimonial for GMAT Coaching",
     },
     {
       videoId: "Ya8nc49MroE",
-      title: "Ankit's video testimonial for GMAT Coaching",
+      title: "Ankit video testimonial for GMAT Coaching",
     },
   ],
   [
     {
       videoId: "x10C_QLJ1Bw",
-      title: "Asith GMAT Classes- Indradeep",
+      title: " GMAT Classes",
     },
     {
       videoId: "EUTdtXxkQvE",
-      title: "ASITH'S GMAT Classes- Ghanshyam",
+      title: " GMAT Classes- ",
     },
     {
       videoId: "l5Ax4sttENg",
-      title: "ASITH'S GMAT CLASS- Ghanshyam",
+      title: " GMAT CLASS- ",
     },
 
     {
       videoId: "ylAtg1MbZQA",
-      title: "21/03/2022 - ASITH GMAT 1",
+      title: "21/03/2022 -  GMAT 1",
     },
     {
       videoId: "Hw9DCP22ojM",
-      title: "21/03/2022 - ASITH GMAT -  2",
+      title: "21/03/2022 -  GMAT -  2",
     },
     {
       videoId: "cpkoTC9k6n0",
-      title: "ASITH GMAT 27 MAR",
+      title: " GMAT 27 MAR",
     },
 
     {
       videoId: "kCbpA1Mkkks",
-      title: "KUNAL'S MOCK INTERVIEW WITH INDRADEEP",
+      title: "KUNAL MOCK INTERVIEW ",
     },
     {
       videoId: "C_QkpX_qL6c",
-      title: "14/03/2022 Q/A DISCUSSION - MANIKRAT",
+      title: "14/03/2022 Q/A DISCUSSION ",
     },
 
     {
@@ -1135,7 +1134,7 @@ export const categories = [
 
     {
       videoId: "4N5VEVj7Gr0",
-      title: "Study and Work Abroad - Indradeep Mazumdar",
+      title: "Study and Work Abroad",
     },
     {
       videoId: "kiOiuanML9U",
@@ -1144,11 +1143,11 @@ export const categories = [
     },
     {
       videoId: "wwynnkOVods",
-      title: "GMAT Doubt clearing session - Varun Salhotra",
+      title: "GMAT Doubt clearing session ",
     },
     {
       videoId: "ASIk5g9wx2U",
-      title: "GMAT Doubt clearing session 2 - Varun Salhotra",
+      title: "GMAT Doubt clearing session 2 ",
     },
 
     {
@@ -1158,11 +1157,11 @@ export const categories = [
 
     {
       videoId: "06pmpd5PkPc",
-      title: "Anubhav's GMAT classes with Indradeep- Data Sufficiency",
+      title: "Anubhav GMAT classes - Data Sufficiency",
     },
     {
       videoId: "JsswsD7EJx4",
-      title: "Anubhav's GMAT CLASS- Indradeep",
+      title: "Anubhav GMAT CLASS",
     },
     {
       videoId: "D_YnCxgCng8",
@@ -1170,21 +1169,21 @@ export const categories = [
     },
     {
       videoId: "diNPmyDQN-w",
-      title: "GMAT Doubt clearing session 1 - Anubhav",
+      title: "GMAT Doubt clearing session 1 ",
     },
 
     {
       videoId: "6IIhy9hMPbI",
-      title: "KSS 4 | Research activity | Nava and syeda",
+      title: "KSS 4 | Research activity ",
     },
     {
       videoId: "57eDqTTEvhk",
-      title: "KSS 1 - L2 calls - Arghya and Syeda",
+      title: "KSS 1 - L2 calls ",
     },
 
     {
       videoId: "Xi5WjIpyqjk",
-      title: "GMAT CLASS BLOSSOM'S AWA SESSION- NITHIN",
+      title: "GMAT CLASS BLOSSOM AWA SESSION- ",
     },
     {
       videoId: "yRveYnorgVI",
@@ -1197,11 +1196,11 @@ export const categories = [
 
     {
       videoId: "seu9HS43_-8",
-      title: "Pre GMAT session - Parth Joshi",
+      title: "Pre GMAT session ",
     },
     {
       videoId: "fS8fI4nNp-o",
-      title: "GMAT Class - Orientation - Parth Joshi",
+      title: "GMAT Class - Orientation ",
     },
     {
       videoId: "mnl7-BY17NQ",
@@ -1214,11 +1213,11 @@ export const categories = [
 
     {
       videoId: "KMmbuTG5JBE",
-      title: "GRE Mock review - Hetal Salhotra",
+      title: "GRE Mock review ",
     },
     {
       videoId: "VxaHm8Nmr6k",
-      title: "GRE Doubt clearing session 1 - Hetal Salhotra",
+      title: "GRE Doubt clearing session 1 ",
     },
     {
       videoId: "IM-5IUd4DFE",
@@ -1242,20 +1241,20 @@ export const categories = [
     },
     {
       videoId: "C80nC9ENi7M",
-      title: "Meeting with Shraddha's dad",
+      title: "Meeting with Shraddha dad",
     },
     {
       videoId: "2kOhT7rwgZA",
-      title: "GMAT Doubt Clearing session 3 - Ankit",
+      title: "GMAT Doubt Clearing session 3",
     },
     {
       videoId: "f3kHekELdnw",
-      title: "Doubt Clearing session 2 - Ankit",
+      title: "Doubt Clearing session 2",
     },
 
     {
       videoId: "7sEmPEFI0LU",
-      title: "GMAT Doubt clearing session 4 - Ankit Rawat",
+      title: "GMAT Doubt clearing session 4 ",
     },
     {
       videoId: "3HzA7xinDDk",
@@ -1270,7 +1269,7 @@ export const categories = [
     {
       videoId: "8xM_ATdCwho",
       title:
-        "Webinar: Live question solving of CR and Unique strategies to get adapted by Indradeep Mazumdar",
+        "Webinar: Live question solving of CR and Unique strategies to get adapted ",
     },
     {
       videoId: "kiOiuanML9U",
@@ -1292,39 +1291,39 @@ export const categories = [
 
     {
       videoId: "8miknCFPWEY",
-      title: "GMAT Doubt clearing session 1 - Saahil Chouhan",
+      title: "GMAT Doubt clearing session 1 ",
     },
     {
       videoId: "LaSSQX3vw5w",
-      title: "GMAT Doubt clearing session 2 - Saahil chouhan",
+      title: "GMAT Doubt clearing session 2 ",
     },
     {
       videoId: "X4oUQGS88Pw",
-      title: "GMAT Doubt clearing session 3 - Saahil Chouhan",
+      title: "GMAT Doubt clearing session 3 ",
     },
     {
       videoId: "y_5MYyU5dJE",
-      title: "GMAT Doubt clearing session 4 - Saahil chouhan",
+      title: "GMAT Doubt clearing session 4 ",
     },
     {
       videoId: "Qucti2yPKoo",
-      title: "GMAT Doubt clearing session 5 - Saahil chouhan",
+      title: "GMAT Doubt clearing session 5 ",
     },
     {
       videoId: "wFZlEP9s24w",
-      title: "GMAT Doubt clearing session 7 - Saahil Chouhan",
+      title: "GMAT Doubt clearing session 7 ",
     },
     {
       videoId: "lEKW4Jt0lp8",
-      title: "GMAT Doubt clearing session 6 - Saahil Chouhan",
+      title: "GMAT Doubt clearing session 6 ",
     },
     {
       videoId: "tjo5jGqTqM4",
-      title: "GMAT Doubt clearing session 8 - Saahil Chouhan",
+      title: "GMAT Doubt clearing session 8 ",
     },
     {
       videoId: "ClhHU77YJB8",
-      title: "GMAT Doubt clearing session 9 - Saahil chouhan",
+      title: "GMAT Doubt clearing session 9 ",
     },
   ],
   // Add more categories
