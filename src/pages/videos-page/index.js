@@ -91,7 +91,7 @@ const VideoCarousel = ({ videos }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const [visibleVideos, setVisibleVideos] = useState(isMobile ? 3 : 8); // Number of initially visible videos
+  const [visibleVideos, setVisibleVideos] = useState(isMobile ? 1 : 8); // Number of initially visible videos
 
   const settings = {
     lazyLoad: true,
