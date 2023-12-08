@@ -1,63 +1,56 @@
 import React, { useEffect, useState } from "react";
-import {
-  Radar,
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  ResponsiveContainer,
-} from "recharts";
+import { ResponsiveContainer } from "recharts";
 import Plot from "react-plotly.js";
 // import sticker from "../../icons/businessman.png";
 
-const HeatmapExample = ({ data }) => {
-  // Extract factor names and category names
-  const factors = data.map((item) => item.factor);
-  const categories = ["Top 10", "11-20", "21-40", "41-60", "61-80", "81-100"];
+// const HeatmapExample = ({ data }) => {
+//   // Extract factor names and category names
+//   const factors = data.map((item) => item.factor);
+//   const categories = ["Top 10", "11-20", "21-40", "41-60", "61-80", "81-100"];
 
-  // Extract values for the heatmap
-  const values = data.map((item) => item.values);
+//   // Extract values for the heatmap
+//   const values = data.map((item) => item.values);
 
-  // Create a 2D array for the heatmap
-  const heatmapData = [
-    {
-      x: categories,
-      y: factors,
-      z: values,
-      type: "heatmap",
-      colorscale: "Viridis", // You can choose different color scales
-    },
-  ];
+//   // Create a 2D array for the heatmap
+//   const heatmapData = [
+//     {
+//       x: categories,
+//       y: factors,
+//       z: values,
+//       type: "heatmap",
+//       colorscale: "Viridis", // You can choose different color scales
+//     },
+//   ];
 
-  // Layout configuration for the heatmap
-  const layout = {
-    title: "Chances of Selection Heatmap",
-    xaxis: {
-      title: "Categories",
-    },
-    yaxis: {
-      title: "Factors",
-    },
-    autosize: true, // Automatically adjust the size of the chart to fit the container
-    margin: {
-      l: 50,
-      r: 50,
-      b: 50,
-      t: 50,
-      pad: 4,
-    },
-  };
+//   // Layout configuration for the heatmap
+//   const layout = {
+//     title: "Chances of Selection Heatmap",
+//     xaxis: {
+//       title: "Categories",
+//     },
+//     yaxis: {
+//       title: "Factors",
+//     },
+//     autosize: true, // Automatically adjust the size of the chart to fit the container
+//     margin: {
+//       l: 50,
+//       r: 50,
+//       b: 50,
+//       t: 50,
+//       pad: 4,
+//     },
+//   };
 
-  return (
-    <div className="mb-3">
-      <Plot
-        data={heatmapData}
-        layout={layout}
-        config={{ displayModeBar: false }}
-      />
-    </div>
-  );
-};
+//   return (
+//     <div className="mb-3">
+//       <Plot
+//         data={heatmapData}
+//         layout={layout}
+//         config={{ displayModeBar: false }}
+//       />
+//     </div>
+//   );
+// };
 
 const Interactive3DRadarChart = ({ data }) => {
   const [chartData, setChartData] = useState([]);
@@ -101,40 +94,40 @@ const Interactive3DRadarChart = ({ data }) => {
     </ResponsiveContainer>
   );
 };
-const RadarChartExample = ({ data }) => {
-  const categories = ["Top 10", "11-20", "21-40", "41-60", "61-80", "81-100"];
+// const RadarChartExample = ({ data }) => {
+//   const categories = ["Top 10", "11-20", "21-40", "41-60", "61-80", "81-100"];
 
-  // Define colors for each category
-  const colors = [
-    "#8884d8",
-    "#82ca9d",
-    "#ffc658",
-    "#ff7300",
-    "#0088fe",
-    "#00C49F",
-  ];
+//   // Define colors for each category
+//   const colors = [
+//     "#8884d8",
+//     "#82ca9d",
+//     "#ffc658",
+//     "#ff7300",
+//     "#0088fe",
+//     "#00C49F",
+//   ];
 
-  return (
-    <ResponsiveContainer width="100%" height={400}>
-      <RadarChart outerRadius={150} data={data}>
-        <PolarGrid />
-        <PolarAngleAxis dataKey="factor" />
-        <PolarRadiusAxis angle={30} domain={[0, 1]} />
+//   return (
+//     <ResponsiveContainer width="100%" height={400}>
+//       <RadarChart outerRadius={150} data={data}>
+//         <PolarGrid />
+//         <PolarAngleAxis dataKey="factor" />
+//         <PolarRadiusAxis angle={30} domain={[0, 1]} />
 
-        {categories.map((category, index) => (
-          <Radar
-            key={category}
-            name={category}
-            dataKey={`values[${index}]`}
-            stroke={colors[index]}
-            fill={colors[index]}
-            fillOpacity={0.6}
-          />
-        ))}
-      </RadarChart>
-    </ResponsiveContainer>
-  );
-};
+//         {categories.map((category, index) => (
+//           <Radar
+//             key={category}
+//             name={category}
+//             dataKey={`values[${index}]`}
+//             stroke={colors[index]}
+//             fill={colors[index]}
+//             fillOpacity={0.6}
+//           />
+//         ))}
+//       </RadarChart>
+//     </ResponsiveContainer>
+//   );
+// };
 
 const SelectionOutput = ({ data, totalValues }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -192,7 +185,7 @@ const SelectionOutput = ({ data, totalValues }) => {
   return (
     <>
       <div className="container m-0 p-0 d-lg-flex justify-content-center align-items-center table-container">
-        <div className="col-12 col-lg-6">
+        <div className="col-12 ">
           <table style={{ width: "100%" }} className="table styled-table">
             <thead>
               <tr>
@@ -299,12 +292,12 @@ const SelectionOutput = ({ data, totalValues }) => {
             </div>
           </div>
         </div>
-        <div className="col-12 col-lg-6">
+        {/* <div className="col-12 col-lg-6">
           <RadarChartExample data={data} />
-        </div>
+        </div> */}
       </div>
       {isMobile ? "" : <Interactive3DRadarChart data={data} />}
-      {isMobile ? "" : <HeatmapExample data={data} />}{" "}
+
       {/* <BarChartExample data={data} totalValues={totalValues} /> */}
       {/* <div style={{ display: "grid", placeItems: "center" }}>
 <div className="clock">

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ApplicationStrategyOutputStyled } from "./style";
+import { Progress } from "antd";
 
 const longTermDataSource = [
   {
@@ -251,15 +252,15 @@ const ApplicationStrategyOutput = () => {
     }
     // eslint-disable-next-line
   }, [storedUserInputData, storedGoalsInput, shortTermDataSource]);
-  const getColor = (value) => {
+  const getPercentage = (value) => {
     switch (value) {
       case 1:
-        return "#00aaa4"; // Already possess sufficient skill
+        return 33.3;
       case 2:
-        return "#f8a66e"; // Needs some improvement
+        return 50;
 
       default:
-        return "#cccccc"; // Default color
+        return 100;
     }
   };
 
@@ -291,7 +292,7 @@ const ApplicationStrategyOutput = () => {
       <div>
         <div>
           <h2 className="my-3">Application strategy</h2>
-          <table className="skill-matrix">
+          <table style={{ borders: "none" }} className="skill-matrix">
             <thead>
               <tr>
                 <th>The skills you need to develop </th>
@@ -303,18 +304,33 @@ const ApplicationStrategyOutput = () => {
               {Object.entries(skillData).map(([skill, gap]) => (
                 <tr key={skill}>
                   <td className="text-left">{gap}</td>
-                  <td
-                    style={{
-                      backgroundColor: getColor(longTermSkillsGapValues[skill]),
-                    }}
-                  ></td>
-                  <td
-                    style={{
-                      backgroundColor: getColor(
-                        shortTermSkillsGapValues[skill]
-                      ),
-                    }}
-                  ></td>
+                  <td>
+                    <Progress
+                      steps={3}
+                      percent={getPercentage(longTermSkillsGapValues[skill])}
+                      size={[40, 20]}
+                      strokeColor={[
+                        "rgb(12, 110, 171)",
+                        "rgb(12, 110, 171)",
+                        "rgb(12, 110, 171)",
+                      ]}
+                      showInfo={false}
+                    />
+                  </td>
+                  <td>
+                    {" "}
+                    <Progress
+                      steps={3}
+                      percent={getPercentage(shortTermSkillsGapValues[skill])}
+                      size={[40, 20]}
+                      strokeColor={[
+                        "rgb(12, 110, 171)",
+                        "rgb(12, 110, 171)",
+                        "rgb(12, 110, 171)",
+                      ]}
+                      showInfo={false}
+                    />
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -322,33 +338,18 @@ const ApplicationStrategyOutput = () => {
         </div>
         <div className="legend container">
           <div style={{ textAlign: "left", marginTop: "20px" }}>
-            <div className="d-flex  mb-1 justify-content-lg-start justify-content-between align-items-center">
-              <div
-                style={{
-                  backgroundColor: "#00aaa4",
-                  width: "40px",
-                  height: "20px",
-                  display: "inline-block",
-                }}
-              ></div>
-              <div
-                style={{
-                  marginLeft: "5px",
-                  fontSize: `${isMobile ? "14px" : "18px"}`,
-                }}
-              >
-                Needs some improvement
-              </div>
-            </div>
             <div className="d-flex mb-1 justify-content-lg-start justify-content-between align-items-center">
-              <div
-                style={{
-                  backgroundColor: "#f8a66e",
-                  width: "40px",
-                  height: "20px",
-                  display: "inline-block",
-                }}
-              ></div>
+              <Progress
+                steps={3}
+                percent={33.3}
+                size={[40, 20]}
+                strokeColor={[
+                  "rgb(12, 110, 171)",
+                  "rgb(12, 110, 171)",
+                  "rgb(12, 110, 171)",
+                ]}
+                showInfo={false}
+              />
               <div
                 style={{
                   marginLeft: "5px",
@@ -359,14 +360,39 @@ const ApplicationStrategyOutput = () => {
               </div>
             </div>
             <div className="d-flex  mb-1 justify-content-lg-start justify-content-between align-items-center">
+              <Progress
+                steps={3}
+                percent={50}
+                size={[40, 20]}
+                strokeColor={[
+                  "rgb(12, 110, 171)",
+                  "rgb(12, 110, 171)",
+                  "rgb(12, 110, 171)",
+                ]}
+                showInfo={false}
+              />
               <div
                 style={{
-                  backgroundColor: "#cccccc",
-                  width: "40px",
-                  height: "20px",
-                  display: "inline-block",
+                  marginLeft: "5px",
+                  fontSize: `${isMobile ? "14px" : "18px"}`,
                 }}
-              ></div>
+              >
+                Needs some improvement
+              </div>
+            </div>
+
+            <div className="d-flex  mb-1 justify-content-lg-start justify-content-between align-items-center">
+              <Progress
+                steps={3}
+                percent={100}
+                size={[40, 20]}
+                strokeColor={[
+                  "rgb(12, 110, 171)",
+                  "rgb(12, 110, 171)",
+                  "rgb(12, 110, 171)",
+                ]}
+                showInfo={false}
+              />
               <div
                 style={{
                   marginLeft: "5px",

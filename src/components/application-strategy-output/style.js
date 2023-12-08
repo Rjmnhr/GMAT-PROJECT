@@ -6,11 +6,18 @@ export const ApplicationStrategyOutputStyled = styled.div`
     width: 100%;
   }
 
+  .skill-matrix th {
+    margin-bottom: 5px;
+  }
   .skill-matrix th,
   .skill-matrix td {
-    border: 1px solid #dddddd;
-    padding: 8px;
+    border: none;
+    padding: 5px;
     text-align: center;
+  }
+
+  .skill-matrix td {
+    border-bottom: 1px solid #dddddd;
   }
 
   .skill-matrix th {

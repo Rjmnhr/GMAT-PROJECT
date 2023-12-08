@@ -441,6 +441,15 @@ const careerSourceData = [
   },
 ];
 
+const internationalFactorValues = {
+  0: 0.5,
+  20: 0.5,
+  30: 0.6,
+  40: 0.7,
+  50: 0.85,
+  60: 1,
+};
+
 const calculateLivingFactor = (country, importance) => {
   const livingFactor = countrySourceData.find(
     (factor) => factor.label === "Living"
@@ -451,13 +460,44 @@ const calculateLivingFactor = (country, importance) => {
 };
 
 // Helper function to calculate MBA factor value
-const calculateMBAFactor = (country, importance) => {
+const calculateMBAFactor = (
+  country,
+  importance,
+  international_students,
+  international_mobility_rank
+) => {
+  const internationalFactor =
+    parseFloat(international_students) * 0.75 +
+    parseFloat(international_mobility_rank) * 0.25;
+  console.log(
+    "🚀 ~ file: index.js:466 ~ calculateMBAFactor ~ internationalFactor:",
+    internationalFactor
+  );
+
   const mbaFactor = countrySourceData.find((factor) => factor.label === "MBA");
+
+  // Get the closest internationalFactor value from the internationalFactorValues object
+  const closestInternationalFactor = Object.keys(
+    internationalFactorValues
+  ).reduce((prev, curr) =>
+    Math.abs(curr - internationalFactor) < Math.abs(prev - internationalFactor)
+      ? curr
+      : prev
+  );
+  console.log(
+    "🚀 ~ file: index.js:473 ~ calculateMBAFactor ~ closestInternationalFactor:",
+    closestInternationalFactor
+  );
+
+  const internationalFactorValue =
+    internationalFactorValues[closestInternationalFactor];
+
   return mbaFactor && mbaFactor[country] === "Y"
-    ? parseFloat(mbaFactor.Factor) * (importance ? importance : 1)
+    ? parseFloat(mbaFactor.Factor) *
+        (importance ? importance : 1) *
+        internationalFactorValue
     : 0;
 };
-
 // Helper function to calculate Choice of courses factor value
 const calculateChoiceOfCoursesFactor = (country, importance) => {
   const choiceOfCoursesFactor = countrySourceData.find(
@@ -578,6 +618,9 @@ const CollegeInformationOutput = () => {
   const storedTotalGeneralValue = sessionStorage.getItem(
     "experience_general_value"
   );
+  const storedCountries = JSON.parse(
+    sessionStorage.getItem("selectedCountries")
+  );
   const storedPreferenceInput = JSON.parse(
     sessionStorage.getItem("preferenceInputObject")
   );
@@ -595,6 +638,7 @@ const CollegeInformationOutput = () => {
         safe: storedSafe,
         achievable: storedAchievable,
         stretch: storedStretch,
+        countries: storedCountries?.join(","),
       },
       {
         headers: {
@@ -604,6 +648,7 @@ const CollegeInformationOutput = () => {
     )
       .then(async (res) => {
         const response = await res.data;
+        console.log("🚀 ~ file: index.js:631 ~ .then ~ response:", response);
         setCollegeData(response);
         sessionStorage.setItem("form-filled", true);
       })
@@ -734,7 +779,9 @@ const CollegeInformationOutput = () => {
       ),
       mba: calculateMBAFactor(
         college.country,
-        storedPreferenceInput.internationalMBA
+        storedPreferenceInput.internationalMBA,
+        college.international_students,
+        college.international_mobility_rank
       ),
       weather: calculateWeatherFactor(
         college.country,
@@ -784,7 +831,9 @@ const CollegeInformationOutput = () => {
       ),
       mba: calculateMBAFactor(
         college.country,
-        storedPreferenceInput.internationalMBA
+        storedPreferenceInput.internationalMBA,
+        college.international_students,
+        college.international_mobility_rank
       ),
       weather: calculateWeatherFactor(
         college.country,
@@ -838,7 +887,9 @@ const CollegeInformationOutput = () => {
       ),
       mba: calculateMBAFactor(
         college.country,
-        storedPreferenceInput.internationalMBA
+        storedPreferenceInput.internationalMBA,
+        college.international_students,
+        college.international_mobility_rank
       ),
       weather: calculateWeatherFactor(
         college.country,
@@ -1011,7 +1062,6 @@ const CollegeInformationOutput = () => {
                           />
                           <p
                             style={{
-                              fontWeight: "bold",
                               fontSize: "18px",
                               marginLeft: "10px",
                             }}
@@ -1052,7 +1102,6 @@ const CollegeInformationOutput = () => {
                           />
                           <p
                             style={{
-                              fontWeight: "bold",
                               fontSize: "18px",
                               marginLeft: "10px",
                             }}
@@ -1093,12 +1142,11 @@ const CollegeInformationOutput = () => {
                           />
                           <p
                             style={{
-                              fontWeight: "bold",
                               fontSize: "18px",
                               marginLeft: "10px",
                             }}
                           >
-                            {item.school_name}
+                            {item.school_name}{" "}
                             <span
                               style={{
                                 color: "blue",
@@ -1139,7 +1187,6 @@ const CollegeInformationOutput = () => {
                           />
                           <p
                             style={{
-                              fontWeight: "bold",
                               fontSize: "18px",
                               marginLeft: "10px",
                             }}

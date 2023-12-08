@@ -63,40 +63,45 @@ const CategoryVideos = () => {
       <div style={{ marginTop: "100px" }}>
         <h2>{categoryNames[categoryIndex]}</h2>
         <div className="mb-3">
-          {paginatedVideos.map((video) => (
-            <div
-              className="container"
-              key={video.videoId}
-              onClick={() => handleVideoClick(video)}
-              style={{ cursor: "pointer" }}
-            >
+          {paginatedVideos
+            .filter((video) => !video.title.includes("GRE"))
+            .map((video) => (
               <div
-                className="card border m-1 p-1 bg-light d-flex  align-items-center text-left"
-                style={{ flexDirection: "row" }}
+                className="container"
+                key={video.videoId}
+                onClick={() => handleVideoClick(video)}
+                style={{ cursor: "pointer" }}
               >
-                <img
-                  width={32}
-                  height={32}
-                  src={
-                    "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701852034/xwk1mym8fnijajizoiqv.png"
-                  }
-                  alt="video"
-                />
-                <div>
-                  <p
-                    style={{ fontWeight: "bold", margin: "0" }}
-                    className=" px-3 text-left"
-                  >
-                    {video.title}
-                  </p>
+                <div
+                  className="card border m-1 p-1 bg-light d-flex  align-items-center text-left"
+                  style={{ flexDirection: "row" }}
+                >
+                  <img
+                    width={32}
+                    height={32}
+                    src={
+                      "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701852034/xwk1mym8fnijajizoiqv.png"
+                    }
+                    alt="video"
+                  />
+                  <div>
+                    <p
+                      style={{ fontWeight: "bold", margin: "0" }}
+                      className="px-3 text-left"
+                    >
+                      {video.title}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
         <Pagination
           current={currentPage}
-          total={categoryVideos.length}
+          total={
+            categoryVideos.filter((video) => !video.title.includes("GRE"))
+              .length
+          }
           pageSize={itemsPerPage}
           onChange={handlePageChange}
         />

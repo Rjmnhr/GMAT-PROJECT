@@ -101,7 +101,7 @@ const PreferenceForm = ({ onSubmit }) => {
                 />
               ) : (
                 <img
-                  src="https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701665184/wuy81vijuljgvrdqmjwy.png"
+                  src="https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701938737/qunal5unjsxk9soqg5ze.png"
                   alt=""
                 />
               )}
@@ -114,7 +114,7 @@ const PreferenceForm = ({ onSubmit }) => {
 
   return (
     <div>
-      <h5>Select the following to rate yourself</h5>
+      <h3>Select the following to rate yourself</h3>
       {isMobile ? (
         ""
       ) : (
@@ -184,7 +184,7 @@ const PreferenceForm = ({ onSubmit }) => {
                 }  mb-2 justify-content-between align-items-center `}
               >
                 {" "}
-                <h5 className="text-left">{option.text}</h5>
+                <h6 className="text-left">{option.text}</h6>
                 {renderStarOptions(option.label)}
               </div>
             </div>

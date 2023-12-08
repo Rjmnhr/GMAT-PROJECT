@@ -7,21 +7,25 @@ const companySizeOptions = [
     value: "<1000",
     label: "<1000",
     description: "Less than 1000",
+    url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1702002190/fnyy5cx0b5lwtjrafvow.png",
   },
   {
     value: "<5000",
     label: "5000",
     description: "Less than 5000",
+    url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1702003180/lv4v2rci23fuvf0guh5i.png",
   },
   {
     value: "<10000",
     label: "<10000",
     description: "Less than 10000",
+    url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1702003087/lb73i0ewboauc4zrn98m.png",
   },
   {
     value: "≥10000",
     label: "≥10000",
     description: "Greater than or equal to 10000",
+    url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1702003231/cm6n9q3amoalxhjcqikk.png",
   },
 ];
 
@@ -82,91 +86,102 @@ const WorkExperienceForm = ({ onUpdateProgress, onFormValidation }) => {
       value: "oneLocation",
       label: "One Location",
       description: "Company operates in a single location",
+      url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701939881/v2eovelvggqkk5r8fuox.png",
     },
     {
       value: "multipleLocations",
       label: "Multiple Locations",
       description: "Company operates in multiple locations across a continent",
+      url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701941485/fzzhoxaktikctv7qp7qh.png",
     },
     {
       value: "multipleContinents",
       label: "Multiple Continents",
       description: "Company operates in multiple continents",
+      url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701941588/fpqtfv6dw8vlyejifo6b.png",
     },
   ];
 
   return (
     <>
       <BasicDetailsFormStyled>
-        <div className={` p-0 p-lg-3  container`}>
+        <div className={` p-0 p-lg-3 col-lg-10  container`}>
           <Form className="p-0" name="workExperienceForm">
-            <h5 className="text-left mb-2">Company type </h5>
-            <div className="age-cards mt-2">
-              {[
-                {
-                  label: "Product",
-                  url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701443744/gakt7sccsbxjxdh1oqvf.png",
-                },
-                {
-                  label: "Services",
-                  url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701444050/gs2ttnhot7wyls3obcxh.png",
-                },
-              ].map((type) => (
-                <Tooltip title={type.label} key={type.label}>
-                  <div
-                    style={{
-                      marginRight: "12px",
-                      marginTop: "8px",
-                      marginLeft: "0",
-                    }}
-                    key={type.label}
-                    className={`age-card ${
-                      selectedType === type.label ? "selected-card" : ""
-                    }`}
-                    onClick={() => handleTypeCardClick(type.label)}
-                  >
-                    <img src={type.url} alt="" />
-                  </div>
-                </Tooltip>
-              ))}
-            </div>
+            <div className="d-lg-flex align-items-start justify-content-between">
+              <div>
+                <h5 className="text-left mb-2">Company type </h5>
+                <div className="age-cards mt-2">
+                  {[
+                    {
+                      label: "Product",
+                      url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701443744/gakt7sccsbxjxdh1oqvf.png",
+                    },
+                    {
+                      label: "Services",
+                      url: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701444050/gs2ttnhot7wyls3obcxh.png",
+                    },
+                  ].map((type) => (
+                    <Tooltip title={type.label} key={type.label}>
+                      <div
+                        style={{
+                          marginRight: "12px",
+                          marginTop: "8px",
+                          marginLeft: "0",
+                        }}
+                        key={type.label}
+                        className={`age-card ${
+                          selectedType === type.label ? "selected-card" : ""
+                        }`}
+                        onClick={() => handleTypeCardClick(type.label)}
+                      >
+                        <img src={type.url} alt="" />
+                      </div>
+                    </Tooltip>
+                  ))}
+                </div>
 
-            <h5 className="text-left mb-2">Company's geographical reach </h5>
-            <div className="age-cards mt-2">
-              {geographicalReachOptions.map((option) => (
-                <Tooltip title={option.description} key={option.value}>
-                  <Card
-                    className={`college-card ${
-                      selectedGeographicalReach === option.value
-                        ? "selected-card"
-                        : ""
-                    }`}
-                    onClick={() =>
-                      handleGeographicalReachOptionClick(option.value)
-                    }
-                  >
-                    <p>{option.label}</p>
-                  </Card>
-                </Tooltip>
-              ))}
-            </div>
-
-            <h5 className="text-left mb-2">Company size </h5>
-            <div className="age-cards mt-2">
-              {companySizeOptions.map((option) => (
-                <Tooltip title={option.description} key={option.value}>
-                  <Card
-                    className={`college-card ${
-                      selectedCompanySize === option.value
-                        ? "selected-card"
-                        : ""
-                    }`}
-                    onClick={() => handleCompanySizeCardClick(option.value)}
-                  >
-                    <p>{option.value}</p>
-                  </Card>
-                </Tooltip>
-              ))}
+                <h5 className="text-left mb-2">
+                  Company's geographical reach{" "}
+                </h5>
+                <div className="age-cards mt-2">
+                  {geographicalReachOptions.map((option) => (
+                    <Tooltip title={option.description} key={option.value}>
+                      <Card
+                        className={`college-card ${
+                          selectedGeographicalReach === option.value
+                            ? "selected-card"
+                            : ""
+                        }`}
+                        onClick={() =>
+                          handleGeographicalReachOptionClick(option.value)
+                        }
+                      >
+                        <img src={option.url} alt="" />
+                      </Card>
+                    </Tooltip>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <h5 className="text-left mb-2">Company size </h5>
+                <div className="d-flex mt-2">
+                  {companySizeOptions.map((option) => (
+                    <Tooltip title={option.description} key={option.value}>
+                      <Card
+                        style={{ height: "auto" }}
+                        className={`college-card ${
+                          selectedCompanySize === option.value
+                            ? "selected-card"
+                            : ""
+                        }`}
+                        onClick={() => handleCompanySizeCardClick(option.value)}
+                      >
+                        <img src={option.url} alt="" />
+                      </Card>
+                    </Tooltip>
+                  ))}
+                </div>
+              </div>
             </div>
           </Form>
         </div>

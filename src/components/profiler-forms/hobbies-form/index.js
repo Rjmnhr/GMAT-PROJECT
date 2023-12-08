@@ -111,7 +111,7 @@ const HobbiesForm = ({ onUpdateProgress, onFormValidation }) => {
       <BasicDetailsFormStyled>
         <div className=" container-fluid">
           <Form labelCol={{ span: 5 }} wrapperCol={{ span: 16 }}>
-            <h5 className="text-left mb-2">Nature of activity</h5>
+            <h6 className="text-left mb-2">Nature of activity</h6>
             <div className="college-cards">
               {ActivityOptions.map((option) => (
                 <Tooltip title={option.description} key={option.value}>
@@ -129,7 +129,7 @@ const HobbiesForm = ({ onUpdateProgress, onFormValidation }) => {
               ))}
             </div>
 
-            <h5 className="text-left mb-2">Expertise level</h5>
+            <h6 className="text-left mb-2">Expertise level</h6>
             <div className="college-cards">
               {ExpertiseOptions.map((option) => (
                 <Tooltip title={option.description} key={option.value}>
@@ -147,7 +147,7 @@ const HobbiesForm = ({ onUpdateProgress, onFormValidation }) => {
               ))}
             </div>
 
-            <h5 className="text-left mb-2">Years involved</h5>
+            <h6 className="text-left mb-2">Years involved</h6>
             <div className="college-cards">
               {YearsOptions.map((option) => (
                 <Tooltip title={option.description} key={option.value}>

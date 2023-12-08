@@ -120,7 +120,7 @@ const CommunityServiceForm = ({ onUpdateProgress, onFormValidation }) => {
       <BasicDetailsFormStyled>
         <div className=" container-fluid">
           <Form labelCol={{ span: 5 }} wrapperCol={{ span: 16 }}>
-            <h5 className="text-left mb-2">Nature of activity </h5>
+            <h6 className="text-left mb-2">Nature of activity </h6>
             <div className="college-cards">
               {ActivityOptions.map((option) => (
                 <Tooltip title={option.description} key={option.value}>
@@ -138,7 +138,7 @@ const CommunityServiceForm = ({ onUpdateProgress, onFormValidation }) => {
               ))}
             </div>
 
-            <h5 className="text-left mb-2">Contribution level</h5>
+            <h6 className="text-left mb-2">Contribution level</h6>
             <div className="college-cards">
               {ContributionOptions.map((option) => (
                 <Tooltip title={option.description} key={option.value}>
@@ -158,7 +158,7 @@ const CommunityServiceForm = ({ onUpdateProgress, onFormValidation }) => {
               ))}
             </div>
 
-            <h5 className="text-left mb-2">Years involved</h5>
+            <h6 className="text-left mb-2">Years involved</h6>
             <div className="college-cards">
               {YearsOptions.map((option) => (
                 <Tooltip title={option.description} key={option.value}>

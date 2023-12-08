@@ -91,7 +91,7 @@ const PreferenceForm = ({ onSubmit }) => {
                 />
               ) : (
                 <img
-                  src="https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701665184/wuy81vijuljgvrdqmjwy.png"
+                  src="https://res.cloudinary.com/dsw1ubwyh/image/upload/v1701938737/qunal5unjsxk9soqg5ze.png"
                   alt=""
                 />
               )}
@@ -104,7 +104,7 @@ const PreferenceForm = ({ onSubmit }) => {
 
   return (
     <div>
-      <h5>Select which of the following matters the most to you</h5>
+      <h3>Select which of the following matters the most to you</h3>
       {isMobile ? (
         ""
       ) : (
@@ -178,7 +178,7 @@ const PreferenceForm = ({ onSubmit }) => {
                 }  mb-2 justify-content-between align-items-center `}
               >
                 {" "}
-                <h5 className="text-left">{option.text}</h5>
+                <h6 className="text-left">{option.text}</h6>
                 {renderStarOptions(option.label)}
               </div>
             </div>
@@ -275,7 +275,7 @@ const AfterMBAForm = ({ onNext, onBack }) => {
       <PreferenceAndGoalsPageStyled>
         <h5 className="mb-3 mt-3">
           After your MBA, compared to where you are now, which of these changes
-          apply to you (select all that apply)
+          apply to you
         </h5>
 
         <Form onFinish={onFinish}>
@@ -292,7 +292,7 @@ const AfterMBAForm = ({ onNext, onBack }) => {
           >
             <div>
               <div className="w-100">
-                <h5 className="text-left w-100">Change of location</h5>
+                <h6 className="text-left w-100">Change of location</h6>
                 {renderCardOptions("location")}
               </div>
               <div className=" w-100">
@@ -450,7 +450,7 @@ const GoalsForm = ({ onNext, onBack }) => {
   return (
     <div>
       <PreferenceAndGoalsPageStyled>
-        <h5 className="mb-3 mt-3">Set your long term and short term goals:</h5>
+        <h3 className="mb-3 mt-3">Set your long term and short term goals:</h3>
 
         <Form onFinish={onFinish}>
           <div
@@ -462,16 +462,16 @@ const GoalsForm = ({ onNext, onBack }) => {
               minHeight: "65vh",
               overflowY: "scroll",
             }}
-            className="  container-fluid scrollable-container"
+            className="  container scrollable-container"
           >
             <div>
               <div>
-                <h5 className="text-left w-100">Long Term Goals</h5>
+                <h6 className="text-left w-100">Long Term Goals</h6>
                 {renderCardOptions("longTermGoals", longTermGoalsOptions)}
               </div>
 
               <div>
-                <h5 className="text-left w-100">Short Term Goals</h5>
+                <h6 className="text-left w-100">Short Term Goals</h6>
                 {renderCardOptions("shortTermGoals", shortTermGoalsOptions)}
               </div>
             </div>
@@ -502,15 +502,147 @@ const GoalsForm = ({ onNext, onBack }) => {
   );
 };
 
+const CountrySelectionForm = ({ onNext, onBack }) => {
+  const [selectedCountries, setSelectedCountries] = useState([]);
+  const [isMobile, setIsMobile] = useState(false);
+  const [allCountriesSelected, setAllCountriesSelected] = useState(false);
+
+  useEffect(() => {
+    // Check if all countries are selected
+    setAllCountriesSelected(selectedCountries.length > 0);
+  }, [selectedCountries]);
+
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleCardClick = (country) => {
+    if (selectedCountries.includes(country)) {
+      // Remove the country if already selected
+      setSelectedCountries(selectedCountries.filter((c) => c !== country));
+    } else {
+      // Add the country if not selected
+      setSelectedCountries([...selectedCountries, country]);
+    }
+  };
+
+  const onFinish = (values) => {
+    sessionStorage.setItem(
+      "selectedCountries",
+      JSON.stringify(selectedCountries)
+    );
+    onNext();
+  };
+
+  const countryOptions = [
+    "US",
+    "France",
+    "Singapore",
+    "China",
+    "UK",
+    "Spain",
+    "Switzerland",
+    "India",
+    "Italy",
+    "South Korea",
+    "Germany",
+    "Netherlands",
+    "Australia",
+    "Portugal",
+    "Canada",
+    "Ireland",
+  ];
+
+  const renderCardOptions = (options) => {
+    return (
+      <div className="college-cards">
+        {options.map((country) => (
+          <Card
+            className="college-card"
+            key={country}
+            onClick={() => handleCardClick(country)}
+            style={{
+              border: selectedCountries.includes(country)
+                ? "2px solid #1890ff"
+                : "2px solid #d9d9d9",
+              width: `${isMobile ? "100%" : ""}`,
+            }}
+          >
+            <p>{country}</p>
+          </Card>
+        ))}
+      </div>
+    );
+  };
+
+  return (
+    <div>
+      <PreferenceAndGoalsPageStyled>
+        <div>
+          <Form onFinish={onFinish}>
+            <div
+              className="scrollable-container"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                minHeight: "65vh",
+                overflowY: "scroll",
+              }}
+            >
+              <h3 className="text-left w-100">Select countries to include</h3>
+              {renderCardOptions(countryOptions)}
+            </div>
+            <div
+              className="my-5 my-lg-3 text-center d-flex justify-content-center align-items-center"
+              style={{ width: "100%" }}
+            >
+              <button
+                onClick={onBack}
+                className="btn btn-lg border"
+                style={{ marginRight: 8 }}
+              >
+                Back
+              </button>
+              <button
+                htmlType="submit"
+                className="btn btn-lg btn-primary w-25"
+                disabled={!allCountriesSelected}
+              >
+                Next
+              </button>
+            </div>
+          </Form>
+        </div>
+      </PreferenceAndGoalsPageStyled>
+    </div>
+  );
+};
+
 const PreferenceAndGoalsPage = () => {
   const formFilled = sessionStorage.getItem("form-filled");
-  const [currentStep, setCurrentStep] = useState(formFilled === "true" ? 3 : 0);
+  const [currentStep, setCurrentStep] = useState(formFilled === "true" ? 4 : 0);
 
   const carouselRef = useRef(null);
 
   useEffect(() => {
     if (formFilled === "true" && carouselRef.current) {
-      carouselRef.current.goTo(3);
+      carouselRef.current.goTo(4);
     }
   }, [formFilled]);
 
@@ -548,8 +680,11 @@ const PreferenceAndGoalsPage = () => {
           <GoalsForm onNext={handleNext} onBack={handleBack} />
         </div>
         <div>
-          {currentStep === 3 && <CollegeInformationOutput />}
-          {currentStep === 3 && (
+          <CountrySelectionForm onNext={handleNext} onBack={handleBack} />
+        </div>
+        <div>
+          {currentStep === 4 && <CollegeInformationOutput />}
+          {currentStep === 4 && (
             <div className="mb-3  mb-lg-0">
               <button
                 className="btn-primary btn btn-lg mb-5  mb-lg-3"

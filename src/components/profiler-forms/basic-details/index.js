@@ -65,60 +65,64 @@ const BasicDetailsForm = ({ onUpdateProgress, onFormValidation }) => {
 
   return (
     <BasicDetailsFormStyled>
-      <div className="col-lg-8 p-0 p-lg-3 parent-container">
+      <div className="col-lg-10 p-0 p-lg-3 ">
         <Form className="p-0" name="basicDetailsForm">
-          <h5 className="text-left mb-2">Choose your age </h5>
-          <div className="age-cards mt-2">
-            {["<26", "<30", "<32", "<35", "≥35"].map((age) => (
-              <div
-                style={{
-                  marginRight: "12px",
-                  marginTop: "8px",
-                  marginLeft: "0",
-                }}
-                key={age}
-                className={`age-card ${
-                  selectedAge === age ? "selected-card" : ""
-                }`}
-                onClick={() => handleAgeCardClick(age)}
-              >
-                {age}
+          <div className="d-lg-flex align-items-center justify-content-between">
+            <div>
+              <h5 className="text-left mb-2">Choose your age </h5>
+              <div className="age-cards mt-2">
+                {["<26", "<30", "<32", "<35", "≥35"].map((age) => (
+                  <div
+                    style={{
+                      marginRight: "12px",
+                      marginTop: "8px",
+                      marginLeft: "0",
+                    }}
+                    key={age}
+                    className={`age-card ${
+                      selectedAge === age ? "selected-card" : ""
+                    }`}
+                    onClick={() => handleAgeCardClick(age)}
+                  >
+                    {age}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-
-          <h5 className="text-left mb-2">Choose your gender</h5>
-          <div className="gender-options">
-            <div
-              className={`gender-option ${
-                selectedGender === "male" ? "selected-option" : ""
-              }`}
-              onClick={() => handleGenderOptionClick("male")}
-            >
-              <img
-                width={50}
-                height={50}
-                src={maleIcon}
-                alt=""
-                className="gender-icon"
-              />
             </div>
-            <div
-              className={`gender-option ${
-                selectedGender === "female" ? "selected-option" : ""
-              }`}
-              onClick={() => handleGenderOptionClick("female")}
-            >
-              <img
-                width={50}
-                height={50}
-                src={femaleIcon}
-                alt=""
-                className="gender-icon"
-              />
+            <div>
+              <h5 className="text-left mb-2">Choose your gender</h5>
+              <div className="gender-options">
+                <div
+                  className={`gender-option ${
+                    selectedGender === "male" ? "selected-option" : ""
+                  }`}
+                  onClick={() => handleGenderOptionClick("male")}
+                >
+                  <img
+                    width={50}
+                    height={50}
+                    src={maleIcon}
+                    alt=""
+                    className="gender-icon"
+                  />
+                </div>
+                <div
+                  className={`gender-option ${
+                    selectedGender === "female" ? "selected-option" : ""
+                  }`}
+                  onClick={() => handleGenderOptionClick("female")}
+                >
+                  <img
+                    width={50}
+                    height={50}
+                    src={femaleIcon}
+                    alt=""
+                    className="gender-icon"
+                  />
+                </div>
+              </div>
             </div>
           </div>
-
           <div className="col-10" style={{ textAlign: "left", padding: "0" }}>
             <h5 className="text-left mb-2">Choose your GMAT score</h5>
             <div className="age-cards mt-2">

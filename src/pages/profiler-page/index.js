@@ -204,8 +204,7 @@ const ProfilerPage = () => {
               <Tab label="Work Experience" />
               <Tab label="Nature of Experience" />
               <Tab label="Undergraduate Degree" />
-              <Tab label="Community Service" />
-              <Tab label="Hobbies" />
+              <Tab label="Service & Hobbies" />
             </Tabs>
             <TabPanel value={activeTab} index={0}>
               <div style={{ minHeight: `${isMobile ? "" : "70vh"}` }}>
@@ -243,19 +242,28 @@ const ProfilerPage = () => {
               </div>
             </TabPanel>
             <TabPanel value={activeTab} index={4}>
-              <div style={{ minHeight: "70vh" }}>
-                <CommunityServiceForm
-                  onUpdateProgress={handleUpdateProgress}
-                  onFormValidation={handleFormValidation}
-                />
-              </div>
-            </TabPanel>
-            <TabPanel value={activeTab} index={5}>
-              <div style={{ minHeight: "70vh" }}>
-                <HobbiesForm
-                  onUpdateProgress={handleUpdateProgress}
-                  onFormValidation={handleFormValidation}
-                />
+              <div
+                style={{
+                  minHeight: "70vh",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "start",
+                }}
+              >
+                <div>
+                  <h3 className="text-left pl-3 mb-3">Community Services</h3>
+                  <CommunityServiceForm
+                    onUpdateProgress={handleUpdateProgress}
+                    onFormValidation={handleFormValidation}
+                  />
+                </div>
+                <div>
+                  <h3 className="text-left pl-3 mb-3">Hobbies</h3>
+                  <HobbiesForm
+                    onUpdateProgress={handleUpdateProgress}
+                    onFormValidation={handleFormValidation}
+                  />
+                </div>
               </div>
             </TabPanel>
           </div>
