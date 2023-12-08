@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Card, Form, Slider, Tooltip } from "antd";
 import { BasicDetailsFormStyled } from "../basic-details/style";
-
 import ReactSpeedometer from "react-d3-speedometer";
+
 function getThresholdValue(category) {
   switch (category?.toLowerCase()) {
     case "top5":
