@@ -20,6 +20,9 @@ import HomePage from "../pages/home-page";
 import ProfilerPage from "../pages/profiler-page";
 import ChancesOfSelection from "../pages/chances-of-selection";
 import CategoryVideos from "../pages/videos-page/category-videos";
+import LMSRepresentation from "../components/lms-representation";
+import PracticeQuestionsPage from "../pages/practice-questions-page";
+import CategoryQuestions from "../pages/practice-questions-page/category-questions";
 
 const ConditionalComponent = () => {
   return (
@@ -86,6 +89,34 @@ const AppRouter = () => {
                 element={
                   <>
                     <VideosPage />
+                  </>
+                }
+              />
+            }
+          />
+          <Route
+            path="/practice-questions"
+            element={
+              <ProtectedRoute
+                element={
+                  <>
+                    <PracticeQuestionsPage />
+                  </>
+                }
+              />
+            }
+          />
+          <Route
+            path="/category-questions"
+            element={
+              <ProtectedRoute
+                element={
+                  <>
+                    {isMobile ? (
+                      <ConditionalComponent />
+                    ) : (
+                      <CategoryQuestions />
+                    )}
                   </>
                 }
               />
@@ -245,6 +276,16 @@ const AppRouter = () => {
               <>
                 <div>
                   <LoginPage />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/lms"
+            element={
+              <>
+                <div>
+                  <LMSRepresentation />
                 </div>
               </>
             }

@@ -74,9 +74,9 @@ const SignIn = () => {
       setEmail("");
       setPassword("");
       if (Location.pathname === "/login-app") {
-        navigate("/price-a-job");
+        navigate("/profiler");
       } else {
-        navigate("/");
+        navigate("/lms");
       }
     } catch (err) {
       error("Something Wrong");

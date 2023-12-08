@@ -153,9 +153,9 @@ const OtpVerification = () => {
         clearSessionStorage();
 
         if (Location.pathname === "/login-app") {
-          navigate("/");
+          navigate("/lms");
         } else {
-          navigate("/");
+          navigate("/lms");
         }
       })
       .catch((err) => {

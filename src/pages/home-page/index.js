@@ -117,20 +117,7 @@ const HomePage = () => {
                 </ScrollLink>
               </li>
               <li>
-                <ScrollLink
-                  to="services"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={1000} // Adjust this duration value
-                  // Use the easeInOutQuart easing function
-                  // For custom easing functions, you can use external libraries like bezier-easing
-                  // See: https://github.com/gre/bezier-easing
-                  // easing="cubicBezier(0.77, 0, 0.175, 1)"
-                  easing="easeInOutQuart"
-                >
-                  <a href="#services">Services</a>
-                </ScrollLink>
+                <a href="/practice-questions">Practice questions</a>
               </li>
 
               <li>

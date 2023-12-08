@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+.icofont-navigation-menu:before {
+  content: "\efa2";
+}
+
 *{
   margin:0;
   padding: 0;
