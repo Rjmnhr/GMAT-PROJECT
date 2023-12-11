@@ -469,10 +469,6 @@ const calculateMBAFactor = (
   const internationalFactor =
     parseFloat(international_students) * 0.75 +
     parseFloat(international_mobility_rank) * 0.25;
-  console.log(
-    "🚀 ~ file: index.js:466 ~ calculateMBAFactor ~ internationalFactor:",
-    internationalFactor
-  );
 
   const mbaFactor = countrySourceData.find((factor) => factor.label === "MBA");
 

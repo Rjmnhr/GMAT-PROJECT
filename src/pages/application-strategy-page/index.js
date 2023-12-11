@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Form, Card, Carousel } from "antd";
+import { Form, Carousel } from "antd";
 
 import { StarFilled, StarOutlined } from "@ant-design/icons";
-import { PreferenceAndGoalsPageStyled } from "../prefernece_and_goals_page/style";
+
 import ApplicationStrategyOutput from "../../components/application-strategy-output";
 
 const PreferenceForm = ({ onSubmit }) => {
@@ -204,198 +204,20 @@ const PreferenceForm = ({ onSubmit }) => {
   );
 };
 
-const GoalsForm = ({ onNext, onBack }) => {
-  const [selectedOptions, setSelectedOptions] = useState({});
-  const [isMobile, setIsMobile] = useState(false);
-  const [allOptionsSelected, setAllOptionsSelected] = useState(false);
-  useEffect(() => {
-    // Check if both longTermGoals and shortTermGoals are selected
-    setAllOptionsSelected(
-      selectedOptions.longTermGoals && selectedOptions.shortTermGoals
-    );
-  }, [selectedOptions]);
-
-  useEffect(() => {
-    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Add an event listener to handle window resizing
-    window.addEventListener("resize", handleResize);
-
-    // Initial check
-    handleResize();
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const handleCardClick = (label, value) => {
-    setSelectedOptions({
-      ...selectedOptions,
-      [label]: value,
-    });
-  };
-
-  const onFinish = (values) => {
-    sessionStorage.setItem(
-      "applicationGoalsInputObject",
-      JSON.stringify(selectedOptions)
-    );
-
-    onNext();
-  };
-
-  const longTermGoalsOptions = [
-    {
-      value: "Own business/venture",
-      text: "Own business/venture",
-      label: "Own business/venture",
-    },
-    {
-      value: "General Manager",
-      text: "General Manager of a business unit or function",
-      label: "General Manager",
-    },
-    { value: "CEO", text: "CEO of a business unit/function", label: "CEO" },
-    {
-      value: "Partner",
-      text: "Partner of a consulting firm",
-      label: "Partner",
-    },
-  ];
-
-  const shortTermGoalsOptions = [
-    {
-      value: "Own business/venture",
-      text: "Own business/venture",
-      label: "Own business/venture",
-    },
-    {
-      value: "Product Manager",
-      text: "Product Manager",
-      label: "Product Manager",
-    },
-    {
-      value: "Management Consulting",
-      text: "Management Consulting",
-      label: "Management Consulting",
-    },
-    {
-      value: "Investment Banking",
-      text: "Investment Banking/Private Equity",
-      label: "Investment Banking",
-    },
-    {
-      value: "Sales and Marketing",
-      text: "Sales and Marketing",
-      label: "Sales and Marketing",
-    },
-    {
-      value: "Senior Manager",
-      text: "Senior Manager (Finance, IT, Supply Chain)",
-      label: "Senior Manager",
-    },
-  ];
-
-  const renderCardOptions = (label, options) => {
-    return (
-      <div className="college-cards">
-        {options.map((option) => (
-          <Card
-            className="college-card"
-            key={option.label}
-            onClick={() => handleCardClick(label, option.label)}
-            style={{
-              border:
-                selectedOptions[label] === option.label
-                  ? "2px solid #1890ff"
-                  : "2px solid #d9d9d9",
-              width: `${isMobile ? "100%" : ""}`,
-            }}
-          >
-            <p>{option.label}</p>
-          </Card>
-        ))}
-      </div>
-    );
-  };
-
-  return (
-    <div>
-      <PreferenceAndGoalsPageStyled>
-        <h5 className="mb-3 mt-3">Set your long term and short term goals:</h5>
-
-        <Form onFinish={onFinish}>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-around",
-              alignItems: "center",
-              minHeight: "65vh",
-              overflowY: "scroll",
-            }}
-            className="  container-fluid scrollable-container"
-          >
-            <div>
-              <div>
-                <h5 className="text-left w-100">Long Term Goals</h5>
-                {renderCardOptions("longTermGoals", longTermGoalsOptions)}
-              </div>
-
-              <div>
-                <h5 className="text-left w-100">Short Term Goals</h5>
-                {renderCardOptions("shortTermGoals", shortTermGoalsOptions)}
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="my-5 my-lg-3  text-center d-flex justify-content-center align-items-center"
-            style={{ width: "100%" }}
-          >
-            {/* <button
-              onClick={onBack}
-              className="btn btn-lg border"
-              style={{ marginRight: 8 }}
-            >
-              Back
-            </button> */}
-            <button
-              htmlType="submit"
-              className="btn btn-lg btn-primary w-25"
-              disabled={!allOptionsSelected}
-            >
-              Next
-            </button>
-          </div>
-        </Form>
-      </PreferenceAndGoalsPageStyled>
-    </div>
-  );
-};
 const ApplicationStrategyPage = () => {
   const formFilled = sessionStorage.getItem("form-filled-application");
-  const [currentStep, setCurrentStep] = useState(formFilled === "true" ? 2 : 0);
+  const [currentStep, setCurrentStep] = useState(formFilled === "true" ? 1 : 0);
 
   const carouselRef = useRef(null);
 
   useEffect(() => {
     if (formFilled === "true" && carouselRef.current) {
-      carouselRef.current.goTo(2);
+      carouselRef.current.goTo(1);
     }
   }, [formFilled]);
 
   const handleNext = () => {
     carouselRef.current.next();
-  };
-
-  const handleBack = () => {
-    carouselRef.current.prev();
   };
 
   const handleTryAgain = () => {
@@ -419,11 +241,8 @@ const ApplicationStrategyPage = () => {
         </div>
 
         <div>
-          <GoalsForm onNext={handleNext} onBack={handleBack} />
-        </div>
-        <div>
-          {currentStep === 2 && <ApplicationStrategyOutput />}
-          {currentStep === 2 && (
+          {currentStep === 1 && <ApplicationStrategyOutput />}
+          {currentStep === 1 && (
             <div className="mb-3  mb-lg-0">
               <button
                 className="btn-primary btn btn-lg mb-5 mt-lg-3 mb-lg-3"

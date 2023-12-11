@@ -10,6 +10,7 @@ import NatureOfWorkForm from "../../components/profiler-forms/work-experience/na
 import { ProfilerPageStyled } from "./style";
 import { Progress, message } from "antd";
 import { useNavigate } from "react-router-dom";
+import GoalsForm from "../../components/profiler-forms/goals-form";
 
 const ProfilerPage = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -19,7 +20,7 @@ const ProfilerPage = () => {
   const [overAllProgress, setOverAllProgress] = useState(0);
   const navigate = useNavigate();
   const [messageApi, contextHolder] = message.useMessage();
-  const totalQuestions = 26;
+  const totalQuestions = 28;
 
   const handleSaveAndContinue = () => {
     try {
@@ -30,6 +31,7 @@ const ProfilerPage = () => {
       updateFormValues("graduate");
       updateFormValues("service");
       updateFormValues("hobbies");
+      updateFormValues("goalsInputObject");
       sessionStorage.removeItem("form-filled");
       navigate("/selection-chance");
     } catch {
@@ -71,6 +73,8 @@ const ProfilerPage = () => {
       sessionStorage.removeItem("service-default");
       sessionStorage.removeItem("hobbies");
       sessionStorage.removeItem("hobbies-default");
+      sessionStorage.removeItem("goalsInputObject");
+      sessionStorage.removeItem("goalsInputObject-default");
     };
 
     // Attach the event listener for beforeunload
@@ -205,6 +209,7 @@ const ProfilerPage = () => {
               <Tab label="Nature of Experience" />
               <Tab label="Undergraduate Degree" />
               <Tab label="Service & Hobbies" />
+              <Tab label="Goals" />
             </Tabs>
             <TabPanel value={activeTab} index={0}>
               <div style={{ minHeight: `${isMobile ? "" : "70vh"}` }}>
@@ -264,6 +269,14 @@ const ProfilerPage = () => {
                     onFormValidation={handleFormValidation}
                   />
                 </div>
+              </div>
+            </TabPanel>
+            <TabPanel value={activeTab} index={5}>
+              <div style={{ minHeight: "70vh" }}>
+                <GoalsForm
+                  onUpdateProgress={handleUpdateProgress}
+                  onFormValidation={handleFormValidation}
+                />
               </div>
             </TabPanel>
           </div>

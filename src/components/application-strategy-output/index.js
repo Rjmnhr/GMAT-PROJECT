@@ -194,9 +194,8 @@ const skillData = {
   operations: "Operations",
 };
 
-const storedGoalsInput = JSON.parse(
-  sessionStorage.getItem("applicationGoalsInputObject")
-);
+const storedGoalsInput = JSON.parse(sessionStorage.getItem("goalsInputObject"));
+
 const storedUserInputData = JSON.parse(
   sessionStorage.getItem("applicationSkillInputObject")
 );
@@ -210,7 +209,7 @@ const ApplicationStrategyOutput = () => {
     // Find the matching long term goal data
     const selectedLongTermGoalData = longTermDataSource?.find(
       (goalData) =>
-        goalData["Long term goal"] === storedGoalsInput.longTermGoals
+        goalData["Long term goal"] === storedGoalsInput?.longTermGoals
     );
 
     if (selectedLongTermGoalData) {
@@ -233,7 +232,7 @@ const ApplicationStrategyOutput = () => {
     // Find the matching short term goal data
     const selectedShortTermGoalData = shortTermDataSource?.find(
       (goalData) =>
-        goalData["Short term goal"] === storedGoalsInput.shortTermGoals
+        goalData["Short term goal"] === storedGoalsInput?.shortTermGoals
     );
 
     if (selectedShortTermGoalData) {
