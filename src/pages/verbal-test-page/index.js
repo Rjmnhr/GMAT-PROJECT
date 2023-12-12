@@ -8,13 +8,13 @@ import "./style.css";
 const VerbalTestPage = () => {
   const [value, setValue] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [totalQuestions] = useState(36);
+  const [totalQuestions] = useState(23);
   const [percentage, setPercentage] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(10); // elapsed time in seconds
   const [isRunning, setIsRunning] = useState(false);
 
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
-  const [remainingTime, setRemainingTime] = useState(65 * 60);
+  const [remainingTime, setRemainingTime] = useState(45 * 60);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const VerbalTestPage = () => {
   const [rightQuestions, setRightQuestions] = useState(0);
   const [wrongQuestions, setWrongQuestions] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState(null);
-
+  const storedCount = JSON.parse(sessionStorage.getItem("order-count"));
   useEffect(() => {
     let newThreshold = 0;
 
@@ -212,8 +212,12 @@ const VerbalTestPage = () => {
 
   if (remainingTime === 0) {
     alert("The Allowed time for this session is over");
-    sessionStorage.setItem("current_section", "ir");
-    navigate("/test-break");
+    if (storedCount && storedCount === "2") {
+      sessionStorage.removeItem("current_section");
+      navigate("/results");
+    } else {
+      navigate("/test-break");
+    }
   }
 
   const calculateScore = (level) => {
@@ -675,19 +679,21 @@ const VerbalTestPage = () => {
   return (
     <>
       <div className="container-fluid p-0 ">
-        <div
-          className={`header p-3 col-12 d-flex justify-content-between align-items-center border-bottom`}
-        >
+        <div className="header p-3 col-12 d-flex justify-content-between align-items-center border-bottom">
           <div>
             <h4 className="m-0 p-0">Practice Exam</h4>
           </div>
           <div className=" d-flex justify-content-between align-items-center gap-3">
             <p className="m-0 p-0 d-flex justify-content-between align-items-center gap-1">
-              <ClockCircleTwoTone /> This question: {formatTime(elapsedTime)}
+              <ClockCircleTwoTone style={{ marginRight: "5px" }} /> This
+              question: {formatTime(elapsedTime)}
             </p>
-            <p className="m-0 p-0 d-flex justify-content-between align-items-center gap-1">
+            <p
+              style={{ marginLeft: "8px" }}
+              className="  d-flex justify-content-between align-items-center gap-1"
+            >
               {" "}
-              <ClockCircleTwoTone />
+              <ClockCircleTwoTone style={{ marginRight: "5px" }} />
               Remaining Time: {formatTimer(remainingTime)}
             </p>
           </div>

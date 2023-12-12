@@ -119,7 +119,7 @@ const DashboardDetailed = () => {
                   >
                     <p style={{ fontSize: "14px" }}>
                       {isAttempted ? userData[0].questions_correct : "--"} out
-                      of 79
+                      of 64
                     </p>
                     <p style={{ fontSize: "14px" }}>Questions Correct</p>
                   </div>
@@ -243,7 +243,7 @@ const DashboardDetailed = () => {
               </div>
               <div className="container col-12 d-flex justify-content-around align-items-center border-bottom px-3 py-2 gap-3 practice-exam-container ">
                 <p style={{ width: "200px", textAlign: "start" }}>
-                  Integrated Reasoning
+                  Data Insights
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>
                   {isAttempted

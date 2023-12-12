@@ -13,8 +13,8 @@ const ResultPage = () => {
   const verbal_score = sessionStorage.getItem("verbal_score");
   const exam_no = localStorage.getItem("exam_no");
   const ir_score = sessionStorage.getItem("ir_score");
-  const user_id = localStorage.getItem("user_id");
-  const user_name = localStorage.getItem("user_name");
+  const user_id = localStorage.getItem("adefteducation_user_id");
+  const user_name = localStorage.getItem("adefteducation_user_name");
   const email = localStorage.getItem("email");
   const [notQualified, setNotQualified] = useState(false);
 

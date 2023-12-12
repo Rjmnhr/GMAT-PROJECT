@@ -11,4 +11,8 @@ export const SideBarStyled = styled.div`
   .btn {
     color: white;
   }
+  .selected-tab {
+    background-color: #049494 !important;
+    color: white;
+  }
 `;

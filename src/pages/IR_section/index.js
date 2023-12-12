@@ -7,22 +7,20 @@ import { useNavigate } from "react-router-dom";
 const IRTestPage = () => {
   const [value, setValue] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [totalQuestions] = useState(12);
+  const [totalQuestions] = useState(20);
   const [percentage, setPercentage] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(10); // elapsed time in seconds
   const [isRunning, setIsRunning] = useState(false);
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
-  const [remainingTime, setRemainingTime] = useState(30 * 60); // 61 minutes in seconds
+  const [remainingTime, setRemainingTime] = useState(45 * 60);
   const [score, setScore] = useState(0);
-
   const [questionNumber, setQuestionNumber] = useState(1);
-
   const [isSplitScreen, setIsSplitScreen] = useState(true);
   const [rightQuestions, setRightQuestions] = useState(0);
   const [wrongQuestions, setWrongQuestions] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState(null);
   const navigate = useNavigate();
-
+  const storedCount = JSON.parse(sessionStorage.getItem("order-count"));
   const trackUserInput = (answer) => {
     console.log(answer);
 
@@ -147,8 +145,6 @@ const IRTestPage = () => {
     // Logic to determine the next question level based on tempSum
   };
 
-  const exam_no = sessionStorage.getItem("exam_no");
-
   useEffect(() => {
     const updatedPercentage = (questionNumber / totalQuestions) * 100;
     setPercentage(updatedPercentage.toFixed(2));
@@ -194,22 +190,25 @@ const IRTestPage = () => {
 
       sessionStorage.removeItem("current_section");
       sessionStorage.setItem("time_remaining", remainingTime);
-      navigate("/results");
-      if (exam_no === "1") {
-        localStorage.setItem("practice_status_1", "Completed");
-      } else if (exam_no === "2") {
-        localStorage.setItem("practice_status_2", "Completed");
+      if (storedCount && storedCount === "2") {
+        sessionStorage.removeItem("current_section");
+        navigate("/results");
       } else {
-        localStorage.setItem("practice_status_3", "Completed");
+        navigate("/test-break");
       }
+
       // Handle the end of the test, e.g., show results
     }
   };
 
   if (remainingTime === 0) {
     alert("The Allowed time for this session is over");
-    sessionStorage.removeItem("current_section");
-    navigate("/results");
+    if (storedCount && storedCount === "2") {
+      sessionStorage.removeItem("current_section");
+      navigate("/results");
+    } else {
+      navigate("/test-break");
+    }
   }
 
   useEffect(() => {
@@ -230,19 +229,21 @@ const IRTestPage = () => {
   return (
     <>
       <div className="container-fluid p-0 ">
-        <div
-          className={`header p-3 col-12 d-flex justify-content-between align-items-center border-bottom`}
-        >
+        <div className="header p-3 col-12 d-flex justify-content-between align-items-center border-bottom">
           <div>
             <h4 className="m-0 p-0">Practice Exam</h4>
           </div>
           <div className=" d-flex justify-content-between align-items-center gap-3">
             <p className="m-0 p-0 d-flex justify-content-between align-items-center gap-1">
-              <ClockCircleTwoTone /> This question: {formatTime(elapsedTime)}
+              <ClockCircleTwoTone style={{ marginRight: "5px" }} /> This
+              question: {formatTime(elapsedTime)}
             </p>
-            <p className="m-0 p-0 d-flex justify-content-between align-items-center gap-1">
+            <p
+              style={{ marginLeft: "8px" }}
+              className="  d-flex justify-content-between align-items-center gap-1"
+            >
               {" "}
-              <ClockCircleTwoTone />
+              <ClockCircleTwoTone style={{ marginRight: "5px" }} />
               Remaining Time: {formatTimer(remainingTime)}
             </p>
           </div>

@@ -10,13 +10,13 @@ import { questions } from "../../components/items";
 const QuantTestPage = () => {
   const [value, setValue] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [totalQuestions] = useState(31);
+  const [totalQuestions] = useState(21);
   const [percentage, setPercentage] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(0); // elapsed time in seconds
   const [isRunning, setIsRunning] = useState(false);
 
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
-  const [remainingTime, setRemainingTime] = useState(62 * 60); // 61 minutes in seconds
+  const [remainingTime, setRemainingTime] = useState(45 * 60);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
@@ -642,7 +642,6 @@ const QuantTestPage = () => {
 
       trackUserInput(isCorrect);
 
-      sessionStorage.setItem("current_section", "verbal");
       sessionStorage.setItem("time_remaining", remainingTime);
 
       console.log(responseHistory);
@@ -801,8 +800,8 @@ const QuantTestPage = () => {
                   Score:
                   {score.toFixed(2)}
                 </p>
-
-                <p className="mt-3">
+*/}
+                {/* <p className="mt-3">
                   Correct Answer:
                   {filteredQuestionsByLevel[0].correct_answer
                     ? filteredQuestionsByLevel[0].correct_answer

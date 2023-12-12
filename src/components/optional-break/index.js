@@ -3,6 +3,15 @@ import { useNavigate } from "react-router-dom";
 
 const OptionalBreak = () => {
   const navigate = useNavigate();
+  const storedSectionOrder = JSON.parse(
+    sessionStorage.getItem("section-order")
+  );
+  const storedCount = sessionStorage.getItem("order-count");
+  console.log(
+    "🚀 ~ file: index.js:10 ~ OptionalBreak ~ storedCount:",
+    typeof storedCount
+  );
+  console.log(storedCount && storedCount === "2");
   return (
     <div>
       <div className="container p-3 ">
@@ -17,7 +26,20 @@ const OptionalBreak = () => {
           timed in this Practice Exams.
         </p>
         <button
-          onClick={() => navigate("/section")}
+          onClick={() => {
+            if (storedCount && storedCount === "2") {
+              console.log(
+                "🚀 ~ file: index.js:26 ~ OptionalBreak ~ storedCount:",
+                storedCount
+              );
+              sessionStorage.setItem("current_section", storedSectionOrder[2]);
+              navigate("/section");
+            } else {
+              sessionStorage.setItem("order-count", "2");
+              sessionStorage.setItem("current_section", storedSectionOrder[1]);
+              navigate("/section");
+            }
+          }}
           className="btn btn-primary"
         >
           Continue Exam

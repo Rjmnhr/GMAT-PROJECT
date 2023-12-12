@@ -76,11 +76,11 @@ const DashBoardComponent = () => {
         style={{ marginTop: "80px" }}
         className="d-flex justify-content-center align-items-center"
       >
-        <SideBar />
-        <div
-          className="container col-10 p-5"
-          style={{ background: "#f8f8f8", height: "100vh" }}
-        >
+        <div className="col-2 p-0">
+          <SideBar />
+        </div>
+
+        <div className="container col-10 p-5" style={{ height: "100vh" }}>
           <div className="card w-100 pb-3" style={{ height: "50vh" }}>
             <div className="sub-content mt-3 ">
               <h4>GMAT Practice Exams</h4>
@@ -130,10 +130,10 @@ const DashBoardComponent = () => {
                   Practice Exam 1
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>
-                  79 Questions
+                  64 Questions
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>
-                  157 minutes
+                  135 minutes
                 </p>
                 {/* <p style={{ width: "200px" }}>
                   {practice_score_1 ? practice_score_1 : "--"}
@@ -155,10 +155,10 @@ const DashBoardComponent = () => {
                   Practice Exam 2
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>
-                  79 Questions
+                  64 Questions
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>
-                  157 minutes
+                  135 minutes
                 </p>
                 {/* <p style={{ width: "200px" }}>
                   {practice_score_2 ? practice_score_2 : "--"}
@@ -180,10 +180,10 @@ const DashBoardComponent = () => {
                   Practice Exam 3
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>
-                  79 Questions
+                  64 Questions
                 </p>
                 <p style={{ width: "200px", textAlign: "start" }}>
-                  157 minutes
+                  135 minutes
                 </p>
                 {/* <p style={{ width: "200px" }}>
                   {practice_score_3 ? practice_score_3 : "--"}
