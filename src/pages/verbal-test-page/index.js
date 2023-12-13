@@ -8,13 +8,13 @@ import "./style.css";
 const VerbalTestPage = () => {
   const [value, setValue] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [totalQuestions] = useState(23);
+  const [totalQuestions] = useState(36);
   const [percentage, setPercentage] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(10); // elapsed time in seconds
   const [isRunning, setIsRunning] = useState(false);
 
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
-  const [remainingTime, setRemainingTime] = useState(45 * 60);
+  const [remainingTime, setRemainingTime] = useState(65 * 60);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ const VerbalTestPage = () => {
   const [rightQuestions, setRightQuestions] = useState(0);
   const [wrongQuestions, setWrongQuestions] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState(null);
-  const storedCount = JSON.parse(sessionStorage.getItem("order-count"));
+  const storedCount = sessionStorage.getItem("order-count");
   useEffect(() => {
     let newThreshold = 0;
 
@@ -797,18 +797,17 @@ const VerbalTestPage = () => {
                   {filteredQuestionsByLevel[0].level}
                 </p>
                 <p className="mt-3">Level :{currentQuestionLevel}</p>
-
-               
+ */}
 
                 <p className="mt-3">
                   Score:
                   {score.toFixed(2)}
-                </p> */}
+                </p>
 
-                {/* <p className="mt-3">
+                <p className="mt-3">
                   Correct Answer:
                   {filteredQuestionsByLevel[0].correct_answer}
-                </p> */}
+                </p>
               </div>
             </div>
           </div>

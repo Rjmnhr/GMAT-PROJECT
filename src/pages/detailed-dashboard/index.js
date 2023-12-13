@@ -1,16 +1,12 @@
+import React from "react";
 import NavBar from "../../components/nav-bar";
-import "./style.css";
 
 import SideBar from "../../components/side-bar";
-
-import GMATOld from "../../components/gmat-old";
-import GMATFocus from "../../components/gmat-focus";
 import { useApplicationContext } from "../../context/app-context";
-import GMATFocusContent from "../../components/gmat-focus-content";
-
-const DashBoardComponent = () => {
+import GMATFocusDetailed from "../../components/gmat-focus/gmat-focus-detailed";
+import GMATOldDetailed from "../../components/gmat-old/gmat-old-detailed";
+const DashboardDetailed = () => {
   const { activeIndex } = useApplicationContext();
-
   return (
     <>
       <NavBar />
@@ -21,19 +17,12 @@ const DashBoardComponent = () => {
         <div className="col-2 p-0">
           <SideBar />
         </div>
-
         <div className="container col-10 p-5" style={{ height: "100vh" }}>
-          {activeIndex === 0 ? (
-            <GMATFocusContent />
-          ) : activeIndex === 1 ? (
-            <GMATOld />
-          ) : (
-            <GMATFocus />
-          )}
+          {activeIndex === 0 ? <GMATOldDetailed /> : <GMATFocusDetailed />}
         </div>
       </div>
     </>
   );
 };
 
-export default DashBoardComponent;
+export default DashboardDetailed;

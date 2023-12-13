@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Progress, Radio, Space } from "antd";
 import { ClockCircleTwoTone } from "@ant-design/icons";
-import { questions } from "../../components/items";
+import { questions } from "../../../components/items";
 import { useNavigate } from "react-router-dom";
 
-const IRTestPage = () => {
+const DataInsightsTestPage = () => {
   const [value, setValue] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [totalQuestions] = useState(12);
+  const [totalQuestions] = useState(20);
   const [percentage, setPercentage] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(10); // elapsed time in seconds
   const [isRunning, setIsRunning] = useState(false);
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
-  const [remainingTime, setRemainingTime] = useState(30 * 60);
+  const [remainingTime, setRemainingTime] = useState(45 * 60);
   const [score, setScore] = useState(0);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [isSplitScreen, setIsSplitScreen] = useState(true);
@@ -183,7 +183,7 @@ const IRTestPage = () => {
       trackUserInput(isCorrect);
 
       // Calculate the percentage score out of 8
-      const percentageScore = (finalScore / totalQuestions) * 8;
+      const percentageScore = finalScore;
 
       // Store the percentage score in session storage
       sessionStorage.setItem("ir_score", percentageScore.toFixed(2));
@@ -192,9 +192,9 @@ const IRTestPage = () => {
       sessionStorage.setItem("time_remaining", remainingTime);
       if (storedCount && storedCount === "2") {
         sessionStorage.removeItem("current_section");
-        navigate("/results");
+        navigate("/results-focus");
       } else {
-        navigate("/test-break");
+        navigate("/test-break-focus");
       }
 
       // Handle the end of the test, e.g., show results
@@ -205,9 +205,9 @@ const IRTestPage = () => {
     alert("The Allowed time for this session is over");
     if (storedCount && storedCount === "2") {
       sessionStorage.removeItem("current_section");
-      navigate("/results");
+      navigate("/results-focus");
     } else {
-      navigate("/test-break");
+      navigate("/test-break-focus");
     }
   }
 
@@ -373,4 +373,4 @@ const IRTestPage = () => {
   );
 };
 
-export default IRTestPage;
+export default DataInsightsTestPage;

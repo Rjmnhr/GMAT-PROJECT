@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+// import { Progress, Result } from "antd";
 import { useNavigate } from "react-router-dom";
 import { LoadingOutlined } from "@ant-design/icons";
-import AxiosInstance from "../../components/axios";
+import AxiosInstance from "../../../components/axios";
 
 const ResultPage = () => {
   const [score, setScore] = useState(0);
@@ -93,6 +94,11 @@ const ResultPage = () => {
   const ir_wrong_questions = sessionStorage.getItem("ir_wrong_questions");
   const quant_time_spend = sessionStorage.getItem("quant_time_spend");
 
+  console.log(
+    "🚀 ~ file: index.js:101 ~ storeData ~ quant_score:",
+    typeof quant_score
+  );
+
   const clearStorage = () => {
     sessionStorage.removeItem("quant_wrong_questions");
 
@@ -180,10 +186,9 @@ const ResultPage = () => {
       .then(async (response) => {
         const resultData = await response.data;
         console.log(
-          "🚀 ~ file: index.js:182 ~ .then ~ resultData:",
+          "🚀 ~ file: index.js:150 ~ .then ~ resultData:",
           resultData
         );
-
         clearStorage();
 
         // setDataLinkedIn(resultData);
@@ -278,7 +283,7 @@ const ResultPage = () => {
                 Your GMAT Score: {score}/800
               </p>
               <p style={{ fontSize: "20px" }} className="mt-3">
-                Your Integrated Reasoning score : {ir_score}
+                Your Data Insights score : {ir_score}
               </p>
               <p style={{ fontWeight: "500", fontSize: "50px" }}>{score}</p>
 

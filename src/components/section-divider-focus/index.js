@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const SectionDivider = () => {
+const SectionDividerFocus = () => {
   const navigate = useNavigate();
   const currentSection = sessionStorage.getItem("current_section");
   return (
@@ -10,9 +10,9 @@ const SectionDivider = () => {
         <>
           <div className="container p-3 ">
             <h3 className="mb-3">Quantitative Section Instructions</h3>
-            <h4>31 Questions </h4>
+            <h4>21 Questions </h4>
 
-            <h4>Time - 62 minutes</h4>
+            <h4>Time - 45 minutes</h4>
             <p className="mb-3 text-left fs-4 ">
               When you take the GMAT exam, you will have a specific amount of
               time to review these instructions. In the GMAT Official Practice
@@ -83,7 +83,7 @@ const SectionDivider = () => {
 
             <button
               onClick={() => {
-                navigate("/quant-test");
+                navigate("/quant-test-focus");
               }}
               className="btn btn-primary"
             >
@@ -95,9 +95,9 @@ const SectionDivider = () => {
         <>
           <div className="container p-3 ">
             <h3 className="mb-3">Verbal Section Instructions</h3>
-            <h4>36 Questions</h4>
+            <h4>23 Questions</h4>
 
-            <h4>Time - 65 minutes</h4>
+            <h4>Time - 45 minutes</h4>
             <p className="mb-3 text-left fs-4 ">
               When you take the GMAT exam, you will have a specific amount of
               time to review these instructions. In the GMAT Official Practice
@@ -139,7 +139,7 @@ const SectionDivider = () => {
 
             <button
               onClick={() => {
-                navigate("/verbal-test");
+                navigate("/verbal-test-focus");
               }}
               className="btn btn-primary"
             >
@@ -150,15 +150,15 @@ const SectionDivider = () => {
       ) : (
         <>
           <div className="container p-3 ">
-            <h3 className="mb-3">Integrated Reasoning Instructions</h3>
-            <h4>12 Questions</h4>
+            <h3 className="mb-3">Data Insights Instructions</h3>
+            <h4>20 Questions</h4>
 
-            <h4>Time - 30 minutes</h4>
+            <h4>Time - 45 minutes</h4>
             <p className="mb-3 text-left fs-4 ">
-              Several question types are used in Integrated Reasoning. Some
-              require use of both quantitative and verbal skills. Some involve
-              use of graphics, tables, or text material. The questions also use
-              various response formats.
+              Several question types are used in Data Insights. Some require use
+              of both quantitative and verbal skills. Some involve use of
+              graphics, tables, or text material. The questions also use various
+              response formats.
             </p>
             <p className="mb-3 text-left fs-4">
               There are four question formats in this section:
@@ -192,7 +192,7 @@ const SectionDivider = () => {
 
             <button
               onClick={() => {
-                navigate("/ir-test");
+                navigate("/data-insights-test");
               }}
               className="btn btn-primary"
             >
@@ -205,4 +205,4 @@ const SectionDivider = () => {
   );
 };
 
-export default SectionDivider;
+export default SectionDividerFocus;

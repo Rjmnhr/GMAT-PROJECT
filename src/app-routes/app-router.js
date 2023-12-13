@@ -8,7 +8,6 @@ import VerbalTestPage from "../pages/verbal-test-page";
 import SectionDivider from "../components/section-divider";
 import OptionalBreak from "../components/optional-break";
 import IRTestPage from "../pages/IR_section";
-import DashboardDetailed from "../components/detailed-dashboard";
 import VideosPage from "../pages/videos-page";
 import LoginPage from "../pages/login-page";
 import OtpVerification from "../pages/otp-verification";
@@ -23,6 +22,14 @@ import CategoryVideos from "../pages/videos-page/category-videos";
 import LMSRepresentation from "../components/lms-representation";
 import PracticeQuestionsPage from "../pages/practice-questions-page";
 import CategoryQuestions from "../pages/practice-questions-page/category-questions";
+import DashboardDetailed from "../pages/detailed-dashboard";
+import InstructionFocusPage from "../pages/instruction-focus";
+import SectionDividerFocus from "../components/section-divider-focus";
+import QuantTestPageFocus from "../pages/quant-test-page/quant-test-page-focus";
+import VerbalTestPageFocus from "../pages/verbal-test-page/verbal-test-page-focus";
+import DataInsightsTestPage from "../pages/IR_section/data-insights-test-page";
+import OptionalBreakFocus from "../components/optional-break/optional-break-focus";
+import ResultPageFocus from "../pages/results/results-focus";
 
 const ConditionalComponent = () => {
   return (
@@ -173,12 +180,44 @@ const AppRouter = () => {
             }
           />
           <Route
+            path="/quant-test-focus"
+            element={
+              <ProtectedRoute
+                element={
+                  <>
+                    {isMobile ? (
+                      <ConditionalComponent />
+                    ) : (
+                      <QuantTestPageFocus />
+                    )}
+                  </>
+                }
+              />
+            }
+          />
+          <Route
             path="verbal-test"
             element={
               <ProtectedRoute
                 element={
                   <>
                     {isMobile ? <ConditionalComponent /> : <VerbalTestPage />}
+                  </>
+                }
+              />
+            }
+          />
+          <Route
+            path="verbal-test-focus"
+            element={
+              <ProtectedRoute
+                element={
+                  <>
+                    {isMobile ? (
+                      <ConditionalComponent />
+                    ) : (
+                      <VerbalTestPageFocus />
+                    )}
                   </>
                 }
               />
@@ -197,12 +236,36 @@ const AppRouter = () => {
             }
           />
           <Route
+            path="/instructions-focus"
+            element={
+              <ProtectedRoute
+                element={
+                  <>
+                    <InstructionFocusPage />
+                  </>
+                }
+              />
+            }
+          />
+          <Route
             path="/section"
             element={
               <ProtectedRoute
                 element={
                   <>
                     <SectionDivider />
+                  </>
+                }
+              />
+            }
+          />
+          <Route
+            path="/section-focus"
+            element={
+              <ProtectedRoute
+                element={
+                  <>
+                    <SectionDividerFocus />
                   </>
                 }
               />
@@ -221,6 +284,18 @@ const AppRouter = () => {
             }
           />
           <Route
+            path="/results-focus"
+            element={
+              <ProtectedRoute
+                element={
+                  <>
+                    <ResultPageFocus />
+                  </>
+                }
+              />
+            }
+          />
+          <Route
             path="/test-break"
             element={
               <ProtectedRoute
@@ -233,11 +308,39 @@ const AppRouter = () => {
             }
           />
           <Route
+            path="/test-break-focus"
+            element={
+              <ProtectedRoute
+                element={
+                  <>
+                    <OptionalBreakFocus />
+                  </>
+                }
+              />
+            }
+          />
+          <Route
             path="/ir-test"
             element={
               <ProtectedRoute
                 element={
                   <>{isMobile ? <ConditionalComponent /> : <IRTestPage />}</>
+                }
+              />
+            }
+          />
+          <Route
+            path="/data-insights-test"
+            element={
+              <ProtectedRoute
+                element={
+                  <>
+                    {isMobile ? (
+                      <ConditionalComponent />
+                    ) : (
+                      <DataInsightsTestPage />
+                    )}
+                  </>
                 }
               />
             }

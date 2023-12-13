@@ -12,7 +12,7 @@ export const SideBarStyled = styled.div`
     color: white;
   }
   .selected-tab {
-    background-color: #049494 !important;
-    color: white;
+    border-left: 5px solid #049494;
+    color: #049494;
   }
 `;

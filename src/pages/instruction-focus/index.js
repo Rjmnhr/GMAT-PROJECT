@@ -4,7 +4,7 @@ import { ArrowLeftOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { InstructionsPageStyled } from "./style";
 
-const InstructionPage = () => {
+const InstructionFocusPage = () => {
   const [dotPosition, setDotPosition] = useState("top");
   const [carouselRef, setCarouselRef] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -52,9 +52,8 @@ const InstructionPage = () => {
     sessionStorage.removeItem("quant_time_spend");
     sessionStorage.removeItem("GMAT_Score");
     sessionStorage.removeItem("practice_2_data");
-
     sessionStorage.setItem("current_section", selectedOrder[0]);
-    navigate("/section");
+    navigate("/section-focus");
   };
   const handleRadioChange = (event) => {
     const value = event.target.value;
@@ -95,19 +94,15 @@ const InstructionPage = () => {
             carefully before you begin.
           </p>
           <p className="mb-3 text-left fs-4">
-            The GMAT consists of four main sections: Analytical Writing
-            Assessment (AWA), Integrated Reasoning (IR), Quantitative Reasoning,
-            and Verbal Reasoning. In this practice exam, you will have the
-            opportunity to practice questions from Quantitative, Verbal and
-            Integrated Reasoning sections.
+            The GMAT consists of four main sections: Data Insights, Quantitative
+            Reasoning, and Verbal Reasoning. In this practice exam, you will
+            have the opportunity to practice questions from all the sections.
           </p>
           <p className="mb-3 text-left fs-4">
             The GMAT allows you to choose the order in which you take the
-            sections. You can start with either the Analytical Writing
-            Assessment (AWA) or Integrated Reasoning (IR) section, followed by
-            Quantitative Reasoning and Verbal Reasoning. For this practice exam,
-            we will follow the default order: Quantitative Reasoning followed by
-            Verbal Reasoning.
+            sections. You can start with either the Data Insights section,
+            followed by Quantitative Reasoning and Verbal Reasoning or any other
+            order available to choose.
           </p>
         </div>
         <div className="container p-3 ">
@@ -227,7 +222,7 @@ const InstructionPage = () => {
                   <span>1. Quantitative Reasoning</span>
                   <br />
                   <span>2. Verbal Reasoning</span> <br />
-                  <span>3. Integrated Reasoning</span>
+                  <span>3. Data Insights</span>
                   <br />
                 </label>
               </div>
@@ -243,7 +238,7 @@ const InstructionPage = () => {
                   <span>1. Verbal Reasoning</span> <br />
                   <span>2. Quantitative Reasoning</span>
                   <br />
-                  <span>3. Integrated Reasoning</span>
+                  <span>3. Data Insights</span>
                   <br />
                 </label>
               </div>
@@ -257,7 +252,7 @@ const InstructionPage = () => {
                 />
                 <label>
                   {" "}
-                  <span>1. Integrated Reasoning</span>
+                  <span>1. Data Insights</span>
                   <br />
                   <span>2. Quantitative Reasoning</span>
                   <br />
@@ -305,4 +300,4 @@ const InstructionPage = () => {
   );
 };
 
-export default InstructionPage;
+export default InstructionFocusPage;

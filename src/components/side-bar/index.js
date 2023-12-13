@@ -1,9 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+
 import { SideBarStyled } from "./style";
+import { useApplicationContext } from "../../context/app-context";
+import { useNavigate } from "react-router-dom";
 
 const SideBar = () => {
-  const isAdmin = localStorage.getItem("isAdmin");
+  const { setActiveIndex, activeIndex } = useApplicationContext();
   const navigate = useNavigate();
   return (
     <>
@@ -19,26 +21,51 @@ const SideBar = () => {
                   cursor: "pointer",
                   borderBottom: "1px solid #c9c8c7",
                 }}
-                onClick={() => navigate("/dashboard")}
-                className={` p-3 w-100 m-0 cursor-pointer text-left selected-tab`}
+                onClick={() => {
+                  setActiveIndex(0);
+                  navigate("/dashboard");
+                }}
+                className={` p-3 w-100 m-0 cursor-pointer text-left ${
+                  activeIndex === 0 ? "selected-tab" : ""
+                } `}
               >
-                Dashboard
+                GMAT Focus Edition
               </p>
             </div>
-            {isAdmin === "true" ? (
+            <div className=" border-bottom button p-0  container-fluid">
               <p
                 style={{
                   cursor: "pointer",
                   borderBottom: "1px solid #c9c8c7",
                 }}
-                onClick={() => navigate("/admin-dashboard")}
-                className={` p-3 w-100 m-0 cursor-pointer text-left `}
+                onClick={() => {
+                  setActiveIndex(1);
+                  navigate("/dashboard");
+                }}
+                className={` p-3 w-100 m-0 cursor-pointer text-left ${
+                  activeIndex === 1 ? "selected-tab" : ""
+                } `}
               >
-                Admin Dashboard
+                GMAT Practice Exam
               </p>
-            ) : (
-              ""
-            )}
+            </div>
+            <div className=" border-bottom button p-0  container-fluid">
+              <p
+                style={{
+                  cursor: "pointer",
+                  borderBottom: "1px solid #c9c8c7",
+                }}
+                onClick={() => {
+                  setActiveIndex(2);
+                  navigate("/dashboard");
+                }}
+                className={` p-3 w-100 m-0 cursor-pointer text-left  ${
+                  activeIndex === 2 ? "selected-tab" : ""
+                } `}
+              >
+                Practice Exam Focus Edition
+              </p>
+            </div>
           </div>
         </div>
       </SideBarStyled>

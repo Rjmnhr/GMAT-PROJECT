@@ -5,18 +5,18 @@ import { ClockCircleTwoTone } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 // import { useApplicationContext } from "../../app-context";
 // import axios from "axios";
-import { questions } from "../../components/items";
+import { questions } from "../../../components/items";
 
-const QuantTestPage = () => {
+const QuantTestPageFocus = () => {
   const [value, setValue] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [totalQuestions] = useState(31);
+  const [totalQuestions] = useState(21);
   const [percentage, setPercentage] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(0); // elapsed time in seconds
   const [isRunning, setIsRunning] = useState(false);
 
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
-  const [remainingTime, setRemainingTime] = useState(62 * 60);
+  const [remainingTime, setRemainingTime] = useState(45 * 60);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
@@ -94,13 +94,8 @@ const QuantTestPage = () => {
   const quantWordProblems = questions.filter(
     (question) =>
       question.Category === "Quant" &&
-      question.Quant_category_1 === "Word problems"
-  );
-
-  const quantDataSufficiency = questions.filter(
-    (question) =>
-      question.Category === "Quant" &&
-      question.Quant_category_1 === "Data Sufficiency"
+      question.Quant_category_1 !== "Data Sufficiency" &&
+      question.SubCategory !== "Geometry"
   );
 
   function shuffleArray(array) {
@@ -126,7 +121,7 @@ const QuantTestPage = () => {
   if (remainingTime === 0) {
     alert("The Allowed time for this session is over");
     sessionStorage.setItem("current_section", "verbal");
-    navigate("/test-break");
+    navigate("/test-break-focus");
   }
 
   // Function to track user inputs and update statistics
@@ -158,7 +153,7 @@ const QuantTestPage = () => {
 
   const QuestionsArray = [
     ...quantWordProblems, // Select 16 Word Problems questions
-    ...quantDataSufficiency, // Select 15 Data Sufficiency questions
+    // Select 15 Data Sufficiency questions
   ];
 
   useEffect(() => {
@@ -667,7 +662,7 @@ const QuantTestPage = () => {
 
     sessionStorage.setItem("GMAT_Score", score);
     if (questionNumber > totalQuestions) {
-      navigate("/test-break");
+      navigate("/test-break-focus");
     }
     //eslint-disable-next-line
   }, [score]);
@@ -793,9 +788,9 @@ const QuantTestPage = () => {
                   {filteredQuestionsByLevel[0].level
                     ? filteredQuestionsByLevel[0].level
                     : ""}
-                </p>
+                </p>*/}
                 <p className="mt-3">Level :{currentQuestionLevel}</p>
-*/}
+
                 <p className="mt-3">
                   Score:
                   {score.toFixed(2)}
@@ -820,4 +815,4 @@ const QuantTestPage = () => {
   );
 };
 
-export default QuantTestPage;
+export default QuantTestPageFocus;

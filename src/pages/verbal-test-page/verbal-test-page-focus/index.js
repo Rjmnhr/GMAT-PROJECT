@@ -1,22 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Progress, Radio, Space } from "antd";
 import { ClockCircleTwoTone } from "@ant-design/icons";
-
+import { questions } from "../../../components/items";
 import { useNavigate } from "react-router-dom";
-// import { useApplicationContext } from "../../app-context";
-// import axios from "axios";
-import { questions } from "../../components/items";
+import "./style.css";
 
-const QuantTestPage = () => {
+const VerbalTestPageFocus = () => {
   const [value, setValue] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [totalQuestions] = useState(31);
+  const [totalQuestions] = useState(23);
   const [percentage, setPercentage] = useState(0);
-  const [elapsedTime, setElapsedTime] = useState(0); // elapsed time in seconds
+  const [elapsedTime, setElapsedTime] = useState(10); // elapsed time in seconds
   const [isRunning, setIsRunning] = useState(false);
 
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
-  const [remainingTime, setRemainingTime] = useState(62 * 60);
+  const [remainingTime, setRemainingTime] = useState(45 * 60);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
@@ -27,54 +25,13 @@ const QuantTestPage = () => {
     useState(null);
   const [questionNumber, setQuestionNumber] = useState(1);
   const [attendedQuestionIds, setAttendedQuestionIds] = useState([]);
+  const [isSplitScreen, setIsSplitScreen] = useState(true);
   const [threshHold, setThreshHold] = useState(1);
   const [responseHistory, setResponseHistory] = useState([]);
   const [rightQuestions, setRightQuestions] = useState(0);
   const [wrongQuestions, setWrongQuestions] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState(null);
-
-  // const { questions, setQuestions } = useApplicationContext();
-
-  // useEffect(() => {
-  //   const handleBeforeUnload = (e) => {
-  //     e.preventDefault();
-  //     e.returnValue =
-  //       "Refreshing the page will remove you from the exam. Are you sure you want to leave?";
-
-  //     const confirmationMessage =
-  //       "Refreshing the page will remove you from the exam. Are you sure you want to leave?";
-  //     e.returnValue = confirmationMessage;
-
-  //     if (window.confirm(confirmationMessage)) {
-  //       // User clicked OK, navigate to "/"
-  //       navigate("/");
-  //     } else {
-  //       // User clicked Cancel, prevent page refresh
-
-  //       return false;
-  //     }
-  //   };
-
-  //   window.addEventListener("beforeunload", handleBeforeUnload);
-
-  //   return () => {
-  //     window.removeEventListener("beforeunload", handleBeforeUnload);
-  //   };
-  // }, [navigate]); // Include history in the dependency array
-
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:8003/api/gmat/data")
-  //     .then(async (response) => {
-  //       const resultData = await response.data;
-
-  //       await setQuestions(resultData);
-  //       console.log("🚀 ~ file: index.js:40 ~ .then ~ resultData:", resultData);
-  //     })
-  //     .catch((err) => console.log("error", err));
-  //   //eslint-disable-next-line
-  // }, []);
-
+  const storedCount = sessionStorage.getItem("order-count");
   useEffect(() => {
     let newThreshold = 0;
 
@@ -91,17 +48,16 @@ const QuantTestPage = () => {
     setThreshHold(newThreshold);
   }, [questionNumber]);
   // Filter and shuffle questions
-  const quantWordProblems = questions.filter(
-    (question) =>
-      question.Category === "Quant" &&
-      question.Quant_category_1 === "Word problems"
+  const verbalQuestions = questions.filter(
+    (question) => question.Category === "Verbal"
   );
+  const QuestionsArray = [...verbalQuestions];
 
-  const quantDataSufficiency = questions.filter(
-    (question) =>
-      question.Category === "Quant" &&
-      question.Quant_category_1 === "Data Sufficiency"
-  );
+  useEffect(() => {
+    const shuffledArr = shuffleArray(QuestionsArray);
+    setShuffledQuestions(shuffledArr);
+    //eslint-disable-next-line
+  }, []);
 
   function shuffleArray(array) {
     let currentIndex = array.length,
@@ -123,13 +79,31 @@ const QuantTestPage = () => {
     return array;
   }
 
-  if (remainingTime === 0) {
-    alert("The Allowed time for this session is over");
-    sessionStorage.setItem("current_section", "verbal");
-    navigate("/test-break");
+  function underlineMatchingText(question, answer) {
+    const regex = new RegExp(answer, "g");
+    return question.replace(regex, `<u>${answer}</u>`);
   }
 
-  // Function to track user inputs and update statistics
+  // function shuffleArray(array) {
+  //   let currentIndex = array.length,
+  //     randomIndex,
+  //     temporaryValue;
+
+  //   // While there remain elements to shuffle...
+  //   while (currentIndex !== 0) {
+  //     // Pick a remaining element...
+  //     randomIndex = Math.floor(Math.random() * currentIndex);
+  //     currentIndex--;
+
+  //     // And swap it with the current element.
+  //     temporaryValue = array[currentIndex];
+  //     array[currentIndex] = array[randomIndex];
+  //     array[randomIndex] = temporaryValue;
+  //   }
+
+  //   return array;
+  // }
+
   const trackUserInput = (answer) => {
     console.log(answer);
 
@@ -147,25 +121,14 @@ const QuantTestPage = () => {
     }
 
     // Calculate the new total time spent
-    const newTotalTimeSpent = 61 * 60 - remainingTime;
+    const newTotalTimeSpent = 65 * 60 - remainingTime;
 
-    sessionStorage.setItem("quant_time_spend", newTotalTimeSpent);
+    sessionStorage.setItem("verbal_time_spend", newTotalTimeSpent);
 
-    sessionStorage.setItem("quant_correct_questions", rightAnswer);
+    sessionStorage.setItem("verbal_correct_questions", rightAnswer);
 
-    sessionStorage.setItem("quant_wrong_questions", wrongAnswer);
+    sessionStorage.setItem("verbal_wrong_questions", wrongAnswer);
   };
-
-  const QuestionsArray = [
-    ...quantWordProblems, // Select 16 Word Problems questions
-    ...quantDataSufficiency, // Select 15 Data Sufficiency questions
-  ];
-
-  useEffect(() => {
-    const shuffledArr = shuffleArray(QuestionsArray);
-    setShuffledQuestions(shuffledArr);
-    //eslint-disable-next-line
-  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -178,6 +141,18 @@ const QuantTestPage = () => {
       clearInterval(timer);
     };
   }, [remainingTime]);
+
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8002/api/gmat/data")
+  //     .then(async (response) => {
+  //       const resultData = await response.data;
+
+  //       console.log(JSON.stringify(resultData));
+  //       // setDataLinkedIn(resultData);
+  //     })
+  //     .catch((err) => console.log("error", err));
+  // }, []);
 
   const formatTimer = (timeInSeconds) => {
     const minutes = Math.floor(timeInSeconds / 60)
@@ -235,7 +210,17 @@ const QuantTestPage = () => {
     // Logic to determine the next question level based on tempSum
   };
 
-  const calculateScore = async (level) => {
+  if (remainingTime === 0) {
+    alert("The Allowed time for this session is over");
+    if (storedCount && storedCount === "2") {
+      sessionStorage.removeItem("current_section");
+      navigate("/results-focus");
+    } else {
+      navigate("/test-break-focus");
+    }
+  }
+
+  const calculateScore = (level) => {
     const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
 
     let scoreIncrement = 0;
@@ -376,7 +361,7 @@ const QuantTestPage = () => {
       }
     }
 
-    setScore((prevScore) => prevScore + scoreIncrement);
+    setScore((prevScore) => prevScore + scoreIncrement); // Update score by adding the increment
   };
 
   const RangeValues = [10, 50, 75, 100, 125, 190, 280, 375, 475];
@@ -448,7 +433,7 @@ const QuantTestPage = () => {
       convertedScore = 51;
     }
 
-    sessionStorage.setItem("quant_score", Math.round(convertedScore));
+    sessionStorage.setItem("verbal_score", Math.round(convertedScore));
   };
 
   function calculateMatchingValue(range) {
@@ -476,7 +461,6 @@ const QuantTestPage = () => {
         return 0;
     }
   }
-  // Trigger the effect whenever the score changes
 
   useEffect(() => {
     const updatedPercentage = (questionNumber / totalQuestions) * 100;
@@ -523,9 +507,9 @@ const QuantTestPage = () => {
 
       // Check if currentQuestion is within the valid range
       if (currentQuestion + 2 < filteredQuestionsByLevel.length) {
+        console.log("inside");
         setCurrentQuestion((prevQuestion) => prevQuestion + 1);
       } else {
-        console.log("inside");
         // Handle the case where there are no more questions for the current level
         setCurrentQuestion(0);
       }
@@ -537,7 +521,6 @@ const QuantTestPage = () => {
         ...attendedQuestionIds,
         answeredQuestionId,
       ];
-
       setAttendedQuestionIds([...attendedQuestionIds, answeredQuestionId]);
 
       setIsNextButtonDisabled(true); // Disable "Next" button again
@@ -545,9 +528,7 @@ const QuantTestPage = () => {
       setValue(null); // Reset the selected value
 
       const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
-
       trackUserInput(isCorrect);
-
       const newTempValues = [...tempValues, isCorrect ? 1 : 0].slice(1, 4);
 
       // Update the temporary values array and calculate the sum
@@ -610,7 +591,6 @@ const QuantTestPage = () => {
       if (filteredArray.length === 0) {
         // No more questions left for the current level
         setCurrentQuestion(0);
-
         if (nextQuestionLevel < 8) {
           nextQuestionLevel = nextQuestionLevel + 1;
         } else {
@@ -618,9 +598,7 @@ const QuantTestPage = () => {
             nextQuestionLevel = nextQuestionLevel - 1;
           }
         }
-
         mappedLevel = mappingTheLevels(nextQuestionLevel);
-
         // Filter questions based on the currentQuestionLevel and attendedQuestionIds
         const filteredArray = shuffledQuestions.filter(
           (question) =>
@@ -629,7 +607,6 @@ const QuantTestPage = () => {
         );
 
         setFilteredQuestionsByLevel(filteredArray);
-
         return;
       }
 
@@ -639,14 +616,25 @@ const QuantTestPage = () => {
       calculateScore(currentQuestionLevel); // Calculate the score
 
       const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
-
       trackUserInput(isCorrect);
 
+      sessionStorage.setItem("current_section", "ir");
       sessionStorage.setItem("time_remaining", remainingTime);
+      navigate("/test-break-focus");
 
-      console.log(responseHistory);
+      // Handle the end of the test, e.g., show results
     }
   };
+
+  useEffect(() => {
+    GMATScoreConversion(score);
+
+    sessionStorage.setItem("GMAT_Score", score);
+    if (questionNumber > totalQuestions) {
+      navigate("/test-break-focus");
+    }
+    //eslint-disable-next-line
+  }, [score]);
 
   useEffect(() => {
     const mappedLevel = mappingTheLevels(currentQuestionLevel);
@@ -663,14 +651,30 @@ const QuantTestPage = () => {
   }, [shuffledQuestions]);
 
   useEffect(() => {
-    GMATScoreConversion(score);
-
-    sessionStorage.setItem("GMAT_Score", score);
-    if (questionNumber > totalQuestions) {
-      navigate("/test-break");
+    if (filteredQuestionsByLevel) {
+      if (
+        filteredQuestionsByLevel[0].main_question_stem.length > 1000 ||
+        filteredQuestionsByLevel[0].img_url
+      ) {
+        setIsSplitScreen(true);
+      } else {
+        setIsSplitScreen(false);
+      }
     }
-    //eslint-disable-next-line
-  }, [score]);
+
+    // eslint-disable-next-line
+  }, [currentQuestion, score, isSplitScreen]);
+
+  let questionStemWithUnderline = "";
+
+  if (filteredQuestionsByLevel) {
+    const currentQuestionData = filteredQuestionsByLevel[0];
+
+    questionStemWithUnderline = underlineMatchingText(
+      currentQuestionData.main_question_stem,
+      currentQuestionData.answer_1
+    );
+  }
 
   return (
     <>
@@ -718,25 +722,35 @@ const QuantTestPage = () => {
         </div>
 
         {filteredQuestionsByLevel ? (
-          filteredQuestionsByLevel.length > 0 ? (
-            <div className="qstn-box">
-              <div className="container-fluid px-5 mt-5 text-left">
-                <p className="mb-3">
-                  {filteredQuestionsByLevel[0].main_question_stem
-                    ? filteredQuestionsByLevel[0].main_question_stem
-                    : ""}
-                </p>
+          <div className="qstn-box">
+            <div
+              className={`container-fluid px-5 mt-5 text-left ${
+                isSplitScreen ? "d-flex" : "d-block"
+              }   justify-content-center align-items-start`}
+            >
+              <div
+                className="container-fluid p-3 pb-0 qstn-container text-justify"
+                style={{
+                  width: `${isSplitScreen ? "50%" : ""} `,
+                  textAlign: "justify",
+                  borderRight: `${isSplitScreen ? "1px solid " : ""} `,
+                  overflow: "scroll",
+                  height: `${isSplitScreen ? "70vh" : ""} `,
+                }}
+              >
+                <p
+                  className="mb-3"
+                  dangerouslySetInnerHTML={{
+                    __html: questionStemWithUnderline,
+                  }}
+                ></p>
+                <img src={filteredQuestionsByLevel[0].img_url} alt="" />
+              </div>
 
-                {filteredQuestionsByLevel[0].img_url ? (
-                  <img
-                    className="mb-3"
-                    src={filteredQuestionsByLevel[0].img_url}
-                    alt="not available"
-                  />
-                ) : (
-                  ""
-                )}
-
+              <div
+                className="container-fluid p-3"
+                style={{ width: `${isSplitScreen ? "50%" : ""} ` }}
+              >
                 <p>
                   {filteredQuestionsByLevel[0].subquestion1
                     ? `1) ${filteredQuestionsByLevel[0].subquestion1}`
@@ -756,33 +770,23 @@ const QuantTestPage = () => {
                   <Radio.Group onChange={onChange} value={value}>
                     <Space direction="vertical">
                       <Radio value={"A"}>
-                        {filteredQuestionsByLevel[0].answer_1
-                          ? filteredQuestionsByLevel[0].answer_1
-                          : ""}
+                        {filteredQuestionsByLevel[0].answer_1}
                       </Radio>
 
                       <Radio value={"B"}>
-                        {filteredQuestionsByLevel[0].answer_2
-                          ? filteredQuestionsByLevel[0].answer_2
-                          : ""}
+                        {filteredQuestionsByLevel[0].answer_2}
                       </Radio>
 
                       <Radio value={"C"}>
-                        {filteredQuestionsByLevel[0].answer_3
-                          ? filteredQuestionsByLevel[0].answer_3
-                          : ""}
+                        {filteredQuestionsByLevel[0].answer_3}
                       </Radio>
 
                       <Radio value={"D"}>
-                        {filteredQuestionsByLevel[0].answer_4
-                          ? filteredQuestionsByLevel[0].answer_4
-                          : ""}
+                        {filteredQuestionsByLevel[0].answer_4}
                       </Radio>
 
                       <Radio value={"E"}>
-                        {filteredQuestionsByLevel[0].answer_5
-                          ? filteredQuestionsByLevel[0].answer_5
-                          : ""}
+                        {filteredQuestionsByLevel[0].answer_5}
                       </Radio>
                     </Space>
                   </Radio.Group>
@@ -790,12 +794,10 @@ const QuantTestPage = () => {
 
                 {/* <p className="mt-3">
                   Level of question:
-                  {filteredQuestionsByLevel[0].level
-                    ? filteredQuestionsByLevel[0].level
-                    : ""}
-                </p>
+                  {filteredQuestionsByLevel[0].level}
+                </p>*/}
                 <p className="mt-3">Level :{currentQuestionLevel}</p>
-*/}
+
                 <p className="mt-3">
                   Score:
                   {score.toFixed(2)}
@@ -803,15 +805,11 @@ const QuantTestPage = () => {
 
                 <p className="mt-3">
                   Correct Answer:
-                  {filteredQuestionsByLevel[0].correct_answer
-                    ? filteredQuestionsByLevel[0].correct_answer
-                    : ""}
+                  {filteredQuestionsByLevel[0].correct_answer}
                 </p>
               </div>
             </div>
-          ) : (
-            ""
-          )
+          </div>
         ) : (
           ""
         )}
@@ -820,4 +818,4 @@ const QuantTestPage = () => {
   );
 };
 
-export default QuantTestPage;
+export default VerbalTestPageFocus;
