@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Pagination, Modal } from "antd"; // Assuming you have Modal from antd
+import {  Modal } from "antd"; // Assuming you have Modal from antd
 import NavBar from "../../components/nav-bar";
 import YouTube from "react-youtube";
 import { categories } from "../../components/youtube-videos";
@@ -8,8 +8,8 @@ import { categories } from "../../components/youtube-videos";
 const categoryNames = [
   "GMAT Quant videos",
   "GMAT Verbal videos",
-  "GMAT IR",
-  "Profile building",
+  "GMAT IR videos",
+  "Profile building videos",
   "Essays for college admissions",
   "College admits and successful students",
   "Others",
@@ -18,9 +18,9 @@ const categoryNames = [
 const CategoryVideos = () => {
   const location = useLocation();
   const categoryName = new URLSearchParams(location.search).get("v");
-  const itemsPerPage = 10;
 
-  const [currentPage, setCurrentPage] = useState(1);
+
+ 
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const categoryIndex = categoryNames.findIndex(
@@ -40,14 +40,9 @@ const CategoryVideos = () => {
 
   const categoryVideos = categories[categoryIndex];
 
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const paginatedVideos = categoryVideos.slice(startIndex, endIndex);
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-    setSelectedVideo(null); // Reset selected video when changing page
-  };
+
+
 
   const handleVideoClick = (video) => {
     setSelectedVideo(video);
@@ -63,7 +58,7 @@ const CategoryVideos = () => {
       <div style={{ marginTop: "100px" }}>
         <h2>{categoryNames[categoryIndex]}</h2>
         <div className="mb-3">
-          {paginatedVideos
+          {categoryVideos
             .filter((video) => !video.title.includes("GRE"))
             .map((video) => (
               <div
@@ -96,15 +91,7 @@ const CategoryVideos = () => {
               </div>
             ))}
         </div>
-        <Pagination
-          current={currentPage}
-          total={
-            categoryVideos.filter((video) => !video.title.includes("GRE"))
-              .length
-          }
-          pageSize={itemsPerPage}
-          onChange={handlePageChange}
-        />
+       
 
         {selectedVideo && (
           <Modal

@@ -6,13 +6,13 @@ import ReactSpeedometer from "react-d3-speedometer";
 function getThresholdValue(category) {
   switch (category?.toLowerCase()) {
     case "top5":
-      return 100;
-    case "top10":
       return 80;
-    case "top30":
+    case "top10":
       return 60;
-    case "average":
+    case "top30":
       return 40;
+    case "average":
+      return 20;
     case "bottom50":
       return 0;
     default:
@@ -29,29 +29,29 @@ const Speedometer = ({ setSelectedPerformance }) => {
 
   const handleSliderChange = (value) => {
     setSliderValue(value);
-    setSelectedPerformance(calculatePerformance()?.value);
+    setSelectedPerformance(calculatePerformance(value)?.value);
   };
 
-  const calculatePerformance = () => {
-    if (sliderValue >= 80) {
+  const calculatePerformance = (value) => {
+    if (value >= 80) {
       return {
         value: "top5",
         label: "Top 5%",
         description: "High Distinction",
       };
-    } else if (sliderValue >= 60) {
+    } else if (value >= 60) {
       return {
         value: "top10",
         label: "Top 10%",
         description: "Distinction",
       };
-    } else if (sliderValue >= 40) {
+    } else if (value >= 40) {
       return {
         value: "top30",
         label: "Top 30%",
         description: "Credit",
       };
-    } else if (sliderValue >= 20) {
+    } else if (value >= 20) {
       return {
         value: "average",
         label: "Average",
@@ -87,7 +87,7 @@ const Speedometer = ({ setSelectedPerformance }) => {
           startColor="red"
           segments={5}
           endColor="green"
-          currentValueText={calculatePerformance()?.label}
+          currentValueText={calculatePerformance(sliderValue)?.label}
           customSegmentLabels={[
             {
               text: "Below ",
@@ -136,110 +136,6 @@ const Speedometer = ({ setSelectedPerformance }) => {
     </div>
   );
 };
-
-// const SpeedometerCollegeType = ({ selectedCollegeType }) => {
-//   const [sliderValue, setSliderValue] = useState(
-//     getThresholdValue(JSON.parse(sessionStorage.getItem("type"))?.type)
-//   ); // Initial slider value (below average)
-
-//   const handleSliderChange = (value) => {
-//     setSliderValue(value);
-//     selectedCollegeType(calculateType()?.value);
-//   };
-
-//   const calculateType = () => {
-//     if (sliderValue >= 75) {
-//       return {
-//         value: "premier",
-//         label: "Premier",
-//         description: "Top 10-15 in your field of specialization",
-//       };
-//     } else if (sliderValue >= 50) {
-//       return {
-//         value: "selective",
-//         label: "Selective",
-//         description: "Selective/hard to get into",
-//       };
-//     } else if (sliderValue >= 25) {
-//       return {
-//         value: "recognized",
-//         label: "Recognized",
-//         description: "Recognized within the state and entry is restrictive",
-//       };
-//     } else {
-//       return {
-//         value: "new",
-//         label: "New",
-//         description:
-//           "New/relatively easy to get in/significant quotas in place",
-//       };
-//     }
-//   };
-
-//   return (
-//     <div style={{ textAlign: "center" }}>
-//       <div
-//         style={{
-//           display: "inline-block",
-//           width: `300px`,
-//           height: `auto`,
-//           color: "#000",
-//           border: "0.5px solid #fff",
-//           padding: "2px",
-//         }}
-//       >
-//         <ReactSpeedometer
-//           height={190}
-//           width={290}
-//           value={sliderValue}
-//           maxValue={100}
-//           needleColor="blue"
-//           startColor="red"
-//           segments={4}
-//           endColor="green"
-//           currentValueText={calculateType()?.label}
-//           customSegmentLabels={[
-//             {
-//               text: "New ",
-//               position: "OUTSIDE",
-//               color: "#555",
-//               fontSize: "14px",
-//             },
-//             {
-//               text: "Recognized",
-//               position: "OUTSIDE",
-//               color: "#555",
-//               fontSize: "14px",
-//             },
-//             {
-//               text: "Selective",
-//               position: "OUTSIDE",
-//               color: "#555",
-//               fontSize: "14px",
-//             },
-//             {
-//               text: "Premier",
-//               position: "OUTSIDE",
-//               color: "#555",
-//               fontSize: "14px",
-//             },
-//           ]}
-//         />
-//         <div>
-//           <Slider
-//             style={{ width: "300px" }}
-//             value={sliderValue}
-//             onChange={handleSliderChange}
-//             min={0}
-//             max={100}
-//             step={20}
-//             tipFormatter={null}
-//           />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
 
 const CollegeTypeOptions = [
   {
@@ -303,8 +199,8 @@ const UndergraduateDegreeForm = ({ onUpdateProgress, onFormValidation }) => {
   useEffect(() => {
     // Store default values in session storage when the component is rendered for the first time
     const defaultValues = {
-      collegeType: "premier",
-      yourPerformance: "top5",
+      collegeType: "new",
+      yourPerformance: "bottom50",
     };
     sessionStorage.setItem("graduate-default", JSON.stringify(defaultValues));
 

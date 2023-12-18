@@ -441,13 +441,7 @@ const CountrySelectionForm = ({ onNext, onBack }) => {
               className="my-5 my-lg-3 text-center d-flex justify-content-center align-items-center"
               style={{ width: "100%" }}
             >
-              <button
-                onClick={onBack}
-                className="btn btn-lg border"
-                style={{ marginRight: 8 }}
-              >
-                Back
-              </button>
+           
               <button
                 htmlType="submit"
                 className="btn btn-lg btn-primary w-25"

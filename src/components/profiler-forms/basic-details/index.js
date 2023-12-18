@@ -43,6 +43,9 @@ const BasicDetailsForm = ({ onUpdateProgress, onFormValidation }) => {
     ).length;
 
     onUpdateProgress("basic-details", nonEmptyCount);
+
+     sessionStorage.setItem("basic-details", JSON.stringify(formValues));
+
     onFormValidation("basic-details", 1);
     //eslint-disable-next-line
   }, [selectedAge, selectedGender, selectedGMAT]);

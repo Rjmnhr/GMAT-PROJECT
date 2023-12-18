@@ -93,7 +93,7 @@ const HobbiesForm = ({ onUpdateProgress, onFormValidation }) => {
     ].filter(Boolean).length;
 
     onUpdateProgress("hobbies", nonEmptyCount);
-    onFormValidation("graduate", 5);
+    onFormValidation("hobbies", 5);
     //eslint-disable-next-line
   }, [selectedActivity, selectedExpertise, selectedYears]);
   const handleCardClick = (key, value) => {

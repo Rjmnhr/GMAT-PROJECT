@@ -6,7 +6,7 @@ const longTermGoalsOptions = [
   {
     value: "Own business/venture",
     text: "Own business/venture",
-    label: "Own business/venture",
+    label: "Own business",
   },
   {
     value: "General Manager",
@@ -23,9 +23,9 @@ const longTermGoalsOptions = [
 
 const shortTermGoalsOptions = [
   {
-    value: "Own business/venture",
+    value: "Own business",
     text: "Own business/venture",
-    label: "Own business/venture",
+    label: "Own business",
   },
   {
     value: "Product Manager",
@@ -33,17 +33,17 @@ const shortTermGoalsOptions = [
     label: "Product Manager",
   },
   {
-    value: "Management Consulting",
+    value: "Management",
     text: "Management Consulting",
     label: "Management Consulting",
   },
   {
-    value: "Investment Banking",
+    value: "Banking",
     text: "Investment Banking/Private Equity",
     label: "Investment Banking",
   },
   {
-    value: "Sales and Marketing",
+    value: "Sales",
     text: "Sales and Marketing",
     label: "Sales and Marketing",
   },
@@ -58,7 +58,7 @@ const GoalsForm = ({ onUpdateProgress, onFormValidation }) => {
     JSON.parse(sessionStorage.getItem("goalsInputObject"))?.longTermGoals
   );
   const [selectedShortTerm, setSelectedShortTerm] = useState(
-    JSON.parse(sessionStorage.getItem("goalsInputObject"))?.longTermGoals
+    JSON.parse(sessionStorage.getItem("goalsInputObject"))?.shortTermGoals
   );
 
   const [isMobile, setIsMobile] = useState(false);
@@ -108,7 +108,7 @@ const GoalsForm = ({ onUpdateProgress, onFormValidation }) => {
     ).length;
 
     onUpdateProgress("goalsInputObject", nonEmptyCount);
-    onFormValidation("goalsInputObject", 6);
+    // onFormValidation("goalsInputObject", 6);
     //eslint-disable-next-line
   }, [selectedLongTerm, selectedShortTerm]);
 
@@ -121,15 +121,16 @@ const GoalsForm = ({ onUpdateProgress, onFormValidation }) => {
   };
 
   return (
+    
     <BasicDetailsFormStyled>
-      <div className="col-lg-10 p-0 p-lg-3 ">
-        <Form className="p-0" name="goalsForm">
+    <div className="col-lg-10 p-0 p-lg-3 ">
+      <Form className="p-0" name="basicDetailsForm">
+       
           <div>
-            <div>
-              <div>
-                <h5 className="text-left mb-2">Long Term Goals </h5>
-                <div className="college-cards">
-                  {longTermGoalsOptions.map((option) => (
+            
+          <h5 className="text-left mb-2">Long Term Goals </h5>
+          <div className="college-cards">
+                   {longTermGoalsOptions.map((option) => (
                     <Card
                       className={`college-card ${
                         selectedLongTerm === option.label ? "selected-card" : ""
@@ -142,16 +143,17 @@ const GoalsForm = ({ onUpdateProgress, onFormValidation }) => {
                         width: `${isMobile ? "100%" : ""}`,
                       }}
                     >
-                      <p>{option.label}</p>
+                      <p>{option.value}</p>
                     </Card>
                   ))}
                 </div>
-              </div>
-
-              <div>
-                <h5 className="text-left mb-2">Short Term Goals </h5>
-                <div className="college-cards">
-                  {shortTermGoalsOptions.map((option) => (
+          </div>
+          <div>
+        
+          <h5 className="text-left mb-2">Short Term Goals </h5>
+        
+          <div className="college-cards">
+                   {shortTermGoalsOptions.map((option) => (
                     <Card
                       className={`college-card ${
                         selectedShortTerm === option.label
@@ -166,16 +168,19 @@ const GoalsForm = ({ onUpdateProgress, onFormValidation }) => {
                         width: `${isMobile ? "100%" : ""}`,
                       }}
                     >
-                      <p>{option.label}</p>
+                      <p>{option.value}</p>
                     </Card>
                   ))}
                 </div>
-              </div>
-            </div>
+             
+        
+
           </div>
-        </Form>
-      </div>
-    </BasicDetailsFormStyled>
+      
+      </Form>
+    </div>
+  </BasicDetailsFormStyled>
+    
   );
 };
 

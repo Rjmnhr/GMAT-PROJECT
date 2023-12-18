@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const categoryNames = [
   "GMAT Quant videos",
   "GMAT Verbal videos",
-  "GMAT IR",
-  "Profile building",
+  "GMAT IR videos",
+  "Profile building videos",
   "Essays for college admissions",
   "College admits and successful students",
   "Others",
@@ -44,17 +44,19 @@ const VideosPage = () => {
                   >
                     <div
                       style={{
-                        width: "200px",
-                        height: "200px",
-                        margin: "10px",
+                        width: "300px",
+                        height: "300px",
+                        margin: "8px",
+                        overflowY:"hidden"
                       }}
                       class="card-transition-zoom-item"
                     >
-                      <div class="image-overlay">
+                      <div  class="image-overlay">
                         <img
-                          style={{ height: "100%" }}
+                          
                           class="card-img"
-                          src="./assets/img/580x480/img15.jpg"
+                          src="https://res.cloudinary.com/dsw1ubwyh/image/upload/v1702923002/edbfbpneeb9vx68lngw8.png"
+
                           alt="Description"
                         />
                         <div class="centered-text">{category}</div>

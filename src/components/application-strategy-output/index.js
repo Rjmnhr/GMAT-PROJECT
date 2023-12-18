@@ -2,76 +2,141 @@ import React, { useEffect, useState } from "react";
 import { ApplicationStrategyOutputStyled } from "./style";
 import { Progress } from "antd";
 
-const longTermDataSource = [
-  {
-    "Long term goal": "Own business",
-    innovativeThinking: 4,
-    problemSolving: 4,
-    selfMotivated: 4,
-    multiTasking: 4,
-    seniorStakeholderManagement: 4,
-    teamWork: 3,
-    reportWriting: 4,
-    excel: 3,
-    strategy: 4,
-    marketing: 4,
-    finance: 2,
-    technology: 2,
-    hr: 2,
-    operations: 2,
-  },
-  {
-    "Long term goal": "General Manager",
-    innovativeThinking: 2,
-    problemSolving: 3,
-    selfMotivated: 2,
-    multiTasking: 4,
-    seniorStakeholderManagement: 3,
-    teamWork: 4,
-    reportWriting: 4,
-    excel: 3,
-    strategy: 3,
-    marketing: 3,
-    finance: 2,
-    technology: 2,
-    hr: 2,
-    operations: 2,
-  },
-  {
-    "Long term goal": "CEO",
-    innovativeThinking: 3,
-    problemSolving: 3,
-    selfMotivated: 3,
-    multiTasking: 3,
-    seniorStakeholderManagement: 4,
-    teamWork: 2,
-    reportWriting: 3,
-    excel: 2,
-    strategy: 4,
-    marketing: 2,
-    finance: 4,
-    technology: 3,
-    hr: 2,
-    operations: 3,
-  },
-  {
-    "Long term goal": "Partner",
-    innovativeThinking: 3,
-    problemSolving: 3,
-    selfMotivated: 3,
-    multiTasking: 3,
-    seniorStakeholderManagement: 3,
-    teamWork: 2,
-    reportWriting: 4,
-    excel: 2,
-    strategy: 3,
-    marketing: 4,
-    finance: 3,
-    technology: 2,
-    hr: 2,
-    operations: 2,
-  },
-];
+
+
+
+const skillData = {
+  innovativeThinking: "Innovative thinking",
+  problemSolving: "Problem Solving",
+  selfMotivated: "Self Motivated",
+  multiTasking: "Multi-tasking",
+  seniorStakeholderManagement: "Complex and senior stakeholder Management",
+  teamWork: "Team work",
+  reportWriting: "Report Writing/Board papers",
+  excel: "Excel",
+  strategy: "Strategic",
+  marketing: "Marketing",
+  finance: "Finance",
+  technology: "Technology",
+  hr: "HR",
+  operations: "Operations",
+};
+
+
+const ApplicationStrategyOutput = () => {
+  const [longTermSkillsGapValues, setLongTermSkillsGapValues] = useState({});
+  const [shortTermSkillsGapValues, setShortTermSkillsGapValues] = useState({});
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+
+const storedGoalsInput = JSON.parse(sessionStorage.getItem("goalsInputObject"));
+
+const storedUserInputData = JSON.parse(
+  sessionStorage.getItem("applicationSkillInputObject")
+);
+    const longTermDataSource = [
+      {
+        "Long term goal": "Own business",
+        innovativeThinking: 4,
+        problemSolving: 4,
+        selfMotivated: 4,
+        multiTasking: 4,
+        seniorStakeholderManagement: 4,
+        teamWork: 3,
+        reportWriting: 4,
+        excel: 3,
+        strategy: 4,
+        marketing: 4,
+        finance: 2,
+        technology: 2,
+        hr: 2,
+        operations: 2,
+      },
+      {
+        "Long term goal": "General Manager",
+        innovativeThinking: 2,
+        problemSolving: 3,
+        selfMotivated: 2,
+        multiTasking: 4,
+        seniorStakeholderManagement: 3,
+        teamWork: 4,
+        reportWriting: 4,
+        excel: 3,
+        strategy: 3,
+        marketing: 3,
+        finance: 2,
+        technology: 2,
+        hr: 2,
+        operations: 2,
+      },
+      {
+        "Long term goal": "CEO",
+        innovativeThinking: 3,
+        problemSolving: 3,
+        selfMotivated: 3,
+        multiTasking: 3,
+        seniorStakeholderManagement: 4,
+        teamWork: 2,
+        reportWriting: 3,
+        excel: 2,
+        strategy: 4,
+        marketing: 2,
+        finance: 4,
+        technology: 3,
+        hr: 2,
+        operations: 3,
+      },
+      {
+        "Long term goal": "Partner",
+        innovativeThinking: 3,
+        problemSolving: 3,
+        selfMotivated: 3,
+        multiTasking: 3,
+        seniorStakeholderManagement: 3,
+        teamWork: 2,
+        reportWriting: 4,
+        excel: 2,
+        strategy: 3,
+        marketing: 4,
+        finance: 3,
+        technology: 2,
+        hr: 2,
+        operations: 2,
+      },
+    ];
+    // Find the matching long term goal data
+    const selectedLongTermGoalData = longTermDataSource?.find(
+      (goalData) =>
+        goalData["Long term goal"] === storedGoalsInput?.longTermGoals
+    );
+
+    if (selectedLongTermGoalData) {
+      // Calculate the long term goal values
+      const longTermGoalValues = {};
+      for (const factor in storedUserInputData) {
+        if (selectedLongTermGoalData.hasOwnProperty(factor)) {
+          sessionStorage.setItem("form-filled-application", true);
+
+          longTermGoalValues[factor] =
+            selectedLongTermGoalData[factor] - storedUserInputData[factor];
+        }
+      }
+
+      // Set the calculated skills gap values in the state
+      setLongTermSkillsGapValues(longTermGoalValues);
+    }
+    //eslint-disable-next-line
+  }, []);
+
+  useEffect(() => {
+
+const storedGoalsInput = JSON.parse(sessionStorage.getItem("goalsInputObject"));
+
+const storedUserInputData = JSON.parse(
+  sessionStorage.getItem("applicationSkillInputObject")
+);
+
 const shortTermDataSource = [
   {
     "Short term goal": "Own business",
@@ -176,65 +241,13 @@ const shortTermDataSource = [
     operations: 2,
   },
 ];
-
-const skillData = {
-  innovativeThinking: "Innovative thinking",
-  problemSolving: "Problem Solving",
-  selfMotivated: "Self Motivated",
-  multiTasking: "Multi-tasking",
-  seniorStakeholderManagement: "Complex and senior stakeholder Management",
-  teamWork: "Team work",
-  reportWriting: "Report Writing/Board papers",
-  excel: "Excel",
-  strategy: "Strategic",
-  marketing: "Marketing",
-  finance: "Finance",
-  technology: "Technology",
-  hr: "HR",
-  operations: "Operations",
-};
-
-const storedGoalsInput = JSON.parse(sessionStorage.getItem("goalsInputObject"));
-
-const storedUserInputData = JSON.parse(
-  sessionStorage.getItem("applicationSkillInputObject")
-);
-
-const ApplicationStrategyOutput = () => {
-  const [longTermSkillsGapValues, setLongTermSkillsGapValues] = useState({});
-  const [shortTermSkillsGapValues, setShortTermSkillsGapValues] = useState({});
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Find the matching long term goal data
-    const selectedLongTermGoalData = longTermDataSource?.find(
-      (goalData) =>
-        goalData["Long term goal"] === storedGoalsInput?.longTermGoals
-    );
-
-    if (selectedLongTermGoalData) {
-      // Calculate the long term goal values
-      const longTermGoalValues = {};
-      for (const factor in storedUserInputData) {
-        if (selectedLongTermGoalData.hasOwnProperty(factor)) {
-          longTermGoalValues[factor] =
-            selectedLongTermGoalData[factor] - storedUserInputData[factor];
-        }
-      }
-
-      // Set the calculated skills gap values in the state
-      setLongTermSkillsGapValues(longTermGoalValues);
-    }
-    //eslint-disable-next-line
-  }, [storedUserInputData, storedGoalsInput, longTermDataSource]);
-
-  useEffect(() => {
     // Find the matching short term goal data
     const selectedShortTermGoalData = shortTermDataSource?.find(
       (goalData) =>
-        goalData["Short term goal"] === storedGoalsInput?.shortTermGoals
-    );
-
+      goalData["Short term goal"] === storedGoalsInput?.shortTermGoals
+      );
+      
+      console.log("🚀 ~ file: index.js:247 ~ useEffect ~ selectedShortTermGoalData:", selectedShortTermGoalData)
     if (selectedShortTermGoalData) {
       // Calculate the short term goal values
       const shortTermGoalValues = {};
@@ -250,7 +263,7 @@ const ApplicationStrategyOutput = () => {
       setShortTermSkillsGapValues(shortTermGoalValues);
     }
     // eslint-disable-next-line
-  }, [storedUserInputData, storedGoalsInput, shortTermDataSource]);
+  }, []);
   const getPercentage = (value) => {
     switch (value) {
       case 1:

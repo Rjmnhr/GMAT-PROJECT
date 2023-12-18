@@ -127,7 +127,7 @@ const ChancesOfSelection = () => {
       bottom50: 1,
     };
 
-    const CollegeValue = valueMappingsCollegeType[valueObject.collegeType];
+    const CollegeValue = valueMappingsCollegeType[valueObject?.collegeType];
 
     const PerformanceValue =
       valueMappingsPerformance[valueObject.yourPerformance];
@@ -528,7 +528,7 @@ const ChancesOfSelection = () => {
 
   useEffect(() => {
     const gmatIndividualValue = calculateGMATIndividualValue(
-      storedBasicDetails.gmat
+      storedBasicDetails?.gmat
     );
 
     const graduateIndividualValue =

@@ -8,7 +8,7 @@ import CommunityServiceForm from "../../components/profiler-forms/community-serv
 import HobbiesForm from "../../components/profiler-forms/hobbies-form";
 import NatureOfWorkForm from "../../components/profiler-forms/work-experience/nature-of-work";
 import { ProfilerPageStyled } from "./style";
-import { Progress, message } from "antd";
+import { message } from "antd";
 import { useNavigate } from "react-router-dom";
 import GoalsForm from "../../components/profiler-forms/goals-form";
 
@@ -16,12 +16,16 @@ const ProfilerPage = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [progress, setProgress] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const [totalNonEmptyCountValue, setTotalNonEmptyCountValue] = useState(0);
+  const [totalNonEmptyCountValue, setTotalNonEmptyCountValue] = useState(
+    sessionStorage.getItem("totalNonEmptyCount") || 0
+  );
+  //eslint-disable-next-line
   const [overAllProgress, setOverAllProgress] = useState(0);
   const navigate = useNavigate();
   const [messageApi, contextHolder] = message.useMessage();
   const totalQuestions = 28;
-
+  const storedProgress =
+    parseInt(sessionStorage.getItem("totalNonEmptyCount")) || 0;
   const handleSaveAndContinue = () => {
     try {
       updateFormValues("basic-details");
@@ -37,7 +41,7 @@ const ProfilerPage = () => {
     } catch {
       messageApi.open({
         type: "error",
-        content: "You have not answered enough questions to continue",
+        content: "Answer at least one from each section to continue",
       });
     }
   };
@@ -58,33 +62,33 @@ const ProfilerPage = () => {
       sessionStorage.setItem(formName, JSON.stringify(updatedValues));
     }
   };
-  useEffect(() => {
-    // Clear session storage items when the component is reloaded
-    const handleBeforeUnload = () => {
-      sessionStorage.removeItem("experience");
-      sessionStorage.removeItem("experience-default");
-      sessionStorage.removeItem("natureExperience");
-      sessionStorage.removeItem("natureExperience-default");
-      sessionStorage.removeItem("basic-details");
-      sessionStorage.removeItem("basic-details-default");
-      sessionStorage.removeItem("graduate");
-      sessionStorage.removeItem("graduate-default");
-      sessionStorage.removeItem("service");
-      sessionStorage.removeItem("service-default");
-      sessionStorage.removeItem("hobbies");
-      sessionStorage.removeItem("hobbies-default");
-      sessionStorage.removeItem("goalsInputObject");
-      sessionStorage.removeItem("goalsInputObject-default");
-    };
+  // useEffect(() => {
+  //   // Clear session storage items when the component is reloaded
+  //   const handleBeforeUnload = () => {
+  //     sessionStorage.removeItem("experience");
+  //     sessionStorage.removeItem("experience-default");
+  //     sessionStorage.removeItem("natureExperience");
+  //     sessionStorage.removeItem("natureExperience-default");
+  //     sessionStorage.removeItem("basic-details");
+  //     sessionStorage.removeItem("basic-details-default");
+  //     sessionStorage.removeItem("graduate");
+  //     sessionStorage.removeItem("graduate-default");
+  //     sessionStorage.removeItem("service");
+  //     sessionStorage.removeItem("service-default");
+  //     sessionStorage.removeItem("hobbies");
+  //     sessionStorage.removeItem("hobbies-default");
+  //     sessionStorage.removeItem("goalsInputObject");
+  //     sessionStorage.removeItem("goalsInputObject-default");
+  //   };
 
-    // Attach the event listener for beforeunload
-    window.addEventListener("beforeunload", handleBeforeUnload);
+  //   // Attach the event listener for beforeunload
+  //   window.addEventListener("beforeunload", handleBeforeUnload);
 
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, []);
+  //   // Cleanup the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener("beforeunload", handleBeforeUnload);
+  //   };
+  // }, []);
 
   useEffect(() => {
     // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
@@ -120,15 +124,20 @@ const ProfilerPage = () => {
       0
     );
     setTotalNonEmptyCountValue(totalNonEmptyCount);
+    if (storedProgress < totalNonEmptyCount) {
+      sessionStorage.setItem("totalNonEmptyCount", totalNonEmptyCount);
+    }
+
     const overallProgressPercentage =
       (totalNonEmptyCount / totalQuestions) * 100;
+
     setOverAllProgress(overallProgressPercentage?.toFixed(2));
-  }, [progress]);
+  }, [progress, storedProgress]);
 
   const handleTabChange = (event, newValue) => {
     setActiveTab(newValue);
   };
-  const twoColors = { "0%": "#108ee9", "100%": "#87d068" };
+  // const twoColors = { "0%": "#108ee9", "100%": "#87d068" };
 
   const handleFormValidation = (formName, tab) => {
     const defaultValues = JSON.parse(
@@ -139,17 +148,89 @@ const ProfilerPage = () => {
       const missingKeys = Object.keys(defaultValues).filter(
         (key) => !currentValues.hasOwnProperty(key)
       );
-      if (missingKeys?.length === 0 && isMobile) {
-        if (tab === 6) {
-          navigate("/selection-chance");
+
+      if (formName === "service" || formName === "hobbies") {
+        const validate = checkServiceAndHobbiesForms();
+
+        if (validate) {
+          const isFormAlreadyFilled = sessionStorage.getItem(
+            `${formName}-filled`
+          );
+
+          // Check if the form was not already marked as filled
+          if (!isFormAlreadyFilled) {
+            // Mark the form as filled
+            sessionStorage.setItem(`${formName}-filled`, "true");
+
+            // If the tab is not the last one, navigate to the next tab
+            if (tab !== 6) {
+              setActiveTab(tab);
+              return;
+            } else {
+              navigate("/selection-chance");
+            }
+          }
         } else {
-          setActiveTab(tab);
+          sessionStorage.removeItem(`${formName}-filled`);
+          return;
         }
+
+        // If both "service" and "hobbies" forms are filled, navigate to the next tab
+      }
+      if (missingKeys.length === 0) {
+        const isFormAlreadyFilled = sessionStorage.getItem(
+          `${formName}-filled`
+        );
+
+        // Check if the form was not already marked as filled
+        if (!isFormAlreadyFilled) {
+          // Mark the form as filled
+          sessionStorage.setItem(`${formName}-filled`, "true");
+
+          // If the tab is not the last one, navigate to the next tab
+          if (tab !== 6) {
+            setActiveTab(tab);
+          } else {
+            navigate("/selection-chance");
+          }
+        }
+      } else {
+        // Mark the form as not filled
+        sessionStorage.removeItem(`${formName}-filled`);
       }
     }
     // Chec)k if all keys from defaultValues are present in currentValues
   };
+  const checkServiceAndHobbiesForms = () => {
+    // Check if both "service" and "hobbies" forms are filled
+    const serviceDefaultValues = JSON.parse(
+      sessionStorage.getItem("service-default")
+    );
+    const serviceCurrentValues = JSON.parse(sessionStorage.getItem("service"));
 
+    const hobbiesDefaultValues = JSON.parse(
+      sessionStorage.getItem("hobbies-default")
+    );
+    const hobbiesCurrentValues = JSON.parse(sessionStorage.getItem("hobbies"));
+
+    if (serviceDefaultValues && hobbiesDefaultValues) {
+      const missingKeysService = Object.keys(serviceDefaultValues).filter(
+        (key) => !serviceCurrentValues.hasOwnProperty(key)
+      );
+      const missingKeysHobbies = Object.keys(hobbiesDefaultValues).filter(
+        (key) => !hobbiesCurrentValues.hasOwnProperty(key)
+      );
+
+      if (
+        missingKeysService?.length === 0 &&
+        missingKeysHobbies?.length === 0
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  };
   return (
     <ProfilerPageStyled>
       {contextHolder}
@@ -173,15 +254,19 @@ const ProfilerPage = () => {
           >
             <div className="d-lg-flex justify-content-between mb-2 align-items-center">
               <div style={{ textAlign: "left", marginTop: "10px" }}>
-                <Progress
+                {/* <Progress
                   style={{ display: `${isMobile ? "none" : "inline-block"}` }}
                   size={40}
                   type="circle"
                   percent={overAllProgress}
                   strokeColor={twoColors}
-                />
+                /> */}
                 <span style={{ fontWeight: "bold", marginLeft: "10px" }}>
-                  Answered {totalNonEmptyCountValue} out of {totalQuestions}{" "}
+                  Answered{" "}
+                  {storedProgress > totalNonEmptyCountValue
+                    ? storedProgress
+                    : totalNonEmptyCountValue}{" "}
+                  out of {totalQuestions}{" "}
                 </span>
               </div>
               <div>
