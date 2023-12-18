@@ -38,7 +38,7 @@ const LMSRepresentation = () => {
               style={{ display: "grid", placeItems: "center", padding: "8px" }}
               className="big-circle"
             >
-              <h5>Adeft Education</h5>
+              <h5>Adeft </h5>
             </div>
             <div
               onClick={() => navigate("/profiler")}

@@ -14,8 +14,8 @@ export const LMSRepresentationStyled = styled.div`
   }
 
   .big-circle {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border: 1px solid #ecf0f1;
     border-radius: 50%;
     position: absolute;
@@ -26,8 +26,8 @@ export const LMSRepresentationStyled = styled.div`
   }
 
   .small-circle {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     background-color: white;
     border-radius: 50%;
     position: absolute;
@@ -48,7 +48,7 @@ export const LMSRepresentationStyled = styled.div`
     content: "";
     position: absolute;
     width: calc(
-      50% + 1px
+      25% + 1px
     ); /* Adjust to connect to the center of the small circle */
     height: 2px; /* Line height */
     background-color: #ecf0f1; /* Line color */
@@ -59,7 +59,7 @@ export const LMSRepresentationStyled = styled.div`
     content: "";
     position: absolute;
     width: 2px; /* Adjust to connect to the center of the small circle */
-    height: calc(50% + 1px); /* Line height */
+    height: calc(25% + 1px); /* Line height */
     background-color: #ecf0f1; /* Line color */
   }
   .top {
@@ -82,7 +82,7 @@ export const LMSRepresentationStyled = styled.div`
 
   .right::before {
     top: 50%;
-    left: -50%;
+    left: -25%;
     transform: translateY(-50%);
   }
 
@@ -106,7 +106,7 @@ export const LMSRepresentationStyled = styled.div`
 
   .left::before {
     top: 50%;
-    right: -50%;
+    right: -25%;
     transform: translateY(-50%);
   }
   @media (max-width: 728px) {
