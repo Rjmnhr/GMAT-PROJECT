@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { questions } from "../../components/items";
 import NavBar from "../../components/nav-bar";
 import { PracticeQuestionsPageStyled } from "./style";
@@ -12,6 +12,7 @@ const CategoryQuestions = () => {
   const [currentSubCategory, setCurrentSubCategory] = useState("");
   const [showAnswers, setShowAnswers] = useState([]);
   const [categoryHeading, setCategoryHeading] = useState("");
+  const navigate = useNavigate();
   useEffect(() => {
     // Map categoryName to the appropriate Category value
     let categoryValue;
@@ -107,7 +108,7 @@ const CategoryQuestions = () => {
           <div className="col-10 p-3">
             <div className="d-flex justify-content-between align-items-center">
               <h3 className="py-3">{categoryHeading}</h3>
-              <button className="btn btn-primary mr-2">
+              <button onClick={()=>navigate("/dashboard")} className="btn btn-primary mr-2">
                 Take a practice test
               </button>
             </div>

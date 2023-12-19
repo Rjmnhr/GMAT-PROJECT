@@ -117,13 +117,13 @@ export const LMSRepresentationStyled = styled.div`
     }
 
     .big-circle {
-      width: 150px;
-      height: 150px;
+      width: 75px;
+      height: 75px;
     }
 
     .small-circle {
-      width: 75px;
-      height: 75px;
+      width: 100px;
+      height: 100px;
       font-size: 14px;
     }
     .extra-block {

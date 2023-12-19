@@ -20,6 +20,7 @@ const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const isLoggedIn = localStorage.getItem("adefteducation_isLoggedIn");
 
@@ -73,10 +74,27 @@ const HomePage = () => {
       ),
     },
   ];
+  const handleMenuToggle = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <>
+    <body className={`${menuOpen ? "mobile-nav-active" : ""} `}>
+    <button
+        type="button"
+        class="mobile-nav-toggle d-lg-none"
+        onClick={handleMenuToggle}
+      >
+        <i
+          style={{ color: "black" }}
+          class={`${menuOpen ? "icofont-close" : " icofont-navigation-menu"} `}
+        ></i>
+      </button>
       <header id="header" className="fixed-top">
+      <button type="button" class="mobile-nav-toggle d-lg-none">
+          <i class="icofont-navigation-menu"></i>
+        </button>
         <div className="container d-flex justify-content-between align-items-center">
           <h1 className="logo me-auto">
             <a href="/">
@@ -88,9 +106,13 @@ const HomePage = () => {
             <img src="assets/img/logo.png" alt="" />
           </a>
 
-          <nav className="nav-menu d-none d-lg-block">
+          <nav
+            class={`${
+              menuOpen ? "mobile-nav d-lg-none" : " nav-menu d-none d-lg-block"
+            } `}
+          >
             <ul>
-              <li class="active">
+              <li >
                 <a href="#header">Home</a>
               </li>
               <li>
@@ -102,6 +124,7 @@ const HomePage = () => {
 
               <li>
                 <ScrollLink
+                style={{padding:"0"}}
                   to="about"
                   spy={true}
                   smooth={true}
@@ -126,6 +149,7 @@ const HomePage = () => {
 
               <li>
                 <ScrollLink
+                 style={{padding:"0"}}
                   to="contact"
                   spy={true}
                   smooth={true}
@@ -177,6 +201,7 @@ const HomePage = () => {
           </nav>
         </div>
       </header>
+      </body>
 
       <section id="hero" class="d-flex align-items-center">
         <div class="container" data-aos="zoom-out" data-aos-delay="100">

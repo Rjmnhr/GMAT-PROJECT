@@ -81,7 +81,7 @@ const NavBar = () => {
             } `}
           >
             <ul>
-              <li class="active">
+              <li >
                 <a href="/#header">Home</a>
               </li>
               <li>

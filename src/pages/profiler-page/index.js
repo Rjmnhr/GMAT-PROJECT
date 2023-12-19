@@ -252,7 +252,7 @@ const ProfilerPage = () => {
               }`,
             }}
           >
-            <div className="d-lg-flex justify-content-between mb-2 align-items-center">
+            <div className="d-lg-flex justify-content-between mb-3 align-items-center">
               <div style={{ textAlign: "left", marginTop: "10px" }}>
                 {/* <Progress
                   style={{ display: `${isMobile ? "none" : "inline-block"}` }}
@@ -261,7 +261,7 @@ const ProfilerPage = () => {
                   percent={overAllProgress}
                   strokeColor={twoColors}
                 /> */}
-                <span style={{ fontWeight: "bold", marginLeft: "10px" }}>
+                <span className="text-primary " style={{ fontWeight: "bold", }}>
                   Answered{" "}
                   {storedProgress > totalNonEmptyCountValue
                     ? storedProgress
