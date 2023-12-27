@@ -4,7 +4,7 @@ import {
   List,
   ListItem,
   ListItemText,
-  Paper,
+ 
   Box,
   Divider,
 } from "@mui/material";
@@ -14,22 +14,11 @@ import StarIcon from "@mui/icons-material/Star";
 const AdmissionTips = () => {
   return (
     <>
-      <div className="section-title p-0">
-        <h2>Keys to Successful Admission</h2>{" "}
+      <div className="mb-5 p-0">
+      <h3><strong>Keys to Successful Admission</strong></h3>  
       </div>
 
-      <Paper
-        elevation={3}
-        style={{
-          padding: "20px",
-          maxWidth: "800px",
-          margin: "auto",
-          marginTop: "20px",
-          marginBottom: "20px",
-          background: "#f4f4f4",
-          borderRadius: "10px",
-        }}
-      >
+     
         <List>
           <ListItem>
             <p>
@@ -119,7 +108,7 @@ const AdmissionTips = () => {
             <ListItemText primary="Timely Application: Submit your application on time to show your commitment and organizational skills." />
           </ListItem>
         </List>
-      </Paper>
+   
     </>
   );
 };

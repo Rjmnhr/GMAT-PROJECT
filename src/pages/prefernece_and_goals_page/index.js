@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Form, Card, Carousel } from "antd";
+import React, { useEffect,  useState } from "react";
+import { Form, Card, Tabs } from "antd";
 
 import { PreferenceAndGoalsPageStyled } from "./style";
 import CollegeInformationOutput from "../../components/college-information-output";
@@ -22,7 +22,7 @@ const PreferenceForm = ({ onSubmit }) => {
   useEffect(() => {
     // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 912);
     };
 
     // Add an event listener to handle window resizing
@@ -104,7 +104,8 @@ const PreferenceForm = ({ onSubmit }) => {
 
   return (
     <div>
-      <h3>Select which of the following matters the most to you</h3>
+            <h3>Select which of the following matters the most to you</h3>  
+    
       {isMobile ? (
         ""
       ) : (
@@ -155,8 +156,9 @@ const PreferenceForm = ({ onSubmit }) => {
       <Form onFinish={onFinish}>
         <div
           style={{ height: "60vh", overflowY: "scroll" }}
-          className="container-fluid mt-3 mt-lg-2 scrollable-container"
+          className="container-fluid p-0 mt-3 mt-lg-2 scrollable-container d-lg-flex align-items-center justify-content-between flex-wrap mt-5"
         >
+         
           {options.map((option) => (
             <div
               style={{
@@ -166,7 +168,7 @@ const PreferenceForm = ({ onSubmit }) => {
                 alignItems: "center",
               }}
               key={option.label}
-              className="star-rating-container w-100 "
+              className={`star-rating-container  ${isMobile ? "w-100" :"w-50"} `}
             >
               <div
                 style={{
@@ -456,68 +458,43 @@ const CountrySelectionForm = ({ onNext, onBack }) => {
     </div>
   );
 };
-
+const { TabPane } = Tabs;
 const PreferenceAndGoalsPage = () => {
   const formFilled = sessionStorage.getItem("form-filled");
-  const [currentStep, setCurrentStep] = useState(formFilled === "true" ? 3 : 0);
+  const [currentStep, setCurrentStep] = useState(formFilled === "true" ? "4" : "1");
 
-  const carouselRef = useRef(null);
-
-  useEffect(() => {
-    if (formFilled === "true" && carouselRef.current) {
-      carouselRef.current.goTo(3);
-    }
-  }, [formFilled]);
-
-  const handleNext = () => {
-    carouselRef.current.next();
-  };
-
-  const handleBack = () => {
-    carouselRef.current.prev();
+  const handleTabChange = (key) => {
+    setCurrentStep(key);
   };
 
   const handleTryAgain = () => {
-    sessionStorage.setItem("form-filled", false);
-    carouselRef.current.goTo(0);
-    setCurrentStep(0);
+    sessionStorage.setItem("form-filled", "false");
+    setCurrentStep("1");
   };
 
   return (
-    <div className="container-fluid">
-      <Carousel
-        ref={carouselRef}
-        dotPosition="bottom"
-        afterChange={(index) => setCurrentStep(index)}
-        beforeChange={() => {}}
-        current={currentStep}
-        dots={null}
-      >
-        <div>
-          <PreferenceForm onSubmit={handleNext} />
-        </div>
-        <div>
-          <AfterMBAForm onNext={handleNext} onBack={handleBack} />
-        </div>
-
-        <div>
-          <CountrySelectionForm onNext={handleNext} onBack={handleBack} />
-        </div>
-        <div>
-          {currentStep === 3 && <CollegeInformationOutput />}
-          {currentStep === 3 && (
-            <div className="mb-3  mb-lg-0">
-              <button
-                className="btn-primary btn btn-lg mb-5  mb-lg-3"
-                onClick={handleTryAgain}
-              >
-                Try filling form again
-              </button>
-            </div>
-          )}
-        </div>
-      </Carousel>
+    <div className="container-fluid p-0">
+      <Tabs tabBarStyle={{display:"none"}} activeKey={currentStep} onChange={handleTabChange} tabBarGutter={15}>
+        <TabPane tab="Preference Form" key="1">
+          <PreferenceForm onSubmit={() => setCurrentStep("2")} />
+        </TabPane>
+        <TabPane tab="After MBA Form" key="2">
+          <AfterMBAForm onNext={() => setCurrentStep("3")} onBack={() => setCurrentStep("1")} />
+        </TabPane>
+        <TabPane tab="Country Selection Form" key="3">
+          <CountrySelectionForm onNext={() => setCurrentStep("4")} onBack={() => setCurrentStep("2")} />
+        </TabPane>
+        <TabPane tab="College Information Output" key="4">
+          <CollegeInformationOutput />
+          <div className="mb-3 mb-lg-0" style={{ marginBottom: "5rem" }}>
+            <button className="btn-primary btn btn-lg mb-lg-3" onClick={handleTryAgain}>
+              Try filling form again
+            </button>
+          </div>
+        </TabPane>
+      </Tabs>
     </div>
   );
 };
+
 export default PreferenceAndGoalsPage;

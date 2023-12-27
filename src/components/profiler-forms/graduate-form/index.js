@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card, Form, Slider, Tooltip } from "antd";
 import { BasicDetailsFormStyled } from "../basic-details/style";
 import ReactSpeedometer from "react-d3-speedometer";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 function getThresholdValue(category) {
   switch (category?.toLowerCase()) {
@@ -188,13 +189,32 @@ const CollegeTypeOptions = [
 //   },
 // ];
 
-const UndergraduateDegreeForm = ({ onUpdateProgress, onFormValidation }) => {
+const UndergraduateDegreeForm = ({ onUpdateProgress, onFormValidation ,nextTabMobile,prevTabMobile}) => {
   const [selectedCollegeType, setSelectedCollegeType] = useState(
     JSON.parse(sessionStorage.getItem("graduate"))?.collegeType
   );
   const [selectedPerformance, setSelectedPerformance] = useState(
     JSON.parse(sessionStorage.getItem("graduate"))?.yourPerformance
   );
+
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     // Store default values in session storage when the component is rendered for the first time
@@ -285,6 +305,33 @@ const UndergraduateDegreeForm = ({ onUpdateProgress, onFormValidation }) => {
               </div>
             </div>
           </Form>
+          {isMobile ? (
+            <div className=" mt-5 ">
+              {selectedPerformance && selectedCollegeType ? (
+                <button
+                  onClick={nextTabMobile}
+                  className="btn btn-lg btn-primary  w-50 d-flex w-100  mb-3 justify-content-between align-items-center"
+                >
+                  Next <ArrowRightOutlined />{" "}
+                </button>
+              ) : (
+                <button
+                  disabled
+                  className="btn btn-lg btn-primary w-50 d-flex w-100 mb-3  justify-content-between  align-items-center"
+                >
+                  Next <ArrowRightOutlined />
+                </button>
+              )}
+              <button
+                className="btn border btn-lg w-50 d-flex justify-content-between w-100   align-items-center"
+                onClick={prevTabMobile}
+              >
+                <ArrowLeftOutlined /> Back
+              </button>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </BasicDetailsFormStyled>
     </>

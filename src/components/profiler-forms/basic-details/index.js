@@ -3,8 +3,11 @@ import { Form, Card } from "antd";
 import { BasicDetailsFormStyled } from "./style";
 import maleIcon from "../../../icons/man.png";
 import femaleIcon from "../../../icons/woman.png";
+import {  ArrowRightOutlined } from "@ant-design/icons";
 
-const BasicDetailsForm = ({ onUpdateProgress, onFormValidation }) => {
+const BasicDetailsForm = ({ onUpdateProgress, onFormValidation ,nextTabMobile}) => {
+
+  const [isMobile, setIsMobile] = useState(false);
   const [selectedAge, setSelectedAge] = useState(
     JSON.parse(sessionStorage.getItem("basic-details"))?.age
   );
@@ -14,7 +17,23 @@ const BasicDetailsForm = ({ onUpdateProgress, onFormValidation }) => {
   const [selectedGMAT, setSelectedGMAT] = useState(
     JSON.parse(sessionStorage.getItem("basic-details"))?.gmat
   );
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
 
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   useEffect(() => {
     // Store default values in session storage when the component is rendered for the first time
     const defaultValues = {
@@ -68,7 +87,7 @@ const BasicDetailsForm = ({ onUpdateProgress, onFormValidation }) => {
 
   return (
     <BasicDetailsFormStyled>
-      <div className="col-lg-10 p-0 p-lg-3 ">
+      <div className="col-lg-10 p-0 p-lg-3 " data-aos="fade-left">
         <Form className="p-0" name="basicDetailsForm">
           <div className="d-lg-flex align-items-center justify-content-between">
             <div>
@@ -148,6 +167,9 @@ const BasicDetailsForm = ({ onUpdateProgress, onFormValidation }) => {
               ))}
             </div>
           </div>
+          {isMobile ?  selectedAge && selectedGMAT && selectedGender ?  <button onClick={nextTabMobile} className="btn btn-lg btn-primary mt-5 mb-3 w-100 d-flex justify-content-between">Next <ArrowRightOutlined/> </button> :  <button disabled className="btn btn-lg btn-primary w-100 d-flex justify-content-between mt-5 mb-3">Next <ArrowRightOutlined/></button> : ""}
+         
+          
         </Form>
       </div>
     </BasicDetailsFormStyled>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { Avatar, Carousel, Dropdown } from "antd";
+import { Avatar, Carousel, Collapse, Dropdown } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 
@@ -80,127 +80,131 @@ const HomePage = () => {
 
   return (
     <>
-    <body className={`${menuOpen ? "mobile-nav-active" : ""} `}>
-    <button
-        type="button"
-        class="mobile-nav-toggle d-lg-none"
-        onClick={handleMenuToggle}
-      >
-        <i
-          style={{ color: "black" }}
-          class={`${menuOpen ? "icofont-close" : " icofont-navigation-menu"} `}
-        ></i>
-      </button>
-      <header id="header" className="fixed-top">
-      <button type="button" class="mobile-nav-toggle d-lg-none">
-          <i class="icofont-navigation-menu"></i>
-        </button>
-        <div className="container d-flex justify-content-between align-items-center">
-          <h1 className="logo me-auto">
-            <a href="/">
-              Adeft<span>.</span>
-            </a>
-          </h1>
-
-          <a href="/" className="logo me-auto">
-            <img src="assets/img/logo.png" alt="" />
-          </a>
-
-          <nav
+      <body className={`${menuOpen ? "mobile-nav-active" : ""} `}>
+        <button
+          type="button"
+          class="mobile-nav-toggle d-lg-none"
+          onClick={handleMenuToggle}
+        >
+          <i
+            style={{ color: "black" }}
             class={`${
-              menuOpen ? "mobile-nav d-lg-none" : " nav-menu d-none d-lg-block"
+              menuOpen ? "icofont-close" : " icofont-navigation-menu"
             } `}
-          >
-            <ul>
-              <li >
-                <a href="#header">Home</a>
-              </li>
-              <li>
-                <a href="/profiler">Profiler</a>
-              </li>
-              <li>
-                <a href="/dashboard">GMAT</a>
-              </li>
+          ></i>
+        </button>
+        <header id="header" className="fixed-top">
+          <button type="button" class="mobile-nav-toggle d-lg-none">
+            <i class="icofont-navigation-menu"></i>
+          </button>
+          <div className="container d-flex justify-content-between align-items-center">
+            <h1 className="logo me-auto">
+              <a href="/">
+                Adeft<span>.</span>
+              </a>
+            </h1>
 
-              <li>
-                <ScrollLink
-                style={{padding:"0"}}
-                  to="about"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={1000} // Adjust this duration value
-                  // Use the easeInOutQuart easing function
-                  // For custom easing functions, you can use external libraries like bezier-easing
-                  // See: https://github.com/gre/bezier-easing
-                  // easing="cubicBezier(0.77, 0, 0.175, 1)"
-                  easing="easeInOutQuart"
-                >
-                  <a href="#about">About</a>
-                </ScrollLink>
-              </li>
-              <li>
-                <a href="/practice-questions">Practice questions</a>
-              </li>
+            <a href="/" className="logo me-auto">
+              <img src="assets/img/logo.png" alt="" />
+            </a>
 
-              <li>
-                <a href="/videos">Videos</a>
-              </li>
-
-              <li>
-                <ScrollLink
-                 style={{padding:"0"}}
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={1000} // Adjust this duration value
-                  // Use the easeInOutQuart easing function
-                  // For custom easing functions, you can use external libraries like bezier-easing
-                  // See: https://github.com/gre/bezier-easing
-                  // easing="cubicBezier(0.77, 0, 0.175, 1)"
-                  easing="easeInOutQuart"
-                >
-                  <a href="#contact">Contact</a>
-                </ScrollLink>
-              </li>
-              {isLoggedIn === "true" ? (
-                <>
-                  <Dropdown
-                    menu={{
-                      items,
-                    }}
-                    placement="bottomRight"
-                    arrow
-                  >
-                    <li
-                      style={{
-                        paddingTop: "5px",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "8px",
-                      }}
-                    >
-                      <a href="?#">{userName}</a>
-                      <Avatar
-                        size="small"
-                        style={{
-                          background: "#049494",
-                        }}
-                        icon={<UserOutlined />}
-                      />
-                    </li>
-                  </Dropdown>
-                </>
-              ) : (
+            <nav
+              class={`${
+                menuOpen
+                  ? "mobile-nav d-lg-none"
+                  : " nav-menu d-none d-lg-block"
+              } `}
+            >
+              <ul>
                 <li>
-                  <a href="/login">Log in</a>
+                  <a href="#header">Home</a>
                 </li>
-              )}
-            </ul>
-          </nav>
-        </div>
-      </header>
+                <li>
+                  <a href="/profiler">Profiler</a>
+                </li>
+                <li>
+                  <a href="/dashboard">GMAT</a>
+                </li>
+
+                <li>
+                  <ScrollLink
+                    style={{ padding: "0" }}
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={1000} // Adjust this duration value
+                    // Use the easeInOutQuart easing function
+                    // For custom easing functions, you can use external libraries like bezier-easing
+                    // See: https://github.com/gre/bezier-easing
+                    // easing="cubicBezier(0.77, 0, 0.175, 1)"
+                    easing="easeInOutQuart"
+                  >
+                    <a href="#about">About</a>
+                  </ScrollLink>
+                </li>
+                <li>
+                  <a href="/practice-questions">Practice questions</a>
+                </li>
+
+                <li>
+                  <a href="/videos">Videos</a>
+                </li>
+
+                <li>
+                  <ScrollLink
+                    style={{ padding: "0" }}
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={1000} // Adjust this duration value
+                    // Use the easeInOutQuart easing function
+                    // For custom easing functions, you can use external libraries like bezier-easing
+                    // See: https://github.com/gre/bezier-easing
+                    // easing="cubicBezier(0.77, 0, 0.175, 1)"
+                    easing="easeInOutQuart"
+                  >
+                    <a href="#contact">Contact</a>
+                  </ScrollLink>
+                </li>
+                {isLoggedIn === "true" ? (
+                  <>
+                    <Dropdown
+                      menu={{
+                        items,
+                      }}
+                      placement="bottomRight"
+                      arrow
+                    >
+                      <li
+                        style={{
+                          paddingTop: "5px",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "8px",
+                        }}
+                      >
+                        <a href="?#">{userName}</a>
+                        <Avatar
+                          size="small"
+                          style={{
+                            background: "#049494",
+                          }}
+                          icon={<UserOutlined />}
+                        />
+                      </li>
+                    </Dropdown>
+                  </>
+                ) : (
+                  <li>
+                    <a href="/login">Log in</a>
+                  </li>
+                )}
+              </ul>
+            </nav>
+          </div>
+        </header>
       </body>
 
       <section id="hero" class="d-flex align-items-center">
@@ -512,14 +516,6 @@ const HomePage = () => {
               <div class="testimonial-item">
                 <h3>Sara Jacobson</h3>
                 <h4>Entreprenuer, Sydney</h4>
-                <p></p>
-              </div>
-            </div>
-
-            <div class="testimonial-wrap">
-              <div class="testimonial-item">
-                <h3>Sara Jacobson</h3>
-                {/* <h4>Entreprenuer, Sydney</h4> */}
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                   Partnering with them to design our sales incentive program was
@@ -533,76 +529,8 @@ const HomePage = () => {
           </Carousel>
         </div>
       </section>
-
-      {/* <section id="pricing" class="pricing section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Pricing</h2>
-            <p>We offer our services in the following 3 packages</p>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="box" data-aos="fade-up" data-aos-delay="100">
-                <h3>Silver 3 college</h3>
-                <h4>
-                  <sup>₹</sup>60,000
-                </h4>
-                <ul>
-                  <li>College selection</li>
-                  <li>Application essays</li>
-                  <li>Minimum 6 hours 1-1 consulting</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#contact" class="btn-buy">
-                    Discuss more
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
-              <div class="box featured" data-aos="fade-up" data-aos-delay="200">
-                <h3>Gold 5 college</h3>
-                <h4>
-                  <sup>₹</sup>1,40,000
-                </h4>
-                <ul>
-                  <li>College selection</li>
-                  <li>Application essays + resume + LOR</li>
-                  <li>Minimum 12 hours 1-1 consulting</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#contact" class="btn-buy">
-                    Discuss more
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-              <div class="box" data-aos="fade-up" data-aos-delay="300">
-                <h3>Premium 5 college</h3>
-                <h4>
-                  <sup>₹</sup>2,00,000
-                </h4>
-                <ul>
-                  <li>Profile building guidance and college selection</li>
-                  <li>Application essays + resume + LOR</li>
-                  <li>Minimum 30 hours 1-1 consulting</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a href="#contact" class="btn-buy">
-                    Discuss more
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-      <section id="faq" class="faq">
+      <FAQSection />
+      {/* <section id="faq" class="faq">
         <div class="container text-left" data-aos="fade-up">
           <div class="section-title">
             <h2>Frequently Asked Questions</h2>
@@ -750,7 +678,7 @@ const HomePage = () => {
             </li>
           </ul>
         </div>
-      </section>
+      </section> */}
 
       <section id="team" class="team section-bg">
         <div class="container" data-aos="fade-up">
@@ -924,7 +852,7 @@ const HomePage = () => {
             <div class="row">
               <div class="col-lg-3 col-md-6 footer-contact text-left">
                 <h3>
-                  Adeft Consulting<span>.</span>
+                  Adeft Education<span>.</span>
                 </h3>
 
                 <p>
@@ -940,7 +868,7 @@ const HomePage = () => {
                 </p>
               </div>
 
-              <div class="col-lg-2 col-md-6 footer-links">
+              <div class="col-lg-2 col-md-6 footer-links text-left">
                 <h4>Useful Links</h4>
                 <ul>
                   <li>
@@ -964,7 +892,7 @@ const HomePage = () => {
                 </ul>
               </div>
 
-              <div class="col-lg-3 col-md-6 footer-links">
+              <div class="col-lg-3 col-md-6 footer-links text-left">
                 <h4>Our Services</h4>
                 <ul>
                   <li>
@@ -990,7 +918,7 @@ const HomePage = () => {
                 </ul>
               </div>
 
-              <div class="col-lg-4 col-md-6 footer-newsletter">
+              <div class="col-lg-4 col-md-6 footer-newsletter text-left">
                 <h4>Join Our Newsletter</h4>
                 <p>
                   Please enter your email if you are interested to read about
@@ -1015,12 +943,12 @@ const HomePage = () => {
             <a href="/#" class="facebook">
               <i class="bx bxl-facebook"></i>
             </a>
-            <a href="/#" class="instagram">
+            {/* <a href="/#" class="instagram">
               <i class="bx bxl-instagram"></i>
             </a>
             <a href="/#" class="google-plus">
               <i class="bx bxl-skype"></i>
-            </a>
+            </a> */}
             <a href="/#" class="linkedin">
               <i class="bx bxl-linkedin"></i>
             </a>
@@ -1032,3 +960,121 @@ const HomePage = () => {
 };
 
 export default HomePage;
+const { Panel } = Collapse;
+const FAQSection = () => {
+  return (
+    <section id="faq" className="faq">
+      <div className="container text-left" data-aos="fade-up">
+        <div className="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <Collapse
+          accordion
+          ghost
+          bordered={false}
+          defaultActiveKey={["0"]} // Set the default active key (index starts from 0)
+          expandIconPosition="right"
+        >
+          <Panel
+            style={{ borderBottom: "1px solid  #eee" }}
+            header={
+              <p style={{ fontSize: "18px" }}>
+                Do I really need an admission consultant?
+              </p>
+            }
+            key="0"
+          >
+            <p style={{fontSize:"16px"}}>
+              That is a very good question - the short answer is no; if you have
+              enough time on your hand, strong database of past students and
+              which colleges are more likely to accept students like you and a
+              good structured thinking that demonstrates retrospection,
+              introspection and clarity of thoughts, then you don't need
+              assistance; however if you don't, speak with us and let us explain
+              what the process is for you to then see if you actually need help
+              or not
+            </p>
+          </Panel>
+
+          <Panel
+            style={{ borderBottom: "1px solid  #eee" }}
+            header={
+              <p style={{ fontSize: "18px" }}>
+                How does the admissions consulting process work?
+              </p>
+            }
+            key="1"
+          >
+            <p style={{fontSize:"16px"}}>
+              There is an initial free 30 minute consultation with one of our
+              consultants. Based on your needs, we identify which service is
+              relevant to you. Following that, we start our consulting process
+              to understand your profile, your career aspirations and apply our
+              frameworks
+            </p>
+          </Panel>
+
+          <Panel
+            style={{ borderBottom: "1px solid  #eee" }}
+            header={
+              <p style={{ fontSize: "18px" }}>
+                Do you help students prepare for specific colleges (e.g. ISB)?
+              </p>
+            }
+            key="2"
+          >
+            <p style={{fontSize:"16px"}}>
+              We have helped more than 100 students prepare for and gain
+              admission in ISB over the last 10 years - each school is different
+              and using our large database we know how to appeal to specific B
+              school adcoms and aligning each candidate with the school values,
+              strengths and success profiles
+            </p>
+          </Panel>
+
+          <Panel
+            style={{ borderBottom: "1px solid  #eee" }}
+            header={
+              <p style={{ fontSize: "18px" }}>
+                How can I differentiate my background? How can I justify doing
+                an MBA now? How do I articulate my goals?
+              </p>
+            }
+            key="3"
+          >
+            <p style={{fontSize:"16px"}}>
+              These are all great questions and these are also the right
+              questions to ask - unfortunately the answers to these questions
+              are much more complex and requires us to work with you, understand
+              who you are, your life journey, your career aspirations, validate
+              your career goals and then work out an application startegy for
+              you
+            </p>
+          </Panel>
+
+          <Panel
+            style={{ borderBottom: "1px solid  #eee" }}
+            header={
+              <p style={{ fontSize: "18px" }}>
+                I want to know a bit more about your frameworks and approaches.
+                How is it different from other admissions firms?
+              </p>
+            }
+            key="5"
+          >
+            <p style={{fontSize:"16px"}}>
+              Our biggest differentiator is that our team all have advanced
+              business degrees and come with a minimum of 10 years experience.
+              They all bring their own experience to the role; however, we have
+              used our own experience to determine frameworks and models that
+              work best for different students. We understand how every student
+              is different and our customised solution is never the same for two
+              students
+            </p>
+          </Panel>
+        </Collapse>
+      </div>
+    </section>
+  );
+};

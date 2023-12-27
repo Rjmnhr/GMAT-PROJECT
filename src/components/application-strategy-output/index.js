@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import { ApplicationStrategyOutputStyled } from "./style";
 import { Progress } from "antd";
 
-
-
-
 const skillData = {
   innovativeThinking: "Innovative thinking",
   problemSolving: "Problem Solving",
@@ -22,19 +19,19 @@ const skillData = {
   operations: "Operations",
 };
 
-
 const ApplicationStrategyOutput = () => {
   const [longTermSkillsGapValues, setLongTermSkillsGapValues] = useState({});
   const [shortTermSkillsGapValues, setShortTermSkillsGapValues] = useState({});
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const storedGoalsInput = JSON.parse(
+      sessionStorage.getItem("goalsInputObject")
+    );
 
-const storedGoalsInput = JSON.parse(sessionStorage.getItem("goalsInputObject"));
-
-const storedUserInputData = JSON.parse(
-  sessionStorage.getItem("applicationSkillInputObject")
-);
+    const storedUserInputData = JSON.parse(
+      sessionStorage.getItem("applicationSkillInputObject")
+    );
     const longTermDataSource = [
       {
         "Long term goal": "Own business",
@@ -130,124 +127,128 @@ const storedUserInputData = JSON.parse(
   }, []);
 
   useEffect(() => {
+    const storedGoalsInput = JSON.parse(
+      sessionStorage.getItem("goalsInputObject")
+    );
 
-const storedGoalsInput = JSON.parse(sessionStorage.getItem("goalsInputObject"));
+    const storedUserInputData = JSON.parse(
+      sessionStorage.getItem("applicationSkillInputObject")
+    );
 
-const storedUserInputData = JSON.parse(
-  sessionStorage.getItem("applicationSkillInputObject")
-);
-
-const shortTermDataSource = [
-  {
-    "Short term goal": "Own business",
-    innovativeThinking: 4,
-    problemSolving: 4,
-    selfMotivated: 4,
-    multiTasking: 4,
-    seniorStakeholderManagement: 4,
-    teamWork: 3,
-    reportWriting: 4,
-    excel: 3,
-    strategy: 4,
-    marketing: 4,
-    finance: 2,
-    technology: 2,
-    hr: 2,
-    operations: 2,
-  },
-  {
-    "Short term goal": "Product Manager",
-    innovativeThinking: 3,
-    problemSolving: 4,
-    selfMotivated: 3,
-    multiTasking: 3,
-    seniorStakeholderManagement: 3,
-    teamWork: 4,
-    reportWriting: 4,
-    excel: 2,
-    strategy: 3,
-    marketing: 2,
-    finance: 3,
-    technology: 2,
-    hr: 2,
-    operations: 3,
-  },
-  {
-    "Short term goal": "Management Consulting",
-    innovativeThinking: 2,
-    problemSolving: 4,
-    selfMotivated: 2,
-    multiTasking: 4,
-    seniorStakeholderManagement: 4,
-    teamWork: 4,
-    reportWriting: 4,
-    excel: 3,
-    strategy: 3,
-    marketing: 2,
-    finance: 2,
-    technology: 2,
-    hr: 3,
-    operations: 2,
-  },
-  {
-    "Short term goal": "Investment Banking",
-    innovativeThinking: 2,
-    problemSolving: 4,
-    selfMotivated: 3,
-    multiTasking: 2,
-    seniorStakeholderManagement: 3,
-    teamWork: 3,
-    reportWriting: 3,
-    excel: 4,
-    strategy: 2,
-    marketing: 2,
-    finance: 4,
-    technology: 2,
-    hr: 2,
-    operations: 2,
-  },
-  {
-    "Short term goal": "Sales and marketing",
-    innovativeThinking: 3,
-    problemSolving: 3,
-    selfMotivated: 3,
-    multiTasking: 3,
-    seniorStakeholderManagement: 3,
-    teamWork: 3,
-    reportWriting: 2,
-    excel: 3,
-    strategy: 2,
-    marketing: 4,
-    finance: 3,
-    technology: 3,
-    hr: 2,
-    operations: 2,
-  },
-  {
-    "Short term goal": "Senior Manager",
-    innovativeThinking: 2,
-    problemSolving: 3,
-    selfMotivated: 3,
-    multiTasking: 3,
-    seniorStakeholderManagement: 2,
-    teamWork: 4,
-    reportWriting: 2,
-    excel: 3,
-    strategy: 2,
-    marketing: 2,
-    finance: 2,
-    technology: 2,
-    hr: 2,
-    operations: 2,
-  },
-];
+    const shortTermDataSource = [
+      {
+        "Short term goal": "Own business",
+        innovativeThinking: 4,
+        problemSolving: 4,
+        selfMotivated: 4,
+        multiTasking: 4,
+        seniorStakeholderManagement: 4,
+        teamWork: 3,
+        reportWriting: 4,
+        excel: 3,
+        strategy: 4,
+        marketing: 4,
+        finance: 2,
+        technology: 2,
+        hr: 2,
+        operations: 2,
+      },
+      {
+        "Short term goal": "Product Manager",
+        innovativeThinking: 3,
+        problemSolving: 4,
+        selfMotivated: 3,
+        multiTasking: 3,
+        seniorStakeholderManagement: 3,
+        teamWork: 4,
+        reportWriting: 4,
+        excel: 2,
+        strategy: 3,
+        marketing: 2,
+        finance: 3,
+        technology: 2,
+        hr: 2,
+        operations: 3,
+      },
+      {
+        "Short term goal": "Management Consulting",
+        innovativeThinking: 2,
+        problemSolving: 4,
+        selfMotivated: 2,
+        multiTasking: 4,
+        seniorStakeholderManagement: 4,
+        teamWork: 4,
+        reportWriting: 4,
+        excel: 3,
+        strategy: 3,
+        marketing: 2,
+        finance: 2,
+        technology: 2,
+        hr: 3,
+        operations: 2,
+      },
+      {
+        "Short term goal": "Investment Banking",
+        innovativeThinking: 2,
+        problemSolving: 4,
+        selfMotivated: 3,
+        multiTasking: 2,
+        seniorStakeholderManagement: 3,
+        teamWork: 3,
+        reportWriting: 3,
+        excel: 4,
+        strategy: 2,
+        marketing: 2,
+        finance: 4,
+        technology: 2,
+        hr: 2,
+        operations: 2,
+      },
+      {
+        "Short term goal": "Sales and marketing",
+        innovativeThinking: 3,
+        problemSolving: 3,
+        selfMotivated: 3,
+        multiTasking: 3,
+        seniorStakeholderManagement: 3,
+        teamWork: 3,
+        reportWriting: 2,
+        excel: 3,
+        strategy: 2,
+        marketing: 4,
+        finance: 3,
+        technology: 3,
+        hr: 2,
+        operations: 2,
+      },
+      {
+        "Short term goal": "Senior Manager",
+        innovativeThinking: 2,
+        problemSolving: 3,
+        selfMotivated: 3,
+        multiTasking: 3,
+        seniorStakeholderManagement: 2,
+        teamWork: 4,
+        reportWriting: 2,
+        excel: 3,
+        strategy: 2,
+        marketing: 2,
+        finance: 2,
+        technology: 2,
+        hr: 2,
+        operations: 2,
+      },
+    ];
     // Find the matching short term goal data
     const selectedShortTermGoalData = shortTermDataSource?.find(
       (goalData) =>
-      goalData["Short term goal"] === storedGoalsInput?.shortTermGoals
-      );
-      
-      console.log("🚀 ~ file: index.js:247 ~ useEffect ~ selectedShortTermGoalData:", selectedShortTermGoalData)
+        goalData["Short term goal"] === storedGoalsInput?.shortTermGoals
+    );
+
+    console.log(
+      "🚀 ~ file: index.js:247 ~ useEffect ~ selectedShortTermGoalData:",
+      selectedShortTermGoalData
+    );
     if (selectedShortTermGoalData) {
       // Calculate the short term goal values
       const shortTermGoalValues = {};
@@ -304,12 +305,22 @@ const shortTermDataSource = [
       <div>
         <div>
           <h2 className="my-3">Application strategy</h2>
-          <table style={{ borders: "none" }} className="skill-matrix">
+          <table style={{width:"100%"}}>
             <thead>
               <tr>
-                <th>The skills you need to develop </th>
-                <th>Based on long term goals</th>
-                <th>Based on short term goals</th>
+                {isMobile ? (
+                  <>
+                    {" "}
+                    <th>Skills </th> <th>Long Term </th>
+                    <th>Short Term </th>{" "}
+                  </>
+                ) : (
+                  <>
+                    <th>The skills you need to develop </th>{" "}
+                    <th>Based on long term goals</th>
+                    <th>Based on short term goals</th>
+                  </>
+                )}
               </tr>
             </thead>
             <tbody>

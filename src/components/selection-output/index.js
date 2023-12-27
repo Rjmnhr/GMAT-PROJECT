@@ -184,8 +184,8 @@ const SelectionOutput = ({ data, totalValues }) => {
 
   return (
     <>
-      <div className="container m-0 p-0 d-lg-flex justify-content-center align-items-center table-container">
-        <div className="col-12 ">
+      <div className="container m-0 p-0 d-lg-flex  justify-content-center align-items-center table-container">
+        <div className="col-12  ">
           <table style={{ width: "100%" }} className="table styled-table">
             <thead>
               <tr>
@@ -233,60 +233,62 @@ const SelectionOutput = ({ data, totalValues }) => {
               </tr>
             </tbody>
           </table>
-          <div className="legend container">
-            <div style={{ textAlign: "left", marginTop: "20px" }}>
-              <div className="d-flex  mb-1 justify-content-lg-start justify-content-between align-items-center">
-                <div
-                  style={{
-                    backgroundColor: "#00aaa4",
-                    width: "40px",
-                    height: "20px",
-                    display: "inline-block",
-                  }}
-                ></div>
-                <div
-                  style={{
-                    marginLeft: "5px",
-                    fontSize: `${isMobile ? "14px" : "18px"}`,
-                  }}
-                >
-                  You are competitive in that group
+          <div style={{ marginBottom: `${isMobile ? "5rem" : "0"}` }}>
+            <div className="legend container ">
+              <div style={{ textAlign: "left", marginTop: "20px" }}>
+                <div className="d-flex  mb-1 justify-content-lg-start justify-content-between align-items-center">
+                  <div
+                    style={{
+                      backgroundColor: "#00aaa4",
+                      width: "40px",
+                      height: "20px",
+                      display: "inline-block",
+                    }}
+                  ></div>
+                  <div
+                    style={{
+                      marginLeft: "5px",
+                      fontSize: `${isMobile ? "14px" : "18px"}`,
+                    }}
+                  >
+                    You are competitive in that group
+                  </div>
                 </div>
-              </div>
-              <div className="d-flex mb-1 justify-content-lg-start justify-content-between align-items-center">
-                <div
-                  style={{
-                    backgroundColor: "#0c6eab",
-                    width: "40px",
-                    height: "20px",
-                    display: "inline-block",
-                  }}
-                ></div>
-                <div
-                  style={{
-                    marginLeft: "5px",
-                    fontSize: `${isMobile ? "14px" : "18px"}`,
-                  }}
-                >
-                  You may be admitted to the group.
+                <div className="d-flex mb-1 justify-content-lg-start justify-content-between align-items-center">
+                  <div
+                    style={{
+                      backgroundColor: "#0c6eab",
+                      width: "40px",
+                      height: "20px",
+                      display: "inline-block",
+                    }}
+                  ></div>
+                  <div
+                    style={{
+                      marginLeft: "5px",
+                      fontSize: `${isMobile ? "14px" : "18px"}`,
+                    }}
+                  >
+                    You may be admitted to the group.
+                  </div>
                 </div>
-              </div>
-              <div className="d-flex  mb-1 justify-content-lg-start justify-content-between align-items-center">
-                <div
-                  style={{
-                    backgroundColor: "#f8a66e",
-                    width: "40px",
-                    height: "20px",
-                    display: "inline-block",
-                  }}
-                ></div>
-                <div
-                  style={{
-                    marginLeft: "5px",
-                    fontSize: `${isMobile ? "14px" : "18px"}`,
-                  }}
-                >
-                  You are not competitive in that group
+                <div className="d-flex  mb-1 justify-content-lg-start justify-content-between align-items-center">
+                  <div
+                    style={{
+                      backgroundColor: "#f8a66e",
+                      width: "40px",
+                      height: "20px",
+                      display: "inline-block",
+                    }}
+                  ></div>
+                  <div
+                    style={{
+                      marginLeft: "5px",
+                      fontSize: `${isMobile ? "14px" : "18px"}`,
+                    }}
+                  >
+                    You are not competitive in that group
+                  </div>
                 </div>
               </div>
             </div>

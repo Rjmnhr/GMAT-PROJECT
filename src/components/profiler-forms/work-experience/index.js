@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Form, Card, Tooltip } from "antd";
 import { BasicDetailsFormStyled } from "../basic-details/style";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 const companySizeOptions = [
   {
@@ -29,7 +30,13 @@ const companySizeOptions = [
   },
 ];
 
-const WorkExperienceForm = ({ onUpdateProgress, onFormValidation }) => {
+const WorkExperienceForm = ({
+  onUpdateProgress,
+  onFormValidation,
+  nextTabMobile,
+  prevTabMobile,
+}) => {
+  const [isMobile, setIsMobile] = useState(false);
   const [selectedType, setSelectedType] = useState(
     JSON.parse(sessionStorage.getItem("experience"))?.type
   );
@@ -39,6 +46,24 @@ const WorkExperienceForm = ({ onUpdateProgress, onFormValidation }) => {
   const [selectedCompanySize, setSelectedCompanySize] = useState(
     JSON.parse(sessionStorage.getItem("experience"))?.companySize
   );
+
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     // Store default values in session storage when the component is rendered for the first time
@@ -105,7 +130,7 @@ const WorkExperienceForm = ({ onUpdateProgress, onFormValidation }) => {
   return (
     <>
       <BasicDetailsFormStyled>
-        <div className={` p-0 p-lg-3 col-lg-10  container`}>
+        <div className={` p-0 p-lg-3 col-lg-10  container`} data-aos="fade-left">
           <Form className="p-0" name="workExperienceForm">
             <div className="d-lg-flex align-items-start justify-content-between">
               <div>
@@ -184,6 +209,35 @@ const WorkExperienceForm = ({ onUpdateProgress, onFormValidation }) => {
               </div>
             </div>
           </Form>
+          {isMobile ? (
+            <div className=" mt-5 ">
+              {selectedCompanySize &&
+              selectedGeographicalReach &&
+              selectedType ? (
+                <button
+                  onClick={nextTabMobile}
+                  className="btn btn-lg btn-primary  w-50 d-flex w-100  mb-3 justify-content-between align-items-center"
+                >
+                  Next <ArrowRightOutlined />{" "}
+                </button>
+              ) : (
+                <button
+                  disabled
+                  className="btn btn-lg btn-primary w-50 d-flex w-100 mb-3  justify-content-between  align-items-center"
+                >
+                  Next <ArrowRightOutlined />
+                </button>
+              )}
+              <button
+                className="btn border btn-lg w-50 d-flex justify-content-between w-100   align-items-center"
+                onClick={prevTabMobile}
+              >
+                <ArrowLeftOutlined /> Back
+              </button>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </BasicDetailsFormStyled>
     </>

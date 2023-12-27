@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Form, Carousel } from "antd";
+import React, { useEffect, useState } from "react";
+import { Form, Tabs } from "antd";
 
 import { StarFilled, StarOutlined } from "@ant-design/icons";
 
@@ -161,7 +161,7 @@ const PreferenceForm = ({ onSubmit }) => {
       <Form onFinish={onFinish}>
         <div
           style={{ height: "60vh", overflowY: "scroll" }}
-          className="container-fluid scrollable-container"
+          className="container-fluid p-0 mt-3 mt-lg-2 scrollable-container d-lg-flex align-items-center justify-content-between flex-wrap mt-5"
         >
           {options.map((option) => (
             <div
@@ -172,7 +172,9 @@ const PreferenceForm = ({ onSubmit }) => {
                 alignItems: "center",
               }}
               key={option.label}
-              className="star-rating-container w-100"
+              className={`star-rating-container  ${
+                isMobile ? "w-100" : "w-50"
+              } `}
             >
               <div
                 style={{
@@ -190,7 +192,7 @@ const PreferenceForm = ({ onSubmit }) => {
             </div>
           ))}
         </div>
-        <div className="my-3 text-center" style={{ width: "100%" }}>
+        <div className="mt-3 text-center" style={{ width: "100%" ,marginBottom:"6rem"}}>
           <button
             htmlType="submit"
             className={`btn btn-lg btn-primary ${isMobile ? "w-75" : "w-25"}  `}
@@ -204,56 +206,47 @@ const PreferenceForm = ({ onSubmit }) => {
   );
 };
 
+const { TabPane } = Tabs;
+
 const ApplicationStrategyPage = () => {
   const formFilled = sessionStorage.getItem("form-filled-application");
-  const [currentStep, setCurrentStep] = useState(formFilled === "true" ? 1 : 0);
+  const [currentStep, setCurrentStep] = useState(
+    formFilled === "true" ? "1" : "0"
+  );
 
-  const carouselRef = useRef(null);
-
-  useEffect(() => {
-    if (formFilled === "true" && carouselRef.current) {
-      carouselRef.current.goTo(1);
-    }
-  }, [formFilled]);
-
-  const handleNext = () => {
-    carouselRef.current.next();
+  const handleTabChange = (key) => {
+    setCurrentStep(key);
   };
 
   const handleTryAgain = () => {
-    sessionStorage.setItem("form-filled-application", false);
-    carouselRef.current.goTo(0);
-    setCurrentStep(0);
+    sessionStorage.setItem("form-filled-application", "false");
+    setCurrentStep("0");
   };
 
   return (
-    <div className="container-fluid">
-      <Carousel
-        ref={carouselRef}
-        dotPosition="bottom"
-        afterChange={(index) => setCurrentStep(index)}
-        beforeChange={() => {}}
-        current={currentStep}
-        dots={null}
+    <div className="container-fluid p-0">
+      <Tabs
+        tabBarStyle={{ display: "none" }}
+        activeKey={currentStep}
+        onChange={handleTabChange}
       >
-        <div>
-          <PreferenceForm onSubmit={handleNext} />
-        </div>
-
-        <div>
-          {currentStep === 1 && <ApplicationStrategyOutput />}
-          {currentStep === 1 && (
-            <div className="mb-3  mb-lg-0">
+        <TabPane tab="Preference Form" key="0">
+          <PreferenceForm onSubmit={() => setCurrentStep("1")} />
+        </TabPane>
+        <TabPane tab="Application Strategy Output" key="1">
+          <ApplicationStrategyOutput />
+          <div className="mb-lg-0" style={{ marginBottom: "8rem" }}>
+            {currentStep === "1" && (
               <button
-                className="btn-primary btn btn-lg mb-5 mt-lg-3 mb-lg-3"
+                className="btn-primary btn btn-lg mt-3 mb-lg-3"
                 onClick={handleTryAgain}
               >
                 Try filling form again
               </button>
-            </div>
-          )}
-        </div>
-      </Carousel>
+            )}
+          </div>
+        </TabPane>
+      </Tabs>
     </div>
   );
 };

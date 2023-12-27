@@ -1,6 +1,7 @@
 import { Card, Form } from "antd";
 import { useEffect, useState } from "react";
 import { BasicDetailsFormStyled } from "../basic-details/style";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 const longTermGoalsOptions = [
   {
@@ -53,7 +54,12 @@ const shortTermGoalsOptions = [
     label: "Senior Manager",
   },
 ];
-const GoalsForm = ({ onUpdateProgress, onFormValidation }) => {
+const GoalsForm = ({
+  onUpdateProgress,
+  onFormValidation,
+  nextTabMobile,
+  prevTabMobile,
+}) => {
   const [selectedLongTerm, setSelectedLongTerm] = useState(
     JSON.parse(sessionStorage.getItem("goalsInputObject"))?.longTermGoals
   );
@@ -121,66 +127,80 @@ const GoalsForm = ({ onUpdateProgress, onFormValidation }) => {
   };
 
   return (
-    
     <BasicDetailsFormStyled>
-    <div className="col-lg-10 p-0 p-lg-3 ">
-      <Form className="p-0" name="basicDetailsForm">
-       
+      <div className="col-lg-10 p-0 p-lg-3 ">
+        <Form className="p-0" name="basicDetailsForm">
           <div>
-            
-          <h5 className="text-left mb-2">Long Term Goals </h5>
-          <div className="college-cards">
-                   {longTermGoalsOptions.map((option) => (
-                    <Card
-                      className={`college-card ${
-                        selectedLongTerm === option.label ? "selected-card" : ""
-                      }`}
-                      key={option.label}
-                      onClick={() =>
-                        handleCardClick("longTermGoals", option.label)
-                      }
-                      style={{
-                        width: `${isMobile ? "100%" : ""}`,
-                      }}
-                    >
-                      <p>{option.value}</p>
-                    </Card>
-                  ))}
-                </div>
+            <h5 className="text-left mb-2">Long Term Goals </h5>
+            <div className="college-cards">
+              {longTermGoalsOptions.map((option) => (
+                <Card
+                  className={`college-card ${
+                    selectedLongTerm === option.label ? "selected-card" : ""
+                  }`}
+                  key={option.label}
+                  onClick={() => handleCardClick("longTermGoals", option.label)}
+                  style={{
+                    width: `${isMobile ? "100%" : ""}`,
+                  }}
+                >
+                  <p>{option.value}</p>
+                </Card>
+              ))}
+            </div>
           </div>
           <div>
-        
-          <h5 className="text-left mb-2">Short Term Goals </h5>
-        
-          <div className="college-cards">
-                   {shortTermGoalsOptions.map((option) => (
-                    <Card
-                      className={`college-card ${
-                        selectedShortTerm === option.label
-                          ? "selected-card"
-                          : ""
-                      }`}
-                      key={option.label}
-                      onClick={() =>
-                        handleCardClick("shortTermGoals", option.label)
-                      }
-                      style={{
-                        width: `${isMobile ? "100%" : ""}`,
-                      }}
-                    >
-                      <p>{option.value}</p>
-                    </Card>
-                  ))}
-                </div>
-             
-        
+            <h5 className="text-left mb-2">Short Term Goals </h5>
 
+            <div className="college-cards">
+              {shortTermGoalsOptions.map((option) => (
+                <Card
+                  className={`college-card ${
+                    selectedShortTerm === option.label ? "selected-card" : ""
+                  }`}
+                  key={option.label}
+                  onClick={() =>
+                    handleCardClick("shortTermGoals", option.label)
+                  }
+                  style={{
+                    width: `${isMobile ? "100%" : ""}`,
+                  }}
+                >
+                  <p>{option.value}</p>
+                </Card>
+              ))}
+            </div>
           </div>
-      
-      </Form>
-    </div>
-  </BasicDetailsFormStyled>
-    
+        </Form>
+        {isMobile ? (
+          <div className=" mt-5mb-3">
+            {selectedLongTerm && selectedShortTerm ? (
+              <button
+                onClick={nextTabMobile}
+                className="btn btn-lg btn-primary  w-50 d-flex w-100  mb-3 justify-content-between align-items-center"
+              >
+                Next <ArrowRightOutlined />{" "}
+              </button>
+            ) : (
+              <button
+                disabled
+                className="btn btn-lg btn-primary w-50 d-flex w-100 mb-3  justify-content-between  align-items-center"
+              >
+                Next <ArrowRightOutlined />
+              </button>
+            )}
+            <button
+              className="btn border btn-lg w-50 d-flex justify-content-between w-100   align-items-center"
+              onClick={prevTabMobile}
+            >
+              <ArrowLeftOutlined /> Back
+            </button>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
+    </BasicDetailsFormStyled>
   );
 };
 

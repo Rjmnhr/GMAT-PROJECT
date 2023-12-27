@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, Form, Tooltip } from "antd";
 import { BasicDetailsFormStyled } from "../basic-details/style";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 const ActivityOptions = [
   {
@@ -56,7 +57,7 @@ const YearsOptions = [
   { value: ">=5", label: ">= 5", description: "5 years or more" },
 ];
 
-const CommunityServiceForm = ({ onUpdateProgress, onFormValidation }) => {
+const CommunityServiceForm = ({ onUpdateProgress, onFormValidation,nextTabMobile,prevTabMobile }) => {
   const [selectedActivity, setSelectedActivity] = useState(
     JSON.parse(sessionStorage.getItem("service"))?.natureOfActivity
   );
@@ -66,6 +67,24 @@ const CommunityServiceForm = ({ onUpdateProgress, onFormValidation }) => {
   const [selectedYears, setSelectedYears] = useState(
     JSON.parse(sessionStorage.getItem("service"))?.yearsOfInvolvement
   );
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add an event listener to handle window resizing
+    window.addEventListener("resize", handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleCardClick = (key, value) => {
     if (key === "natureOfActivity") {
@@ -176,6 +195,33 @@ const CommunityServiceForm = ({ onUpdateProgress, onFormValidation }) => {
               ))}
             </div>
           </Form>
+          {isMobile ? (
+            <div className=" mt-5 ">
+              {selectedActivity && selectedContribution && selectedYears ? (
+                <button
+                  onClick={nextTabMobile}
+                  className="btn btn-lg btn-primary  w-50 d-flex w-100  mb-3 justify-content-between align-items-center"
+                >
+                  Next <ArrowRightOutlined />{" "}
+                </button>
+              ) : (
+                <button
+                  disabled
+                  className="btn btn-lg btn-primary w-50 d-flex w-100 mb-3  justify-content-between  align-items-center"
+                >
+                  Next <ArrowRightOutlined />
+                </button>
+              )}
+              <button
+                className="btn border btn-lg w-50 d-flex justify-content-between w-100   align-items-center"
+                onClick={prevTabMobile}
+              >
+                <ArrowLeftOutlined /> Back
+              </button>
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </BasicDetailsFormStyled>
     </>

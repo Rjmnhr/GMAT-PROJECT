@@ -14,46 +14,6 @@ import SelectionOutput from "../../components/selection-output";
 import PreferenceAndGoalsPage from "../prefernece_and_goals_page";
 import ApplicationStrategyPage from "../application-strategy-page";
 import AdmissionTips from "../../components/tips-component";
-// import sticker from "../../icons/businessman.png";
-
-// const BarChartExample = ({ data }) => {
-//   const categories = ["Top 10", "11-20", "21-40", "41-60", "61-80", "81-100"];
-
-//   const getColor = (value) => {
-//     if (value < 0.3) {
-//       return "#f74a64"; // Light red for values less than 0.3
-//     } else if (value >= 0.3 && value <= 0.5) {
-//       return "#97c8d9"; // Light orange for values between 0.3 and 0.5
-//     } else {
-//       return "#99ff99"; // Light green for values greater than 0.5
-//     }
-//   };
-
-//   return (
-//     <ResponsiveContainer width="100%" height={400}>
-//       <BarChart
-//         data={data}
-//         margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
-//         layout="vertical"
-//       >
-//         <CartesianGrid strokeDasharray="3 3" />
-//         <XAxis type="number" tickFormatter={(value) => `${value}%`} />
-//         <YAxis dataKey="factor" type="category" />
-//         <Tooltip formatter={(value) => `${value}%`} />
-//         <Legend />
-//         {categories.map((category, index) => (
-//           <Bar
-//             key={category}
-//             dataKey={`values[${index}]`}
-//             stackId="a"
-//             fill={getColor(data[index].values[index])}
-//             name={category} // Added to display category names in the legend
-//           />
-//         ))}
-//       </BarChart>
-//     </ResponsiveContainer>
-//   );
-// };
 
 const ChancesOfSelection = () => {
   const storedBasicDetails = JSON.parse(
@@ -431,6 +391,11 @@ const ChancesOfSelection = () => {
       nonTechnicalHRLeadershipValueGeneral +
       commercialTechnicalLeadershipValueGeneral +
       commercialGeneralistLeadershipValueGeneral;
+    console.log(
+      "🚀 ~ file: index.js:422 ~ calculateExperienceIndividualValue ~ totalGeneralValue:",
+      totalGeneralValue
+    );
+
     sessionStorage.setItem("experience_general_value", totalGeneralValue);
     const nonTechnicalITTotal =
       nonTechnicalITIndividualValue +
@@ -677,15 +642,16 @@ const ChancesOfSelection = () => {
     {
       label: "Selection Chance",
       icon: <RadarChartOutlined />,
+      mobileLabel:"Selection"
     },
-    { label: "College Shortlisting", icon: <BankOutlined /> },
-    { label: "Application Strategy", icon: <AppstoreAddOutlined /> },
-    { label: "Tips", icon: <BulbOutlined /> },
+    { label: "College Shortlisting", icon: <BankOutlined /> , mobileLabel:"College"},
+    { label: "Application Strategy", icon: <AppstoreAddOutlined />, mobileLabel:"Strategy" },
+    { label: "Tips", icon: <BulbOutlined /> ,mobileLabel:"Tips" },
   ];
   useEffect(() => {
     // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 912);
     };
 
     // Add an event listener to handle window resizing
@@ -723,18 +689,18 @@ const ChancesOfSelection = () => {
                     key={tab.label}
                     style={{
                       cursor: "pointer",
-                      borderBottom: "1px solid #c9c8c7",
-                      fontWeight: "bold",
+                   
+                  
                     }}
                     onClick={() => {
                       setSelectedTab(tab.label);
                       setActiveIndex(index);
                     }}
-                    className={` p-3 w-100 m-0 cursor-pointer text-left ${
+                    className={` p-3 w-100 m-0 cursor-pointer ${isMobile ? "text-center" : "text-left"} ${
                       selectedTab === tab.label ? "selected-tab" : ""
                     }`}
                   >
-                    {isMobile ? tab.icon : tab.label}
+                    {isMobile ? <>{tab.icon }<br/><span style={{fontSize:"14px"}}>{tab.mobileLabel}</span></>  : tab.label}
                   </p>
                 );
               })}
@@ -743,13 +709,14 @@ const ChancesOfSelection = () => {
           <div className="output-container container pt-3 col-lg-10 col-12">
             {activeIndex === 0 ? (
               <div>
-                <div className="section-title">
-                  <h2>Chances of selection</h2>
+                <div className="mb-5">
+                  
+                  <h3><strong>Chances of selection</strong></h3>  
                 </div>
                 {data?.length > 1 && totalValues?.length > 1 ? (
                   <div
                     className="scrollable-container"
-                    style={{ height: "70vh", overflowY: "scroll" }}
+                    style={{ height: "75vh", overflowY: "scroll" }}
                   >
                     <SelectionOutput data={data} totalValues={totalValues} />{" "}
                   </div>

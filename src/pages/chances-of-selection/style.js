@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const ChancesOfSelectionStyled = styled.div`
   .selected-tab {
-    background-color: #049494 !important;
-    color: white;
+    border-left: 5px solid #049494;
+    color: #049494 !important;
   }
   table {
     border-collapse: collapse;
@@ -183,7 +183,7 @@ export const ChancesOfSelectionStyled = styled.div`
   }
 
   /* Add responsive styles using media queries as needed */
-  @media (max-width: 600px) {
+  @media (max-width: 912px) {
     th,
     td {
       font-size: 14px;
@@ -192,6 +192,11 @@ export const ChancesOfSelectionStyled = styled.div`
     th {
       background-color: #f2f2f2;
       font-weight: bold;
+    }
+    .selected-tab {
+      border-left: none;
+      border-bottom: 5px solid #049494;
+      color: #049494 !important;
     }
   }
 `;

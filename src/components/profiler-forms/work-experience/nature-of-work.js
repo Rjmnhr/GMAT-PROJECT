@@ -7,6 +7,7 @@ import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
 
 const initialValues = {};
 const keys = [1, 2, 3, 4];
@@ -17,11 +18,17 @@ keys.forEach((key) => {
   initialValues[`${key}_leadershipManagerial`] = "N/A";
 });
 
-const NatureOfWorkForm = ({ onUpdateProgress, onFormValidation }) => {
+const NatureOfWorkForm = ({
+  onUpdateProgress,
+  onFormValidation,
+  prevTabMobile,
+  nextTabMobile,
+}) => {
   const [expanded, setExpanded] = useState(Array(keys.length).fill(false));
   const [fieldsValue, setFieldsValue] = useState(
     JSON.parse(sessionStorage.getItem("natureExperience")) || {}
   );
+const numberOfPairs = Object.keys(fieldsValue).length
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
@@ -271,7 +278,7 @@ const NatureOfWorkForm = ({ onUpdateProgress, onFormValidation }) => {
 
   return (
     <BasicDetailsFormStyled>
-      <div className={`container-fluid`}>
+      <div className={`container-fluid`} data-aos="fade-left">
         <Form name="natureOfExperience" initialValues={initialValues}></Form>
         {dataSource.map((item, index) => (
           <Card className="mb-3" key={index}>
@@ -346,6 +353,36 @@ const NatureOfWorkForm = ({ onUpdateProgress, onFormValidation }) => {
             </Collapse>
           </Card>
         ))}
+
+        {isMobile ? (
+          <div className=" mt-5 ">
+            {numberOfPairs > 0 ? (
+              <button
+                onClick={nextTabMobile}
+                className="btn btn-lg btn-primary  w-50 d-flex w-100  mb-3 justify-content-between align-items-center"
+              >
+                Next <ArrowRightOutlined />{" "}
+              </button>
+            ) : (
+              <button
+                disabled
+                onClick={nextTabMobile}
+                className="btn btn-lg btn-primary  w-50 d-flex w-100  mb-3 justify-content-between align-items-center"
+              >
+                Next <ArrowRightOutlined />{" "}
+              </button>
+            )}
+
+            <button
+              className="btn border btn-lg w-50 d-flex justify-content-between w-100   align-items-center"
+              onClick={prevTabMobile}
+            >
+              <ArrowLeftOutlined /> Back
+            </button>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </BasicDetailsFormStyled>
   );

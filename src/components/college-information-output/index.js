@@ -1031,10 +1031,10 @@ const CollegeInformationOutput = () => {
     <CollegeInformationOutputStyled>
       <div>
         {topSchoolsSafe && topSchoolsAchievable && topSchoolsStretch ? (
-          <div className="section-title">
-            <h2>College information</h2>
+          <div>
+            <h3 lassName="mb-5"><strong>College Information</strong></h3>
             <div className="d-lg-flex">
-              <div className="col-lg-6 col-12">
+              <div className="col-lg-6 p-0 p-lg-2 col-12">
                 <h5 className="mb-3 mt-3 text-left">
                   Top colleges based on FT rankings
                 </h5>
@@ -1159,7 +1159,7 @@ const CollegeInformationOutput = () => {
                   })}
                 </div>
               </div>
-              <div className="col-lg-6 col-12">
+              <div className="col-lg-6 p-0 p-lg-2 col-12">
                 <h5 className="mb-3 mt-3 text-left">
                   Top colleges based on your background
                 </h5>

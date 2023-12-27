@@ -26,6 +26,7 @@ const ProfilerPage = () => {
   const totalQuestions = 28;
   const storedProgress =
     parseInt(sessionStorage.getItem("totalNonEmptyCount")) || 0;
+
   const handleSaveAndContinue = () => {
     try {
       updateFormValues("basic-details");
@@ -49,7 +50,15 @@ const ProfilerPage = () => {
     const defaultValues = JSON.parse(
       sessionStorage.getItem(`${formName}-default`)
     );
+    console.log(
+      "🚀 ~ file: index.js:53 ~ updateFormValues ~ defaultValues:",
+      defaultValues
+    );
     const currentValues = JSON.parse(sessionStorage.getItem(formName));
+    console.log(
+      "🚀 ~ file: index.js:54 ~ updateFormValues ~ currentValues:",
+      currentValues
+    );
 
     // Check if all keys from defaultValues are present in currentValues
     const missingKeys = Object.keys(defaultValues).filter(
@@ -144,7 +153,7 @@ const ProfilerPage = () => {
       sessionStorage.getItem(`${formName}-default`)
     );
     const currentValues = JSON.parse(sessionStorage.getItem(formName));
-    if (defaultValues) {
+    if (defaultValues && !isMobile) {
       const missingKeys = Object.keys(defaultValues).filter(
         (key) => !currentValues.hasOwnProperty(key)
       );
@@ -199,7 +208,7 @@ const ProfilerPage = () => {
         sessionStorage.removeItem(`${formName}-filled`);
       }
     }
-    // Chec)k if all keys from defaultValues are present in currentValues
+    // Check if all keys from defaultValues are present in currentValues
   };
   const checkServiceAndHobbiesForms = () => {
     // Check if both "service" and "hobbies" forms are filled
@@ -229,6 +238,18 @@ const ProfilerPage = () => {
       } else {
         return false;
       }
+    }
+  };
+  const handleNextTabMobile = () => {
+    if (activeTab < 6) {
+      setActiveTab((prev) => prev + 1);
+    } else {
+      handleSaveAndContinue();
+    }
+  };
+  const handlePrevTabMobile = () => {
+    if (activeTab > 0) {
+      setActiveTab((prev) => prev - 1);
     }
   };
   return (
@@ -261,7 +282,7 @@ const ProfilerPage = () => {
                   percent={overAllProgress}
                   strokeColor={twoColors}
                 /> */}
-                <span className="text-primary " style={{ fontWeight: "bold", }}>
+                <span className="text-primary " style={{ fontWeight: "bold" }}>
                   Answered{" "}
                   {storedProgress > totalNonEmptyCountValue
                     ? storedProgress
@@ -292,8 +313,18 @@ const ProfilerPage = () => {
               <Tab label="Basic Details" />
               <Tab label="Work Experience" />
               <Tab label="Nature of Experience" />
+
               <Tab label="Undergraduate Degree" />
-              <Tab label="Service & Hobbies" />
+
+              {isMobile ? (
+                <>
+                  <Tab label="Service" />
+                  <Tab label="Hobbies" />
+                </>
+              ) : (
+                <Tab label="Service & Hobbies" />
+              )}
+
               <Tab label="Goals" />
             </Tabs>
             <TabPanel value={activeTab} index={0}>
@@ -301,6 +332,7 @@ const ProfilerPage = () => {
                 <BasicDetailsForm
                   onUpdateProgress={handleUpdateProgress}
                   onFormValidation={handleFormValidation}
+                  nextTabMobile={handleNextTabMobile}
                 />
               </div>
             </TabPanel>
@@ -309,6 +341,8 @@ const ProfilerPage = () => {
                 <WorkExperienceForm
                   onUpdateProgress={handleUpdateProgress}
                   onFormValidation={handleFormValidation}
+                  nextTabMobile={handleNextTabMobile}
+                  prevTabMobile={handlePrevTabMobile}
                 />
               </div>
             </TabPanel>
@@ -320,6 +354,8 @@ const ProfilerPage = () => {
                 <NatureOfWorkForm
                   onUpdateProgress={handleUpdateProgress}
                   onFormValidation={handleFormValidation}
+                  nextTabMobile={handleNextTabMobile}
+                  prevTabMobile={handlePrevTabMobile}
                 />
               </div>
             </TabPanel>
@@ -328,42 +364,91 @@ const ProfilerPage = () => {
                 <UndergraduateDegreeForm
                   onUpdateProgress={handleUpdateProgress}
                   onFormValidation={handleFormValidation}
+                  nextTabMobile={handleNextTabMobile}
+                  prevTabMobile={handlePrevTabMobile}
                 />
               </div>
             </TabPanel>
-            <TabPanel value={activeTab} index={4}>
-              <div
-                style={{
-                  minHeight: "70vh",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "start",
-                }}
-              >
-                <div>
-                  <h3 className="text-left pl-3 mb-3">Community Services</h3>
-                  <CommunityServiceForm
-                    onUpdateProgress={handleUpdateProgress}
-                    onFormValidation={handleFormValidation}
-                  />
-                </div>
-                <div>
-                  <h3 className="text-left pl-3 mb-3">Hobbies</h3>
-                  <HobbiesForm
-                    onUpdateProgress={handleUpdateProgress}
-                    onFormValidation={handleFormValidation}
-                  />
-                </div>
-              </div>
-            </TabPanel>
-            <TabPanel value={activeTab} index={5}>
-              <div style={{ minHeight: "70vh" }}>
-                <GoalsForm
-                  onUpdateProgress={handleUpdateProgress}
-                  onFormValidation={handleFormValidation}
-                />
-              </div>
-            </TabPanel>
+            {isMobile ? (
+              <>
+                {" "}
+                <TabPanel value={activeTab} index={4}>
+                  <div style={{ minHeight: "70vh" }}>
+                    <CommunityServiceForm
+                      onUpdateProgress={handleUpdateProgress}
+                      onFormValidation={handleFormValidation}
+                      nextTabMobile={handleNextTabMobile}
+                      prevTabMobile={handlePrevTabMobile}
+                    />
+                  </div>
+                </TabPanel>
+                <TabPanel value={activeTab} index={5}>
+                  <div style={{ minHeight: "70vh" }}>
+                    <HobbiesForm
+                      onUpdateProgress={handleUpdateProgress}
+                      onFormValidation={handleFormValidation}
+                      nextTabMobile={handleNextTabMobile}
+                      prevTabMobile={handlePrevTabMobile}
+                    />
+                  </div>
+                </TabPanel>
+                <TabPanel value={activeTab} index={6}>
+                  <div style={{ minHeight: "70vh" }}>
+                    <GoalsForm
+                      onUpdateProgress={handleUpdateProgress}
+                      onFormValidation={handleFormValidation}
+                      nextTabMobile={handleNextTabMobile}
+                      prevTabMobile={handlePrevTabMobile}
+                    />
+                  </div>
+                </TabPanel>
+              </>
+            ) : (
+              <>
+                {" "}
+                <TabPanel value={activeTab} index={4}>
+                  <div
+                    style={{
+                      minHeight: "70vh",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "start",
+                    }}
+                  >
+                    <div>
+                      <h3 className="text-left pl-3 mb-3">
+                        Community Services
+                      </h3>
+                      <CommunityServiceForm
+                        onUpdateProgress={handleUpdateProgress}
+                        onFormValidation={handleFormValidation}
+                        nextTabMobile={handleNextTabMobile}
+                        prevTabMobile={handlePrevTabMobile}
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-left pl-3 mb-3">Hobbies</h3>
+                      <HobbiesForm
+                        onUpdateProgress={handleUpdateProgress}
+                        onFormValidation={handleFormValidation}
+                        nextTabMobile={handleNextTabMobile}
+                        prevTabMobile={handlePrevTabMobile}
+                      />
+                    </div>
+                  </div>
+                </TabPanel>
+                <TabPanel value={activeTab} index={5}>
+                  <div style={{ minHeight: "70vh" }}>
+                    <GoalsForm
+                      onUpdateProgress={handleUpdateProgress}
+                      onFormValidation={handleFormValidation}
+                      nextTabMobile={handleNextTabMobile}
+                      prevTabMobile={handlePrevTabMobile}
+                    />
+                  </div>
+                </TabPanel>
+              </>
+            )}
           </div>
         </div>
       </div>
