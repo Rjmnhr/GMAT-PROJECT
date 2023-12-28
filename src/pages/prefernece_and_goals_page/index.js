@@ -1,4 +1,4 @@
-import React, { useEffect,  useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Card, Tabs } from "antd";
 
 import { PreferenceAndGoalsPageStyled } from "./style";
@@ -104,8 +104,8 @@ const PreferenceForm = ({ onSubmit }) => {
 
   return (
     <div>
-            <h3>Select which of the following matters the most to you</h3>  
-    
+      <h3>Select which of the following matters the most to you</h3>
+
       {isMobile ? (
         ""
       ) : (
@@ -155,10 +155,9 @@ const PreferenceForm = ({ onSubmit }) => {
 
       <Form onFinish={onFinish}>
         <div
-          style={{ height: "60vh", overflowY: "scroll" }}
+          style={{ minHeight: "60vh" }}
           className="container-fluid p-0 mt-3 mt-lg-2 scrollable-container d-lg-flex align-items-center justify-content-between flex-wrap mt-5"
         >
-         
           {options.map((option) => (
             <div
               style={{
@@ -168,7 +167,9 @@ const PreferenceForm = ({ onSubmit }) => {
                 alignItems: "center",
               }}
               key={option.label}
-              className={`star-rating-container  ${isMobile ? "w-100" :"w-50"} `}
+              className={`star-rating-container  ${
+                isMobile ? "w-100" : "w-50"
+              } `}
             >
               <div
                 style={{
@@ -186,7 +187,10 @@ const PreferenceForm = ({ onSubmit }) => {
             </div>
           ))}
         </div>
-        <div className="my-5 my-lg-3 text-center" style={{ width: "100%" }}>
+        <div
+          className="mt-5 my-lg-3 text-center"
+          style={{ width: "100%", marginBottom: "6rem" }}
+        >
           <button
             disabled={!allInputsSelected}
             htmlType="submit"
@@ -287,8 +291,7 @@ const AfterMBAForm = ({ onNext, onBack }) => {
               flexDirection: "column",
               justifyContent: "space-around",
               alignItems: "center",
-              height: `${isMobile ? "58vh" : "65vh"}`,
-              overflowY: "scroll",
+              minHeight: `${isMobile ? "58vh" : "65vh"}`,
             }}
             className="  container-fluid scrollable-container"
           >
@@ -309,8 +312,8 @@ const AfterMBAForm = ({ onNext, onBack }) => {
           </div>
 
           <div
-            className="my-3 text-center d-flex justify-content-center align-items-center"
-            style={{ width: "100%" }}
+            className="mt-3 text-center d-flex justify-content-center align-items-center"
+            style={{ width: "100%", marginBottom: "6rem" }}
           >
             {/* <button
               onClick={onBack}
@@ -320,8 +323,9 @@ const AfterMBAForm = ({ onNext, onBack }) => {
               Back
             </button> */}
             <button
+              style={{ width: `${isMobile ? "100%" : "25%"}` }}
               htmlType="submit"
-              className="btn btn-lg btn-primary w-25"
+              className="btn btn-lg btn-primary "
               disabled={!allOptionsSelected}
             >
               Next
@@ -440,13 +444,13 @@ const CountrySelectionForm = ({ onNext, onBack }) => {
               {renderCardOptions(countryOptions)}
             </div>
             <div
-              className="my-5 my-lg-3 text-center d-flex justify-content-center align-items-center"
-              style={{ width: "100%" }}
+              className="mt-5 my-lg-3 text-center d-flex justify-content-center align-items-center"
+              style={{ width: "100%", marginBottom: "6rem" }}
             >
-           
               <button
+                style={{ width: `${isMobile ? "100%" : "25%"}` }}
                 htmlType="submit"
-                className="btn btn-lg btn-primary w-25"
+                className="btn btn-lg btn-primary "
                 disabled={!allCountriesSelected}
               >
                 Next
@@ -461,7 +465,9 @@ const CountrySelectionForm = ({ onNext, onBack }) => {
 const { TabPane } = Tabs;
 const PreferenceAndGoalsPage = () => {
   const formFilled = sessionStorage.getItem("form-filled");
-  const [currentStep, setCurrentStep] = useState(formFilled === "true" ? "4" : "1");
+  const [currentStep, setCurrentStep] = useState(
+    formFilled === "true" ? "4" : "1"
+  );
 
   const handleTabChange = (key) => {
     setCurrentStep(key);
@@ -474,20 +480,34 @@ const PreferenceAndGoalsPage = () => {
 
   return (
     <div className="container-fluid p-0">
-      <Tabs tabBarStyle={{display:"none"}} activeKey={currentStep} onChange={handleTabChange} tabBarGutter={15}>
-        <TabPane tab="Preference Form" key="1">
+      <Tabs
+        tabBarStyle={{ display: "none" }}
+        activeKey={currentStep}
+        onChange={handleTabChange}
+        tabBarGutter={15}
+      >
+        <TabPane tab= "Preference Form" key="1">
           <PreferenceForm onSubmit={() => setCurrentStep("2")} />
         </TabPane>
         <TabPane tab="After MBA Form" key="2">
-          <AfterMBAForm onNext={() => setCurrentStep("3")} onBack={() => setCurrentStep("1")} />
+          <AfterMBAForm
+            onNext={() => setCurrentStep("3")}
+            onBack={() => setCurrentStep("1")}
+          />
         </TabPane>
         <TabPane tab="Country Selection Form" key="3">
-          <CountrySelectionForm onNext={() => setCurrentStep("4")} onBack={() => setCurrentStep("2")} />
+          <CountrySelectionForm
+            onNext={() => setCurrentStep("4")}
+            onBack={() => setCurrentStep("2")}
+          />
         </TabPane>
-        <TabPane tab="College Information Output" key="4">
+        <TabPane tab="College Information Output" key="4" forceRender={true}>
           <CollegeInformationOutput />
           <div className="mb-3 mb-lg-0" style={{ marginBottom: "5rem" }}>
-            <button className="btn-primary btn btn-lg mb-lg-3" onClick={handleTryAgain}>
+            <button
+              className="btn-primary btn btn-lg mb-lg-3"
+              onClick={handleTryAgain}
+            >
               Try filling form again
             </button>
           </div>

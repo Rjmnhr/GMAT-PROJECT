@@ -788,14 +788,14 @@ const QuantTestPage = () => {
                   </Radio.Group>
                 </div>
 
-                {/* <p className="mt-3">
+                <p className="mt-3">
                   Level of question:
                   {filteredQuestionsByLevel[0].level
                     ? filteredQuestionsByLevel[0].level
                     : ""}
                 </p>
                 <p className="mt-3">Level :{currentQuestionLevel}</p>
-*/}
+
                 <p className="mt-3">
                   Score:
                   {score.toFixed(2)}

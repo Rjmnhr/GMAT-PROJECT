@@ -21,7 +21,7 @@ const QuantTestPageFocus = () => {
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
   const [tempValues, setTempValues] = useState([0, 0, 0]); // Initialize with three zeros
-  const [tempSum, setTempSum] = useState(0);
+
   const [currentQuestionLevel, setCurrentQuestionLevel] = useState(4); // Initialize with level 2
   const [filteredQuestionsByLevel, setFilteredQuestionsByLevel] =
     useState(null);
@@ -33,48 +33,6 @@ const QuantTestPageFocus = () => {
   const [wrongQuestions, setWrongQuestions] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState(null);
 
-  // const { questions, setQuestions } = useApplicationContext();
-
-  // useEffect(() => {
-  //   const handleBeforeUnload = (e) => {
-  //     e.preventDefault();
-  //     e.returnValue =
-  //       "Refreshing the page will remove you from the exam. Are you sure you want to leave?";
-
-  //     const confirmationMessage =
-  //       "Refreshing the page will remove you from the exam. Are you sure you want to leave?";
-  //     e.returnValue = confirmationMessage;
-
-  //     if (window.confirm(confirmationMessage)) {
-  //       // User clicked OK, navigate to "/"
-  //       navigate("/");
-  //     } else {
-  //       // User clicked Cancel, prevent page refresh
-
-  //       return false;
-  //     }
-  //   };
-
-  //   window.addEventListener("beforeunload", handleBeforeUnload);
-
-  //   return () => {
-  //     window.removeEventListener("beforeunload", handleBeforeUnload);
-  //   };
-  // }, [navigate]); // Include history in the dependency array
-
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:8003/api/gmat/data")
-  //     .then(async (response) => {
-  //       const resultData = await response.data;
-
-  //       await setQuestions(resultData);
-  //       console.log("🚀 ~ file: index.js:40 ~ .then ~ resultData:", resultData);
-  //     })
-  //     .catch((err) => console.log("error", err));
-  //   //eslint-disable-next-line
-  // }, []);
-
   useEffect(() => {
     let newThreshold = 0;
 
@@ -85,6 +43,7 @@ const QuantTestPageFocus = () => {
     } else if (questionNumber > 12 && questionNumber < 15) {
       newThreshold = 1;
     } else {
+      console.log("enter");
       newThreshold = 0;
     }
 
@@ -235,7 +194,7 @@ const QuantTestPageFocus = () => {
 
     let scoreIncrement = 0;
 
-    if (questionNumber <= 12) {
+    if (questionNumber <= 7) {
       if (isCorrect) {
         // Calculate score increment for correct answers
         switch (level) {
@@ -520,7 +479,6 @@ const QuantTestPageFocus = () => {
       if (currentQuestion + 2 < filteredQuestionsByLevel.length) {
         setCurrentQuestion((prevQuestion) => prevQuestion + 1);
       } else {
-        console.log("inside");
         // Handle the case where there are no more questions for the current level
         setCurrentQuestion(0);
       }
@@ -548,18 +506,23 @@ const QuantTestPageFocus = () => {
       // Update the temporary values array and calculate the sum
       setTempValues(newTempValues);
       const newTempSum = newTempValues.reduce((acc, val) => acc + val, 0);
-      setTempSum(newTempSum);
-
-      console.log(tempSum);
 
       let nextQuestionLevel = currentQuestionLevel;
 
       calculateScore(nextQuestionLevel); // Calculate the score
       var levelLimit = 2;
 
-      if (questionNumber > 12) {
+      if (questionNumber > 7) {
         levelLimit = 1;
       }
+      console.log(
+        "🚀 ~ file: index.js:521 ~ handleNext ~ currentQuestion:",
+        currentQuestion
+      );
+      console.log(
+        "🚀 ~ file: index.js:522 ~ handleNext ~ threshHold:",
+        threshHold
+      );
 
       if (currentQuestion > threshHold) {
         if (newTempSum === 0 && currentQuestionLevel > levelLimit) {
@@ -575,7 +538,7 @@ const QuantTestPageFocus = () => {
 
       setCurrentQuestionLevel(nextQuestionLevel);
 
-      if (questionNumber === 12) {
+      if (questionNumber === 7) {
         nextQuestionLevel = 4;
         setCurrentQuestionLevel(4);
         setCurrentQuestion(0);
@@ -588,6 +551,10 @@ const QuantTestPageFocus = () => {
         (question) =>
           question.level === mappedLevel &&
           !AttendedQuestionIdsArr.includes(question.id)
+      );
+      console.log(
+        "🚀 ~ file: index.js:555 ~ handleNext ~ filteredArray:",
+        filteredArray
       );
 
       const response = {
@@ -622,6 +589,10 @@ const QuantTestPageFocus = () => {
             question.level === mappedLevel &&
             !AttendedQuestionIdsArr.includes(question.id)
         );
+        console.log(
+          "🚀 ~ file: index.js:588 ~ handleNext ~ filteredArray:",
+          filteredArray
+        );
 
         setFilteredQuestionsByLevel(filteredArray);
 
@@ -650,6 +621,10 @@ const QuantTestPageFocus = () => {
       // Filter questions based on the currentQuestionLevel
       const filteredArray = shuffledQuestions.filter(
         (question) => question.level === mappedLevel
+      );
+      console.log(
+        "🚀 ~ file: index.js:617 ~ useEffect ~ filteredArray:",
+        filteredArray
       );
       setFilteredQuestionsByLevel(filteredArray);
     }

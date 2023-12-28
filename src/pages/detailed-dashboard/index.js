@@ -18,7 +18,7 @@ const DashboardDetailed = () => {
           <SideBar />
         </div>
         <div className="container col-10 p-5" style={{ height: "100vh" }}>
-          {activeIndex === 0 ? <GMATOldDetailed /> : <GMATFocusDetailed />}
+          {activeIndex === 1 ? <GMATOldDetailed /> : <GMATFocusDetailed />}
         </div>
       </div>
     </>

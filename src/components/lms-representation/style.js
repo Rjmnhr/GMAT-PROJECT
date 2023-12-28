@@ -109,6 +109,11 @@ export const LMSRepresentationStyled = styled.div`
     right: -25%;
     transform: translateY(-50%);
   }
+
+  .product-card img{
+    width:100%;
+    height:100%;
+  }
   @media (max-width: 728px) {
     .circle-container {
       width: 280px;

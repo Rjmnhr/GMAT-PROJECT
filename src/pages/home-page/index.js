@@ -5,18 +5,7 @@ import { UserOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
-  // sessionStorage.removeItem("experience");
-  // sessionStorage.removeItem("experience-default");
-  // sessionStorage.removeItem("natureExperience");
-  // sessionStorage.removeItem("natureExperience-default");
-  // sessionStorage.removeItem("basic-details");
-  // sessionStorage.removeItem("basic-details-default");
-  // sessionStorage.removeItem("graduate");
-  // sessionStorage.removeItem("graduate-default");
-  // sessionStorage.removeItem("service");
-  // sessionStorage.removeItem("service-default");
-  // sessionStorage.removeItem("hobbies");
-  // sessionStorage.removeItem("hobbies-default");
+  
   const [isMobile, setIsMobile] = useState(false);
   const [userName, setUserName] = useState("");
   const navigate = useNavigate();
@@ -995,6 +984,7 @@ const FAQSection = () => {
               what the process is for you to then see if you actually need help
               or not
             </p>
+       \
           </Panel>
 
           <Panel
