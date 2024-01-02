@@ -7,12 +7,26 @@ import GMATOld from "../../components/gmat-old";
 import GMATFocus from "../../components/gmat-focus";
 import { useApplicationContext } from "../../context/app-context";
 import GMATFocusContent from "../../components/gmat-focus-content";
+import { Helmet } from "react-helmet";
 
 const DashBoardComponent = () => {
   const { activeIndex } = useApplicationContext();
 
   return (
     <>
+      <Helmet>
+        <title>GMAT | Adeft Education</title>
+        <meta
+          name="description"
+          content="Transform your MBA aspirations into reality with Adeft Education - a trusted consultancy with over three decades of post-MBA expertise"
+        />
+        <meta
+          property="og:description"
+          content="Transform your MBA aspirations into reality with Adeft Education - a trusted consultancy with over three decades of post-MBA expertise"
+        />
+        {/* Add other meta tags, link tags, etc. as needed */}
+      </Helmet>
+
       <NavBar />
       <div
         style={{ marginTop: "80px" }}

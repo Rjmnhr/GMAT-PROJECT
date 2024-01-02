@@ -4,6 +4,7 @@ import { Card } from "antd";
 import NavBar from "../../components/nav-bar";
 import { useNavigate } from "react-router-dom";
 import { PracticeQuestionsPageStyled } from "./style";
+import { Helmet } from "react-helmet";
 const categoryNames = [
   "Quantitative Reasoning Questions",
   "Verbal Reasoning Questions",
@@ -14,6 +15,18 @@ const PracticeQuestionsPage = () => {
   const navigate = useNavigate();
   return (
     <>
+      <Helmet>
+        <title>Practice Questions | Adeft Education</title>
+        <meta
+          name="description"
+          content="Transform your MBA aspirations into reality with Adeft Education - a trusted consultancy with over three decades of post-MBA expertise"
+        />
+        <meta
+          property="og:description"
+          content="Transform your MBA aspirations into reality with Adeft Education - a trusted consultancy with over three decades of post-MBA expertise"
+        />
+        {/* Add other meta tags, link tags, etc. as needed */}
+      </Helmet>
       <NavBar />
       <PracticeQuestionsPageStyled>
         <div

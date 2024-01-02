@@ -110,7 +110,7 @@ const HomePage = () => {
                   <a href="/profiler">Profiler</a>
                 </li>
                 <li>
-                  <a href="/dashboard">GMAT</a>
+                  <a href="/gmat">GMAT</a>
                 </li>
 
                 <li>

@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../../components/nav-bar";
 import { VideosPageStyled } from "./style";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const categoryNames = [
   "GMAT Quant videos",
@@ -15,6 +16,18 @@ const categoryNames = [
 const VideosPage = () => {
   return (
     <div>
+           <Helmet>
+        <title>Videos | Equipay Partners</title>
+        <meta
+          name="description"
+          content="Transform your MBA aspirations into reality with Adeft Education - a trusted consultancy with over three decades of post-MBA expertise"
+        />
+        <meta
+          property="og:description"
+          content="Transform your MBA aspirations into reality with Adeft Education - a trusted consultancy with over three decades of post-MBA expertise"
+        />
+        {/* Add other meta tags, link tags, etc. as needed */}
+      </Helmet>
       <NavBar />
       <div style={{ marginTop: "100px" }}>
         <div className="section-title p-0">

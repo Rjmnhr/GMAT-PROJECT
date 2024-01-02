@@ -11,6 +11,7 @@ import { ProfilerPageStyled } from "./style";
 import { message } from "antd";
 import { useNavigate } from "react-router-dom";
 import GoalsForm from "../../components/profiler-forms/goals-form";
+import { Helmet } from "react-helmet";
 
 const ProfilerPage = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -255,7 +256,18 @@ const ProfilerPage = () => {
   return (
     <ProfilerPageStyled>
       {contextHolder}
-
+      <Helmet>
+        <title>Profiler | Adeft Education</title>
+        <meta
+          name="description"
+          content="Transform your MBA aspirations into reality with Adeft Education - a trusted consultancy with over three decades of post-MBA expertise"
+        />
+        <meta
+          property="og:description"
+          content="Transform your MBA aspirations into reality with Adeft Education - a trusted consultancy with over three decades of post-MBA expertise"
+        />
+        {/* Add other meta tags, link tags, etc. as needed */}
+      </Helmet>
       <NavBar />
       <div
         className="container-fluid"

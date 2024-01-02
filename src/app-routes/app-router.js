@@ -155,7 +155,7 @@ const AppRouter = () => {
             }
           />
           <Route
-            path="/dashboard"
+            path="/gmat"
             element={
               <ProtectedRoute
                 element={

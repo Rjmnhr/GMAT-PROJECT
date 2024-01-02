@@ -5,11 +5,24 @@ import NavBar from "../../components/nav-bar";
 import blogImage1 from "../../icons/gmat-blog.jpg";
 import { FacebookFilled, LinkedinFilled } from "@ant-design/icons";
 import FooterComponent from "../../components/footer";
+import { Helmet } from "react-helmet";
 const BlogsPage = () => {
   const navigate = useNavigate();
 
   return (
     <>
+      <Helmet>
+        <title>Blogs | Adeft Education</title>
+        <meta
+          name="description"
+          content="Transform your MBA aspirations into reality with Adeft Education - a trusted consultancy with over three decades of post-MBA expertise"
+        />
+        <meta
+          property="og:description"
+          content="Transform your MBA aspirations into reality with Adeft Education - a trusted consultancy with over three decades of post-MBA expertise"
+        />
+        {/* Add other meta tags, link tags, etc. as needed */}
+      </Helmet>
       <NavBar />
 
       <div
@@ -122,7 +135,7 @@ const BlogsPage = () => {
           </ul>
         </div>
       </div>
-      <FooterComponent /> 
+      <FooterComponent />
     </>
   );
 };
