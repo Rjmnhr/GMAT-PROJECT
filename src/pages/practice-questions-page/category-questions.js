@@ -108,7 +108,10 @@ const CategoryQuestions = () => {
           <div className="col-10 p-3">
             <div className="d-flex justify-content-between align-items-center">
               <h3 className="py-3">{categoryHeading}</h3>
-              <button onClick={()=>navigate("/dashboard")} className="btn btn-primary mr-2">
+              <button
+                onClick={() => navigate("/gmat")}
+                className="btn btn-primary mr-2"
+              >
                 Take a practice test
               </button>
             </div>

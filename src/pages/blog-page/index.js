@@ -89,7 +89,7 @@ const BlogsPage = () => {
 
         <div class="col-12 d-flex justify-content-center mb-3">
           <button
-            onClick={() => navigate("/dashboard")}
+            onClick={() => navigate("/gmat")}
             className="btn btn-lg btn-primary"
           >
             Try Now!
