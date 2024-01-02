@@ -38,9 +38,9 @@ const QuantTestPageFocus = () => {
 
     if (questionNumber < 3) {
       newThreshold = 1;
-    } else if (questionNumber >= 4 && questionNumber < 12) {
+    } else if (questionNumber >= 4 && questionNumber < 7) {
       newThreshold = 0;
-    } else if (questionNumber > 12 && questionNumber < 15) {
+    } else if (questionNumber > 7 && questionNumber < 10) {
       newThreshold = 1;
     } else {
       console.log("enter");
@@ -355,33 +355,33 @@ const QuantTestPageFocus = () => {
 
     switch (totalScore) {
       case 10:
-        convertedScore = 7;
+        convertedScore = 60;
         break;
       case 50:
-        convertedScore = 20;
+        convertedScore = 65;
 
         break;
       case 75:
-        convertedScore = 30;
+        convertedScore = 70;
         break;
       case 100:
-        convertedScore = 35;
+        convertedScore = 75;
         break;
       case 125:
-        convertedScore = 40;
+        convertedScore = 80;
 
         break;
       case 190:
-        convertedScore = 45;
+        convertedScore = 85;
         break;
       case 280:
-        convertedScore = 48;
+        convertedScore = 88;
         break;
       case 375:
-        convertedScore = 50;
+        convertedScore = 89;
         break;
       case 475:
-        convertedScore = 51;
+        convertedScore = 90;
         break;
       default:
         const { closestLow, closestHigh } = findClosestValues(totalScore);
@@ -398,8 +398,8 @@ const QuantTestPageFocus = () => {
 
     console.log(convertedScore);
 
-    if (convertedScore > 51) {
-      convertedScore = 51;
+    if (convertedScore > 90) {
+      convertedScore = 90;
     }
 
     sessionStorage.setItem("quant_score", Math.round(convertedScore));
@@ -408,23 +408,23 @@ const QuantTestPageFocus = () => {
   function calculateMatchingValue(range) {
     switch (range) {
       case 10:
-        return 7;
+        return 60;
       case 50:
-        return 20;
+        return 65;
       case 75:
-        return 30;
+        return 70;
       case 100:
-        return 35;
+        return 75;
       case 125:
-        return 40;
+        return 80;
       case 190:
-        return 45;
+        return 85;
       case 280:
-        return 48;
+        return 88;
       case 375:
-        return 50;
+        return 89;
       case 475:
-        return 51;
+        return 90;
       default:
         // Handle other cases as needed
         return 0;
@@ -519,10 +519,6 @@ const QuantTestPageFocus = () => {
         "🚀 ~ file: index.js:521 ~ handleNext ~ currentQuestion:",
         currentQuestion
       );
-      console.log(
-        "🚀 ~ file: index.js:522 ~ handleNext ~ threshHold:",
-        threshHold
-      );
 
       if (currentQuestion > threshHold) {
         if (newTempSum === 0 && currentQuestionLevel > levelLimit) {
@@ -538,7 +534,7 @@ const QuantTestPageFocus = () => {
 
       setCurrentQuestionLevel(nextQuestionLevel);
 
-      if (questionNumber === 7) {
+      if (questionNumber === 12) {
         nextQuestionLevel = 4;
         setCurrentQuestionLevel(4);
         setCurrentQuestion(0);
@@ -570,6 +566,7 @@ const QuantTestPageFocus = () => {
       setResponseHistory([...responseHistory, response]);
 
       if (filteredArray.length === 0) {
+        console.log("out of questions");
         // No more questions left for the current level
         setCurrentQuestion(0);
 
@@ -582,6 +579,7 @@ const QuantTestPageFocus = () => {
         }
 
         mappedLevel = mappingTheLevels(nextQuestionLevel);
+        console.log("🚀 ~ file: index.js:582 ~ handleNext ~ nextQuestionLevel:", nextQuestionLevel)
 
         // Filter questions based on the currentQuestionLevel and attendedQuestionIds
         const filteredArray = shuffledQuestions.filter(

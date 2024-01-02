@@ -30,6 +30,7 @@ import VerbalTestPageFocus from "../pages/verbal-test-page/verbal-test-page-focu
 import DataInsightsTestPage from "../pages/IR_section/data-insights-test-page";
 import OptionalBreakFocus from "../components/optional-break/optional-break-focus";
 import ResultPageFocus from "../pages/results/results-focus";
+import BlogsPage from "../pages/blog-page";
 
 const ConditionalComponent = () => {
   return (
@@ -463,6 +464,16 @@ const AppRouter = () => {
                   <a href="https://www.adefteducation.com/">
                     <button className="btn border">Go Back</button>
                   </a>
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/blogs"
+            element={
+              <>
+                <div>
+                  <BlogsPage />
                 </div>
               </>
             }

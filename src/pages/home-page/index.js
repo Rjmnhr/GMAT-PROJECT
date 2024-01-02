@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { Avatar, Carousel, Collapse, Dropdown } from "antd";
-import { UserOutlined } from "@ant-design/icons";
+import { Carousel, Collapse, Dropdown } from "antd";
+
 import { useNavigate } from "react-router-dom";
+import FooterComponent from "../../components/footer";
 
 const HomePage = () => {
-  
   const [isMobile, setIsMobile] = useState(false);
-  const [userName, setUserName] = useState("");
+
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const isLoggedIn = localStorage.getItem("adefteducation_isLoggedIn");
-
-  const storedUserName = localStorage.getItem("adefteducation_user_name");
 
   useEffect(() => {
     // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
@@ -33,17 +31,17 @@ const HomePage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (storedUserName) {
-      // Split the full name into an array of words
-      const nameArray = storedUserName.split(" ");
+  // useEffect(() => {
+  //   if (storedUserName) {
+  //     // Split the full name into an array of words
+  //     const nameArray = storedUserName.split(" ");
 
-      // Get the first element of the array, which is the first name
-      const firstName = nameArray[0];
+  //     // Get the first element of the array, which is the first name
+  //     const firstName = nameArray[0];
 
-      setUserName(firstName);
-    }
-  }, [storedUserName]);
+  //     setUserName(firstName);
+  //   }
+  // }, [storedUserName]);
   const handleLogOut = () => {
     navigate("/");
     localStorage.removeItem("adefteducation_accessToken", "");
@@ -157,6 +155,9 @@ const HomePage = () => {
                     <a href="#contact">Contact</a>
                   </ScrollLink>
                 </li>
+                <li>
+                  <a href="/blogs">Blog</a>
+                </li>
                 {isLoggedIn === "true" ? (
                   <>
                     <Dropdown
@@ -166,22 +167,8 @@ const HomePage = () => {
                       placement="bottomRight"
                       arrow
                     >
-                      <li
-                        style={{
-                          paddingTop: "5px",
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "8px",
-                        }}
-                      >
-                        <a href="?#">{userName}</a>
-                        <Avatar
-                          size="small"
-                          style={{
-                            background: "#049494",
-                          }}
-                          icon={<UserOutlined />}
-                        />
+                      <li>
+                        <a href="?#">Account</a>
                       </li>
                     </Dropdown>
                   </>
@@ -835,115 +822,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <footer id="footer">
-        <div class="footer-top">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-6 footer-contact text-left">
-                <h3>
-                  Adeft Education<span>.</span>
-                </h3>
-
-                <p>
-                  <strong>Indian Headquarter:</strong>
-                  <br />
-                  11th Main Road, HAL 2nd Stage <br />
-                  Indira Nagar, Bangalore,
-                  <br />
-                  Karnataka-560038
-                  <br />
-                  <strong>Email:</strong> team@adefteducation.com
-                  <br />
-                </p>
-              </div>
-
-              <div class="col-lg-2 col-md-6 footer-links text-left">
-                <h4>Useful Links</h4>
-                <ul>
-                  <li>
-                    <i class="bx bx-chevron-right"></i> <a href="/#">Home</a>
-                  </li>
-                  <li>
-                    <i class="bx bx-chevron-right"></i>{" "}
-                    <a href="#about">About us</a>
-                  </li>
-                  <li>
-                    <i class="bx bx-chevron-right"></i>{" "}
-                    <a href="#services">Services</a>
-                  </li>
-                  <li>
-                    <i class="bx bx-chevron-right"></i> <a href="#team">Team</a>
-                  </li>
-                  <li>
-                    <i class="bx bx-chevron-right"></i>{" "}
-                    <a href="#faq">Frequently Asked Questions</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-lg-3 col-md-6 footer-links text-left">
-                <h4>Our Services</h4>
-                <ul>
-                  <li>
-                    <i class="bx bx-chevron-right"></i>{" "}
-                    <a href="#services">College selection</a>
-                  </li>
-                  <li>
-                    <i class="bx bx-chevron-right"></i>{" "}
-                    <a href="#services">Strengths and weakness</a>
-                  </li>
-                  <li>
-                    <i class="bx bx-chevron-right"></i>{" "}
-                    <a href="#services">Resume writing</a>
-                  </li>
-                  <li>
-                    <i class="bx bx-chevron-right"></i>{" "}
-                    <a href="#services">Application essays</a>
-                  </li>
-                  <li>
-                    <i class="bx bx-chevron-right"></i>{" "}
-                    <a href="#services">Profile building</a>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="col-lg-4 col-md-6 footer-newsletter text-left">
-                <h4>Join Our Newsletter</h4>
-                <p>
-                  Please enter your email if you are interested to read about
-                  our regular work, live case studies, what's happening in
-                  businesses around and some interesting trends
-                </p>
-                <form action="" method="post">
-                  <input type="email" name="email" />
-                  <input type="submit" value="Subscribe" />
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="container d-md-flex py-4">
-          <div class="me-md-auto text-center text-md-left"></div>
-          <div class="social-links text-center text-md-right pt-3 pt-md-0">
-            <a href="/#" class="twitter">
-              <i class="bx bxl-twitter"></i>
-            </a>
-            <a href="/#" class="facebook">
-              <i class="bx bxl-facebook"></i>
-            </a>
-            {/* <a href="/#" class="instagram">
-              <i class="bx bxl-instagram"></i>
-            </a>
-            <a href="/#" class="google-plus">
-              <i class="bx bxl-skype"></i>
-            </a> */}
-            <a href="/#" class="linkedin">
-              <i class="bx bxl-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </footer>
+      <FooterComponent />
     </>
   );
 };
@@ -974,7 +853,7 @@ const FAQSection = () => {
             }
             key="0"
           >
-            <p style={{fontSize:"16px"}}>
+            <p style={{ fontSize: "16px" }}>
               That is a very good question - the short answer is no; if you have
               enough time on your hand, strong database of past students and
               which colleges are more likely to accept students like you and a
@@ -984,7 +863,7 @@ const FAQSection = () => {
               what the process is for you to then see if you actually need help
               or not
             </p>
-       \
+            \
           </Panel>
 
           <Panel
@@ -996,7 +875,7 @@ const FAQSection = () => {
             }
             key="1"
           >
-            <p style={{fontSize:"16px"}}>
+            <p style={{ fontSize: "16px" }}>
               There is an initial free 30 minute consultation with one of our
               consultants. Based on your needs, we identify which service is
               relevant to you. Following that, we start our consulting process
@@ -1014,7 +893,7 @@ const FAQSection = () => {
             }
             key="2"
           >
-            <p style={{fontSize:"16px"}}>
+            <p style={{ fontSize: "16px" }}>
               We have helped more than 100 students prepare for and gain
               admission in ISB over the last 10 years - each school is different
               and using our large database we know how to appeal to specific B
@@ -1033,7 +912,7 @@ const FAQSection = () => {
             }
             key="3"
           >
-            <p style={{fontSize:"16px"}}>
+            <p style={{ fontSize: "16px" }}>
               These are all great questions and these are also the right
               questions to ask - unfortunately the answers to these questions
               are much more complex and requires us to work with you, understand
@@ -1053,7 +932,7 @@ const FAQSection = () => {
             }
             key="5"
           >
-            <p style={{fontSize:"16px"}}>
+            <p style={{ fontSize: "16px" }}>
               Our biggest differentiator is that our team all have advanced
               business degrees and come with a minimum of 10 years experience.
               They all bring their own experience to the role; however, we have

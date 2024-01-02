@@ -1,26 +1,25 @@
-import { Avatar, Dropdown } from "antd";
-import React, { useEffect, useState } from "react";
+import { Dropdown } from "antd";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { UserOutlined } from "@ant-design/icons";
 
 const NavBar = () => {
   const navigate = useNavigate();
-  const [userName, setUserName] = useState("");
+
   const isLoggedIn = localStorage.getItem("adefteducation_isLoggedIn");
-  const storedUserName = localStorage.getItem("adefteducation_user_name");
+
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    if (storedUserName) {
-      // Split the full name into an array of words
-      const nameArray = storedUserName.split(" ");
+  // useEffect(() => {
+  //   if (storedUserName) {
+  //     // Split the full name into an array of words
+  //     const nameArray = storedUserName.split(" ");
 
-      // Get the first element of the array, which is the first name
-      const firstName = nameArray[0];
+  //     // Get the first element of the array, which is the first name
+  //     const firstName = nameArray[0];
 
-      setUserName(firstName);
-    }
-  }, [storedUserName]);
+  //     setUserName(firstName);
+  //   }
+  // }, [storedUserName]);
 
   const handleLogOut = () => {
     navigate("/");
@@ -81,7 +80,7 @@ const NavBar = () => {
             } `}
           >
             <ul>
-              <li >
+              <li>
                 <a href="/#header">Home</a>
               </li>
               <li>
@@ -104,6 +103,9 @@ const NavBar = () => {
               <li>
                 <a href="/#contact">Contact</a>
               </li>
+              <li>
+                <a href="/blogs">Blog</a>
+              </li>
               {isLoggedIn === "true" ? (
                 <>
                   <Dropdown
@@ -113,23 +115,9 @@ const NavBar = () => {
                     placement="bottomRight"
                     arrow
                   >
-                    <li
-                      style={{
-                        paddingTop: "5px",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "8px",
-                      }}
-                    >
+                    <li>
                       {" "}
-                      <a href="?#">{userName}</a>
-                      <Avatar
-                        size="small"
-                        style={{
-                          background: "#049494",
-                        }}
-                        icon={<UserOutlined />}
-                      />
+                      <a href="?#">Account</a>
                     </li>
                   </Dropdown>
                 </>
