@@ -23,7 +23,7 @@ const SideBar = () => {
                 }}
                 onClick={() => {
                   setActiveIndex(0);
-                  navigate("/dashboard");
+                  navigate("/gmat");
                 }}
                 className={` p-3 w-100 m-0 cursor-pointer text-left ${
                   activeIndex === 0 ? "selected-tab" : ""
@@ -40,7 +40,7 @@ const SideBar = () => {
                 }}
                 onClick={() => {
                   setActiveIndex(1);
-                  navigate("/dashboard");
+                  navigate("/gmat");
                 }}
                 className={` p-3 w-100 m-0 cursor-pointer text-left ${
                   activeIndex === 1 ? "selected-tab" : ""
@@ -57,7 +57,7 @@ const SideBar = () => {
                 }}
                 onClick={() => {
                   setActiveIndex(2);
-                  navigate("/dashboard");
+                  navigate("/gmat");
                 }}
                 className={` p-3 w-100 m-0 cursor-pointer text-left  ${
                   activeIndex === 2 ? "selected-tab" : ""

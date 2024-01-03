@@ -236,7 +236,7 @@ const HomePage = () => {
               </a>
               <br />
               <a
-                href="/dashboard"
+                href="/gmat"
                 class="btn-get-started "
                 style={{ background: "transparent" }}
               >

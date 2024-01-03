@@ -110,9 +110,24 @@ export const LMSRepresentationStyled = styled.div`
     transform: translateY(-50%);
   }
 
-  .product-card img{
-    width:100%;
-    height:100%;
+  .product-card img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hover-card {
+    background-color: rgba(71, 209, 195, 0.6);
+  }
+  .hover-sub-card {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .hover-sub-card:hover {
+    background-color: transparent;
+    color: #049494 !important;
+    cursor: pointer;
+  }
+  .hover-card:hover {
+    background-color: white;
   }
   @media (max-width: 728px) {
     .circle-container {

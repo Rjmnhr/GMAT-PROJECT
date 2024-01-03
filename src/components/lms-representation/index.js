@@ -2,21 +2,26 @@
 
 import React from "react";
 import { LMSRepresentationStyled } from "./style";
-import examIcon from "../../icons/exam.png";
-import profilerIcon from "../../icons/user.png";
+
 import NavBar from "../nav-bar";
 
 import { useNavigate } from "react-router-dom";
+import {
+  EditFilled,
+  ProfileFilled,
+  QuestionCircleFilled,
+  VideoCameraFilled,
+} from "@ant-design/icons";
 // import pointArrow from "../../icons/right-arrow.png";
 const toolsArray = [
-  { title: "Profiler", icon: profilerIcon, link: "/profiler" },
-  { title: "GMAT Practice Test", icon: examIcon, link: "/gmat" },
+  { title: "Profiler", icon: <ProfileFilled />, link: "/profiler" },
+  { title: "GMAT Practice Test", icon: <EditFilled />, link: "/gmat" },
   {
     title: "Practice Questions",
-    icon: profilerIcon,
+    icon: <QuestionCircleFilled />,
     link: "/practice-questions",
   },
-  { title: "Recorded Videos", icon: profilerIcon, link: "/videos" },
+  { title: "Recorded Videos", icon: <VideoCameraFilled />, link: "/videos" },
 ];
 const LMSRepresentation = () => {
   const navigate = useNavigate();
@@ -52,24 +57,24 @@ const LMSRepresentation = () => {
                   <>
                     <div
                       onClick={() => navigate(tool.link)}
-                      className="m-2"
+                      className="m-2 hover-card"
                       style={{
-                        backgroundColor: "rgba(71, 209, 195, 0.6)",
                         backgroundPosition: "center",
                         width: "300px",
                         height: "200px",
                       }}
                     >
                       <div
+                        className="hover-sub-card"
                         style={{
-                          background: "rgba(0, 0, 0,0.5)",
                           height: "100%",
                           display: "grid",
                           justifyItems: "center",
                           alignContent: "center",
                         }}
                       >
-                        <img width={120} src={tool.icon} alt="gmat test icon" />
+                        <span style={{ fontSize: "60px" }}>{tool.icon}</span>
+                        {/* <img width={120} src={tool.icon} alt="gmat test icon" /> */}
                         <h5 className="w-100 m-1">{tool.title}</h5>
                       </div>
                     </div>
