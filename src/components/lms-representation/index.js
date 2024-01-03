@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 // import pointArrow from "../../icons/right-arrow.png";
 const toolsArray = [
   { title: "Profiler", icon: profilerIcon, link: "/profiler" },
-  { title: "GMAT Practice Test", icon: examIcon, link: "/dashboard" },
+  { title: "GMAT Practice Test", icon: examIcon, link: "/gmat" },
   {
     title: "Practice Questions",
     icon: profilerIcon,
