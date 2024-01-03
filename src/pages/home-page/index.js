@@ -10,8 +10,46 @@ const HomePage = () => {
 
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const accessToken = localStorage.getItem("adefteducation_accessToken");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(null);
 
-  const isLoggedIn = localStorage.getItem("adefteducation_isLoggedIn");
+  useEffect(() => {
+    const VerifyToken = async () => {
+      try {
+        const res = await fetch(
+          "https://adeftbackend-z0bvyb2s.b4a.run/api/token/verify",
+          // "http://localhost:8003/api/token/verify",
+          {
+            headers: {
+              token: `Bearer ${accessToken}`,
+            },
+          }
+        );
+
+        if (res.status === 200) {
+          setIsAuthenticated(true);
+        } else {
+          setIsAuthenticated(false);
+        }
+      } catch (err) {
+        console.log(err);
+        // Handle the error here or return an error response if needed
+        setIsAuthenticated(false);
+      }
+    };
+    VerifyToken();
+
+    if (isAuthenticated !== null) {
+      if (isAuthenticated) {
+        setIsLoggedIn(true);
+      } else {
+        // Redirect to the login page if not authenticated
+
+        setIsLoggedIn(true);
+      }
+    }
+  }, [isAuthenticated, accessToken]);
 
   useEffect(() => {
     // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
@@ -158,7 +196,7 @@ const HomePage = () => {
                 <li>
                   <a href="/blogs">Blog</a>
                 </li>
-                {isLoggedIn === "true" ? (
+                {isLoggedIn  ? (
                   <>
                     <Dropdown
                       menu={{

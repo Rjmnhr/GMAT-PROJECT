@@ -1,13 +1,50 @@
 import { Dropdown } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const navigate = useNavigate();
-
-  const isLoggedIn = localStorage.getItem("adefteducation_isLoggedIn");
-
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const accessToken = localStorage.getItem("adefteducation_accessToken");
+  const [isAuthenticated, setIsAuthenticated] = useState(null);
+
+  useEffect(() => {
+    const VerifyToken = async () => {
+      try {
+        const res = await fetch(
+          "https://adeftbackend-z0bvyb2s.b4a.run/api/token/verify",
+          // "http://localhost:8003/api/token/verify",
+          {
+            headers: {
+              token: `Bearer ${accessToken}`,
+            },
+          }
+        );
+
+        if (res.status === 200) {
+          setIsAuthenticated(true);
+        } else {
+          setIsAuthenticated(false);
+        }
+      } catch (err) {
+        console.log(err);
+        // Handle the error here or return an error response if needed
+        setIsAuthenticated(false);
+      }
+    };
+    VerifyToken();
+
+    if (isAuthenticated !== null) {
+      if (isAuthenticated) {
+        setIsLoggedIn(true);
+      } else {
+        // Redirect to the login page if not authenticated
+
+        setIsLoggedIn(true);
+      }
+    }
+  }, [isAuthenticated, accessToken]);
 
   // useEffect(() => {
   //   if (storedUserName) {
@@ -106,7 +143,7 @@ const NavBar = () => {
               <li>
                 <a href="/blogs">Blog</a>
               </li>
-              {isLoggedIn === "true" ? (
+              {isLoggedIn ? (
                 <>
                   <Dropdown
                     menu={{

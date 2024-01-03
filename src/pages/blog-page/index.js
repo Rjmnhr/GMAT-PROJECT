@@ -2,7 +2,7 @@ import React from "react";
 
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../components/nav-bar";
-import blogImage1 from "../../icons/gmat-blog.jpg";
+import blogImage1 from "../../icons/gmat-blog-2.jpg";
 import { FacebookFilled, LinkedinFilled } from "@ant-design/icons";
 import FooterComponent from "../../components/footer";
 import { Helmet } from "react-helmet";
