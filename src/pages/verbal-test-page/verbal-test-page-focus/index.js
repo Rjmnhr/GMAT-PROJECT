@@ -37,9 +37,9 @@ const VerbalTestPageFocus = () => {
 
     if (questionNumber < 3) {
       newThreshold = 1;
-    } else if (questionNumber >= 4 && questionNumber < 12) {
+    } else if (questionNumber >= 4 && questionNumber < 7) {
       newThreshold = 0;
-    } else if (questionNumber > 12 && questionNumber < 15) {
+    } else if (questionNumber > 7 && questionNumber < 10) {
       newThreshold = 1;
     } else {
       newThreshold = 0;
@@ -225,7 +225,7 @@ const VerbalTestPageFocus = () => {
 
     let scoreIncrement = 0;
 
-    if (questionNumber <= 12) {
+    if (questionNumber <= 7) {
       if (isCorrect) {
         // Calculate score increment for correct answers
         switch (level) {
@@ -380,39 +380,38 @@ const VerbalTestPageFocus = () => {
 
     return { closestLow, closestHigh };
   }
-
   const GMATScoreConversion = (totalScore) => {
     let convertedScore = 0;
 
     switch (totalScore) {
       case 10:
-        convertedScore = 7;
+        convertedScore = 60;
         break;
       case 50:
-        convertedScore = 20;
+        convertedScore = 65;
 
         break;
       case 75:
-        convertedScore = 30;
+        convertedScore = 70;
         break;
       case 100:
-        convertedScore = 35;
+        convertedScore = 75;
         break;
       case 125:
-        convertedScore = 40;
+        convertedScore = 80;
 
         break;
       case 190:
-        convertedScore = 45;
+        convertedScore = 85;
         break;
       case 280:
-        convertedScore = 48;
+        convertedScore = 88;
         break;
       case 375:
-        convertedScore = 50;
+        convertedScore = 89;
         break;
       case 475:
-        convertedScore = 51;
+        convertedScore = 90;
         break;
       default:
         const { closestLow, closestHigh } = findClosestValues(totalScore);
@@ -429,38 +428,39 @@ const VerbalTestPageFocus = () => {
 
     console.log(convertedScore);
 
-    if (convertedScore > 51) {
-      convertedScore = 51;
+    if (convertedScore > 90) {
+      convertedScore = 90;
     }
 
-    sessionStorage.setItem("verbal_score", Math.round(convertedScore));
+    sessionStorage.setItem("quant_score", Math.round(convertedScore));
   };
 
   function calculateMatchingValue(range) {
     switch (range) {
       case 10:
-        return 7;
+        return 60;
       case 50:
-        return 20;
+        return 65;
       case 75:
-        return 30;
+        return 70;
       case 100:
-        return 35;
+        return 75;
       case 125:
-        return 40;
+        return 80;
       case 190:
-        return 45;
+        return 85;
       case 280:
-        return 48;
+        return 88;
       case 375:
-        return 50;
+        return 89;
       case 475:
-        return 51;
+        return 90;
       default:
         // Handle other cases as needed
         return 0;
     }
   }
+
 
   useEffect(() => {
     const updatedPercentage = (questionNumber / totalQuestions) * 100;
@@ -543,7 +543,7 @@ const VerbalTestPageFocus = () => {
       calculateScore(nextQuestionLevel); // Calculate the score
       var levelLimit = 2;
 
-      if (questionNumber > 12) {
+      if (questionNumber > 7) {
         levelLimit = 1;
       }
 
@@ -561,7 +561,7 @@ const VerbalTestPageFocus = () => {
 
       setCurrentQuestionLevel(nextQuestionLevel);
 
-      if (questionNumber === 12) {
+      if (questionNumber === 7) {
         nextQuestionLevel = 4;
         setCurrentQuestionLevel(4);
         setCurrentQuestion(0);
