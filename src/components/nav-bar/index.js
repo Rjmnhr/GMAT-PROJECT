@@ -33,6 +33,7 @@ const NavBar = () => {
         setIsAuthenticated(false);
       }
     };
+
     VerifyToken();
 
     if (isAuthenticated !== null) {
@@ -41,7 +42,7 @@ const NavBar = () => {
       } else {
         // Redirect to the login page if not authenticated
 
-        setIsLoggedIn(true);
+        setIsLoggedIn(false);
       }
     }
   }, [isAuthenticated, accessToken]);

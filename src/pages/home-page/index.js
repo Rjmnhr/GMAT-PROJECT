@@ -46,7 +46,7 @@ const HomePage = () => {
       } else {
         // Redirect to the login page if not authenticated
 
-        setIsLoggedIn(true);
+        setIsLoggedIn(false);
       }
     }
   }, [isAuthenticated, accessToken]);
@@ -82,8 +82,8 @@ const HomePage = () => {
   // }, [storedUserName]);
   const handleLogOut = () => {
     navigate("/");
-    localStorage.removeItem("adefteducation_accessToken", "");
-    localStorage.setItem("adefteducation_isLoggedIn", false);
+    localStorage.removeItem("adefteducation_accessToken");
+    localStorage.setItem("adefteducation_isLoggedIn");
   };
   const items = [
     // {
@@ -196,7 +196,7 @@ const HomePage = () => {
                 <li>
                   <a href="/blogs">Blog</a>
                 </li>
-                {isLoggedIn  ? (
+                {isLoggedIn ? (
                   <>
                     <Dropdown
                       menu={{
