@@ -5,61 +5,120 @@ import { LoadingOutlined } from "@ant-design/icons";
 import AxiosInstance from "../../../components/axios";
 
 const ResultPage = () => {
-  const [score, setScore] = useState(0);
   // const scorePercentage = ((score / 800) * 100).toFixed(2);
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
   const quant_score = sessionStorage.getItem("quant_score");
   const verbal_score = sessionStorage.getItem("verbal_score");
-  const exam_no = localStorage.getItem("exam_no");
+
   const ir_score = sessionStorage.getItem("ir_score");
   const user_id = localStorage.getItem("adefteducation_user_id");
   const user_name = localStorage.getItem("adefteducation_user_name");
   const email = localStorage.getItem("email");
   const [notQualified, setNotQualified] = useState(false);
 
+
+  const location = window.location.href;
+  const userID = localStorage.getItem("adefteducation_user_id");
   useEffect(() => {
-    if (
-      quant_score < 27 ||
-      verbal_score < 27 ||
-      isNaN(verbal_score) ||
-      isNaN(quant_score)
+    AxiosInstance.post(
+      `/api/track-data/store3`,
+      { path: location, id: userID },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
     )
-      return;
-
-    const formData = new FormData();
-    formData.append("quant_score", quant_score);
-    formData.append("verbal_score", verbal_score);
-    AxiosInstance.post("/api/gmat/final-mark", formData, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
       .then(async (response) => {
-        const resultData = await response.data;
-
-        const score = resultData[0][verbal_score];
-        storeData(score);
-        setScore(score);
-        setIsLoading(false);
-
-        localStorage.setItem("GMAT_Score", score);
-
-        // Set practice score based on exam_no (you can add this logic as needed)
-        if (exam_no === "1") {
-          localStorage.setItem("practice_score_1", score);
-        } else if (exam_no === "2") {
-          localStorage.setItem("practice_score_2", score);
-        } else {
-          localStorage.setItem("practice_score_1", score);
-        }
-
-        // setDataLinkedIn(resultData);
+        //eslint-disable-next-line
+        const data = await response.data;
       })
-      .catch((err) => console.log("error", err));
+      .catch((err) => console.log(err));
 
-    // eslint-disable-next-line
+    //eslint-disable-next-line
   }, []);
+
+  const [startTime, setStartTime] = useState(Date.now());
+  useEffect(() => {
+    // Set start time when the component mounts
+    setStartTime(Date.now());
+
+    // Add an event listener for the beforeunload event
+    const handleBeforeUnload = () => {
+      // Calculate time spent
+      const endTime = Date.now();
+      const timeSpentInSeconds = (endTime - startTime) / 1000;
+
+      // Send the data to your backend
+      AxiosInstance.post(
+        `/api/track-data/store2`,
+        { path: location, id: userID, timeSpent: timeSpentInSeconds },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then(async (response) => {
+          //eslint-disable-next-line
+          const data = await response.data;
+        })
+        .catch((err) => console.log(err));
+    };
+
+    // Add the event listener
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    // Specify the cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+    //eslint-disable-next-line
+  }, [location, userID]);
+
+  // useEffect(() => {
+  //   if (
+  //     quant_score < 27 ||
+  //     verbal_score < 27 ||
+  //     isNaN(verbal_score) ||
+  //     isNaN(quant_score)
+  //   )
+  //     return;
+
+  //   const formData = new FormData();
+  //   formData.append("quant_score", quant_score);
+  //   formData.append("verbal_score", verbal_score);
+  //   AxiosInstance.post("/api/gmat/final-mark", formData, {
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   })
+  //     .then(async (response) => {
+  //       const resultData = await response.data;
+
+  //       const score = resultData[0][verbal_score];
+  //       storeData(score);
+  //       setScore(score);
+  //       setIsLoading(false);
+
+  //       localStorage.setItem("GMAT_Score", score);
+
+  //       // Set practice score based on exam_no (you can add this logic as needed)
+  //       if (exam_no === "1") {
+  //         localStorage.setItem("practice_score_1", score);
+  //       } else if (exam_no === "2") {
+  //         localStorage.setItem("practice_score_2", score);
+  //       } else {
+  //         localStorage.setItem("practice_score_1", score);
+  //       }
+
+  //       // setDataLinkedIn(resultData);
+  //     })
+  //     .catch((err) => console.log("error", err));
+
+  //   // eslint-disable-next-line
+  // }, []);
 
   // const getCategory = (score) => {
   //   if (score >= 90) {
@@ -93,11 +152,6 @@ const ResultPage = () => {
   const practice_exam_section = sessionStorage.getItem("practice_exam_section");
   const ir_wrong_questions = sessionStorage.getItem("ir_wrong_questions");
   const quant_time_spend = sessionStorage.getItem("quant_time_spend");
-
-  console.log(
-    "🚀 ~ file: index.js:101 ~ storeData ~ quant_score:",
-    typeof quant_score
-  );
 
   const clearStorage = () => {
     sessionStorage.removeItem("quant_wrong_questions");
@@ -280,12 +334,15 @@ const ResultPage = () => {
                 />
               </div>
               <p style={{ fontSize: "20px" }} className="mt-3">
-                Your GMAT Score: {score}/800
+                Your Quantitative Reasoning score : {quant_score}/90
               </p>
               <p style={{ fontSize: "20px" }} className="mt-3">
-                Your Data Insights score : {ir_score}
+                Your Verbal Reasoning score : {verbal_score}/90
               </p>
-              <p style={{ fontWeight: "500", fontSize: "50px" }}>{score}</p>
+
+              <p style={{ fontSize: "20px" }} className="mt-3">
+                Your Data Insights score : {ir_score}/90
+              </p>
 
               <button className="btn border mt-5" onClick={() => navigate("/")}>
                 Go to Dashboard

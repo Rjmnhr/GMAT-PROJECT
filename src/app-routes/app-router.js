@@ -447,7 +447,18 @@ const AppRouter = () => {
               />
             }
           />
+       
           <Route
+            path="/blogs"
+            element={
+              <>
+                <div>
+                  <BlogsPage />
+                </div>
+              </>
+            }
+          />
+             <Route
             path="*"
             element={
               <>
@@ -464,16 +475,6 @@ const AppRouter = () => {
                   <a href="https://www.adefteducation.com/">
                     <button className="btn border">Go Back</button>
                   </a>
-                </div>
-              </>
-            }
-          />
-          <Route
-            path="/blogs"
-            element={
-              <>
-                <div>
-                  <BlogsPage />
                 </div>
               </>
             }

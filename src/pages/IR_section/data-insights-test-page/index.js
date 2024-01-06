@@ -3,6 +3,7 @@ import { Progress, Radio, Space } from "antd";
 import { ClockCircleTwoTone } from "@ant-design/icons";
 import { questions } from "../../../components/items";
 import { useNavigate } from "react-router-dom";
+import AxiosInstance from "../../../components/axios";
 
 const DataInsightsTestPage = () => {
   const [value, setValue] = useState(null);
@@ -11,16 +12,145 @@ const DataInsightsTestPage = () => {
   const [percentage, setPercentage] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(10); // elapsed time in seconds
   const [isRunning, setIsRunning] = useState(false);
+
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
   const [remainingTime, setRemainingTime] = useState(45 * 60);
+  const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
+  const navigate = useNavigate();
+  const [tempValues, setTempValues] = useState([0, 0, 0]); // Initialize with three zeros
+  const [tempSum, setTempSum] = useState(0);
+  const [currentQuestionLevel, setCurrentQuestionLevel] = useState(4); // Initialize with level 2
+  const [filteredQuestionsByLevel, setFilteredQuestionsByLevel] =
+    useState(null);
   const [questionNumber, setQuestionNumber] = useState(1);
+  const [attendedQuestionIds, setAttendedQuestionIds] = useState([]);
   const [isSplitScreen, setIsSplitScreen] = useState(true);
+  const [threshHold, setThreshHold] = useState(1);
+  const [responseHistory, setResponseHistory] = useState([]);
   const [rightQuestions, setRightQuestions] = useState(0);
   const [wrongQuestions, setWrongQuestions] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState(null);
-  const navigate = useNavigate();
   const storedCount = sessionStorage.getItem("order-count");
+
+  const location = window.location.href;
+  const userID = localStorage.getItem("adefteducation_user_id");
+  useEffect(() => {
+    AxiosInstance.post(
+      `/api/track-data/store3`,
+      { path: location, id: userID },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then(async (response) => {
+        //eslint-disable-next-line
+        const data = await response.data;
+      })
+      .catch((err) => console.log(err));
+
+    //eslint-disable-next-line
+  }, []);
+
+  const [startTime, setStartTime] = useState(Date.now());
+  useEffect(() => {
+    // Set start time when the component mounts
+    setStartTime(Date.now());
+
+    // Add an event listener for the beforeunload event
+    const handleBeforeUnload = () => {
+      // Calculate time spent
+      const endTime = Date.now();
+      const timeSpentInSeconds = (endTime - startTime) / 1000;
+
+      // Send the data to your backend
+      AxiosInstance.post(
+        `/api/track-data/store2`,
+        { path: location, id: userID, timeSpent: timeSpentInSeconds },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then(async (response) => {
+          //eslint-disable-next-line
+          const data = await response.data;
+        })
+        .catch((err) => console.log(err));
+    };
+
+    // Add the event listener
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    // Specify the cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+    //eslint-disable-next-line
+  }, [location, userID]);
+
+  useEffect(() => {
+    let newThreshold = 0;
+
+    if (questionNumber < 3) {
+      newThreshold = 1;
+    } else if (questionNumber >= 4 && questionNumber < 7) {
+      newThreshold = 0;
+    } else if (questionNumber > 7 && questionNumber < 10) {
+      newThreshold = 1;
+    } else {
+      newThreshold = 0;
+    }
+
+    setThreshHold(newThreshold);
+  }, [questionNumber]);
+  // Filter and shuffle questions
+  const IRQuestions = questions.filter(
+    (question) => question.Category === "Integrated reasoning"
+  );
+  const QuestionsArray = [...IRQuestions];
+
+  useEffect(() => {
+    const shuffledArr = shuffleArray(QuestionsArray);
+    setShuffledQuestions(shuffledArr);
+    //eslint-disable-next-line
+  }, []);
+
+  function shuffleArray(array) {
+    let currentIndex = array.length,
+      randomIndex,
+      temporaryValue;
+
+    // While there remain elements to shuffle...
+    while (currentIndex !== 0) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (remainingTime > 0) {
+        setRemainingTime((prevTime) => prevTime - 1);
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, [remainingTime]);
+
   const trackUserInput = (answer) => {
     console.log(answer);
 
@@ -47,47 +177,17 @@ const DataInsightsTestPage = () => {
     sessionStorage.setItem("ir_wrong_questions", wrongAnswer);
   };
 
-  // Filter and shuffle questions
-  const IRQuestions = questions.filter(
-    (question) => question.Category === "Integrated reasoning"
-  );
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:8002/api/gmat/data")
+  //     .then(async (response) => {
+  //       const resultData = await response.data;
 
-  useEffect(() => {
-    const shuffledArr = shuffleArray(IRQuestions);
-    setShuffledQuestions(shuffledArr);
-    //eslint-disable-next-line
-  }, []);
-
-  function shuffleArray(array) {
-    let currentIndex = array.length,
-      randomIndex,
-      temporaryValue;
-
-    // While there remain elements to shuffle...
-    while (currentIndex !== 0) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-  }
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (remainingTime > 0) {
-        setRemainingTime((prevTime) => prevTime - 1);
-      }
-    }, 1000);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, [remainingTime]);
+  //       console.log(JSON.stringify(resultData));
+  //       // setDataLinkedIn(resultData);
+  //     })
+  //     .catch((err) => console.log("error", err));
+  // }, []);
 
   const formatTimer = (timeInSeconds) => {
     const minutes = Math.floor(timeInSeconds / 60)
@@ -145,62 +245,6 @@ const DataInsightsTestPage = () => {
     // Logic to determine the next question level based on tempSum
   };
 
-  useEffect(() => {
-    const updatedPercentage = (questionNumber / totalQuestions) * 100;
-    setPercentage(updatedPercentage.toFixed(2));
-  }, [questionNumber, totalQuestions]);
-
-  const handleNext = () => {
-    setQuestionNumber(questionNumber + 1);
-    if (questionNumber < totalQuestions) {
-      resetStopwatch();
-
-      // Check if currentQuestion is within the valid range
-
-      setCurrentQuestion((prevQuestion) => prevQuestion + 1);
-
-      // Check if the selected answer is correct and update the score
-      const correctAnswer = shuffledQuestions[currentQuestion].correct_answer;
-      const isCorrect = value === correctAnswer;
-      if (value === correctAnswer) {
-        setScore(score + 1);
-      }
-      trackUserInput(isCorrect);
-
-      setIsNextButtonDisabled(true); // Disable "Next" button again
-      startStopwatch();
-      setValue(null); // Reset the selected value
-    } else {
-      let finalScore = score;
-      // Check if the selected answer is correct and update the score
-      const correctAnswer = shuffledQuestions[currentQuestion].correct_answer;
-      const isCorrect = value === correctAnswer;
-      if (value === correctAnswer) {
-        setScore(score + 1);
-        finalScore = score + 1;
-      }
-
-      trackUserInput(isCorrect);
-
-      // Calculate the percentage score out of 8
-      const percentageScore = finalScore;
-
-      // Store the percentage score in session storage
-      sessionStorage.setItem("ir_score", percentageScore.toFixed(2));
-
-      sessionStorage.removeItem("current_section");
-      sessionStorage.setItem("time_remaining", remainingTime);
-      if (storedCount && storedCount === "2") {
-        sessionStorage.removeItem("current_section");
-        navigate("/results-focus");
-      } else {
-        navigate("/test-break-focus");
-      }
-
-      // Handle the end of the test, e.g., show results
-    }
-  };
-
   if (remainingTime === 0) {
     alert("The Allowed time for this session is over");
     if (storedCount && storedCount === "2") {
@@ -211,12 +255,450 @@ const DataInsightsTestPage = () => {
     }
   }
 
+  const calculateScore = (level) => {
+    const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
+
+    let scoreIncrement = 0;
+
+    if (questionNumber <= 7) {
+      if (isCorrect) {
+        // Calculate score increment for correct answers
+        switch (level) {
+          case 1:
+            scoreIncrement = 20;
+            break;
+          case 2:
+            scoreIncrement = 24;
+            break;
+          case 3:
+            scoreIncrement = 25;
+            break;
+          case 4:
+            scoreIncrement = 30;
+            break;
+          case 5:
+            scoreIncrement = 35;
+            break;
+          case 6:
+            scoreIncrement = 45;
+            break;
+          case 7:
+            scoreIncrement = 60;
+            break;
+          case 8:
+            scoreIncrement = 120;
+            break;
+          default:
+            // Handle other levels if necessary
+            break;
+        }
+      } else {
+        // Calculate score decrement for wrong answers
+        switch (level) {
+          case 1:
+            scoreIncrement = -10;
+            break;
+          case 2:
+            scoreIncrement = -10.8;
+            break;
+          case 3:
+            scoreIncrement = -10;
+            break;
+          case 4:
+            scoreIncrement = -9;
+            break;
+          case 5:
+            scoreIncrement = -8.75;
+
+            break;
+          case 6:
+            scoreIncrement = -5.625;
+            break;
+          case 7:
+            scoreIncrement = -3;
+            break;
+          case 8:
+            scoreIncrement = -6;
+
+            break;
+
+          default:
+            // Handle other levels if necessary
+            break;
+        }
+      }
+    } else {
+      if (isCorrect) {
+        // Calculate score increment for correct answers
+        switch (level) {
+          case 1:
+            scoreIncrement = 2.0;
+            break;
+          case 2:
+            scoreIncrement = 2.4;
+            break;
+          case 3:
+            scoreIncrement = 2.5;
+            break;
+          case 4:
+            scoreIncrement = 3.0;
+            break;
+          case 5:
+            scoreIncrement = 3.5;
+            break;
+          case 6:
+            scoreIncrement = 4.5;
+            break;
+          case 7:
+            scoreIncrement = 6.0;
+            break;
+          case 8:
+            scoreIncrement = 12;
+            break;
+          default:
+            // Handle other levels if necessary
+            break;
+        }
+      } else {
+        // Calculate score decrement for wrong answers
+        switch (level) {
+          case 1:
+            scoreIncrement = -2;
+            break;
+          case 2:
+            scoreIncrement = -2.16;
+            break;
+          case 3:
+            scoreIncrement = -2;
+            break;
+          case 4:
+            scoreIncrement = -1.8;
+            break;
+          case 5:
+            scoreIncrement = -1.75;
+
+            break;
+          case 6:
+            scoreIncrement = -1.125;
+            break;
+          case 7:
+            scoreIncrement = -0.6;
+            break;
+          case 8:
+            scoreIncrement = -1.2;
+
+            break;
+
+          default:
+            // Handle other levels if necessary
+            break;
+        }
+      }
+    }
+
+    setScore((prevScore) => prevScore + scoreIncrement); // Update score by adding the increment
+  };
+
+  const RangeValues = [10, 50, 75, 100, 125, 190, 280, 375, 475];
+
+  function findClosestValues(inputValue) {
+    let closestLow = -Infinity;
+    let closestHigh = Infinity;
+
+    for (const value of RangeValues) {
+      if (value < inputValue && value > closestLow) {
+        closestLow = value;
+      } else if (value > inputValue && value < closestHigh) {
+        closestHigh = value;
+      }
+    }
+
+    return { closestLow, closestHigh };
+  }
+  const GMATScoreConversion = (totalScore) => {
+    let convertedScore = 0;
+
+    switch (totalScore) {
+      case 10:
+        convertedScore = 60;
+        break;
+      case 50:
+        convertedScore = 65;
+
+        break;
+      case 75:
+        convertedScore = 70;
+        break;
+      case 100:
+        convertedScore = 75;
+        break;
+      case 125:
+        convertedScore = 80;
+
+        break;
+      case 190:
+        convertedScore = 85;
+        break;
+      case 280:
+        convertedScore = 88;
+        break;
+      case 375:
+        convertedScore = 89;
+        break;
+      case 475:
+        convertedScore = 90;
+        break;
+      default:
+        const { closestLow, closestHigh } = findClosestValues(totalScore);
+        const x = calculateMatchingValue(closestLow);
+        const i = calculateMatchingValue(closestHigh);
+        const y = i - x;
+
+        const z = (closestHigh - totalScore) / (closestHigh - closestLow);
+
+        convertedScore = x + y * z;
+
+        break;
+    }
+
+    console.log(convertedScore);
+
+    if (convertedScore > 90) {
+      convertedScore = 90;
+    }
+
+    sessionStorage.setItem("quant_score", Math.round(convertedScore));
+  };
+
+  function calculateMatchingValue(range) {
+    switch (range) {
+      case 10:
+        return 60;
+      case 50:
+        return 65;
+      case 75:
+        return 70;
+      case 100:
+        return 75;
+      case 125:
+        return 80;
+      case 190:
+        return 85;
+      case 280:
+        return 88;
+      case 375:
+        return 89;
+      case 475:
+        return 90;
+      default:
+        // Handle other cases as needed
+        return 0;
+    }
+  }
+
   useEffect(() => {
+    const updatedPercentage = (questionNumber / totalQuestions) * 100;
+    setPercentage(updatedPercentage.toFixed(2));
+  }, [questionNumber, totalQuestions]);
+
+  const mappingTheLevels = (level) => {
+    switch (level) {
+      case 1:
+        return 1;
+
+      case 2:
+        return 1;
+
+      case 3:
+        return 2;
+
+      case 4:
+        return 2;
+
+      case 5:
+        return 3;
+
+      case 6:
+        return 3;
+
+      case 7:
+        return 4;
+
+      case 8:
+        return 5;
+
+      default:
+        // Handle other cases as needed
+        return 1;
+    }
+  };
+
+  const handleNext = () => {
+    setQuestionNumber(questionNumber + 1);
+    if (questionNumber < totalQuestions) {
+      resetStopwatch();
+      setUserAnswers([...userAnswers, value]);
+
+      // Check if currentQuestion is within the valid range
+      if (currentQuestion + 2 < filteredQuestionsByLevel.length) {
+        console.log("inside");
+        setCurrentQuestion((prevQuestion) => prevQuestion + 1);
+      } else {
+        // Handle the case where there are no more questions for the current level
+        setCurrentQuestion(0);
+      }
+      console.log(
+        "🚀 ~ file: index.js:492 ~ handleNext ~ filteredQuestionsByLevel:",
+        filteredQuestionsByLevel
+      );
+
+      // Add the ID of the answered question to the attendedQuestionIds array
+      const answeredQuestionId = filteredQuestionsByLevel[0].id;
+
+      const AttendedQuestionIdsArr = [
+        ...attendedQuestionIds,
+        answeredQuestionId,
+      ];
+      setAttendedQuestionIds([...attendedQuestionIds, answeredQuestionId]);
+
+      setIsNextButtonDisabled(true); // Disable "Next" button again
+      startStopwatch();
+      setValue(null); // Reset the selected value
+
+      const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
+      trackUserInput(isCorrect);
+      const newTempValues = [...tempValues, isCorrect ? 1 : 0].slice(1, 4);
+
+      // Update the temporary values array and calculate the sum
+      setTempValues(newTempValues);
+      const newTempSum = newTempValues.reduce((acc, val) => acc + val, 0);
+      setTempSum(newTempSum);
+
+      console.log(tempSum);
+
+      let nextQuestionLevel = currentQuestionLevel;
+
+      calculateScore(nextQuestionLevel); // Calculate the score
+      var levelLimit = 2;
+
+      if (questionNumber > 7) {
+        levelLimit = 1;
+      }
+
+      if (currentQuestion > threshHold) {
+        if (newTempSum === 0 && currentQuestionLevel > levelLimit) {
+          nextQuestionLevel = currentQuestionLevel - 1; // Decrease level by 1, but not below 1
+
+          setCurrentQuestion(0);
+        } else if (newTempSum === 3 && currentQuestionLevel < 8) {
+          nextQuestionLevel = currentQuestionLevel + 1; // Increase level by 1, but not above 5
+
+          setCurrentQuestion(0);
+        }
+      }
+
+      setCurrentQuestionLevel(nextQuestionLevel);
+
+      if (questionNumber === 7) {
+        nextQuestionLevel = 4;
+        setCurrentQuestionLevel(4);
+        setCurrentQuestion(0);
+      }
+
+      let mappedLevel = mappingTheLevels(nextQuestionLevel);
+
+      // Filter questions based on the currentQuestionLevel and attendedQuestionIds
+      const filteredArray = shuffledQuestions.filter(
+        (question) =>
+          question.level === mappedLevel &&
+          !AttendedQuestionIdsArr.includes(question.id)
+      );
+
+      const response = {
+        questionNumber,
+
+        status: isCorrect ? "right" : "wrong",
+        score: score,
+        level: nextQuestionLevel,
+        mappedLevel: mappedLevel,
+      };
+
+      // Add the response object to the history array
+      setResponseHistory([...responseHistory, response]);
+
+      if (filteredArray.length === 0) {
+        // No more questions left for the current level
+        setCurrentQuestion(0);
+        if (nextQuestionLevel < 8) {
+          nextQuestionLevel = nextQuestionLevel + 1;
+        } else {
+          if (nextQuestionLevel !== 1) {
+            nextQuestionLevel = nextQuestionLevel - 1;
+          }
+        }
+        mappedLevel = mappingTheLevels(nextQuestionLevel);
+        // Filter questions based on the currentQuestionLevel and attendedQuestionIds
+        const filteredArray = shuffledQuestions.filter(
+          (question) =>
+            question.level === mappedLevel &&
+            !AttendedQuestionIdsArr.includes(question.id)
+        );
+
+        setFilteredQuestionsByLevel(filteredArray);
+        return;
+      }
+
+      setFilteredQuestionsByLevel(filteredArray);
+    } else {
+      setUserAnswers([...userAnswers, value]);
+      calculateScore(currentQuestionLevel); // Calculate the score
+
+      const isCorrect = value === filteredQuestionsByLevel[0].correct_answer;
+      trackUserInput(isCorrect);
+
+      sessionStorage.setItem("current_section", "ir");
+      sessionStorage.setItem("time_remaining", remainingTime);
+      navigate("/test-break-focus");
+
+      // Handle the end of the test, e.g., show results
+    }
+  };
+
+  useEffect(() => {
+    GMATScoreConversion(score);
+
+    sessionStorage.setItem("GMAT_Score", score);
+    if (questionNumber > totalQuestions) {
+      navigate("/test-break-focus");
+    }
+    //eslint-disable-next-line
+  }, [score]);
+
+  useEffect(() => {
+    const mappedLevel = mappingTheLevels(currentQuestionLevel);
+
     if (shuffledQuestions) {
+      // Filter questions based on the currentQuestionLevel
+      const filteredArray = shuffledQuestions.filter(
+        (question) => question.level === mappedLevel
+      );
+      setFilteredQuestionsByLevel(filteredArray);
+    }
+
+    // eslint-disable-next-line
+  }, [shuffledQuestions]);
+
+  useEffect(() => {
+    if (filteredQuestionsByLevel) {
+      console.log(
+        "🚀 ~ file: index.js:633 ~ useEffect ~    filteredQuestionsByLevel[0].main_question_stem.length:",
+        filteredQuestionsByLevel[0]?.main_question_stem?.length
+      );
       if (
-        shuffledQuestions[currentQuestion].main_question_stem.length > 1000 ||
-        shuffledQuestions[currentQuestion].img_url
+        filteredQuestionsByLevel[0].main_question_stem.length > 1000 ||
+        filteredQuestionsByLevel[0].img_url
       ) {
+        console.log("entered");
         setIsSplitScreen(true);
       } else {
         setIsSplitScreen(false);
@@ -224,7 +706,7 @@ const DataInsightsTestPage = () => {
     }
 
     // eslint-disable-next-line
-  }, [currentQuestion, isSplitScreen]);
+  }, [currentQuestion, score, isSplitScreen]);
 
   return (
     <>
@@ -357,6 +839,12 @@ const DataInsightsTestPage = () => {
                     </Space>
                   </Radio.Group>
                 </div>
+                <p className="mt-3">Level :{currentQuestionLevel}</p>
+
+                <p className="mt-3">
+                  Score:
+                  {score.toFixed(2)}
+                </p>
 
                 <p className="mt-3">
                   Correct Answer:

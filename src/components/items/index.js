@@ -12973,7 +12973,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1: "It can be inferred that",
     subquestion2:
       "Only the company founder would be interested in launching new games in the next year",
@@ -12995,7 +12995,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1: "It can be inferred that",
     subquestion2:
       "All three partners believe that the development costs for Xanthia have been above the average for the company's games",
@@ -13017,7 +13017,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1: "It can be inferred that",
     subquestion2:
       "Less than $150,000 has been spent on marketing Xanthia in the current year",
@@ -13039,7 +13039,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1: "It can be inferred that",
     subquestion2:
       "The attitudes of the finance and marketing experts to development costs are more similar to each other than to the views of the company founder",
@@ -13061,7 +13061,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1: "It can be inferred that",
     subquestion2:
       "It is probable that one of the main points on the agenda for the meeting is marketing strategies",
@@ -13083,7 +13083,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "Using all the information provided, answer the two questions with either yes or no.",
     subquestion2:
@@ -13106,7 +13106,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1:
       "Using all the information provided, answer the two questions with either yes or no.",
     subquestion2:
@@ -13129,7 +13129,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "For any employee joining the organization at age 24 at Grade D, what is the minimum number of years before he or she can reach Grade A. (Assume that the employee is in continuous employment, i.e. does not leave and rejoin at a later date)",
     subquestion2: "",
@@ -13150,7 +13150,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "In the Fiction � sci-fi category over the 25-years depicted in the table the ratio of new titles by female authors to those by male authors is 1:6",
     subquestion2: "",
@@ -13173,7 +13173,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level:4,
     subquestion1:
       "The average (arithmetic mean) number of titles published each five-year period in the category Fiction - Historical is 8.6",
     subquestion2: "",
@@ -13196,7 +13196,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "The total number of new titles published in period 5 is greater than the total number of new titles published in period 1",
     subquestion2: "",
@@ -13220,7 +13220,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
@@ -13244,7 +13244,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 3,
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
@@ -13268,7 +13268,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
@@ -13292,7 +13292,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
@@ -13316,7 +13316,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 6,
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
@@ -13340,7 +13340,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "Set 1: Red, Blue, Yellow Set 2: Pink, Turquoise, Orang Set 3: Purple, Green, Brown Set 4: Black, White, Silver",
     subquestion2:
@@ -13364,7 +13364,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1: "8(1 + M)",
     subquestion2: "",
     subquestion3: "",
@@ -13385,7 +13385,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1: "3 + 8M",
     subquestion2: "",
     subquestion3: "",
@@ -13406,7 +13406,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 3,
     subquestion1: "3 + 16M",
     subquestion2: "",
     subquestion3: "",
@@ -13427,7 +13427,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1: "11 + 16M",
     subquestion2: "",
     subquestion3: "",
@@ -13448,7 +13448,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1: "3(1 + 8M)",
     subquestion2: "",
     subquestion3: "",
@@ -13469,7 +13469,7 @@ export const questions = [
     SubCategory: "Two -part analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 6,
     subquestion1: "8M",
     subquestion2: "",
     subquestion3: "",
@@ -13490,7 +13490,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "I. If one student is selected at random from the 75, the chance that the student will be older than 17 or on the Varsity team, or both is __________.",
     subquestion2:
@@ -13515,7 +13515,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1:
       "I. The relationship between study time and test scores is __________.",
     subquestion2: "II. The slope of the regression line is __________ .",
@@ -13539,7 +13539,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 3,
     subquestion1:
       "The relationship between the age of the child and the child's shoe size is __________.",
     subquestion2: "",
@@ -13563,7 +13563,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "I. No class is offered in less than one-third of the schools.",
     subquestion2:
@@ -13588,7 +13588,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1:
       "I. The percent of change in the passenger count from 2012 created the rank identifier for 2013.",
     subquestion2:
@@ -13613,7 +13613,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 6,
     subquestion1:
       "I. The wedding coordinator is not willing to extend the guest headcount deadline.",
     subquestion2:
@@ -13636,7 +13636,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "I. An individual who is experienced in fitness and has taken 3 group classes can choose to pay for the individual direction membership.",
     subquestion2:
@@ -13659,7 +13659,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1: "",
     subquestion2: "",
     subquestion3: "",
@@ -13680,7 +13680,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 3,
     subquestion1:
       "1) Print Media Investment: no more than $10,000, due to sharply diminishing returns above that threshold. If X < 10, N = X/2",
     subquestion2: "2) TV & Movie advertising Investment: minimum of $15,000",
@@ -13702,7 +13702,7 @@ export const questions = [
     SubCategory: "Multi -source reasoning",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1: "",
     subquestion2: "",
     subquestion3: "",
@@ -13723,7 +13723,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "1. No country with more than a quarter of people over 20 year old in tertiary programs spends more than $50/student on tertiary programs",
     subquestion2: "",
@@ -13747,7 +13747,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "2.No country that spends more than $40/student on tertiary programs has more than 40% of all people over 20 year old in tertiary programs.",
     subquestion2: "",
@@ -13771,7 +13771,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "3.No country. that spends more than $20/student on tertiary programs has less than 20% of all people over 20 year old in tertiary programs.",
     subquestion2: "",
@@ -13795,7 +13795,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1:
       "The commuting mode whose ridership increased by approximately 29% from 1995 to 2005 is",
     subquestion2: "",
@@ -13819,7 +13819,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1:
       "Assume the graph above shows all commuters in the two relevant years. In 2005, the car commuters were _______ percent of all commuters.",
     subquestion2: "",
@@ -13843,7 +13843,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 6,
     subquestion1:
       "If 100,000 participants start this process, and if all the percentages in the chart are correct, _______ people of them would win the entire competition.",
     subquestion2: "",
@@ -13867,7 +13867,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "Exactly _______ % of participants who start acquire exactly two sets of commendations.",
     subquestion2: "",
@@ -13891,7 +13891,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "In 2010 and 2011 combined, Rho division accounted for _____ % of Bethel’s profits.",
     subquestion2: "",
@@ -13915,7 +13915,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1: "From 2008 to 2011, Rho division increased by ______%",
     subquestion2: "",
     subquestion3: "",
@@ -13938,7 +13938,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 3,
     subquestion1:
       "The revenue from foreign export sales is __________ the revenue from grocery stores in the Northeast.",
     subquestion2: "",
@@ -13962,7 +13962,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 3,
     subquestion1:
       "Revenue from governmental contracts would have to increase by ________% to equal the revenue from grocery sales in the Midwest.",
     subquestion2: "",
@@ -13986,7 +13986,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 3,
     subquestion1:
       "Population density is the ratio of population/land area. Among the eight cities shown, __________ is the city with the lowest population density.",
     subquestion2: "",
@@ -14010,7 +14010,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "According to this graph, the population of a city is ________________ with the size of the GDP of the metropolitan region.",
     subquestion2: "",
@@ -14034,7 +14034,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "During this two-year period, Apex Appliance had ________ non-fourth-quarter month(s) with higher sales revenue than the fourth-quarter month with the lowest sales revenue.",
     subquestion2: "",
@@ -14058,7 +14058,7 @@ export const questions = [
     SubCategory: "Graphics Interpretation",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "In Apex’s accounting system, the “yield” of a month is the ratio of sales revenue to number of customers in that month. In the month shown here with the highest yield, Apex earned _________ in monthly sales revenue",
     subquestion2: "",
@@ -14082,7 +14082,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "The product with the highest unit sales in 2010 also had the highest dollar increase in price since 2009.",
     subquestion2: "",
@@ -14106,7 +14106,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "Every orange scented product experienced growth in unit sales from 2009 to 2010.",
     subquestion2: "",
@@ -14130,7 +14130,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1:
       "No product experienced growth in dollar sales but a decline in unit sales from 2009 to 2010.",
     subquestion2: "",
@@ -14154,7 +14154,7 @@ export const questions = [
     SubCategory: "Table analysis",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1:
       "The highest-priced product in 2010 was also the highest-priced product in 2009.",
     subquestion2: "",
@@ -14178,7 +14178,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
@@ -14201,7 +14201,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
@@ -14224,7 +14224,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 6,
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
@@ -14247,7 +14247,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
@@ -14270,7 +14270,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
@@ -14293,7 +14293,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "For each of the following statements, select Inferable if the statement is reasonably inferable from the information provided. Otherwise, select Not Inferable.",
     subquestion2:
@@ -14321,7 +14321,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1:
       "Based on the statements, which one of the following can be most reasonably be inferred to be a view held by the company's Qoop developers?",
     subquestion2: "",
@@ -14348,7 +14348,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 3,
     subquestion1:
       "Which of the following can most reasonably be inferred to be a view held by the online video websites?",
     subquestion2: "",
@@ -14370,7 +14370,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "For each of the following statements, select Both Accept if, based on the information provided, it can be inferred that both the programming company and the online video company would likely accept that the statement is true. If not, select Otherwise.",
     subquestion2:
@@ -14393,7 +14393,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "For each of the following statements, select Both Accept if, based on the information provided, it can be inferred that both the programming company and the online video company would likely accept that the statement is true. If not, select Otherwise.",
     subquestion2:
@@ -14416,7 +14416,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1:
       "For each of the following statements, select Both Accept if, based on the information provided, it can be inferred that both the programming company and the online video company would likely accept that the statement is true. If not, select Otherwise.",
     subquestion2:
@@ -14439,7 +14439,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 6,
     subquestion1:
       "For each of the following issues, select Can Infer Disagreement if, based on the information provided, it can be inferred that the programming company and the online video websites would hold opposing positions on the issue. Otherwise, select Cannot Infer Disagreement.",
     subquestion2:
@@ -14462,7 +14462,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "For each of the following issues, select Can Infer Disagreement if, based on the information provided, it can be inferred that the programming company and the online video websites would hold opposing positions on the issue. Otherwise, select Cannot Infer Disagreement.",
     subquestion2:
@@ -14485,7 +14485,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1:
       "For each of the following issues, select Can Infer Disagreement if, based on the information provided, it can be inferred that the programming company and the online video websites would hold opposing positions on the issue. Otherwise, select Cannot Infer Disagreement.",
     subquestion2:
@@ -14508,7 +14508,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 3,
     subquestion1:
       "Using all the information provided, select Yes if the statement about eligibility / promotion is possible. Otherwise, select No.",
     subquestion2:
@@ -14531,7 +14531,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 4,
     subquestion1:
       "Using all the information provided, select Yes if the statement about eligibility / promotion is possible. Otherwise, select No.",
     subquestion2:
@@ -14554,7 +14554,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 5,
     subquestion1:
       "Using all the information provided, select Yes if the statement about eligibility / promotion is possible. Otherwise, select No.",
     subquestion2:
@@ -14577,7 +14577,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 6,
     subquestion1:
       "For each of the following statements, select Conclusively Eligible if the candidate is absolutely eligible for the position he/she is applying for. Otherwise, select Not Conclusively Eligible.",
     subquestion2:
@@ -14600,7 +14600,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "For each of the following statements, select Conclusively Eligible if the candidate is absolutely eligible for the position he/she is applying for. Otherwise, select Not Conclusively Eligible.",
     subquestion2:
@@ -14623,7 +14623,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "For each of the following statements, select Conclusively Eligible if the candidate is absolutely eligible for the position he/she is applying for. Otherwise, select Not Conclusively Eligible.",
     subquestion2:
@@ -14646,7 +14646,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1: "",
     subquestion2: "",
     subquestion3: "",
@@ -14667,7 +14667,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 1,
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
     subquestion2:
@@ -14690,7 +14690,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
     subquestion2:
@@ -14713,7 +14713,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
     subquestion2: "Dr. Dempster supports an increase in fish farming.",
@@ -14735,7 +14735,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
     subquestion2:
@@ -14758,7 +14758,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
     subquestion2:
@@ -14781,7 +14781,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 2,
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
     subquestion2:
@@ -14804,7 +14804,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 3,
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
     subquestion2: "Dr. Dempster supports, an increase in fish farming",
@@ -14826,7 +14826,7 @@ export const questions = [
     SubCategory: "Inference-Based Questions",
     Quant_category_1: "",
     "Quant_category 2": "",
-    level: "",
+    level: 3,
     subquestion1:
       "Consider each of the following statements. Does the information in the three articles support the inference as stated?",
     subquestion2:

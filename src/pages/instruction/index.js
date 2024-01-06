@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Carousel, Radio } from "antd";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { InstructionsPageStyled } from "./style";
+import AxiosInstance from "../../components/axios";
 
 const InstructionPage = () => {
   const [dotPosition, setDotPosition] = useState("top");
@@ -12,6 +13,64 @@ const InstructionPage = () => {
   const [selectedOrder, setSelectedOrder] = useState([]);
 
   const navigate = useNavigate();
+  const location = window.location.href;
+  const userID = localStorage.getItem("adefteducation_user_id");
+  useEffect(() => {
+    AxiosInstance.post(
+      `/api/track-data/store3`,
+      { path: location, id: userID },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then(async (response) => {
+        //eslint-disable-next-line
+        const data = await response.data;
+      })
+      .catch((err) => console.log(err));
+
+    //eslint-disable-next-line
+  }, []);
+
+  const [startTime, setStartTime] = useState(Date.now());
+  useEffect(() => {
+    // Set start time when the component mounts
+    setStartTime(Date.now());
+
+    // Add an event listener for the beforeunload event
+    const handleBeforeUnload = () => {
+      // Calculate time spent
+      const endTime = Date.now();
+      const timeSpentInSeconds = (endTime - startTime) / 1000;
+
+      // Send the data to your backend
+      AxiosInstance.post(
+        `/api/track-data/store2`,
+        { path: location, id: userID, timeSpent: timeSpentInSeconds },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then(async (response) => {
+          //eslint-disable-next-line
+          const data = await response.data;
+        })
+        .catch((err) => console.log(err));
+    };
+
+    // Add the event listener
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    // Specify the cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+    //eslint-disable-next-line
+  }, [location, userID]);
 
   const handlePositionChange = ({ target: { value } }) => {
     setDotPosition(value);
