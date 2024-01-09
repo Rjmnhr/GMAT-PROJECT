@@ -857,7 +857,7 @@ const VerbalTestPageFocus = () => {
                   Level of question:
                   {filteredQuestionsByLevel[0].level}
                 </p>*/}
-                <p className="mt-3">Level :{currentQuestionLevel}</p>
+                {/* <p className="mt-3">Level :{currentQuestionLevel}</p>
 
                 <p className="mt-3">
                   Score:
@@ -867,7 +867,7 @@ const VerbalTestPageFocus = () => {
                 <p className="mt-3">
                   Correct Answer:
                   {filteredQuestionsByLevel[0].correct_answer}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

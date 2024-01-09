@@ -847,7 +847,7 @@ const QuantTestPage = () => {
                     </Space>
                   </Radio.Group>
                 </div>
-
+{/* 
                 <p className="mt-3">
                   Level of question:
                   {filteredQuestionsByLevel[0].level
@@ -866,7 +866,7 @@ const QuantTestPage = () => {
                   {filteredQuestionsByLevel[0].correct_answer
                     ? filteredQuestionsByLevel[0].correct_answer
                     : ""}
-                </p>
+                </p> */}
               </div>
             </div>
           ) : (

@@ -34,7 +34,6 @@ const VerbalTestPage = () => {
   const [shuffledQuestions, setShuffledQuestions] = useState(null);
   const storedCount = sessionStorage.getItem("order-count");
 
-
   const location = window.location.href;
   const userID = localStorage.getItem("adefteducation_user_id");
   useEffect(() => {
@@ -859,7 +858,7 @@ const VerbalTestPage = () => {
                 </p>
                 <p className="mt-3">Level :{currentQuestionLevel}</p>
  */}
-
+                {/* 
                 <p className="mt-3">
                   Score:
                   {score.toFixed(2)}
@@ -868,7 +867,7 @@ const VerbalTestPage = () => {
                 <p className="mt-3">
                   Correct Answer:
                   {filteredQuestionsByLevel[0].correct_answer}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

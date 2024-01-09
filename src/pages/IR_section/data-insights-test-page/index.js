@@ -839,7 +839,7 @@ const DataInsightsTestPage = () => {
                     </Space>
                   </Radio.Group>
                 </div>
-                <p className="mt-3">Level :{currentQuestionLevel}</p>
+                {/* <p className="mt-3">Level :{currentQuestionLevel}</p>
 
                 <p className="mt-3">
                   Score:
@@ -849,7 +849,7 @@ const DataInsightsTestPage = () => {
                 <p className="mt-3">
                   Correct Answer:
                   {shuffledQuestions[currentQuestion].correct_answer}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
