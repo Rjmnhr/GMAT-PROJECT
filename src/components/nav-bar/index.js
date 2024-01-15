@@ -62,7 +62,7 @@ const NavBar = () => {
   const handleLogOut = () => {
     navigate("/");
     localStorage.removeItem("adefteducation_accessToken", "");
-    localStorage.setItem("adefteducation_isLoggedIn", false);
+    localStorage.removeItem("adefteducation_isLoggedIn");
   };
   const items = [
     // {

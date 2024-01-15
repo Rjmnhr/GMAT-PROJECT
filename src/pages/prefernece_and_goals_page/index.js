@@ -564,9 +564,9 @@ const PreferenceAndGoalsPage = () => {
         </TabPane>
         <TabPane tab="College Information Output" key="4" forceRender={true}>
           <CollegeInformationOutput />
-          <div className="mb-3 mb-lg-0" style={{ marginBottom: "5rem" }}>
+          <div className=" mb-lg-0" style={{ marginBottom: "6rem" }}>
             <button
-              className="btn-primary btn btn-lg mb-lg-3"
+              className="btn-primary btn btn-lg 3"
               onClick={handleTryAgain}
             >
               Try filling form again

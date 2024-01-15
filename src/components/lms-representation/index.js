@@ -90,9 +90,15 @@ const LMSRepresentation = () => {
       <NavBar />
       <div
         className="pb-3"
-        style={{ background: "#62b9bf", color: "white", minHeight: "100vh" }}
+        style={{
+          // background: "#62b9bf",
+
+          minHeight: "100vh",
+          display: "grid",
+          placeItems: "center",
+        }}
       >
-        <div style={{ paddingTop: "150px" }} className="d-lg-flex container">
+        <div style={{ paddingTop: "100px" }} className="d-lg-flex container">
           <div className="additional-content text-left col-lg-5 p-3">
             <div className="section-title text-left p-0">
               <h2>Unlock Your Learning Potential with Adeft Education</h2>
@@ -110,14 +116,14 @@ const LMSRepresentation = () => {
               your learning adventure both exciting and rewarding!
             </p>
           </div>
-          <div className="col-8">
-            <div className="d-flex align-items-center justify-content-center mt-3 flex-wrap">
+          <div className="col-lg-8 col-12 ">
+            <div className="d-none d-lg-flex align-items-center justify-content-center mt-3 flex-wrap d-none">
               {toolsArray.map((tool) => {
                 return (
                   <>
                     <div
                       onClick={() => navigate(tool.link)}
-                      className="m-2 hover-card"
+                      className="m-2 hover-card border"
                       style={{
                         backgroundPosition: "center",
                         width: "300px",
@@ -136,6 +142,36 @@ const LMSRepresentation = () => {
                         <span style={{ fontSize: "60px" }}>{tool.icon}</span>
                         {/* <img width={120} src={tool.icon} alt="gmat test icon" /> */}
                         <h5 className="w-100 m-1">{tool.title}</h5>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+            <div className="d-lg-none d-block">
+              {toolsArray.map((tool) => {
+                return (
+                  <>
+                    <div
+                      onClick={() => navigate(tool.link)}
+                      style={{ color: "#62b9bf" }}
+                      className="m-2 border"
+                    >
+                      <div
+                        className="p-3"
+                        style={{
+                          display: "flex",
+                          justifyContent: "start",
+                          alignItems: "center",
+                        }}
+                      >
+                        <span
+                          style={{ fontSize: "35px", paddingRight: "10px" }}
+                        >
+                          {tool.icon}
+                        </span>
+                        {/* <img width={120} src={tool.icon} alt="gmat test icon" /> */}
+                        <h5 className="w-100 m-1 text-left">{tool.title}</h5>
                       </div>
                     </div>
                   </>

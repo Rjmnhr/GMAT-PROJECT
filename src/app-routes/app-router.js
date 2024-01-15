@@ -31,6 +31,10 @@ import DataInsightsTestPage from "../pages/IR_section/data-insights-test-page";
 import OptionalBreakFocus from "../components/optional-break/optional-break-focus";
 import ResultPageFocus from "../pages/results/results-focus";
 import BlogsPage from "../pages/blog-page";
+import ForgotPasswordPage from "../pages/forgot-password-page";
+import ProfilerLandingPage from "../pages/profiler-landing-page";
+import BlogsMainPage from "../pages/blog-page/main";
+import BlogsPage1 from "../pages/blog-page/index1";
 
 const ConditionalComponent = () => {
   return (
@@ -88,6 +92,14 @@ const AppRouter = () => {
                   </>
                 }
               />
+            }
+          />
+          <Route
+            path="/mba-profiler"
+            element={
+              <>
+                <ProfilerLandingPage />
+              </>
             }
           />
           <Route
@@ -447,9 +459,19 @@ const AppRouter = () => {
               />
             }
           />
-       
+
           <Route
             path="/blogs"
+            element={
+              <>
+                <div>
+                  <BlogsMainPage />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/post0"
             element={
               <>
                 <div>
@@ -458,7 +480,27 @@ const AppRouter = () => {
               </>
             }
           />
-             <Route
+          <Route
+            path="/post1"
+            element={
+              <>
+                <div>
+                  <BlogsPage1 />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/forgot-password"
+            element={
+              <>
+                <div>
+                  <ForgotPasswordPage />
+                </div>
+              </>
+            }
+          />
+          <Route
             path="*"
             element={
               <>

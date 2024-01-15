@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import AxiosInstance from "../axios";
 import { Card, Skeleton } from "antd";
 import safeIcon from "../../icons/shield.png";
@@ -617,6 +617,14 @@ const CollegeInformationOutput = () => {
   const storedCountries = JSON.parse(
     sessionStorage.getItem("selectedCountries")
   );
+  const memoizedCountries = useMemo(
+    () => storedCountries?.join(","),
+    [storedCountries]
+  );
+  console.log(
+    "🚀 ~ CollegeInformationOutput ~ memoizedCountries:",
+    memoizedCountries
+  );
   const storedPreferenceInput = JSON.parse(
     sessionStorage.getItem("preferenceInputObject")
   );
@@ -628,9 +636,9 @@ const CollegeInformationOutput = () => {
   const [gpaScore, setGpaScore] = useState(0);
   const selectedOption = storedGoalsInput?.shortTermGoals;
 
-
   const location = window.location.href;
   const userID = localStorage.getItem("adefteducation_user_id");
+
   useEffect(() => {
     AxiosInstance.post(
       `/api/track-data/store3`,
@@ -694,7 +702,7 @@ const CollegeInformationOutput = () => {
         safe: storedSafe,
         achievable: storedAchievable,
         stretch: storedStretch,
-        countries: storedCountries?.join(","),
+        countries: memoizedCountries,
       },
       {
         headers: {
@@ -704,13 +712,11 @@ const CollegeInformationOutput = () => {
     )
       .then(async (res) => {
         const response = await res.data;
-        console.log("🚀 ~ file: index.js:631 ~ .then ~ response:", response);
         setCollegeData(response);
         sessionStorage.setItem("form-filled", true);
       })
       .catch((err) => console.log(err));
-    //eslint-disable-next-line
-  }, []);
+  }, [storedStretch, memoizedCountries, storedAchievable, storedSafe]);
 
   useEffect(() => {
     const storedGmatScore = sessionStorage.getItem("gmat_value");
@@ -1092,7 +1098,9 @@ const CollegeInformationOutput = () => {
       <div>
         {topSchoolsSafe && topSchoolsAchievable && topSchoolsStretch ? (
           <div>
-            <h3 lassName="mb-5"><strong>College Information</strong></h3>
+            <h3 lassName="mb-5">
+              <strong>College Information</strong>
+            </h3>
             <div className="d-lg-flex">
               <div className="col-lg-6 p-0 p-lg-2 col-12">
                 <h5 className="mb-3 mt-3 text-left">

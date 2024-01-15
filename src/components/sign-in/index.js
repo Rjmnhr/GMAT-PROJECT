@@ -112,7 +112,7 @@ const SignIn = () => {
   return (
     <div style={{ display: "grid", placeItems: "center", height: "100vh" }}>
       {contextHolder}
-      <div class="container card col-12  p-3" data-aos="fade-up">
+      <div class="container card col-12  p-5" data-aos="fade-up">
         <div class="section-title">
           <h2>Login to Adeft Education</h2>
         </div>
@@ -122,7 +122,7 @@ const SignIn = () => {
             <form class="php-email-form" onSubmit={handleSubmit}>
               <div class="col form-group">
                 <Input
-                  style={{ borderRadius: "0" }}
+                  style={{ borderRadius: "0",height:"50px" }}
                   type="email"
                   name="email"
                   id="email-login"
@@ -135,6 +135,7 @@ const SignIn = () => {
               </div>
               <div className="mb-3 col-12 col-lg-12">
                 <Input.Password
+                style={{height:"50px",borderRadius:"0"}}
                   placeholder="Password"
                   iconRender={(visible) =>
                     visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />

@@ -81,7 +81,7 @@ const LoginPage = () => {
             }}
           >
             <h2 className="text-left w-100">
-              Log in to unlock exclusive content
+              Log in to unlock exclusive tools
             </h2>
 
             <div className="text-left w-100 mt-3">

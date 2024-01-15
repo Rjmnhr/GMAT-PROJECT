@@ -116,10 +116,12 @@ export const LMSRepresentationStyled = styled.div`
   }
 
   .hover-card {
-    background-color: rgba(71, 209, 195, 0.6);
+    background-color: #62b9bf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Box shadow properties
   }
   .hover-sub-card {
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color:white;
   }
   .hover-sub-card:hover {
     background-color: transparent;
@@ -128,6 +130,10 @@ export const LMSRepresentationStyled = styled.div`
   }
   .hover-card:hover {
     background-color: white;
+  }
+
+  .custom-span{
+    color:white !important
   }
   @media (max-width: 728px) {
     .circle-container {

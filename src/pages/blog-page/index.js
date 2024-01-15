@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
-import NavBar from "../../components/nav-bar";
 import blogImage1 from "../../icons/gmat-blog-2.jpg";
 import { FacebookFilled, LinkedinFilled } from "@ant-design/icons";
 import FooterComponent from "../../components/footer";
 import { Helmet } from "react-helmet";
 import AxiosInstance from "../../components/axios";
+import NavBar from "../../components/nav-bar";
 const BlogsPage = () => {
   const navigate = useNavigate();
   const location = window.location.href;

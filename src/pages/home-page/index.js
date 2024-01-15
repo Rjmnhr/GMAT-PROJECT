@@ -141,7 +141,7 @@ const HomePage = () => {
   const handleLogOut = () => {
     navigate("/");
     localStorage.removeItem("adefteducation_accessToken");
-    localStorage.setItem("adefteducation_isLoggedIn");
+    localStorage.removeItem("adefteducation_isLoggedIn");
   };
   const items = [
     // {
@@ -283,7 +283,7 @@ const HomePage = () => {
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
           <div class="row">
             <div class="col-xl-6 text-left">
-              <h1>MBA Admissions advice based on real-life experience</h1>
+              <h1>MBA Admissions Consulting based on real-life experience</h1>
               <h2>
                 Our advice is based by more than 3 decades of real-life post MBA
                 experience coupled with 20 years of assisting students get in
@@ -332,7 +332,10 @@ const HomePage = () => {
             <div class="content col-xl-5 d-flex align-items-stretch">
               <div class="content">
                 <div class="section-title">
-                  <h2>About Us</h2>
+                  <h2>About Us </h2>
+                  <h1 style={{ fontSize: "16px" }}>
+                    MBA Admissions Consulting Experts
+                  </h1>
                 </div>
 
                 <h3>
@@ -417,7 +420,9 @@ const HomePage = () => {
               <div class="count-box">
                 <i class="icofont-simple-smile"></i>
                 <span data-toggle="counter-up">100</span>
-                <p>Schools our students have gone in</p>
+                <p>
+                  Schools our students have gone in Business School Admissions
+                </p>
               </div>
             </div>
 
@@ -466,7 +471,7 @@ const HomePage = () => {
                 <h4>
                   <a href="/#">College selection</a>
                 </h4>
-                <p>
+                <p className="text-left">
                   Our proprietary AI software, Profiler has been built using
                   more than 1,000 data points of actual students and is the
                   backbone of our college selection process. It considers your
@@ -481,21 +486,51 @@ const HomePage = () => {
                 <h4>
                   <a href="/#">Strengths and weakness</a>
                 </h4>
-                <p>“to meet your preferred short term and long-term goals” </p>
+                <p className="text-left">
+                  Identifying strengths and addressing weaknesses is key to MBA
+                  success. Ensuring a solid foundation for your preferred{" "}
+                  <span className="highlight">
+                    short-term and long-term goals
+                  </span>
+                  <span className="highlight"> MBA application journey</span>.
+                  At the core of our methodology is a commitment to sculpting a
+                  well-rounded profile for a successful{" "}
+                  <span className="highlight">MBA application</span> journey.{" "}
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+                <i class="icofont-earth"></i>
+                <h4>
+                  <a href="/#">Profile Evaluation</a>
+                </h4>
+                <p className="text-left">
+                  Elevate your MBA journey with Profiler, our advanced AI tool
+                  for profile evaluation and MBA application assistance.
+                  Tailored for college selection, it analyzes data points to
+                  guide your path to top business schools. Beyond GMAT coaching,
+                  Profiler enhances strengths, addresses weaknesses, and crafts
+                  compelling MBA application resumes. Transform your profile
+                  with Profiler for a successful MBA admissions experience.
+                </p>
               </div>
             </div>
             <div class="col-md-6 mt-4 mt-md-0">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
                 <i class="icofont-image"></i>
                 <h4>
-                  <a href="/#">Resume writing</a>
+                  <a href="/#">GMAT preparation</a>
                 </h4>
-                <p>
-                  Writing a business resume requires a structured outcome
-                  focused approach and our consultants are industry experts who
-                  have worked with many corporates and helped them look for
-                  work. We have also helped students draft their perfect
-                  application resume.{" "}
+                <p className="text-left">
+                  Elevate <span className="highlight">GMAT preparation</span>{" "}
+                  with our comprehensive coaching. Our expert guidance goes
+                  beyond traditional coaching, employing tailored strategies for
+                  peak performance. Hone skills, boost confidence, and excel in
+                  the GMAT for a spot in top-tier{" "}
+                  <span className="highlight">business school admissions</span>.
+                  Start your journey to success with our specialized GMAT
+                  assistance.
                 </p>
               </div>
             </div>
@@ -505,7 +540,7 @@ const HomePage = () => {
                 <h4>
                   <a href="/#">Application essays</a>
                 </h4>
-                <p>
+                <p className="text-left">
                   We have successfully assisted 1,000s of students get in their
                   college of choice - articulating your life stories and your
                   career goals is the most important part of the application; we
@@ -520,12 +555,27 @@ const HomePage = () => {
                 <h4>
                   <a href="/#">Profile building</a>
                 </h4>
-                <p>
-                  It all starts with your profile - if you have a stellar
-                  profile, writing essays and preparing your application is that
-                  much simpler; you can't change the past but you can most
-                  certainly improve your chances of selection by working on your
-                  profile
+                <p className="text-left">
+                  It all starts with your profile evaluation - if you have a
+                  stellar profile, writing essays and preparing your application
+                  is that much simpler; you can't change the past but you can
+                  most certainly improve your chances of selection by working on
+                  your profile
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 mt-4 mt-md-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+                <i class="icofont-tasks-alt"></i>
+                <h4>
+                  <a href="/#">Video essays</a>
+                </h4>
+                <p className="text-left">
+                  Video essays are an integral part of many college applications
+                  and more so in the current scenario. Learn from our
+                  consultants on how to improve your confidence, your
+                  enunciation and how to focus on content
                 </p>
               </div>
             </div>
@@ -533,13 +583,16 @@ const HomePage = () => {
               <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
                 <i class="icofont-tasks-alt"></i>
                 <h4>
-                  <a href="/#">Video essays</a>
+                  <a href="/#">Application resume writing</a>
                 </h4>
-                <p>
-                  Video essays are an integral part of many college applications
-                  and more so in the current scenario. Learn from our
-                  consultants on how to improve your confidence, your
-                  enunciation and how to focus on content
+                <p className="text-left">
+                  We ensure your application stands out with our personalized
+                  resume writing assistance, setting you on the path to success
+                  in{" "}
+                  <span className="highlight">business school admissions.</span>
+                  {""} We focus on presenting a compelling narrative that
+                  resonates with{" "}
+                  <span className="highlight">MBA admissions</span> committees.
                 </p>
               </div>
             </div>
@@ -563,7 +616,8 @@ const HomePage = () => {
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                   From the first time I spoke, I have been provided great
                   guidance and practical advice helping me differentiate myself
-                  from other similar applicants
+                  from other similar applicants for{" "}
+                  <span className="highlight">MBA Admissions</span>
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
@@ -943,9 +997,9 @@ const FAQSection = () => {
           <Panel
             style={{ borderBottom: "1px solid  #eee" }}
             header={
-              <p style={{ fontSize: "18px" }}>
+              <h1 style={{ fontSize: "18px" }}>
                 Do I really need an admission consultant?
-              </p>
+              </h1>
             }
             key="0"
           >
@@ -959,15 +1013,14 @@ const FAQSection = () => {
               what the process is for you to then see if you actually need help
               or not
             </p>
-            \
           </Panel>
 
           <Panel
             style={{ borderBottom: "1px solid  #eee" }}
             header={
-              <p style={{ fontSize: "18px" }}>
+              <h1 style={{ fontSize: "18px" }}>
                 How does the admissions consulting process work?
-              </p>
+              </h1>
             }
             key="1"
           >
@@ -983,9 +1036,9 @@ const FAQSection = () => {
           <Panel
             style={{ borderBottom: "1px solid  #eee" }}
             header={
-              <p style={{ fontSize: "18px" }}>
+              <h1 style={{ fontSize: "18px" }}>
                 Do you help students prepare for specific colleges (e.g. ISB)?
-              </p>
+              </h1>
             }
             key="2"
           >
@@ -1001,10 +1054,10 @@ const FAQSection = () => {
           <Panel
             style={{ borderBottom: "1px solid  #eee" }}
             header={
-              <p style={{ fontSize: "18px" }}>
+              <h1 style={{ fontSize: "18px" }}>
                 How can I differentiate my background? How can I justify doing
                 an MBA now? How do I articulate my goals?
-              </p>
+              </h1>
             }
             key="3"
           >
@@ -1021,10 +1074,10 @@ const FAQSection = () => {
           <Panel
             style={{ borderBottom: "1px solid  #eee" }}
             header={
-              <p style={{ fontSize: "18px" }}>
+              <h1 style={{ fontSize: "18px" }}>
                 I want to know a bit more about your frameworks and approaches.
                 How is it different from other admissions firms?
-              </p>
+              </h1>
             }
             key="5"
           >
