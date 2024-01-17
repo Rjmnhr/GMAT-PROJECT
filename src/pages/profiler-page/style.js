@@ -22,10 +22,10 @@ export const ProfilerPageStyled = styled.div`
     background-color: rgb(0, 128, 128) !important;
   }
 
-  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
-    border-bottom: 5px solid #cfcecc;
-    padding: 0;
-    margin-left: 15px;
+  .MuiButtonBase-root  {
+    border-bottom: 5px solid #cfcecc !important;
+    padding: 0 !important;
+    margin-left: 15px !important;
   }
 
   .Mui-selected {
