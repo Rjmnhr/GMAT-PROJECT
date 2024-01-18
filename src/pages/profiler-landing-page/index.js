@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../../components/nav-bar";
 import { ProfilerLandingPageStyled } from "./style";
+import FooterComponent from "../../components/footer";
 
 const ProfilerLandingPage = () => {
   return (
@@ -265,6 +266,7 @@ const ProfilerLandingPage = () => {
           </div>
         </section>
       </ProfilerLandingPageStyled>
+      <FooterComponent />
     </div>
   );
 };

@@ -35,6 +35,7 @@ import ForgotPasswordPage from "../pages/forgot-password-page";
 import ProfilerLandingPage from "../pages/profiler-landing-page";
 import BlogsMainPage from "../pages/blog-page/main";
 import BlogsPage1 from "../pages/blog-page/index1";
+import PrivacyPolicy from "../pages/privacy-policy";
 
 const ConditionalComponent = () => {
   return (
@@ -486,6 +487,16 @@ const AppRouter = () => {
               <>
                 <div>
                   <BlogsPage1 />
+                </div>
+              </>
+            }
+          />
+          <Route
+            path="/privacy-policy"
+            element={
+              <>
+                <div>
+                  <PrivacyPolicy />
                 </div>
               </>
             }

@@ -122,7 +122,7 @@ const NavBar = () => {
                 <a href="/#header">Home</a>
               </li>
               <li>
-                <a href="/profiler">Profiler</a>
+                <a href="/mba-profiler">Profiler</a>
               </li>
               <li>
                 <a href="/gmat">GMAT</a>
@@ -155,7 +155,7 @@ const NavBar = () => {
                   >
                     <li>
                       {" "}
-                      <a href="?#">Account</a>
+                      <span style={{ fontWeight: "600" ,cursor:"pointer"}}>Account</span>
                     </li>
                   </Dropdown>
                 </>

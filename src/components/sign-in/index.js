@@ -116,13 +116,22 @@ const SignIn = () => {
         <div class="section-title">
           <h2>Login to Adeft Education</h2>
         </div>
-
+        <p style={{ fontSize: "12px" }} className="container mb-3">
+          By signing in to Adeft education, I agree to the{" "}
+          {/* <a href="/conditions-of-use" target="blank">
+                    Conditions of use
+                  </a>{" "}
+                  and{" "} */}
+          <a href="/privacy-policy" target="blank">
+            Privacy policy
+          </a>
+        </p>
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12">
             <form class="php-email-form" onSubmit={handleSubmit}>
               <div class="col form-group">
                 <Input
-                  style={{ borderRadius: "0",height:"50px" }}
+                  style={{ borderRadius: "0", height: "50px" }}
                   type="email"
                   name="email"
                   id="email-login"
@@ -135,7 +144,7 @@ const SignIn = () => {
               </div>
               <div className="mb-3 col-12 col-lg-12">
                 <Input.Password
-                style={{height:"50px",borderRadius:"0"}}
+                  style={{ height: "50px", borderRadius: "0" }}
                   placeholder="Password"
                   iconRender={(visible) =>
                     visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />

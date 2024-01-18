@@ -203,7 +203,7 @@ const HomePage = () => {
                   <a href="#header">Home</a>
                 </li>
                 <li>
-                  <a href="/profiler">Profiler</a>
+                  <a href="/mba-profiler">Profiler</a>
                 </li>
                 <li>
                   <a href="/gmat">GMAT</a>
@@ -264,7 +264,9 @@ const HomePage = () => {
                       arrow
                     >
                       <li>
-                        <a href="?#">Account</a>
+                        <span style={{ fontWeight: "600", cursor: "pointer" }}>
+                          Account
+                        </span>
                       </li>
                     </Dropdown>
                   </>
@@ -289,7 +291,7 @@ const HomePage = () => {
                 experience coupled with 20 years of assisting students get in
                 the top 50 MBA schools
               </h2>
-              <a href="/profiler" class="btn-get-started scrollto">
+              <a href="/mba-profiler" class="btn-get-started scrollto">
                 Use Free Profile Evaluator
               </a>
               <br />

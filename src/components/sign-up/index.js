@@ -116,7 +116,7 @@ const SignUp = () => {
           <div class="section-title">
             <h2>Create your account</h2>
           </div>
-
+    
           <div class="row" data-aos="fade-up" data-aos-delay="100">
             <div class="col-lg-12">
               <form class="php-email-form" onSubmit={handleSubmit}>
@@ -191,6 +191,7 @@ const SignUp = () => {
 
                 <div className="mb-3 col-12 col-lg-12">
                   <Input.Password
+                    style={{ borderRadius: "0" }}
                     required
                     placeholder=" Password"
                     iconRender={(visible) =>
@@ -203,6 +204,7 @@ const SignUp = () => {
 
                 <div className="mb-3 col-12 col-lg-12">
                   <Input.Password
+                    style={{ borderRadius: "0" }}
                     required
                     placeholder="Confirm password"
                     iconRender={(visible) =>
@@ -226,7 +228,16 @@ const SignUp = () => {
                 ) : (
                   ""
                 )}
-
+                      <p style={{fontSize:"12px"}} className="container mb-3">
+                  By signing up to Adeft education, I agree to the{" "}
+                  {/* <a href="/conditions-of-use" target="blank">
+                    Conditions of use
+                  </a>{" "}
+                  and{" "} */}
+                  <a href="/privacy-policy" target="blank">
+                    Privacy policy
+                  </a>
+                </p>
                 <div class="text-center">
                   <button className="btn btn-primary w-75 mb-3" type="submit">
                     {isLoading ? <LoadingOutlined /> : "Create an account"}
