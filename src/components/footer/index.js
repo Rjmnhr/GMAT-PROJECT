@@ -96,10 +96,7 @@ const FooterComponent = () => {
           {/* <a href="/#" class="twitter">
           <i class="bx bxl-twitter"></i>
         </a> */}
-          <a
-            href="https://www.facebook.com/profile.php?id=61555040602683"
-            class="facebook"
-          >
+          <a href="https://www.facebook.com/adefteducation" class="facebook">
             <i class="bx bxl-facebook"></i>
           </a>
           {/* <a href="/#" class="instagram">
