@@ -76,7 +76,7 @@ const HomePage = () => {
     const VerifyToken = async () => {
       try {
         const res = await fetch(
-          "https://adeftbackend-z0bvyb2s.b4a.run/api/token/verify",
+          "https://adeftbackend1-7xwgos42.b4a.run/api/token/verify",
           // "http://localhost:8003/api/token/verify",
           {
             headers: {

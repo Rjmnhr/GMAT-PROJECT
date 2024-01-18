@@ -480,10 +480,6 @@ const calculateMBAFactor = (
       ? curr
       : prev
   );
-  console.log(
-    "🚀 ~ file: index.js:473 ~ calculateMBAFactor ~ closestInternationalFactor:",
-    closestInternationalFactor
-  );
 
   const internationalFactorValue =
     internationalFactorValues[closestInternationalFactor];
@@ -621,10 +617,7 @@ const CollegeInformationOutput = () => {
     () => storedCountries?.join(","),
     [storedCountries]
   );
-  console.log(
-    "🚀 ~ CollegeInformationOutput ~ memoizedCountries:",
-    memoizedCountries
-  );
+
   const storedPreferenceInput = JSON.parse(
     sessionStorage.getItem("preferenceInputObject")
   );
@@ -696,26 +689,32 @@ const CollegeInformationOutput = () => {
     //eslint-disable-next-line
   }, [location, userID]);
   useEffect(() => {
-    AxiosInstance.post(
-      "api/profiler/college-information",
-      {
-        safe: storedSafe,
-        achievable: storedAchievable,
-        stretch: storedStretch,
-        countries: memoizedCountries,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
+    console.log("🚀 ~ useEffect ~ memoizedCountries:", memoizedCountries);
+
+    if (memoizedCountries) {
+      console.log("enter");
+      AxiosInstance.post(
+        "api/profiler/college-information",
+        {
+          safe: storedSafe,
+          achievable: storedAchievable,
+          stretch: storedStretch,
+          countries: memoizedCountries,
         },
-      }
-    )
-      .then(async (res) => {
-        const response = await res.data;
-        setCollegeData(response);
-        sessionStorage.setItem("form-filled", true);
-      })
-      .catch((err) => console.log(err));
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then(async (res) => {
+          const response = await res.data;
+          console.log("🚀 ~ .then ~ response:", response);
+          setCollegeData(response);
+          sessionStorage.setItem("form-filled", true);
+        })
+        .catch((err) => console.log(err));
+    }
   }, [storedStretch, memoizedCountries, storedAchievable, storedSafe]);
 
   useEffect(() => {
