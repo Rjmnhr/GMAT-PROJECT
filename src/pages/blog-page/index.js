@@ -161,7 +161,7 @@ const BlogsPage = () => {
               <a
                 style={{ fontSize: "30px" }}
                 class="btn btn-ghost-secondary btn-icon btn-sm rounded-circle"
-                href="https://www.facebook.com/profile.php?id=61555040602683"
+                href="https://www.facebook.com/adefteducation"
               >
                 <FacebookFilled />
               </a>

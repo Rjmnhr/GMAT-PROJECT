@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../../components/nav-bar";
 import { BlogContentArr } from "./blogs-content-array";
+import FooterComponent from "../../components/footer";
 
 const BlogsMainPage = () => {
   return (
@@ -61,6 +62,7 @@ const BlogsMainPage = () => {
           </div>
         </div>
       </div>
+      <FooterComponent />
     </>
   );
 };

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import NavBar from "../../components/nav-bar";
-import blog2Image from "../../icons/blog2-image.jpg";
+
 import { FacebookFilled, LinkedinFilled } from "@ant-design/icons";
-const BlogsPage1 = () => {
+const BlogsPage2 = () => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
@@ -38,16 +38,16 @@ const BlogsPage1 = () => {
       >
         <h2 className="mb-3">
           {" "}
-          <strong>
-            Building a Strong MBA Resume: What Business Schools Look For{" "}
-          </strong>
+          <strong>Confidence Boost: Mastering the Art of Video Essays</strong>
         </h2>
         {isMobile ? (
           <div className="col-lg-6">
             <img
               width={"100%"}
               className="mb-3"
-              src={blog2Image}
+              src={
+                "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1706019198/ypsd6uhqf24i25uzp0jj.jpg"
+              }
               alt="job compensation"
             />
           </div>
@@ -58,60 +58,64 @@ const BlogsPage1 = () => {
           <div className="container col-lg-6 p-2 p-lg-3 text-left mt-3">
             <div>
               <h4 className="mb-3">
-                Crafting an effective MBA resume goes beyond listing
-                achievements. Here's what business schools value most
+                In the landscape of MBA applications, video essays play a
+                pivotal role in showcasing your personality. Beyond the
+                traditional written components, a well-crafted video essay can
+                set you apart. Here's how our unique approach can assist you in
+                mastering this art.
               </h4>
               <section className="p-0">
-                <h4>1. Numbers that Matter:</h4>
+                <h4>1. Tailored Guidance::</h4>
                 <p>
-                  Showcase achievements with tangible results. Numbers speak
-                  volumes and demonstrate your impact
+                  Video essays demand authenticity. Our tool offers personalized
+                  guidance, helping you tailor your content to align seamlessly
+                  with your overall application narrative.
                 </p>
               </section>
 
               <section className="p-0 mb-3">
-                <h4>2.Leadership Stories:</h4>
+                <h4>2.Craft Compelling Narratives:</h4>
                 <p>
-                  Highlight experiences where you led or played a key role.
-                  Business schools want candidates with leadership potential.
+                  Our platform empowers you to create narratives that resonate
+                  with your strengths and aspirations. Leverage our tool to
+                  identify and articulate key points that captivate your
+                  audience.
                 </p>
               </section>
               <section className="p-0 mb-3">
-                <h4>3.Professional Impact:</h4>
+                <h4>3.Confidence-Boosting Techniques:</h4>
                 <p>
-                  Share your professional journey, emphasizing growth and the
-                  positive changes you've made
-                </p>
-              </section>
-
-              <section className="p-0 mb-3">
-                <h4>4. Community Involvement:</h4>
-                <p>
-                  Mention your community service or extracurricular activities.
-                  Business schools appreciate candidates who contribute beyond
-                  work.
+                  Confidence is key. Our platform provides strategies to enhance
+                  your confidence – refining your delivery style and helping you
+                  articulate your achievements with conviction.
                 </p>
               </section>
 
               <section className="p-0 mb-3">
-                <h4>5. Innovative Contributions:</h4>
+                <h4>4. Technical Excellence Made Easy:</h4>
                 <p>
-                  Showcase instances where your innovative thinking led to
-                  solutions. Business schools seek fresh perspectives
+                  Technical aspects shouldn’t be a hurdle. Our tool assists in
+                  familiarizing you with platforms, testing equipment, and
+                  optimizing your setup for a seamless and professional video
+                  essay.
+                </p>
+              </section>
+
+              <section className="p-0 mb-3">
+                <h4>5. Mock Sessions for Real Preparedness:</h4>
+                <p>
+                  Practice makes perfect. Utilize our tool for mock video essay
+                  sessions, simulating real scenarios. This hands-on experience
+                  ensures you're well-prepared for the actual assessment.
                 </p>
               </section>
               <section className="p-0 mb-3">
-                <h4>6. Global Perspective:</h4>
+                <h4>6. Feedback-Driven Improvement:</h4>
                 <p>
-                  If relevant, mention experiences that reflect your global
-                  exposure. Adaptability is a key trait
-                </p>
-              </section>
-              <section className="p-0 mb-3">
-                <h4>7. Clear and Concise Style:</h4>
-                <p>
-                  Keep it clear and concise. Business schools prefer resumes
-                  that are easy to read, focusing on key accomplishments
+                  Receive valuable feedback from our platform. Iterative
+                  improvement is the focus, refining your performance based on
+                  insights and ensuring you present the best version of
+                  yourself.
                 </p>
               </section>
             </div>
@@ -123,7 +127,9 @@ const BlogsPage1 = () => {
               <img
                 width={"100%"}
                 className="mb-3"
-                src={blog2Image}
+                src={
+                  "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1706019198/ypsd6uhqf24i25uzp0jj.jpg"
+                }
                 alt="job compensation"
               />
             </div>
@@ -131,15 +137,14 @@ const BlogsPage1 = () => {
         </div>
         <div className="container">
           <p className="mb-3" style={{ fontWeight: "bold" }}>
-            Craft your MBA resume with these elements to tell a compelling story
-            of your professional journey, showcasing not just what you've
-            achieved but the potential you bring to the MBA experience.
+            Mastering video essays is not just about fulfilling a requirement;
+            it's about gaining confidence in sharing your story. Elevate your
+            application with our tool's support. Ready to boost your confidence?
+            Check the tool now
           </p>
 
-          <a className="mb-5 pb-5" href="/profiler">
-            <button className="btn btn-lg btn-primary">
-              Use Free Profile Evaluator
-            </button>
+          <a className="mb-5 pb-5" href="/videos">
+            <button className="btn btn-lg btn-primary">Click here</button>
           </a>
         </div>
         <div class="col-12 d-flex justify-content-center mt-8">
@@ -185,4 +190,4 @@ const BlogsPage1 = () => {
   );
 };
 
-export default BlogsPage1;
+export default BlogsPage2;

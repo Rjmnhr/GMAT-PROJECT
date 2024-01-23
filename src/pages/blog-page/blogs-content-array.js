@@ -1,6 +1,6 @@
 import blogImage1 from "../../icons/gmat-blog-2.jpg";
-import blog2Image from "../../icons/blog2-image.jpg"
-import blog2Preview from "../../icons/blog2-preview.jpg"
+import blog2Image from "../../icons/blog2-image.jpg";
+import blog2Preview from "../../icons/blog2-preview.jpg";
 export const BlogContentArr = [
   {
     main: "Strategies for GMAT Success: Transforming Weaknesses into Strengths",
@@ -41,10 +41,59 @@ export const BlogContentArr = [
     main: "Building a Strong MBA Resume: What Business Schools Look For",
     subMain:
       "Crafting an effective MBA resume goes beyond listing achievements. Here's what business schools value most:",
-    mainImg:
-    blog2Image,
-    imgPreview:
-      blog2Preview,
+    mainImg: blog2Image,
+    imgPreview: blog2Preview,
+    subContent: [
+      {
+        no: 1,
+        content:
+          "Numbers that Matter: Showcase achievements with tangible results. Numbers speak volumes and demonstrate your impact.",
+      },
+      {
+        no: 2,
+        content:
+          "Leadership Stories: Highlight experiences where you led or played a key role. Business schools want candidates with leadership potential.",
+      },
+      {
+        no: 3,
+        content:
+          "Professional Impact: Share your professional journey, emphasizing growth and the positive changes you've made",
+      },
+      {
+        no: 4,
+        content:
+          "Community Involvement: Mention your community service or extracurricular activities. Business schools appreciate candidates who contribute beyond work",
+      },
+      {
+        no: 5,
+        content:
+          "Innovative Contributions: Showcase instances where your innovative thinking led to solutions. Business schools seek fresh perspectives.",
+      },
+      {
+        no: 6,
+        content:
+          "Global Perspective: If relevant, mention experiences that reflect your global exposure. Adaptability is a key trait",
+      },
+      {
+        no: 6,
+        content:
+          "Clear and Concise Style: Keep it clear and concise. Business schools prefer resumes that are easy to read, focusing on key accomplishments",
+      },
+    ],
+    footer:
+      "To try a sample role, simply register and try out our salary tool for free",
+    footerButton: (
+      <a href="/price-a-job">
+        <button className="btn btn-lg btn-primary">Click here</button>
+      </a>
+    ),
+  },
+  {
+    main: "Confidence Boost: Mastering the Art of Video Essays",
+    subMain:
+      "In the landscape of MBA applications, video essays play a pivotal role in showcasing your personality. Beyond the traditional written components, a well-crafted video essay can set you apart.",
+    mainImg: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1706019198/ypsd6uhqf24i25uzp0jj.jpg",
+    imgPreview: "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1706019198/ypsd6uhqf24i25uzp0jj.jpg",
     subContent: [
       {
         no: 1,
