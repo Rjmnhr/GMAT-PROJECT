@@ -34,9 +34,8 @@ import BlogsPage from "../pages/blog-page";
 import ForgotPasswordPage from "../pages/forgot-password-page";
 import ProfilerLandingPage from "../pages/profiler-landing-page";
 import BlogsMainPage from "../pages/blog-page/main";
-import BlogsPage1 from "../pages/blog-page/index1";
 import PrivacyPolicy from "../pages/privacy-policy";
-import BlogsPage2 from "../pages/blog-page/index2";
+
 
 const ConditionalComponent = () => {
   return (
@@ -473,7 +472,7 @@ const AppRouter = () => {
             }
           />
           <Route
-            path="/post0"
+            path="/post"
             element={
               <>
                 <div>
@@ -482,26 +481,7 @@ const AppRouter = () => {
               </>
             }
           />
-          <Route
-            path="/post1"
-            element={
-              <>
-                <div>
-                  <BlogsPage1 />
-                </div>
-              </>
-            }
-          />
-          <Route
-            path="/post2"
-            element={
-              <>
-                <div>
-                  <BlogsPage2 />
-                </div>
-              </>
-            }
-          />
+        
           <Route
             path="/privacy-policy"
             element={

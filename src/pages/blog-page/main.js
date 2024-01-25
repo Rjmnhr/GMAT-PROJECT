@@ -36,15 +36,15 @@ const BlogsMainPage = () => {
                             <strong>
                               <a
                                 class="text-dark"
-                                href={`/post${index}?blog=${blog.main}`}
+                                href={`/post?blog=${blog.main}`}
                               >
                                 {blog.main}
                               </a>
                             </strong>
                           </h4>
 
-                          <p class="card-text">{blog.subMain}</p>
-                          <a href={`/post${index}?blog=${blog.main}`}>
+                          <p class="card-text">{blog.previewText}</p>
+                          <a href={`/post?blog=${blog.main}`}>
                             {" "}
                             <button className="btn  mt-3 mb-3 btn-primary ">
                               Read More
