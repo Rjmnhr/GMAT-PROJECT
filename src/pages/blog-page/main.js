@@ -1,7 +1,7 @@
 import React from "react";
-import NavBar from "../../components/nav-bar";
+import NavBar from "../../Layout/nav-bar";
 import { BlogContentArr } from "./blogs-content-array";
-import FooterComponent from "../../components/footer";
+import FooterComponent from "../../Layout/footer";
 
 const BlogsMainPage = () => {
   return (

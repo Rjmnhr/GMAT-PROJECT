@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import {  Modal } from "antd"; // Assuming you have Modal from antd
-import NavBar from "../../components/nav-bar";
+import { Modal } from "antd"; // Assuming you have Modal from antd
+import NavBar from "../../Layout/nav-bar";
 import YouTube from "react-youtube";
-import { categories } from "../../components/youtube-videos";
+import { categories } from "./videos-data";
 
 const categoryNames = [
   "GMAT Quant videos",
@@ -19,8 +19,6 @@ const CategoryVideos = () => {
   const location = useLocation();
   const categoryName = new URLSearchParams(location.search).get("v");
 
-
- 
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const categoryIndex = categoryNames.findIndex(
@@ -39,10 +37,6 @@ const CategoryVideos = () => {
   }
 
   const categoryVideos = categories[categoryIndex];
-
-
-
-
 
   const handleVideoClick = (video) => {
     setSelectedVideo(video);
@@ -91,7 +85,6 @@ const CategoryVideos = () => {
               </div>
             ))}
         </div>
-       
 
         {selectedVideo && (
           <Modal

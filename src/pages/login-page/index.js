@@ -1,11 +1,12 @@
-import SignIn from "../../components/sign-in/index";
-import NavBar from "../../components/nav-bar";
+import NavBar from "../../Layout/nav-bar";
 import { LoginPageStyled } from "./style";
-import SignUp from "../../components/sign-up/index";
-import { useApplicationContext } from "../../context/app-context";
-import pointArrow from "../../icons/right-arrow.png";
-import AxiosInstance from "../../components/axios";
+
+import { useApplicationContext } from "../../Context/app-context";
+import pointArrow from "../../Icons/right-arrow.png";
 import { useEffect, useState } from "react";
+import AxiosInstance from "../../Config/axios";
+import SignIn from "../../Components/Auth/sign-in";
+import SignUp from "../../Components/Auth/sign-up";
 const LoginPage = () => {
   const { isSignIn } = useApplicationContext();
   const location = window.location.href;

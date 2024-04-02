@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { questions } from "../../components/items";
-import NavBar from "../../components/nav-bar";
-import { PracticeQuestionsPageStyled } from "./style";
-import AxiosInstance from "../../components/axios";
+import NavBar from "../../Layout/nav-bar";
+import AxiosInstance from "../../Config/axios";
+import { questions } from "../../Components/GMAT/questions";
 
 const CategoryQuestions = () => {
   const location = useLocation();
@@ -128,7 +127,7 @@ const CategoryQuestions = () => {
   return (
     <>
       <NavBar />
-      <PracticeQuestionsPageStyled>
+      <>
         <div
           style={{ marginTop: "87px" }}
           className="d-flex p-0 text-left container-fluid"
@@ -250,7 +249,7 @@ const CategoryQuestions = () => {
             </div>
           </div>
         </div>
-      </PracticeQuestionsPageStyled>
+      </>
     </>
   );
 };

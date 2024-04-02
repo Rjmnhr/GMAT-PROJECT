@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
-import { Carousel, Collapse, Dropdown } from "antd";
-import AxiosInstance from "../../components/axios";
-import { useNavigate } from "react-router-dom";
-import FooterComponent from "../../components/footer";
+
+import { Carousel, Collapse } from "antd";
+
+import FooterComponent from "../../Layout/footer";
+import AxiosInstance from "../../Config/axios";
+import NavBar from "../../Layout/nav-bar";
+import { gmat_landing_path, profiler_landing_path } from "../../Config/config";
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-  const navigate = useNavigate();
-  const [menuOpen, setMenuOpen] = useState(false);
-  const accessToken = localStorage.getItem("adefteducation_accessToken");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(null);
   const location = window.location.href;
   const userID = localStorage.getItem("adefteducation_user_id");
   useEffect(() => {
@@ -73,43 +70,6 @@ const HomePage = () => {
   }, [location, userID]);
 
   useEffect(() => {
-    const VerifyToken = async () => {
-      try {
-        const res = await fetch(
-          "https://adeftbackend1-7xwgos42.b4a.run/api/token/verify",
-          // "http://localhost:8003/api/token/verify",
-          {
-            headers: {
-              token: `Bearer ${accessToken}`,
-            },
-          }
-        );
-
-        if (res.status === 200) {
-          setIsAuthenticated(true);
-        } else {
-          setIsAuthenticated(false);
-        }
-      } catch (err) {
-        console.log(err);
-        // Handle the error here or return an error response if needed
-        setIsAuthenticated(false);
-      }
-    };
-    VerifyToken();
-
-    if (isAuthenticated !== null) {
-      if (isAuthenticated) {
-        setIsLoggedIn(true);
-      } else {
-        // Redirect to the login page if not authenticated
-
-        setIsLoggedIn(false);
-      }
-    }
-  }, [isAuthenticated, accessToken]);
-
-  useEffect(() => {
     // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -127,160 +87,9 @@ const HomePage = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   if (storedUserName) {
-  //     // Split the full name into an array of words
-  //     const nameArray = storedUserName.split(" ");
-
-  //     // Get the first element of the array, which is the first name
-  //     const firstName = nameArray[0];
-
-  //     setUserName(firstName);
-  //   }
-  // }, [storedUserName]);
-  const handleLogOut = () => {
-    navigate("/");
-    localStorage.removeItem("adefteducation_accessToken");
-    localStorage.removeItem("adefteducation_isLoggedIn");
-  };
-  const items = [
-    // {
-    //   key: "1",
-    //   label: <a href="/account">My Account</a>,
-    // },
-    {
-      key: "1",
-      label: (
-        <a href="#eq" onClick={handleLogOut}>
-          Log out
-        </a>
-      ),
-    },
-  ];
-  const handleMenuToggle = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
     <>
-      <body className={`${menuOpen ? "mobile-nav-active" : ""} `}>
-        <button
-          type="button"
-          class="mobile-nav-toggle d-lg-none"
-          onClick={handleMenuToggle}
-        >
-          <i
-            style={{ color: "black" }}
-            class={`${
-              menuOpen ? "icofont-close" : " icofont-navigation-menu"
-            } `}
-          ></i>
-        </button>
-        <header id="header" className="fixed-top">
-          <button type="button" class="mobile-nav-toggle d-lg-none">
-            <i class="icofont-navigation-menu"></i>
-          </button>
-          <div className="container d-flex justify-content-between align-items-center">
-            <h1 className="logo me-auto">
-              <a href="/">
-                Adeft<span>.</span>
-              </a>
-            </h1>
-
-            <a href="/" className="logo me-auto">
-              <img src="assets/img/logo.png" alt="" />
-            </a>
-
-            <nav
-              class={`${
-                menuOpen
-                  ? "mobile-nav d-lg-none"
-                  : " nav-menu d-none d-lg-block"
-              } `}
-            >
-              <ul>
-                <li>
-                  <a href="#header">Home</a>
-                </li>
-                <li>
-                  <a href="/mba-profiler">Profiler</a>
-                </li>
-                <li>
-                  <a href="/gmat">GMAT</a>
-                </li>
-
-                <li>
-                  <ScrollLink
-                    style={{ padding: "0" }}
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={1000} // Adjust this duration value
-                    // Use the easeInOutQuart easing function
-                    // For custom easing functions, you can use external libraries like bezier-easing
-                    // See: https://github.com/gre/bezier-easing
-                    // easing="cubicBezier(0.77, 0, 0.175, 1)"
-                    easing="easeInOutQuart"
-                  >
-                    <a href="#about">About</a>
-                  </ScrollLink>
-                </li>
-                <li>
-                  <a href="/practice-questions">Practice questions</a>
-                </li>
-
-                <li>
-                  <a href="/videos">Videos</a>
-                </li>
-
-                <li>
-                  <ScrollLink
-                    style={{ padding: "0" }}
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={1000} // Adjust this duration value
-                    // Use the easeInOutQuart easing function
-                    // For custom easing functions, you can use external libraries like bezier-easing
-                    // See: https://github.com/gre/bezier-easing
-                    // easing="cubicBezier(0.77, 0, 0.175, 1)"
-                    easing="easeInOutQuart"
-                  >
-                    <a href="#contact">Contact</a>
-                  </ScrollLink>
-                </li>
-                <li>
-                  <a href="/blogs">Blog</a>
-                </li>
-                {isLoggedIn ? (
-                  <>
-                    <Dropdown
-                      menu={{
-                        items,
-                      }}
-                      placement="bottomRight"
-                      arrow
-                    >
-                      <li>
-                        <span style={{ fontWeight: "600", cursor: "pointer" }}>
-                          Account
-                        </span>
-                      </li>
-                    </Dropdown>
-                  </>
-                ) : (
-                  <li>
-                    <a href="/login">Log in</a>
-                  </li>
-                )}
-              </ul>
-            </nav>
-          </div>
-        </header>
-      </body>
-
+      <NavBar />
       <section id="hero" class="d-flex align-items-center">
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
           <div class="row">
@@ -291,12 +100,12 @@ const HomePage = () => {
                 experience coupled with 20 years of assisting students get in
                 the top 50 MBA schools
               </h2>
-              <a href="/mba-profiler" class="btn-get-started scrollto">
+              <a href={profiler_landing_path} class="btn-get-started scrollto">
                 Use Free Profile Evaluator
               </a>
               <br />
               <a
-                href="/gmat"
+                href={gmat_landing_path}
                 class="btn-get-started "
                 style={{ background: "transparent" }}
               >

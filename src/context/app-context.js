@@ -1,4 +1,5 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import AxiosInstance from "../Config/axios";
 
 const MyContext = createContext();
 
@@ -7,6 +8,30 @@ export const AppContextProvider = ({ children }) => {
   const [isSignIn, setIsSignIn] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isEmailVerified, setIsEmailVerified] = useState(false);
+  const [userData, setUserData] = useState(null);
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const [showInstruction, setShowInstruction] = useState(true);
+  useEffect(() => {
+    const accessToken = localStorage.getItem("accessToken");
+    AxiosInstance.get(
+      "api/user/details",
+
+      {
+        headers: {
+          "Content-Type": "application/json",
+          token: `Bearer ${accessToken}`,
+        },
+      }
+    )
+      .then((res) => {
+        const UserData = res.data?.data;
+
+        if (res.status === 200) {
+          setUserData(UserData);
+        }
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   const value = {
     questions,
@@ -17,6 +42,12 @@ export const AppContextProvider = ({ children }) => {
     setActiveIndex,
     setIsEmailVerified,
     isEmailVerified,
+    setUserData,
+    userData,
+    currentSectionIndex,
+    setCurrentSectionIndex,
+    showInstruction,
+    setShowInstruction,
   };
 
   return <MyContext.Provider value={value}>{children}</MyContext.Provider>;

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../../components/nav-bar";
+import NavBar from "../../Layout/nav-bar";
 import { VideosPageStyled } from "./style";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import AxiosInstance from "../../components/axios";
+import AxiosInstance from "../../Config/axios";
 
 const categoryNames = [
   "GMAT Quant videos",
@@ -15,7 +15,6 @@ const categoryNames = [
   "Others",
 ];
 const VideosPage = () => {
-
   const location = window.location.href;
   const userID = localStorage.getItem("adefteducation_user_id");
   useEffect(() => {
@@ -76,7 +75,7 @@ const VideosPage = () => {
   }, [location, userID]);
   return (
     <div>
-           <Helmet>
+      <Helmet>
         <title>Videos | Equipay Partners</title>
         <meta
           name="description"
@@ -120,16 +119,14 @@ const VideosPage = () => {
                         width: "300px",
                         height: "300px",
                         margin: "8px",
-                        overflowY:"hidden"
+                        overflowY: "hidden",
                       }}
                       class="card-transition-zoom-item"
                     >
-                      <div  class="image-overlay">
+                      <div class="image-overlay">
                         <img
-                          
                           class="card-img"
                           src="https://res.cloudinary.com/dsw1ubwyh/image/upload/v1702923002/edbfbpneeb9vx68lngw8.png"
-
                           alt="Description"
                         />
                         <div class="centered-text">{category}</div>

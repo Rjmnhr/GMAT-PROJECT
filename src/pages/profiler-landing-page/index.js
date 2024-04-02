@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../../components/nav-bar";
+import NavBar from "../../Layout/nav-bar";
 import { ProfilerLandingPageStyled } from "./style";
-import FooterComponent from "../../components/footer";
-import AxiosInstance from "../../components/axios";
+import FooterComponent from "../../Layout/footer";
+import AxiosInstance from "../../Config/axios";
+import { gmat_landing_path, profiler_path } from "../../Config/config";
+import { useApplicationContext } from "../../Context/app-context";
+import { useNavigate } from "react-router-dom";
 
 const ProfilerLandingPage = () => {
   const location = window.location.href;
   const userID = localStorage.getItem("adefteducation_user_id");
+  const { userData } = useApplicationContext();
+  const navigate = useNavigate();
   useEffect(() => {
     AxiosInstance.post(
       `/api/track-data/store3`,
@@ -25,6 +30,12 @@ const ProfilerLandingPage = () => {
 
     //eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    if (userData) {
+      navigate(profiler_path);
+    }
+  }, [userData, navigate]);
 
   const [startTime, setStartTime] = useState(Date.now());
   useEffect(() => {
@@ -69,51 +80,66 @@ const ProfilerLandingPage = () => {
       <NavBar />
       <ProfilerLandingPageStyled>
         <section
-          style={{ marginTop: "100px" }}
+          style={{ marginTop: "120px" }}
           className="d-flex align-items-center"
         >
           <div className="container" data-aos="zoom-out" data-aos-delay="100">
             <div className="d-lg-flex ">
               <div className="col-xl-6 text-left">
                 <h1 className="mb-3 text-primary">MBA Success with Profiler</h1>
-                <h2>
+                <p className="lead">
                   Revolutionize your MBA journey with our Profiler tool,
                   offering guidance in key areas such as{" "}
                   <span className="highlight">MBA college selection</span>,{" "}
                   <span className="highlight">Profile evaluation</span>, and{" "}
                   <span className="highlight">MBA application assistance</span>.
-                </h2>
+                </p>
                 <a href="/profiler" className="btn-get-started scrollto">
-                  <button class="cta btn-primary mt-3">
-                    <span>Get Started with Profiler</span>
-                    <svg width="15px" height="10px" viewBox="0 0 13 10">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
+                  <button class="custom-btn shadow btn-primary mt-3">
+                    <span>Login / Register to continue</span>
                   </button>
                 </a>
 
                 <br />
                 <a
-                  href="/gmat"
+                  href={gmat_landing_path}
                   className="btn-get-started "
                   style={{ background: "transparent" }}
                 >
-                  <button
-                    style={{ background: "#b1dae7" }}
-                    className="btn btn-lg mt-3 rounded-0"
-                  >
+                  <button className="custom-btn-2 shadow mt-3">
                     {" "}
                     Explore GMAT Prep
                   </button>
                 </a>
+
+                <br />
               </div>
-              <div className="col-xl-6 text-left">
-                <img
-                  width={"100%"}
-                  src="https://res.cloudinary.com/dsw1ubwyh/image/upload/v1705053979/gdvpl9xike3vjg4hdeia.jpg"
-                  alt="Profile Evaluation"
-                />
+              <div
+                className="col-lg-6"
+                data-aos="fade-left"
+                data-aos-delay="100"
+              >
+                {/* <img
+                      className="img-fluid"
+                      src="./assets/img/mockups/img1.png"
+                      alt="Img"
+                    /> */}
+
+                <div className="col mb-5">
+                  {/* eslint-disable-next-line*/}
+                  <a className="card card-ghost card-transition-zoom h-100">
+                    <div className="card-transition-zoom-item">
+                      <div className="image-overlay">
+                        <img
+                          width={"100%"}
+                          className="card-img"
+                          src="https://res.cloudinary.com/dsw1ubwyh/image/upload/v1705053979/gdvpl9xike3vjg4hdeia.jpg"
+                          alt="Description"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -145,35 +171,6 @@ const ProfilerLandingPage = () => {
                 <div
                   className="col-md-4 p-3 icon-box"
                   data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <h4 className="text-primary">Optimized College Selection</h4>
-                  <p>
-                    Utilize our AI-driven Profiler tool to identify the best-fit
-                    business schools based on your background, preferences, and
-                    career goa
-                  </p>
-                </div>
-
-                <div
-                  className="col-md-4 p-3    icon-box"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <h4 className="text-primary">
-                    Efficient Application Assistance
-                  </h4>
-                  <p>
-                    Streamline your MBA application process with expert
-                    assistance at every step. From essay writing to resume
-                    building, our Profiler tool provides efficient support for a
-                    compelling application.
-                  </p>
-                </div>
-
-                <div
-                  className="col-md-4 p-3 icon-box"
-                  data-aos="fade-up"
                   data-aos-delay="300"
                 >
                   <h4 className="text-primary">Enhanced GMAT Preparation</h4>
@@ -182,6 +179,18 @@ const ProfilerLandingPage = () => {
                     customized coaching suggestions. The Profiler tool assists
                     you in optimizing your GMAT performance for successful
                     business school admissions.
+                  </p>
+                </div>
+                <div
+                  className="col-md-4 p-3 icon-box"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <h4 className="text-primary">Optimized College Selection</h4>
+                  <p>
+                    Utilize our AI-driven Profiler tool to identify the best-fit
+                    business schools based on your background, preferences, and
+                    career goa
                   </p>
                 </div>
               </div>

@@ -1,6 +1,6 @@
-import blogImage1 from "../../icons/gmat-blog-2.jpg";
-import blog2Image from "../../icons/blog2-image.jpg";
-import blog2Preview from "../../icons/blog2-preview.jpg";
+import blogImage1 from "../../Icons/gmat-blog-2.jpg";
+import blog2Image from "../../Icons/blog2-image.jpg";
+import blog2Preview from "../../Icons/blog2-preview.jpg";
 export const BlogContentArr = [
   {
     main: "Strategies for GMAT Success: Transforming Weaknesses into Strengths",

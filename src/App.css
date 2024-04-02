@@ -20,6 +20,70 @@
   display: none;
 }
 
+.qstn-container::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+  background: #049494;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid white;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 0 white;
+}
+
+.custom-btn:hover {
+  color: #049494;
+  /* box-shadow: inset 0 -100px 0 0 white; */
+  border: 2px solid #049494;
+  background: white;
+}
+
+.custom-btn:active {
+  transform: scale(0.9);
+}
+.custom-btn-2 {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+  background: #0ab6ea;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid white;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 0 white;
+}
+
+.custom-btn-2:hover {
+  color: #0ab6ea;
+  /* box-shadow: inset 0 -100px 0 0 white; */
+  border: 2px solid #0ab6ea;
+
+  background: white;
+}
+
+.custom-btn-2:active {
+  transform: scale(0.9);
+}
+
+.row-hover:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
