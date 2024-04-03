@@ -46,7 +46,6 @@ const PreferenceForm = ({ onSubmit }) => {
   };
 
   const onFinish = (values) => {
-    console.log(selectedOptions);
     sessionStorage.setItem(
       "applicationSkillInputObject",
       JSON.stringify(selectedOptions)

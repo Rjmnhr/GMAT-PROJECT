@@ -448,11 +448,6 @@ const ChancesOfSelection = () => {
       nonTechnicalHRLeadershipValueGeneral +
       commercialTechnicalLeadershipValueGeneral +
       commercialGeneralistLeadershipValueGeneral;
-    console.log(
-      "🚀 ~ file: index.js:422 ~ calculateExperienceIndividualValue ~ totalGeneralValue:",
-      totalGeneralValue
-    );
-
     sessionStorage.setItem("experience_general_value", totalGeneralValue);
     const nonTechnicalITTotal =
       nonTechnicalITIndividualValue +

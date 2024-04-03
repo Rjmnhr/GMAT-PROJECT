@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Carousel, Radio } from "antd";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-import { gmat_practice_exam } from "../../../Config/config";
+import {
+  gmat_dashboard_path,
+  gmat_practice_exam_path,
+} from "../../../Config/config";
 import { useApplicationContext } from "../../../Context/app-context";
 
 const InstructionPage = () => {
@@ -61,7 +64,7 @@ const InstructionPage = () => {
     sessionStorage.removeItem("practice_2_data");
     sessionStorage.setItem("current_section", selectedOrder[0]);
     setShowInstruction(true);
-    navigate(gmat_practice_exam);
+    navigate(gmat_practice_exam_path);
   };
   const handleRadioChange = (event) => {
     const value = event.target.value;
@@ -282,7 +285,7 @@ const InstructionPage = () => {
           <button
             className="btn border"
             style={{ marginRight: 8 }}
-            onClick={() => navigate("/")}
+            onClick={() => navigate(gmat_dashboard_path)}
           >
             Go back
           </button>

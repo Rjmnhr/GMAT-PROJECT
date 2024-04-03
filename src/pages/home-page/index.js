@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useEffect, useRef, useState } from "react";
 import { Carousel, Collapse } from "antd";
-
+import { animateScroll as scroll } from "react-scroll";
 import FooterComponent from "../../Layout/footer";
 import AxiosInstance from "../../Config/axios";
 import NavBar from "../../Layout/nav-bar";
 import { gmat_landing_path, profiler_landing_path } from "../../Config/config";
+import { useApplicationContext } from "../../Context/app-context";
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
-
   const location = window.location.href;
+  const { trigger } = useApplicationContext();
   const userID = localStorage.getItem("adefteducation_user_id");
+
   useEffect(() => {
     AxiosInstance.post(
       `/api/track-data/store3`,
@@ -69,6 +70,46 @@ const HomePage = () => {
     //eslint-disable-next-line
   }, [location, userID]);
 
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const serviceRef = useRef(null);
+  const testimonialRef = useRef(null);
+  const faqRef = useRef(null);
+
+  function scrollToFunction(ref) {
+    if (ref.current) {
+      scroll.scrollTo(ref.current.offsetTop, {
+        duration: 2000,
+        smooth: "easeInOutQuart",
+      });
+    }
+  }
+  const path = window.location.hash;
+
+  useEffect(() => {
+    switch (path) {
+      case "#about":
+        scrollToFunction(aboutRef);
+        break;
+      case "#contact":
+        scrollToFunction(contactRef);
+        break;
+      case "#services":
+        scrollToFunction(serviceRef);
+        break;
+      case "#testimonials":
+        scrollToFunction(testimonialRef);
+        break;
+      case "#faq":
+        scrollToFunction(faqRef);
+        break;
+
+      default:
+        break;
+    }
+  }, [path, trigger]);
+
   useEffect(() => {
     // Check if the screen width is less than a certain value (e.g., 768px) to determine if it's a mobile device
     const handleResize = () => {
@@ -109,7 +150,7 @@ const HomePage = () => {
                 class="btn-get-started "
                 style={{ background: "transparent" }}
               >
-                Take Free GMAT Test
+                Take a GMAT Practice Test
               </a>
               {isMobile ? <br /> : ""}
             </div>
@@ -130,7 +171,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section id="about" class="about section-bg">
+      <section ref={aboutRef} id="about" class="about section-bg">
         <div class="container" data-aos="fade-up">
           <div class="row no-gutters">
             <div class="content col-xl-5 d-flex align-items-stretch">
@@ -256,7 +297,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section id="services" class="services section-bg ">
+      <section ref={serviceRef} id="services" class="services section-bg ">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>Services</h2>
@@ -404,7 +445,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section id="testimonials" class="testimonials">
+      <section ref={testimonialRef} id="testimonials" class="testimonials">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>Testimonials</h2>
@@ -459,7 +500,9 @@ const HomePage = () => {
           </Carousel>
         </div>
       </section>
-      <FAQSection />
+      <div ref={faqRef}>
+        <FAQSection />
+      </div>
       {/* <section id="faq" class="faq">
         <div class="container text-left" data-aos="fade-up">
           <div class="section-title">
@@ -675,7 +718,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section id="contact" class="contact">
+      <section ref={contactRef} id="contact" class="contact">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>Contact</h2>

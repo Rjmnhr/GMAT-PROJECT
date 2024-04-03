@@ -24,7 +24,6 @@ const QuantTestPage = () => {
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
   const [tempValues, setTempValues] = useState([0, 0, 0]); // Initialize with three zeros
-
   const [currentQuestionLevel, setCurrentQuestionLevel] = useState(4); // Initialize with level 2
   const [filteredQuestionsByLevel, setFilteredQuestionsByLevel] =
     useState(null);

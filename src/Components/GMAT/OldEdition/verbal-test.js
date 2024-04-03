@@ -23,8 +23,7 @@ const VerbalTestPage = () => {
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
-  const [tempValues, setTempValues] = useState([0, 0, 0]); // Initialize with three zeros
-  const [tempSum, setTempSum] = useState(0);
+  const [tempValues, setTempValues] = useState([0, 0, 0]); // Initialize with three zeros]
   const [currentQuestionLevel, setCurrentQuestionLevel] = useState(4); // Initialize with level 2
   const [filteredQuestionsByLevel, setFilteredQuestionsByLevel] =
     useState(null);
@@ -156,8 +155,6 @@ const VerbalTestPage = () => {
   // }
 
   const trackUserInput = (answer) => {
-    console.log(answer);
-
     let rightAnswer = rightQuestions;
     let wrongAnswer = wrongQuestions;
 
@@ -264,7 +261,6 @@ const VerbalTestPage = () => {
   }, []);
 
   const onChange = (e) => {
-    console.log("radio checked", e.target.value);
     setValue(e.target.value);
     setIsNextButtonDisabled(false);
 
@@ -488,8 +484,6 @@ const VerbalTestPage = () => {
         break;
     }
 
-    console.log(convertedScore);
-
     if (convertedScore > 51) {
       convertedScore = 51;
     }
@@ -570,7 +564,6 @@ const VerbalTestPage = () => {
 
       // Check if currentQuestion is within the valid range
       if (currentQuestion + 2 < filteredQuestionsByLevel.length) {
-        console.log("inside");
         setCurrentQuestion((prevQuestion) => prevQuestion + 1);
       } else {
         // Handle the case where there are no more questions for the current level
@@ -597,9 +590,6 @@ const VerbalTestPage = () => {
       // Update the temporary values array and calculate the sum
       setTempValues(newTempValues);
       const newTempSum = newTempValues.reduce((acc, val) => acc + val, 0);
-      setTempSum(newTempSum);
-
-      console.log(tempSum);
 
       let nextQuestionLevel = currentQuestionLevel;
 

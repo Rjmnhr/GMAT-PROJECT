@@ -24,6 +24,8 @@
   display: none;
 }
 
+
+
 .custom-btn {
   position: relative;
   display: inline-block;
@@ -84,6 +86,29 @@
   cursor: pointer;
   background-color: #f0f0f0;
 }
+
+.image-container img{
+  width: 25%;
+}
+
+.custom-progress-container {
+  position: relative;
+}
+
+.custom-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media (max-width : 720px) {
+  .image-container img{
+    width: 60%;
+  }
+  
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

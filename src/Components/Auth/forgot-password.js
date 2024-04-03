@@ -36,15 +36,12 @@ const VerifyEmail = ({ setEmail, email, setIsOtpSend }) => {
     }
 
     const lowerCasedEmail = email.toLowerCase();
-    console.log(lowerCasedEmail);
 
     AxiosInstance.post("/api/otp/send-otp", {
       email: lowerCasedEmail,
     })
       .then(async (response) => {
-        const data = await response.data;
         // Handle successful OTP request
-        console.log(data);
 
         setIsOtpSend(true);
 
@@ -116,9 +113,6 @@ const OtpVerification = ({ email }) => {
       otp: otp,
     })
       .then(async (response) => {
-        const data = await response.data;
-        console.log(data);
-
         setIsLoading(false);
         setIsEmailVerified(true);
       })

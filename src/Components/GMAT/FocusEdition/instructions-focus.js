@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Carousel, Radio } from "antd";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-import AxiosInstance from "../../../Config/axios";
+import { useApplicationContext } from "../../../Context/app-context";
+import {
+  gmat_dashboard_path,
+  gmat_practice_exam_path,
+} from "../../../Config/config";
 
 const InstructionFocusPage = () => {
   const [dotPosition, setDotPosition] = useState("top");
@@ -10,67 +14,14 @@ const InstructionFocusPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
   const [selectedOrder, setSelectedOrder] = useState([]);
-
+  const { setCurrentSectionIndex, setShowInstruction } =
+    useApplicationContext();
   const navigate = useNavigate();
-  const location = window.location.href;
-  const userID = localStorage.getItem("adefteducation_user_id");
   useEffect(() => {
-    AxiosInstance.post(
-      `/api/track-data/store3`,
-      { path: location, id: userID },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
-      .then(async (response) => {
-        //eslint-disable-next-line
-        const data = await response.data;
-      })
-      .catch((err) => console.log(err));
-
+    sessionStorage.setItem("currentSectionIndex", 0);
+    setCurrentSectionIndex(0);
     //eslint-disable-next-line
   }, []);
-
-  const [startTime, setStartTime] = useState(Date.now());
-  useEffect(() => {
-    // Set start time when the component mounts
-    setStartTime(Date.now());
-
-    // Add an event listener for the beforeunload event
-    const handleBeforeUnload = () => {
-      // Calculate time spent
-      const endTime = Date.now();
-      const timeSpentInSeconds = (endTime - startTime) / 1000;
-
-      // Send the data to your backend
-      AxiosInstance.post(
-        `/api/track-data/store2`,
-        { path: location, id: userID, timeSpent: timeSpentInSeconds },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
-        .then(async (response) => {
-          //eslint-disable-next-line
-          const data = await response.data;
-        })
-        .catch((err) => console.log(err));
-    };
-
-    // Add the event listener
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    // Specify the cleanup function to remove the event listener
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-    //eslint-disable-next-line
-  }, [location, userID]);
-
   const handlePositionChange = ({ target: { value } }) => {
     setDotPosition(value);
   };
@@ -111,7 +62,8 @@ const InstructionFocusPage = () => {
     sessionStorage.removeItem("GMAT_Score");
     sessionStorage.removeItem("practice_2_data");
     sessionStorage.setItem("current_section", selectedOrder[0]);
-    navigate("/section-focus");
+    setShowInstruction(true);
+    navigate(`${gmat_practice_exam_path}?c=focus`);
   };
   const handleRadioChange = (event) => {
     const value = event.target.value;
@@ -129,6 +81,7 @@ const InstructionFocusPage = () => {
       setSelectedOrder(order);
       sessionStorage.setItem("section-order", JSON.stringify(order));
     }
+    sessionStorage.setItem("section-order-choice", value);
   };
 
   return (
@@ -326,7 +279,7 @@ const InstructionFocusPage = () => {
           <button
             className="btn border"
             style={{ marginRight: 8 }}
-            onClick={() => navigate("/")}
+            onClick={() => navigate(gmat_dashboard_path)}
           >
             Go back
           </button>
@@ -344,12 +297,12 @@ const InstructionFocusPage = () => {
           <button className="btn btn-primary " onClick={handleNext}>
             Continue
           </button>
-        ) : selectedOption ? (
-          <button className="btn btn-primary " onClick={handleClick}>
-            Get Started
-          </button>
         ) : (
-          <button disabled className="btn btn-primary " onClick={handleClick}>
+          <button
+            className="btn btn-primary "
+            onClick={handleClick}
+            disabled={!selectedOption}
+          >
             Get Started
           </button>
         )}

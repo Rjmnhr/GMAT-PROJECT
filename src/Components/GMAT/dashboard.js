@@ -1,54 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import AxiosInstance from "../../Config/axios";
-import { login_path } from "../../Config/config";
-import {
-  practiceExamData,
-  practiceExamDataFocus,
-  practiceExams,
-} from "../../Config/constants";
-import { Skeleton } from "antd";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const GMATDashboard = ({ activeIndex }) => {
+import { practiceExams } from "../../Config/constants";
+import { Skeleton } from "antd";
+import { gmat_dashboard_path } from "../../Config/config";
+
+const GMATDashboard = ({
+  activeIndex,
+  examData,
+  userActivities,
+  loading,
+  setComponentTrigger,
+  componentTrigger,
+}) => {
   const navigate = useNavigate();
-  const [examData, setExamData] = useState({});
-  const [userActivities, setUserActivities] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const path = useLocation().pathname;
-  useEffect(() => {
-    setIsLoading(true);
-    const accessToken = localStorage.getItem("accessToken");
-    AxiosInstance.get("/api/gmat/user-activity/get-activity", {
-      headers: {
-        "Content-Type": "application/json",
-        token: `Bearer ${accessToken}`,
-      },
-    })
-      .then(async (res) => {
-        const response = await res.data;
-        if (response.status === 200) {
-          setUserActivities(response.data);
-          setIsLoading(false);
-        } else {
-          navigate(`${login_path}?p=${path}`);
-        }
-      })
-      .catch((err) => console.log(err));
-  }, [navigate, path]);
-  useEffect(() => {
-    switch (activeIndex) {
-      case 0:
-        setExamData(practiceExamData);
-        sessionStorage.setItem("category", "old");
-        break;
-      case 1:
-        setExamData(practiceExamDataFocus);
-        sessionStorage.setItem("category", "focus");
-        break;
-      default:
-        break;
-    }
-  }, [activeIndex]);
 
   const getStatus = (practiceExam) => {
     const filteredActivity = userActivities?.find(
@@ -86,8 +51,9 @@ const GMATDashboard = ({ activeIndex }) => {
                     <tr
                       key={item}
                       onClick={() => {
-                        navigate(examData?.instruction_path);
+                        navigate(`${gmat_dashboard_path}?p=insights`);
                         sessionStorage.setItem("practice-exam", item);
+                        setComponentTrigger(!componentTrigger);
                       }}
                       className="row-hover"
                     >
@@ -95,7 +61,7 @@ const GMATDashboard = ({ activeIndex }) => {
                       <td>{examData?.totalQuestions}</td>
                       <td>{examData?.totalTime}</td>
                       <td>
-                        {isLoading ? (
+                        {loading ? (
                           <Skeleton.Button
                             active={true}
                             size={"small"}

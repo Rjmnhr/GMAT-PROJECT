@@ -1,20 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AdminDashboard from "../Components/AdminDashboard";
 import ProfilerPage from "../Components/Profiler";
-import SectionDividerFocus from "../Components/GMAT/FocusEdition/section-divider-focus.js";
 import ChancesOfSelection from "../Components/Profiler/output";
 import InstructionFocusPage from "../Components/GMAT/FocusEdition/instructions-focus.js";
 import InstructionPage from "../Components/GMAT/OldEdition/instructions.js";
-import ResultPage from "../Components/GMAT/OldEdition/result.js";
-import ResultFocusPage from "../Components/GMAT/OldEdition/result.js";
-import QuantTestPage from "../Components/GMAT/OldEdition/quant-test.js";
-import VerbalTestPage from "../Components/GMAT/OldEdition/verbal-test.js";
-import IRTestPage from "../Components/GMAT/OldEdition/IR-test.js";
 import ProfilerLandingPage from "../Pages/profiler-landing-page";
 import PracticeQuestionsPage from "../Pages/practice-questions-page";
-import QuantTestPageFocus from "../Components/GMAT/FocusEdition/quant-test-focus.js";
-import VerbalTestPageFocus from "../Components/GMAT/FocusEdition/verbal-test-focus.js";
-import DataInsightsTestPage from "../Components/GMAT/FocusEdition/data-insigts-test.js";
 import CategoryVideos from "../Pages/videos-page/category-videos.js";
 import CategoryQuestions from "../Pages/practice-questions-page/category-questions.js";
 import OtpVerification from "../Components/Auth/otp-verification";
@@ -33,11 +24,11 @@ import {
   home_path,
   profiler_landing_path,
   profiler_path,
-  gmat_practice_exam,
   gmat_results_path,
   gmat_results_focus_path,
   registration_payment_path,
   success_registration_path,
+  gmat_practice_exam_path,
 } from "../Config/config.js";
 import GMATLandingPage from "../Pages/GMAT-landing-page/index.js";
 import DashboardMainPage from "../Components/GMAT/index.js";
@@ -45,6 +36,8 @@ import PracticeExam from "../Components/GMAT/OldEdition/practice-exam.js";
 import RegistrationPricing from "../Components/Payment/PricingPage.js";
 import SuccessRegistration from "../Components/Payment/success-registration.js";
 import Canceled from "../Components/Payment/Canceled.js";
+import ResultFocusPage from "../Components/GMAT/FocusEdition/result-focus.js";
+import ResultPage from "../Components/GMAT/OldEdition/result.js";
 
 const ConditionalComponent = () => {
   return (
@@ -117,7 +110,7 @@ const AppRouter = () => {
             }
           />
           <Route
-            path={gmat_practice_exam}
+            path={gmat_practice_exam_path}
             element={
               <>
                 <PracticeExam />
@@ -211,34 +204,7 @@ const AppRouter = () => {
               <>{isMobile ? <ConditionalComponent /> : <GMATLandingPage />}</>
             }
           />
-          <Route
-            path="/quant-test"
-            element={
-              <>{isMobile ? <ConditionalComponent /> : <QuantTestPage />}</>
-            }
-          />
-          <Route
-            path="/quant-test-focus"
-            element={
-              <>
-                {isMobile ? <ConditionalComponent /> : <QuantTestPageFocus />}
-              </>
-            }
-          />
-          <Route
-            path="verbal-test"
-            element={
-              <>{isMobile ? <ConditionalComponent /> : <VerbalTestPage />}</>
-            }
-          />
-          <Route
-            path="verbal-test-focus"
-            element={
-              <>
-                {isMobile ? <ConditionalComponent /> : <VerbalTestPageFocus />}
-              </>
-            }
-          />
+
           <Route
             path="/instructions"
             element={
@@ -252,30 +218,6 @@ const AppRouter = () => {
             element={
               <>
                 <InstructionFocusPage />
-              </>
-            }
-          />
-
-          <Route
-            path="/section-focus"
-            element={
-              <>
-                <SectionDividerFocus />
-              </>
-            }
-          />
-
-          <Route
-            path="/ir-test"
-            element={
-              <>{isMobile ? <ConditionalComponent /> : <IRTestPage />}</>
-            }
-          />
-          <Route
-            path="/data-insights-test"
-            element={
-              <>
-                {isMobile ? <ConditionalComponent /> : <DataInsightsTestPage />}
               </>
             }
           />

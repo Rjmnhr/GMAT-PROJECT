@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LoadingOutlined } from "@ant-design/icons";
 import AxiosInstance from "../../../Config/axios";
-import { gmat_dashboard_path } from "../../../Config/config";
-
-const ResultFocusPage = () => {
+import { gmat_dashboard_path, login_path } from "../../../Config/config";
+import examDisqualified from "../../../Icons/exam-disqualified.jpg";
+import examQualified from "../../../Icons/exam-qualified.jpg";
+const ResultPage = () => {
   const [score, setScore] = useState(0);
   // const scorePercentage = ((score / 800) * 100).toFixed(2);
   const navigate = useNavigate();
@@ -24,40 +25,44 @@ const ResultFocusPage = () => {
       verbal_score < 27 ||
       isNaN(verbal_score) ||
       isNaN(quant_score)
-    )
+    ) {
+      setIsLoading(false);
+      setNotQualified(true);
+      storeData(0);
       return;
-
-    const formData = new FormData();
-    formData.append("quant_score", quant_score);
-    formData.append("verbal_score", verbal_score);
-    AxiosInstance.post("/api/gmat/final-mark", formData, {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then(async (response) => {
-        const resultData = await response.data;
-
-        const score = resultData[0][verbal_score];
-        storeData(score);
-
-        setScore(score);
-        setIsLoading(false);
-
-        localStorage.setItem("GMAT_Score", score);
-
-        // Set practice score based on exam_no (you can add this logic as needed)
-        if (exam_no === "1") {
-          localStorage.setItem("practice_score_1", score);
-        } else if (exam_no === "2") {
-          localStorage.setItem("practice_score_2", score);
-        } else {
-          localStorage.setItem("practice_score_1", score);
-        }
-
-        // setDataLinkedIn(resultData);
+    } else {
+      const formData = new FormData();
+      formData.append("quant_score", quant_score);
+      formData.append("verbal_score", verbal_score);
+      AxiosInstance.post("/api/gmat/final-mark", formData, {
+        headers: {
+          "Content-Type": "application/json",
+        },
       })
-      .catch((err) => console.log("error", err));
+        .then(async (response) => {
+          const resultData = await response.data;
+
+          const score = resultData[0][verbal_score];
+          storeData(score);
+
+          setScore(score);
+          setIsLoading(false);
+
+          localStorage.setItem("GMAT_Score", score);
+
+          // Set practice score based on exam_no (you can add this logic as needed)
+          if (exam_no === "1") {
+            localStorage.setItem("practice_score_1", score);
+          } else if (exam_no === "2") {
+            localStorage.setItem("practice_score_2", score);
+          } else {
+            localStorage.setItem("practice_score_1", score);
+          }
+
+          // setDataLinkedIn(resultData);
+        })
+        .catch((err) => console.log("error", err));
+    }
 
     // eslint-disable-next-line
   }, []);
@@ -93,7 +98,11 @@ const ResultFocusPage = () => {
         token: `Bearer ${accessToken}`,
       },
     })
-      .then(async (response) => {
+      .then(async (res) => {
+        const response = await res.data;
+        if (response.status !== 200) {
+          navigate(`${login_path}?p=${gmat_dashboard_path}`);
+        }
         clearStorage();
         updateStatus();
 
@@ -101,30 +110,22 @@ const ResultFocusPage = () => {
       })
       .catch((err) => console.log("error", err));
   };
-  useEffect(() => {
-    if (
-      quant_score < 27 ||
-      verbal_score < 27 ||
-      isNaN(verbal_score) ||
-      isNaN(quant_score)
-    ) {
-      setIsLoading(false);
-      setNotQualified(true);
-      storeData(0);
-    }
-    //eslint-disable-next-line
-  }, []);
 
   const updateStatus = () => {
     const formData = new FormData();
     formData.append("category", storedCategory);
     formData.append("practice_exam", storedPracticeExam);
-    console.log("enter");
+
     AxiosInstance.post("/api/gmat/user-activity/update-status", formData, {
       headers: {
         "Content-Type": "application/json",
         token: `Bearer ${accessToken}`,
-      },
+      }.then(async (res) => {
+        const response = await res.data;
+        if (response.status !== 200) {
+          navigate(`${login_path}?p=${gmat_dashboard_path}`);
+        }
+      }),
     }).catch((err) => console.log(err));
   };
   return (
@@ -149,7 +150,7 @@ const ResultFocusPage = () => {
         <>
           {notQualified ? (
             <div
-              className=" p-3"
+              className="image-container p-3 text-r"
               style={{
                 display: "grid",
                 justifyItems: "center",
@@ -157,11 +158,11 @@ const ResultFocusPage = () => {
                 placeItems: "center",
               }}
             >
-              <h1>GMAT Practice Exam Results</h1>
-              <p>
-                Unfortunately, you did not qualify for the GMAT practice exam.
-              </p>
-              <p>
+              <img src={examDisqualified} alt="" />
+              <h3>
+                Unfortunately, you did not qualify in the GMAT practice exam.
+              </h3>
+              <p style={{ color: "red" }}>
                 Your score on the online practice exam was below the required
                 threshold for qualification.
               </p>
@@ -169,44 +170,77 @@ const ResultFocusPage = () => {
                 We encourage you to continue your preparation and consider
                 additional study resources to improve your GMAT skills.
               </p>
-              <p>
-                Don't be discouraged; many candidates improve their scores with
-                dedicated preparation. You can retake the practice exam once you
-                feel more prepared.
-              </p>
+
+              <h4 style={{ fontSize: "20px" }} className="mt-3">
+                Your Quantitative Reasoning score :{" "}
+                <span className="text-primary"> {quant_score || 0}/90</span>
+              </h4>
+              <h4 style={{ fontSize: "20px" }} className="mt-3">
+                Your Verbal Reasoning score :{" "}
+                <span className="text-primary"> {verbal_score || 0}/90 </span>
+              </h4>
+
+              <h4 style={{ fontSize: "20px" }} className="mt-3">
+                Your Data Insights score :{" "}
+                <span className="text-primary"> {ir_score || 0}/90 </span>
+              </h4>
+
               <p>
                 If you have any questions or need further assistance, please
-                don't hesitate to contact our support team.
+                don't hesitate to contact our support team at
+                <span className="text-primary"> team@adefteducation.com </span>
               </p>
               <button
-                className="btn border mt-5 w-50 w-lg-25"
-                onClick={() => navigate("/")}
+                className="btn btn-primary btn-lg border mt-5 w-25"
+                onClick={() => navigate(gmat_dashboard_path)}
               >
                 Go to Dashboard
               </button>
             </div>
           ) : (
             <>
-              <div className="mt-5">
-                <img
-                  width={100}
-                  height={100}
-                  src={
-                    "https://res.cloudinary.com/dsw1ubwyh/image/upload/v1702475024/wlrf1eswdneqfamjkay3.png"
-                  }
-                  alt=""
-                />
+              <div className="image-container mt-5">
+                <img src={examQualified} alt="" />
               </div>
-              <p style={{ fontSize: "20px" }} className="mt-3">
-                Your GMAT Score: {score}/800
-              </p>
-              <p style={{ fontSize: "20px" }} className="mt-3">
-                Your Integrated Reasoning score : {ir_score}
-              </p>
-              <p style={{ fontWeight: "500", fontSize: "50px" }}>{score}</p>
+              <div className="card container col-lg-6 p-3">
+                <div className=" d-lg-flex  container align-items-center justify-content-between">
+                  <div className=" border-right px-5">
+                    <h4>GMAT SCORE</h4>
+
+                    <div
+                      style={{ color: "black" }}
+                      className="mt-3 text-primary"
+                    >
+                      <h1> {score}</h1>
+                    </div>
+                  </div>
+
+                  <div className="text-left">
+                    <h4 style={{ fontSize: "20px" }} className="mt-3">
+                      Quantitative Reasoning score :{" "}
+                      <span className="text-primary">
+                        {" "}
+                        {quant_score || 0}/90
+                      </span>
+                    </h4>
+                    <h4 style={{ fontSize: "20px" }} className="mt-3">
+                      Verbal Reasoning score :{" "}
+                      <span className="text-primary">
+                        {" "}
+                        {verbal_score || 0}/90{" "}
+                      </span>
+                    </h4>
+
+                    <h4 style={{ fontSize: "20px" }} className="mt-3">
+                      Data Insights score :{" "}
+                      <span className="text-primary"> {ir_score || 0}/90 </span>
+                    </h4>
+                  </div>
+                </div>
+              </div>
 
               <button
-                className="btn border mt-5"
+                className="btn btn-primary btn-lg border mt-5"
                 onClick={() => navigate(gmat_dashboard_path)}
               >
                 Go to Dashboard
@@ -219,4 +253,4 @@ const ResultFocusPage = () => {
   );
 };
 
-export default ResultFocusPage;
+export default ResultPage;

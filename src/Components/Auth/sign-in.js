@@ -40,7 +40,6 @@ const SignIn = () => {
       });
 
       const data = await response.data;
-      console.log("🚀 ~ handleSubmit ~ data:", data);
 
       setIsLoading(false);
 

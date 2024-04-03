@@ -82,9 +82,8 @@ const OtpVerification = () => {
       otp: joinedOtpPin,
     })
       .then(async (response) => {
-        const data = await response.data;
         setIsLoading(false);
-        console.log(data);
+
         if (!response.status === 200) {
           alert("something wrong");
           return;

@@ -8,18 +8,47 @@ import {
   SectionDividerQuant,
   SectionDividerVerbal,
 } from "./section-divider";
+import { useLocation } from "react-router-dom";
+import QuantTestPageFocus from "../FocusEdition/quant-test-focus";
+import VerbalTestPageFocus from "../FocusEdition/verbal-test-focus";
+import DataInsightsTestPage from "../FocusEdition/data-insigts-test";
+import {
+  SectionDividerFocusDataInsights,
+  SectionDividerFocusQuant,
+  SectionDividerFocusVerbal,
+} from "../FocusEdition/section-divider-focus";
 
 // Main component to manage section order and rendering
 const PracticeExam = () => {
   const sectionOrder = JSON.parse(sessionStorage.getItem("section-order"));
   const { currentSectionIndex, showInstruction, setShowInstruction } =
     useApplicationContext();
+  const location = useLocation();
+  const category = location.search.replace("?c=", "");
+  let sections = {};
 
-  const sections = {
-    quant: { Component: QuantTestPage, Instruction: SectionDividerQuant },
-    verbal: { Component: VerbalTestPage, Instruction: SectionDividerVerbal },
-    ir: { Component: IRTestPage, Instruction: SectionDividerIR },
-  };
+  if (category === "focus") {
+    sections = {
+      quant: {
+        Component: QuantTestPageFocus,
+        Instruction: SectionDividerFocusQuant,
+      },
+      verbal: {
+        Component: VerbalTestPageFocus,
+        Instruction: SectionDividerFocusVerbal,
+      },
+      ir: {
+        Component: DataInsightsTestPage,
+        Instruction: SectionDividerFocusDataInsights,
+      },
+    };
+  } else {
+    sections = {
+      quant: { Component: QuantTestPage, Instruction: SectionDividerQuant },
+      verbal: { Component: VerbalTestPage, Instruction: SectionDividerVerbal },
+      ir: { Component: IRTestPage, Instruction: SectionDividerIR },
+    };
+  }
 
   const handleStartTest = () => {
     setShowInstruction(false);

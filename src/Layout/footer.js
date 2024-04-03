@@ -5,8 +5,12 @@ import {
   profiler_landing_path,
   videos_path,
 } from "../Config/config";
+import { useNavigate } from "react-router-dom";
+import { useApplicationContext } from "../Context/app-context";
 
 const FooterComponent = () => {
+  const navigate = useNavigate();
+  const { setTrigger, trigger } = useApplicationContext();
   return (
     <footer id="footer">
       <div class="footer-top">
@@ -34,22 +38,56 @@ const FooterComponent = () => {
               <h4>Useful Links</h4>
               <ul>
                 <li>
-                  <i class="bx bx-chevron-right"></i> <a href="/#">Home</a>
+                  <i class="bx bx-chevron-right"></i> <a href="/">Home</a>
+                </li>
+                {/* eslint-disable */}
+                <li>
+                  <i class="bx bx-chevron-right"></i>{" "}
+                  <a
+                    onClick={() => {
+                      navigate("/#about");
+                      setTrigger(!trigger);
+                    }}
+                    style={{ cursor: "pointer" }}
+                  >
+                    About us
+                  </a>
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>{" "}
-                  <a href="#about">About us</a>
+                  <a
+                    onClick={() => {
+                      navigate("/#services");
+                      setTrigger(!trigger);
+                    }}
+                    style={{ cursor: "pointer" }}
+                  >
+                    Services
+                  </a>
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>{" "}
-                  <a href="#services">Services</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#team">Team</a>
+                  <a
+                    onClick={() => {
+                      navigate("/#testimonials");
+                      setTrigger(!trigger);
+                    }}
+                    style={{ cursor: "pointer" }}
+                  >
+                    Testimonials
+                  </a>
                 </li>
                 <li>
                   <i class="bx bx-chevron-right"></i>{" "}
-                  <a href="#faq">Frequently Asked Questions</a>
+                  <a
+                    onClick={() => {
+                      navigate("/#faq");
+                      setTrigger(!trigger);
+                    }}
+                    style={{ cursor: "pointer" }}
+                  >
+                    FAQs
+                  </a>
                 </li>
               </ul>
             </div>

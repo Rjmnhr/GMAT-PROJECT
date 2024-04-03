@@ -11,6 +11,7 @@ export const AppContextProvider = ({ children }) => {
   const [userData, setUserData] = useState(null);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [showInstruction, setShowInstruction] = useState(true);
+  const [trigger, setTrigger] = useState(true);
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
     AxiosInstance.get(
@@ -48,6 +49,8 @@ export const AppContextProvider = ({ children }) => {
     setCurrentSectionIndex,
     showInstruction,
     setShowInstruction,
+    trigger,
+    setTrigger,
   };
 
   return <MyContext.Provider value={value}>{children}</MyContext.Provider>;

@@ -120,15 +120,8 @@ const ProfilerPage = () => {
     const defaultValues = JSON.parse(
       sessionStorage.getItem(`${formName}-default`)
     );
-    console.log(
-      "🚀 ~ file: index.js:53 ~ updateFormValues ~ defaultValues:",
-      defaultValues
-    );
+
     const currentValues = JSON.parse(sessionStorage.getItem(formName));
-    console.log(
-      "🚀 ~ file: index.js:54 ~ updateFormValues ~ currentValues:",
-      currentValues
-    );
 
     // Check if all keys from defaultValues are present in currentValues
     const missingKeys = Object.keys(defaultValues).filter(

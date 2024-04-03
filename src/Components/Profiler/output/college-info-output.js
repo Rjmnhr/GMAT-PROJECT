@@ -690,7 +690,6 @@ const CollegeInformationOutput = () => {
   }, [location, userID]);
   useEffect(() => {
     if (memoizedCountries) {
-      console.log("enter");
       AxiosInstance.post(
         "api/profiler/college-information",
         {
@@ -707,7 +706,7 @@ const CollegeInformationOutput = () => {
       )
         .then(async (res) => {
           const response = await res.data;
-          console.log("🚀 ~ .then ~ response:", response);
+
           setCollegeData(response);
           sessionStorage.setItem("form-filled", true);
         })

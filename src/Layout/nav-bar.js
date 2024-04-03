@@ -13,7 +13,8 @@ const NavBar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
-  const { userData, setUserData } = useApplicationContext();
+  const { userData, setUserData, setTrigger, trigger } =
+    useApplicationContext();
   const [initials, setInitials] = useState("");
 
   const handleLogOut = () => {
@@ -133,7 +134,7 @@ const NavBar = () => {
           <p className="m-0">{userData?.first_name}</p>
           <Avatar
             style={{
-              backgroundColor: "#007bff",
+              backgroundColor: "#049494",
               verticalAlign: "middle",
               marginLeft: "10px",
             }}
@@ -153,7 +154,6 @@ const NavBar = () => {
   useEffect(() => {
     if (userData) {
       const sanitizedFirstName = String(userData?.first_name);
-      console.log("🚀 ~ useEffect ~ sanitizedFirstName:", sanitizedFirstName);
 
       const sanitizedLastName = String(userData?.last_name);
 
@@ -226,11 +226,28 @@ const NavBar = () => {
                 </li>
               </Dropdown>
               <li>
-                <a href="/#about">About</a>
+                {/* eslint-disable */}
+                <a
+                  onClick={() => {
+                    navigate("/#about");
+                    setTrigger(!trigger);
+                  }}
+                  style={{ cursor: "pointer" }}
+                >
+                  About
+                </a>
               </li>
 
               <li>
-                <a href="/#contact">Contact</a>
+                <a
+                  onClick={() => {
+                    navigate("/#contact");
+                    setTrigger(!trigger);
+                  }}
+                  style={{ cursor: "pointer" }}
+                >
+                  Contact
+                </a>
               </li>
               <li>
                 <a href="/blogs">Blog</a>
@@ -252,7 +269,7 @@ const NavBar = () => {
                       <a>
                         <Avatar
                           style={{
-                            backgroundColor: "#007bff",
+                            backgroundColor: "#049494",
                             verticalAlign: "middle",
                           }}
                           size="medium"

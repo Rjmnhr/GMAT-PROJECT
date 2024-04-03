@@ -4,6 +4,12 @@ import { ClockCircleTwoTone } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import AxiosInstance from "../../../Config/axios";
 import { questions } from "../questions";
+import {
+  gmat_dashboard_path,
+  gmat_results_focus_path,
+  login_path,
+} from "../../../Config/config";
+import { useApplicationContext } from "../../../Context/app-context";
 
 const DataInsightsTestPage = () => {
   const [value, setValue] = useState(null);
@@ -12,14 +18,12 @@ const DataInsightsTestPage = () => {
   const [percentage, setPercentage] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(10); // elapsed time in seconds
   const [isRunning, setIsRunning] = useState(false);
-
   const [isNextButtonDisabled, setIsNextButtonDisabled] = useState(true);
   const [remainingTime, setRemainingTime] = useState(45 * 60);
   const [userAnswers, setUserAnswers] = useState([]);
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
   const [tempValues, setTempValues] = useState([0, 0, 0]); // Initialize with three zeros
-  const [tempSum, setTempSum] = useState(0);
   const [currentQuestionLevel, setCurrentQuestionLevel] = useState(4); // Initialize with level 2
   const [filteredQuestionsByLevel, setFilteredQuestionsByLevel] =
     useState(null);
@@ -32,65 +36,51 @@ const DataInsightsTestPage = () => {
   const [wrongQuestions, setWrongQuestions] = useState(0);
   const [shuffledQuestions, setShuffledQuestions] = useState(null);
   const storedCount = sessionStorage.getItem("order-count");
+  const accessToken = localStorage.getItem("accessToken");
+  const storedSectionOrder = sessionStorage.getItem("section-order-choice");
+  const storedCategory = sessionStorage.getItem("category");
+  const storedPracticeExam = sessionStorage.getItem("practice-exam");
+  const { setCurrentSectionIndex, setShowInstruction } =
+    useApplicationContext();
+  const storedCurrentSectionIndex =
+    parseInt(sessionStorage.getItem("currentSectionIndex")) || 0;
+  const saveUserActivity = (
+    questionNumber,
+    newTotalTimeSpent,
+    rightAnswer,
+    wrongAnswer,
+    convertedScore
+  ) => {
+    const formData = new FormData();
 
-  const location = window.location.href;
-  const userID = localStorage.getItem("adefteducation_user_id");
-  useEffect(() => {
-    AxiosInstance.post(
-      `/api/track-data/store3`,
-      { path: location, id: userID },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
-      .then(async (response) => {
-        //eslint-disable-next-line
-        const data = await response.data;
-      })
-      .catch((err) => console.log(err));
+    formData.append("section", "data insights");
+    formData.append("section_order", storedSectionOrder);
+    formData.append("question_no", questionNumber);
+    formData.append("category", storedCategory);
+    formData.append("section_time", newTotalTimeSpent);
+    formData.append("qa_time_spent", newTotalTimeSpent);
+    formData.append("practice_exam", storedPracticeExam);
+    formData.append("qa_questions_correct", rightAnswer);
+    formData.append("qa_questions_incorrect", wrongAnswer);
+    formData.append("qa_scaled_score", convertedScore);
+    formData.append("status", "Incomplete");
 
-    //eslint-disable-next-line
-  }, []);
-
-  const [startTime, setStartTime] = useState(Date.now());
-  useEffect(() => {
-    // Set start time when the component mounts
-    setStartTime(Date.now());
-
-    // Add an event listener for the beforeunload event
-    const handleBeforeUnload = () => {
-      // Calculate time spent
-      const endTime = Date.now();
-      const timeSpentInSeconds = (endTime - startTime) / 1000;
-
-      // Send the data to your backend
-      AxiosInstance.post(
-        `/api/track-data/store2`,
-        { path: location, id: userID, timeSpent: timeSpentInSeconds },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
+    AxiosInstance.post("api/gmat/user-activity/save-activity", formData, {
+      headers: {
+        "Content-Type": "application/json",
+        token: `Bearer ${accessToken}`,
+      },
+    })
+      .then(async (res) => {
+        const response = await res.data;
+        if (response.status !== 200) {
+          navigate(`${login_path}?p=${gmat_dashboard_path}`);
         }
-      )
-        .then(async (response) => {
-          //eslint-disable-next-line
-          const data = await response.data;
-        })
-        .catch((err) => console.log(err));
-    };
-
-    // Add the event listener
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    // Specify the cleanup function to remove the event listener
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-    //eslint-disable-next-line
-  }, [location, userID]);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   useEffect(() => {
     let newThreshold = 0;
@@ -114,30 +104,30 @@ const DataInsightsTestPage = () => {
   const QuestionsArray = [...IRQuestions];
 
   useEffect(() => {
-    const shuffledArr = shuffleArray(QuestionsArray);
+    const shuffledArr = QuestionsArray;
     setShuffledQuestions(shuffledArr);
     //eslint-disable-next-line
   }, []);
 
-  function shuffleArray(array) {
-    let currentIndex = array.length,
-      randomIndex,
-      temporaryValue;
+  // function shuffleArray(array) {
+  //   let currentIndex = array.length,
+  //     randomIndex,
+  //     temporaryValue;
 
-    // While there remain elements to shuffle...
-    while (currentIndex !== 0) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
+  //   // While there remain elements to shuffle...
+  //   while (currentIndex !== 0) {
+  //     // Pick a remaining element...
+  //     randomIndex = Math.floor(Math.random() * currentIndex);
+  //     currentIndex--;
 
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
+  //     // And swap it with the current element.
+  //     temporaryValue = array[currentIndex];
+  //     array[currentIndex] = array[randomIndex];
+  //     array[randomIndex] = temporaryValue;
+  //   }
 
-    return array;
-  }
+  //   return array;
+  // }
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -169,6 +159,16 @@ const DataInsightsTestPage = () => {
 
     // Calculate the new total time spent
     const newTotalTimeSpent = 30 * 60 - remainingTime;
+
+    const convertedScore = GMATScoreConversion(score);
+
+    saveUserActivity(
+      questionNumber,
+      newTotalTimeSpent,
+      rightAnswer,
+      wrongAnswer,
+      convertedScore
+    );
 
     sessionStorage.setItem("ir_time_spend", newTotalTimeSpent);
 
@@ -238,7 +238,6 @@ const DataInsightsTestPage = () => {
   }, []);
 
   const onChange = (e) => {
-    console.log("radio checked", e.target.value);
     setValue(e.target.value);
     setIsNextButtonDisabled(false);
 
@@ -461,8 +460,6 @@ const DataInsightsTestPage = () => {
         break;
     }
 
-    console.log(convertedScore);
-
     if (convertedScore > 90) {
       convertedScore = 90;
     }
@@ -541,16 +538,11 @@ const DataInsightsTestPage = () => {
 
       // Check if currentQuestion is within the valid range
       if (currentQuestion + 2 < filteredQuestionsByLevel.length) {
-        console.log("inside");
         setCurrentQuestion((prevQuestion) => prevQuestion + 1);
       } else {
         // Handle the case where there are no more questions for the current level
         setCurrentQuestion(0);
       }
-      console.log(
-        "🚀 ~ file: index.js:492 ~ handleNext ~ filteredQuestionsByLevel:",
-        filteredQuestionsByLevel
-      );
 
       // Add the ID of the answered question to the attendedQuestionIds array
       const answeredQuestionId = filteredQuestionsByLevel[0].id;
@@ -572,9 +564,6 @@ const DataInsightsTestPage = () => {
       // Update the temporary values array and calculate the sum
       setTempValues(newTempValues);
       const newTempSum = newTempValues.reduce((acc, val) => acc + val, 0);
-      setTempSum(newTempSum);
-
-      console.log(tempSum);
 
       let nextQuestionLevel = currentQuestionLevel;
 
@@ -658,21 +647,21 @@ const DataInsightsTestPage = () => {
 
       sessionStorage.setItem("current_section", "ir");
       sessionStorage.setItem("time_remaining", remainingTime);
-      navigate("/test-break-focus");
+      if (storedCurrentSectionIndex === 2) {
+        sessionStorage.setItem("currentSectionIndex", 0);
+        navigate(gmat_results_focus_path);
+      } else {
+        setCurrentSectionIndex(storedCurrentSectionIndex + 1);
+        setShowInstruction(true);
+        sessionStorage.setItem(
+          "currentSectionIndex",
+          storedCurrentSectionIndex + 1
+        );
+      }
 
       // Handle the end of the test, e.g., show results
     }
   };
-
-  useEffect(() => {
-    GMATScoreConversion(score);
-
-    sessionStorage.setItem("GMAT_Score", score);
-    if (questionNumber > totalQuestions) {
-      navigate("/test-break-focus");
-    }
-    //eslint-disable-next-line
-  }, [score]);
 
   useEffect(() => {
     const mappedLevel = mappingTheLevels(currentQuestionLevel);
@@ -690,15 +679,10 @@ const DataInsightsTestPage = () => {
 
   useEffect(() => {
     if (filteredQuestionsByLevel) {
-      console.log(
-        "🚀 ~ file: index.js:633 ~ useEffect ~    filteredQuestionsByLevel[0].main_question_stem.length:",
-        filteredQuestionsByLevel[0]?.main_question_stem?.length
-      );
       if (
         filteredQuestionsByLevel[0].main_question_stem.length > 1000 ||
         filteredQuestionsByLevel[0].img_url
       ) {
-        console.log("entered");
         setIsSplitScreen(true);
       } else {
         setIsSplitScreen(false);

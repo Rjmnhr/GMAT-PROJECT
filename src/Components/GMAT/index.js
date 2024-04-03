@@ -5,70 +5,61 @@ import { useApplicationContext } from "../../Context/app-context";
 import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 import GMATDashboard from "./dashboard";
+import {
+  practiceExamData,
+  practiceExamDataFocus,
+} from "../../Config/constants";
+import { useLocation, useNavigate } from "react-router-dom";
 import AxiosInstance from "../../Config/axios";
+import { login_path } from "../../Config/config";
+import TestInsights from "./test-insights";
 
 const DashboardMainPage = () => {
   const { activeIndex } = useApplicationContext();
-  const location = window.location.href;
-
-  const userID = localStorage.getItem("adefteducation_user_id");
+  const [examData, setExamData] = useState({});
+  const [userActivities, setUserActivities] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const location = useLocation();
+  const path = location?.pathname;
+  const navigate = useNavigate();
+  const category = location.search.replace("?p=", "");
+  const [componentTrigger, setComponentTrigger] = useState(false);
 
   useEffect(() => {
-    AxiosInstance.post(
-      `/api/track-data/store3`,
-      { path: location, id: userID },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    )
-      .then(async (response) => {
-        //eslint-disable-next-line
-        const data = await response.data;
+    switch (activeIndex) {
+      case 0:
+        setExamData(practiceExamData);
+        sessionStorage.setItem("category", "old");
+        break;
+      case 1:
+        setExamData(practiceExamDataFocus);
+        sessionStorage.setItem("category", "focus");
+        break;
+      default:
+        break;
+    }
+  }, [activeIndex]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const accessToken = localStorage.getItem("accessToken");
+    AxiosInstance.get("/api/gmat/user-activity/get-activity", {
+      headers: {
+        "Content-Type": "application/json",
+        token: `Bearer ${accessToken}`,
+      },
+    })
+      .then(async (res) => {
+        const response = await res.data;
+        if (response.status === 200) {
+          setUserActivities(response.data);
+          setIsLoading(false);
+        } else {
+          navigate(`${login_path}?p=${path}`);
+        }
       })
       .catch((err) => console.log(err));
-
-    //eslint-disable-next-line
-  }, []);
-
-  const [startTime, setStartTime] = useState(Date.now());
-  useEffect(() => {
-    // Set start time when the component mounts
-    setStartTime(Date.now());
-
-    // Add an event listener for the beforeunload event
-    const handleBeforeUnload = () => {
-      // Calculate time spent
-      const endTime = Date.now();
-      const timeSpentInSeconds = (endTime - startTime) / 1000;
-
-      // Send the data to your backend
-      AxiosInstance.post(
-        `/api/track-data/store2`,
-        { path: location, id: userID, timeSpent: timeSpentInSeconds },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
-        .then(async (response) => {
-          //eslint-disable-next-line
-          const data = await response.data;
-        })
-        .catch((err) => console.log(err));
-    };
-
-    // Add the event listener
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    // Specify the cleanup function to remove the event listener
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-    //eslint-disable-next-line
-  }, [location, userID]);
+  }, [navigate, path]);
 
   return (
     <>
@@ -95,7 +86,24 @@ const DashboardMainPage = () => {
         </div>
 
         <div className="container col-10 p-5" style={{ height: "100vh" }}>
-          <GMATDashboard activeIndex={activeIndex} />
+          {category === "insights" ? (
+            <TestInsights
+              activeIndex={activeIndex}
+              examData={examData}
+              userActivities={userActivities}
+              loading={isLoading}
+              componentTrigger={componentTrigger}
+            />
+          ) : (
+            <GMATDashboard
+              activeIndex={activeIndex}
+              examData={examData}
+              userActivities={userActivities}
+              loading={isLoading}
+              setComponentTrigger={setComponentTrigger}
+              componentTrigger={componentTrigger}
+            />
+          )}
         </div>
       </div>
     </>

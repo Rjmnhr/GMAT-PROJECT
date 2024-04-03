@@ -244,7 +244,6 @@ const AfterMBAForm = ({ onNext, onBack }) => {
   };
 
   const onFinish = (values) => {
-    console.log(selectedOptions);
     onNext();
   };
 

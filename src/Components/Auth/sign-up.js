@@ -56,15 +56,12 @@ const SignUp = () => {
     }
 
     const lowerCasedEmail = email.toLowerCase();
-    console.log(lowerCasedEmail);
 
     AxiosInstance.post("/api/otp/send-otp", {
       email: lowerCasedEmail,
     })
       .then(async (response) => {
-        const data = await response.data;
         // Handle successful OTP request
-        console.log(data);
 
         sessionStorage.setItem("email", lowerCasedEmail);
         sessionStorage.setItem("first_name", firstName);

@@ -15,7 +15,6 @@ const CheckoutComponent = ({ price, text }) => {
         }
       );
       // Handle the response as needed
-      console.log(response.data);
 
       // Redirect to Stripe Checkout page on success
       window.location.href = response.data.url; // Assuming the response contains the URL

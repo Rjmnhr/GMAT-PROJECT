@@ -305,10 +305,6 @@ const ApplicationStrategyOutput = () => {
         goalData["Short term goal"] === storedGoalsInput?.shortTermGoals
     );
 
-    console.log(
-      "🚀 ~ file: index.js:247 ~ useEffect ~ selectedShortTermGoalData:",
-      selectedShortTermGoalData
-    );
     if (selectedShortTermGoalData) {
       // Calculate the short term goal values
       const shortTermGoalValues = {};
