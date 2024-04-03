@@ -112,13 +112,6 @@ const HomePage = () => {
                 Take Free GMAT Test
               </a>
               {isMobile ? <br /> : ""}
-              <a
-                href="/videos"
-                class="btn-get-started ml-lg-2 "
-                style={{ background: "transparent" }}
-              >
-                Videos
-              </a>
             </div>
           </div>
         </div>

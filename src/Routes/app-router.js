@@ -24,7 +24,6 @@ import UserDataComponent from "../Components/AdminDashboard/users";
 import UserDetailedDashboard from "../Components/AdminDashboard/user-detailed-dashboard";
 import LMSRepresentation from "../Components/LMS-Screen";
 import HomePage from "../Pages/home-page";
-import VideosPage from "../Pages/videos-page";
 import LoginPage from "../Pages/login-page";
 import BlogsMainPage from "../Pages/blog-page/main";
 import BlogsPage from "../Pages/blog-page";
@@ -168,14 +167,14 @@ const AppRouter = () => {
               </>
             }
           />
-          <Route
+          {/* <Route
             path="/videos"
             element={
               <>
                 <VideosPage />
               </>
             }
-          />
+          /> */}
           <Route
             path="/practice-questions"
             element={

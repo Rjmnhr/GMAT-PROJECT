@@ -6,7 +6,6 @@ import {
   gmat_landing_path,
   practice_questions_path,
   profiler_landing_path,
-  videos_path,
 } from "../Config/config";
 import { useApplicationContext } from "../Context/app-context";
 
@@ -96,30 +95,30 @@ const NavBar = () => {
         </div>
       ),
     },
-    {
-      key: "4",
-      title: (
-        <div
-          className="p-2 d-flex justify-content-between"
-          onMouseEnter={() => setHoveredItem("4")}
-          onMouseLeave={() => setHoveredItem(null)}
-          style={{ width: "200px" }}
-          onClick={() => navigate(videos_path)}
-        >
-          <h6>
-            {" "}
-            <i
-              className="icofont-video-clapper text-primary mr-2"
-              style={{ fontSize: "20px" }}
-            ></i>
-            Videos
-          </h6>
-          {hoveredItem === "4" && (
-            <ArrowRightOutlined className="text-primary" />
-          )}
-        </div>
-      ),
-    },
+    // {
+    //   key: "4",
+    //   title: (
+    //     <div
+    //       className="p-2 d-flex justify-content-between"
+    //       onMouseEnter={() => setHoveredItem("4")}
+    //       onMouseLeave={() => setHoveredItem(null)}
+    //       style={{ width: "200px" }}
+    //       onClick={() => navigate(videos_path)}
+    //     >
+    //       <h6>
+    //         {" "}
+    //         <i
+    //           className="icofont-video-clapper text-primary mr-2"
+    //           style={{ fontSize: "20px" }}
+    //         ></i>
+    //         Videos
+    //       </h6>
+    //       {hoveredItem === "4" && (
+    //         <ArrowRightOutlined className="text-primary" />
+    //       )}
+    //     </div>
+    //   ),
+    // },
   ];
   const profileMenuItems = [
     {

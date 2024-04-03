@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import NavBar from "../../Layout/nav-bar";
 import AxiosInstance from "../../Config/axios";
 import { questions } from "../../Components/GMAT/questions";
+import { login_path } from "../../Config/config";
+import { useApplicationContext } from "../../Context/app-context";
 
 const CategoryQuestions = () => {
   const location = useLocation();
@@ -13,8 +15,11 @@ const CategoryQuestions = () => {
   const [showAnswers, setShowAnswers] = useState([]);
   const [categoryHeading, setCategoryHeading] = useState("");
   const navigate = useNavigate();
+  const fullPath = location.pathname + location.search;
+
   const locationURL = window.location.href;
   const userID = localStorage.getItem("adefteducation_user_id");
+  const { userData } = useApplicationContext();
   useEffect(() => {
     AxiosInstance.post(
       `/api/track-data/store3`,
@@ -123,6 +128,12 @@ const CategoryQuestions = () => {
       return newShowAnswers;
     });
   };
+
+  useEffect(() => {
+    if (!userData) {
+      navigate(`${login_path}?p=${fullPath}`);
+    }
+  }, [userData, navigate, fullPath]);
 
   return (
     <>
