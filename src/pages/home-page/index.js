@@ -6,6 +6,7 @@ import AxiosInstance from "../../Config/axios";
 import NavBar from "../../Layout/nav-bar";
 import { gmat_landing_path, profiler_landing_path } from "../../Config/config";
 import { useApplicationContext } from "../../Context/app-context";
+import "./style.css";
 
 const HomePage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -455,46 +456,354 @@ const HomePage = () => {
           <Carousel autoplay>
             <div class="testimonial-wrap">
               <div class="testimonial-item">
-                <h3>Kiran Shah </h3>
-                <h4>Tuck University</h4>
+                <h3>​HARRIS M</h3>
+
                 <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  From the first time I spoke, I have been provided great
-                  guidance and practical advice helping me differentiate myself
-                  from other similar applicants for{" "}
-                  <span className="highlight">MBA Admissions</span>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>{" "}
+                  <strong>Primary reason for joining:</strong> To acquire
+                  directions for higher studies. To prepare for GMAT, for proper
+                  Techniques and proper direction to handle Management Aptitude
+                  tests.
+                  <br />
+                  <strong>Was that satisfied?</strong> Yes
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
+                <div className="d-lg-flex justify-content-center align-items-center container mt-4">
+                  <table className="table text-left col-lg-6">
+                    <thead>
+                      <tr>
+                        <th>Aspect</th>
+                        <th>Rating</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <strong>Faculty knowledge:</strong>
+                        </td>
+                        <td>9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Faculty presentation:</strong>
+                        </td>
+                        <td>9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Faculty punctuality:</strong>
+                        </td>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Quality of peer students:</strong>
+                        </td>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Individual attention:</strong>
+                        </td>
+                        <td>9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Self improvement observed:</strong>
+                        </td>
+                        <td>9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Overall impression:</strong>
+                        </td>
+                        <td>9</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div className="col-lg-6 text-left">
+                    <p className="mt-1">
+                      <strong>
+                        Would you like to continue with the college short
+                        listing and essay editing services?
+                      </strong>{" "}
+                      Yes
+                    </p>
+
+                    <p>
+                      <strong>Any other feedback?</strong> Your techniques are
+                      excellent. I myself improved a lot after coming to class
+                      and still improving. And I am assuring that anyone can
+                      reach their target score with hard work and directions and
+                      encouragement from you. If a very lazy guy like me can
+                      improve this much without any hard work, you can make your
+                      students to reach any heights with a bit of more
+                      competition and motivation.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <h3>Gaurav V. S.</h3>
+
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>{" "}
+                  <strong>Primary reason for joining:</strong> I joined your
+                  class because I wanted to learn under a tutor who has a very
+                  good teaching experience and pays personal attention to
+                  students and provides personal guidance to the student until
+                  he/she gets an admission in the intended college.
+                  <br />
+                  <strong>Was that satisfied?</strong> Yes, it satisfies all the
+                  requirements that I was looking for. I am very satisfied with
+                  the class and services.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div className="d-lg-flex justify-content-center align-items-center container mt-4">
+                  <table className="table text-left col-lg-6">
+                    <thead>
+                      <tr>
+                        <th>Aspect</th>
+                        <th>Rating</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <strong>Faculty knowledge:</strong>
+                        </td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Faculty presentation:</strong>
+                        </td>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Faculty punctuality:</strong>
+                        </td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Quality of peer students:</strong>
+                        </td>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Individual attention:</strong>
+                        </td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Self improvement observed:</strong>
+                        </td>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Overall impression:</strong>
+                        </td>
+                        <td>10</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div className="col-lg-6 text-left">
+                    <p className="mt-1">
+                      <strong>
+                        Would you like to continue with the college short
+                        listing and essay editing services?
+                      </strong>{" "}
+                      Yes
+                    </p>
+
+                    <p>
+                      <strong>Any other feedback?</strong> I think the class is
+                      really good.I can’t think of any major aspects for
+                      improvement as most of it is perfectly done. I don't see
+                      much that needs changing because everything seems to be
+                      going well.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-wrap">
+              <div class="testimonial-item">
+                <h3> TRISHA MAZUMDER</h3>
+
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>{" "}
+                  <strong>Primary reason for joining:</strong> To improve verbal
+                  and keep me focused.
+                  <br />
+                  <strong>Was that satisfied?</strong> Yes, knowledge gained,
+                  application needs improvement but that would be more of a
+                  personal focus
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <div className="d-lg-flex justify-content-center align-items-center container mt-4">
+                  <table className="table text-left col-lg-6">
+                    <thead>
+                      <tr>
+                        <th>Aspect</th>
+                        <th>Rating</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <strong>Faculty knowledge:</strong>
+                        </td>
+                        <td>9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Faculty presentation:</strong>
+                        </td>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Faculty punctuality:</strong>
+                        </td>
+                        <td>10</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Quality of peer students:</strong>
+                        </td>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Individual attention:</strong>
+                        </td>
+                        <td>7</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Self improvement observed:</strong>
+                        </td>
+                        <td>7</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Overall impression:</strong>
+                        </td>
+                        <td>8</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div className="col-lg-6 text-left">
+                    <p className="mt-1">
+                      <strong>
+                        Would you like to continue with the college short
+                        listing and essay editing services?
+                      </strong>{" "}
+                      Yes
+                    </p>
+
+                    <p>
+                      <strong>Any other feedback?</strong> The classes were good
+                      , and I don't have any major suggestions for improvements.
+                      Everything was fine, and I appreciate the effort put in by
+                      the instructors. The teaching methods were effective, and
+                      the atmosphere was good for learning.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="testimonial-wrap">
               <div class="testimonial-item">
-                <h3>John Lennox</h3>
-                <h4>CEO &amp; Founder, Brisbane</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>I found
-                  the business plan consulting a great journey. Not only were
-                  the consultants extremely patient and understood my business
-                  problem, their hand holding and ultimately helping me write my
-                  business plan. We were successful in raising money
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
+                <h3>Rohit Mantri</h3>
 
-            <div class="testimonial-wrap">
-              <div class="testimonial-item">
-                <h3>Sara Jacobson</h3>
-                <h4>Entreprenuer, Sydney</h4>
                 <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Partnering with them to design our sales incentive program was
-                  a brilliant decision. They collaborated closely with us to
-                  align incentives with our goals. Our sales team's performance
-                  has soared since implementing their strategies
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>{" "}
+                  <strong>Primary reason for joining:</strong> To get guidance
+                  for preparation of GMAT and ultimately get admission in a good
+                  B School.
+                  <br />
+                  <strong>Was that satisfied?</strong> Yes for the most part.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
+                <div className="d-lg-flex justify-content-center align-items-center container mt-4">
+                  <table className="table text-left col-lg-6">
+                    <thead>
+                      <tr>
+                        <th>Aspect</th>
+                        <th>Rating</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <strong>Faculty knowledge:</strong>
+                        </td>
+                        <td>9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Faculty presentation:</strong>
+                        </td>
+                        <td>9</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Faculty punctuality:</strong>
+                        </td>
+                        <td>8</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Quality of peer students:</strong>
+                        </td>
+                        <td>7</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Individual attention:</strong>
+                        </td>
+                        <td>6</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Self improvement observed:</strong>
+                        </td>
+                        <td>6.5</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Overall impression:</strong>
+                        </td>
+                        <td>9</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div className="col-lg-6 text-left">
+                    <p className="mt-2">
+                      <strong>
+                        Would you like to continue with the college short
+                        listing and essay editing services?
+                      </strong>{" "}
+                      Yes
+                    </p>
+
+                    <p>
+                      <strong>Any other feedback?</strong> Overall, the class is
+                      doing an excellent job. I can't think of any significant
+                      areas for improvement as most aspects are well-managed.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </Carousel>

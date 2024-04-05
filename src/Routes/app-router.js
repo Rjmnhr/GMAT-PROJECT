@@ -29,6 +29,9 @@ import {
   registration_payment_path,
   success_registration_path,
   gmat_practice_exam_path,
+  sample_recommendation_letter_path,
+  hiring_companies_path,
+  resume_builder_path,
 } from "../Config/config.js";
 import GMATLandingPage from "../Pages/GMAT-landing-page/index.js";
 import DashboardMainPage from "../Components/GMAT/index.js";
@@ -38,6 +41,9 @@ import SuccessRegistration from "../Components/Payment/success-registration.js";
 import Canceled from "../Components/Payment/Canceled.js";
 import ResultFocusPage from "../Components/GMAT/FocusEdition/result-focus.js";
 import ResultPage from "../Components/GMAT/OldEdition/result.js";
+import SampleRecommendationLetter from "../Components/SampleRecommendation/index.js";
+import HiringCompaniesComponent from "../Components/HiringCompanies/index.js";
+import ResumeBuilder from "../Components/ResumeBuilder/index.js";
 
 const ConditionalComponent = () => {
   return (
@@ -151,7 +157,37 @@ const AppRouter = () => {
               </>
             }
           />
+          <Route
+            path={gmat_landing_path}
+            element={
+              <>{isMobile ? <ConditionalComponent /> : <GMATLandingPage />}</>
+            }
+          />
 
+          <Route
+            path={sample_recommendation_letter_path}
+            element={
+              <>
+                <SampleRecommendationLetter />
+              </>
+            }
+          />
+          <Route
+            path={hiring_companies_path}
+            element={
+              <>
+                <HiringCompaniesComponent />
+              </>
+            }
+          />
+          <Route
+            path={resume_builder_path}
+            element={
+              <>
+                <ResumeBuilder />
+              </>
+            }
+          />
           <Route
             path={"/canceled.html"}
             element={
@@ -196,12 +232,6 @@ const AppRouter = () => {
               <>
                 <ChancesOfSelection />
               </>
-            }
-          />
-          <Route
-            path={gmat_landing_path}
-            element={
-              <>{isMobile ? <ConditionalComponent /> : <GMATLandingPage />}</>
             }
           />
 

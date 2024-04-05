@@ -16,7 +16,10 @@ export const gmat_results_path = "/results";
 export const gmat_results_focus_path = "/results-focus";
 export const registration_payment_path = "/registration-payment";
 export const success_registration_path = "/success.html";
-
+export const sample_recommendation_letter_path =
+  "/sample-recommendation-letter";
+export const hiring_companies_path = "/hiring-companies";
+export const resume_builder_path = "/resume-builder";
 //test
 // export const registration_stripe_price_code = "price_1P1DYqDNZni9rE7FyIh1wmAA";
 

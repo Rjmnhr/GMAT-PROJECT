@@ -4,8 +4,11 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   gmat_landing_path,
+  hiring_companies_path,
   practice_questions_path,
   profiler_landing_path,
+  // resume_builder_path,
+  sample_recommendation_letter_path,
 } from "../Config/config";
 import { useApplicationContext } from "../Context/app-context";
 
@@ -31,7 +34,7 @@ const NavBar = () => {
           className="p-2 d-flex justify-content-between"
           onMouseEnter={() => setHoveredItem("1")}
           onMouseLeave={() => setHoveredItem(null)}
-          style={{ width: "200px" }}
+          style={{ width: "300px" }}
           onClick={() => navigate(gmat_landing_path)}
         >
           <h6>
@@ -40,7 +43,7 @@ const NavBar = () => {
               className="icofont-book text-primary mr-2"
               style={{ fontSize: "20px" }}
             ></i>
-            GMAT
+            GMAT Test
           </h6>
           {hoveredItem === "1" && (
             <ArrowRightOutlined className="text-primary" />
@@ -55,7 +58,7 @@ const NavBar = () => {
           className="p-2 d-flex justify-content-between"
           onMouseEnter={() => setHoveredItem("2")}
           onMouseLeave={() => setHoveredItem(null)}
-          style={{ width: "200px" }}
+          style={{ width: "300px" }}
           onClick={() => navigate(profiler_landing_path)}
         >
           <h6>
@@ -79,7 +82,7 @@ const NavBar = () => {
           className="p-2 d-flex justify-content-between"
           onMouseEnter={() => setHoveredItem("3")}
           onMouseLeave={() => setHoveredItem(null)}
-          style={{ width: "200px" }}
+          style={{ width: "300px" }}
           onClick={() => navigate(practice_questions_path)}
         >
           <h6>
@@ -120,6 +123,78 @@ const NavBar = () => {
     //     </div>
     //   ),
     // },
+    // {
+    //   key: "4",
+    //   title: (
+    //     <div
+    //       className="p-2 d-flex justify-content-between"
+    //       onMouseEnter={() => setHoveredItem("4")}
+    //       onMouseLeave={() => setHoveredItem(null)}
+    //       style={{ width: "300px" }}
+    //       onClick={() => navigate(resume_builder_path)}
+    //     >
+    //       <h6>
+    //         {" "}
+    //         <i
+    //           className="icofont-briefcase text-primary mr-2"
+    //           style={{ fontSize: "20px" }}
+    //         ></i>
+    //         Resume Builder
+    //       </h6>
+    //       {hoveredItem === "4" && (
+    //         <ArrowRightOutlined className="text-primary" />
+    //       )}
+    //     </div>
+    //   ),
+    // },
+    {
+      key: "5",
+      title: (
+        <div
+          className="p-2 d-flex justify-content-between"
+          onMouseEnter={() => setHoveredItem("5")}
+          onMouseLeave={() => setHoveredItem(null)}
+          style={{ width: "300px" }}
+          onClick={() => navigate(hiring_companies_path)}
+        >
+          <h6>
+            {" "}
+            <i
+              className="icofont-company text-primary mr-2"
+              style={{ fontSize: "20px" }}
+            ></i>
+            Hiring Companies
+          </h6>
+          {hoveredItem === "5" && (
+            <ArrowRightOutlined className="text-primary" />
+          )}
+        </div>
+      ),
+    },
+    {
+      key: "6",
+      title: (
+        <div
+          className="p-2 d-flex justify-content-between"
+          onMouseEnter={() => setHoveredItem("6")}
+          onMouseLeave={() => setHoveredItem(null)}
+          style={{ width: "300px" }}
+          onClick={() => navigate(sample_recommendation_letter_path)}
+        >
+          <h6>
+            {" "}
+            <i
+              className="icofont-letter text-primary mr-2"
+              style={{ fontSize: "20px" }}
+            ></i>
+            Sample recommendation letter
+          </h6>
+          {hoveredItem === "6" && (
+            <ArrowRightOutlined className="text-primary" />
+          )}
+        </div>
+      ),
+    },
   ];
   const profileMenuItems = [
     {

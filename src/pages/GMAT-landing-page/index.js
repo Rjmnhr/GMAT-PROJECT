@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import NavBar from "../../Layout/nav-bar";
 import { GMATLandingPageStyled } from "./style";
-import { gmat_dashboard_path } from "../../Config/config";
+import { gmat_dashboard_path, login_path } from "../../Config/config";
 import FooterComponent from "../../Layout/footer";
 import { useApplicationContext } from "../../Context/app-context";
 import { useNavigate } from "react-router-dom";
@@ -37,11 +37,15 @@ const GMATLandingPage = () => {
                     analytics empower you to track your progress, identify areas
                     for improvement, and optimize your study strategy.
                   </p>
-                  <a href={gmat_dashboard_path} className=" scrollto">
-                    <button class="custom-demo-btn shadow mt-5 mb-5">
-                      <span>Login / Register to take test</span>
-                    </button>
-                  </a>
+
+                  <button
+                    onClick={() =>
+                      navigate(`${login_path}?p=${gmat_dashboard_path}`)
+                    }
+                    class="custom-demo-btn shadow mt-5 mb-5"
+                  >
+                    <span>Login / Register to take test</span>
+                  </button>
 
                   <br />
                 </div>

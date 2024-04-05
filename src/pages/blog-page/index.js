@@ -8,6 +8,7 @@ import { FacebookFilled, LinkedinFilled } from "@ant-design/icons";
 const BlogsPage = () => {
   const location = useLocation();
   const [selectedBlog, setSelectedBlog] = useState(null);
+  const [isImgAvailable, setIsImageAvailable] = useState(true);
   useEffect(() => {
     // Get the blog name from the query parameter
     const blogName = location.search.replace("?blog=", "");
@@ -19,6 +20,9 @@ const BlogsPage = () => {
 
       if (blog) {
         setSelectedBlog(blog);
+        if (!blog.mainImg) {
+          setIsImageAvailable(false);
+        }
       }
     }
     //eslint-disable-next-line
@@ -39,7 +43,7 @@ const BlogsPage = () => {
       <NavBar />
 
       <div
-        style={{ marginTop: "100px" }}
+        style={{ marginTop: "150px" }}
         class="container content-space-1 text-left "
         id="article"
       >
@@ -47,19 +51,32 @@ const BlogsPage = () => {
           <div class="col-12 ">
             <h2 className="mb-3 text-center">
               {" "}
-              <strong>{selectedBlog.main}</strong>
+              <strong>
+                {selectedBlog.main}{" "}
+                <span>{selectedBlog.question_mark ? "?" : ""}</span>
+              </strong>
             </h2>
           </div>
         </div>
-        <div className="d-lg-flex justify-content-between align-items-center flex-row-reverse">
-          <div class="row mb-5 col-12 col-lg-6">
+        <div
+          className={`${
+            isImgAvailable ? "d-lg-flex" : ""
+          }  justify-content-between align-items-center flex-row-reverse`}
+        >
+          <div
+            class={`${isImgAvailable ? "" : "d-none"}row  mb-5 col-12 col-lg-6`}
+          >
             <div class="col-md-10 col-lg-12 ">{selectedBlog.mainImg}</div>
           </div>
 
-          <div class="row mb-5 col-12 text-left col-lg-6">
+          <div
+            class={`row mb-5 col-12 text-left ${
+              isImgAvailable ? "col-lg-6" : ""
+            }  `}
+          >
             <div class="col-12">
               <div>
-                <h4 className="mb-3">{selectedBlog.subMain}</h4>
+                <h5 className="mb-3">{selectedBlog.subMain}</h5>
 
                 {selectedBlog.subContent.map((item) => {
                   return (
@@ -75,7 +92,7 @@ const BlogsPage = () => {
             </div>
           </div>
         </div>
-
+        {selectedBlog.extra_img || ""}
         <div class="col-12 col-lg-10 offset-lg-1 mb-3">
           <figure class="blockquote-lg text-center mb-5">
             <h5>{selectedBlog.footer}</h5>

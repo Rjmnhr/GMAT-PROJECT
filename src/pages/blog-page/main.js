@@ -24,7 +24,7 @@ const BlogsMainPage = () => {
                     <div class="row">
                       <div class="col-sm-5">
                         <img
-                          class="card-img"
+                          class="card-img border"
                           src={blog.imgPreview}
                           alt="Job compensation"
                         />
@@ -38,7 +38,8 @@ const BlogsMainPage = () => {
                                 class="text-dark"
                                 href={`/post?blog=${blog.main}`}
                               >
-                                {blog.main}
+                                {blog.main}{" "}
+                                <span>{blog.question_mark ? "?" : ""}</span>
                               </a>
                             </strong>
                           </h4>
